@@ -4,9 +4,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-white flex flex-col justify-center items-center p-8 text-center">
       <div className="max-w-3xl space-y-6">
-        <span className="inline-block px-4 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-sm font-semibold tracking-wide">
-          Initiative 4057
-        </span>
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
           T57 Platform
         </h1>
