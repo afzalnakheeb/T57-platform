@@ -1,8 +1,56 @@
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const C = { green:'#008b8c', cyan:'#39c4c4', indigo:'#2f2e7d', amber:'#f8b716', night:'#0b1340', sapphire:'#8f93ff', mist:'#c9cdf0' };
-  const WORLD_PETAL = { governments:'all', financiers:'finance', traders:'trade', farmers:'agri' };
-  const WORLD_NAME = { governments:'Governments & Regulators', financiers:'Financiers & Investors', traders:'Traders & Aggregators', farmers:'Farmers & Producers' };
+  const WORLD_PETAL = { home:'all', governments:'all', financiers:'finance', traders:'trade', farmers:'agri' };
+  const WORLD_NAME = { home:'T57.ai', governments:'Governments & Regulators', financiers:'Financiers & Investors', traders:'Traders & Aggregators', farmers:'Farmers & Producers' };
+
+  /* ---------- Market data (real, published figures; refreshed monthly) ----------
+     FAO Food Price Index and sub-indices, nominal, 2014-2016 = 100. Source: FAO, food_price_indices_data.csv, release of 2 Oct 2026.
+     Columns: month, Food, Meat, Dairy, Cereals, Vegetable oils, Sugar. */
+  const FAO = `2024-01,117.6,108.9,118.7,119.9,122.5,136.4
+2024-02,117.4,112.5,120.7,113.8,120.9,140.8
+2024-03,118.9,114.9,124.0,110.9,130.6,133.4
+2024-04,119.2,116.6,123.8,111.6,130.9,126.6
+2024-05,120.5,116.7,126.3,118.7,127.8,117.1
+2024-06,121.0,118.1,127.9,115.2,131.8,119.4
+2024-07,120.9,120.0,127.8,110.7,135.0,119.5
+2024-08,121.7,122.0,131.3,110.2,136.1,113.9
+2024-09,124.6,119.9,136.5,113.6,142.4,126.3
+2024-10,126.9,119.2,138.6,114.4,152.7,129.6
+2024-11,127.7,118.7,139.8,111.4,164.1,126.4
+2024-12,127.3,119.6,141.2,111.4,162.1,119.3
+2025-01,124.6,116.6,143.1,111.8,153.0,111.2
+2025-02,126.6,116.9,147.7,112.6,156.0,118.5
+2025-03,127.2,118.3,148.7,109.7,161.8,116.9
+2025-04,128.2,121.6,151.7,110.9,158.0,112.3
+2025-05,127.1,122.8,153.6,109.0,152.2,109.4
+2025-06,128.1,126.0,155.5,107.3,155.7,103.6
+2025-07,129.8,126.6,154.6,106.5,166.8,103.3
+2025-08,130.0,127.8,152.2,105.6,169.1,103.6
+2025-09,128.6,127.9,147.2,104.8,167.9,99.4
+2025-10,126.4,125.0,141.7,103.8,169.4,94.1
+2025-11,125.2,125.5,136.2,105.6,165.0,88.6
+2025-12,124.5,124.8,128.2,107.2,165.2,90.7
+2026-01,124.1,124.9,120.9,107.5,168.6,89.8
+2026-02,125.5,126.5,119.4,108.7,174.2,86.2
+2026-03,128.7,128.0,121.2,110.4,183.1,92.8
+2026-04,131.0,130.4,119.7,111.3,193.9,88.5
+2026-05,131.0,131.3,119.1,114.2,185.0,95.1
+2026-06,130.1,130.5,116.9,110.0,192.0,90.0
+2026-07,131.7,129.4,116.6,113.8,195.7,95.0
+2026-08,134.0,129.3,119.2,116.8,196.9,107.4
+2026-09,136.0,127.9,119.1,122.8,198.6,114.0`.split('\n').map(r => r.split(','));
+  const FAO_SERIES = [['Food Price Index', 1], ['Cereals', 4], ['Vegetable oils', 5], ['Dairy', 3], ['Meat', 2], ['Sugar', 6]];
+  // World Bank Pink Sheet, 2 Oct 2026: nominal US$ prices, [name, group, unit, Aug 2026, Sep 2026].
+  const PINK = [
+    ['Wheat, US HRW', 'Grains', '/t', 330.0, 347.0], ['Wheat, US SRW', 'Grains', '/t', 263.2, 278.6], ['Maize', 'Grains', '/t', 224.0, 239.6],
+    ['Rice, Thai 5%', 'Grains', '/t', 471.0, 482.0], ['Rice, Viet Nam 5%', 'Grains', '/t', 410.9, 418.5],
+    ['Soybeans', 'Oils and oilseeds', '/t', 482, 524], ['Soybean oil', 'Oils and oilseeds', '/t', 1639, 1615], ['Palm oil', 'Oils and oilseeds', '/t', 1132, 1180],
+    ['Sugar', 'Sugar and softs', '/kg', 0.38, 0.41], ['Coffee, Arabica', 'Sugar and softs', '/kg', 7.97, 7.26], ['Cocoa', 'Sugar and softs', '/kg', 5.95, 5.92], ['Tea', 'Sugar and softs', '/kg', 2.91, 2.85],
+    ['Beef', 'Proteins and produce', '/kg', 7.28, 6.86], ['Chicken', 'Proteins and produce', '/kg', 1.69, 1.81], ['Oranges', 'Proteins and produce', '/kg', 0.77, 0.79], ['Bananas', 'Proteins and produce', '/kg', 1.10, 1.12],
+    ['Urea', 'Inputs and energy', '/t', 390.0, 407.5], ['DAP fertilizer', 'Inputs and energy', '/t', 793.5, 800.6], ['Brent crude', 'Inputs and energy', '/bbl', 90.9, 116.8]
+  ].map(([name, group, unit, a, b]) => ({ name, group, unit, prev: a, last: b, ch: (b - a) / a * 100 }));
+  const IMPORT_BILL_PER_YEAR = 2.22e12; // FAO Food Outlook, Nov 2025 (2025 forecast)
 
   /* ---------- Living scenes ---------- */
   function noise(i, s) { const x = Math.sin(i * 12.9898 + s * 78.233) * 43758.5453; return x - Math.floor(x); }
@@ -176,10 +224,34 @@
     ctx.textAlign = 'start'; try { ctx.letterSpacing = '0px'; } catch (e) {}
   }
 
+  // Home: the six FAO series drawn as slow, living price lines (real data used as texture).
+  function marketScene(ctx, w, h, t, px, py) {
+    ctx.fillStyle = C.night; ctx.fillRect(0, 0, w, h);
+    const glow = ctx.createRadialGradient(w * 0.78, h * 0.35, 0, w * 0.78, h * 0.35, w * 0.6); glow.addColorStop(0, 'rgba(0,139,140,0.22)'); glow.addColorStop(1, 'rgba(11,19,64,0)');
+    ctx.fillStyle = glow; ctx.fillRect(0, 0, w, h);
+    ctx.strokeStyle = 'rgba(201,205,240,0.06)'; ctx.lineWidth = 1;
+    for (let gx = 0; gx < w; gx += 64) { ctx.beginPath(); ctx.moveTo(gx + 0.5, 0); ctx.lineTo(gx + 0.5, h); ctx.stroke(); }
+    for (let gy = 0; gy < h; gy += 64) { ctx.beginPath(); ctx.moveTo(0, gy + 0.5); ctx.lineTo(w, gy + 0.5); ctx.stroke(); }
+    const n = FAO.length, draw = Math.min(1, t / 2600);
+    FAO_SERIES.forEach(([, col], k) => {
+      const vals = FAO.map(r => +r[col]), lo = Math.min(...vals), hi = Math.max(...vals);
+      const band = h * 0.5, top = h * 0.14 + k * h * 0.06;
+      ctx.beginPath();
+      const upto = Math.floor((n - 1) * draw);
+      for (let i = 0; i <= upto; i++) { const x = w * 0.04 + (w * 0.94) * i / (n - 1), y = top + band * (1 - (vals[i] - lo) / (hi - lo || 1)) + Math.sin(t * 0.0007 + i * 0.5 + k) * 1.5; i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }
+      const main = k === 0;
+      ctx.strokeStyle = main ? 'rgba(57,196,196,0.75)' : `rgba(143,147,255,${0.16 + 0.05 * k})`; ctx.lineWidth = main ? 2 : 1.2; ctx.stroke();
+      if (main && draw >= 1) { const i = n - 1, x = w * 0.98, y = top + band * (1 - (vals[i] - lo) / (hi - lo || 1)); const p = (t * 0.0006) % 1;
+        ctx.strokeStyle = `rgba(57,196,196,${0.8 * (1 - p)})`; ctx.beginPath(); ctx.arc(x, y, 4 + p * 18, 0, 6.283); ctx.stroke(); ctx.fillStyle = C.cyan; ctx.beginPath(); ctx.arc(x, y, 3.5, 0, 6.283); ctx.fill(); }
+    });
+    const pl = ctx.createRadialGradient(px * w, py * h, 0, px * w, py * h, 240); pl.addColorStop(0, 'rgba(57,196,196,0.08)'); pl.addColorStop(1, 'rgba(57,196,196,0)');
+    ctx.fillStyle = pl; ctx.fillRect(0, 0, w, h);
+  }
+
   const scenes = [];
   document.querySelectorAll('canvas[data-scene]').forEach(cv => {
     const ctx = cv.getContext('2d');
-    const s = { cv, ctx, fn: { seed: seedScene, value: valueScene, globe: globeScene, bids: bidsScene }[cv.dataset.scene], t0: performance.now(), px: 0.7, py: 0.5, visible: false, w: 0, h: 0 };
+    const s = { cv, ctx, fn: { seed: seedScene, value: valueScene, globe: globeScene, bids: bidsScene, market: marketScene }[cv.dataset.scene], t0: performance.now(), px: 0.7, py: 0.5, visible: false, w: 0, h: 0 };
     const size = () => { const r = cv.getBoundingClientRect(), d = Math.min(2, devicePixelRatio || 1); s.w = r.width; s.h = r.height; cv.width = Math.round(r.width * d); cv.height = Math.round(r.height * d); ctx.setTransform(d, 0, 0, d, 0, 0); if (reduce && s.w && s.h) s.fn(ctx, s.w, s.h, 99999, s.px, s.py); };
     new ResizeObserver(size).observe(cv);
     cv.parentElement.addEventListener('pointermove', e => { const r = cv.getBoundingClientRect(); if (!r.width || !r.height) return; s.px = (e.clientX - r.left) / r.width; s.py = (e.clientY - r.top) / r.height; });
@@ -191,6 +263,70 @@
     requestAnimationFrame(loop);
   }
   requestAnimationFrame(loop);
+
+  /* ---------- Market board ---------- */
+  const fmtPrice = (v, unit) => (unit === '/kg' ? v.toFixed(2) : v >= 1000 ? Math.round(v).toLocaleString('en-US') : v.toFixed(1)).replace(/\.0$/, '');
+  const sign = v => (v >= 0 ? '▲ +' : '▼ ') + v.toFixed(1) + '%';
+  const dir = v => (v >= 0 ? 'up' : 'down');
+  (function board() {
+    const last = FAO[FAO.length - 1], prev = FAO[FAO.length - 2], yago = FAO[FAO.length - 13];
+    const mom = (last[1] - prev[1]) / prev[1] * 100, yoy = (last[1] - yago[1]) / yago[1] * 100;
+    document.querySelectorAll('[data-fpi-latest]').forEach(e => e.textContent = (+last[1]).toFixed(1));
+    document.querySelectorAll('[data-fpi-mom]').forEach(e => { e.textContent = sign(mom); e.className = dir(mom); });
+    document.querySelectorAll('[data-fpi-yoy]').forEach(e => e.textContent = (yoy >= 0 ? '+' : '') + yoy.toFixed(1) + '% on a year earlier');
+    const spark = document.querySelector('[data-fpi-spark]');
+    if (spark) { const v = FAO.map(r => +r[1]), lo = Math.min(...v), hi = Math.max(...v); spark.setAttribute('d', v.map((y, i) => (i ? 'L' : 'M') + (i / (v.length - 1) * 300).toFixed(1) + ' ' + (64 - (y - lo) / (hi - lo) * 58).toFixed(1)).join(' ')); }
+    // ticker
+    const tk = document.querySelector('[data-ticker]');
+    if (tk) { const items = PINK.map(p => `<span class="tk"><b>${p.name}</b> $${fmtPrice(p.last, p.unit)}${p.unit} <em class="${dir(p.ch)}">${sign(p.ch)}</em></span>`).join('');
+      tk.innerHTML = `<div class="tk-run">${items}</div><div class="tk-run" aria-hidden="true">${items}</div>`; }
+    // movers
+    const mv = document.querySelector('[data-movers]');
+    if (mv) mv.innerHTML = [...PINK].filter(p => p.group !== 'Inputs and energy').sort((a, b) => Math.abs(b.ch) - Math.abs(a.ch)).slice(0, 6)
+      .map(p => `<li><span class="mv-n">${p.name}</span><span class="mv-p">$${fmtPrice(p.last, p.unit)}${p.unit}</span><span class="mv-c ${dir(p.ch)}">${sign(p.ch)}</span><i class="mv-bar ${dir(p.ch)}" style="--w:${Math.min(1, Math.abs(p.ch) / 10)}"></i></li>`).join('');
+    // heat tiles, grouped
+    const ht = document.querySelector('[data-heat]');
+    if (ht) { const groups = [...new Set(PINK.map(p => p.group))];
+      ht.innerHTML = groups.map(g => `<div class="hg"><span class="hg-k">${g}</span><div class="hg-tiles">${PINK.filter(p => p.group === g).map(p => {
+        const a = Math.min(1, Math.abs(p.ch) / 8);
+        return `<div class="tile ${dir(p.ch)}" style="--a:${(0.12 + a * 0.6).toFixed(2)}"><span class="t-n">${p.name}</span><span class="t-p">$${fmtPrice(p.last, p.unit)}<small>${p.unit}</small></span><span class="t-c">${sign(p.ch)}</span></div>`; }).join('')}</div></div>`).join(''); }
+    // chart with tabs
+    const svg = document.querySelector('[data-chart]'), tabs = document.querySelector('[data-tabs]'), tip = document.querySelector('[data-chart-tip]');
+    if (!svg) return;
+    let W = 720, H = 300; const L = 44, Rr = 12, T = 16, B = 34, months = FAO.map(r => r[0]);
+    const label = m => new Date(m + '-01T00:00:00Z').toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+    let cur = 0;
+    tabs.innerHTML = FAO_SERIES.map(([n], i) => `<button type="button" role="tab" aria-selected="${i === 0}" data-i="${i}">${n}</button>`).join('');
+    function render(i, animate) {
+      cur = i; W = Math.max(320, Math.round(svg.clientWidth) || 720); H = W < 520 ? 240 : 300; svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+      const col = FAO_SERIES[i][1], v = FAO.map(r => +r[col]), lo = Math.floor(Math.min(...v) / 10) * 10, hi = Math.ceil(Math.max(...v) / 10) * 10;
+      const X = k => L + (W - L - Rr) * k / (v.length - 1), Y = y => T + (H - T - B) * (1 - (y - lo) / (hi - lo));
+      let g = ''; for (let y = lo; y <= hi; y += (hi - lo > 60 ? 20 : 10)) g += `<line class="gl" x1="${L}" x2="${W - Rr}" y1="${Y(y)}" y2="${Y(y)}"/><text class="ax" x="${L - 8}" y="${Y(y) + 4}" text-anchor="end">${y}</text>`;
+      (W < 520 ? [0, 24] : [0, 12, 24, v.length - 1]).forEach(k => g += `<text class="ax" x="${X(k)}" y="${H - 10}" text-anchor="${k === v.length - 1 ? 'end' : 'middle'}">${label(months[k])}</text>`);
+      const d = v.map((y, k) => (k ? 'L' : 'M') + X(k).toFixed(1) + ' ' + Y(y).toFixed(1)).join(' ');
+      const area = d + ` L${X(v.length - 1)} ${H - B} L${X(0)} ${H - B} Z`;
+      svg.innerHTML = `<defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#39c4c4" stop-opacity=".28"/><stop offset="1" stop-color="#39c4c4" stop-opacity="0"/></linearGradient></defs>${g}<path class="area" d="${area}"/><path class="line" d="${d}" pathLength="1"/><circle class="end" cx="${X(v.length - 1)}" cy="${Y(v[v.length - 1])}" r="5"/><line class="cross" y1="${T}" y2="${H - B}" x1="-10" x2="-10"/><circle class="hov" r="5" cx="-10" cy="-10"/>`;
+      if (animate && !reduce) svg.querySelector('.line').animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }], { duration: 1200, easing: 'cubic-bezier(.2,.8,.2,1)' });
+      const lm = (v[v.length - 1] - v[v.length - 2]) / v[v.length - 2] * 100, ly = (v[v.length - 1] - v[v.length - 13]) / v[v.length - 13] * 100;
+      document.querySelector('[data-chart-v]').textContent = v[v.length - 1].toFixed(1);
+      const cd = document.querySelector('[data-chart-d]'); cd.innerHTML = `<em class="${dir(lm)}">${sign(lm)}</em> on the month · <em class="${dir(ly)}">${sign(ly)}</em> on the year`;
+      svg.setAttribute('aria-label', `FAO ${FAO_SERIES[i][0]}, monthly, January 2024 to September 2026. Latest ${v[v.length - 1].toFixed(1)}.`);
+      tabs.querySelectorAll('button').forEach((b, k) => b.setAttribute('aria-selected', k === i));
+      svg.onpointermove = e => { const r = svg.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * W, k = Math.max(0, Math.min(v.length - 1, Math.round((x - L) / (W - L - Rr) * (v.length - 1))));
+        const cx = X(k), cy = Y(v[k]); svg.querySelector('.cross').setAttribute('x1', cx); svg.querySelector('.cross').setAttribute('x2', cx); const hv = svg.querySelector('.hov'); hv.setAttribute('cx', cx); hv.setAttribute('cy', cy);
+        tip.hidden = false; tip.innerHTML = `<b>${v[k].toFixed(1)}</b>${label(months[k])}`; tip.style.left = (cx / W * 100) + '%'; tip.style.top = (cy / H * 100) + '%'; };
+      svg.onpointerleave = () => { tip.hidden = true; svg.querySelector('.hov').setAttribute('cx', -10); svg.querySelector('.cross').setAttribute('x1', -10); svg.querySelector('.cross').setAttribute('x2', -10); };
+    }
+    tabs.addEventListener('click', e => { const b = e.target.closest('button'); if (b) render(+b.dataset.i, true); });
+    tabs.addEventListener('keydown', e => { if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return; const n = (cur + (e.key === 'ArrowRight' ? 1 : FAO_SERIES.length - 1)) % FAO_SERIES.length; render(n, true); tabs.querySelectorAll('button')[n].focus(); });
+    render(0, false);
+    let rw = 0; new ResizeObserver(() => { const w = Math.round(svg.clientWidth); if (w && Math.abs(w - rw) > 20) { rw = w; render(cur, false); } }).observe(svg);
+    new IntersectionObserver(([en], o) => { if (en.isIntersecting) { render(cur, true); o.disconnect(); } }, { threshold: 0.4 }).observe(svg);
+    // import bill counter, paced from the annual figure
+    const ib = document.querySelector('[data-importbill]');
+    if (ib) { const y0 = Date.UTC(new Date().getUTCFullYear(), 0, 1), perMs = IMPORT_BILL_PER_YEAR / (365 * 864e5);
+      const tick = () => { const v = (Date.now() - y0) * perMs; ib.textContent = '$' + (v / 1e12).toFixed(4) + ' trillion'; if (!reduce) requestAnimationFrame(tick); }; tick(); }
+  })();
 
   /* ---------- Scroll storytelling ---------- */
   const draws = document.querySelectorAll('.problem .draw');
@@ -353,7 +489,7 @@
   });
 
   const start = (location.hash || '').slice(1);
-  show(WORLD_PETAL[start] ? start : 'governments'); scrollTo(0, 0); setTimeout(() => scrollTo(0, 0), 300);
+  show(WORLD_PETAL[start] ? start : 'home'); scrollTo(0, 0); setTimeout(() => scrollTo(0, 0), 300);
   addEventListener('hashchange', () => { const h = location.hash.slice(1); if (WORLD_PETAL[h]) go(h, false); });
   setTimeout(intro, 150);
 })();

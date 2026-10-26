@@ -1030,7 +1030,7 @@
 
 <header class="hdr gutter">
   <div class="wrap hdr-in">
-    <a href="#governments" data-go="governments" aria-label="T57.ai home">
+    <a href="#home" data-go="home" aria-label="T57.ai home">
       <svg class="logo" id="logo" viewBox="775 418 998 244" role="img" aria-label="T57"><g id="lg-trade" class="petal p-trade"><g clip-path="url(#clip-0)">
 <g clip-path="url(#clip-1)">
 <path fill-rule="nonzero" fill="url(#linear-pattern-0)" d="M 1039.757812 469.621094 L 949.429688 559.953125 L 859.097656 469.621094 L 949.429688 379.289062 Z M 1039.757812 469.621094 " />
@@ -1116,19 +1116,101 @@
 <path fill-rule="nonzero" fill="rgb(17.16156%, 19.790649%, 49.003601%)" fill-opacity="1" d="M 1037.773438 422.035156 L 1283.332031 422.035156 C 1285.882812 422.035156 1287.953125 424.105469 1287.953125 426.660156 L 1287.953125 459.878906 C 1287.953125 462.433594 1285.882812 464.503906 1283.332031 464.503906 L 1188.511719 464.503906 C 1185.554688 464.503906 1183.15625 466.902344 1183.15625 469.859375 L 1183.15625 652.945312 C 1183.15625 655.5 1181.085938 657.570312 1178.53125 657.570312 L 1142.570312 657.570312 C 1140.015625 657.570312 1137.949219 655.5 1137.949219 652.945312 L 1137.949219 469.859375 C 1137.949219 466.902344 1135.550781 464.503906 1132.589844 464.503906 L 1037.773438 464.503906 C 1035.21875 464.503906 1033.148438 462.433594 1033.148438 459.878906 L 1033.148438 426.660156 C 1033.148438 424.105469 1035.21875 422.035156 1037.773438 422.035156 " />
 </g></svg>
     </a>
-    <span class="label-proto">Prototype · four worlds</span>
+    <span class="label-proto">Prototype · home and four worlds</span>
     <nav class="worlds" aria-label="Microsites in this prototype">
       <a href="#governments" data-go="governments" data-petal="all"><i style="background:var(--electric-sapphire)"></i><span>Governments</span><span class="long">&nbsp;&amp; Regulators</span></a>
       <a href="#financiers" data-go="financiers" data-petal="finance"><i style="background:var(--amber-flame)"></i><span>Financiers</span><span class="long">&nbsp;&amp; Investors</span></a>
       <a href="#traders" data-go="traders" data-petal="trade"><i style="background:var(--persian-blue)"></i><span>Traders</span><span class="long">&nbsp;&amp; Aggregators</span></a>
       <a href="#farmers" data-go="farmers" data-petal="agri"><i style="background:var(--electric-green)"></i><span>Farmers</span><span class="long">&nbsp;&amp; Producers</span></a>
     </nav>
-    <a class="demo" href="#cta-governments">Request a demo</a>
+    <a class="demo" href="#cta-home">Request a demo</a>
   </div>
 </header>
 
 <main id="main">
-<article class="world" id="governments" data-world="governments" aria-label="Governments and Regulators">
+<article class="world" id="home" data-world="home" aria-label="T57.ai home">
+  <section class="hero night gutter home-hero" aria-labelledby="h-h1">
+    <canvas data-scene="market" aria-hidden="true"></canvas>
+    <div class="hero-in home-in">
+      <div class="hero-copy">
+        <p class="eyebrow">AI-native digital trade infrastructure for food</p>
+        <h1 id="h-h1"><span class="ln">Trade food with people</span> <span class="ln">you can trust, on one record</span> <span class="ln">from quote to payment</span></h1>
+        <p class="std">T57 exists to make food trade verified, connected and financeable for every business that grows, raises, catches, processes or sells food.</p>
+        <div class="actions"><a class="btn btn-world" href="#cta-home">Apply for membership</a><a class="btn btn-ghost" href="#board">See the market board</a></div>
+      </div>
+      <a class="quote-card" href="#board" aria-label="FAO Food Price Index, September 2026: 136.0, up 1.5 percent on the month and 5.8 percent on the year. Open the market board.">
+        <span class="qc-k">FAO Food Price Index</span>
+        <span class="qc-v"><b data-fpi-latest>136.0</b><em class="up" data-fpi-mom>▲ 1.5%</em></span>
+        <svg class="qc-spark" viewBox="0 0 300 70" preserveAspectRatio="none" aria-hidden="true"><path data-fpi-spark d=""/></svg>
+        <span class="qc-foot"><span data-fpi-yoy>+5.8% on a year earlier</span><span>Sep 2026 · 2014–2016 = 100</span></span>
+      </a>
+    </div>
+    <div class="ticker" aria-label="Benchmark food prices, September 2026, change on August">
+      <div class="ticker-track" data-ticker></div>
+    </div>
+  </section>
+
+  <section class="board night gutter" id="board" aria-labelledby="b-h">
+    <div class="wrap">
+      <div class="board-head">
+        <div>
+          <p class="eyebrow">Global Food Market Board</p>
+          <h2 class="h2" id="b-h">See the world's food prices move</h2>
+          <p class="lede">Benchmarks for the staples the world trades, from the FAO and the World Bank. Teal is up on the month, amber is down.</p>
+        </div>
+        <p class="stamp"><span class="live-dot" aria-hidden="true"></span>Latest data: September 2026<br><span>FAO, 2 Oct 2026 · World Bank Pink Sheet, 2 Oct 2026</span></p>
+      </div>
+
+      <div class="board-grid">
+        <figure class="panel chart-panel" style="margin:0">
+          <div class="tabs" role="tablist" aria-label="Choose an index" data-tabs></div>
+          <div class="chart-top"><span class="chart-v" data-chart-v>136.0</span><span class="chart-d" data-chart-d></span></div>
+          <div class="chart-wrap"><svg class="chart" data-chart viewBox="0 0 720 300" role="img" aria-label="FAO price index, monthly, January 2024 to September 2026"></svg><div class="chart-tip" data-chart-tip hidden></div></div>
+          <figcaption class="src">FAO Food Price Index and sub-indices, nominal, 2014–2016 = 100. Monthly, January 2024 to September 2026.</figcaption>
+        </figure>
+        <div class="panel movers" aria-labelledby="mv-h">
+          <h3 id="mv-h" class="panel-k">Biggest moves this month</h3>
+          <ol class="mv-list" data-movers></ol>
+          <p class="src">World Bank Pink Sheet, September 2026 against August 2026.</p>
+        </div>
+      </div>
+
+      <div class="panel heat" aria-labelledby="ht-h">
+        <h3 id="ht-h" class="panel-k">Price map: September 2026, change on August</h3>
+        <div class="heat-grid" data-heat></div>
+        <p class="src">World Bank Pink Sheet, nominal US dollars. Grains, oils, sugar and fertilizer per tonne or kilogram; Brent crude per barrel, shown as a cost driver for freight and farming.</p>
+      </div>
+
+      <div class="pulse">
+        <div class="panel stat"><span class="panel-k">The world's food import bill, so far this year</span><b class="big" data-importbill>$0</b><p class="src">Paced from FAO's forecast of about $2.22 trillion for 2025, or roughly $70,000 every second.</p></div>
+        <div class="panel stat"><span class="panel-k">Cereal prices, a year on</span><b class="big up">+17.2%</b><p class="src">FAO Cereal Price Index, September 2026 against September 2025.</p></div>
+        <div class="panel stat soon"><span class="panel-k">T57 platform pulse</span><b class="big muted">At launch</b><p class="src">Verified members, open RFQs and trade value will show here live once the platform opens. We won't show numbers before they are real.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter gutter" aria-labelledby="h-doors">
+    <div class="wrap">
+      <p class="eyebrow">Who we serve</p>
+      <h2 class="h2" id="h-doors">Choose your world</h2>
+      <div class="doors">
+        <a class="door" href="#governments" data-go="governments" style="--c:var(--electric-sapphire)"><svg viewBox="774 418 250 244" aria-hidden="true"><use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-agri"></use><use href="#mk-finance"></use></svg><b>Governments &amp; Regulators</b><span>Live food-security intelligence and clean procurement.</span></a>
+        <a class="door" href="#financiers" data-go="financiers" style="--c:var(--amber-flame)"><svg viewBox="782 514 80 106" aria-hidden="true"><use href="#mk-finance"></use></svg><b>Financiers &amp; Investors</b><span>Finance-ready deals with verified counterparties.</span></a>
+        <a class="door" href="#traders" data-go="traders" style="--c:var(--persian-blue)"><svg viewBox="900 423 104 93" aria-hidden="true"><use href="#mk-trade"></use></svg><b>Traders &amp; Aggregators</b><span>Both sides of every deal on one record.</span></a>
+        <a class="door" href="#farmers" data-go="farmers" style="--c:var(--electric-green)"><svg viewBox="842 580 112 76" aria-hidden="true"><use href="#mk-agri"></use></svg><b>Farmers &amp; Producers</b><span>Direct market access and faster finance.</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta night gutter" id="cta-home" aria-labelledby="h-cta">
+    <div class="cta-in">
+      <div><h2 id="h-cta">Good deals should not fail for lack of trust or finance.</h2><div class="actions"><a class="btn btn-world" href="#cta-home">Apply for membership</a><a class="btn btn-ghost" href="#cta-home">Book a demo</a></div></div>
+      <svg class="petal-big" viewBox="774 418 250 244" aria-hidden="true"><use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-agri"></use><use href="#mk-finance"></use></svg>
+    </div>
+  </section>
+</article>
+
+<article class="world" id="governments" data-world="governments" aria-label="Governments and Regulators" hidden>
   <div class="micro gutter">
     <div class="wrap micro-in">
       <b><svg viewBox="774 418 250 244" aria-hidden="true"><use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-agri"></use><use href="#mk-finance"></use></svg>Governments &amp; Regulators</b>
