@@ -485,7 +485,16 @@
   document.querySelectorAll('.glance').forEach(g => g.querySelectorAll('[data-gl]').forEach(b => b.addEventListener('click', () => {
     g.querySelectorAll('[data-gl]').forEach(x => x.setAttribute('aria-selected', x === b));
     g.querySelectorAll('[data-gl-set]').forEach(o => o.hidden = o.dataset.glSet !== b.dataset.gl);
+    const h1 = g.closest('.hero').querySelector('h1');
+    if (b.dataset.h1 && h1) { h1.dataset.base ??= h1.innerHTML; h1.innerHTML = '<span class="ln">' + b.dataset.h1 + '</span>'; }
   })));
+
+  document.querySelectorAll('[data-explainer]').forEach(fx => {
+    const btn = fx.querySelector('.fx-pause');
+    if (reduce) return;
+    new IntersectionObserver(([en]) => { if (en.isIntersecting) fx.classList.add('play'); fx.classList.toggle('paused', !en.isIntersecting || btn.getAttribute('aria-pressed') === 'true'); }, { threshold: 0.3 }).observe(fx);
+    btn.addEventListener('click', () => { const p = btn.getAttribute('aria-pressed') !== 'true'; btn.setAttribute('aria-pressed', p); btn.textContent = p ? 'Play' : 'Pause'; fx.classList.toggle('paused', p); });
+  });
 
   const menu = document.getElementById('menu'), menuBtn = document.getElementById('menu-btn');
   const setMenu = open => { menu.hidden = !open; menuBtn.setAttribute('aria-expanded', open); };
