@@ -8,7 +8,8 @@ export type PageInfo = {
   title: string; description: string; faqs: Faq[]; parent?: string;
 };
 
-export const SITE = 'https://t57.ai';
+// The live address: t57.ai redirects to www.t57.ai in Vercel, so canonical links use www.
+export const SITE = 'https://www.t57.ai';
 const OG = { url: `${SITE}/og.png`, width: 1200, height: 630, alt: 'T57: trade food with trust, from farm to buyer.' };
 const dir = path.join(process.cwd(), 'content');
 export const pages: Record<string, PageInfo> = JSON.parse(fs.readFileSync(path.join(dir, 'pages.json'), 'utf8'));
