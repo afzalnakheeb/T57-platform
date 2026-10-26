@@ -973,6 +973,26 @@ a.cm-pt:hover text { text-decoration:underline; }
 .route:hover { transform:translateY(-3px); box-shadow:0 16px 36px -20px #02246c55; } .route b { font:600 18px var(--font-display); color:var(--ink-strong); } .route span { color:var(--persian-indigo); font-weight:500; } .route.mail { background:var(--night); border-left-color:var(--amber-flame); } .route.mail b, .route.mail span { color:#fff; }
 .offices { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap:14px; margin-top:24px; }
 .office { display:grid; gap:6px; padding:20px; border-radius:14px; background:#fff; border:1px solid var(--line); border-top:4px solid var(--world); } .office b { font:600 17px var(--font-display); color:var(--ink-strong); } .office span { font-size:14.5px; line-height:21px; } .office em { font-style:normal; font-size:12.5px; color:#5a5f80; }
+
+/* Forms: shared fields, consent, status messages and the get-started dialog */
+.hp { position:absolute !important; left:-9999px; width:1px; height:1px; overflow:hidden; }
+.ff small { font-weight:400; color:#5a5f80; margin-left:4px; }
+.ff-check, .mf-consent { display:flex; gap:10px; align-items:flex-start; margin-top:16px; font-size:14px; line-height:20px; color:var(--ink-strong); }
+.ff-check input, .mf-consent input { margin-top:2px; width:18px; height:18px; accent-color:var(--persian-indigo); flex:none; }
+.mf-consent a { color:var(--persian-indigo); font-weight:500; }
+.ff.bad input, .ff.bad select, .ff.bad textarea { border-color:#b3261e; } .mf-consent.bad span { color:#b3261e; }
+.mf-msg { margin:14px 0 0; padding:12px 14px; border-radius:10px; font-size:15px; line-height:22px; background:#eef0f8; color:var(--ink-strong); }
+.mf-msg.ok { background:#e3fbf1; color:#0b5d3f; } .mf-msg.err { background:#fdecea; color:#8c1d18; } .mf-msg a { font-weight:600; color:inherit; }
+.mform.sent .mf-grid, .mform.sent .mf-consent, .mform.sent .mf-foot, .mform.sent .ff-check { display:none; }
+.mform button[disabled] { opacity:.6; cursor:progress; }
+.fdlg { width:min(680px, calc(100vw - 32px)); max-height:calc(100dvh - 32px); padding:0; border:0; border-radius:20px; box-shadow:0 40px 100px -30px #02246ccc; overflow:auto; }
+.fdlg::backdrop { background:#0b1340b3; backdrop-filter:blur(4px); }
+.fdlg .mform { margin:0; border:0; border-radius:0; padding:32px; position:relative; }
+.fdlg h2 { font:700 30px/36px var(--font-display); color:var(--persian-indigo); margin:4px 0 6px; } .fdlg-sub { margin:0 0 20px; color:#4a4f70; font-size:15px; line-height:22px; }
+.fdlg-x { position:absolute; top:14px; right:14px; width:40px; height:40px; border-radius:50%; border:1px solid var(--line); background:#fff; font-size:24px; line-height:1; cursor:pointer; color:var(--ink-strong); }
+.fdlg [data-k][hidden] { display:none; }
+.fdlg[open] { animation:fdlg-in .35s var(--ease-out); } @keyframes fdlg-in { from { opacity:0; transform:translateY(16px) scale(.98); } }
+@media (max-width: 640px) { .fdlg .mform { padding:24px 18px; } .fdlg h2 { font-size:24px; line-height:30px; } }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -1007,6 +1027,21 @@ a.cm-pt:hover text { text-decoration:underline; }
 <main id="main">
 {{WORLDS}}
 </main>
+
+<dialog class="fdlg" id="get-started" aria-labelledby="fdlg-h">
+  <form class="mform" data-api-form="join" novalidate>
+    <button class="fdlg-x" type="button" data-fdlg-close aria-label="Close">×</button>
+    <p class="eyebrow" data-fdlg-eb>Get started</p>
+    <h2 id="fdlg-h" data-fdlg-h>Join T57</h2>
+    <p class="fdlg-sub" data-fdlg-sub></p>
+    <div class="mf-grid"><label class="ff" data-k="join demo contact support partner subscribe"><span>Name</span><input name="name" type="text" maxlength="120" autocomplete="name"></label><label class="ff" data-k="join demo contact support partner subscribe"><span>Work email</span><input name="email" type="email" maxlength="160" autocomplete="email"></label><label class="ff" data-k="join demo contact support partner"><span>Company</span><input name="company" type="text" maxlength="160" autocomplete="organization"></label><label class="ff" data-k="join demo contact partner"><span>Country</span><select name="country"><option value="">Choose…</option><option>Saudi Arabia</option><option>United Arab Emirates</option><option>India</option><option>Malaysia</option><option>Türkiye</option><option>Other</option></select></label><label class="ff" data-k="join demo"><span>Your role</span><select name="role"><option value="">Choose…</option><option>Producer or farmer</option><option>Cooperative or FPO</option><option>Processor</option><option>Trader</option><option>Buyer</option><option>Financier</option><option>Service provider</option><option>Government or institution</option><option>Partner</option><option>Other</option></select></label><label class="ff" data-k="partner"><span>Partner type</span><select name="type"><option value="">Choose…</option><option>Finance</option><option>Insurance</option><option>Logistics</option><option>Inspection</option><option>Technology</option><option>Institution</option></select></label><label class="ff" data-k="join demo contact"><span>Phone <small>optional</small></span><input name="phone" type="tel" maxlength="40" autocomplete="tel"></label><label class="ff" data-k="join"><span>Plan you are interested in <small>optional</small></span><select name="plan"><option value="">Choose…</option><option>Explore</option><option>Core</option><option>Growth</option><option>Enterprise</option><option>Not sure yet</option></select></label><label class="ff" data-k="support"><span>Trade reference <small>optional</small></span><input name="reference" type="text" maxlength="80"></label><label class="ff" data-k="join demo"><span>Your products <small>optional</small></span><input name="products" type="text" maxlength="400"></label><label class="ff wide" data-k="join demo contact support partner"><span>How can we help? <small>optional</small></span><textarea name="message" rows="3" maxlength="2000"></textarea></label></div>
+    <label class="ff-check" data-k="support"><input type="checkbox" name="urgent" value="yes"><span>Urgent: a shipment is held or a payment is disputed</span></label>
+    <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+    <label class="mf-consent"><input type="checkbox" name="consent" required><span>I agree that T57 may use these details to reply to me, as set out in <a href="#trust-data-protection" data-go="trust-data-protection">Data Protection</a>.</span></label>
+    <div class="mf-foot"><button class="btn btn-world" type="submit" data-fdlg-btn>Send</button></div>
+    <p class="mf-msg" data-mf-msg role="status" aria-live="polite" hidden></p>
+  </form>
+</dialog>
 
 <footer class="ftr gutter">
   <div class="ftr-in"><span>© 2026 T57.ai · Prototype for review, not for publication</span><button id="replay" class="replay" type="button">Replay logo animation</button><span>English · العربية · Bahasa Melayu · Bahasa Indonesia · Türkçe</span></div>

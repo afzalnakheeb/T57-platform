@@ -597,15 +597,81 @@
     });
   });
 
-  // Partner application and demo request: no backend yet, so the form composes an email to hello@t57.ai
-  document.querySelectorAll('[data-mailform]').forEach(f => f.addEventListener('submit', e => {
-    e.preventDefault();
-    const need = ['name', 'company', 'email'].filter(n => f.elements[n] && !f.elements[n].value.trim());
-    f.querySelector('[data-mf-err]').hidden = !need.length;
-    if (need.length) { f.elements[need[0]].focus(); return; }
-    const lines = [...f.querySelectorAll('label')].map(l => { const c = l.querySelector('input,select,textarea'); return c.value.trim() ? `${l.querySelector('span').textContent}: ${c.value.trim()}` : ''; }).filter(Boolean);
-    location.href = `mailto:hello@t57.ai?subject=${encodeURIComponent(f.dataset.subject + ' – ' + f.elements.company.value.trim())}&body=${encodeURIComponent(lines.join('\n'))}`;
-  }));
+  // Forms: sign-up, demo, partner, contact, support and subscribe all post to /api/forms.
+  // If the backend is not switched on yet (503), the visitor is offered an email with their answers instead.
+  const FORM = {
+    join: ['Get started', 'Join T57', 'Founding members get a 90-day free trial at launch. Tell us about your business and your country team will contact you.', 'Apply for membership', ['name', 'email', 'company', 'role']],
+    demo: ['Request a demo', 'See T57 on your own products', 'A 30-minute demo with a specialist from your country team.', 'Book my demo', ['name', 'email', 'company']],
+    partner: ['Partnerships', 'Become a T57 partner', 'Tell us about your services, licences and markets.', 'Submit application', ['name', 'email', 'company', 'type']],
+    contact: ['Contact', 'Talk to T57', 'We will connect you with the right team.', 'Send', ['name', 'email']],
+    support: ['Help Center', 'Contact support', 'Have your company name and trade reference ready, so we can help faster.', 'Send to support', ['name', 'email']],
+    subscribe: ['T57 Insights', 'Subscribe to T57 Insights', 'Market insight on food trade, finance and AI. Unsubscribe at any time.', 'Subscribe', ['email']],
+  };
+  const DONE = { join: 'Thank you. Your country team will contact you within two working days.', demo: 'Thank you. A specialist will contact you to confirm a time.', partner: 'Thank you. Our partnerships team will be in touch.',
+    contact: 'Thank you. We will reply within two working days.', support: 'Thank you. Our support team has your request.', subscribe: 'Thank you. You are subscribed to T57 Insights.' };
+  const kindOf = t => /subscri/i.test(t) ? 'subscribe' : /support|security team/i.test(t) ? 'support' : /partner/i.test(t) ? 'partner'
+    : /demo|see how t57 works|watch/i.test(t) ? 'demo' : /chat/i.test(t) ? 'support' : /apply|join|register|free trial|membership|sign up|start|trade with|use escrow|post your|list your|try |track your/i.test(t) ? 'join' : 'contact';
+  function required(f) { return (FORM[f.dataset.apiForm] || FORM.contact)[4].filter(n => f.elements[n] && !f.elements[n].closest('[hidden]')); }
+  function payload(f) {
+    const o = { kind: f.dataset.apiForm, t: +f.dataset.t || 0, page: location.pathname, cta: f.dataset.cta || '' };
+    [...f.elements].forEach(el => { if (!el.name || el.closest('[hidden]')) return; o[el.name] = el.type === 'checkbox' ? (el.name === 'consent' ? el.checked : (el.checked ? el.value : '')) : el.value.trim(); });
+    return o;
+  }
+  function mailto(f, o) {
+    const skip = new Set(['kind', 't', 'consent', 'website']);
+    const body = Object.entries(o).filter(([k, v]) => v && !skip.has(k)).map(([k, v]) => `${k}: ${v}`).join('\n');
+    return `mailto:hello@t57.ai?subject=${encodeURIComponent((FORM[o.kind] || FORM.contact)[1] + (o.company ? ' – ' + o.company : ''))}&body=${encodeURIComponent(body)}`;
+  }
+  document.querySelectorAll('form[data-api-form]').forEach(f => {
+    f.dataset.t = Date.now();
+    const msg = f.querySelector('[data-mf-msg]'), btn = f.querySelector('button[type=submit]');
+    const say = (cls, html) => { msg.className = 'mf-msg ' + cls; msg.innerHTML = html; msg.hidden = false; };
+    f.addEventListener('submit', async e => {
+      e.preventDefault();
+      f.querySelectorAll('.bad').forEach(x => x.classList.remove('bad'));
+      const miss = required(f).filter(n => !f.elements[n].value.trim() || (n === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.elements[n].value.trim())));
+      const consent = f.elements.consent;
+      miss.forEach(n => f.elements[n].closest('label').classList.add('bad'));
+      if (!consent.checked) consent.closest('label').classList.add('bad');
+      if (miss.length || !consent.checked) { say('err', miss.length ? 'Please complete the highlighted fields.' : 'Please tick the box to agree to how we use your details.'); (miss.length ? f.elements[miss[0]] : consent).focus(); return; }
+      const o = payload(f); btn.disabled = true; say('', 'Sending…');
+      try {
+        const r = await fetch('/api/forms', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(o) });
+        const j = await r.json().catch(() => ({}));
+        if (r.ok && j.ok) { f.classList.add('sent'); say('ok', DONE[o.kind] || DONE.contact); return; }
+        if (r.status === 422 && j.fields) { j.fields.forEach(n => f.elements[n] && f.elements[n].closest('label').classList.add('bad')); say('err', 'Please check the highlighted fields.'); return; }
+        if (r.status === 429) { say('err', 'Too many requests from this connection. Please try again in a few minutes.'); return; }
+        throw new Error(j.error || r.status);
+      } catch (err) {
+        say('err', `We could not send this online just now. <a href="${mailto(f, o)}">Send it by email instead</a>, with your answers filled in.`);
+      } finally { btn.disabled = false; }
+    });
+  });
+
+  // The get-started dialog: every "talk to us", "book a demo" or "apply" button opens it with the right form
+  const dlg = document.getElementById('get-started');
+  if (dlg && dlg.showModal) {
+    const df = dlg.querySelector('form');
+    const open = (kind, cta) => {
+      const c = FORM[kind] || FORM.contact;
+      df.dataset.apiForm = kind; df.dataset.cta = cta; df.dataset.t = Date.now(); df.classList.remove('sent');
+      dlg.querySelector('[data-fdlg-eb]').textContent = c[0]; dlg.querySelector('[data-fdlg-h]').textContent = c[1];
+      dlg.querySelector('[data-fdlg-sub]').textContent = c[2]; dlg.querySelector('[data-fdlg-btn]').textContent = c[3];
+      df.querySelectorAll('[data-k]').forEach(el => el.hidden = !el.dataset.k.split(' ').includes(kind));
+      df.querySelector('[data-mf-msg]').hidden = true; df.querySelectorAll('.bad').forEach(x => x.classList.remove('bad'));
+      dlg.showModal(); const first = df.querySelector('[data-k]:not([hidden]) input, [data-k]:not([hidden]) select'); first && first.focus();
+    };
+    document.addEventListener('click', e => {
+      const a = e.target.closest('a[href$="#cta-home"], section.cta a[href^="#cta-"], [data-form]');
+      if (!a || a.closest('#get-started') || e.metaKey || e.ctrlKey || e.shiftKey) return;
+      e.preventDefault(); e.stopPropagation();
+      const t = a.textContent.trim(); open(a.dataset.form || kindOf(t), t);
+    }, true);
+    dlg.querySelector('[data-fdlg-close]').addEventListener('click', () => dlg.close());
+    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+    dlg.querySelector('form').addEventListener('click', e => { if (e.target.closest('a[data-go]')) dlg.close(); });
+    window.T57_openForm = open;
+  }
 
   document.querySelectorAll('[data-explainer]').forEach(fx => {
     const btn = fx.querySelector('.fx-pause');
