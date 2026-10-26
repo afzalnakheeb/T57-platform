@@ -451,59 +451,65 @@ a.aud:hover { transform:translateY(-3px); box-shadow:0 14px 30px -18px #02246c66
 }
 @media (prefers-reduced-motion: reduce) { .gl-b { background-size:100% 1.5px; } .gl-ar, .gl-a { opacity:1; transform:none; } }
 
-/* Explainer: a 12-second looping, silent animation in three beats (problem, T57 in action, result) */
+/* Explainer: a 12-second looping, silent animation in three beats (problem 0–4s, T57 in action 4–8s, result 8–12s) */
 .explainer { position:relative; border-radius:16px; overflow:hidden; background:var(--night); box-shadow:0 24px 60px -24px #02246c66; }
 .explainer svg { display:block; width:100%; height:auto; }
 .explainer text { font-family:var(--font-text); fill:#fff; }
 .fx-cap { font:700 46px var(--font-display); }
-.explainer .fx-mid circle { fill:#2a3366; stroke:#c9cdf066; stroke-width:2; }
-.explainer .fx-mid text, .fx-ends text { font-size:24px; fill:#c9cdf0; }
+.fx-lbl { font-size:24px; fill:#c9cdf0 !important; }
+.fx-node circle { fill:#131d55; stroke:var(--strong-cyan); stroke-width:3; }
+.fx-ic { fill:none; stroke:var(--strong-cyan); stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+.fx-mid circle { fill:#2a3366; stroke:#c9cdf066; stroke-width:2; }
 .fx-chain { stroke:#c9cdf055; stroke-width:4; stroke-dasharray:6 10; fill:none; }
 .fx-crate { fill:var(--amber-flame); }
-.fx-ends circle { fill:#131d55; stroke:var(--strong-cyan); stroke-width:3; }
-.fx-ic { fill:none; stroke:var(--strong-cyan); stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
-.fx-direct { stroke:var(--strong-cyan); stroke-width:6; fill:none; stroke-dasharray:1; stroke-dashoffset:1; }
+.fx-direct { stroke:var(--strong-cyan); stroke-width:6; fill:none; }
+.fx-draw2 { stroke-dasharray:1; stroke-dashoffset:0; }
 .fx-hub circle { fill:var(--persian-indigo); stroke:var(--strong-cyan); stroke-width:3; }
 .fx-hub text { font:700 30px var(--font-display); }
-.fx-chip rect { fill:var(--strong-cyan); } .fx-chip text { font:500 24px var(--font-text); fill:var(--imperial-blue); }
+.fx-chip rect { fill:var(--strong-cyan); } .fx-chip text { font:500 24px var(--font-text); fill:var(--imperial-blue) !important; }
 .fx-phone { fill:#fff; } .fx-pk { font-size:18px; letter-spacing:.16em; fill:var(--green-sprute) !important; } .fx-pv { font:700 32px var(--font-display); fill:var(--imperial-blue) !important; }
 .fx-row circle { fill:var(--strong-cyan); } .fx-row path { fill:none; stroke:var(--imperial-blue); stroke-width:3; stroke-linecap:round; stroke-linejoin:round; } .fx-row text { font-size:24px; fill:var(--imperial-blue) !important; }
 .fx-ill { font-size:15px; fill:#5b5d6b !important; letter-spacing:.08em; }
-.fx-share text { font-size:22px; fill:#c9cdf0; } .fx-track { fill:#ffffff1f; } .fx-bar { fill:var(--strong-cyan); transform-box:fill-box; transform-origin:left; transform:scaleX(.62); }
+.fx-share text { font-size:22px; fill:#c9cdf0; } .fx-track { fill:#ffffff1f; } .fx-bar { fill:var(--strong-cyan); transform-box:fill-box; transform-origin:left; transform:scaleX(.9); }
+.fx-spoke { fill:none; stroke:#39c4c466; stroke-width:2; }
+.fx-tangle { fill:none; stroke:#f8b71666; stroke-width:2.5; stroke-dasharray:5 9; }
+.fx-box rect { fill:#2a3366; stroke:#c9cdf066; stroke-width:2; } .fx-box text { font:500 19px var(--font-text); }
+.fx-box { transform-box:fill-box; transform-origin:center; }
+.fx-rec { fill:#ffffff14; } .fx-rec-l { font-size:20px; letter-spacing:.16em; fill:var(--strong-cyan) !important; }
 .fx-steps { position:absolute; right:20px; top:20px; display:flex; gap:6px; }
 .fx-steps span { padding:4px 12px; border-radius:999px; font:500 13px/18px var(--font-text); color:#c9cdf0; background:#ffffff14; }
 .fx-pause { position:absolute; right:16px; bottom:14px; min-height:36px; padding:0 14px; border-radius:999px; border:1px solid #c9cdf04d; background:#0b1340b3; color:#fff; font:500 13px/18px var(--font-text); cursor:pointer; }
-/* timeline: beat 1 0–4s, beat 2 4–8s, beat 3 8–12s */
+/* Poster frame (before play, or reduced motion): the result */
+.explainer:not(.play) .fx-b1, .explainer:not(.play) .fx-b2, .explainer:not(.play) .fx-b12 { opacity:0; }
+.explainer:not(.play) .fx-box rect { fill:var(--strong-cyan); stroke:var(--strong-cyan); } .explainer:not(.play) .fx-box text { fill:var(--imperial-blue); }
+/* Timeline */
 .explainer.play * { animation-duration:12s; animation-iteration-count:infinite; animation-timing-function:var(--ease-in-out); }
 .explainer.paused * { animation-play-state:paused !important; }
 .explainer.play .fx-b1 { animation-name:fxB1; } @keyframes fxB1 { 0%, 30% { opacity:1; } 36%, 97% { opacity:0; } 100% { opacity:1; } }
-.explainer.play .fx-crate { animation-name:fxCrate; transform-box:view-box; } @keyframes fxCrate { 0% { transform:translateX(0); } 28% { transform:translateX(860px); } 100% { transform:translateX(860px); } }
-.explainer.play .fx-mid circle { animation-name:fxMid; } @keyframes fxMid { 0%, 30% { fill:#2a3366; } 100% { fill:#2a3366; } }
-.explainer.play .fx-bar { animation-name:fxBar; } @keyframes fxBar { 0% { transform:scaleX(.62); } 8% { transform:scaleX(.5); } 16% { transform:scaleX(.4); } 24%, 33% { transform:scaleX(.32); } 70% { transform:scaleX(.32); } 82%, 96% { transform:scaleX(.9); } 100% { transform:scaleX(.62); } }
 .explainer.play .fx-b2 { animation-name:fxB2; } @keyframes fxB2 { 0%, 32% { opacity:0; } 36%, 64% { opacity:1; } 68%, 100% { opacity:0; } }
-.explainer.play .fx-direct { animation-name:fxDraw; } @keyframes fxDraw { 0%, 35% { stroke-dashoffset:1; } 46%, 100% { stroke-dashoffset:0; } }
-.explainer.play .fx-hub { animation-name:fxPop; transform-box:fill-box; transform-origin:center; } @keyframes fxPop { 0%, 36% { transform:scale(0); } 42%, 100% { transform:scale(1); } }
-.explainer.play .fx-chip { animation-name:fxChip; transform-box:fill-box; transform-origin:center; } 
-.explainer.play .fx-chip:nth-of-type(1) { animation-name:fxChip1; } .explainer.play .fx-chip:nth-of-type(2) { animation-name:fxChip2; } .explainer.play .fx-chip:nth-of-type(3) { animation-name:fxChip3; }
-@keyframes fxChip1 { 0%, 44% { opacity:0; transform:translateY(16px); } 48%, 100% { opacity:1; transform:none; } }
-@keyframes fxChip2 { 0%, 50% { opacity:0; transform:translateY(16px); } 54%, 100% { opacity:1; transform:none; } }
-@keyframes fxChip3 { 0%, 56% { opacity:0; transform:translateY(16px); } 60%, 100% { opacity:1; transform:none; } }
-.explainer.play .fx-mid { animation-name:fxMidOut; } @keyframes fxMidOut { 0%, 30% { opacity:1; } 36%, 100% { opacity:0; } }
 .explainer.play .fx-b3, .explainer.play .fx-b3bg { animation-name:fxB3; } @keyframes fxB3 { 0%, 65% { opacity:0; } 70%, 96% { opacity:1; } 100% { opacity:0; } }
-.explainer.play .fx-ends { animation-name:fxEnds; } @keyframes fxEnds { 0%, 65% { opacity:1; } 70%, 96% { opacity:0; } 100% { opacity:1; } }
-.explainer.play .fx-row:nth-of-type(1) { animation-name:fxRow1; } .explainer.play .fx-row:nth-of-type(2) { animation-name:fxRow2; }
-@keyframes fxRow1 { 0%, 72% { opacity:0; } 76%, 100% { opacity:1; } } @keyframes fxRow2 { 0%, 79% { opacity:0; } 83%, 100% { opacity:1; } }
-.explainer.play .fx-steps .s1 { animation-name:fxS1; } .explainer.play .fx-steps .s2 { animation-name:fxS2; } .explainer.play .fx-steps .s3 { animation-name:fxS3; }
-@keyframes fxS1 { 0%, 32% { background:var(--amber-flame); color:var(--imperial-blue); } 34%, 100% { background:#ffffff14; color:#c9cdf0; } }
-@keyframes fxS2 { 0%, 33% { background:#ffffff14; color:#c9cdf0; } 35%, 65% { background:var(--strong-cyan); color:var(--imperial-blue); } 67%, 100% { background:#ffffff14; color:#c9cdf0; } }
-@keyframes fxS3 { 0%, 66% { background:#ffffff14; color:#c9cdf0; } 68%, 98% { background:var(--strong-cyan); color:var(--imperial-blue); } 100% { background:#ffffff14; color:#c9cdf0; } }
-/* poster frame (no motion, or before play): the result */
-.explainer:not(.play) .fx-b1, .explainer:not(.play) .fx-b2 { opacity:0; }
-.explainer:not(.play) .fx-ends { opacity:0; }
-.explainer:not(.play) .fx-bar { transform:scaleX(.9); }
-@media (max-width: 640px) { .fx-steps { display:none; } .fx-pause { top:10px; bottom:auto; right:10px; min-height:30px; padding:0 10px; font-size:12px; } .fx-cap { font-size:60px; } .fx-ends text, .fx-mid text, .fx-share text { font-size:34px; } .fx-chip text { font-size:26px; } }
+.explainer.play .fx-b12 { animation-name:fxB12; } @keyframes fxB12 { 0%, 65% { opacity:1; } 70%, 96% { opacity:0; } 100% { opacity:1; } }
+.explainer.play .fx-b23 { animation-name:fxB23; } @keyframes fxB23 { 0%, 32% { opacity:0; } 36%, 96% { opacity:1; } 100% { opacity:0; } }
+.explainer.play .fx-draw2 { animation-name:fxDraw; } @keyframes fxDraw { 0%, 35% { stroke-dashoffset:1; } 46%, 100% { stroke-dashoffset:0; } }
+.explainer.play .fx-pop2 { animation-name:fxPop; transform-box:fill-box; transform-origin:center; } @keyframes fxPop { 0%, 36% { transform:scale(0); } 42%, 100% { transform:scale(1); } }
+.explainer.play .fx-s1 { animation-name:fxS1in; } .explainer.play .fx-s2 { animation-name:fxS2in; } .explainer.play .fx-s3 { animation-name:fxS3in; }
+@keyframes fxS1in { 0%, 44% { opacity:0; transform:translateY(16px); } 48%, 100% { opacity:1; transform:none; } }
+@keyframes fxS2in { 0%, 50% { opacity:0; transform:translateY(16px); } 54%, 100% { opacity:1; transform:none; } }
+@keyframes fxS3in { 0%, 56% { opacity:0; transform:translateY(16px); } 60%, 100% { opacity:1; transform:none; } }
+.explainer.play .fx-r1 { animation-name:fxR1; } .explainer.play .fx-r2 { animation-name:fxR2; } .explainer.play .fx-r3 { animation-name:fxR3; }
+@keyframes fxR1 { 0%, 72% { opacity:0; } 76%, 100% { opacity:1; } } @keyframes fxR2 { 0%, 78% { opacity:0; } 82%, 100% { opacity:1; } } @keyframes fxR3 { 0%, 84% { opacity:0; } 88%, 100% { opacity:1; } }
+.explainer.play .fx-crate { animation-name:fxCrate; transform-box:view-box; } @keyframes fxCrate { 0% { transform:translateX(0); } 28%, 100% { transform:translateX(860px); } }
+.explainer.play .fx-bar { animation-name:fxBar; } @keyframes fxBar { 0% { transform:scaleX(.62); } 8% { transform:scaleX(.5); } 16% { transform:scaleX(.4); } 24%, 70% { transform:scaleX(.32); } 82%, 96% { transform:scaleX(.9); } 100% { transform:scaleX(.62); } }
+.explainer.play .fx-box { animation-name:fxGather; } @keyframes fxGather { 0%, 30% { transform:translate(var(--dx), var(--dy)) rotate(var(--r)); } 40%, 100% { transform:none; } }
+.explainer.play .fx-box rect { animation-name:fxTickR; } @keyframes fxTickR { 0%, 66% { fill:#2a3366; stroke:#c9cdf066; } 72%, 96% { fill:var(--strong-cyan); stroke:var(--strong-cyan); } 100% { fill:#2a3366; stroke:#c9cdf066; } }
+.explainer.play .fx-box text { animation-name:fxTickT; } @keyframes fxTickT { 0%, 66% { fill:#fff; } 72%, 96% { fill:var(--imperial-blue); } 100% { fill:#fff; } }
+.explainer.play .fx-steps .s1 { animation-name:fxSt1; } .explainer.play .fx-steps .s2 { animation-name:fxSt2; } .explainer.play .fx-steps .s3 { animation-name:fxSt3; }
+@keyframes fxSt1 { 0%, 32% { background:var(--amber-flame); color:var(--imperial-blue); } 34%, 100% { background:#ffffff14; color:#c9cdf0; } }
+@keyframes fxSt2 { 0%, 33% { background:#ffffff14; color:#c9cdf0; } 35%, 65% { background:var(--strong-cyan); color:var(--imperial-blue); } 67%, 100% { background:#ffffff14; color:#c9cdf0; } }
+@keyframes fxSt3 { 0%, 66% { background:#ffffff14; color:#c9cdf0; } 68%, 98% { background:var(--strong-cyan); color:var(--imperial-blue); } 100% { background:#ffffff14; color:#c9cdf0; } }
+@media (max-width: 640px) { .fx-steps { display:none; } .fx-pause { top:10px; bottom:auto; right:10px; min-height:30px; padding:0 10px; font-size:12px; } .fx-cap { font-size:60px; } .fx-lbl, .fx-share text { font-size:34px; } .fx-chip text { font-size:26px; } }
 @media (prefers-reduced-motion: reduce) { .fx-pause { display:none; } }
-
+.home-fx { padding-top:clamp(48px, 6vw, 80px); }
 .standfirst { margin:0 0 56px; padding-bottom:40px; border-bottom:1px solid var(--line); max-width:900px; }
 .standfirst .sf-h { margin:0 0 12px; font:500 clamp(22px, 2.2vw, 28px)/1.3 var(--font-display); color:var(--ink-strong); }
 .standfirst p { margin:0; font-size:17px; line-height:28px; }
