@@ -70,7 +70,7 @@ names = {i: html.unescape(re.search(r'aria-label="([^"]+)"', a).group(1)) for i,
 open(f'{R}/public/proto/worlds.js', 'w').write(f'window.T57_PAGES = {json.dumps({"petal": PETAL, "name": names}, ensure_ascii=False)};\n' + open(f'{D}/script.js').read())
 
 # llms.txt: a plain summary that AI assistants can read and cite (llmstxt.org format)
-SITE = 'https://t57.ai'
+SITE = 'https://www.t57.ai'
 L = ['# T57.ai', '', '> T57 is an AI-native digital trade platform for food. It connects verified farmers, processors, traders, buyers, financiers, service providers and regulators on one trade record, from quote to payment. T57 does not lend or hold funds; finance, escrow and insurance come from licensed partners.', '',
      'T57 works with the Islamic Organization for Food Security (IOFS), an OIC institution, under a 10-year memorandum of understanding, and has signed more than 150 memoranda and letters of intent across 67 countries. Founding markets: Saudi Arabia, UAE, India, Malaysia and Türkiye.']
 for sec, head in [('who-we-serve', 'Who we serve'), ('why-t57', 'Why T57'), ('capabilities', 'Capabilities'), ('ai-native', 'AI Native'), ('platform', 'Platform'), ('trust', 'Trust and compliance'), ('markets', 'Markets'), ('pricing', 'Pricing'), ('resources', 'Resources'), ('help', 'Help Center'), ('partnerships', 'Partnerships'), ('partners', 'Partner programs'), ('about', 'About T57'), ('contact', 'Contact')]:
