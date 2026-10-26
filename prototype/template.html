@@ -205,11 +205,13 @@ body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-
 /* Transition overlay */
 .veil { position:fixed; inset:0; z-index:100; pointer-events:none; display:grid; place-items:center; visibility:hidden; }
 .veil.go { visibility:visible; pointer-events:auto; }
-html.arriving .veil { visibility:visible; } html.arriving .veil .bg, html.arriving .veil .mark { opacity:1; } html.arriving .veil svg.arc { display:none; }
-.veil .bg { position:absolute; inset:0; background:var(--night); opacity:0; }
-.veil svg.arc { position:absolute; inset:0; width:100%; height:100%; }
-.veil svg.arc path { fill:none; stroke:var(--persian-indigo); }
-.veil svg.arc path.sweep { stroke:url(#veil-sweep); }
+html.arriving .veil { visibility:visible; } html.arriving .veil .bg, html.arriving .veil .mark { opacity:1; }
+html.lifting main { opacity:0; }
+/* Arriving between microsites, the new page opens out of the logo: the night ground has a hole in the shape of the logo's petal shell, which grows from the logo's size until it clears the screen */
+@property --shell { syntax:'<length>'; inherits:false; initial-value:0px; }
+.veil .bg { position:absolute; inset:0; background:var(--night); opacity:0; --shell:0px;
+  -webkit-mask:url(/proto/shell.png) center / var(--shell) auto no-repeat, linear-gradient(#000 0 0); -webkit-mask-composite:xor;
+  mask:url(/proto/shell.png) center / var(--shell) auto no-repeat exclude, linear-gradient(#000 0 0); }
 .veil .mark { position:relative; width:min(46vmin, 360px); height:auto; opacity:0; }
 .veil .mark .petal { transform-box:fill-box; transform-origin:center; }
 .veil .dest { position:absolute; bottom:18%; left:0; right:0; text-align:center; font:500 13px/16px var(--font-text); letter-spacing:.24em; text-transform:uppercase; color:var(--on-night-muted); opacity:0; }
@@ -1006,7 +1008,6 @@ a.cm-pt:hover text { text-decoration:underline; }
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
 {{DEFS}}
-<defs><linearGradient id="veil-sweep" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#008b8c"/><stop offset="1" stop-color="#2f2e7d"/></linearGradient></defs>
 </svg>
 
 <header class="hdr gutter">
@@ -1063,10 +1064,6 @@ a.cm-pt:hover text { text-decoration:underline; }
 
 <div class="veil" id="veil" aria-hidden="true">
   <div class="bg"></div>
-  <svg class="arc" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
-    <path class="bold" stroke-width="220" d="M760 -120 C 1120 120, 1180 620, 860 1040"></path>
-    <path class="sweep" stroke-width="56" d="M-80 760 C 420 800, 1000 560, 1700 360"></path>
-  </svg>
   <svg class="mark" id="veil-mark" viewBox="774 418 250 244">{{MARK}}</svg>
   <div class="dest" id="veil-dest"></div>
 </div>

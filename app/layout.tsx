@@ -17,9 +17,9 @@ export const metadata = {
 export const viewport = { themeColor: '#2f2e7d' };
 
 // Header, menu, footer and the transition veil are shared by every page.
-// The inline script covers the screen before first paint when arriving from
+// The inline script covers the screen (or, inside a microsite, hides the content) before first paint when arriving from
 // another microsite, so the petal transition continues without a flash.
-const arrive = `try{if(sessionStorage.getItem('t57-go'))document.documentElement.classList.add('arriving')}catch(e){}`;
+const arrive = `try{var g=sessionStorage.getItem('t57-go');if(g)document.documentElement.classList.add(g.indexOf('lift:')===0?'lifting':'arriving')}catch(e){}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

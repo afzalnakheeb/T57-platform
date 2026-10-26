@@ -67,7 +67,7 @@ json.dump(pages, open(f'{R}/content/pages.json', 'w'), indent=1, ensure_ascii=Fa
 
 os.makedirs(f'{R}/public/proto', exist_ok=True)
 names = {i: html.unescape(re.search(r'aria-label="([^"]+)"', a).group(1)) for i, a in arts}
-open(f'{R}/public/proto/worlds.js', 'w').write(f'window.T57_PAGES = {json.dumps({"petal": PETAL, "name": names}, ensure_ascii=False)};\n' + open(f'{D}/script.js').read())
+open(f'{R}/public/proto/worlds.js', 'w').write(f'window.T57_PAGES = {json.dumps({"petal": PETAL, "name": names, "site": {i: (i if p['route'].startswith('/who-we-serve/') else {'partners': 'partnerships', '': 'home'}.get(p['section'], p['section'])) for i, p in pages.items()}}, ensure_ascii=False)};\n' + open(f'{D}/script.js').read())
 
 # llms.txt: a plain summary that AI assistants can read and cite (llmstxt.org format)
 SITE = 'https://www.t57.ai'

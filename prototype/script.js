@@ -400,8 +400,6 @@
 
   /* ---------- World switching with the petal transition ---------- */
   const veil = document.getElementById('veil'), vbg = veil.querySelector('.bg'), mark = document.getElementById('veil-mark'), dest = document.getElementById('veil-dest');
-  const arcBold = veil.querySelector('path.bold'), arcSweep = veil.querySelector('path.sweep');
-  [arcBold, arcSweep].forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; p.dataset.len = L; });
   let current = null, busy = false;
 
   function show(name) {
@@ -414,57 +412,78 @@
   }
   const anim = (el, kf, o) => el.animate(kf, Object.assign({ fill: 'forwards', easing: 'cubic-bezier(.65,0,.35,1)' }, o)).finished;
 
-  // Leaving: the veil closes over this page with the destination's petal, then the browser loads the real page.
+  // Two kinds of move. Between microsites, the logo covers the page, the next world's petal lights up,
+  // and the new page opens out of the logo's petal shell. Inside a microsite, the header stays put,
+  // its petal for the next page pulses and only the content lifts out and back in.
+  const SITE = TP.site || {};
+  const sameSite = name => current && SITE[name] && SITE[name] === SITE[current];
+  const veilPetals = [...mark.querySelectorAll('.petal')];
+  const clearAll = els => els.forEach(el => el.getAnimations().forEach(a => a.cancel()));
+  // While content lifts, the page behind it takes the colour of the top of the page, so light and dark pages never flash white.
+  const groundTo = () => { const m = document.getElementById('main'); let el = m && m.querySelector('.world'); for (let i = 0; el && i < 4; i++, el = el.firstElementChild) { const c = getComputedStyle(el).backgroundColor; if (c && c !== 'transparent' && !c.endsWith(', 0)')) { document.body.style.backgroundColor = c; return; } } };
+
   async function go(name, href) {
     if (busy) return;
     if (name === current) { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); return; }
     if (reduce) { location.href = href; return; }
     busy = true;
+    const main = document.getElementById('main');
+    if (sameSite(name)) {
+      try { sessionStorage.setItem('t57-go', 'lift:' + name); } catch (e) {}
+      const hp = logo.querySelector('.p-' + (WORLD_PETAL[name] || 'all')) || logo;
+      groundTo();
+      hp.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.2)' }, { transform: 'scale(1)' }], { duration: 420, easing: 'ease-in-out' });
+      await anim(main, [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(-10px)' }], { duration: 200, easing: 'ease-in' });
+      location.href = href;
+      addEventListener('pageshow', e => { if (e.persisted) { clearAll([main]); busy = false; } }, { once: true });
+      return;
+    }
     try { sessionStorage.setItem('t57-go', name); } catch (e) {}
     const petal = WORLD_PETAL[name];
-    dest.textContent = WORLD_NAME[name];
-    const petals = [...mark.querySelectorAll('.petal')];
     const target = petal === 'all' ? mark : mark.querySelector('.p-' + petal);
-    petals.forEach(p => p.getAnimations().forEach(a => a.cancel()));
+    dest.textContent = WORLD_NAME[name];
+    clearAll(veilPetals);
     veil.classList.add('go');
-    const out = document.getElementById(current);
-    if (out) anim(out, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.4, transform: 'scale(0.985)' }], { duration: 400 });
-    anim(vbg, [{ opacity: 0 }, { opacity: 1 }], { duration: 450, delay: 150 });
-    anim(arcBold, [{ strokeDashoffset: arcBold.dataset.len }, { strokeDashoffset: 0 }], { duration: 700, delay: 100 });
-    anim(arcSweep, [{ strokeDashoffset: arcSweep.dataset.len }, { strokeDashoffset: 0 }], { duration: 700, delay: 250 });
-    anim(mark, [{ opacity: 0, transform: 'scale(.7)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 600, delay: 350, easing: 'cubic-bezier(.2,.8,.2,1)' });
-    petals.forEach(p => { if (petal !== 'all' && p !== target) anim(p, [{ opacity: 1 }, { opacity: p.classList.contains('p-ring') ? 0.35 : 0.12 }], { duration: 400, delay: 800 }); });
-    anim(dest, [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 400, delay: 850 });
-    const glowCol = petal === 'all' ? 'rgba(143,147,255,.9)' : 'rgba(57,196,196,.9)';
-    await anim(target, [{ filter: 'none' }, { filter: `drop-shadow(0 0 6px ${glowCol})` }], { duration: 500, delay: 800 });
+    anim(main, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.5, transform: 'scale(0.985)' }], { duration: 380 });
+    anim(vbg, [{ opacity: 0 }, { opacity: 1 }], { duration: 340 });
+    await anim(mark, [{ opacity: 0, transform: 'scale(.82)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 400, delay: 80, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    veilPetals.forEach(p => { if (petal !== 'all' && p !== target) anim(p, [{ opacity: 1 }, { opacity: p.classList.contains('p-ring') ? 0.3 : 0.14 }], { duration: 280 }); });
+    if (target !== mark) anim(target, [{ transform: 'scale(1)' }, { transform: 'scale(1.14)' }], { duration: 300, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    anim(dest, [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 280 });
+    await anim(target, [{ filter: 'none' }, { filter: 'drop-shadow(0 0 8px rgba(57,196,196,.9))' }], { duration: 320 });
     location.href = href;
-    addEventListener('pageshow', e => { if (e.persisted) { veil.classList.remove('go'); [vbg, mark, dest, arcBold, arcSweep, ...petals].forEach(el => el.getAnimations().forEach(a => a.cancel())); if (out) out.getAnimations().forEach(a => a.cancel()); busy = false; } }, { once: true });
+    addEventListener('pageshow', e => { if (e.persisted) { veil.classList.remove('go'); clearAll([vbg, mark, dest, main, ...veilPetals]); busy = false; } }, { once: true });
   }
 
-  // Arriving: the new page starts under the veil (set before first paint) and the petal opens onto it.
+  // Arriving from another microsite: the page waits under the logo, then opens out of its petal shell.
   async function arrive(name) {
     busy = true;
     const petal = WORLD_PETAL[name] || 'all';
-    const petals = [...mark.querySelectorAll('.petal')];
     const target = petal === 'all' ? mark : mark.querySelector('.p-' + petal);
     dest.textContent = WORLD_NAME[name] || '';
     veil.classList.add('go');
     document.documentElement.classList.remove('arriving');
     const hold = (el, k) => el.animate([k, k], { duration: 10, fill: 'forwards' });
     hold(vbg, { opacity: 1 }); hold(mark, { opacity: 1, transform: 'scale(1)' }); hold(dest, { opacity: 1 });
-    [arcBold, arcSweep].forEach(p => hold(p, { strokeDashoffset: 0 }));
-    petals.forEach(p => { if (petal !== 'all' && p !== target) hold(p, { opacity: p.classList.contains('p-ring') ? 0.35 : 0.12 }); });
-    await new Promise(r => setTimeout(r, 120));
+    veilPetals.forEach(p => { if (petal !== 'all' && p !== target) hold(p, { opacity: p.classList.contains('p-ring') ? 0.3 : 0.14 }); });
+    await new Promise(r => setTimeout(r, 140));
+    const size = mark.getBoundingClientRect().width, far = Math.hypot(innerWidth, innerHeight) * 3.2;
     const lines = [...document.querySelectorAll('#' + name + ' .hero h1 .ln, #' + name + ' .hero .std, #' + name + ' .hero .actions')];
-    lines.forEach((l, i) => l.animate([{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }], { duration: 600, delay: 250 + i * 90, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
-    anim(mark, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0, transform: 'scale(2.6)' }], { duration: 650, easing: 'cubic-bezier(.65,0,.35,1)' });
-    anim(dest, [{ opacity: 1 }, { opacity: 0 }], { duration: 250 });
-    anim(arcBold, [{ opacity: 1 }, { opacity: 0 }], { duration: 400 });
-    anim(arcSweep, [{ opacity: 1 }, { opacity: 0 }], { duration: 400 });
-    await anim(vbg, [{ opacity: 1 }, { opacity: 0 }], { duration: 600, delay: 150 });
-    [vbg, mark, dest, arcBold, arcSweep, ...petals].forEach(el => el.getAnimations().forEach(a => a.cancel()));
+    lines.forEach((l, i) => l.animate([{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }], { duration: 600, delay: 300 + i * 90, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
+    anim(dest, [{ opacity: 1 }, { opacity: 0 }], { duration: 220 });
+    anim(mark, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0, transform: 'scale(1.6)' }], { duration: 420, easing: 'ease-in' });
+    await anim(vbg, [{ '--shell': size * 0.92 + 'px' }, { '--shell': far + 'px' }], { duration: 760, easing: 'cubic-bezier(.7,0,.2,1)' });
+    clearAll([vbg, mark, dest, ...veilPetals]);
     veil.classList.remove('go');
     busy = false;
+  }
+
+  // Arriving from a page in the same microsite: the content rises into place under the header.
+  function liftIn() {
+    const main = document.getElementById('main');
+    groundTo();
+    document.documentElement.classList.remove('lifting');
+    main.animate([{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'none' }], { duration: 360, easing: 'cubic-bezier(.2,.8,.2,1)' }).finished.then(() => { document.body.style.backgroundColor = ''; });
   }
 
   /* ---------- Logo intro: the five petals assemble into the mark ---------- */
@@ -696,6 +715,7 @@
   show(here);
   let arriving = null, seen = false;
   try { arriving = sessionStorage.getItem('t57-go'); sessionStorage.removeItem('t57-go'); seen = !!sessionStorage.getItem('t57-seen'); sessionStorage.setItem('t57-seen', '1'); } catch (e) {}
-  if (arriving && !reduce) arrive(here);
-  else { document.documentElement.classList.remove('arriving'); if (!seen) setTimeout(intro, 150); }
+  if (arriving && arriving.startsWith('lift:')) liftIn();
+  else if (arriving && !reduce) arrive(here);
+  else { document.documentElement.classList.remove('arriving', 'lifting'); if (!seen) setTimeout(intro, 150); }
 })();
