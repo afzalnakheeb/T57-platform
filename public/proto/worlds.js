@@ -1,8 +1,8 @@
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const C = { green:'#008b8c', cyan:'#39c4c4', indigo:'#2f2e7d', amber:'#f8b716', night:'#0b1340', sapphire:'#8f93ff', mist:'#c9cdf0' };
-  const WORLD_PETAL = { farmers:'agri', financiers:'finance' };
-  const WORLD_NAME = { farmers:'Farmers & Producers', financiers:'Financiers & Investors' };
+  const WORLD_PETAL = { governments:'all', financiers:'finance', traders:'trade', farmers:'agri' };
+  const WORLD_NAME = { governments:'Governments & Regulators', financiers:'Financiers & Investors', traders:'Traders & Aggregators', farmers:'Farmers & Producers' };
 
   /* ---------- Living scenes ---------- */
   function noise(i, s) { const x = Math.sin(i * 12.9898 + s * 78.233) * 43758.5453; return x - Math.floor(x); }
@@ -89,10 +89,97 @@
     ctx.strokeStyle = 'rgba(201,205,240,0.25)'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(0, base + 0.5); ctx.lineTo(w, base + 0.5); ctx.stroke();
   }
 
+  // Land mask: 180 x 90 cells of 2 degrees (Natural Earth 110m land via world-atlas), packed as bits.
+  const LAND = (() => { const b = atob('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf4AP/gAAAAAAAAAAAAAAAAAAAAAAAX/z///+AAAAAAAABAAAAAAAAAAAAAYd8P///wAA+AAAAAA8AAAAAAAAAAAwAnw////4AAIAAAAAAGAAAAAAAAAAADivwAf//wAAAAADAAf/wAHYAAAAAADoi3sAP//gAAAAAMAD///sAAAAgBgACfwz/AD/+gAAA4AEHf///+/8gBAP/7/nJdjwD/+AAAH/AA7f///////f4P//////h8H/gAAAf/6//f////////Mf/////9H4D8AeAA+ev///////////AP/////4A0B4AAAD5/////////////Af3////gHgA4AAAH5///////////LwAHgH///gHkAAAAAH4/////////+CIAABAB///4D+AAAAGCx/////////4A8AAIAAf///n/gAAAOCD/////////wA4AAAAAf///n/wAAAbP///////////AgAAAAAP/////wAAADf//////////9AAAAAAAF////0YAAAB///////////9AAAAAAAD////8EAAAB///////////5AAAAAAAD////2AAAAB/f5fP//////wAAAAAAAD////gAAAAfxnwPP//////jAAAAAAAD////AAAAAPCb3/n/////+CAAAAAAAD///8AAAAAfALf/n////+ECAAAAAAAB///8AAAAAGHQP/n/////mMAAAAAAAA///8AAAAAH+Ai///////E8AAAAAAAAf//wAAAAAP/AA///////BgAAAAAAAAP//gAAAAAf/73///////gAAAAAAAAAD/AQAAAAAf////f/////gAAAAAAAAAF+AQAAAAB///+/n/////AAAAAAAAAAC+AAAAAAB///+f0H////AAAAAAAAAAAeAwAAAAD////f/B///8gAAAAAAAAAAeGEAAAAH////v+B/z/AAAAAAAAAAAAPMAgAAAD////n+A/B+gAAAAAAAAAAAD8AAAAAD////n4AeB/AgAAAAAAAAAAAPAAAAAH////3gAcAfAgAAAAAAAAAAADAAAAAD////6AAcAfggAAAAAAAAAAABDwAAAD////8wAMATAIAAAAAAAAAAAAr/AAAB/////gAKASAAAAAAAAAAAAAAH/gAAA/////gACAAAIAAAAAAAAAAAAH/8AAAaH///AAAAsGAAAAAAAAAAAAAH/+AAAAB//+AAAAUOAAAAAAAAAAAAAP/+AAAAB//8AAAAYegAAAAAAAAAAAAP//gAAAD//4AAAAMeBgAAAAAAAAAAAP//8AAAB//wAAAAGdiuAAAAAAAAAAAf///AAAA//wAAAACAQHgAAAAAAAAAAP///gAAA//wAAAABwAHwgAAAAAAAAAH///AAAA//wAAAAACIDQIAAAAAAAAAH//+AAAAf/wAAAAAAAAAAAAAAAAAAAD//+AAAA//wgAAAAABxAAAAAAAAAAAD//+AAAA//wgAAAAAPxgBAAAAAAAAAA//8AAAA//jgAAAAAf5gAAAAAAAAAAAf/8AAAA//DgAAAAAf/gAAAAAAAAAAAf/8AAAAf/DAAAAAD//4CAAAAAAAAAAf/wAAAAf/DAAAAAH//4AAAAAAAAAAAf/AAAAAf+CAAAAAH//8AAAAAAAAAAAf/AAAAAP8AAAAAAH//+AAAAAAAAAAA/+AAAAAP8AAAAAAH//+AAAAAAAAAAA/+AAAAAH4AAAAAAD//+AAAAAAAAAAA/8AAAAAHwAAAAAADwf8AAAAAAAAAAA/gAAAAAAAAAAAAACAH4AIAAAAAAAAB/wAAAAAAAAAAAAAAAD4AEAAAAAAAAB+AAAAAAAAAAAAAAAAAAAGAAAAAAAAB6AAAAAAAAAAAAAAAAAwAMAAAAAAAAA8AAAAAAAAAAAAAAAAAQAYAAAAAAAAB4AAAAAAAAAAAAAAAAAAAwAAAAAAAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAAAAAAAACAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAeAAIP+f/gAAAAAAAAAAAMAAAAAAABP/+H//////AAAAAAAAAAA+AAAAAf////8////////AAAAAAAOEAPAAAB///////////////gAAAP//T//8AAAH//////////////+AAAH/////4AAAH///////////////8AAE//////4ABw////////////////8AAAD//////gCA////////////////wAAAf/////////////////////////+A/4A///////////////////////////////////////////////////////////////////////////////////////'), out = new Uint8Array(180 * 90); for (let i = 0; i < b.length; i++) { const v = b.charCodeAt(i); for (let k = 0; k < 8; k++) out[i * 8 + k] = (v >> (7 - k)) & 1; } return out; })();
+  const isLand = (lat, lon) => { const r = Math.min(89, Math.max(0, Math.floor((90 - lat) / 2))), c = Math.min(179, Math.max(0, Math.floor((lon + 180) / 2))); return LAND[r * 180 + c] === 1; };
+  const GLOBE_DOTS = []; for (let lat = -58; lat <= 78; lat += 1.3) { const step = 1.3 / Math.max(0.2, Math.cos(lat * Math.PI / 180)); for (let lon = -180; lon < 180; lon += step) if (isLand(lat, lon)) GLOBE_DOTS.push([lat * Math.PI / 180, lon * Math.PI / 180]); }
+  // Hubs: the five markets plus ASEAN and East Africa. s = surplus-leaning (teal), d = deficit-leaning (amber), for illustration.
+  const HUBS = { riyadh:[24.7, 46.7, 'd'], dubai:[25.2, 55.3, 'd'], mumbai:[19.1, 72.9, 's'], kl:[3.1, 101.7, 's'], istanbul:[41.0, 29.0, 's'], jakarta:[-6.2, 106.8, 'd'], nairobi:[-1.3, 36.8, 'd'], cairo:[30.0, 31.2, 'd'], bangkok:[13.8, 100.5, 's'] };
+  const ROUTES = [['mumbai','riyadh'],['mumbai','dubai'],['kl','riyadh'],['istanbul','riyadh'],['bangkok','jakarta'],['mumbai','nairobi'],['istanbul','cairo'],['kl','dubai'],['bangkok','dubai'],['istanbul','kl']];
+  function globeScene(ctx, w, h, t, px, py) {
+    ctx.fillStyle = C.night; ctx.fillRect(0, 0, w, h);
+    const narrow = w < 700, cx = narrow ? w * 0.6 : w * 0.72, cy = h * (narrow ? 0.62 : 0.54), R = Math.min(h * (narrow ? 0.5 : 0.5), w * (narrow ? 0.62 : 0.32));
+    const halo = ctx.createRadialGradient(cx, cy, R * 0.6, cx, cy, R * 1.5); halo.addColorStop(0, 'rgba(91,95,239,0.22)'); halo.addColorStop(1, 'rgba(11,19,64,0)');
+    ctx.fillStyle = halo; ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = 'rgba(19,29,85,0.9)'; ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.283); ctx.fill();
+    const rot = (62 + Math.sin(t * 0.00006) * 28 + (px - 0.5) * 16) * Math.PI / 180, tilt = (24 + (py - 0.5) * 8) * Math.PI / 180;
+    const ct = Math.cos(tilt), st = Math.sin(tilt);
+    const proj = (lat, lon) => { const cl = Math.cos(lat), x = cl * Math.sin(lon - rot), y0 = Math.sin(lat), z0 = cl * Math.cos(lon - rot); const y = y0 * ct - z0 * st, z = y0 * st + z0 * ct; return [cx + x * R, cy - y * R, z]; };
+    const grow = Math.min(1, t / 1800);
+    for (let i = 0; i < GLOBE_DOTS.length; i++) {
+      const [la, lo] = GLOBE_DOTS[i], [x, y, z] = proj(la, lo); if (z <= 0) continue;
+      ctx.fillStyle = `rgba(143,147,255,${(0.18 + z * 0.7) * grow})`; ctx.fillRect(x - 0.8, y - 0.8, 1.6, 1.6);
+    }
+    ctx.strokeStyle = 'rgba(143,147,255,0.35)'; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.283); ctx.stroke();
+    const rad = d => d * Math.PI / 180;
+    ROUTES.forEach(([a, b], k) => {
+      const A = HUBS[a], B = HUBS[b], la1 = rad(A[0]), lo1 = rad(A[1]), la2 = rad(B[0]), lo2 = rad(B[1]);
+      const v1 = [Math.cos(la1) * Math.cos(lo1), Math.cos(la1) * Math.sin(lo1), Math.sin(la1)], v2 = [Math.cos(la2) * Math.cos(lo2), Math.cos(la2) * Math.sin(lo2), Math.sin(la2)];
+      const dot = Math.min(1, v1[0] * v2[0] + v1[1] * v2[1] + v1[2] * v2[2]), om = Math.acos(dot), so = Math.sin(om) || 1;
+      const appear = Math.min(1, Math.max(0, (t - 1200 - k * 260) / 900));
+      const pts = []; const N = 40;
+      for (let i = 0; i <= N * appear; i++) { const f = i / N, s1 = Math.sin((1 - f) * om) / so, s2 = Math.sin(f * om) / so, v = [s1 * v1[0] + s2 * v2[0], s1 * v1[1] + s2 * v2[1], s1 * v1[2] + s2 * v2[2]], lift = 1 + Math.sin(f * Math.PI) * 0.13 * om;
+        const la = Math.asin(v[2] / Math.hypot(...v)), lo = Math.atan2(v[1], v[0]), p = proj(la, lo); pts.push([cx + (p[0] - cx) * lift, cy + (p[1] - cy) * lift, p[2]]); }
+      ctx.lineWidth = 1.4; ctx.beginPath(); let on = false;
+      pts.forEach(([x, y, z]) => { if (z > -0.05) { on ? ctx.lineTo(x, y) : ctx.moveTo(x, y); on = true; } else on = false; });
+      ctx.strokeStyle = 'rgba(57,196,196,0.55)'; ctx.stroke();
+      if (appear >= 1) { const f = ((t * 0.00018 + k * 0.37) % 1), q = pts[Math.round(f * N)]; if (q && q[2] > 0) { ctx.fillStyle = 'rgba(240,248,241,0.95)'; ctx.beginPath(); ctx.arc(q[0], q[1], 2.2, 0, 6.283); ctx.fill(); } }
+    });
+    Object.values(HUBS).forEach(([la, lo, kind], k) => {
+      const [x, y, z] = proj(rad(la), rad(lo)); if (z <= 0) return;
+      const col = kind === 's' ? '57,196,196' : '248,183,22', pulse = (t * 0.0005 + k * 0.23) % 1;
+      ctx.strokeStyle = `rgba(${col},${0.7 * (1 - pulse)})`; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.arc(x, y, 4 + pulse * 16, 0, 6.283); ctx.stroke();
+      ctx.fillStyle = `rgb(${col})`; ctx.beginPath(); ctx.arc(x, y, 3.2, 0, 6.283); ctx.fill();
+    });
+  }
+
+  function bidsScene(ctx, w, h, t, px, py) {
+    ctx.fillStyle = C.night; ctx.fillRect(0, 0, w, h);
+    const narrow = w < 700, x0 = narrow ? w * 0.06 : w * 0.5, x1 = w * 0.96, W = x1 - x0, mid = x0 + W / 2;
+    const glow = ctx.createRadialGradient(mid, h * 0.42, 0, mid, h * 0.42, W * 0.6); glow.addColorStop(0, 'rgba(38,65,179,0.35)'); glow.addColorStop(1, 'rgba(11,19,64,0)');
+    ctx.fillStyle = glow; ctx.fillRect(0, 0, w, h);
+    const D = [mid, h * 0.42], sup = [], buy = [], len = [];
+    for (let i = 0; i < 5; i++) { sup.push([x0 + W * 0.04, h * (0.16 + i * 0.11)]); buy.push([x1 - W * 0.04, h * (0.16 + i * 0.11)]); }
+    for (let i = 0; i < 3; i++) len.push([mid + (i - 1) * W * 0.22, h * 0.84]);
+    const cyc = 7000, ph = (t % cyc) / cyc, round = Math.floor(t / cyc), ms = (round * 3 + 1) % 5, mb = (round * 2 + 3) % 5, best = round % 3;
+    ctx.font = '600 11px Roboto, system-ui, sans-serif'; ctx.textAlign = 'center';
+    try { ctx.letterSpacing = '2px'; } catch (e) {}
+    ctx.fillStyle = 'rgba(201,205,240,0.7)';
+    ctx.fillText('SUPPLIER QUOTES', sup[0][0] + 10, h * 0.09); ctx.fillText('BUYER RFQS', buy[0][0] - 10, h * 0.09); ctx.fillText('LICENSED LENDERS', mid, h * 0.96);
+    const curve = (a, b, f) => { const cx1 = (a[0] + b[0]) / 2, cy1 = a[1]; const u = 1 - f; return [u * u * a[0] + 2 * u * f * cx1 + f * f * b[0], u * u * a[1] + 2 * u * f * cy1 + f * f * b[1]]; };
+    const lines = (arr, m, lit) => arr.forEach((p, i) => {
+      const hot = i === m && lit; ctx.strokeStyle = hot ? 'rgba(240,248,241,0.9)' : 'rgba(143,147,255,0.18)'; ctx.lineWidth = hot ? 1.6 : 1;
+      ctx.beginPath(); ctx.moveTo(p[0], p[1]); ctx.quadraticCurveTo((p[0] + D[0]) / 2, p[1], D[0], D[1]); ctx.stroke();
+      for (let k = 0; k < 3; k++) { const f = ((t * 0.00035 + k / 3 + i * 0.13) % 1), q = curve(p, D, f); ctx.fillStyle = hot ? 'rgba(240,248,241,0.95)' : 'rgba(143,147,255,0.5)'; ctx.beginPath(); ctx.arc(q[0], q[1], hot ? 2.2 : 1.4, 0, 6.283); ctx.fill(); }
+      ctx.fillStyle = hot ? C.cyan : 'rgba(19,29,85,1)'; ctx.strokeStyle = hot ? C.cyan : 'rgba(143,147,255,0.6)'; ctx.lineWidth = 1.4;
+      ctx.beginPath(); ctx.roundRect ? ctx.roundRect(p[0] - 9, p[1] - 9, 18, 18, 4) : ctx.rect(p[0] - 9, p[1] - 9, 18, 18); ctx.fill(); ctx.stroke();
+    });
+    const matched = ph > 0.18;
+    lines(sup, ms, matched); lines(buy, mb, matched);
+    // deal file: forms once both sides match
+    const form = Math.min(1, Math.max(0, (ph - 0.25) / 0.15));
+    ctx.strokeStyle = `rgba(240,248,241,${0.35 + form * 0.6})`; ctx.lineWidth = 1.6; ctx.fillStyle = 'rgba(11,19,64,0.95)';
+    const dw = 76 + form * 20, dh = 92 + form * 20; ctx.beginPath(); ctx.roundRect ? ctx.roundRect(D[0] - dw / 2, D[1] - dh / 2, dw, dh, 10) : ctx.rect(D[0] - dw / 2, D[1] - dh / 2, dw, dh); ctx.fill(); ctx.stroke();
+    for (let k = 0; k < 4; k++) { ctx.fillStyle = `rgba(201,205,240,${0.25 + form * 0.5})`; ctx.fillRect(D[0] - dw / 2 + 14, D[1] - dh / 2 + 18 + k * 16, (dw - 28) * (k === 3 ? 0.6 : 1), 3); }
+    ctx.fillStyle = `rgba(240,248,241,${0.5 + form * 0.5})`; ctx.fillText('DEAL FILE', D[0], D[1] + dh / 2 + 20);
+    // lenders compete
+    const offer = Math.min(1, Math.max(0, (ph - 0.45) / 0.3)), pick = ph > 0.8;
+    len.forEach((p, i) => {
+      const strength = [0.62, 0.8, 0.92][(i + best) % 3], top = i === best ? 1 : 0, f = offer * strength;
+      const q = [p[0] + (D[0] - p[0]) * f, p[1] + (D[1] + dh / 2 + 34 - p[1]) * f];
+      ctx.strokeStyle = pick && i === best ? 'rgba(248,183,22,0.95)' : 'rgba(143,147,255,0.35)'; ctx.lineWidth = pick && i === best ? 2 : 1;
+      ctx.beginPath(); ctx.moveTo(p[0], p[1]); ctx.lineTo(q[0], q[1]); ctx.stroke();
+      ctx.fillStyle = pick && i === best ? C.amber : 'rgba(143,147,255,0.8)'; ctx.beginPath(); ctx.arc(q[0], q[1], pick && i === best ? 4 : 3, 0, 6.283); ctx.fill();
+      ctx.fillStyle = 'rgba(19,29,85,1)'; ctx.strokeStyle = pick && i === best ? C.amber : 'rgba(143,147,255,0.6)'; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.arc(p[0], p[1], 10, 0, 6.283); ctx.fill(); ctx.stroke();
+    });
+    if (pick) { ctx.fillStyle = C.amber; ctx.fillText('BEST OFFER SELECTED', len[best][0], len[best][1] - 22); }
+    ctx.textAlign = 'start'; try { ctx.letterSpacing = '0px'; } catch (e) {}
+  }
+
   const scenes = [];
   document.querySelectorAll('canvas[data-scene]').forEach(cv => {
     const ctx = cv.getContext('2d');
-    const s = { cv, ctx, fn: cv.dataset.scene === 'seed' ? seedScene : valueScene, t0: performance.now(), px: 0.7, py: 0.5, visible: false, w: 0, h: 0 };
+    const s = { cv, ctx, fn: { seed: seedScene, value: valueScene, globe: globeScene, bids: bidsScene }[cv.dataset.scene], t0: performance.now(), px: 0.7, py: 0.5, visible: false, w: 0, h: 0 };
     const size = () => { const r = cv.getBoundingClientRect(), d = Math.min(2, devicePixelRatio || 1); s.w = r.width; s.h = r.height; cv.width = Math.round(r.width * d); cv.height = Math.round(r.height * d); ctx.setTransform(d, 0, 0, d, 0, 0); if (reduce && s.w && s.h) s.fn(ctx, s.w, s.h, 99999, s.px, s.py); };
     new ResizeObserver(size).observe(cv);
     cv.parentElement.addEventListener('pointermove', e => { const r = cv.getBoundingClientRect(); if (!r.width || !r.height) return; s.px = (e.clientX - r.left) / r.width; s.py = (e.clientY - r.top) / r.height; });
@@ -111,10 +198,16 @@
   const io = new IntersectionObserver(ents => ents.forEach(en => {
     if (!en.isIntersecting || reduce) return;
     en.target.querySelectorAll('.draw').forEach((p, i) => p.animate([{ strokeDashoffset: p.dataset.len }, { strokeDashoffset: 0 }], { duration: 900, delay: i * 120, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
-    if (en.target.id === 'tranche') en.target.classList.add('run');
+    if (en.target.hasAttribute('data-run')) en.target.classList.add('run');
+    countOnView(en.target);
     io.unobserve(en.target);
   }), { threshold: 0.4 });
-  document.querySelectorAll('.problem, #tranche').forEach(el => io.observe(el));
+  document.querySelectorAll('.problem, [data-run], .lede').forEach(el => io.observe(el));
+  function countOnView(el) { el.querySelectorAll('[data-count-on-view]').forEach(t => {
+    const n = +t.dataset.countOnView, dec = +(t.dataset.dec || 0), t0 = performance.now();
+    const step = now => { const k = Math.min(1, (now - t0) / 1400); t.textContent = (n * (1 - (1 - k) ** 3)).toFixed(dec); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }); }
   const countUp = el => el.querySelectorAll('[data-count]').forEach(t => {
     const n = +t.dataset.count, t0 = performance.now(), fmt = v => Math.round(v).toLocaleString('en-US');
     const step = now => { const k = Math.min(1, (now - t0) / 1400); t.textContent = fmt(n * (1 - (1 - k) ** 3)); if (k < 1) requestAnimationFrame(step); };
@@ -122,7 +215,7 @@
   });
   const coverIO = new IntersectionObserver(ents => ents.forEach(en => { const was = en.target.classList.contains('in'); en.target.classList.toggle('in', en.isIntersecting); if (en.isIntersecting && !was) countUp(en.target); }), { threshold: 0.25 });
   document.querySelectorAll('.cover-frame').forEach(el => reduce ? el.classList.add('in') : coverIO.observe(el));
-  if (reduce) document.getElementById('tranche').classList.add('run');
+  if (reduce) document.querySelectorAll('[data-run]').forEach(el => el.classList.add('run'));
 
   function railUpdate() {
     document.querySelectorAll('.world:not([hidden]) .steps').forEach(ol => {
@@ -136,7 +229,7 @@
 
   /* ---------- Header petal focus ---------- */
   const logo = document.getElementById('logo');
-  function focusPetal(name) { logo.classList.toggle('focus', !!name); logo.querySelectorAll('.petal').forEach(p => p.classList.toggle('on', !!name && p.classList.contains('p-' + name))); }
+  function focusPetal(name) { logo.classList.toggle('focus', !!name); logo.querySelectorAll('.petal').forEach(p => p.classList.toggle('on', !!name && (name === 'all' || p.classList.contains('p-' + name)))); }
   document.querySelectorAll('.worlds a').forEach(a => { a.addEventListener('pointerenter', () => focusPetal(a.dataset.petal)); a.addEventListener('pointerleave', () => focusPetal(null)); a.addEventListener('focus', () => focusPetal(a.dataset.petal)); a.addEventListener('blur', () => focusPetal(null)); });
 
   /* ---------- World switching with the petal transition ---------- */
@@ -163,7 +256,7 @@
     const petal = WORLD_PETAL[name];
     dest.textContent = WORLD_NAME[name];
     const petals = [...mark.querySelectorAll('.petal')];
-    const target = mark.querySelector('.p-' + petal);
+    const target = petal === 'all' ? mark : mark.querySelector('.p-' + petal);
     petals.forEach(p => p.getAnimations().forEach(a => a.cancel()));
     veil.classList.add('go');
     const out = document.getElementById(current);
@@ -172,9 +265,10 @@
     anim(arcBold, [{ strokeDashoffset: arcBold.dataset.len }, { strokeDashoffset: 0 }], { duration: 700, delay: 100 });
     anim(arcSweep, [{ strokeDashoffset: arcSweep.dataset.len }, { strokeDashoffset: 0 }], { duration: 700, delay: 250 });
     anim(mark, [{ opacity: 0, transform: 'scale(.7)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 600, delay: 350, easing: 'cubic-bezier(.2,.8,.2,1)' });
-    petals.forEach(p => { if (p !== target) anim(p, [{ opacity: 1 }, { opacity: p.classList.contains('p-ring') ? 0.35 : 0.12 }], { duration: 400, delay: 800 }); });
+    petals.forEach(p => { if (petal !== 'all' && p !== target) anim(p, [{ opacity: 1 }, { opacity: p.classList.contains('p-ring') ? 0.35 : 0.12 }], { duration: 400, delay: 800 }); });
     anim(dest, [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 400, delay: 850 });
-    await anim(target, [{ opacity: 1, filter: 'none' }, { opacity: 1, filter: 'drop-shadow(0 0 6px rgba(57,196,196,.9))' }], { duration: 500, delay: 800 });
+    const glowCol = petal === 'all' ? 'rgba(143,147,255,.9)' : 'rgba(57,196,196,.9)';
+    await anim(target, [{ filter: 'none' }, { filter: `drop-shadow(0 0 6px ${glowCol})` }], { duration: 500, delay: 800 });
     out.style.opacity = ''; out.style.transform = ''; out.getAnimations().forEach(a => a.cancel());
     show(name); scrollTo(0, 0);
     const lines = [...document.querySelectorAll('#' + name + ' .hero h1 .ln, #' + name + ' .hero .std, #' + name + ' .hero .actions')];
@@ -259,7 +353,7 @@
   });
 
   const start = (location.hash || '').slice(1);
-  show(WORLD_PETAL[start] ? start : 'farmers');
+  show(WORLD_PETAL[start] ? start : 'governments'); scrollTo(0, 0); setTimeout(() => scrollTo(0, 0), 300);
   addEventListener('hashchange', () => { const h = location.hash.slice(1); if (WORLD_PETAL[h]) go(h, false); });
   setTimeout(intro, 150);
 })();
