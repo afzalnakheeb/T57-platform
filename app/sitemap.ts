@@ -4,6 +4,6 @@ export default function sitemap() {
   return Object.values(pages).map((p) => ({
     url: `${SITE}${p.route}`,
     changeFrequency: 'monthly' as const,
-    priority: p.route === '/' ? 1 : p.route === '/who-we-serve' ? 0.9 : 0.8,
+    priority: p.route === '/' ? 1 : p.route.split('/').length === 2 ? 0.9 : 0.8,
   }));
 }

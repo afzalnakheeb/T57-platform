@@ -4,14 +4,14 @@ import path from 'node:path';
 // Pages built by prototype/build.py, one per sitemap v7 route.
 export type Faq = { q: string; a: string };
 export type PageInfo = {
-  route: string; name: string; h1: string; answer: string;
+  route: string; section: string; name: string; h1: string; answer: string;
   title: string; description: string; faqs: Faq[];
 };
 
 export const SITE = 'https://t57.ai';
 const dir = path.join(process.cwd(), 'content');
 export const pages: Record<string, PageInfo> = JSON.parse(fs.readFileSync(path.join(dir, 'pages.json'), 'utf8'));
-export const audiences = Object.keys(pages).filter((id) => id !== 'home' && id !== 'who-we-serve');
+export const byRoute: Record<string, string> = Object.fromEntries(Object.entries(pages).map(([id, p]) => [p.route, id]));
 export const markup = (id: string) => fs.readFileSync(path.join(dir, 'pages', `${id}.html`), 'utf8');
 export const chrome = (part: 'top' | 'bottom') => fs.readFileSync(path.join(dir, `chrome-${part}.html`), 'utf8');
 
@@ -32,9 +32,13 @@ export function metadataFor(id: string) {
 export function jsonLd(id: string) {
   const p = pages[id];
   const url = `${SITE}${p.route}`;
+  // Home, then each level of the route that is a built page (e.g. Home > Why T57 > RFQ Bidding)
   const crumbs = [{ name: 'Home', url: SITE + '/' }];
-  if (id !== 'home') crumbs.push({ name: 'Who We Serve', url: `${SITE}/who-we-serve` });
-  if (id !== 'home' && id !== 'who-we-serve') crumbs.push({ name: p.name, url });
+  const parts = p.route.split('/').filter(Boolean);
+  parts.forEach((_, k) => {
+    const r = '/' + parts.slice(0, k + 1).join('/'), cid = byRoute[r];
+    if (cid) crumbs.push({ name: pages[cid].name, url: `${SITE}${r}` });
+  });
   const graph: object[] = [
     {
       '@type': 'Organization', '@id': `${SITE}/#org`, name: 'T57.ai', url: SITE, logo: `${SITE}/icon-512.png`,

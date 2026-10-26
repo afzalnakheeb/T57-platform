@@ -50,5 +50,53 @@
  "traders": {
   "title": "T57 for Traders & Aggregators | Fund and Run Deals on One Record",
   "description": "Verified suppliers and buyers, back-to-back contracts and finance from competing lenders, all on one food trade record."
+ },
+ "why-t57": {
+  "title": "T57: the Global Food Operating System | AI-Native Food Trade Platform",
+  "description": "Discover T57, the AI-native food trade ecosystem working with IOFS and ASEAN, unifying policy, finance and logistics to turn fragmented data into trusted global food flows."
+ },
+ "club-membership": {
+  "title": "T57 Club Membership | Verified Global Food-Trade Club, Not an Open Marketplace",
+  "description": "Discover T57's club membership: a curated, blockchain-enabled food and agri trade club that uses trust scoring, verified IDs, badges, and scores to help counterparties reduce risk and trade with more confidence"
+ },
+ "rfq-bidding": {
+  "title": "RFQ Bidding for Food Trade | T57",
+  "description": "Send one structured RFQ to verified food suppliers, compare like-for-like bids and turn the best quote into a contract on T57."
+ },
+ "virtual-trade-desk": {
+  "title": "Virtual Trade Desk for Food SMEs | T57",
+  "description": "AI matching, price data, contracts from quotes and compliance screening in one trade desk for food SMEs. AI advises, people decide."
+ },
+ "market-intelligence": {
+  "title": "Food Market & Price Intelligence | T57",
+  "description": "Food prices, supply status by origin and AI forecasts inside your trade workflow. Quote, buy and plan with the full picture on T57."
+ },
+ "trade-finance": {
+  "title": "Trade Finance for Food SMEs | Lenders Compete | T57",
+  "description": "Send one verified deal file to several licensed lenders and compare offers. Self-liquidating food trade finance through escrow on T57."
+ },
+ "nft-funding": {
+  "title": "Digital Asset Trade Finance | Tokenized Trade Documents | T57",
+  "description": "Turn verified invoices, warehouse receipts and bills of lading into unique digital assets that lenders can trust and fund, on T57."
+ },
+ "elc-15-minutes": {
+  "title": "Electronic Letter of Credit in About 15 Minutes | T57",
+  "description": "Electronic LCs built from your verified contract and issued by partner banks in about 15 minutes after approval. Digital documents, fewer discrepancies."
+ },
+ "escrow-payments": {
+  "title": "Escrow Payments for Food Trade | Pay on Milestones | T57",
+  "description": "Buyers pay into escrow with a licensed partner, and funds release only when inspection, shipment or delivery milestones are met on T57."
+ },
+ "alternative-payments": {
+  "title": "Stablecoin, Crypto & Bullion Payments for Food Trade | T57",
+  "description": "Settle cross-border food trades in stablecoins, digital assets or bullion-backed payments through regulated partners, where lawful, on T57."
+ },
+ "digital-bank": {
+  "title": "Digital Bank for Food Trade | Any Currency, Instant Settlement | T57",
+  "description": "Hold, pay and settle in any currency with near-instant settlement from licensed partners, linked to every contract and invoice on your T57 trade record."
+ },
+ "document-audit-trail": {
+  "title": "Trade Document Management & Audit Trail | T57",
+  "description": "Contracts, invoices, certificates and inspection reports on one tamper-evident trade record, with a full audit trail for every food trade."
  }
 }

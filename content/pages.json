@@ -1,6 +1,7 @@
 {
  "home": {
   "route": "/",
+  "section": "",
   "name": "Home",
   "h1": "Trade food with trust, from farm to buyer.",
   "answer": "T57 connects verified producers, buyers, banks and logistics on one AI-native trade platform.",
@@ -31,6 +32,7 @@
  },
  "who-we-serve": {
   "route": "/who-we-serve",
+  "section": "who-we-serve",
   "name": "Who We Serve",
   "h1": "Bring every part of the food chain into one verified trade club.",
   "answer": "T57 exists to connect everyone who grows, makes, buys, finances and regulates food on one trusted record.",
@@ -51,8 +53,241 @@
   "title": "Who We Serve | T57 Verified Food Trade Club",
   "description": "T57 connects farmers, processors, traders, buyers, financiers, service providers and regulators on one verified food trade record."
  },
+ "why-t57": {
+  "route": "/why-t57",
+  "section": "why-t57",
+  "name": "Why T57",
+  "h1": "The whole food trade, on one trusted record.",
+  "answer": "Join, discover, finance, settle and close every trade on one AI-native platform, so every actor from farm to fork can see, trust and finance each transaction.",
+  "faqs": [
+   {
+    "q": "How is T57 different from other food trade platforms?",
+    "a": "T57 is an AI-native ecosystem, working with IOFS and ASEAN, that brings trade, finance, logistics and policy-grade data together on one verified platform."
+   },
+   {
+    "q": "Why do the IOFS and ASEAN partnerships matter to me as a trader?",
+    "a": "They translate into faster onboarding, clearer rules of origin and better access to tenders and sovereign buyers, because T57 aligns with the institutions that set food security and trade priorities."
+   },
+   {
+    "q": "Does T57 only serve governments and institutions?",
+    "a": "No. The same rails that serve ministries and multilaterals also serve farmers, cooperatives, SMEs and enterprises, giving every player, big and small, access to verified markets and trusted counterparties."
+   }
+  ],
+  "title": "T57: the Global Food Operating System | AI-Native Food Trade Platform",
+  "description": "Discover T57, the AI-native food trade ecosystem working with IOFS and ASEAN, unifying policy, finance and logistics to turn fragmented data into trusted global food flows."
+ },
+ "club-membership": {
+  "route": "/why-t57/club-membership",
+  "section": "why-t57",
+  "name": "Club Membership",
+  "h1": "Trade only with verified members.",
+  "answer": "Verified food-trade club that matches vetted counterparties, reducing fraud and defaults across every global agri transaction.",
+  "faqs": [
+   {
+    "q": "How does the T57 trust score help farmers and producers, cooperatives, and FPOs reduce risk?",
+    "a": "The trust score helps these groups assess whether prospective buyers, aggregators, processors, or service partners have the legitimacy, financial stability, trade history, and relationship strength needed to support dependable transactions. This reduces the risk of engaging with weak or opaque counterparties."
+   },
+   {
+    "q": "Why is the T57 ID useful for financiers and investors, partners, collaborators, governments, and regulators?",
+    "a": "The T57 ID provides these stakeholders with a structured view of whether an organization has been verified across key trust factors, including compliance, field validation, references, and ecosystem reputation. That makes it easier to evaluate risk and engage with businesses whose credentials are supported by a more advanced process than standard marketplace profiles or basic business identifiers."
+   }
+  ],
+  "title": "T57 Club Membership | Verified Global Food-Trade Club, Not an Open Marketplace",
+  "description": "Discover T57's club membership: a curated, blockchain-enabled food and agri trade club that uses trust scoring, verified IDs, badges, and scores to help counterparties reduce risk and trade with more confidence"
+ },
+ "rfq-bidding": {
+  "route": "/why-t57/rfq-bidding",
+  "section": "why-t57",
+  "name": "RFQ Bidding",
+  "h1": "One request. Comparable quotes. One contract.",
+  "answer": "Get comparable quotes from verified suppliers, and turn the best one into a contract.",
+  "faqs": [
+   {
+    "q": "Who can respond to an RFQ on T57?",
+    "a": "Only verified members whose products, capacity and markets match the request. Buyers can also invite specific suppliers."
+   },
+   {
+    "q": "Can sellers see each other's bids?",
+    "a": "No. Each bid is visible only to the buyer, which keeps pricing fair and confidential."
+   }
+  ],
+  "title": "RFQ Bidding for Food Trade | T57",
+  "description": "Send one structured RFQ to verified food suppliers, compare like-for-like bids and turn the best quote into a contract on T57."
+ },
+ "virtual-trade-desk": {
+  "route": "/why-t57/virtual-trade-desk",
+  "section": "why-t57",
+  "name": "Virtual Trade Desk",
+  "h1": "A trade desk for every food business.",
+  "answer": "A full trade desk for every member, with AI doing the groundwork and people deciding.",
+  "faqs": [
+   {
+    "q": "Is the Virtual Trade Desk a person or software?",
+    "a": "Both. The Trade Desk is software that matches, prices, drafts and screens, supported by T57's trade desk team for cases that need human review."
+   },
+   {
+    "q": "Does the Trade Desk negotiate for me?",
+    "a": "No. It gives you matches, price data and checks. You negotiate and decide."
+   }
+  ],
+  "title": "Virtual Trade Desk for Food SMEs | T57",
+  "description": "AI matching, price data, contracts from quotes and compliance screening in one trade desk for food SMEs. AI advises, people decide."
+ },
+ "market-intelligence": {
+  "route": "/why-t57/market-intelligence",
+  "section": "why-t57",
+  "name": "Market & Price Intelligence",
+  "h1": "See the market before you move.",
+  "answer": "See prices, supply and risk by origin before you quote, buy or plan.",
+  "faqs": [
+   {
+    "q": "Where does T57's price data come from?",
+    "a": "From public market sources and anonymized, aggregated trade data on T57. No individual member's prices are shared."
+   },
+   {
+    "q": "Can I use the data without trading on T57?",
+    "a": "Market intelligence is part of T57 membership and is built to support trading on the platform."
+   }
+  ],
+  "title": "Food Market & Price Intelligence | T57",
+  "description": "Food prices, supply status by origin and AI forecasts inside your trade workflow. Quote, buy and plan with the full picture on T57."
+ },
+ "trade-finance": {
+  "route": "/why-t57/trade-finance",
+  "section": "why-t57",
+  "name": "Trade Finance",
+  "h1": "One deal file. Several lenders compete.",
+  "answer": "One verified deal file, several lenders competing to fund your food trade.",
+  "faqs": [
+   {
+    "q": "Does T57 provide the finance?",
+    "a": "No. T57 does not lend or hold client funds. It sends your verified deal file to licensed lenders, who decide whether to fund the trade and on what terms."
+   },
+   {
+    "q": "What kinds of finance can I request?",
+    "a": "Pre-shipment and post-shipment finance, receivables finance and letters of credit, through participating banks and finance companies, including Shariah-compliant options."
+   }
+  ],
+  "title": "Trade Finance for Food SMEs | Lenders Compete | T57",
+  "description": "Send one verified deal file to several licensed lenders and compare offers. Self-liquidating food trade finance through escrow on T57."
+ },
+ "nft-funding": {
+  "route": "/why-t57/nft-funding",
+  "section": "why-t57",
+  "name": "Digital Asset-Based Funding",
+  "h1": "Turn trade documents into fundable assets.",
+  "answer": "Turn verified trade documents into digital assets that funders can trust and finance.",
+  "faqs": [
+   {
+    "q": "Is this cryptocurrency?",
+    "a": "No. A tokenized trade document is a digital record of a real asset, such as an invoice or warehouse receipt. It is not a currency."
+   },
+   {
+    "q": "Which documents can be tokenized?",
+    "a": "Trade documents on a verified T57 trade record, such as invoices, warehouse receipts and bills of lading, where local law recognizes electronic trade documents."
+   }
+  ],
+  "title": "Digital Asset Trade Finance | Tokenized Trade Documents | T57",
+  "description": "Turn verified invoices, warehouse receipts and bills of lading into unique digital assets that lenders can trust and fund, on T57."
+ },
+ "elc-15-minutes": {
+  "route": "/why-t57/elc-15-minutes",
+  "section": "why-t57",
+  "name": "eLC in 15 Minutes",
+  "h1": "Letters of credit, built from your contract.",
+  "answer": "Electronic letters of credit, issued in about 15 minutes once your application is approved.",
+  "faqs": [
+   {
+    "q": "What does \"15 minutes\" mean?",
+    "a": "It is the target time for a partner bank to issue the electronic LC after your application has been approved. Approval itself follows the bank's own credit process."
+   },
+   {
+    "q": "Does T57 issue letters of credit?",
+    "a": "No. Letters of credit are issued by licensed partner banks. T57 prepares the application from your trade record and connects you to them."
+   }
+  ],
+  "title": "Electronic Letter of Credit in About 15 Minutes | T57",
+  "description": "Electronic LCs built from your verified contract and issued by partner banks in about 15 minutes after approval. Digital documents, fewer discrepancies."
+ },
+ "escrow-payments": {
+  "route": "/why-t57/escrow-payments",
+  "section": "why-t57",
+  "name": "Escrow Payments",
+  "h1": "Your money moves only when the goods do.",
+  "answer": "Your money moves only when the goods do, with escrow released at agreed milestones.",
+  "faqs": [
+   {
+    "q": "Who holds the money in escrow?",
+    "a": "A licensed escrow partner. T57 does not hold client funds."
+   },
+   {
+    "q": "What happens if there is a dispute?",
+    "a": "Release pauses automatically, and the dispute is handled under the contract and the partner's rules. Release resumes once it is resolved."
+   }
+  ],
+  "title": "Escrow Payments for Food Trade | Pay on Milestones | T57",
+  "description": "Buyers pay into escrow with a licensed partner, and funds release only when inspection, shipment or delivery milestones are met on T57."
+ },
+ "alternative-payments": {
+  "route": "/why-t57/alternative-payments",
+  "section": "why-t57",
+  "name": "Alternative Payments",
+  "h1": "More ways to settle, within the law.",
+  "answer": "Settle food trades in stablecoins, digital assets or bullion-backed payments, where the law allows.",
+  "faqs": [
+   {
+    "q": "Are alternative payments available in every country?",
+    "a": "No. They are offered only where local law allows, through regulated partners. Members in other countries settle through banks, escrow or letters of credit."
+   },
+   {
+    "q": "Does T57 hold my crypto or gold?",
+    "a": "No. Custody, conversion and settlement are handled by licensed partners. T57 records the payment on the trade record."
+   }
+  ],
+  "title": "Stablecoin, Crypto & Bullion Payments for Food Trade | T57",
+  "description": "Settle cross-border food trades in stablecoins, digital assets or bullion-backed payments through regulated partners, where lawful, on T57."
+ },
+ "digital-bank": {
+  "route": "/why-t57/digital-bank",
+  "section": "why-t57",
+  "name": "Digital Bank",
+  "h1": "Pay and get paid in any currency.",
+  "answer": "Hold, pay and settle in any currency, near-instantly, inside your food trade.",
+  "faqs": [
+   {
+    "q": "Is T57 a bank?",
+    "a": "No. Digital banking services on T57 are provided by licensed partners. T57 connects them to your verified profile and trade record."
+   },
+   {
+    "q": "Which currencies can I hold?",
+    "a": "Any currency your trade needs. T57's banking partners hold, convert and settle across currencies, so you can pay suppliers and get paid by buyers in their own currency."
+   }
+  ],
+  "title": "Digital Bank for Food Trade | Any Currency, Instant Settlement | T57",
+  "description": "Hold, pay and settle in any currency with near-instant settlement from licensed partners, linked to every contract and invoice on your T57 trade record."
+ },
+ "document-audit-trail": {
+  "route": "/why-t57/document-audit-trail",
+  "section": "why-t57",
+  "name": "Document Management & Audit Trail",
+  "h1": "Every document of a trade, on one record.",
+  "answer": "Every document, approval and milestone of a trade, on one tamper-evident record.",
+  "faqs": [
+   {
+    "q": "Who can see my trade documents?",
+    "a": "Only the parties you authorize for that trade, such as your counterparty, lender, insurer or inspector. Access is recorded in the audit trail."
+   },
+   {
+    "q": "Are documents stored on the blockchain?",
+    "a": "No. Documents are stored securely, and a digital fingerprint of each key record is anchored on the ledger. This proves the document has not changed without exposing its contents."
+   }
+  ],
+  "title": "Trade Document Management & Audit Trail | T57",
+  "description": "Contracts, invoices, certificates and inspection reports on one tamper-evident trade record, with a full audit trail for every food trade."
+ },
  "governments": {
   "route": "/who-we-serve/governments",
+  "section": "who-we-serve",
   "name": "Governments and Regulators",
   "h1": "See your food supply. Act before shortages.",
   "answer": "Live trade data, food-security alerts and transparent tenders, in one view for ministries and agencies.",
@@ -71,6 +306,7 @@
  },
  "financiers": {
   "route": "/who-we-serve/financiers",
+  "section": "who-we-serve",
   "name": "Financiers and Investors",
   "h1": "Finance verified food trade, with less risk.",
   "answer": "Every deal comes with verified parties, documents and shipment data, from deal to settlement.",
@@ -97,6 +333,7 @@
  },
  "sellers": {
   "route": "/who-we-serve/sellers",
+  "section": "who-we-serve",
   "name": "Sellers and Exporters",
   "h1": "Sell to verified buyers, and get paid safely.",
   "answer": "Find buyers, agree terms and get paid, with finance and logistics on one platform.",
@@ -123,6 +360,7 @@
  },
  "traders": {
   "route": "/who-we-serve/traders",
+  "section": "who-we-serve",
   "name": "Traders and Aggregators",
   "h1": "Trade more volume, with less risk.",
   "answer": "Match supply and demand faster, with verified partners, live prices and finance for each deal.",
@@ -149,6 +387,7 @@
  },
  "buyers": {
   "route": "/who-we-serve/buyers",
+  "section": "who-we-serve",
   "name": "Buyers and Importers",
   "h1": "Source food from suppliers you can trust.",
   "answer": "Compare verified suppliers, track every shipment and pay only when terms are met.",
@@ -175,6 +414,7 @@
  },
  "enterprises": {
   "route": "/who-we-serve/enterprises",
+  "section": "who-we-serve",
   "name": "Manufacturers and Enterprises",
   "h1": "Secure supply. Protect your margins.",
   "answer": "Source from verified producers, see price moves early and run every contract in one place.",
@@ -201,6 +441,7 @@
  },
  "food-processors": {
   "route": "/who-we-serve/food-processors",
+  "section": "who-we-serve",
   "name": "Food Processors",
   "h1": "Keep your plant running at full capacity.",
   "answer": "Steady raw materials from verified farms, with quality checks and finance built in.",
@@ -227,6 +468,7 @@
  },
  "cooperatives": {
   "route": "/who-we-serve/cooperatives",
+  "section": "who-we-serve",
   "name": "Cooperatives and FPOs",
   "h1": "Turn your members' harvest into market power.",
   "answer": "Pool produce, reach bigger buyers and pay members faster, with every trade on record.",
@@ -245,6 +487,7 @@
  },
  "collaborators": {
   "route": "/who-we-serve/collaborators",
+  "section": "who-we-serve",
   "name": "Partners and Collaborators",
   "h1": "Build a stronger food system, together.",
   "answer": "Development partners, associations and institutions reach the whole food chain through one platform.",
@@ -271,6 +514,7 @@
  },
  "service-providers": {
   "route": "/who-we-serve/service-providers",
+  "section": "who-we-serve",
   "name": "Service Providers",
   "h1": "Turn your expertise into steady work.",
   "answer": "Inspection, logistics, legal and advisory firms are matched to live trades that need them.",
@@ -297,6 +541,7 @@
  },
  "farmers": {
   "route": "/who-we-serve/farmers",
+  "section": "who-we-serve",
   "name": "Farmers and Producers",
   "h1": "Sell your harvest at a fair price.",
   "answer": "Reach verified buyers directly, see market prices and get paid faster.",

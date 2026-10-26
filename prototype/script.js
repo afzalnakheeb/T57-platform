@@ -4,6 +4,10 @@
   const WORLD_PETAL = { home:'all', 'who-we-serve':'all', governments:'all', financiers:'finance', traders:'trade', sellers:'trade', farmers:'agri', buyers:'trade', enterprises:'agri', 'food-processors':'agri', cooperatives:'agri', collaborators:'all', 'service-providers':'logistics' };
   const WORLD_NAME = { home:'T57.ai', 'who-we-serve':'Who We Serve', governments:'Governments & Regulators', financiers:'Financiers & Investors', traders:'Traders & Aggregators', sellers:'Sellers & Exporters', farmers:'Farmers & Producers', buyers:'Buyers & Importers', enterprises:'Manufacturers & Enterprises', 'food-processors':'Food Processors', cooperatives:'Cooperatives & FPOs', collaborators:'Partners & Collaborators', 'service-providers':'Service Providers' };
 
+  const TP = window.T57_PAGES || { petal: {}, name: {} };
+  Object.keys(TP.petal).forEach(k => { if (!(k in WORLD_PETAL)) WORLD_PETAL[k] = TP.petal[k]; });
+  Object.keys(TP.name).forEach(k => { if (!(k in WORLD_NAME)) WORLD_NAME[k] = TP.name[k]; });
+
   /* ---------- Market data (real, published figures; refreshed monthly) ----------
      FAO Food Price Index and sub-indices, nominal, 2014-2016 = 100. Source: FAO, food_price_indices_data.csv, release of 2 Oct 2026.
      Columns: month, Food, Meat, Dairy, Cereals, Vegetable oils, Sugar. */
@@ -181,6 +185,32 @@
     });
   }
 
+  // Honeycomb ledger: a field of hex cells; a trade's blocks light up one after another and link into a chain.
+  function chainScene(ctx, w, h, t, px, py) {
+    ctx.fillStyle = C.night; ctx.fillRect(0, 0, w, h);
+    const narrow = w < 700, r = narrow ? 22 : 30, dx = r * Math.sqrt(3), dy = r * 1.5;
+    const ox = (narrow ? w * 0.05 : w * 0.42) + (px - 0.5) * 18, oy = h * 0.08 + (py - 0.5) * 12;
+    const cols = Math.ceil((w - ox) / dx) + 1, rows = Math.ceil(h / dy) + 1;
+    const hex = (x, y, rr) => { ctx.beginPath(); for (let k = 0; k < 6; k++) { const a = Math.PI / 6 + k * Math.PI / 3; ctx.lineTo(x + rr * Math.cos(a), y + rr * Math.sin(a)); } ctx.closePath(); };
+    const at = (c, rw) => [ox + c * dx + (rw % 2) * dx / 2, oy + rw * dy];
+    const grow = Math.min(1, t / 1500);
+    for (let rw = 0; rw < rows; rw++) for (let c = 0; c < cols; c++) {
+      const [x, y] = at(c, rw), fade = narrow ? 0.5 : Math.min(1, (x - w * 0.42) / (w * 0.2) + 0.2);
+      ctx.strokeStyle = `rgba(143,147,255,${0.16 * fade * grow})`; ctx.lineWidth = 1; hex(x, y, r - 2); ctx.stroke();
+    }
+    const path = [[1, 2], [2, 3], [3, 3], [4, 4], [5, 4], [6, 5], [7, 5], [8, 6], [9, 6], [10, 7]].map(([c, rw]) => at(c + (narrow ? 0 : 1), rw + (narrow ? 4 : 1)));
+    const cycle = 9000, p = (t % cycle) / cycle, lit = Math.floor(p * path.length * 1.25);
+    ctx.lineWidth = 2; ctx.strokeStyle = 'rgba(57,196,196,0.6)'; ctx.beginPath();
+    path.forEach(([x, y], i) => { if (i <= lit && i < path.length) i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }); ctx.stroke();
+    path.forEach(([x, y], i) => {
+      if (i > lit) return;
+      const age = Math.min(1, (p * path.length * 1.25 - i)), last = i === Math.min(lit, path.length - 1);
+      ctx.fillStyle = `rgba(57,196,196,${0.12 + 0.18 * age})`; hex(x, y, r - 3); ctx.fill();
+      ctx.strokeStyle = last ? 'rgba(240,248,241,0.95)' : 'rgba(57,196,196,0.9)'; ctx.lineWidth = last ? 2 : 1.4; hex(x, y, r - 3); ctx.stroke();
+      ctx.fillStyle = 'rgba(240,248,241,0.85)'; ctx.beginPath(); ctx.arc(x, y, 2.4, 0, 6.283); ctx.fill();
+    });
+  }
+
   function bidsScene(ctx, w, h, t, px, py) {
     ctx.fillStyle = C.night; ctx.fillRect(0, 0, w, h);
     const narrow = w < 700, x0 = narrow ? w * 0.06 : w * 0.5, x1 = w * 0.96, W = x1 - x0, mid = x0 + W / 2;
@@ -251,7 +281,7 @@
   const scenes = [];
   document.querySelectorAll('canvas[data-scene]').forEach(cv => {
     const ctx = cv.getContext('2d');
-    const s = { cv, ctx, fn: { seed: seedScene, value: valueScene, globe: globeScene, bids: bidsScene, market: marketScene }[cv.dataset.scene], t0: performance.now(), px: 0.7, py: 0.5, visible: false, w: 0, h: 0 };
+    const s = { cv, ctx, fn: { seed: seedScene, value: valueScene, globe: globeScene, bids: bidsScene, market: marketScene, chain: chainScene }[cv.dataset.scene], t0: performance.now(), px: 0.7, py: 0.5, visible: false, w: 0, h: 0 };
     const size = () => { const r = cv.getBoundingClientRect(), d = Math.min(2, devicePixelRatio || 1); s.w = r.width; s.h = r.height; cv.width = Math.round(r.width * d); cv.height = Math.round(r.height * d); ctx.setTransform(d, 0, 0, d, 0, 0); if (reduce && s.w && s.h) s.fn(ctx, s.w, s.h, 99999, s.px, s.py); };
     new ResizeObserver(size).observe(cv);
     cv.parentElement.addEventListener('pointermove', e => { const r = cv.getBoundingClientRect(); if (!r.width || !r.height) return; s.px = (e.clientX - r.left) / r.width; s.py = (e.clientY - r.top) / r.height; });
