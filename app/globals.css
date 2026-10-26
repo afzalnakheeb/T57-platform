@@ -12,7 +12,7 @@
   color-scheme: light;
 }
 [data-world="financiers"] { --world:var(--amber-flame); --world-text:var(--amber-flame); --world-ink:var(--persian-indigo); }
-[data-world="home"], [data-world="who-we-serve"], [data-world="why-t57"], [data-world="capabilities"], [data-world^="cap-"], [data-world^="ai-"], [data-world^="platform"], [data-world="club-membership"], [data-world="rfq-bidding"], [data-world="virtual-trade-desk"], [data-world="market-intelligence"], [data-world="trade-finance"], [data-world="nft-funding"], [data-world="elc-15-minutes"], [data-world="escrow-payments"], [data-world="alternative-payments"], [data-world="digital-bank"], [data-world="document-audit-trail"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
+[data-world="home"], [data-world="who-we-serve"], [data-world="why-t57"], [data-world="capabilities"], [data-world^="cap-"], [data-world^="ai-"], [data-world^="platform"], [data-world="trust"], [data-world^="trust-"], [data-world="club-membership"], [data-world="rfq-bidding"], [data-world="virtual-trade-desk"], [data-world="market-intelligence"], [data-world="trade-finance"], [data-world="nft-funding"], [data-world="elc-15-minutes"], [data-world="escrow-payments"], [data-world="alternative-payments"], [data-world="digital-bank"], [data-world="document-audit-trail"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
 [data-world="governments"] { --world:var(--electric-sapphire); --world-text:#8f93ff; --world-ink:#ffffff; }
 [data-world="sellers"], [data-world="buyers"], [data-world="enterprises"], [data-world="food-processors"], [data-world="cooperatives"], [data-world="collaborators"], [data-world="service-providers"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
 [data-world="traders"] { --world:var(--persian-blue); --world-text:var(--mint-cream); --world-ink:#ffffff; }
@@ -698,3 +698,21 @@ a.feat.twelve b::after { content:" →"; color:var(--strong-cyan); } a.feat.twel
 .pnav .feat.here { opacity:1; } .pnav .feat.here b { color:var(--persian-blue); } .pnav .feat.here b::after { content:" · you are here"; font:400 14px var(--font-text); color:var(--ink-muted); }
 .pnav { grid-template-columns:repeat(3, minmax(0, 1fr)); }
 @media (max-width: 900px) { .pnav { grid-template-columns:repeat(2, minmax(0, 1fr)); } } @media (max-width: 640px) { .pnav { grid-template-columns:1fr; } }
+
+/* Trust & Compliance: the verification Passport, stamped step by step */
+.tpass-wrap { display:grid; grid-template-columns:minmax(0, 1.25fr) minmax(320px, 1fr); gap:56px; align-items:start; }
+.tpass-wrap .steps.steps-2 { margin-top:40px; }
+.tpass { margin:0; position:sticky; top:150px; }
+.tp-card { position:relative; padding:28px; border-radius:18px; background:linear-gradient(160deg, var(--persian-indigo), #0b1340); color:#fff; box-shadow:0 30px 70px -30px #02246c99; overflow:hidden; }
+.tp-card::before { content:""; position:absolute; inset:0; background:repeating-linear-gradient(60deg, #ffffff06 0 2px, transparent 2px 22px); pointer-events:none; }
+.tp-head { position:relative; display:flex; align-items:center; gap:12px; padding-bottom:18px; border-bottom:1px solid #ffffff26; }
+.tp-head svg { width:34px; height:34px; } .tp-head span { font:700 14px/1 var(--font-display); letter-spacing:.22em; } .tp-head em { margin-left:auto; font:400 12px var(--font-text); font-style:normal; color:#c9cdf0; }
+.tp-card ol { position:relative; list-style:none; margin:18px 0 0; padding:0; display:grid; gap:14px; }
+.tp-card li { display:grid; grid-template-columns:28px 1fr; column-gap:14px; align-items:center; padding:12px 0; border-bottom:1px dashed #ffffff1f; }
+.tp-card li svg { width:28px; height:28px; fill:none; stroke:#ffffff40; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; animation:tp-tick 10s var(--ease-in-out) infinite; animation-delay:calc(var(--k) * 1.2s); }
+@keyframes tp-tick { 0%, 4% { stroke:#ffffff40; } 10%, 80% { stroke:var(--strong-cyan); } 90%, 100% { stroke:#ffffff40; } }
+.tp-card li b { font:500 19px/26px var(--font-display); } .tp-card li span { font-size:14px; line-height:20px; color:#c9cdf0; }
+.tp-stamp { position:relative; justify-self:start; display:inline-block; margin:22px 0 0; padding:8px 14px; border:2px solid var(--strong-cyan); border-radius:6px; font:700 14px/1 var(--font-display); letter-spacing:.2em; color:var(--strong-cyan); transform:rotate(-4deg); animation:tp-stamp 10s var(--ease-in-out) infinite; }
+@keyframes tp-stamp { 0%, 48% { opacity:0; transform:rotate(-4deg) scale(1.4); } 54%, 88% { opacity:1; transform:rotate(-4deg) scale(1); } 96%, 100% { opacity:0; } }
+@media (prefers-reduced-motion: reduce) { .tp-card li svg, .tp-stamp { animation:none; stroke:var(--strong-cyan); opacity:1; } }
+@media (max-width: 1000px) { .tpass-wrap { grid-template-columns:1fr; gap:32px; } .tpass { position:static; } }

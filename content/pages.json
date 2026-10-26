@@ -1349,6 +1349,276 @@
   "title": "Security Architecture | How T57 Protects Trade Data",
   "description": "Verified identity, multi-factor sign-in, role-based access, encryption, regional data residency on Azure and a full audit trail on T57."
  },
+ "trust": {
+  "route": "/trust",
+  "section": "trust",
+  "name": "Trust & Compliance",
+  "h1": "Know who you trade with. Prove what happened.",
+  "answer": "Trade with verified businesses, on one record, under clear rules.",
+  "faqs": [
+   {
+    "q": "Is T57 an open marketplace?",
+    "a": "No. T57 is a members-only trade club. Every buyer and seller is verified before trading, and verification is renewed."
+   },
+   {
+    "q": "Does T57 hold my money?",
+    "a": "No. Payments, escrow and letters of credit are handled by licensed partners. T57 organizes the trade and records each step."
+   },
+   {
+    "q": "How do I know who I am trading with?",
+    "a": "Every member has a verified T57 Passport that shows their role, checks passed and trade history, shared with consent."
+   },
+   {
+    "q": "What happens if a trade goes wrong?",
+    "a": "T57 provides a structured dispute process based on the shared trade record, and escrow can pause release while a dispute is resolved."
+   }
+  ],
+  "title": "Trust & Compliance | Verified Food Trade on T57",
+  "description": "Verified members, one trade record, an audit trail and licensed partners for payments. See how T57 makes trust the starting point of food trade."
+ },
+ "trust-verification": {
+  "route": "/trust/verification",
+  "section": "trust",
+  "name": "Verification Process",
+  "h1": "Verified on the ground, not just on screen.",
+  "answer": "Know exactly who you are trading with, before you trade.",
+  "faqs": [
+   {
+    "q": "How long does verification take?",
+    "a": "It depends on the business and whether a site visit is needed. T57 tells you what is outstanding at each stage."
+   },
+   {
+    "q": "Why does T57 visit my farm or factory?",
+    "a": "To confirm that businesses claiming to produce really do. This is what lets buyers trust the owner-producer label."
+   },
+   {
+    "q": "Do I need to verify again for each trade?",
+    "a": "No. Your T57 Passport is reusable. It is renewed periodically, and you update it when your details change."
+   },
+   {
+    "q": "What if my application is declined?",
+    "a": "You receive a stated reason and can ask for a review by a person."
+   }
+  ],
+  "title": "Verification Process | How T57 Verifies Every Member",
+  "description": "KYC, KYB, sanctions screening, site visits and role labels: how T57 verifies every buyer and seller before they trade."
+ },
+ "trust-kyb": {
+  "route": "/trust/verification/kyb",
+  "section": "trust",
+  "name": "KYB: Business Verification",
+  "h1": "The real business behind every trade.",
+  "answer": "Verify the business behind every trade.",
+  "faqs": [
+   {
+    "q": "What documents do I need for KYB?",
+    "a": "Company registration, licences, details of directors and owners, and bank information. The exact list depends on your country and role."
+   },
+   {
+    "q": "Who sees my KYB documents?",
+    "a": "T57's verification team. Others see only your verified Passport, and only what you choose to share."
+   },
+   {
+    "q": "How often is KYB renewed?",
+    "a": "Periodically, and whenever key details such as ownership or licences change."
+   },
+   {
+    "q": "Can a cooperative pass KYB on behalf of its farmers?",
+    "a": "Yes. A cooperative or producer organization is verified as a business, and its member producers are onboarded through it."
+   }
+  ],
+  "title": "KYB Business Verification | T57",
+  "description": "How T57 verifies member companies: registry checks, beneficial ownership, licences, bank details and sanctions screening."
+ },
+ "trust-kyc": {
+  "route": "/trust/verification/kyc",
+  "section": "trust",
+  "name": "KYC: Individual Verification",
+  "h1": "Every signature, a verified person.",
+  "answer": "Verify the people who own and act for every member.",
+  "faqs": [
+   {
+    "q": "Who needs to complete KYC?",
+    "a": "Owners, directors and anyone who will act for the company on T57."
+   },
+   {
+    "q": "Is my ID shared with other members?",
+    "a": "No. Other members see that you are verified, not your documents."
+   },
+   {
+    "q": "What if I leave the company?",
+    "a": "The company removes your access, and your past actions stay in the audit trail."
+   },
+   {
+    "q": "Can I use one identity for several companies?",
+    "a": "Yes. Each company link is verified separately, with its own role and authority."
+   }
+  ],
+  "title": "KYC Individual Verification | T57",
+  "description": "How T57 verifies owners, directors and users: identity checks, sanctions screening and signing authority for every trade."
+ },
+ "trust-scoring": {
+  "route": "/trust/verification/membership-scoring",
+  "section": "trust",
+  "name": "Membership Scoring & Trust Rating",
+  "h1": "Trust built on evidence, not reputation.",
+  "answer": "Let your track record speak for your business.",
+  "faqs": [
+   {
+    "q": "What affects my trust rating?",
+    "a": "Your verification, completed trades, on-time delivery, document accuracy, payment performance and feedback from your trading partners."
+   },
+   {
+    "q": "Can I see my own rating?",
+    "a": "Yes, with the main factors behind it."
+   },
+   {
+    "q": "Can I dispute a rating?",
+    "a": "Yes. You can contest any rating or feedback, and a person reviews it."
+   },
+   {
+    "q": "Do new members start at zero?",
+    "a": "New members start with a rating based on their verification, which grows as they trade."
+   }
+  ],
+  "title": "Membership Scoring & Trust Rating | T57",
+  "description": "A trust rating built from verified checks and real trade behavior, explained to every member and reviewed by people."
+ },
+ "trust-audit-trail": {
+  "route": "/trust/audit-trail",
+  "section": "trust",
+  "name": "Audit Trail",
+  "h1": "Who did what, and when. On every trade.",
+  "answer": "See who did what, and when, on every trade.",
+  "faqs": [
+   {
+    "q": "Can anyone edit the audit trail?",
+    "a": "No. Entries cannot be changed or deleted. Corrections are added as new entries."
+   },
+   {
+    "q": "Who can see my trade's audit trail?",
+    "a": "The parties to the trade, and anyone they choose to share it with, such as a lender or auditor."
+   },
+   {
+    "q": "How long are records kept?",
+    "a": "For the period required by law in each market."
+   },
+   {
+    "q": "Are AI decisions recorded?",
+    "a": "Yes. AI recommendations and the human decisions made on them are logged."
+   }
+  ],
+  "title": "Audit Trail for Food Trade | T57 Trust & Compliance",
+  "description": "Every action on every trade, attributed to a verified person, time-stamped and tamper-evident. Audit-ready evidence on T57."
+ },
+ "trust-documents": {
+  "route": "/trust/document-management",
+  "section": "trust",
+  "name": "Document Management System",
+  "h1": "Every trade document, one version of the truth.",
+  "answer": "Keep every trade document correct, current and in one place.",
+  "faqs": [
+   {
+    "q": "Which documents can T57 generate?",
+    "a": "Commercial documents such as invoices, packing lists and contract-based forms. Official certificates are issued by the relevant authority or partner and uploaded to the record."
+   },
+   {
+    "q": "Does T57 check my documents?",
+    "a": "AI checks for gaps and mismatches and flags them. Your team and your partners make the final decisions."
+   },
+   {
+    "q": "Who can see my documents?",
+    "a": "Only the parties you authorize for each trade."
+   },
+   {
+    "q": "Are original paper documents still needed?",
+    "a": "In some markets and for some documents, yes. T57 shows where paper originals are still required."
+   }
+  ],
+  "title": "Trade Document Management | T57 Trust & Compliance",
+  "description": "Create, check, store and share every food trade document on one record, with AI checks, expiry alerts and authenticity verification."
+ },
+ "trust-security": {
+  "route": "/trust/security",
+  "section": "trust",
+  "name": "Security & Privacy",
+  "h1": "Your data stays yours. You control who sees it.",
+  "answer": "Your trade data stays yours, protected and private.",
+  "faqs": [
+   {
+    "q": "Does T57 sell my data?",
+    "a": "No. T57 does not sell members' individual data. Market insights use aggregated, anonymized data."
+   },
+   {
+    "q": "Can T57 staff see my data?",
+    "a": "Only staff who need it for verification, support or compliance, under strict access controls, and access is logged."
+   },
+   {
+    "q": "Can I delete my data?",
+    "a": "You can ask for deletion, subject to records the law requires T57 or its partners to keep."
+   },
+   {
+    "q": "How do I report a security concern?",
+    "a": "Contact our security team at hello@t57.ai."
+   }
+  ],
+  "title": "Security & Privacy | Your Trade Data on T57",
+  "description": "Multi-factor sign-in, role-based access, consent controls and access history. You decide who sees your trade data on T57."
+ },
+ "trust-data-protection": {
+  "route": "/trust/security/data-protection",
+  "section": "trust",
+  "name": "Data Protection",
+  "h1": "Lawful data handling in every market.",
+  "answer": "Data handled lawfully in every market where we trade.",
+  "faqs": [
+   {
+    "q": "Where is my data stored?",
+    "a": "On Microsoft Azure, in multiple regions. Where local law requires it, data is stored in-region."
+   },
+   {
+    "q": "How do I access or correct my data?",
+    "a": "Through your account settings, or by contacting our data protection team."
+   },
+   {
+    "q": "Does T57 share my data with partners?",
+    "a": "Only with your consent, or where a trade or the law requires it, such as sharing documents with a partner bank you chose."
+   },
+   {
+    "q": "Who is responsible for data protection at T57?",
+    "a": "T57's data protection lead, who can be reached at hello@t57.ai."
+   }
+  ],
+  "title": "Data Protection | PDPL, DPDP and PDPA Compliance | T57",
+  "description": "How T57 handles data under Saudi and UAE PDPL, India's DPDP Act, Malaysia's PDPA and Türkiye's Law 6698, with consent and data residency."
+ },
+ "trust-disputes": {
+  "route": "/trust/trade-assurance/disputes",
+  "section": "trust",
+  "name": "Dispute Resolution",
+  "h1": "Disputes settled on the facts, not on who shouts loudest.",
+  "answer": "Resolve trade disputes on the facts, quickly and fairly.",
+  "faqs": [
+   {
+    "q": "What disputes does T57 cover?",
+    "a": "Disputes over trades made on T57, such as quality, quantity, delivery, documents and payment."
+   },
+   {
+    "q": "Does T57 decide who is right?",
+    "a": "T57 helps the parties reach an agreement based on the record and their contract. Where they cannot agree, the dispute follows the route set in the contract."
+   },
+   {
+    "q": "What happens to my money during a dispute?",
+    "a": "If the trade uses escrow, the disputed amount is held by the licensed escrow partner until the dispute is resolved."
+   },
+   {
+    "q": "Does a dispute affect my trust rating?",
+    "a": "The outcome is recorded. A fair resolution does not count against either side, and you can contest any rating effect."
+   }
+  ],
+  "title": "Trade Dispute Resolution | T57 Trade Assurance",
+  "description": "Resolve food trade disputes from one shared record, with escrow paused through licensed partners and independent inspection."
+ },
  "governments": {
   "route": "/who-we-serve/governments",
   "section": "who-we-serve",

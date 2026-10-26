@@ -290,5 +290,45 @@
  "platform-security": {
   "title": "Security Architecture | How T57 Protects Trade Data",
   "description": "Verified identity, multi-factor sign-in, role-based access, encryption, regional data residency on Azure and a full audit trail on T57."
+ },
+ "trust": {
+  "title": "Trust & Compliance | Verified Food Trade on T57",
+  "description": "Verified members, one trade record, an audit trail and licensed partners for payments. See how T57 makes trust the starting point of food trade."
+ },
+ "trust-verification": {
+  "title": "Verification Process | How T57 Verifies Every Member",
+  "description": "KYC, KYB, sanctions screening, site visits and role labels: how T57 verifies every buyer and seller before they trade."
+ },
+ "trust-kyb": {
+  "title": "KYB Business Verification | T57",
+  "description": "How T57 verifies member companies: registry checks, beneficial ownership, licences, bank details and sanctions screening."
+ },
+ "trust-kyc": {
+  "title": "KYC Individual Verification | T57",
+  "description": "How T57 verifies owners, directors and users: identity checks, sanctions screening and signing authority for every trade."
+ },
+ "trust-scoring": {
+  "title": "Membership Scoring & Trust Rating | T57",
+  "description": "A trust rating built from verified checks and real trade behavior, explained to every member and reviewed by people."
+ },
+ "trust-audit-trail": {
+  "title": "Audit Trail for Food Trade | T57 Trust & Compliance",
+  "description": "Every action on every trade, attributed to a verified person, time-stamped and tamper-evident. Audit-ready evidence on T57."
+ },
+ "trust-documents": {
+  "title": "Trade Document Management | T57 Trust & Compliance",
+  "description": "Create, check, store and share every food trade document on one record, with AI checks, expiry alerts and authenticity verification."
+ },
+ "trust-security": {
+  "title": "Security & Privacy | Your Trade Data on T57",
+  "description": "Multi-factor sign-in, role-based access, consent controls and access history. You decide who sees your trade data on T57."
+ },
+ "trust-data-protection": {
+  "title": "Data Protection | PDPL, DPDP and PDPA Compliance | T57",
+  "description": "How T57 handles data under Saudi and UAE PDPL, India's DPDP Act, Malaysia's PDPA and Türkiye's Law 6698, with consent and data residency."
+ },
+ "trust-disputes": {
+  "title": "Trade Dispute Resolution | T57 Trade Assurance",
+  "description": "Resolve food trade disputes from one shared record, with escrow paused through licensed partners and independent inspection."
  }
 }

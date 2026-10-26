@@ -91,6 +91,19 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Blockchain & Smart Contract Layer](https://t57.ai/platform/blockchain): Tamper-evident records, tokenized documents and milestone payments that every party can trust.
 - [Security Architecture](https://t57.ai/platform/security): Protect every trade, document and member with security built into the platform.
 
+## Trust and compliance
+
+- [Trust & Compliance](https://t57.ai/trust): Trade with verified businesses, on one record, under clear rules.
+- [Verification Process](https://t57.ai/trust/verification): Know exactly who you are trading with, before you trade.
+- [KYB: Business Verification](https://t57.ai/trust/verification/kyb): Verify the business behind every trade.
+- [KYC: Individual Verification](https://t57.ai/trust/verification/kyc): Verify the people who own and act for every member.
+- [Membership Scoring & Trust Rating](https://t57.ai/trust/verification/membership-scoring): Let your track record speak for your business.
+- [Audit Trail](https://t57.ai/trust/audit-trail): See who did what, and when, on every trade.
+- [Document Management System](https://t57.ai/trust/document-management): Keep every trade document correct, current and in one place.
+- [Security & Privacy](https://t57.ai/trust/security): Your trade data stays yours, protected and private.
+- [Data Protection](https://t57.ai/trust/security/data-protection): Data handled lawfully in every market where we trade.
+- [Dispute Resolution](https://t57.ai/trust/trade-assurance/disputes): Resolve trade disputes on the facts, quickly and fairly.
+
 ## Common questions
 
 - [What is T57?](https://t57.ai/): T57 is AI-native digital trade infrastructure for the food industry. It brings verification, quotes, contracts, finance access, insurance, inspection and logistics onto one trade record for verified members.
@@ -217,6 +230,26 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Do I need cryptocurrency to use the blockchain layer?](https://t57.ai/platform/blockchain): No. The blockchain layer works in the background. Members pay and get paid in normal currencies through licensed partners, unless they choose alternative payments where lawful.
 - [Where is my data stored?](https://t57.ai/platform/security): T57 is hosted on Microsoft Azure in multiple regions. Where local rules require it, data is stored in-region.
 - [Can other members see my prices or suppliers?](https://t57.ai/platform/security): No. Your commercial data is visible only to you and the parties in your trades, according to the permissions you set.
+- [Is T57 an open marketplace?](https://t57.ai/trust): No. T57 is a members-only trade club. Every buyer and seller is verified before trading, and verification is renewed.
+- [Does T57 hold my money?](https://t57.ai/trust): No. Payments, escrow and letters of credit are handled by licensed partners. T57 organizes the trade and records each step.
+- [How long does verification take?](https://t57.ai/trust/verification): It depends on the business and whether a site visit is needed. T57 tells you what is outstanding at each stage.
+- [Why does T57 visit my farm or factory?](https://t57.ai/trust/verification): To confirm that businesses claiming to produce really do. This is what lets buyers trust the owner-producer label.
+- [What documents do I need for KYB?](https://t57.ai/trust/verification/kyb): Company registration, licences, details of directors and owners, and bank information. The exact list depends on your country and role.
+- [Who sees my KYB documents?](https://t57.ai/trust/verification/kyb): T57's verification team. Others see only your verified Passport, and only what you choose to share.
+- [Who needs to complete KYC?](https://t57.ai/trust/verification/kyc): Owners, directors and anyone who will act for the company on T57.
+- [Is my ID shared with other members?](https://t57.ai/trust/verification/kyc): No. Other members see that you are verified, not your documents.
+- [What affects my trust rating?](https://t57.ai/trust/verification/membership-scoring): Your verification, completed trades, on-time delivery, document accuracy, payment performance and feedback from your trading partners.
+- [Can I see my own rating?](https://t57.ai/trust/verification/membership-scoring): Yes, with the main factors behind it.
+- [Can anyone edit the audit trail?](https://t57.ai/trust/audit-trail): No. Entries cannot be changed or deleted. Corrections are added as new entries.
+- [Who can see my trade's audit trail?](https://t57.ai/trust/audit-trail): The parties to the trade, and anyone they choose to share it with, such as a lender or auditor.
+- [Which documents can T57 generate?](https://t57.ai/trust/document-management): Commercial documents such as invoices, packing lists and contract-based forms. Official certificates are issued by the relevant authority or partner and uploaded to the record.
+- [Does T57 check my documents?](https://t57.ai/trust/document-management): AI checks for gaps and mismatches and flags them. Your team and your partners make the final decisions.
+- [Does T57 sell my data?](https://t57.ai/trust/security): No. T57 does not sell members' individual data. Market insights use aggregated, anonymized data.
+- [Can T57 staff see my data?](https://t57.ai/trust/security): Only staff who need it for verification, support or compliance, under strict access controls, and access is logged.
+- [Where is my data stored?](https://t57.ai/trust/security/data-protection): On Microsoft Azure, in multiple regions. Where local law requires it, data is stored in-region.
+- [How do I access or correct my data?](https://t57.ai/trust/security/data-protection): Through your account settings, or by contacting our data protection team.
+- [What disputes does T57 cover?](https://t57.ai/trust/trade-assurance/disputes): Disputes over trades made on T57, such as quality, quantity, delivery, documents and payment.
+- [Does T57 decide who is right?](https://t57.ai/trust/trade-assurance/disputes): T57 helps the parties reach an agreement based on the record and their contract. Where they cannot agree, the dispute follows the route set in the contract.
 - [How does T57 support national and regional food-security strategies in practice?](https://t57.ai/who-we-serve/governments): Many countries are now expanding strategic reserves and silo capacity to hold months’ worth of essential commodities. T57 complements such physical infrastructure by tracking self-sufficiency, stock levels, and import exposure in real time. This combination of physical reserves and digital intelligence helps governments move from reactive to anticipatory food-security management.
 - [Why is it important to channel private and impact capital into agriculture and food systems, beyond public budgets?](https://t57.ai/who-we-serve/governments): Despite agriculture’s historical role in employment and food security, global investors are only now seeking credible, measurable pathways to support food systems as part of their climate and SDG commitments. T57 helps governments present investable, data-backed opportunities, from model support centers to special agri zones and CSR programs, with transparent performance and impact tracking that meets both regulatory and investor expectations.
 - [How does T57 handle disputes and reduce risks for financiers and investors?](https://t57.ai/who-we-serve/financiers): T57 reduces risk through its curated club membership model, which ensures vetted, credible counterparties in a high-trust environment. Its virtual trade desk supports execution, manages disputes, oversees documentation, and ensures consistent transaction follow-through for greater investor confidence.
