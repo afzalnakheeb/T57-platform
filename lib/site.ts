@@ -5,7 +5,7 @@ import path from 'node:path';
 export type Faq = { q: string; a: string };
 export type PageInfo = {
   route: string; section: string; name: string; h1: string; answer: string;
-  title: string; description: string; faqs: Faq[];
+  title: string; description: string; faqs: Faq[]; parent?: string;
 };
 
 export const SITE = 'https://t57.ai';
@@ -32,13 +32,15 @@ export function metadataFor(id: string) {
 export function jsonLd(id: string) {
   const p = pages[id];
   const url = `${SITE}${p.route}`;
-  // Home, then each level of the route that is a built page (e.g. Home > Why T57 > RFQ Bidding)
-  const crumbs = [{ name: 'Home', url: SITE + '/' }];
-  const parts = p.route.split('/').filter(Boolean);
-  parts.forEach((_, k) => {
-    const r = '/' + parts.slice(0, k + 1).join('/'), cid = byRoute[r];
-    if (cid) crumbs.push({ name: pages[cid].name, url: `${SITE}${r}` });
-  });
+  // Home, then each level of the route that is a built page (e.g. Home > Why T57 > RFQ Bidding).
+  // A page whose group does not sit in its route (e.g. Escrow under Trust & Payments) names its parent.
+  const trail = (cid: string): { name: string; url: string }[] => {
+    const q = pages[cid];
+    if (q.parent) return [...trail(q.parent), { name: q.name, url: `${SITE}${q.route}` }];
+    const parts = q.route.split('/').filter(Boolean);
+    return parts.map((_, k) => '/' + parts.slice(0, k + 1).join('/')).filter(r => byRoute[r]).map(r => ({ name: pages[byRoute[r]].name, url: `${SITE}${r}` }));
+  };
+  const crumbs = [{ name: 'Home', url: SITE + '/' }, ...(id === 'home' ? [] : trail(id))];
   const graph: object[] = [
     {
       '@type': 'Organization', '@id': `${SITE}/#org`, name: 'T57.ai', url: SITE, logo: `${SITE}/icon-512.png`,

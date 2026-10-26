@@ -98,5 +98,117 @@
  "document-audit-trail": {
   "title": "Trade Document Management & Audit Trail | T57",
   "description": "Contracts, invoices, certificates and inspection reports on one tamper-evident trade record, with a full audit trail for every food trade."
+ },
+ "capabilities": {
+  "title": "T57 Capabilities | Every Step of Food Trade on One Record",
+  "description": "RFQs, contracts, trade finance, escrow, eLCs, insurance, logistics, customs and price intelligence for food trade, connected on one T57 trade record."
+ },
+ "cap-trade": {
+  "title": "Food Trade Execution | RFQs, Contracts & Traceability | T57",
+  "description": "RFQs, contract farming, government tenders, traceability and chat-based orders, from first enquiry to delivery on one T57 trade record."
+ },
+ "cap-rfq": {
+  "title": "RFQ & Trade Execution for Food | T57",
+  "description": "Structured RFQs, verified bidders, like-for-like comparison and contracts from the accepted quote. Source and execute food trades on one T57 record."
+ },
+ "cap-trade-desk": {
+  "title": "Virtual Trade Desk for Food Trade | AI + Human Review | T57",
+  "description": "AI counterparty matching, price data, contract drafting, sanctions screening and document checks for food SMEs, with people making every decision."
+ },
+ "cap-contract-farming": {
+  "title": "Contract Farming Platform | Forward Contracts for Food | T57",
+  "description": "Forward agreements, quality standards, input finance and milestone payments between buyers, farmers and cooperatives on one T57 record."
+ },
+ "cap-tenders": {
+  "title": "Government Food Tenders | Find & Win Public Contracts | T57",
+  "description": "Discover public food tenders, get AI summaries and eligibility checks, build compliant responses and deliver on one T57 trade record."
+ },
+ "cap-traceability": {
+  "title": "Food Traceability from Source to Buyer | T57",
+  "description": "Lot-level food traceability with verified origins, linked certificates and a tamper-evident record. Prove provenance and speed up recalls on T57."
+ },
+ "cap-chat-orders": {
+  "title": "WhatsApp & AI Chat Ordering for Food Businesses | T57",
+  "description": "Order food by WhatsApp message or voice note. AI turns plain language into confirmed, structured orders on your T57 trade record."
+ },
+ "cap-trust-payments": {
+  "title": "Trust & Payments for Food Trade | Escrow, Wallets, eLC | T57",
+  "description": "Escrow, wallets in any currency and electronic letters of credit from licensed partners, tied to milestones on one verified T57 trade record."
+ },
+ "cap-escrow": {
+  "title": "Escrow & Trade Assurance for Food Trade | T57",
+  "description": "Buyer funds held by licensed escrow partners and released in stages on inspection, shipment or delivery, with dispute triggers, on T57."
+ },
+ "cap-wallet": {
+  "title": "Digital Wallet for Food Trade Payments | Any Currency | T57",
+  "description": "Pay suppliers and partners and get paid by buyers in any currency, with near-instant member payments and automatic reconciliation on T57."
+ },
+ "cap-elc": {
+  "title": "Electronic Letter of Credit (eLC) for Food Trade | T57",
+  "description": "LCs built from your contract, issued by partner banks in about 15 minutes after approval, with AI discrepancy checks and digital presentation on T57."
+ },
+ "cap-banking": {
+  "title": "Banking & Money Movement for Food Trade | T57",
+  "description": "Digital banking, accounts in any currency, cross-border transfers and regulated digital-asset settlement for verified food businesses on T57."
+ },
+ "cap-digital-bank": {
+  "title": "Digital Business Banking for Food Businesses | T57",
+  "description": "Business accounts in any currency, cards and near-instant settlement from licensed partners, opened with your T57 Passport and linked to every trade."
+ },
+ "cap-any-currency": {
+  "title": "Any-Currency Accounts & Cross-Border Transfers for Food Trade | T57",
+  "description": "Hold, convert and send money in any currency with upfront rates and fast cross-border transfers, linked to every trade on T57."
+ },
+ "cap-digital-assets": {
+  "title": "Crypto, Stablecoin & Gold-Backed Token Settlement for Trade | T57",
+  "description": "Settle food trades in stablecoins, digital assets or gold-backed tokens through licensed partners, where lawful, linked to your T57 trade record."
+ },
+ "cap-financing": {
+  "title": "Food Trade Financing & Capital | Lenders Compete | T57",
+  "description": "Trade and supply chain finance, Shariah-compliant finance and tokenized funding for verified food trades, from competing licensed lenders on T57."
+ },
+ "cap-supply-chain-finance": {
+  "title": "Trade & Supply Chain Finance for Food SMEs | T57",
+  "description": "Pre-shipment, post-shipment, receivables, payables and inventory finance for verified food trades, with lenders competing and escrow repayment on T57."
+ },
+ "cap-fundraising": {
+  "title": "Asset-Based Fundraising & Tokenization for Food | T57",
+  "description": "Tokenize verified invoices, warehouse receipts and food assets so licensed lenders and investors can fund them, where the law allows, on T57."
+ },
+ "cap-risk": {
+  "title": "Trade Risk & Protection | Cargo, Credit Insurance & Takaful | T57",
+  "description": "Cargo insurance, trade credit cover, takaful, crop cover and compliance screening for food trade, from licensed partners, linked to every T57 trade."
+ },
+ "cap-logistics": {
+  "title": "Food Logistics & Fulfilment | Freight, Tracking, Customs | T57",
+  "description": "Book vetted freight, cold-chain, inspection and customs partners, track shipments in real time and clear borders faster, on one T57 trade record."
+ },
+ "cap-logistics-network": {
+  "title": "Food Logistics Network | Vetted Freight & Cold-Chain Partners | T57",
+  "description": "Compare and book vetted freight forwarders, carriers, cold-chain and warehousing partners matched to each food trade, with route risk alerts on T57."
+ },
+ "cap-tracking": {
+  "title": "Real-Time Shipment & Cold-Chain Tracking for Food | T57",
+  "description": "Track food shipments across sea, air and road, with live temperature monitoring, predicted arrival and alerts, all on one T57 trade record."
+ },
+ "cap-customs": {
+  "title": "Customs & Trade Documentation Hub for Food | T57",
+  "description": "Generate export and import documents from your contract, get HS code guidance and consistency checks, and pre-clear food shipments with vetted brokers on T57."
+ },
+ "cap-intelligence": {
+  "title": "Food Trade Intelligence & Data | Prices, Forecasts, Credit | T57",
+  "description": "Food price index, supply and demand forecasts, AI negotiation support, credit reports and port trade data, built into food trade on T57."
+ },
+ "cap-price-index": {
+  "title": "Live Food Price Index by Product & Origin | T57",
+  "description": "Current food prices by product, grade and origin from public data and anonymized verified trades. Benchmark quotes and set alerts on T57."
+ },
+ "cap-negotiations": {
+  "title": "AI Negotiations Engine for Food Trade | T57",
+  "description": "AI that prepares negotiating briefs, benchmarks offers and suggests counter-offers for food deals, while people make every decision, on T57."
+ },
+ "cap-equipment-rental": {
+  "title": "Farm & Food Equipment Rental Marketplace | T57",
+  "description": "Rent tractors, harvesters, cold storage and processing equipment from verified owners, with escrow payments and insurance, on T57."
  }
 }

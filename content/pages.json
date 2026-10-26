@@ -285,6 +285,658 @@
   "title": "Trade Document Management & Audit Trail | T57",
   "description": "Contracts, invoices, certificates and inspection reports on one tamper-evident trade record, with a full audit trail for every food trade."
  },
+ "capabilities": {
+  "route": "/capabilities",
+  "section": "capabilities",
+  "name": "Capabilities",
+  "h1": "Every step of a food trade. One record.",
+  "answer": "Run every part of a food trade, from first quote to final payment, on one record.",
+  "faqs": [
+   {
+    "q": "Do I have to use every capability on every trade?",
+    "a": "No. Members choose the capabilities each trade needs. Because they share one record, adding a service later does not mean starting again."
+   },
+   {
+    "q": "Who provides finance, payments and insurance?",
+    "a": "Licensed partners. T57 does not lend, hold client funds, own goods or provide transport. It provides the verification, workflow and trade record that connect these services."
+   },
+   {
+    "q": "Can I use T57 for domestic trade as well as exports?",
+    "a": "Yes. T57 supports domestic wholesale to supermarkets, HoReCa and institutions, as well as cross-border trade."
+   }
+  ],
+  "title": "T57 Capabilities | Every Step of Food Trade on One Record",
+  "description": "RFQs, contracts, trade finance, escrow, eLCs, insurance, logistics, customs and price intelligence for food trade, connected on one T57 trade record."
+ },
+ "cap-trade": {
+  "route": "/capabilities/trade",
+  "section": "capabilities",
+  "name": "Trade Execution",
+  "h1": "From first enquiry to delivered deal.",
+  "answer": "Turn a food trade opportunity into an agreed, delivered and documented deal.",
+  "faqs": [
+   {
+    "q": "Can I use Trade Execution without finance or logistics?",
+    "a": "Yes. You can use RFQs, contracts and traceability on their own, and add finance, insurance or logistics to any trade later."
+   },
+   {
+    "q": "Does T57 sell or buy the goods?",
+    "a": "No. T57 does not own goods. Members trade directly with each other on T57."
+   },
+   {
+    "q": "Which products can I trade?",
+    "a": "Food across the whole chain: grown, raised and caught products, and processed, manufactured and branded goods."
+   }
+  ],
+  "title": "Food Trade Execution | RFQs, Contracts & Traceability | T57",
+  "description": "RFQs, contract farming, government tenders, traceability and chat-based orders, from first enquiry to delivery on one T57 trade record."
+ },
+ "cap-rfq": {
+  "route": "/capabilities/trade/rfq",
+  "section": "capabilities",
+  "name": "RFQ & Trade Execution",
+  "h1": "One request. Like-for-like quotes.",
+  "answer": "Send one structured request, compare verified quotes and execute the deal you choose.",
+  "faqs": [
+   {
+    "q": "How long does an RFQ stay open?",
+    "a": "The buyer sets the deadline. Bids received after it closes are not shown unless the buyer reopens the RFQ."
+   },
+   {
+    "q": "Can I negotiate after receiving bids?",
+    "a": "Yes. You can ask clarifying questions or request a revised bid from any supplier before you award the contract."
+   },
+   {
+    "q": "Can sellers create offers without an RFQ?",
+    "a": "Yes. Verified sellers can publish product listings and wholesale terms that buyers can respond to directly."
+   }
+  ],
+  "title": "RFQ & Trade Execution for Food | T57",
+  "description": "Structured RFQs, verified bidders, like-for-like comparison and contracts from the accepted quote. Source and execute food trades on one T57 record."
+ },
+ "cap-trade-desk": {
+  "route": "/capabilities/trade/virtual-trade-desk",
+  "section": "capabilities",
+  "name": "Virtual Trade Desk",
+  "h1": "A trading house desk, without the headcount.",
+  "answer": "Give your business the trade desk of a global trading house, without hiring one.",
+  "faqs": [
+   {
+    "q": "Is the Trade Desk included in membership?",
+    "a": "Yes. Every verified member can use the Trade Desk. Higher membership tiers include deeper data and higher usage."
+   },
+   {
+    "q": "Does the Trade Desk make decisions for me?",
+    "a": "No. It provides suggestions, drafts and checks. You make every commercial decision."
+   },
+   {
+    "q": "What happens when the Trade Desk flags a problem?",
+    "a": "You see the issue and a suggested fix. If the issue concerns compliance or verification, it goes to T57's team for human review."
+   }
+  ],
+  "title": "Virtual Trade Desk for Food Trade | AI + Human Review | T57",
+  "description": "AI counterparty matching, price data, contract drafting, sanctions screening and document checks for food SMEs, with people making every decision."
+ },
+ "cap-contract-farming": {
+  "route": "/capabilities/trade/contract-farming",
+  "section": "capabilities",
+  "name": "Contract Farming",
+  "h1": "Agree next season's crop, today.",
+  "answer": "Agree next season's crop today, with buyers, growers and finance on one record.",
+  "faqs": [
+   {
+    "q": "Can individual smallholders use contract farming on T57?",
+    "a": "Yes, usually through a cooperative or producer organization that holds the T57 membership and signs on behalf of its members."
+   },
+   {
+    "q": "What happens if prices change during the season?",
+    "a": "It depends on the contract. Fixed-price, minimum-price and formula-based agreements each handle price movements differently, and the terms are agreed upfront."
+   },
+   {
+    "q": "Does T57 provide the inputs or finance?",
+    "a": "No. Inputs come from buyers or partners, and finance comes from licensed lenders. T57 provides the contract, records and workflow."
+   }
+  ],
+  "title": "Contract Farming Platform | Forward Contracts for Food | T57",
+  "description": "Forward agreements, quality standards, input finance and milestone payments between buyers, farmers and cooperatives on one T57 record."
+ },
+ "cap-tenders": {
+  "route": "/capabilities/trade/government-tenders",
+  "section": "capabilities",
+  "name": "Government Tenders",
+  "h1": "Win public food tenders as a verified supplier.",
+  "answer": "Find, answer and deliver public food tenders as a verified supplier.",
+  "faqs": [
+   {
+    "q": "Does T57 submit bids on my behalf?",
+    "a": "No. T57 helps you find, understand and prepare a response. You submit it through the issuing authority's official channel."
+   },
+   {
+    "q": "Can government buyers use T57 to run tenders?",
+    "a": "Government buyers can invite verified T57 members to bid and track delivery on T57, alongside their own procurement rules and systems."
+   },
+   {
+    "q": "Which countries' tenders are covered?",
+    "a": "Tenders from T57's founding markets first (Saudi Arabia, the UAE, India, Malaysia and Türkiye), with more markets added over time."
+   }
+  ],
+  "title": "Government Food Tenders | Find & Win Public Contracts | T57",
+  "description": "Discover public food tenders, get AI summaries and eligibility checks, build compliant responses and deliver on one T57 trade record."
+ },
+ "cap-traceability": {
+  "route": "/capabilities/trade/traceability",
+  "section": "capabilities",
+  "name": "Traceability",
+  "h1": "Prove where your food came from.",
+  "answer": "Prove where your food came from, how it was handled and who touched it.",
+  "faqs": [
+   {
+    "q": "Who adds information to a lot's record?",
+    "a": "The parties who handle it, such as the producer, processor, inspector and logistics partner, each add the events they are responsible for."
+   },
+   {
+    "q": "Can consumers see traceability information?",
+    "a": "Yes, if the brand or seller chooses to share it through a link or QR code. Commercial details stay private."
+   },
+   {
+    "q": "Does traceability on T57 replace certification?",
+    "a": "No. Certificates are still issued by accredited bodies. T57 links them to the lots they cover and makes them easy to check."
+   }
+  ],
+  "title": "Food Traceability from Source to Buyer | T57",
+  "description": "Lot-level food traceability with verified origins, linked certificates and a tamper-evident record. Prove provenance and speed up recalls on T57."
+ },
+ "cap-chat-orders": {
+  "route": "/capabilities/trade/whatsapp-orders",
+  "section": "capabilities",
+  "name": "LLM-Based Orders",
+  "h1": "Order by WhatsApp. Get a real order.",
+  "answer": "Order food the way you already talk to suppliers, by WhatsApp, voice or chat.",
+  "faqs": [
+   {
+    "q": "Do I need to install anything?",
+    "a": "No. Verified members can order through WhatsApp or T57 chat once their account is linked."
+   },
+   {
+    "q": "What if the AI gets my order wrong?",
+    "a": "You always see a summary before confirming, so you can correct it. Nothing is sent to the supplier until you confirm."
+   },
+   {
+    "q": "Is my WhatsApp conversation stored?",
+    "a": "Only the order details you confirm are recorded on the trade record, under T57's privacy policy."
+   }
+  ],
+  "title": "WhatsApp & AI Chat Ordering for Food Businesses | T57",
+  "description": "Order food by WhatsApp message or voice note. AI turns plain language into confirmed, structured orders on your T57 trade record."
+ },
+ "cap-trust-payments": {
+  "route": "/capabilities/finance/trust-payments",
+  "section": "capabilities",
+  "name": "Trust & Payments",
+  "h1": "Pay and get paid with confidence.",
+  "answer": "Pay and get paid with confidence, on terms both sides can see and trust.",
+  "faqs": [
+   {
+    "q": "Which payment option should I choose?",
+    "a": "Escrow suits most new relationships and domestic wholesale. eLCs suit larger cross-border trades where a bank guarantee is expected. Wallet payments suit trusted, repeat relationships."
+   },
+   {
+    "q": "Can I combine payment options?",
+    "a": "Yes. For example, a deposit can be paid into escrow and the balance under an LC, all on the same trade record."
+   },
+   {
+    "q": "Who resolves payment disputes?",
+    "a": "Disputes are handled under the contract and the licensed partner's rules. Release pauses automatically until they are resolved."
+   }
+  ],
+  "title": "Trust & Payments for Food Trade | Escrow, Wallets, eLC | T57",
+  "description": "Escrow, wallets in any currency and electronic letters of credit from licensed partners, tied to milestones on one verified T57 trade record."
+ },
+ "cap-escrow": {
+  "route": "/capabilities/finance/escrow",
+  "section": "capabilities",
+  "name": "Escrow & Trade Assurance",
+  "h1": "Payment held safely until the goods are right.",
+  "answer": "Hold payment safely until the goods, the quality and the documents are right.",
+  "faqs": [
+   {
+    "q": "Who holds the money?",
+    "a": "A licensed escrow partner, in an account separate from T57 and from both trading parties."
+   },
+   {
+    "q": "What does escrow cost?",
+    "a": "Escrow fees are set by the partner and shown before you agree the contract."
+   },
+   {
+    "q": "Can escrow be used with a letter of credit or trade finance?",
+    "a": "Yes. Escrow can sit alongside an LC or repay a trade finance lender at settlement, on the same trade record."
+   }
+  ],
+  "title": "Escrow & Trade Assurance for Food Trade | T57",
+  "description": "Buyer funds held by licensed escrow partners and released in stages on inspection, shipment or delivery, with dispute triggers, on T57.",
+  "parent": "cap-trust-payments"
+ },
+ "cap-wallet": {
+  "route": "/capabilities/finance/digital-wallet",
+  "section": "capabilities",
+  "name": "Digital Wallet & Payments",
+  "h1": "One wallet for every trade payment.",
+  "answer": "One wallet for every trade payment, in any currency, linked to every invoice.",
+  "faqs": [
+   {
+    "q": "Is the T57 wallet a bank account?",
+    "a": "It is an e-money or payment account provided by a licensed partner. For full banking services, see Digital Banking."
+   },
+   {
+    "q": "Can I pay people who are not on T57?",
+    "a": "Yes. You can pay external suppliers and service providers by bank transfer from your wallet, subject to the partner's checks."
+   },
+   {
+    "q": "What are the fees?",
+    "a": "Fees and exchange rates are set by the payment partner and shown before you confirm each payment."
+   }
+  ],
+  "title": "Digital Wallet for Food Trade Payments | Any Currency | T57",
+  "description": "Pay suppliers and partners and get paid by buyers in any currency, with near-instant member payments and automatic reconciliation on T57.",
+  "parent": "cap-trust-payments"
+ },
+ "cap-elc": {
+  "route": "/capabilities/finance/elc",
+  "section": "capabilities",
+  "name": "Electronic Letter of Credit",
+  "h1": "Letters of credit, built from your contract.",
+  "answer": "Letters of credit built from your contract, issued digitally and presented without paper.",
+  "faqs": [
+   {
+    "q": "What does \"about 15 minutes\" mean?",
+    "a": "It is the target time for issuance after the bank has approved your application. Approval follows the bank's normal credit process."
+   },
+   {
+    "q": "Can my own bank issue the LC on T57?",
+    "a": "If your bank is a T57 partner, yes. If not, T57 can connect you to participating banks."
+   },
+   {
+    "q": "Are electronic LCs legally valid?",
+    "a": "Letters of credit are commonly issued and advised electronically between banks. Electronic presentation of trade documents depends on local law, and T57 supports paper presentation where it is still required."
+   }
+  ],
+  "title": "Electronic Letter of Credit (eLC) for Food Trade | T57",
+  "description": "LCs built from your contract, issued by partner banks in about 15 minutes after approval, with AI discrepancy checks and digital presentation on T57.",
+  "parent": "cap-trust-payments"
+ },
+ "cap-banking": {
+  "route": "/capabilities/finance/banking",
+  "section": "capabilities",
+  "name": "Banking & Money Movement",
+  "h1": "Bank and move money where you trade.",
+  "answer": "Bank, convert and move money across borders, in any currency, where you trade.",
+  "faqs": [
+   {
+    "q": "Is T57 a bank?",
+    "a": "No. T57 connects verified members to licensed banking and payment partners and links their services to the trade record."
+   },
+   {
+    "q": "Can I keep my existing bank?",
+    "a": "Yes. You can keep using your own bank and connect it to T57, or use T57's partners alongside it."
+   },
+   {
+    "q": "Are digital-asset services available everywhere?",
+    "a": "No. They are offered only where the law allows, through regulated partners."
+   }
+  ],
+  "title": "Banking & Money Movement for Food Trade | T57",
+  "description": "Digital banking, accounts in any currency, cross-border transfers and regulated digital-asset settlement for verified food businesses on T57."
+ },
+ "cap-digital-bank": {
+  "route": "/capabilities/finance/digital-bank",
+  "section": "capabilities",
+  "name": "Digital Banking",
+  "h1": "Business banking, opened with your Passport.",
+  "answer": "Business banking built around your food trade, opened with your T57 Passport.",
+  "faqs": [
+   {
+    "q": "Who provides the bank account?",
+    "a": "A licensed banking partner in your market, under its own terms and regulation."
+   },
+   {
+    "q": "Do I have to move my existing banking?",
+    "a": "No. You can use T57's banking partners alongside your current bank."
+   },
+   {
+    "q": "Which countries are covered?",
+    "a": "T57's founding markets first (Saudi Arabia, the UAE, India, Malaysia and Türkiye), with more added as partners join."
+   }
+  ],
+  "title": "Digital Business Banking for Food Businesses | T57",
+  "description": "Business accounts in any currency, cards and near-instant settlement from licensed partners, opened with your T57 Passport and linked to every trade.",
+  "parent": "cap-banking"
+ },
+ "cap-any-currency": {
+  "route": "/capabilities/finance/multi-currency",
+  "section": "capabilities",
+  "name": "Any-Currency Accounts & Remittance",
+  "h1": "Any currency. Rates you see first.",
+  "answer": "Hold, convert and send money in any currency, at rates you see before you pay.",
+  "faqs": [
+   {
+    "q": "Which currencies can I hold and send?",
+    "a": "Any currency your trade needs, through T57's banking and payment partners."
+   },
+   {
+    "q": "How long do transfers take?",
+    "a": "Payments between T57 members settle in near real time. External transfers depend on the destination and partner network, and the expected time is shown before you confirm."
+   },
+   {
+    "q": "Can I send personal remittances?",
+    "a": "Where partners offer it, verified business members can send remittances for staff. T57 is built for business payments, not personal accounts."
+   }
+  ],
+  "title": "Any-Currency Accounts & Cross-Border Transfers for Food Trade | T57",
+  "description": "Hold, convert and send money in any currency with upfront rates and fast cross-border transfers, linked to every trade on T57.",
+  "parent": "cap-banking"
+ },
+ "cap-digital-assets": {
+  "route": "/capabilities/finance/crypto-banking",
+  "section": "capabilities",
+  "name": "Crypto & Digital Assets",
+  "h1": "Settle in stablecoins or gold-backed tokens.",
+  "answer": "Settle trades in stablecoins, digital assets or gold-backed tokens, through regulated partners.",
+  "faqs": [
+   {
+    "q": "Is digital-asset settlement legal in my country?",
+    "a": "T57 shows digital-asset options only where they are permitted for both parties under local rules, through licensed partners."
+   },
+   {
+    "q": "What about price volatility?",
+    "a": "Stablecoins and gold-backed tokens are designed to reduce volatility, and partners can convert to local currency at the point of payment."
+   },
+   {
+    "q": "Are digital-asset payments Shariah-compliant?",
+    "a": "Views differ among scholars. Members who need Shariah-compliant settlement should seek guidance and can choose gold-backed tokens or conventional options instead."
+   }
+  ],
+  "title": "Crypto, Stablecoin & Gold-Backed Token Settlement for Trade | T57",
+  "description": "Settle food trades in stablecoins, digital assets or gold-backed tokens through licensed partners, where lawful, linked to your T57 trade record.",
+  "parent": "cap-banking"
+ },
+ "cap-financing": {
+  "route": "/capabilities/finance/financing",
+  "section": "capabilities",
+  "name": "Financing & Capital",
+  "h1": "Fund every stage of your food trade.",
+  "answer": "Fund every stage of your food trade, from planting and production to shipment and sale.",
+  "faqs": [
+   {
+    "q": "Who provides the finance?",
+    "a": "Licensed banks, finance companies, Islamic finance providers and, where permitted, institutional investors. T57 does not lend."
+   },
+   {
+    "q": "What do lenders see?",
+    "a": "Only the deal file you choose to share: your T57 Passport, the contract, counterparties, documents and trade history."
+   },
+   {
+    "q": "How does repayment work?",
+    "a": "In most structures, the end buyer's payment goes into escrow and repays the lender at settlement, before the balance is released to you."
+   }
+  ],
+  "title": "Food Trade Financing & Capital | Lenders Compete | T57",
+  "description": "Trade and supply chain finance, Shariah-compliant finance and tokenized funding for verified food trades, from competing licensed lenders on T57."
+ },
+ "cap-supply-chain-finance": {
+  "route": "/capabilities/finance/supply-chain-finance",
+  "section": "capabilities",
+  "name": "Trade & Supply Chain Finance",
+  "h1": "Working capital at every step.",
+  "answer": "Get working capital at every step of the food chain, from lenders competing for your trade.",
+  "faqs": [
+   {
+    "q": "How quickly can I receive offers?",
+    "a": "That depends on each lender's process. Because the deal file is already verified, lenders can respond faster than to a standard application."
+   },
+   {
+    "q": "Do I need collateral?",
+    "a": "Many structures rely on the trade itself, through confirmed orders, invoices and escrow repayment, rather than on property or other collateral. Each lender sets its own requirements."
+   },
+   {
+    "q": "Can large buyers offer finance to their suppliers?",
+    "a": "Yes. Through payables finance, an anchor buyer can let its verified suppliers be paid early by partner lenders."
+   }
+  ],
+  "title": "Trade & Supply Chain Finance for Food SMEs | T57",
+  "description": "Pre-shipment, post-shipment, receivables, payables and inventory finance for verified food trades, with lenders competing and escrow repayment on T57.",
+  "parent": "cap-financing"
+ },
+ "cap-fundraising": {
+  "route": "/capabilities/finance/crowdfunding",
+  "section": "capabilities",
+  "name": "Asset-Based Fundraising & Tokenization",
+  "h1": "Raise capital against real food assets.",
+  "answer": "Raise capital against real food assets, from verified trades to warehouse stock and farm equipment.",
+  "faqs": [
+   {
+    "q": "Is this the same as crypto?",
+    "a": "No. A tokenized asset is a digital record of a real asset, such as an invoice or a cold store. It is not a currency."
+   },
+   {
+    "q": "Who can invest?",
+    "a": "Licensed lenders, and investors eligible under the rules of the licensed fundraising platform and their own country."
+   },
+   {
+    "q": "What happens if the trade fails?",
+    "a": "The outcome depends on the structure. Funders may have rights to the underlying asset, insurance or guarantees, which are set out before they commit."
+   }
+  ],
+  "title": "Asset-Based Fundraising & Tokenization for Food | T57",
+  "description": "Tokenize verified invoices, warehouse receipts and food assets so licensed lenders and investors can fund them, where the law allows, on T57.",
+  "parent": "cap-financing"
+ },
+ "cap-risk": {
+  "route": "/capabilities/finance/risk-protection",
+  "section": "capabilities",
+  "name": "Risk & Protection",
+  "h1": "Protect every trade from loss and default.",
+  "answer": "Protect every trade against loss, default and disruption, with cover built from the trade record.",
+  "faqs": [
+   {
+    "q": "Does T57 sell insurance?",
+    "a": "T57 connects members to licensed insurers, takaful operators and brokers. Policies are issued by them, under their own regulation."
+   },
+   {
+    "q": "Can I use my existing insurer?",
+    "a": "Yes. You can upload existing policies to the trade record so they can be used with LCs, lenders and claims."
+   },
+   {
+    "q": "What does compliance screening check?",
+    "a": "Sanctions lists, watchlists, adverse media and beneficial ownership for every counterparty, before a deal moves forward."
+   }
+  ],
+  "title": "Trade Risk & Protection | Cargo, Credit Insurance & Takaful | T57",
+  "description": "Cargo insurance, trade credit cover, takaful, crop cover and compliance screening for food trade, from licensed partners, linked to every T57 trade."
+ },
+ "cap-logistics": {
+  "route": "/capabilities/logistics",
+  "section": "capabilities",
+  "name": "Logistics & Fulfilment",
+  "h1": "Farm or factory to buyer, on one record.",
+  "answer": "Move food from farm or factory to buyer, with freight, tracking and customs on one record.",
+  "faqs": [
+   {
+    "q": "Can I use my own freight forwarder?",
+    "a": "Yes. You can invite your forwarder to the trade record or upload its documents and tracking data."
+   },
+   {
+    "q": "Does T57 support cold-chain shipments?",
+    "a": "Yes. Cold-chain partners and temperature tracking are available for chilled and frozen goods."
+   },
+   {
+    "q": "Which modes of transport are covered?",
+    "a": "Sea, air and road freight, plus warehousing and cold storage, through vetted partners."
+   }
+  ],
+  "title": "Food Logistics & Fulfilment | Freight, Tracking, Customs | T57",
+  "description": "Book vetted freight, cold-chain, inspection and customs partners, track shipments in real time and clear borders faster, on one T57 trade record."
+ },
+ "cap-logistics-network": {
+  "route": "/capabilities/logistics/network",
+  "section": "capabilities",
+  "name": "Intelligent Logistics Network",
+  "h1": "Vetted freight and cold chain, matched to each trade.",
+  "answer": "Compare and book vetted freight, cold-chain and warehousing partners, matched to each trade.",
+  "faqs": [
+   {
+    "q": "How are logistics partners vetted?",
+    "a": "Partners go through business verification, licence and insurance checks, and their performance is rated on recorded shipments."
+   },
+   {
+    "q": "Can I invite my own forwarder?",
+    "a": "Yes. Your existing forwarder can join the trade record and quote alongside network partners."
+   },
+   {
+    "q": "Does T57 negotiate freight rates?",
+    "a": "T57 aggregates demand and shows comparable quotes, which helps members get competitive rates. Members choose and book."
+   }
+  ],
+  "title": "Food Logistics Network | Vetted Freight & Cold-Chain Partners | T57",
+  "description": "Compare and book vetted freight forwarders, carriers, cold-chain and warehousing partners matched to each food trade, with route risk alerts on T57."
+ },
+ "cap-tracking": {
+  "route": "/capabilities/logistics/tracking",
+  "section": "capabilities",
+  "name": "Real-Time Shipment Tracking",
+  "h1": "Where your food is. What state it is in.",
+  "answer": "Know where your food is, what condition it is in and when it will arrive.",
+  "faqs": [
+   {
+    "q": "Do I need special tracking devices?",
+    "a": "No. T57 uses carrier and port data for all shipments. IoT devices add live temperature and location for sensitive cargo."
+   },
+   {
+    "q": "Who can see my shipment?",
+    "a": "Only the parties to the trade and the partners you authorize, such as your lender or insurer."
+   },
+   {
+    "q": "Can tracking trigger payment?",
+    "a": "Yes. Agreed milestones, such as arrival or delivery confirmation, can release escrow payments automatically."
+   }
+  ],
+  "title": "Real-Time Shipment & Cold-Chain Tracking for Food | T57",
+  "description": "Track food shipments across sea, air and road, with live temperature monitoring, predicted arrival and alerts, all on one T57 trade record."
+ },
+ "cap-customs": {
+  "route": "/capabilities/logistics/customs",
+  "section": "capabilities",
+  "name": "Customs & Documentation Hub",
+  "h1": "Documents prepared once. Clearance faster.",
+  "answer": "Prepare export and import documents once, and clear food through customs faster.",
+  "faqs": [
+   {
+    "q": "Does T57 file customs declarations?",
+    "a": "No. Licensed customs brokers file declarations, using the documents prepared on T57."
+   },
+   {
+    "q": "Is pre-clearance available in every country?",
+    "a": "Pre-clearance depends on each customs authority's procedures. Where it is not available, T57 still sends complete, checked documents to the broker before arrival."
+   },
+   {
+    "q": "Are AI-suggested HS codes final?",
+    "a": "No. They are suggestions for a broker or member to confirm. The final classification is the declarant's responsibility."
+   }
+  ],
+  "title": "Customs & Trade Documentation Hub for Food | T57",
+  "description": "Generate export and import documents from your contract, get HS code guidance and consistency checks, and pre-clear food shipments with vetted brokers on T57."
+ },
+ "cap-intelligence": {
+  "route": "/capabilities/intelligence",
+  "section": "capabilities",
+  "name": "Intelligence & Data",
+  "h1": "Trade with the full picture.",
+  "answer": "Trade with the full picture: prices, supply, counterparties and markets, inside every deal.",
+  "faqs": [
+   {
+    "q": "Where does T57's data come from?",
+    "a": "Public market and trade sources, licensed data partners, and anonymized, aggregated data from trades on T57."
+   },
+   {
+    "q": "Is my trade data shared with other members?",
+    "a": "No. Individual trades are never shown. They contribute only to anonymized, aggregated statistics."
+   },
+   {
+    "q": "Is intelligence included in membership?",
+    "a": "Core intelligence is included. Higher membership tiers include deeper data, credit reports and forecasts."
+   }
+  ],
+  "title": "Food Trade Intelligence & Data | Prices, Forecasts, Credit | T57",
+  "description": "Food price index, supply and demand forecasts, AI negotiation support, credit reports and port trade data, built into food trade on T57."
+ },
+ "cap-price-index": {
+  "route": "/capabilities/intelligence/price-index",
+  "section": "capabilities",
+  "name": "Live Food Price Index",
+  "h1": "Today's food prices, from real trades.",
+  "answer": "Current food prices by product, grade and origin, built from real trades.",
+  "faqs": [
+   {
+    "q": "How is the T57 index calculated?",
+    "a": "It combines public market data, licensed data partners and anonymized, aggregated prices from verified T57 trades, with methods that prevent any single member's price from being identified."
+   },
+   {
+    "q": "How often is it updated?",
+    "a": "It updates as new market data arrives and as verified trades close on T57. Some lines update daily, others weekly, depending on trade volume."
+   },
+   {
+    "q": "Can non-members see the index?",
+    "a": "A selection of index lines is public on the T57 website. Full detail, history and alerts are available to members."
+   }
+  ],
+  "title": "Live Food Price Index by Product & Origin | T57",
+  "description": "Current food prices by product, grade and origin from public data and anonymized verified trades. Benchmark quotes and set alerts on T57."
+ },
+ "cap-negotiations": {
+  "route": "/capabilities/intelligence/ai-negotiations",
+  "section": "capabilities",
+  "name": "AI Negotiations Engine",
+  "h1": "Negotiate with data and AI behind you.",
+  "answer": "Negotiate every food deal with market data and AI preparation behind you.",
+  "faqs": [
+   {
+    "q": "Does the AI negotiate on my behalf?",
+    "a": "No. It prepares and suggests. You decide what to offer, counter or accept, and nothing is sent without your confirmation."
+   },
+   {
+    "q": "Can the other side see the engine's suggestions to me?",
+    "a": "No. Your briefs and suggestions are private to you."
+   },
+   {
+    "q": "What data does the engine use?",
+    "a": "The T57 price index, anonymized and aggregated trade data, the counterparty's public T57 profile and track record, and your own costs and history if you choose to add them."
+   }
+  ],
+  "title": "AI Negotiations Engine for Food Trade | T57",
+  "description": "AI that prepares negotiating briefs, benchmarks offers and suggests counter-offers for food deals, while people make every decision, on T57."
+ },
+ "cap-equipment-rental": {
+  "route": "/capabilities/agritech/equipment-rental",
+  "section": "capabilities",
+  "name": "Equipment Rental Marketplace",
+  "h1": "Rent the equipment you cannot afford to own.",
+  "answer": "Rent tractors, harvesters, cold storage and processing equipment when you need it.",
+  "faqs": [
+   {
+    "q": "Can I list my equipment for rent?",
+    "a": "Yes. Verified members can list equipment, set prices and availability, and choose who can rent it."
+   },
+   {
+    "q": "Who is responsible if equipment is damaged?",
+    "a": "The rental terms, condition records and any insurance set out responsibility. Disputes are handled under those terms and the payment partner's rules."
+   },
+   {
+    "q": "Is equipment rental available everywhere?",
+    "a": "It starts in T57's founding markets and grows as owners join in each region."
+   }
+  ],
+  "title": "Farm & Food Equipment Rental Marketplace | T57",
+  "description": "Rent tractors, harvesters, cold storage and processing equipment from verified owners, with escrow payments and insurance, on T57."
+ },
  "governments": {
   "route": "/who-we-serve/governments",
   "section": "who-we-serve",

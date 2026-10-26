@@ -552,7 +552,7 @@
 
   document.addEventListener('click', e => {
     const tp = e.target.closest('[data-tone-pick]'); if (tp) { setTone(tp.dataset.tonePick); if (!busy) intro(); return; }
-    const a = e.target.closest('a[data-go]'); if (a && !e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0) { e.preventDefault(); go(a.dataset.go, a.href); return; }
+    const a = e.target.closest('a[data-go]'); if (a && !e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0) { e.preventDefault(); go(a.dataset.go, a.getAttribute('href')); return; }
     if (e.target.closest('#replay')) { e.preventDefault(); intro(); }
   });
 

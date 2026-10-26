@@ -61,6 +61,8 @@ for m in re.finditer(r'(<article class="world" id="([a-z0-9-]+)".*?</article>)',
     faqs = [{'q': text(q), 'a': text(x)} for q, x in re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p></details>', art, re.S)]
     name = re.search(r'aria-label="([^"]+)"', art).group(1)
     pages[i] = dict(route=ROUTE[i], section=ROUTE[i].strip('/').split('/')[0], name='Home' if i == 'home' else name, h1=h1, answer=std, faqs=faqs, **META[i])
+    pm = re.search(r'data-parent="([^"]+)"', art[:400])
+    if pm: pages[i]['parent'] = pm.group(1)
 json.dump(pages, open(f'{R}/content/pages.json', 'w'), indent=1, ensure_ascii=False)
 
 os.makedirs(f'{R}/public/proto', exist_ok=True)
@@ -71,7 +73,7 @@ open(f'{R}/public/proto/worlds.js', 'w').write(f'window.T57_PAGES = {json.dumps(
 SITE = 'https://t57.ai'
 L = ['# T57.ai', '', '> T57 is an AI-native digital trade platform for food. It connects verified farmers, processors, traders, buyers, financiers, service providers and regulators on one trade record, from quote to payment. T57 does not lend or hold funds; finance, escrow and insurance come from licensed partners.', '',
      'T57 works with the Islamic Organization for Food Security (IOFS), an OIC institution, under a 10-year memorandum of understanding, and has signed more than 150 memoranda and letters of intent across 67 countries. Founding markets: Saudi Arabia, UAE, India, Malaysia and Türkiye.']
-for sec, head in [('who-we-serve', 'Who we serve'), ('why-t57', 'Why T57')]:
+for sec, head in [('who-we-serve', 'Who we serve'), ('why-t57', 'Why T57'), ('capabilities', 'Capabilities')]:
     L += ['', f'## {head}', '']
     for i, p in pages.items():
         if p['section'] == sec: L.append(f'- [{p["name"]}]({SITE}{p["route"]}): {p["answer"]}')

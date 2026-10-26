@@ -12,7 +12,7 @@
   color-scheme: light;
 }
 [data-world="financiers"] { --world:var(--amber-flame); --world-text:var(--amber-flame); --world-ink:var(--persian-indigo); }
-[data-world="home"], [data-world="who-we-serve"], [data-world="why-t57"], [data-world="club-membership"], [data-world="rfq-bidding"], [data-world="virtual-trade-desk"], [data-world="market-intelligence"], [data-world="trade-finance"], [data-world="nft-funding"], [data-world="elc-15-minutes"], [data-world="escrow-payments"], [data-world="alternative-payments"], [data-world="digital-bank"], [data-world="document-audit-trail"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
+[data-world="home"], [data-world="who-we-serve"], [data-world="why-t57"], [data-world="capabilities"], [data-world^="cap-"], [data-world="club-membership"], [data-world="rfq-bidding"], [data-world="virtual-trade-desk"], [data-world="market-intelligence"], [data-world="trade-finance"], [data-world="nft-funding"], [data-world="elc-15-minutes"], [data-world="escrow-payments"], [data-world="alternative-payments"], [data-world="digital-bank"], [data-world="document-audit-trail"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
 [data-world="governments"] { --world:var(--electric-sapphire); --world-text:#8f93ff; --world-ink:#ffffff; }
 [data-world="sellers"], [data-world="buyers"], [data-world="enterprises"], [data-world="food-processors"], [data-world="cooperatives"], [data-world="collaborators"], [data-world="service-providers"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
 [data-world="traders"] { --world:var(--persian-blue); --world-text:var(--mint-cream); --world-ink:#ffffff; }
@@ -605,3 +605,23 @@ a.feat.twelve b::after { content:" →"; color:var(--strong-cyan); } a.feat.twel
   .scenario .sc-step text { opacity:1; fill:#fff; } .scenario .sc-step circle { fill:#8f93ff; }
   .offer i::after { transform:scaleX(1); } .offer em { opacity:1; }
 }
+
+/* Capabilities: the eight-group map */
+.cmap { margin:40px 0 8px; border-radius:16px; overflow:hidden; background:var(--night); box-shadow:0 24px 60px -24px #02246c66; }
+.cmap svg { display:block; width:100%; height:auto; }
+.cm-spoke { fill:none; stroke-width:3; stroke-dasharray:4 14; opacity:.75; animation:cm-flow 2.4s linear infinite; animation-delay:var(--d); }
+@keyframes cm-flow { to { stroke-dashoffset:-36; } }
+.cm-hub { fill:var(--persian-indigo); stroke:var(--strong-cyan); stroke-width:3; }
+.cm-hub-t { font:700 21px var(--font-display); fill:#fff; letter-spacing:.08em; }
+.cm-node circle { fill:#131d55; stroke:var(--c); stroke-width:3; transition:fill .25s, transform .25s; transform-box:fill-box; transform-origin:center; }
+.cm-node .cm-ic { fill:none; stroke:var(--c); stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; pointer-events:none; }
+.cm-node text { font:500 22px var(--font-text); fill:#fff; }
+.cm-node:hover circle, .cm-node:focus-visible circle { fill:#2a3366; transform:scale(1.08); }
+.cm-node:hover text { text-decoration:underline; }
+@media (prefers-reduced-motion: reduce) { .cm-spoke { animation:none; } }
+@media (max-width: 640px) { .cmap { display:none; } }
+.life.cmap-nav { grid-template-columns:repeat(4, minmax(0, 1fr)); row-gap:36px; }
+.life.cmap-nav::before { display:none; }
+.life-st h3 a { color:inherit; text-decoration:none; } .life-st h3 a:hover { text-decoration:underline; } .life-st h3 a[aria-current] { color:var(--persian-blue); }
+@media (max-width: 1000px) { .life.cmap-nav { grid-template-columns:repeat(2, minmax(0, 1fr)); } .life.cmap-nav .life-st { grid-template-columns:1fr; } .life.cmap-nav .life-st ul { grid-column:1; } }
+@media (max-width: 640px) { .life.cmap-nav { grid-template-columns:1fr; } }
