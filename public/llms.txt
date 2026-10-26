@@ -86,6 +86,7 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 ## Platform
 
 - [Platform](https://www.t57.ai/platform): The food operating system: one platform that connects every party, service and record in food trade.
+- [One Trade, Every Step](https://www.t57.ai/platform/trade-cycle): Agree a price, ship, insure, finance, pay and clear customs on one platform, with every party verified and every step on one record.
 - [System Architecture](https://www.t57.ai/platform/architecture): A cloud-native, API-first architecture built for verified, regulated, cross-border food trade.
 - [Platform Roadmap](https://www.t57.ai/platform/roadmap): How the T57 platform grows: from verified trade, to connected finance, to a food ecosystem.
 - [Intelligence Layer](https://www.t57.ai/platform/intelligence-layer): The AI layer that learns from verified trade and supports every decision on T57.
@@ -302,6 +303,8 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Which documents can be generated?](https://www.t57.ai/ai-native/ai-documentation): Contracts, pro forma and commercial invoices, packing lists, LC applications and supporting documents, and data for certificates and customs declarations.
 - [Is T57 a marketplace or a platform?](https://www.t57.ai/platform): T57 is a platform: a members-only verified trade club with the infrastructure to run trades end to end. Members trade directly with each other on it.
 - [Can T57 connect to my existing systems?](https://www.t57.ai/platform): Yes. T57 offers APIs for ERP, accounting and procurement systems, and connects to partner banks, insurers and logistics providers.
+- [Does T57 lend money or move the goods?](https://www.t57.ai/platform/trade-cycle): No. T57 is the platform. Licensed banks and finance partners fund trades, licensed partners provide escrow and insurance, and logistics partners move and store the goods.
+- [Can I keep my current freight forwarder?](https://www.t57.ai/platform/trade-cycle): Yes. Invite them to T57 and they work on the same trade record, or choose a vetted forwarder in your city by rating and reviews.
 - [Which cloud does T57 use?](https://www.t57.ai/platform/architecture): Microsoft Azure, across regions, designed to meet each market's data-residency requirements.
 - [Does T57 offer APIs?](https://www.t57.ai/platform/architecture): Yes. Members and partners can integrate through REST APIs and webhooks. Documentation is available to approved members and partners.
 - [Can I join T57 now?](https://www.t57.ai/platform/roadmap): Yes. Membership applications are open, starting in the founding markets.
