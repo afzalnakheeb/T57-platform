@@ -1,0 +1,107 @@
+<article class="world" id="pricing-roi" data-world="pricing-roi" data-route="/pricing/roi-calculator" data-petal="finance" data-parent="pricing" aria-label="ROI Calculator">
+  <div class="micro gutter">
+    <div class="wrap micro-in">
+      <b><svg viewBox="774 418 250 244" aria-hidden="true"><use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-finance"></use><use href="#mk-agri"></use></svg><a href="/pricing" data-go="pricing">Pricing</a></b>
+      <a href="/pricing" data-go="pricing">Overview</a><a href="/pricing/plans" data-go="pricing-plans">Plans</a><a href="/pricing/enterprise" data-go="pricing-enterprise">Enterprise</a><a href="/pricing/government" data-go="pricing-government">Government</a><a href="/pricing/roi-calculator" aria-current="page">ROI Calculator</a>
+    </div>
+  </div>
+  <section class="hero night gutter" aria-labelledby="p97-h1">
+    <canvas data-scene="market" aria-hidden="true"></canvas>
+    <div class="hero-in has-glance">
+      <div class="hero-copy">
+        <p class="eyebrow">Pricing · ROI Calculator</p>
+        <h1 id="p97-h1"><span class="ln">Your numbers.</span> <span class="ln">Your assumptions.</span></h1>
+        <p class="std">See what T57 could be worth to your business, and which plan pays off.</p>
+        <div class="actions"><a class="btn btn-world" href="#calc-pricing-roi">Calculate your ROI</a><a class="btn btn-ghost" href="#list-pricing-roi">See the break-even</a></div>
+      </div>
+      <aside class="glance" data-run aria-label="What you get with T57"><p class="gl-h">What you get with T57</p><ol class="gl-rows" data-gl-set="0"><li style="--i:0"><svg class="gl-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l5-5 4 3 8-8"/><path d="M15 7h5v5"/></svg><span class="gl-k">Savings</span><span class="gl-b"><span class="sr">Without T57: </span>Promised</span><svg class="gl-ar" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6h20M16 1l5 5-5 5"/></svg><span class="gl-a"><span class="sr">With T57: </span>Calculated from your inputs</span></li><li style="--i:1"><svg class="gl-ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span class="gl-k">Fees</span><span class="gl-b"><span class="sr">Without T57: </span>Left out</span><svg class="gl-ar" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6h20M16 1l5 5-5 5"/></svg><span class="gl-a"><span class="sr">With T57: </span>Built in, so the result is net</span></li><li style="--i:2"><svg class="gl-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg><span class="gl-k">Plan</span><span class="gl-b"><span class="sr">Without T57: </span>Guesswork</span><svg class="gl-ar" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6h20M16 1l5 5-5 5"/></svg><span class="gl-a"><span class="sr">With T57: </span>The lowest total cost for your volume</span></li></ol><p class="gl-legend"><span>Today</span><span>With T57</span></p><p class="gl-src">Finance, escrow and insurance come from licensed partners.</p></aside>
+    </div>
+  </section>
+  <section class="chapter gutter" aria-labelledby="p97-ch">
+    <div class="wrap">
+      <div class="standfirst"><p>Enter a few numbers about how you trade today, and see your estimated savings net of T57 fees, plus the plan that costs you least for your volume.</p></div>
+      <ol class="steps"><li><span class=dot>01</span><h3>Tell us about your trade</h3><p>Trades per month, average trade value, your role and your market.</p></li><li><span class=dot>02</span><h3>Add today's costs</h3><p>Days spent finding and checking partners, document rework, agent or intermediary margin, cost of trade finance and days waiting to be paid.</p></li><li><span class=dot>03</span><h3>Set your expected change</h3><p>Use the sliders to set how much you expect each cost to change on T57. You choose the assumptions.</p></li><li><span class=dot>04</span><h3>See the result</h3><p>Estimated time and cost saved per year, minus membership and trade fees, and the plan with the lowest total cost for you.</p></li></ol>
+    </div>
+  </section>
+  <section class="chapter alt gutter" id="calc-pricing-roi" aria-labelledby="p97-calc">
+    <div class="wrap">
+      <p class="eyebrow">The calculator</p>
+      <h2 class="h2" id="p97-calc">Estimate your net benefit</h2>
+      <form class="roi" data-roi onsubmit="return false" aria-label="ROI calculator">
+        <fieldset><legend><b>01</b> Your trade</legend>
+          <label class="roi-f"><span>Your role</span><select data-roi-in="role"><option>Producer or cooperative</option><option>Processor</option><option>Trader</option><option>Buyer</option></select></label>
+          <label class="roi-f"><span>Your market</span><select data-roi-in="market"><option>Saudi Arabia</option><option>UAE</option><option>India</option><option>Malaysia</option><option>Türkiye</option><option>Other</option></select></label>
+          <label class="roi-f"><span>Trades a month</span><span class="roi-in"><input type="number" inputmode="decimal" min="0" step="1" value="8" data-roi-in="trades"></span></label>
+          <label class="roi-f"><span>Average trade value</span><span class="roi-in"><em>$</em><input type="number" inputmode="decimal" min="0" step="1000" value="20000" data-roi-in="value"></span></label>
+        </fieldset>
+        <fieldset><legend><b>02</b> Today's costs</legend>
+          <label class="roi-f"><span>Staff days a month finding and checking partners</span><span class="roi-in"><input type="number" inputmode="decimal" min="0" step="1" value="6" data-roi-in="days"></span></label>
+          <label class="roi-f"><span>Cost of a staff day</span><span class="roi-in"><em>$</em><input type="number" inputmode="decimal" min="0" step="10" value="150" data-roi-in="dayrate"></span></label>
+          <label class="roi-f"><span>Document rework per trade</span><span class="roi-in"><em>$</em><input type="number" inputmode="decimal" min="0" step="10" value="120" data-roi-in="rework"></span></label>
+          <label class="roi-f"><span>Agent or intermediary margin, % of trade</span><span class="roi-in"><em>%</em><input type="number" inputmode="decimal" min="0" step="0.5" value="5" data-roi-in="margin"></span></label>
+          <label class="roi-f"><span>Cost of trade finance, % a year</span><span class="roi-in"><em>%</em><input type="number" inputmode="decimal" min="0" step="0.5" value="12" data-roi-in="rate"></span></label>
+          <label class="roi-f"><span>Days waiting to be paid</span><span class="roi-in"><input type="number" inputmode="decimal" min="0" step="5" value="60" data-roi-in="wait"></span></label>
+        </fieldset>
+        <fieldset><legend><b>03</b> Expected change on T57 <small>You choose. Start low.</small></legend>
+          <label class="roi-s"><span>Less time finding and checking partners</span><input type="range" min="0" max="60" step="5" value="20" data-roi-in="c_days"><output data-roi-out="c_days">20%</output></label>
+          <label class="roi-s"><span>Less document rework</span><input type="range" min="0" max="60" step="5" value="25" data-roi-in="c_rework"><output data-roi-out="c_rework">25%</output></label>
+          <label class="roi-s"><span>Lower intermediary margin</span><input type="range" min="0" max="60" step="5" value="15" data-roi-in="c_margin"><output data-roi-out="c_margin">15%</output></label>
+          <label class="roi-s"><span>Lower cost of finance</span><input type="range" min="0" max="60" step="5" value="0" data-roi-in="c_rate"><output data-roi-out="c_rate">0%</output></label>
+          <label class="roi-s"><span>Fewer days waiting to be paid</span><input type="range" min="0" max="60" step="5" value="15" data-roi-in="c_wait"><output data-roi-out="c_wait">15%</output></label>
+        </fieldset>
+        <output class="roi-res" data-roi-res aria-live="polite">
+          <p class="eyebrow">04 · Your estimate, per year</p>
+          <div class="roi-big"><span>Estimated net benefit</span><b data-r="net">—</b><small data-r="ctx"></small></div>
+          <dl class="roi-dl"><div><dt>Time and cost saved</dt><dd data-r="gross">—</dd></div><div><dt>Lowest-cost plan for you</dt><dd data-r="plan">—</dd></div><div><dt>Its membership and trade fees</dt><dd data-r="fees">—</dd></div></dl>
+          <table class="roi-plans"><caption>Total yearly cost by plan, annual billing</caption><tbody data-r="rows"></tbody></table>
+          <p class="roi-fine">An estimate from your inputs and standard list prices, not a quote. Local prices may be lower in your market. Nothing you enter is stored or sent.</p>
+          <button type="button" class="btn btn-world" data-roi-print>Save as PDF</button>
+        </output>
+      </form>
+    </div>
+  </section>
+  <section class="chapter gutter" id="list-pricing-roi" aria-labelledby="p97-be">
+    <div class="wrap">
+      <p class="eyebrow">Plan break-even</p>
+      <h2 class="h2" id="p97-be">When a higher plan pays for itself</h2>
+      <figure class="be" aria-label="Total monthly cost by plan against trade volume. Growth costs less than Explore above about $157,000 of trade a month, and Enterprise less than Growth above about $375,000.">
+        <svg viewBox="0 0 1060 520" role="img"><g class="be-g"><line x1="90" x2="960" y1="450" y2="450"/><text class="be-ax" x="78" y="456" text-anchor="end">$0k</text><line x1="90" x2="960" y1="345" y2="345"/><text class="be-ax" x="78" y="351" text-anchor="end">$1k</text><line x1="90" x2="960" y1="240" y2="240"/><text class="be-ax" x="78" y="246" text-anchor="end">$2k</text><line x1="90" x2="960" y1="135" y2="135"/><text class="be-ax" x="78" y="141" text-anchor="end">$3k</text><line x1="90" x2="960" y1="30" y2="30"/><text class="be-ax" x="78" y="36" text-anchor="end">$4k</text><text class="be-ax" x="90" y="480" text-anchor="middle">$0k</text><text class="be-ax" x="264" y="480" text-anchor="middle">$100k</text><text class="be-ax" x="438" y="480" text-anchor="middle">$200k</text><text class="be-ax" x="612" y="480" text-anchor="middle">$300k</text><text class="be-ax" x="786" y="480" text-anchor="middle">$400k</text><text class="be-ax" x="960" y="480" text-anchor="middle">$500k</text></g><path class="be-l be-ex" pathLength="1" d="M90 429 L960 35"/><path class="be-l be-co" pathLength="1" d="M90 398 L960 83"/><path class="be-l be-gr" pathLength="1" d="M90 371 L960 161"/><path class="be-l be-en" pathLength="1" d="M90 293 L960 188"/><text class="be-t be-ex" x="968" y="41">Explore</text><text class="be-t be-co" x="968" y="89">Core</text><text class="be-t be-gr" x="968" y="167">Growth</text><text class="be-t be-en" x="968" y="194">Enterprise</text><g class="be-x"><line x1="363" x2="363" y1="305" y2="450"/><circle cx="363" cy="305" r="8"/><text x="373" y="436">Growth beats Explore, about $157k</text></g><g class="be-x"><line x1="742" x2="742" y1="214" y2="450"/><circle cx="742" cy="214" r="8"/><text x="752" y="436">Enterprise beats Growth, about $375k</text></g><text class="be-ax be-cap" x="525" y="512" text-anchor="middle">Your trade a month</text></svg>
+        <figcaption>Monthly membership plus your side's trade fee, at standard list prices and monthly billing. Enterprise is shown at its starting price.</figcaption>
+      </figure><div class="feats"><div class=feat><b>Your numbers, your assumptions</b><span>The calculator does not use promised savings. It shows the result of the inputs you choose.</span></div><div class=feat><b>Fees included</b><span>Membership and trade fees are built in, so the result is net.</span></div><div class=feat><b>Plan break-even</b><span>Because higher plans cost more a month and less per trade, the calculator shows when upgrading pays. On standard prices and on cost alone, Growth costs less than Explore once you trade more than about $157,000 a month, and Enterprise costs less than Growth above about $375,000 a month.</span></div><div class=feat><b>Save and share</b><span>Download the result as a PDF for your team.</span></div></div>
+    </div>
+  </section>
+  <section class="chapter alt gutter" id="uc-pricing-roi" aria-labelledby="p97-uc">
+    <div class="wrap">
+      <p class="eyebrow">Use case · Illustrative example</p>
+      <h2 class="h2" id="p97-uc">From the calculator</h2>
+      <div class="uc-text"><p>An Istanbul dried fruit exporter trades about $200,000 a month on Explore. The calculator shows that Growth would cost it less in total, because the lower trade fee saves more than the higher membership, and it would gain forecasting and priority support too. It upgrades to Growth.</p></div>
+    </div>
+  </section>
+  <section class="chapter gutter" aria-labelledby="p97-why">
+    <div class="wrap">
+      <p class="eyebrow">Why T57</p>
+      <h2 class="h2" id="p97-why">Why members choose T57</h2>
+      <div class="feats"><div class=feat><b>Honest numbers</b><span>We would rather you see a modest, realistic estimate than a promise.</span></div></div>
+    </div>
+  </section>
+
+  <section class="chapter alt gutter" id="faq-pricing-roi" aria-labelledby="p97-faq">
+    <div class="wrap faq-wrap">
+      <div><p class="eyebrow">FAQ</p><h2 class="h2" id="p97-faq">Common questions</h2></div>
+      <div class="faq"><details><summary>Is the result a quote?</summary><p>No. It is an estimate based on your inputs and standard prices. Local prices may be lower in your market.</p></details><details><summary>Do you keep my data?</summary><p>Only if you choose to save or share your result.</p></details></div>
+    </div>
+  </section>
+  <section class="chapter gutter" aria-labelledby="p97-more">
+    <div class="wrap">
+      <p class="eyebrow">More in Pricing</p>
+      <h2 class="h2" id="p97-more">Every pricing page</h2>
+      <nav class="pnav" aria-label="Pricing pages"><ul><li><a href="/pricing" data-go="pricing">Pricing Overview</a></li><li><a href="/pricing/plans" data-go="pricing-plans">Membership Plans &amp; Pricing</a></li><li><a href="/pricing/enterprise" data-go="pricing-enterprise">Enterprise &amp; Custom Pricing</a></li><li><a href="/pricing/government" data-go="pricing-government">Government &amp; Institutional Pricing</a></li><li><a href="/pricing/roi-calculator" data-go="pricing-roi" aria-current="page">ROI Calculator</a></li></ul></nav>
+    </div>
+  </section>
+  <section class="cta night gutter" id="cta-pricing-roi" aria-labelledby="p97-cta">
+    <div class="cta-in">
+      <div><h2 id="p97-cta">See what T57 could be worth to your business, and which plan pays off.</h2><div class="actions"><a class="btn btn-world" href="/#cta-home">Calculate your ROI</a><a class="btn btn-ghost" href="/#cta-home">Start your free trial</a></div></div>
+      <svg class="petal-big" viewBox="774 418 250 244" aria-hidden="true"><use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-finance"></use><use href="#mk-agri"></use></svg>
+    </div>
+  </section>
+</article>
