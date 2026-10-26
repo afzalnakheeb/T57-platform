@@ -597,6 +597,16 @@
     });
   });
 
+  // Partner application and demo request: no backend yet, so the form composes an email to hello@t57.ai
+  document.querySelectorAll('[data-mailform]').forEach(f => f.addEventListener('submit', e => {
+    e.preventDefault();
+    const need = ['name', 'company', 'email'].filter(n => f.elements[n] && !f.elements[n].value.trim());
+    f.querySelector('[data-mf-err]').hidden = !need.length;
+    if (need.length) { f.elements[need[0]].focus(); return; }
+    const lines = [...f.querySelectorAll('label')].map(l => { const c = l.querySelector('input,select,textarea'); return c.value.trim() ? `${l.querySelector('span').textContent}: ${c.value.trim()}` : ''; }).filter(Boolean);
+    location.href = `mailto:hello@t57.ai?subject=${encodeURIComponent(f.dataset.subject + ' – ' + f.elements.company.value.trim())}&body=${encodeURIComponent(lines.join('\n'))}`;
+  }));
+
   document.querySelectorAll('[data-explainer]').forEach(fx => {
     const btn = fx.querySelector('.fx-pause');
     if (reduce) return;

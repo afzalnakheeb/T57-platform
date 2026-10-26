@@ -490,5 +490,65 @@
  "help": {
   "title": "Help Center | T57 Support, Guides and FAQs",
   "description": "Guides, how-tos, FAQs and support for trading on T57, from sign-up and verification to payments and shipments."
+ },
+ "partnerships": {
+  "title": "Partnerships | Finance, Logistics and Technology Partners | T57",
+  "description": "Partner with T57 to serve verified food businesses with finance, insurance, logistics, inspection and technology, connected to one trade record."
+ },
+ "partners-technology": {
+  "title": "Technology Partners | T57",
+  "description": "Partner with T57 in cloud, identity, data, integration and AI to serve verified food businesses."
+ },
+ "partners-finance": {
+  "title": "Financial Services Partners | Trade Finance and Insurance | T57",
+  "description": "Banks, finance companies, escrow providers, insurers and takaful operators reach verified food businesses with the trade record behind every request."
+ },
+ "partners-logistics": {
+  "title": "Logistics Partners | Freight, Cold Chain, Inspection | T57",
+  "description": "Freight, cold chain, warehouse, inspection and customs partners serve verified food traders from inside the T57 trade record."
+ },
+ "partners-apply": {
+  "title": "Become a Partner | T57",
+  "description": "Apply to partner with T57 in finance, insurance, logistics, inspection or technology."
+ },
+ "about": {
+  "title": "About T57 | AI-Native Digital Trade Infrastructure for Food",
+  "description": "Why T57 exists: access to markets, technology and finance for the food ecosystem, built from food security work across more than 60 countries."
+ },
+ "about-leadership": {
+  "title": "Leadership & Advisors | Founders, Team and Advisory Board | T57",
+  "description": "Meet the founders, leadership team, board and thirteen advisors building T57, with experience in food trade, food security, technology, finance and governance."
+ },
+ "about-impact": {
+  "title": "Innovation & Impact | Responsible AI for Food Trade | T57",
+  "description": "How T57 uses small, local AI responsibly, and the impact it works toward: market access, finance, less food loss and inclusion."
+ },
+ "about-food-security": {
+  "title": "T57 for Food Security | Early Warning and Verified Supply",
+  "description": "How T57 strengthens food security: verified supply across borders, supply status by origin, AI early warning and a government module."
+ },
+ "about-sdg": {
+  "title": "T57 for SDG Delivery | Verified Impact in Food Trade",
+  "description": "How T57 contributes to SDGs 1, 2, 5, 8, 9, 10, 12 and 13 by bringing small producers into verified trade and finance, with measurable impact."
+ },
+ "about-careers": {
+  "title": "Careers at T57 | Build AI-Native Food Trade Infrastructure",
+  "description": "Join T57's teams in technology, AI, product, country operations and partnerships across five founding markets."
+ },
+ "about-media": {
+  "title": "Media & Press Kit | T57",
+  "description": "T57 company facts, logos, leadership photos and press contacts for journalists."
+ },
+ "contact": {
+  "title": "Contact T57",
+  "description": "Contact T57 to join, see a demo, partner, work with us on food security, or for media enquiries."
+ },
+ "contact-demo": {
+  "title": "Request a Demo | T57",
+  "description": "Book a 30-minute T57 demo on your own products and markets, then start your free trial."
+ },
+ "contact-offices": {
+  "title": "Regional Offices | T57 in Dubai, Riyadh, India, Malaysia, Türkiye",
+  "description": "Find T57's offices and country teams in the UAE, Saudi Arabia, India, Malaysia and Türkiye."
  }
 }

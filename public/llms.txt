@@ -156,6 +156,33 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [FAQs](https://t57.ai/help/faq): Answers to common questions.
 - [Contact Support](https://t57.ai/help/contact): Talk to a person when you need one.
 
+## Partnerships
+
+- [Partnerships Overview](https://t57.ai/partnerships): Partner with the network that food trade runs on.
+
+## Partner programs
+
+- [Technology Partners](https://t57.ai/partners/technology): Build the future of food trade with us.
+- [Financial Services Partners](https://t57.ai/partners/financial-services): Reach verified food businesses with better data and less risk.
+- [Logistics Partners](https://t57.ai/partners/logistics): Move and check food for verified traders.
+- [Become a Partner](https://t57.ai/partners/apply): Apply to become a T57 partner.
+
+## About T57
+
+- [About T57](https://t57.ai/about): We exist so that food that exists reaches the people and markets that need it.
+- [Leadership & Advisors](https://t57.ai/about/leadership): The people building T57.
+- [Innovation & Impact](https://t57.ai/about/impact): Technology that serves the people who feed the world.
+- [T57 for Food Security](https://t57.ai/about/food-security): Make food security visible, verifiable and actionable.
+- [T57 for SDG Delivery](https://t57.ai/about/sdg-delivery): Turn verified trade into measurable progress on the Sustainable Development Goals.
+- [Careers](https://t57.ai/about/careers): Help build the infrastructure food trade runs on.
+- [Media & Press Kit](https://t57.ai/about/media): Resources for journalists and partners.
+
+## Contact
+
+- [Contact](https://t57.ai/contact): Talk to T57.
+- [Request a Demo](https://t57.ai/contact/demo): See T57 working on your own products.
+- [Regional Offices](https://t57.ai/contact/offices): Find T57 near you.
+
 ## Common questions
 
 - [What is T57?](https://t57.ai/): T57 is AI-native digital trade infrastructure for the food industry. It brings verification, quotes, contracts, finance access, insurance, inspection and logistics onto one trade record for verified members.
@@ -372,6 +399,30 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [What languages is support available in?](https://t57.ai/help): English, Arabic and the main languages of our founding markets.
 - [How long does the free trial last?](https://t57.ai/help/faq): Founding members get 90 days free at launch. After the launch period, the trial is 14 days.
 - [Can I trade during the free trial?](https://t57.ai/help/faq): You can explore members, intelligence and AI tools, and send requests for quote. Contracts, escrow and finance start once you subscribe and are verified.
+- [Does T57 compete with partners?](https://t57.ai/partnerships): No. T57 does not lend, insure, ship or inspect. It brings partners verified customers and better data.
+- [How do partners get paid?](https://t57.ai/partnerships): Members pay partners for their services directly. T57 may earn a small commission from some partners, as agreed in each partnership.
+- [Do you offer APIs?](https://t57.ai/partners/technology): Yes, for approved partners.
+- [Can a SaaS company offer T57 to its customers?](https://t57.ai/partners/technology): Yes, through partner and white-label options.
+- [Does T57 take credit risk?](https://t57.ai/partners/financial-services): No. Partners make their own credit decisions.
+- [Can Islamic banks and takaful operators join?](https://t57.ai/partners/financial-services): Yes.
+- [Do members choose their own logistics partner?](https://t57.ai/partners/logistics): Yes. They can choose from T57's partners or bring their own.
+- [Can inspection results trigger payment?](https://t57.ai/partners/logistics): Yes, when the parties agree it in their contract.
+- [Where is T57 based?](https://t57.ai/about): T57's operating company is in Dubai, its regional headquarters is in Riyadh, and it has teams in India and Malaysia, with country teams in all five founding markets.
+- [What does the name T57 mean?](https://t57.ai/about): T stands for trade, built on trust, transparency and traceability. The 5 stands for the five industries T57 connects: agriculture and food production, trade, logistics, finance and technology. The 7 stands for the seven outcomes we work toward: food security, less food lost, integration, access to finance, higher incomes, inclusion and resilience.
+- [Who leads T57?](https://t57.ai/about/leadership): T57 is led by its Founder and Chairman, Afzal Hussain Mohammed Nakheeb, with four co-founders who lead technology, product, communication and governance.
+- [How does T57 work with IOFS?](https://t57.ai/about/leadership): T57 has a 10-year MoU with IOFS. Its Director General, Strategic Relations, Prof. Yerlan Baidaulet, is the former Director-General of IOFS.
+- [Is T57 a government system?](https://t57.ai/about/food-security): No. T57 is an independent platform that governments and institutions can use, with permissioned data.
+- [What data does a government see?](https://t57.ai/about/food-security): Aggregated, permissioned data on supply, prices and trade, never individual members' data without consent.
+- [Can T57 report impact for our program?](https://t57.ai/about/sdg-delivery): Yes. Partners agree the indicators, and T57 reports aggregated, permissioned data.
+- [Does T57 claim to deliver the SDGs on its own?](https://t57.ai/about/sdg-delivery): No. T57 contributes to specific targets alongside governments, development partners and the private sector.
+- [Can I apply if no role fits?](https://t57.ai/about/careers): Yes. Send your CV to hr@t57.ai and tell us which team you want to join.
+- [Do you hire remotely?](https://t57.ai/about/careers): Some technology roles can be remote, and country teams work in each market.
+- [How quickly will you reply?](https://t57.ai/contact): Within two working days.
+- [Can I contact you in Arabic?](https://t57.ai/contact): Yes.
+- [Is the demo free?](https://t57.ai/contact/demo): Yes.
+- [Can my team join?](https://t57.ai/contact/demo): Yes, invite as many colleagues as you like.
+- [Can I visit an office?](https://t57.ai/contact/offices): Yes, by appointment.
+- [Which office handles my country?](https://t57.ai/contact/offices): Your nearest founding-market team, or contact us and we'll route you.
 - [How does T57 support national and regional food-security strategies in practice?](https://t57.ai/who-we-serve/governments): Many countries are now expanding strategic reserves and silo capacity to hold months’ worth of essential commodities. T57 complements such physical infrastructure by tracking self-sufficiency, stock levels, and import exposure in real time. This combination of physical reserves and digital intelligence helps governments move from reactive to anticipatory food-security management.
 - [Why is it important to channel private and impact capital into agriculture and food systems, beyond public budgets?](https://t57.ai/who-we-serve/governments): Despite agriculture’s historical role in employment and food security, global investors are only now seeking credible, measurable pathways to support food systems as part of their climate and SDG commitments. T57 helps governments present investable, data-backed opportunities, from model support centers to special agri zones and CSR programs, with transparent performance and impact tracking that meets both regulatory and investor expectations.
 - [How does T57 handle disputes and reduce risks for financiers and investors?](https://t57.ai/who-we-serve/financiers): T57 reduces risk through its curated club membership model, which ensures vetted, credible counterparties in a high-trust environment. Its virtual trade desk supports execution, manages disputes, oversees documentation, and ensures consistent transaction follow-through for greater investor confidence.

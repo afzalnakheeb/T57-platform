@@ -2502,6 +2502,292 @@
   "description": "Reach T57 support by chat, email or your local country team in Saudi Arabia, the UAE, India, Malaysia or Türkiye.",
   "parent": "help"
  },
+ "partnerships": {
+  "route": "/partnerships",
+  "section": "partnerships",
+  "name": "Partnerships Overview",
+  "h1": "Serve verified food businesses, inside the trade itself.",
+  "answer": "Partner with the network that food trade runs on.",
+  "faqs": [
+   {
+    "q": "Does T57 compete with partners?",
+    "a": "No. T57 does not lend, insure, ship or inspect. It brings partners verified customers and better data."
+   },
+   {
+    "q": "How do partners get paid?",
+    "a": "Members pay partners for their services directly. T57 may earn a small commission from some partners, as agreed in each partnership."
+   },
+   {
+    "q": "Can partners in any country join?",
+    "a": "Partners licensed in T57's markets, or serving trade with them, can apply."
+   }
+  ],
+  "title": "Partnerships | Finance, Logistics and Technology Partners | T57",
+  "description": "Partner with T57 to serve verified food businesses with finance, insurance, logistics, inspection and technology, connected to one trade record."
+ },
+ "partners-technology": {
+  "route": "/partners/technology",
+  "section": "partners",
+  "name": "Technology Partners",
+  "h1": "Build the future of food trade with us.",
+  "answer": "Build the future of food trade with us.",
+  "faqs": [
+   {
+    "q": "Do you offer APIs?",
+    "a": "Yes, for approved partners."
+   },
+   {
+    "q": "Can a SaaS company offer T57 to its customers?",
+    "a": "Yes, through partner and white-label options."
+   }
+  ],
+  "title": "Technology Partners | T57",
+  "description": "Partner with T57 in cloud, identity, data, integration and AI to serve verified food businesses.",
+  "parent": "partnerships"
+ },
+ "partners-finance": {
+  "route": "/partners/financial-services",
+  "section": "partners",
+  "name": "Financial Services Partners",
+  "h1": "Better data. Less risk.",
+  "answer": "Reach verified food businesses with better data and less risk.",
+  "faqs": [
+   {
+    "q": "Does T57 take credit risk?",
+    "a": "No. Partners make their own credit decisions."
+   },
+   {
+    "q": "Can Islamic banks and takaful operators join?",
+    "a": "Yes."
+   }
+  ],
+  "title": "Financial Services Partners | Trade Finance and Insurance | T57",
+  "description": "Banks, finance companies, escrow providers, insurers and takaful operators reach verified food businesses with the trade record behind every request.",
+  "parent": "partnerships"
+ },
+ "partners-logistics": {
+  "route": "/partners/logistics",
+  "section": "partners",
+  "name": "Logistics Partners",
+  "h1": "Move and check food for verified traders.",
+  "answer": "Move and check food for verified traders.",
+  "faqs": [
+   {
+    "q": "Do members choose their own logistics partner?",
+    "a": "Yes. They can choose from T57's partners or bring their own."
+   },
+   {
+    "q": "Can inspection results trigger payment?",
+    "a": "Yes, when the parties agree it in their contract."
+   }
+  ],
+  "title": "Logistics Partners | Freight, Cold Chain, Inspection | T57",
+  "description": "Freight, cold chain, warehouse, inspection and customs partners serve verified food traders from inside the T57 trade record.",
+  "parent": "partnerships"
+ },
+ "partners-apply": {
+  "route": "/partners/apply",
+  "section": "partners",
+  "name": "Become a Partner",
+  "h1": "Apply to become a T57 partner.",
+  "answer": "Apply to become a T57 partner.",
+  "faqs": [],
+  "title": "Become a Partner | T57",
+  "description": "Apply to partner with T57 in finance, insurance, logistics, inspection or technology.",
+  "parent": "partnerships"
+ },
+ "about": {
+  "route": "/about",
+  "section": "about",
+  "name": "About T57",
+  "h1": "Food that exists should reach the people who need it.",
+  "answer": "We exist so that food that exists reaches the people and markets that need it.",
+  "faqs": [
+   {
+    "q": "Where is T57 based?",
+    "a": "T57's operating company is in Dubai, its regional headquarters is in Riyadh, and it has teams in India and Malaysia, with country teams in all five founding markets."
+   },
+   {
+    "q": "What does the name T57 mean?",
+    "a": "T stands for trade, built on trust, transparency and traceability. The 5 stands for the five industries T57 connects: agriculture and food production, trade, logistics, finance and technology. The 7 stands for the seven outcomes we work toward: food security, less food lost, integration, access to finance, higher incomes, inclusion and resilience."
+   },
+   {
+    "q": "Who owns T57?",
+    "a": "T57 is founder-led."
+   }
+  ],
+  "title": "About T57 | AI-Native Digital Trade Infrastructure for Food",
+  "description": "Why T57 exists: access to markets, technology and finance for the food ecosystem, built from food security work across more than 60 countries."
+ },
+ "about-leadership": {
+  "route": "/about/leadership",
+  "section": "about",
+  "name": "Leadership & Advisors",
+  "h1": "The people building T57.",
+  "answer": "The people building T57.",
+  "faqs": [
+   {
+    "q": "Who leads T57?",
+    "a": "T57 is led by its Founder and Chairman, Afzal Hussain Mohammed Nakheeb, with four co-founders who lead technology, product, communication and governance."
+   },
+   {
+    "q": "How does T57 work with IOFS?",
+    "a": "T57 has a 10-year MoU with IOFS. Its Director General, Strategic Relations, Prof. Yerlan Baidaulet, is the former Director-General of IOFS."
+   }
+  ],
+  "title": "Leadership & Advisors | Founders, Team and Advisory Board | T57",
+  "description": "Meet the founders, leadership team, board and thirteen advisors building T57, with experience in food trade, food security, technology, finance and governance.",
+  "parent": "about"
+ },
+ "about-impact": {
+  "route": "/about/impact",
+  "section": "about",
+  "name": "Innovation & Impact",
+  "h1": "Technology that serves the people who feed the world.",
+  "answer": "Technology that serves the people who feed the world.",
+  "faqs": [],
+  "title": "Innovation & Impact | Responsible AI for Food Trade | T57",
+  "description": "How T57 uses small, local AI responsibly, and the impact it works toward: market access, finance, less food loss and inclusion.",
+  "parent": "about"
+ },
+ "about-food-security": {
+  "route": "/about/food-security",
+  "section": "about",
+  "name": "T57 for Food Security",
+  "h1": "Make food security visible, verifiable and actionable.",
+  "answer": "Make food security visible, verifiable and actionable.",
+  "faqs": [
+   {
+    "q": "Is T57 a government system?",
+    "a": "No. T57 is an independent platform that governments and institutions can use, with permissioned data."
+   },
+   {
+    "q": "What data does a government see?",
+    "a": "Aggregated, permissioned data on supply, prices and trade, never individual members' data without consent."
+   },
+   {
+    "q": "Does T57 work only for Muslim-majority countries?",
+    "a": "No. T57 serves any food business or government in its markets, and works closely with IOFS and the OIC."
+   }
+  ],
+  "title": "T57 for Food Security | Early Warning and Verified Supply",
+  "description": "How T57 strengthens food security: verified supply across borders, supply status by origin, AI early warning and a government module.",
+  "parent": "about"
+ },
+ "about-sdg": {
+  "route": "/about/sdg-delivery",
+  "section": "about",
+  "name": "T57 for SDG Delivery",
+  "h1": "Verified trade, measurable progress.",
+  "answer": "Turn verified trade into measurable progress on the Sustainable Development Goals.",
+  "faqs": [
+   {
+    "q": "Can T57 report impact for our program?",
+    "a": "Yes. Partners agree the indicators, and T57 reports aggregated, permissioned data."
+   },
+   {
+    "q": "Does T57 claim to deliver the SDGs on its own?",
+    "a": "No. T57 contributes to specific targets alongside governments, development partners and the private sector."
+   }
+  ],
+  "title": "T57 for SDG Delivery | Verified Impact in Food Trade",
+  "description": "How T57 contributes to SDGs 1, 2, 5, 8, 9, 10, 12 and 13 by bringing small producers into verified trade and finance, with measurable impact.",
+  "parent": "about"
+ },
+ "about-careers": {
+  "route": "/about/careers",
+  "section": "about",
+  "name": "Careers",
+  "h1": "Help build the infrastructure food trade runs on.",
+  "answer": "Help build the infrastructure food trade runs on.",
+  "faqs": [
+   {
+    "q": "Can I apply if no role fits?",
+    "a": "Yes. Send your CV to hr@t57.ai and tell us which team you want to join."
+   },
+   {
+    "q": "Do you hire remotely?",
+    "a": "Some technology roles can be remote, and country teams work in each market."
+   }
+  ],
+  "title": "Careers at T57 | Build AI-Native Food Trade Infrastructure",
+  "description": "Join T57's teams in technology, AI, product, country operations and partnerships across five founding markets.",
+  "parent": "about"
+ },
+ "about-media": {
+  "route": "/about/media",
+  "section": "about",
+  "name": "Media & Press Kit",
+  "h1": "Resources for journalists and partners.",
+  "answer": "Resources for journalists and partners.",
+  "faqs": [],
+  "title": "Media & Press Kit | T57",
+  "description": "T57 company facts, logos, leadership photos and press contacts for journalists.",
+  "parent": "about"
+ },
+ "contact": {
+  "route": "/contact",
+  "section": "contact",
+  "name": "Contact",
+  "h1": "Talk to T57. We will find the right team.",
+  "answer": "Talk to T57.",
+  "faqs": [
+   {
+    "q": "How quickly will you reply?",
+    "a": "Within two working days."
+   },
+   {
+    "q": "Can I contact you in Arabic?",
+    "a": "Yes."
+   },
+   {
+    "q": "Where are you based?",
+    "a": "Dubai and Riyadh, with teams in India, Malaysia and Türkiye."
+   }
+  ],
+  "title": "Contact T57",
+  "description": "Contact T57 to join, see a demo, partner, work with us on food security, or for media enquiries."
+ },
+ "contact-demo": {
+  "route": "/contact/demo",
+  "section": "contact",
+  "name": "Request a Demo",
+  "h1": "See T57 working on your own products.",
+  "answer": "See T57 working on your own products.",
+  "faqs": [
+   {
+    "q": "Is the demo free?",
+    "a": "Yes."
+   },
+   {
+    "q": "Can my team join?",
+    "a": "Yes, invite as many colleagues as you like."
+   }
+  ],
+  "title": "Request a Demo | T57",
+  "description": "Book a 30-minute T57 demo on your own products and markets, then start your free trial.",
+  "parent": "contact"
+ },
+ "contact-offices": {
+  "route": "/contact/offices",
+  "section": "contact",
+  "name": "Regional Offices",
+  "h1": "Find T57 near you.",
+  "answer": "Find T57 near you.",
+  "faqs": [
+   {
+    "q": "Can I visit an office?",
+    "a": "Yes, by appointment."
+   },
+   {
+    "q": "Which office handles my country?",
+    "a": "Your nearest founding-market team, or contact us and we'll route you."
+   }
+  ],
+  "title": "Regional Offices | T57 in Dubai, Riyadh, India, Malaysia, Türkiye",
+  "description": "Find T57's offices and country teams in the UAE, Saudi Arabia, India, Malaysia and Türkiye.",
+  "parent": "contact"
+ },
  "governments": {
   "route": "/who-we-serve/governments",
   "section": "who-we-serve",
