@@ -1,7 +1,8 @@
 import React from 'react';
+import './globals.css';
 
 export const metadata = {
-  title: 'T57 Platform',
+  title: 'T57.ai',
   description: 'Sovereign Trade & Food Security Infrastructure',
 };
 
@@ -12,10 +13,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <script src="https://cdn.tailwindcss.com"></script>
-        {children}
-      </body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
