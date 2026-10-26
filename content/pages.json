@@ -2285,6 +2285,223 @@
   "description": "Estimate the time and money T57 could save your food business, net of fees, and find the plan with the lowest total cost for your trade volume.",
   "parent": "pricing"
  },
+ "resources": {
+  "route": "/resources",
+  "section": "resources",
+  "name": "Resources Overview",
+  "h1": "Learn how food trade is changing, and how to trade better.",
+  "answer": "Learn how food trade is changing, and how to trade better.",
+  "faqs": [
+   {
+    "q": "Are T57 resources free?",
+    "a": "Most are free. Some in-depth reports may ask for your email."
+   },
+   {
+    "q": "Can I suggest a topic?",
+    "a": "Yes. Contact our team with the topic you would like us to cover."
+   },
+   {
+    "q": "Are resources available in other languages?",
+    "a": "Key resources will be available in Arabic and other languages of our founding markets."
+   }
+  ],
+  "title": "Resources | Food Trade Insights, Reports and Guides | T57",
+  "description": "Insight, research, news, videos, events and plain-language guides on digital food trade, food security, trade finance and AI."
+ },
+ "res-blog": {
+  "route": "/resources/blog",
+  "section": "resources",
+  "name": "Blog & Insights",
+  "h1": "Practical insight, for people who trade food.",
+  "answer": "Practical insight on food trade, markets and technology.",
+  "faqs": [
+   {
+    "q": "How often do you publish?",
+    "a": "Regularly, with new market insights each month."
+   },
+   {
+    "q": "Can I write for T57?",
+    "a": "Partners and experts can contact our team with a proposal."
+   }
+  ],
+  "title": "Blog & Insights | Food Trade, Markets and AI | T57",
+  "description": "Practical articles on food trade markets, corridors, trade finance, compliance, AI and food security.",
+  "parent": "resources"
+ },
+ "res-reports": {
+  "route": "/resources/reports",
+  "section": "resources",
+  "name": "Reports & Whitepapers",
+  "h1": "Research you can cite, built from verified sources.",
+  "answer": "In-depth research on food trade, finance and food security.",
+  "faqs": [
+   {
+    "q": "Are reports free?",
+    "a": "Yes. Some may ask for your email."
+   },
+   {
+    "q": "Can institutions commission research?",
+    "a": "Yes, contact our team."
+   }
+  ],
+  "title": "Reports & Whitepapers | Food Trade Research | T57",
+  "description": "In-depth research on food trade corridors, SME trade finance, responsible AI and food security.",
+  "parent": "resources"
+ },
+ "res-newsroom": {
+  "route": "/resources/newsroom",
+  "section": "resources",
+  "name": "Newsroom",
+  "h1": "News from T57, on the record.",
+  "answer": "News, announcements and media resources from T57.",
+  "faqs": [],
+  "title": "Newsroom | T57 News and Media Resources",
+  "description": "T57 announcements, partnerships, events and media resources for journalists.",
+  "parent": "resources"
+ },
+ "res-videos": {
+  "route": "/resources/videos",
+  "section": "resources",
+  "name": "Explainer Videos",
+  "h1": "See how T57 works, in a few minutes.",
+  "answer": "See how T57 works, in a few minutes.",
+  "faqs": [],
+  "title": "Explainer Videos | How T57 Works",
+  "description": "Short videos on T57 and digital food trade: verification, the trade record, escrow, letters of credit and responsible AI.",
+  "parent": "resources"
+ },
+ "res-events": {
+  "route": "/resources/events",
+  "section": "resources",
+  "name": "Webinars & Events",
+  "h1": "Meet T57, online and in person.",
+  "answer": "Meet T57 online and in person.",
+  "faqs": [
+   {
+    "q": "Are webinars recorded?",
+    "a": "Yes, recordings are posted here."
+   },
+   {
+    "q": "Can I book a meeting at an event?",
+    "a": "Yes, through the event page."
+   }
+  ],
+  "title": "Webinars & Events | T57",
+  "description": "Live webinars, market briefings and trade events where you can meet T57's teams.",
+  "parent": "resources"
+ },
+ "res-glossary": {
+  "route": "/resources/faq-glossary",
+  "section": "resources",
+  "name": "FAQ & Glossary",
+  "h1": "Food trade terms, explained in plain language.",
+  "answer": "Food trade terms, explained in plain language.",
+  "faqs": [
+   {
+    "q": "What is T57?",
+    "a": "T57 is AI-native digital trade infrastructure for the entire food ecosystem. It is a members-only trade club where verified producers, processors, traders and buyers trade on one shared record, with finance, insurance, logistics and inspection from licensed partners."
+   },
+   {
+    "q": "Is T57 a marketplace?",
+    "a": "No. On an open marketplace, anyone can list. On T57, every member is verified before they trade, and their role is checked and shown."
+   },
+   {
+    "q": "Does T57 buy or sell food?",
+    "a": "No. T57 does not own goods, lend money, hold client funds or provide transport. Members trade with each other, and licensed partners provide regulated services."
+   },
+   {
+    "q": "Which countries does T57 operate in?",
+    "a": "Saudi Arabia, the UAE, India, Malaysia and Türkiye, with more markets to follow."
+   }
+  ],
+  "title": "FAQ & Glossary | Food Trade Terms Explained | T57",
+  "description": "Plain-language answers about T57, and definitions of food trade, trade finance and technology terms, from escrow and letters of credit to KYB and HS codes.",
+  "parent": "resources"
+ },
+ "help": {
+  "route": "/help",
+  "section": "help",
+  "name": "Help Center",
+  "h1": "Help when you need it, and a person when it matters.",
+  "answer": "Get help with T57, whenever you need it.",
+  "faqs": [
+   {
+    "q": "Is support included in my plan?",
+    "a": "Yes. Every plan includes the help center and email support, and higher plans add live chat, priority support and a dedicated account manager."
+   },
+   {
+    "q": "What languages is support available in?",
+    "a": "English, Arabic and the main languages of our founding markets."
+   }
+  ],
+  "title": "Help Center | T57 Support, Guides and FAQs",
+  "description": "Guides, how-tos, FAQs and support for trading on T57, from sign-up and verification to payments and shipments."
+ },
+ "help-start": {
+  "route": "/help/getting-started",
+  "section": "help",
+  "name": "Getting Started Guides",
+  "h1": "From sign-up to your first trade.",
+  "answer": "From sign-up to your first trade, step by step.",
+  "faqs": [],
+  "title": "Getting Started with T57 | Step-by-Step Guides",
+  "description": "Step-by-step guides for new T57 members: account, plan, verification, Passport, team, listings and your first request for quote.",
+  "parent": "help"
+ },
+ "help-howto": {
+  "route": "/help/how-to",
+  "section": "help",
+  "name": "Platform How-Tos",
+  "h1": "How to do everything on T57.",
+  "answer": "How to do everything on T57.",
+  "faqs": [],
+  "title": "Platform How-Tos | T57 Help Center",
+  "description": "How to trade on T57: quotes, contracts, documents, escrow, letters of credit, finance, logistics, team settings and market intelligence.",
+  "parent": "help"
+ },
+ "help-faq": {
+  "route": "/help/faq",
+  "section": "help",
+  "name": "FAQs",
+  "h1": "Quick answers to common questions.",
+  "answer": "Answers to common questions.",
+  "faqs": [
+   {
+    "q": "How long does the free trial last?",
+    "a": "Founding members get 90 days free at launch. After the launch period, the trial is 14 days."
+   },
+   {
+    "q": "Can I trade during the free trial?",
+    "a": "You can explore members, intelligence and AI tools, and send requests for quote. Contracts, escrow and finance start once you subscribe and are verified."
+   },
+   {
+    "q": "How do I cancel or change my plan?",
+    "a": "From your account settings. Upgrades apply at once, and downgrades apply at renewal."
+   },
+   {
+    "q": "Does T57 hold my money?",
+    "a": "No. Payments, escrow and letters of credit are handled by licensed partners."
+   },
+   {
+    "q": "Can other members see my prices?",
+    "a": "No. Only the parties you quote can see your prices."
+   }
+  ],
+  "title": "FAQs | T57 Help Center",
+  "description": "Answers about T57 accounts, free trial, plans and billing, verification, trading, payments, documents and security.",
+  "parent": "help"
+ },
+ "help-contact": {
+  "route": "/help/contact",
+  "section": "help",
+  "name": "Contact Support",
+  "h1": "Talk to a person when you need one.",
+  "answer": "Talk to a person when you need one.",
+  "faqs": [],
+  "title": "Contact Support | T57 Help Center",
+  "description": "Reach T57 support by chat, email or your local country team in Saudi Arabia, the UAE, India, Malaysia or Türkiye.",
+  "parent": "help"
+ },
  "governments": {
   "route": "/who-we-serve/governments",
   "section": "who-we-serve",

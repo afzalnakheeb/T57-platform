@@ -138,6 +138,24 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Government & Institutional Pricing](https://t57.ai/pricing/government): Programs that strengthen your country's food security, designed with you.
 - [ROI Calculator](https://t57.ai/pricing/roi-calculator): See what T57 could be worth to your business, and which plan pays off.
 
+## Resources
+
+- [Resources Overview](https://t57.ai/resources): Learn how food trade is changing, and how to trade better.
+- [Blog & Insights](https://t57.ai/resources/blog): Practical insight on food trade, markets and technology.
+- [Reports & Whitepapers](https://t57.ai/resources/reports): In-depth research on food trade, finance and food security.
+- [Newsroom](https://t57.ai/resources/newsroom): News, announcements and media resources from T57.
+- [Explainer Videos](https://t57.ai/resources/videos): See how T57 works, in a few minutes.
+- [Webinars & Events](https://t57.ai/resources/events): Meet T57 online and in person.
+- [FAQ & Glossary](https://t57.ai/resources/faq-glossary): Food trade terms, explained in plain language.
+
+## Help Center
+
+- [Help Center](https://t57.ai/help): Get help with T57, whenever you need it.
+- [Getting Started Guides](https://t57.ai/help/getting-started): From sign-up to your first trade, step by step.
+- [Platform How-Tos](https://t57.ai/help/how-to): How to do everything on T57.
+- [FAQs](https://t57.ai/help/faq): Answers to common questions.
+- [Contact Support](https://t57.ai/help/contact): Talk to a person when you need one.
+
 ## Common questions
 
 - [What is T57?](https://t57.ai/): T57 is AI-native digital trade infrastructure for the food industry. It brings verification, quotes, contracts, finance access, insurance, inspection and logistics onto one trade record for verified members.
@@ -340,6 +358,20 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Can a ministry pay for its farmers' memberships?](https://t57.ai/pricing/government): Yes. Governments and development partners can fund memberships and onboarding for farmers, cooperatives and SMEs.
 - [Is the result a quote?](https://t57.ai/pricing/roi-calculator): No. It is an estimate based on your inputs and standard prices. Local prices may be lower in your market.
 - [Do you keep my data?](https://t57.ai/pricing/roi-calculator): Only if you choose to save or share your result.
+- [Are T57 resources free?](https://t57.ai/resources): Most are free. Some in-depth reports may ask for your email.
+- [Can I suggest a topic?](https://t57.ai/resources): Yes. Contact our team with the topic you would like us to cover.
+- [How often do you publish?](https://t57.ai/resources/blog): Regularly, with new market insights each month.
+- [Can I write for T57?](https://t57.ai/resources/blog): Partners and experts can contact our team with a proposal.
+- [Are reports free?](https://t57.ai/resources/reports): Yes. Some may ask for your email.
+- [Can institutions commission research?](https://t57.ai/resources/reports): Yes, contact our team.
+- [Are webinars recorded?](https://t57.ai/resources/events): Yes, recordings are posted here.
+- [Can I book a meeting at an event?](https://t57.ai/resources/events): Yes, through the event page.
+- [What is T57?](https://t57.ai/resources/faq-glossary): T57 is AI-native digital trade infrastructure for the entire food ecosystem. It is a members-only trade club where verified producers, processors, traders and buyers trade on one shared record, with finance, insurance, logistics and inspection from licensed partners.
+- [Is T57 a marketplace?](https://t57.ai/resources/faq-glossary): No. On an open marketplace, anyone can list. On T57, every member is verified before they trade, and their role is checked and shown.
+- [Is support included in my plan?](https://t57.ai/help): Yes. Every plan includes the help center and email support, and higher plans add live chat, priority support and a dedicated account manager.
+- [What languages is support available in?](https://t57.ai/help): English, Arabic and the main languages of our founding markets.
+- [How long does the free trial last?](https://t57.ai/help/faq): Founding members get 90 days free at launch. After the launch period, the trial is 14 days.
+- [Can I trade during the free trial?](https://t57.ai/help/faq): You can explore members, intelligence and AI tools, and send requests for quote. Contracts, escrow and finance start once you subscribe and are verified.
 - [How does T57 support national and regional food-security strategies in practice?](https://t57.ai/who-we-serve/governments): Many countries are now expanding strategic reserves and silo capacity to hold months’ worth of essential commodities. T57 complements such physical infrastructure by tracking self-sufficiency, stock levels, and import exposure in real time. This combination of physical reserves and digital intelligence helps governments move from reactive to anticipatory food-security management.
 - [Why is it important to channel private and impact capital into agriculture and food systems, beyond public budgets?](https://t57.ai/who-we-serve/governments): Despite agriculture’s historical role in employment and food security, global investors are only now seeking credible, measurable pathways to support food systems as part of their climate and SDG commitments. T57 helps governments present investable, data-backed opportunities, from model support centers to special agri zones and CSR programs, with transparent performance and impact tracking that meets both regulatory and investor expectations.
 - [How does T57 handle disputes and reduce risks for financiers and investors?](https://t57.ai/who-we-serve/financiers): T57 reduces risk through its curated club membership model, which ensures vetted, credible counterparties in a high-trust environment. Its virtual trade desk supports execution, manages disputes, oversees documentation, and ensures consistent transaction follow-through for greater investor confidence.

@@ -572,6 +572,31 @@
     f.querySelector('[data-roi-print]').addEventListener('click', () => print());
   });
 
+  // Glossary: filter as you type
+  document.querySelectorAll('[data-gl-filter]').forEach(inp => {
+    const wrap = inp.closest('.wrap'), items = [...wrap.querySelectorAll('[data-gl-term]')], none = wrap.querySelector('[data-gl-none]');
+    inp.addEventListener('input', () => {
+      const q = inp.value.trim().toLowerCase(); let n = 0;
+      items.forEach(el => { const hit = !q || el.dataset.glTerm.includes(q); el.hidden = !hit; n += hit; });
+      none.hidden = n > 0;
+    });
+  });
+
+  // Help Center: search guides, how-tos, FAQs and glossary terms
+  document.querySelectorAll('[data-hs]').forEach(inp => {
+    const idx = JSON.parse(inp.dataset.hsIndex || '[]'), res = inp.closest('form').querySelector('[data-hs-res]');
+    const where = { 'help-start': 'Getting started', 'help-howto': 'How-to', 'help-faq': 'FAQ', 'res-glossary': 'Glossary' };
+    const esc = t => t.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+    inp.addEventListener('input', () => {
+      const words = inp.value.trim().toLowerCase().split(/\s+/).filter(w => w.length > 1);
+      if (!words.length) { res.hidden = true; return; }
+      const hits = idx.filter(([t]) => words.every(w => t.toLowerCase().includes(w))).slice(0, 8);
+      res.innerHTML = hits.length ? hits.map(([t, g]) => `<li><a href="#${g}" data-go="${g}"><b>${esc(t)}</b><span>${where[g] || ''}</span></a></li>`).join('')
+        : '<li class="hs-none">No match yet. Try fewer words, or contact support.</li>';
+      res.hidden = false;
+    });
+  });
+
   document.querySelectorAll('[data-explainer]').forEach(fx => {
     const btn = fx.querySelector('.fx-pause');
     if (reduce) return;

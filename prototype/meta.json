@@ -442,5 +442,53 @@
  "pricing-roi": {
   "title": "ROI Calculator | Savings and Best Plan for Your Volume | T57",
   "description": "Estimate the time and money T57 could save your food business, net of fees, and find the plan with the lowest total cost for your trade volume."
+ },
+ "resources": {
+  "title": "Resources | Food Trade Insights, Reports and Guides | T57",
+  "description": "Insight, research, news, videos, events and plain-language guides on digital food trade, food security, trade finance and AI."
+ },
+ "res-blog": {
+  "title": "Blog & Insights | Food Trade, Markets and AI | T57",
+  "description": "Practical articles on food trade markets, corridors, trade finance, compliance, AI and food security."
+ },
+ "res-reports": {
+  "title": "Reports & Whitepapers | Food Trade Research | T57",
+  "description": "In-depth research on food trade corridors, SME trade finance, responsible AI and food security."
+ },
+ "res-newsroom": {
+  "title": "Newsroom | T57 News and Media Resources",
+  "description": "T57 announcements, partnerships, events and media resources for journalists."
+ },
+ "res-videos": {
+  "title": "Explainer Videos | How T57 Works",
+  "description": "Short videos on T57 and digital food trade: verification, the trade record, escrow, letters of credit and responsible AI."
+ },
+ "res-events": {
+  "title": "Webinars & Events | T57",
+  "description": "Live webinars, market briefings and trade events where you can meet T57's teams."
+ },
+ "res-glossary": {
+  "title": "FAQ & Glossary | Food Trade Terms Explained | T57",
+  "description": "Plain-language answers about T57, and definitions of food trade, trade finance and technology terms, from escrow and letters of credit to KYB and HS codes."
+ },
+ "help-start": {
+  "title": "Getting Started with T57 | Step-by-Step Guides",
+  "description": "Step-by-step guides for new T57 members: account, plan, verification, Passport, team, listings and your first request for quote."
+ },
+ "help-howto": {
+  "title": "Platform How-Tos | T57 Help Center",
+  "description": "How to trade on T57: quotes, contracts, documents, escrow, letters of credit, finance, logistics, team settings and market intelligence."
+ },
+ "help-faq": {
+  "title": "FAQs | T57 Help Center",
+  "description": "Answers about T57 accounts, free trial, plans and billing, verification, trading, payments, documents and security."
+ },
+ "help-contact": {
+  "title": "Contact Support | T57 Help Center",
+  "description": "Reach T57 support by chat, email or your local country team in Saudi Arabia, the UAE, India, Malaysia or Türkiye."
+ },
+ "help": {
+  "title": "Help Center | T57 Support, Guides and FAQs",
+  "description": "Guides, how-tos, FAQs and support for trading on T57, from sign-up and verification to payments and shipments."
  }
 }
