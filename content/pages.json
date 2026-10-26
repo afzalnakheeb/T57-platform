@@ -917,25 +917,56 @@
  "cap-equipment-rental": {
   "route": "/capabilities/agritech/equipment-rental",
   "section": "capabilities",
-  "name": "Equipment Rental Marketplace",
-  "h1": "Rent the equipment you cannot afford to own.",
-  "answer": "Rent tractors, harvesters, cold storage and processing equipment when you need it.",
+  "name": "Equipment &amp; Technology Rental",
+  "h1": "Rent the technology you cannot afford to own.",
+  "answer": "Tractors, drones, sensors, cold rooms and testing, booked by the day, the hectare or the job.",
   "faqs": [
    {
-    "q": "Can I list my equipment for rent?",
-    "a": "Yes. Verified members can list equipment, set prices and availability, and choose who can rent it."
+    "q": "Can I list my equipment or drone for rent?",
+    "a": "Yes. Verified members list equipment and services with prices, areas served and availability."
    },
    {
-    "q": "Who is responsible if equipment is damaged?",
+    "q": "Do I need to know how to operate it?",
+    "a": "No. Book it with a trained operator, or book the job alone, such as spraying 10 hectares."
+   },
+   {
+    "q": "Who is responsible if something breaks?",
     "a": "The rental terms, condition records and any insurance set out responsibility. Disputes are handled under those terms and the payment partner's rules."
    },
    {
-    "q": "Is equipment rental available everywhere?",
-    "a": "It starts in T57's founding markets and grows as owners join in each region."
+    "q": "What happens to owners with poor ratings?",
+    "a": "Ratings come only from recorded jobs. Repeated upheld complaints lead to suspension and then removal from T57."
    }
   ],
-  "title": "Farm & Food Equipment Rental Marketplace | T57",
-  "description": "Rent tractors, harvesters, cold storage and processing equipment from verified owners, with escrow payments and insurance, on T57."
+  "title": "Rent Farm Equipment, Drones & Agritech | T57",
+  "description": "Rent tractors, drones, sensors, cold rooms and testing from verified owners, by the day, the hectare or the job, with escrow payments on T57."
+ },
+ "cap-hire-expert": {
+  "route": "/capabilities/hire-an-expert",
+  "section": "capabilities",
+  "name": "Hire an Expert",
+  "h1": "The right expert, for the price of a meal.",
+  "answer": "Agronomists, inspectors, food scientists and packaging specialists across the food ecosystem, booked by the job and rated by members.",
+  "faqs": [
+   {
+    "q": "How are experts checked?",
+    "a": "Identity, qualifications and references are verified before an expert can take jobs."
+   },
+   {
+    "q": "What if the advice is wrong or the job is not done?",
+    "a": "You can raise a dispute before payment is released. Upheld complaints count against the expert, and repeated ones lead to removal."
+   },
+   {
+    "q": "Do experts recommend chemicals?",
+    "a": "Experts recommend only products approved in the client's country and record the dose they advise."
+   },
+   {
+    "q": "Can my company offer services?",
+    "a": "Yes. Firms join as service providers; individuals join as experts."
+   }
+  ],
+  "title": "Hire a Food & Agriculture Expert | T57",
+  "description": "Hire verified agronomists, inspectors, food scientists and packaging experts by the job, with prices agreed up front, escrow payment and ratings, on T57."
  },
  "ai-native": {
   "route": "/ai-native",

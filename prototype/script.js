@@ -400,8 +400,6 @@
 
   /* ---------- World switching with the petal transition ---------- */
   const veil = document.getElementById('veil'), vbg = veil.querySelector('.bg'), mark = document.getElementById('veil-mark'), dest = document.getElementById('veil-dest');
-  const arcBold = veil.querySelector('path.bold'), arcSweep = veil.querySelector('path.sweep');
-  [arcBold, arcSweep].forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; p.dataset.len = L; });
   let current = null, busy = false;
 
   function show(name) {
@@ -414,57 +412,80 @@
   }
   const anim = (el, kf, o) => el.animate(kf, Object.assign({ fill: 'forwards', easing: 'cubic-bezier(.65,0,.35,1)' }, o)).finished;
 
-  // Leaving: the veil closes over this page with the destination's petal, then the browser loads the real page.
+  // Two kinds of move. Between microsites, the logo covers the page, the next world's petal lights up,
+  // and the new page opens out of the logo's petal shell. Inside a microsite, the header stays put,
+  // its petal for the next page pulses and only the content lifts out and back in.
+  const SITE = TP.site || {};
+  const sameSite = name => current && SITE[name] && SITE[name] === SITE[current];
+  const veilPetals = [...mark.querySelectorAll('.petal')];
+  const clearAll = els => els.forEach(el => el.getAnimations().forEach(a => a.cancel()));
+  // While content lifts, the page behind it takes the colour of the top of the page, so light and dark pages never flash white.
+  const groundTo = () => { const m = document.getElementById('main'); let el = m && m.querySelector('.world'); for (let i = 0; el && i < 4; i++, el = el.firstElementChild) { const c = getComputedStyle(el).backgroundColor; if (c && c !== 'transparent' && !c.endsWith(', 0)')) { document.body.style.backgroundColor = c; return; } } };
+
   async function go(name, href) {
     if (busy) return;
     if (name === current) { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); return; }
     if (reduce) { location.href = href; return; }
     busy = true;
+    const main = document.getElementById('main');
+    if (sameSite(name)) {
+      try { sessionStorage.setItem('t57-go', 'lift:' + name); } catch (e) {}
+      const hp = logo.querySelector('.p-' + (WORLD_PETAL[name] || 'all')) || logo;
+      groundTo();
+      hp.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.2)' }, { transform: 'scale(1)' }], { duration: 420, easing: 'ease-in-out' });
+      await anim(main, [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(-10px)' }], { duration: 200, easing: 'ease-in' });
+      location.href = href;
+      addEventListener('pageshow', e => { if (e.persisted) { clearAll([main]); busy = false; } }, { once: true });
+      return;
+    }
     try { sessionStorage.setItem('t57-go', name); } catch (e) {}
     const petal = WORLD_PETAL[name];
-    dest.textContent = WORLD_NAME[name];
-    const petals = [...mark.querySelectorAll('.petal')];
     const target = petal === 'all' ? mark : mark.querySelector('.p-' + petal);
-    petals.forEach(p => p.getAnimations().forEach(a => a.cancel()));
+    dest.textContent = WORLD_NAME[name];
+    clearAll(veilPetals);
     veil.classList.add('go');
-    const out = document.getElementById(current);
-    if (out) anim(out, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.4, transform: 'scale(0.985)' }], { duration: 400 });
-    anim(vbg, [{ opacity: 0 }, { opacity: 1 }], { duration: 450, delay: 150 });
-    anim(arcBold, [{ strokeDashoffset: arcBold.dataset.len }, { strokeDashoffset: 0 }], { duration: 700, delay: 100 });
-    anim(arcSweep, [{ strokeDashoffset: arcSweep.dataset.len }, { strokeDashoffset: 0 }], { duration: 700, delay: 250 });
-    anim(mark, [{ opacity: 0, transform: 'scale(.7)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 600, delay: 350, easing: 'cubic-bezier(.2,.8,.2,1)' });
-    petals.forEach(p => { if (petal !== 'all' && p !== target) anim(p, [{ opacity: 1 }, { opacity: p.classList.contains('p-ring') ? 0.35 : 0.12 }], { duration: 400, delay: 800 }); });
-    anim(dest, [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 400, delay: 850 });
-    const glowCol = petal === 'all' ? 'rgba(143,147,255,.9)' : 'rgba(57,196,196,.9)';
-    await anim(target, [{ filter: 'none' }, { filter: `drop-shadow(0 0 6px ${glowCol})` }], { duration: 500, delay: 800 });
+    anim(main, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.5, transform: 'scale(0.985)' }], { duration: 380 });
+    anim(vbg, [{ opacity: 0 }, { opacity: 1 }], { duration: 340 });
+    await anim(mark, [{ opacity: 0, transform: 'scale(.82)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 400, delay: 80, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    if (target !== mark) anim(target, [{ transform: 'scale(1)' }, { transform: 'scale(1.12)' }], { duration: 300, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    anim(dest, [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 280 });
+    await anim(target, [{ filter: 'none' }, { filter: 'drop-shadow(0 0 8px rgba(57,196,196,.9))' }], { duration: 320 });
     location.href = href;
-    addEventListener('pageshow', e => { if (e.persisted) { veil.classList.remove('go'); [vbg, mark, dest, arcBold, arcSweep, ...petals].forEach(el => el.getAnimations().forEach(a => a.cancel())); if (out) out.getAnimations().forEach(a => a.cancel()); busy = false; } }, { once: true });
+    addEventListener('pageshow', e => { if (e.persisted) { veil.classList.remove('go'); clearAll([vbg, mark, dest, main, ...veilPetals]); busy = false; } }, { once: true });
   }
 
-  // Arriving: the new page starts under the veil (set before first paint) and the petal opens onto it.
+  // Arriving from another microsite: the page waits under the logo, then the logo opens and the page shows
+  // through a hole shaped like its petal shell, growing from the logo's size until it clears the screen.
+  // The hole is sized frame by frame so it runs the same in every browser.
   async function arrive(name) {
     busy = true;
-    const petal = WORLD_PETAL[name] || 'all';
-    const petals = [...mark.querySelectorAll('.petal')];
-    const target = petal === 'all' ? mark : mark.querySelector('.p-' + petal);
     dest.textContent = WORLD_NAME[name] || '';
     veil.classList.add('go');
     document.documentElement.classList.remove('arriving');
     const hold = (el, k) => el.animate([k, k], { duration: 10, fill: 'forwards' });
     hold(vbg, { opacity: 1 }); hold(mark, { opacity: 1, transform: 'scale(1)' }); hold(dest, { opacity: 1 });
-    [arcBold, arcSweep].forEach(p => hold(p, { strokeDashoffset: 0 }));
-    petals.forEach(p => { if (petal !== 'all' && p !== target) hold(p, { opacity: p.classList.contains('p-ring') ? 0.35 : 0.12 }); });
     await new Promise(r => setTimeout(r, 120));
+    const start = mark.getBoundingClientRect().width * 0.9, end = Math.hypot(innerWidth, innerHeight) * 2.4, dur = 900;
+    const setSize = w => { const v = w.toFixed(1) + 'px auto, 100% 100%'; vbg.style.webkitMaskSize = v; vbg.style.maskSize = v; };
+    setSize(start); veil.classList.add('reveal');
     const lines = [...document.querySelectorAll('#' + name + ' .hero h1 .ln, #' + name + ' .hero .std, #' + name + ' .hero .actions')];
-    lines.forEach((l, i) => l.animate([{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }], { duration: 600, delay: 250 + i * 90, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
-    anim(mark, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0, transform: 'scale(2.6)' }], { duration: 650, easing: 'cubic-bezier(.65,0,.35,1)' });
-    anim(dest, [{ opacity: 1 }, { opacity: 0 }], { duration: 250 });
-    anim(arcBold, [{ opacity: 1 }, { opacity: 0 }], { duration: 400 });
-    anim(arcSweep, [{ opacity: 1 }, { opacity: 0 }], { duration: 400 });
-    await anim(vbg, [{ opacity: 1 }, { opacity: 0 }], { duration: 600, delay: 150 });
-    [vbg, mark, dest, arcBold, arcSweep, ...petals].forEach(el => el.getAnimations().forEach(a => a.cancel()));
-    veil.classList.remove('go');
+    lines.forEach((l, i) => l.animate([{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }], { duration: 600, delay: 380 + i * 90, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
+    anim(dest, [{ opacity: 1 }, { opacity: 0 }], { duration: 200 });
+    // the logo grows with the hole for the first part, then fades, so it seems to open into the page
+    anim(mark, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.9, transform: 'scale(1.5)', offset: 0.35 }, { opacity: 0, transform: 'scale(3)' }], { duration: 520, easing: 'cubic-bezier(.4,0,.6,1)' });
+    const ease = t => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    await new Promise(res => { const t0 = performance.now(); const step = now => { const t = Math.min(1, (now - t0) / dur); setSize(start + (end - start) * ease(t)); t < 1 ? requestAnimationFrame(step) : res(); }; requestAnimationFrame(step); });
+    clearAll([vbg, mark, dest, ...veilPetals]);
+    veil.classList.remove('go', 'reveal'); vbg.style.webkitMaskSize = vbg.style.maskSize = '';
     busy = false;
+  }
+
+  // Arriving from a page in the same microsite: the content rises into place under the header.
+  function liftIn() {
+    const main = document.getElementById('main');
+    groundTo();
+    document.documentElement.classList.remove('lifting');
+    main.animate([{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'none' }], { duration: 360, easing: 'cubic-bezier(.2,.8,.2,1)' }).finished.then(() => { document.body.style.backgroundColor = ''; });
   }
 
   /* ---------- Logo intro: the five petals assemble into the mark ---------- */
@@ -676,8 +697,25 @@
   document.querySelectorAll('[data-explainer]').forEach(fx => {
     const btn = fx.querySelector('.fx-pause');
     if (reduce) return;
-    new IntersectionObserver(([en]) => { if (en.isIntersecting) fx.classList.add('play'); fx.classList.toggle('paused', !en.isIntersecting || btn.getAttribute('aria-pressed') === 'true'); }, { threshold: 0.3 }).observe(fx);
-    btn.addEventListener('click', () => { const p = btn.getAttribute('aria-pressed') !== 'true'; btn.setAttribute('aria-pressed', p); btn.textContent = p ? 'Play' : 'Pause'; fx.classList.toggle('paused', p); });
+    // Plays once when it scrolls into view, holds the result, then offers Replay
+    let timer, left = 6240, t0 = 0;
+    const done = () => { fx.classList.add('done'); btn.setAttribute('aria-pressed', 'false'); btn.textContent = 'Replay'; };
+    const run = () => { clearTimeout(timer); t0 = performance.now(); timer = setTimeout(done, left); };
+    const stop = () => { if (t0) left -= performance.now() - t0; clearTimeout(timer); t0 = 0; };
+    new IntersectionObserver(([en]) => {
+      if (fx.classList.contains('done')) return;
+      if (!fx.classList.contains('play')) { if (en.isIntersecting) { fx.classList.add('play'); run(); } return; }
+      const hold = !en.isIntersecting || btn.getAttribute('aria-pressed') === 'true';
+      if (hold !== fx.classList.contains('paused')) { fx.classList.toggle('paused', hold); hold ? stop() : run(); }
+    }, { threshold: 0.3 }).observe(fx);
+    btn.addEventListener('click', () => {
+      if (fx.classList.contains('done')) {
+        fx.classList.remove('done', 'play', 'paused'); void fx.offsetWidth; fx.classList.add('play');
+        btn.textContent = 'Pause'; left = 6240; run(); return;
+      }
+      const p = btn.getAttribute('aria-pressed') !== 'true'; btn.setAttribute('aria-pressed', p); btn.textContent = p ? 'Play' : 'Pause';
+      fx.classList.toggle('paused', p); p ? stop() : run();
+    });
   });
 
   const menu = document.getElementById('menu'), menuBtn = document.getElementById('menu-btn');
@@ -696,6 +734,7 @@
   show(here);
   let arriving = null, seen = false;
   try { arriving = sessionStorage.getItem('t57-go'); sessionStorage.removeItem('t57-go'); seen = !!sessionStorage.getItem('t57-seen'); sessionStorage.setItem('t57-seen', '1'); } catch (e) {}
-  if (arriving && !reduce) arrive(here);
-  else { document.documentElement.classList.remove('arriving'); if (!seen) setTimeout(intro, 150); }
+  if (arriving && arriving.startsWith('lift:')) liftIn();
+  else if (arriving && !reduce) arrive(here);
+  else { document.documentElement.classList.remove('arriving', 'lifting'); if (!seen) setTimeout(intro, 150); }
 })();

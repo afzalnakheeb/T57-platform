@@ -63,7 +63,8 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Intelligence & Data](https://www.t57.ai/capabilities/intelligence): Trade with the full picture: prices, supply, counterparties and markets, inside every deal.
 - [Live Food Price Index](https://www.t57.ai/capabilities/intelligence/price-index): Current food prices by product, grade and origin, built from real trades.
 - [AI Negotiations Engine](https://www.t57.ai/capabilities/intelligence/ai-negotiations): Negotiate every food deal with market data and AI preparation behind you.
-- [Equipment Rental Marketplace](https://www.t57.ai/capabilities/agritech/equipment-rental): Rent tractors, harvesters, cold storage and processing equipment when you need it.
+- [Equipment &amp; Technology Rental](https://www.t57.ai/capabilities/agritech/equipment-rental): Tractors, drones, sensors, cold rooms and testing, booked by the day, the hectare or the job.
+- [Hire an Expert](https://www.t57.ai/capabilities/hire-an-expert): Agronomists, inspectors, food scientists and packaging specialists across the food ecosystem, booked by the job and rated by members.
 
 ## AI Native
 
@@ -267,8 +268,10 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [How often is it updated?](https://www.t57.ai/capabilities/intelligence/price-index): It updates as new market data arrives and as verified trades close on T57. Some lines update daily, others weekly, depending on trade volume.
 - [Does the AI negotiate on my behalf?](https://www.t57.ai/capabilities/intelligence/ai-negotiations): No. It prepares and suggests. You decide what to offer, counter or accept, and nothing is sent without your confirmation.
 - [Can the other side see the engine's suggestions to me?](https://www.t57.ai/capabilities/intelligence/ai-negotiations): No. Your briefs and suggestions are private to you.
-- [Can I list my equipment for rent?](https://www.t57.ai/capabilities/agritech/equipment-rental): Yes. Verified members can list equipment, set prices and availability, and choose who can rent it.
-- [Who is responsible if equipment is damaged?](https://www.t57.ai/capabilities/agritech/equipment-rental): The rental terms, condition records and any insurance set out responsibility. Disputes are handled under those terms and the payment partner's rules.
+- [Can I list my equipment or drone for rent?](https://www.t57.ai/capabilities/agritech/equipment-rental): Yes. Verified members list equipment and services with prices, areas served and availability.
+- [Do I need to know how to operate it?](https://www.t57.ai/capabilities/agritech/equipment-rental): No. Book it with a trained operator, or book the job alone, such as spraying 10 hectares.
+- [How are experts checked?](https://www.t57.ai/capabilities/hire-an-expert): Identity, qualifications and references are verified before an expert can take jobs.
+- [What if the advice is wrong or the job is not done?](https://www.t57.ai/capabilities/hire-an-expert): You can raise a dispute before payment is released. Upheld complaints count against the expert, and repeated ones lead to removal.
 - [What does "AI-native" mean at T57?](https://www.t57.ai/ai-native): AI is built into every step of the trade, from matching and pricing to compliance and documents, rather than added as a separate tool.
 - [Does AI make decisions about my business?](https://www.t57.ai/ai-native): AI makes suggestions and flags issues. People make decisions, and every adverse decision is reviewed by a person.
 - [Can suppliers pay to rank higher?](https://www.t57.ai/ai-native/trade-matchmaking): No. Ranking is based on fit, verification and track record, never on payment.
