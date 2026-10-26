@@ -1211,6 +1211,144 @@
   "title": "AI Trade Document Generation & Checks | T57 AI Native",
   "description": "Generate contracts, invoices and packing lists from the accepted quote, and catch LC and customs discrepancies with AI checks, on T57."
  },
+ "platform": {
+  "route": "/platform",
+  "section": "platform",
+  "name": "Platform",
+  "h1": "The food operating system. One platform, one record.",
+  "answer": "The food operating system: one platform that connects every party, service and record in food trade.",
+  "faqs": [
+   {
+    "q": "Is T57 a marketplace or a platform?",
+    "a": "T57 is a platform: a members-only verified trade club with the infrastructure to run trades end to end. Members trade directly with each other on it."
+   },
+   {
+    "q": "Can T57 connect to my existing systems?",
+    "a": "Yes. T57 offers APIs for ERP, accounting and procurement systems, and connects to partner banks, insurers and logistics providers."
+   },
+   {
+    "q": "Where is my data stored?",
+    "a": "On Microsoft Azure cloud infrastructure across regions, designed to meet each market's data-residency requirements."
+   }
+  ],
+  "title": "T57 Platform | The Food Operating System",
+  "description": "Verified identity, one trade record, connected finance and logistics partners, AI and blockchain on one secure platform built for food trade."
+ },
+ "platform-architecture": {
+  "route": "/platform/architecture",
+  "section": "platform",
+  "name": "System Architecture",
+  "h1": "Cloud-native. API-first. Built for regulated trade.",
+  "answer": "A cloud-native, API-first architecture built for verified, regulated, cross-border food trade.",
+  "faqs": [
+   {
+    "q": "Which cloud does T57 use?",
+    "a": "Microsoft Azure, across regions, designed to meet each market's data-residency requirements."
+   },
+   {
+    "q": "Does T57 offer APIs?",
+    "a": "Yes. Members and partners can integrate through REST APIs and webhooks. Documentation is available to approved members and partners."
+   },
+   {
+    "q": "Can partners keep their data in their own systems?",
+    "a": "Yes. Partners exchange only the data each trade needs, under agreement and with consent, and keep their own systems of record."
+   }
+  ],
+  "title": "T57 System Architecture | Cloud-Native, API-First Trade Platform",
+  "description": "Region-aware cloud on Microsoft Azure, modular services, partner connectors and member APIs, built for verified, regulated food trade across borders."
+ },
+ "platform-roadmap": {
+  "route": "/platform/roadmap",
+  "section": "platform",
+  "name": "Platform Roadmap",
+  "h1": "How the platform grows, one strong layer at a time.",
+  "answer": "How the T57 platform grows: from verified trade, to connected finance, to a food ecosystem.",
+  "faqs": [
+   {
+    "q": "Can I join T57 now?",
+    "a": "Yes. Membership applications are open, starting in the founding markets."
+   },
+   {
+    "q": "How do I find out when new capabilities reach my market?",
+    "a": "Members are notified in the platform, and partners receive integration updates directly."
+   },
+   {
+    "q": "Can my organization help shape the roadmap?",
+    "a": "Yes. Partners and institutional members can join pilot programs and advisory groups."
+   }
+  ],
+  "title": "T57 Platform Roadmap | Verified Trade, Connected Finance, Food Ecosystem",
+  "description": "How the T57 platform grows in stages, from verified food trade to connected finance and a full food ecosystem, across founding and expanding markets."
+ },
+ "platform-intelligence": {
+  "route": "/platform/intelligence-layer",
+  "section": "platform",
+  "name": "Intelligence Layer",
+  "h1": "Small, local AI, trained on verified trade.",
+  "answer": "The AI layer that learns from verified trade and supports every decision on T57.",
+  "faqs": [
+   {
+    "q": "Does T57 use my data to train AI?",
+    "a": "T57 uses verified trade data in anonymized, aggregated form to improve its models. Your individual data is never shown to other members, and farmer knowledge is used only with consent."
+   },
+   {
+    "q": "Why not just use a large general AI model?",
+    "a": "Large models are useful for language and documents, and T57 uses them where they fit. For crops, markets and local conditions, small models trained on local data are more accurate, cheaper to run and easier to test and explain."
+   },
+   {
+    "q": "Can I challenge an AI decision?",
+    "a": "Yes. Every adverse decision comes with a reason and a route to contest it, and a person reviews it."
+   }
+  ],
+  "title": "T57 Intelligence Layer | Small, Local AI for Food Trade",
+  "description": "Small, local AI models trained on verified trade data and consented farmer knowledge, governed so people review every adverse decision."
+ },
+ "platform-blockchain": {
+  "route": "/platform/blockchain",
+  "section": "platform",
+  "name": "Blockchain & Smart Contract Layer",
+  "h1": "Records no one can quietly change. Payments that follow proof.",
+  "answer": "Tamper-evident records, tokenized documents and milestone payments that every party can trust.",
+  "faqs": [
+   {
+    "q": "Is my trade data public on the blockchain?",
+    "a": "No. Only digital fingerprints of key records are anchored. Document contents stay in secure storage, visible only to authorized parties."
+   },
+   {
+    "q": "Do I need cryptocurrency to use the blockchain layer?",
+    "a": "No. The blockchain layer works in the background. Members pay and get paid in normal currencies through licensed partners, unless they choose alternative payments where lawful."
+   },
+   {
+    "q": "What happens if a milestone is disputed?",
+    "a": "The smart contract pauses release, and the dispute is handled under the contract and the partner's rules."
+   }
+  ],
+  "title": "Blockchain & Smart Contract Layer for Food Trade | T57 Platform",
+  "description": "Tamper-evident record anchoring, tokenized trade documents and smart-contract milestone payments, with privacy and licensed partners, on T57."
+ },
+ "platform-security": {
+  "route": "/platform/security",
+  "section": "platform",
+  "name": "Security Architecture",
+  "h1": "Security built in, not bolted on.",
+  "answer": "Protect every trade, document and member with security built into the platform.",
+  "faqs": [
+   {
+    "q": "Where is my data stored?",
+    "a": "T57 is hosted on Microsoft Azure in multiple regions. Where local rules require it, data is stored in-region."
+   },
+   {
+    "q": "Can other members see my prices or suppliers?",
+    "a": "No. Your commercial data is visible only to you and the parties in your trades, according to the permissions you set."
+   },
+   {
+    "q": "What happens if there is a security incident?",
+    "a": "T57 follows a defined incident response process, and affected members and authorities are notified as the law requires."
+   }
+  ],
+  "title": "Security Architecture | How T57 Protects Trade Data",
+  "description": "Verified identity, multi-factor sign-in, role-based access, encryption, regional data residency on Azure and a full audit trail on T57."
+ },
  "governments": {
   "route": "/who-we-serve/governments",
   "section": "who-we-serve",

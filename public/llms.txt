@@ -82,6 +82,15 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Predictive Trade Analytics Dashboard](https://t57.ai/ai-native/predictive-analytics): See where your trading business is heading, not just where it has been.
 - [AI Trade Document Generation](https://t57.ai/ai-native/ai-documentation): Generate contracts, invoices and trade documents from one accepted quote, checked by AI.
 
+## Platform
+
+- [Platform](https://t57.ai/platform): The food operating system: one platform that connects every party, service and record in food trade.
+- [System Architecture](https://t57.ai/platform/architecture): A cloud-native, API-first architecture built for verified, regulated, cross-border food trade.
+- [Platform Roadmap](https://t57.ai/platform/roadmap): How the T57 platform grows: from verified trade, to connected finance, to a food ecosystem.
+- [Intelligence Layer](https://t57.ai/platform/intelligence-layer): The AI layer that learns from verified trade and supports every decision on T57.
+- [Blockchain & Smart Contract Layer](https://t57.ai/platform/blockchain): Tamper-evident records, tokenized documents and milestone payments that every party can trust.
+- [Security Architecture](https://t57.ai/platform/security): Protect every trade, document and member with security built into the platform.
+
 ## Common questions
 
 - [What is T57?](https://t57.ai/): T57 is AI-native digital trade infrastructure for the food industry. It brings verification, quotes, contracts, finance access, insurance, inspection and logistics onto one trade record for verified members.
@@ -196,6 +205,18 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Can I share the dashboard with my lender?](https://t57.ai/ai-native/predictive-analytics): Yes. You can share selected views with lenders or investors, with your consent.
 - [Are AI-generated contracts legally binding?](https://t57.ai/ai-native/ai-documentation): Contracts become binding when the parties sign them. T57 uses standard trade terms, and members can have their own lawyers review any document.
 - [Which documents can be generated?](https://t57.ai/ai-native/ai-documentation): Contracts, pro forma and commercial invoices, packing lists, LC applications and supporting documents, and data for certificates and customs declarations.
+- [Is T57 a marketplace or a platform?](https://t57.ai/platform): T57 is a platform: a members-only verified trade club with the infrastructure to run trades end to end. Members trade directly with each other on it.
+- [Can T57 connect to my existing systems?](https://t57.ai/platform): Yes. T57 offers APIs for ERP, accounting and procurement systems, and connects to partner banks, insurers and logistics providers.
+- [Which cloud does T57 use?](https://t57.ai/platform/architecture): Microsoft Azure, across regions, designed to meet each market's data-residency requirements.
+- [Does T57 offer APIs?](https://t57.ai/platform/architecture): Yes. Members and partners can integrate through REST APIs and webhooks. Documentation is available to approved members and partners.
+- [Can I join T57 now?](https://t57.ai/platform/roadmap): Yes. Membership applications are open, starting in the founding markets.
+- [How do I find out when new capabilities reach my market?](https://t57.ai/platform/roadmap): Members are notified in the platform, and partners receive integration updates directly.
+- [Does T57 use my data to train AI?](https://t57.ai/platform/intelligence-layer): T57 uses verified trade data in anonymized, aggregated form to improve its models. Your individual data is never shown to other members, and farmer knowledge is used only with consent.
+- [Why not just use a large general AI model?](https://t57.ai/platform/intelligence-layer): Large models are useful for language and documents, and T57 uses them where they fit. For crops, markets and local conditions, small models trained on local data are more accurate, cheaper to run and easier to test and explain.
+- [Is my trade data public on the blockchain?](https://t57.ai/platform/blockchain): No. Only digital fingerprints of key records are anchored. Document contents stay in secure storage, visible only to authorized parties.
+- [Do I need cryptocurrency to use the blockchain layer?](https://t57.ai/platform/blockchain): No. The blockchain layer works in the background. Members pay and get paid in normal currencies through licensed partners, unless they choose alternative payments where lawful.
+- [Where is my data stored?](https://t57.ai/platform/security): T57 is hosted on Microsoft Azure in multiple regions. Where local rules require it, data is stored in-region.
+- [Can other members see my prices or suppliers?](https://t57.ai/platform/security): No. Your commercial data is visible only to you and the parties in your trades, according to the permissions you set.
 - [How does T57 support national and regional food-security strategies in practice?](https://t57.ai/who-we-serve/governments): Many countries are now expanding strategic reserves and silo capacity to hold months’ worth of essential commodities. T57 complements such physical infrastructure by tracking self-sufficiency, stock levels, and import exposure in real time. This combination of physical reserves and digital intelligence helps governments move from reactive to anticipatory food-security management.
 - [Why is it important to channel private and impact capital into agriculture and food systems, beyond public budgets?](https://t57.ai/who-we-serve/governments): Despite agriculture’s historical role in employment and food security, global investors are only now seeking credible, measurable pathways to support food systems as part of their climate and SDG commitments. T57 helps governments present investable, data-backed opportunities, from model support centers to special agri zones and CSR programs, with transparent performance and impact tracking that meets both regulatory and investor expectations.
 - [How does T57 handle disputes and reduce risks for financiers and investors?](https://t57.ai/who-we-serve/financiers): T57 reduces risk through its curated club membership model, which ensures vetted, credible counterparties in a high-trust environment. Its virtual trade desk supports execution, manages disputes, oversees documentation, and ensures consistent transaction follow-through for greater investor confidence.

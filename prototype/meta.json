@@ -266,5 +266,29 @@
  "ai-documents": {
   "title": "AI Trade Document Generation & Checks | T57 AI Native",
   "description": "Generate contracts, invoices and packing lists from the accepted quote, and catch LC and customs discrepancies with AI checks, on T57."
+ },
+ "platform": {
+  "title": "T57 Platform | The Food Operating System",
+  "description": "Verified identity, one trade record, connected finance and logistics partners, AI and blockchain on one secure platform built for food trade."
+ },
+ "platform-architecture": {
+  "title": "T57 System Architecture | Cloud-Native, API-First Trade Platform",
+  "description": "Region-aware cloud on Microsoft Azure, modular services, partner connectors and member APIs, built for verified, regulated food trade across borders."
+ },
+ "platform-roadmap": {
+  "title": "T57 Platform Roadmap | Verified Trade, Connected Finance, Food Ecosystem",
+  "description": "How the T57 platform grows in stages, from verified food trade to connected finance and a full food ecosystem, across founding and expanding markets."
+ },
+ "platform-intelligence": {
+  "title": "T57 Intelligence Layer | Small, Local AI for Food Trade",
+  "description": "Small, local AI models trained on verified trade data and consented farmer knowledge, governed so people review every adverse decision."
+ },
+ "platform-blockchain": {
+  "title": "Blockchain & Smart Contract Layer for Food Trade | T57 Platform",
+  "description": "Tamper-evident record anchoring, tokenized trade documents and smart-contract milestone payments, with privacy and licensed partners, on T57."
+ },
+ "platform-security": {
+  "title": "Security Architecture | How T57 Protects Trade Data",
+  "description": "Verified identity, multi-factor sign-in, role-based access, encryption, regional data residency on Azure and a full audit trail on T57."
  }
 }
