@@ -14,7 +14,7 @@
 [data-world="financiers"] { --world:var(--amber-flame); --world-text:var(--amber-flame); --world-ink:var(--persian-indigo); }
 [data-world="home"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
 [data-world="governments"] { --world:var(--electric-sapphire); --world-text:#8f93ff; --world-ink:#ffffff; }
-[data-world="sellers"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
+[data-world="sellers"], [data-world="buyers"], [data-world="enterprises"], [data-world="food-processors"], [data-world="cooperatives"], [data-world="collaborators"], [data-world="service-providers"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
 [data-world="traders"] { --world:var(--persian-blue); --world-text:var(--mint-cream); --world-ink:#ffffff; }
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--surface); color:var(--ink); font-family:var(--font-text); font-size:17px; line-height:28px; -webkit-font-smoothing:antialiased; }
@@ -522,6 +522,18 @@ a.aud:hover { transform:translateY(-3px); box-shadow:0 14px 30px -18px #02246c66
 .explainer.play .fx-cont { animation-name:fxCont; transform-box:view-box; } @keyframes fxCont { 0%, 36% { transform:none; } 42% { transform:translate(220px, -113px); } 48% { transform:translate(450px, -150px); } 54% { transform:translate(680px, -113px); } 60%, 100% { transform:translate(900px, 0); } }
 .explainer.play .fx-pay { animation-name:fxPay; } @keyframes fxPay { 0%, 68% { stroke-dashoffset:1; } 80%, 100% { stroke-dashoffset:0; } }
 .explainer.play .fx-coin { animation-name:fxCoin; transform-box:view-box; } @keyframes fxCoin { 0%, 68% { transform:none; } 71% { transform:translate(-220px, 113px); } 74% { transform:translate(-450px, 150px); } 77% { transform:translate(-680px, 113px); } 80%, 100% { transform:translate(-900px, 0); } }
+.fx-farm { fill:#9fe870; } .fx-stream { fill:none; stroke:var(--strong-cyan); stroke-width:14; stroke-linecap:round; }
+.fx-hex polygon { fill:#2a3366; stroke:#c9cdf066; stroke-width:2; } .fx-hex text { font:500 17px var(--font-text); fill:#fff; }
+.fx-hexhub polygon { fill:var(--persian-indigo); stroke:var(--strong-cyan); stroke-width:3; }
+.explainer:not(.play) .fx-hex polygon { fill:var(--strong-cyan); stroke:var(--strong-cyan); } .explainer:not(.play) .fx-hex text { fill:var(--imperial-blue); }
+.explainer.play .fx-hex polygon { animation-name:fxTickR; } .explainer.play .fx-hex text { animation-name:fxTickT; }
+.fx-track-arc { fill:none; stroke:#ffffff1f; stroke-width:26; stroke-linecap:round; }
+.fx-needle { transform-box:view-box; transform-origin:820px 430px; transform:rotate(165deg); } .fx-needle line { stroke:var(--strong-cyan); stroke-width:8; stroke-linecap:round; } .fx-needle circle { fill:var(--strong-cyan); }
+.explainer.play .fx-needle { animation-name:fxNeedle; } @keyframes fxNeedle { 0%, 32% { transform:rotate(48deg); } 14% { transform:rotate(70deg); } 22% { transform:rotate(36deg); } 46%, 96% { transform:rotate(165deg); } 100% { transform:rotate(48deg); } }
+.explainer.play .fx-needle line { animation-name:fxNeedleC; } @keyframes fxNeedleC { 0%, 34% { stroke:var(--amber-flame); } 40%, 100% { stroke:var(--strong-cyan); } }
+.fx-ms { fill:#2a3366; stroke:var(--strong-cyan); stroke-width:3; }
+.steps.steps-2 { grid-template-columns:repeat(2, minmax(0, 1fr)); } .steps.steps-5 { grid-template-columns:repeat(5, minmax(0, 1fr)); gap:24px; }
+@media (max-width: 1100px) { .steps.steps-5 { grid-template-columns:repeat(2, minmax(0, 1fr)); } }
 .feats { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:0 32px; margin-top:40px; }
 .feat { display:grid; align-content:start; gap:4px; padding:18px 0; border-top:1px solid var(--line); }
 .feat b { font:500 18px/24px var(--font-display); color:var(--ink-strong); } .feat span { font-size:15px; line-height:23px; }

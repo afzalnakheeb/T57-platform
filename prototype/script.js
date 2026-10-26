@@ -1,8 +1,8 @@
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const C = { green:'#008b8c', cyan:'#39c4c4', indigo:'#2f2e7d', amber:'#f8b716', night:'#0b1340', sapphire:'#8f93ff', mist:'#c9cdf0' };
-  const WORLD_PETAL = { home:'all', governments:'all', financiers:'finance', traders:'trade', sellers:'trade', farmers:'agri' };
-  const WORLD_NAME = { home:'T57.ai', governments:'Governments & Regulators', financiers:'Financiers & Investors', traders:'Traders & Aggregators', sellers:'Sellers & Exporters', farmers:'Farmers & Producers' };
+  const WORLD_PETAL = { home:'all', governments:'all', financiers:'finance', traders:'trade', sellers:'trade', farmers:'agri', buyers:'trade', enterprises:'agri', 'food-processors':'agri', cooperatives:'agri', collaborators:'all', 'service-providers':'logistics' };
+  const WORLD_NAME = { home:'T57.ai', governments:'Governments & Regulators', financiers:'Financiers & Investors', traders:'Traders & Aggregators', sellers:'Sellers & Exporters', farmers:'Farmers & Producers', buyers:'Buyers & Importers', enterprises:'Manufacturers & Enterprises', 'food-processors':'Food Processors', cooperatives:'Cooperatives & FPOs', collaborators:'Partners & Collaborators', 'service-providers':'Service Providers' };
 
   /* ---------- Market data (real, published figures; refreshed monthly) ----------
      FAO Food Price Index and sub-indices, nominal, 2014-2016 = 100. Source: FAO, food_price_indices_data.csv, release of 2 Oct 2026.
