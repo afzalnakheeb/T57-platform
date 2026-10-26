@@ -697,8 +697,25 @@
   document.querySelectorAll('[data-explainer]').forEach(fx => {
     const btn = fx.querySelector('.fx-pause');
     if (reduce) return;
-    new IntersectionObserver(([en]) => { if (en.isIntersecting) fx.classList.add('play'); fx.classList.toggle('paused', !en.isIntersecting || btn.getAttribute('aria-pressed') === 'true'); }, { threshold: 0.3 }).observe(fx);
-    btn.addEventListener('click', () => { const p = btn.getAttribute('aria-pressed') !== 'true'; btn.setAttribute('aria-pressed', p); btn.textContent = p ? 'Play' : 'Pause'; fx.classList.toggle('paused', p); });
+    // Plays once when it scrolls into view, holds the result, then offers Replay
+    let timer, left = 6240, t0 = 0;
+    const done = () => { fx.classList.add('done'); btn.setAttribute('aria-pressed', 'false'); btn.textContent = 'Replay'; };
+    const run = () => { clearTimeout(timer); t0 = performance.now(); timer = setTimeout(done, left); };
+    const stop = () => { if (t0) left -= performance.now() - t0; clearTimeout(timer); t0 = 0; };
+    new IntersectionObserver(([en]) => {
+      if (fx.classList.contains('done')) return;
+      if (!fx.classList.contains('play')) { if (en.isIntersecting) { fx.classList.add('play'); run(); } return; }
+      const hold = !en.isIntersecting || btn.getAttribute('aria-pressed') === 'true';
+      if (hold !== fx.classList.contains('paused')) { fx.classList.toggle('paused', hold); hold ? stop() : run(); }
+    }, { threshold: 0.3 }).observe(fx);
+    btn.addEventListener('click', () => {
+      if (fx.classList.contains('done')) {
+        fx.classList.remove('done', 'play', 'paused'); void fx.offsetWidth; fx.classList.add('play');
+        btn.textContent = 'Pause'; left = 6240; run(); return;
+      }
+      const p = btn.getAttribute('aria-pressed') !== 'true'; btn.setAttribute('aria-pressed', p); btn.textContent = p ? 'Play' : 'Pause';
+      fx.classList.toggle('paused', p); p ? stop() : run();
+    });
   });
 
   const menu = document.getElementById('menu'), menuBtn = document.getElementById('menu-btn');
