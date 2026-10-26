@@ -191,7 +191,16 @@ body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-
 .tones { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
 .replay[aria-pressed="true"] { background:#39c4c4; color:#0b1340; border-color:#39c4c4; }
 .replay:hover { background:rgba(57,196,196,.12); }
-.ftr-in { max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; }
+.ftr { padding-block:56px 28px; }
+.ftr-in { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1.4fr repeat(3, 1fr); gap:32px; }
+.ftr h2 { font:500 12px/16px var(--font-text); letter-spacing:.18em; text-transform:uppercase; color:#39c4c4; margin:0 0 14px; }
+.ftr ul { list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+.ftr a { color:#e6e8f8; text-decoration:none; }
+.ftr a:hover { color:#fff; text-decoration:underline; }
+.ftr-brand p { margin:0 0 14px; max-width:340px; }
+.ftr-legal { max-width:1200px; margin:40px auto 0; padding-top:20px; border-top:1px solid rgba(201,205,240,.18); display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-size:13px; }
+@media (max-width: 900px) { .ftr-in { grid-template-columns:1fr 1fr; } .ftr-brand { grid-column:1 / -1; } }
+@media (max-width: 480px) { .ftr-in { grid-template-columns:1fr; } }
 
 /* Transition overlay */
 .veil { position:fixed; inset:0; z-index:100; pointer-events:none; display:grid; place-items:center; visibility:hidden; }
@@ -1005,8 +1014,7 @@ a.cm-pt:hover text { text-decoration:underline; }
     <a href="#home" data-go="home" aria-label="T57.ai home">
       <svg class="logo" id="logo" viewBox="775 418 998 244" role="img" aria-label="T57">{{LOGO}}</svg>
     </a>
-    <span class="label-proto">Prototype · home, audiences, Why T57, Capabilities, AI Native, all sections</span>
-    <nav class="worlds" aria-label="Microsites in this prototype">
+    <nav class="worlds" aria-label="Who we serve">
       <a href="#governments" data-go="governments" data-petal="all"><i style="background:var(--electric-sapphire)"></i><span>Governments</span><span class="long">&nbsp;&amp; Regulators</span></a>
       <a href="#financiers" data-go="financiers" data-petal="finance"><i style="background:var(--amber-flame)"></i><span>Financiers</span><span class="long">&nbsp;&amp; Investors</span></a>
       <a href="#sellers" data-go="sellers" data-petal="trade"><i style="background:var(--strong-cyan)"></i><span>Sellers</span><span class="long">&nbsp;&amp; Exporters</span></a>
@@ -1021,7 +1029,7 @@ a.cm-pt:hover text { text-decoration:underline; }
 <nav class="menu gutter" id="menu" aria-label="All sections" hidden>
   <div class="wrap menu-grid">
     <div class="menu-aud"><h2>Who we serve</h2><ul><li><a href="#governments" data-go="governments">Governments &amp; Regulators<em></em></a></li><li><a href="#financiers" data-go="financiers">Financiers &amp; Investors<em></em></a></li><li><a href="#sellers" data-go="sellers">Sellers &amp; Exporters<em></em></a></li><li><a href="#buyers" data-go="buyers">Buyers &amp; Importers<em></em></a></li><li><a href="#traders" data-go="traders">Traders &amp; Aggregators<em></em></a></li><li><a href="#enterprises" data-go="enterprises">Manufacturers &amp; Enterprises<em></em></a></li><li><a href="#food-processors" data-go="food-processors">Food Processors<em></em></a></li><li><a href="#farmers" data-go="farmers">Farmers &amp; Producers<em></em></a></li><li><a href="#cooperatives" data-go="cooperatives">Cooperatives &amp; FPOs<em></em></a></li><li><a href="#collaborators" data-go="collaborators">Partners &amp; Collaborators<em></em></a></li><li><a href="#service-providers" data-go="service-providers">Service Providers<em></em></a></li></ul></div>
-    <div><h2>All sections</h2><ul class="menu-l0"><li><a href="#home" data-go="home">Home<em>/</em></a></li><li><a href="#who-we-serve" data-go="who-we-serve">Who We Serve<em>/who-we-serve</em></a></li><li><a href="#why-t57" data-go="why-t57">Why T57<em>/why-t57</em></a></li><li><a href="#capabilities" data-go="capabilities">Capabilities<em>/capabilities</em></a></li><li><a href="#ai-native" data-go="ai-native">AI Native<em>/ai-native</em></a></li><li><a href="#platform" data-go="platform">Platform<em>/platform</em></a></li><li><a href="#trust" data-go="trust">Trust &amp; Compliance<em>/trust</em></a></li><li><a href="#markets" data-go="markets">Markets<em>/markets</em></a></li><li><a href="#pricing" data-go="pricing">Pricing<em>/pricing</em></a></li><li><a href="#resources" data-go="resources">Resources<em>/resources</em></a></li><li><a href="#help" data-go="help">Help Center<em>/help</em></a></li><li><a href="#partnerships" data-go="partnerships">Partnerships<em>/partnerships</em></a></li><li><a href="#about" data-go="about">About T57<em>/about</em></a></li><li><a href="#contact" data-go="contact">Contact<em>/contact</em></a></li></ul></div>
+    <div><h2>All sections</h2><ul class="menu-l0"><li><a href="#home" data-go="home">Home<em></em></a></li><li><a href="#who-we-serve" data-go="who-we-serve">Who We Serve<em></em></a></li><li><a href="#why-t57" data-go="why-t57">Why T57<em></em></a></li><li><a href="#capabilities" data-go="capabilities">Capabilities<em></em></a></li><li><a href="#ai-native" data-go="ai-native">AI Native<em></em></a></li><li><a href="#platform" data-go="platform">Platform<em></em></a></li><li><a href="#trust" data-go="trust">Trust &amp; Compliance<em></em></a></li><li><a href="#markets" data-go="markets">Markets<em></em></a></li><li><a href="#pricing" data-go="pricing">Pricing<em></em></a></li><li><a href="#resources" data-go="resources">Resources<em></em></a></li><li><a href="#help" data-go="help">Help Center<em></em></a></li><li><a href="#partnerships" data-go="partnerships">Partnerships<em></em></a></li><li><a href="#about" data-go="about">About T57<em></em></a></li><li><a href="#contact" data-go="contact">Contact<em></em></a></li></ul></div>
   </div>
 </nav>
 <main id="main">
@@ -1044,7 +1052,13 @@ a.cm-pt:hover text { text-decoration:underline; }
 </dialog>
 
 <footer class="ftr gutter">
-  <div class="ftr-in"><span>© 2026 T57.ai · Prototype for review, not for publication</span><button id="replay" class="replay" type="button">Replay logo animation</button><span>English · العربية · Bahasa Melayu · Bahasa Indonesia · Türkçe</span></div>
+  <div class="ftr-in">
+    <div class="ftr-brand"><p>AI-native digital trade infrastructure for food. T57 does not lend or hold funds; finance, escrow and insurance come from licensed partners.</p><p><a href="mailto:hello@t57.ai">hello@t57.ai</a></p></div>
+    <div><h2>Who we serve</h2><ul><li><a href="#governments" data-go="governments">Governments &amp; Regulators</a></li><li><a href="#financiers" data-go="financiers">Financiers &amp; Investors</a></li><li><a href="#sellers" data-go="sellers">Sellers &amp; Exporters</a></li><li><a href="#buyers" data-go="buyers">Buyers &amp; Importers</a></li><li><a href="#farmers" data-go="farmers">Farmers &amp; Producers</a></li><li><a href="#who-we-serve" data-go="who-we-serve">All audiences</a></li></ul></div>
+    <div><h2>Platform</h2><ul><li><a href="#why-t57" data-go="why-t57">Why T57</a></li><li><a href="#capabilities" data-go="capabilities">Capabilities</a></li><li><a href="#ai-native" data-go="ai-native">AI Native</a></li><li><a href="#platform" data-go="platform">Platform</a></li><li><a href="#trust" data-go="trust">Trust &amp; Compliance</a></li><li><a href="#markets" data-go="markets">Markets</a></li><li><a href="#pricing" data-go="pricing">Pricing</a></li></ul></div>
+    <div><h2>Company</h2><ul><li><a href="#about" data-go="about">About T57</a></li><li><a href="#about-leadership" data-go="about-leadership">Leadership</a></li><li><a href="#partnerships" data-go="partnerships">Partnerships</a></li><li><a href="#about-careers" data-go="about-careers">Careers</a></li><li><a href="#about-media" data-go="about-media">Media</a></li><li><a href="#resources" data-go="resources">Resources</a></li><li><a href="#help" data-go="help">Help Center</a></li><li><a href="#contact" data-go="contact">Contact</a></li></ul></div>
+  </div>
+  <div class="ftr-legal"><span>© 2026 T57 Portal L.L.C S.O.C, Dubai</span><span><a href="#trust-data-protection" data-go="trust-data-protection">Data Protection</a> · <a href="#trust-security" data-go="trust-security">Security &amp; Privacy</a></span></div>
 </footer>
 
 <div class="veil" id="veil" aria-hidden="true">

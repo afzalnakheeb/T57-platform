@@ -9,6 +9,7 @@ export type PageInfo = {
 };
 
 export const SITE = 'https://t57.ai';
+const OG = { url: `${SITE}/og.png`, width: 1200, height: 630, alt: 'T57: trade food with trust, from farm to buyer.' };
 const dir = path.join(process.cwd(), 'content');
 export const pages: Record<string, PageInfo> = JSON.parse(fs.readFileSync(path.join(dir, 'pages.json'), 'utf8'));
 export const byRoute: Record<string, string> = Object.fromEntries(Object.entries(pages).map(([id, p]) => [p.route, id]));
@@ -22,8 +23,8 @@ export function metadataFor(id: string) {
     title: p.title,
     description: p.description,
     alternates: { canonical: url },
-    openGraph: { title: p.title, description: p.description, url, siteName: 'T57.ai', type: 'website' },
-    twitter: { card: 'summary_large_image', title: p.title, description: p.description },
+    openGraph: { title: p.title, description: p.description, url, siteName: 'T57.ai', type: 'website', images: [OG] },
+    twitter: { card: 'summary_large_image', title: p.title, description: p.description, images: [OG.url] },
   };
 }
 
