@@ -2651,6 +2651,34 @@
   "description": "Freight, cold chain, warehouse, inspection and customs partners serve verified food traders from inside the T57 trade record.",
   "parent": "partnerships"
  },
+ "partners-research": {
+  "route": "/partners/research",
+  "section": "partners",
+  "name": "Research & University Partners",
+  "h1": "From the lab to the farm.",
+  "answer": "T57 works with agricultural universities and research institutes to bring their research to farmers and food SMEs, and to turn it into income for the scientists behind it.",
+  "faqs": [
+   {
+    "q": "Who owns the research and data?",
+    "a": "The partner institution. T57 uses research and data only under the terms agreed with each partner, and credits the source."
+   },
+   {
+    "q": "How are scientists paid?",
+    "a": "Through licence fees and royalties agreed up front, and through paid advice on Hire an Expert."
+   },
+   {
+    "q": "Can start-ups from a university join?",
+    "a": "Yes. Start-ups can list their technology for rent or sale, and offer services, to T57 members."
+   },
+   {
+    "q": "Which institutions can apply?",
+    "a": "Agricultural universities, research institutes, academies and their start-ups, in any country."
+   }
+  ],
+  "title": "Research & University Partners: From the Lab to the Farm | T57",
+  "description": "T57 works with agricultural universities and research institutes to bring research to farmers and food SMEs, train local AI, pilot new technology and pay royalties to scientists.",
+  "parent": "partnerships"
+ },
  "partners-apply": {
   "route": "/partners/apply",
   "section": "partners",

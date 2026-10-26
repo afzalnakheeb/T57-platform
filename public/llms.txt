@@ -167,6 +167,7 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Technology Partners](https://www.t57.ai/partners/technology): Build the future of food trade with us.
 - [Financial Services Partners](https://www.t57.ai/partners/financial-services): Reach verified food businesses with better data and less risk.
 - [Logistics Partners](https://www.t57.ai/partners/logistics): Move and check food for verified traders.
+- [Research & University Partners](https://www.t57.ai/partners/research): T57 works with agricultural universities and research institutes to bring their research to farmers and food SMEs, and to turn it into income for the scientists behind it.
 - [Become a Partner](https://www.t57.ai/partners/apply): Apply to become a T57 partner.
 
 ## About T57
@@ -413,6 +414,8 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Can Islamic banks and takaful operators join?](https://www.t57.ai/partners/financial-services): Yes.
 - [Do members choose their own logistics partner?](https://www.t57.ai/partners/logistics): Yes. They can choose from T57's partners or bring their own.
 - [Can inspection results trigger payment?](https://www.t57.ai/partners/logistics): Yes, when the parties agree it in their contract.
+- [Who owns the research and data?](https://www.t57.ai/partners/research): The partner institution. T57 uses research and data only under the terms agreed with each partner, and credits the source.
+- [How are scientists paid?](https://www.t57.ai/partners/research): Through licence fees and royalties agreed up front, and through paid advice on Hire an Expert.
 - [Where is T57 based?](https://www.t57.ai/about): T57's operating company is in Dubai, its regional headquarters is in Riyadh, and it has teams in India and Malaysia, with country teams in all five founding markets.
 - [What does the name T57 mean?](https://www.t57.ai/about): T stands for trade, built on trust, transparency and traceability. The 5 stands for the five industries T57 connects: agriculture and food production, trade, logistics, finance and technology. The 7 stands for the seven outcomes we work toward: food security, less food lost, integration, access to finance, higher incomes, inclusion and resilience.
 - [Who leads T57?](https://www.t57.ai/about/leadership): T57 is led by its Founder and Chairman, Afzal Hussain Mohammed Nakheeb, with four co-founders who lead technology, product, communication and governance.
