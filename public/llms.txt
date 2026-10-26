@@ -130,6 +130,14 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Türkiye: Regulatory Guide](https://t57.ai/markets/turkiye/compliance): Know the rules for food trade in Türkiye before you ship.
 - [Türkiye: Getting Started](https://t57.ai/markets/turkiye/getting-started): Start trading on T57 in Türkiye in four steps.
 
+## Pricing
+
+- [Pricing Overview](https://t57.ai/pricing): Clear prices for verified trade, and fees only when you trade.
+- [Membership Plans & Pricing](https://t57.ai/pricing/plans): Choose the plan that fits how much you trade.
+- [Enterprise & Custom Pricing](https://t57.ai/pricing/enterprise): Run your group's food trade on T57, on terms built for you.
+- [Government & Institutional Pricing](https://t57.ai/pricing/government): Programs that strengthen your country's food security, designed with you.
+- [ROI Calculator](https://t57.ai/pricing/roi-calculator): See what T57 could be worth to your business, and which plan pays off.
+
 ## Common questions
 
 - [What is T57?](https://t57.ai/): T57 is AI-native digital trade infrastructure for the food industry. It brings verification, quotes, contracts, finance access, insurance, inspection and logistics onto one trade record for verified members.
@@ -322,6 +330,16 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [How often is the guide updated?](https://t57.ai/markets/turkiye/compliance): T57 reviews it regularly.
 - [How long until I can trade?](https://t57.ai/markets/turkiye/getting-started): Once verification is complete.
 - [Is there a cost to join?](https://t57.ai/markets/turkiye/getting-started): See Pricing for membership options.
+- [Do I pay to list products or send quotes?](https://t57.ai/pricing): No. Listing, quoting and negotiating are included in your membership. The trade fee applies only when a trade is completed.
+- [Does T57 earn anything from finance or insurance?](https://t57.ai/pricing): Yes. T57 earns a small commission from some finance and insurance partners. It is disclosed before you accept a partner's offer.
+- [Which plan should I choose?](https://t57.ai/pricing/plans): If you trade occasionally, start with Explore. As a rough guide, the trade fee savings on a higher plan pay for its higher membership once your monthly trade volume is large enough. The ROI calculator shows the break-even for your business.
+- [What does the free trial include?](https://t57.ai/pricing/plans): You can build your profile, explore verified members and market intelligence, use AI tools and send requests for quote. Verification, contracts, escrow and finance start when you subscribe, because verification involves real checks by our team and partners. Founding members get 90 days free at launch.
+- [Can T57 integrate with our ERP?](https://t57.ai/pricing/enterprise): Yes, through APIs. Our team scopes the integration with you.
+- [Can we keep our existing suppliers?](https://t57.ai/pricing/enterprise): Yes. Invite them to T57, and they are verified like every other member.
+- [How is government pricing set?](https://t57.ai/pricing/government): By program, based on scope, number of members, markets and modules. Contact our institutional team for a proposal.
+- [Can a ministry pay for its farmers' memberships?](https://t57.ai/pricing/government): Yes. Governments and development partners can fund memberships and onboarding for farmers, cooperatives and SMEs.
+- [Is the result a quote?](https://t57.ai/pricing/roi-calculator): No. It is an estimate based on your inputs and standard prices. Local prices may be lower in your market.
+- [Do you keep my data?](https://t57.ai/pricing/roi-calculator): Only if you choose to save or share your result.
 - [How does T57 support national and regional food-security strategies in practice?](https://t57.ai/who-we-serve/governments): Many countries are now expanding strategic reserves and silo capacity to hold months’ worth of essential commodities. T57 complements such physical infrastructure by tracking self-sufficiency, stock levels, and import exposure in real time. This combination of physical reserves and digital intelligence helps governments move from reactive to anticipatory food-security management.
 - [Why is it important to channel private and impact capital into agriculture and food systems, beyond public budgets?](https://t57.ai/who-we-serve/governments): Despite agriculture’s historical role in employment and food security, global investors are only now seeking credible, measurable pathways to support food systems as part of their climate and SDG commitments. T57 helps governments present investable, data-backed opportunities, from model support centers to special agri zones and CSR programs, with transparent performance and impact tracking that meets both regulatory and investor expectations.
 - [How does T57 handle disputes and reduce risks for financiers and investors?](https://t57.ai/who-we-serve/financiers): T57 reduces risk through its curated club membership model, which ensures vetted, credible counterparties in a high-trust environment. Its virtual trade desk supports execution, manages disputes, oversees documentation, and ensures consistent transaction follow-through for greater investor confidence.

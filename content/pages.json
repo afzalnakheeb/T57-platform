@@ -2170,6 +2170,121 @@
   "description": "Join T57 in Türkiye in four steps: apply, get verified, set up and trade, with help from our local team.",
   "parent": "mkt-tr-overview"
  },
+ "pricing": {
+  "route": "/pricing",
+  "section": "pricing",
+  "name": "Pricing Overview",
+  "h1": "Pay for trade that happens, not the promise of it.",
+  "answer": "Clear prices for verified trade, and fees only when you trade.",
+  "faqs": [
+   {
+    "q": "Do I pay to list products or send quotes?",
+    "a": "No. Listing, quoting and negotiating are included in your membership. The trade fee applies only when a trade is completed."
+   },
+   {
+    "q": "Does T57 earn anything from finance or insurance?",
+    "a": "Yes. T57 earns a small commission from some finance and insurance partners. It is disclosed before you accept a partner's offer."
+   },
+   {
+    "q": "Are prices the same in every country?",
+    "a": "The prices shown are standard list prices in US dollars. Local prices may be lower in markets with lower purchasing power. Contact us for pricing in your country."
+   },
+   {
+    "q": "Is there a free trial?",
+    "a": "Yes. Founding members get 90 days free at launch. The trial lets you explore the network and tools. Trading starts once you subscribe and are verified."
+   }
+  ],
+  "title": "Pricing | Plans from $199 a Month | T57",
+  "description": "Public prices for verified food trade: Explore, Core, Growth and Enterprise plans, two months free on annual billing, and a small fee only on completed trades."
+ },
+ "pricing-plans": {
+  "route": "/pricing/plans",
+  "section": "pricing",
+  "name": "Membership Plans & Pricing",
+  "h1": "The more you trade, the less you pay per trade.",
+  "answer": "Choose the plan that fits how much you trade.",
+  "faqs": [
+   {
+    "q": "Which plan should I choose?",
+    "a": "If you trade occasionally, start with Explore. As a rough guide, the trade fee savings on a higher plan pay for its higher membership once your monthly trade volume is large enough. The ROI calculator shows the break-even for your business."
+   },
+   {
+    "q": "What does the free trial include?",
+    "a": "You can build your profile, explore verified members and market intelligence, use AI tools and send requests for quote. Verification, contracts, escrow and finance start when you subscribe, because verification involves real checks by our team and partners. Founding members get 90 days free at launch."
+   },
+   {
+    "q": "Can I switch plans?",
+    "a": "Yes. You can move up at any time, and move down at renewal."
+   }
+  ],
+  "title": "Plans and Pricing | Explore, Core, Growth, Enterprise | T57",
+  "description": "Compare T57 plans from $199 a month, with verification included, two months free on annual billing and trade fees from 0.75% down to 0.20% per side.",
+  "parent": "pricing"
+ },
+ "pricing-enterprise": {
+  "route": "/pricing/enterprise",
+  "section": "pricing",
+  "name": "Enterprise & Custom Pricing",
+  "h1": "One agreement for your group, the lowest fee per trade.",
+  "answer": "Run your group's food trade on T57, on terms built for you.",
+  "faqs": [
+   {
+    "q": "Can T57 integrate with our ERP?",
+    "a": "Yes, through APIs. Our team scopes the integration with you."
+   },
+   {
+    "q": "Can we keep our existing suppliers?",
+    "a": "Yes. Invite them to T57, and they are verified like every other member."
+   }
+  ],
+  "title": "Enterprise Pricing | Custom Terms for Food Groups | T57",
+  "description": "Custom terms, the lowest trade fees, ERP integrations and dedicated support for large food groups, retailers and multi-country traders.",
+  "parent": "pricing"
+ },
+ "pricing-government": {
+  "route": "/pricing/government",
+  "section": "pricing",
+  "name": "Government & Institutional Pricing",
+  "h1": "Food-security programs, designed with you.",
+  "answer": "Programs that strengthen your country's food security, designed with you.",
+  "faqs": [
+   {
+    "q": "How is government pricing set?",
+    "a": "By program, based on scope, number of members, markets and modules. Contact our institutional team for a proposal."
+   },
+   {
+    "q": "Can a ministry pay for its farmers' memberships?",
+    "a": "Yes. Governments and development partners can fund memberships and onboarding for farmers, cooperatives and SMEs."
+   },
+   {
+    "q": "Can foreign suppliers respond to our tenders?",
+    "a": "Yes, if you open a tender to them. Every supplier is verified before it can bid."
+   }
+  ],
+  "title": "Government & Institutional Programs | Food Security, Tenders, Subsidies | T57",
+  "description": "Programs for ministries and development partners: subsidized memberships, local and global food tenders, and an AI-driven government module for food security.",
+  "parent": "pricing"
+ },
+ "pricing-roi": {
+  "route": "/pricing/roi-calculator",
+  "section": "pricing",
+  "name": "ROI Calculator",
+  "h1": "Your numbers. Your assumptions.",
+  "answer": "See what T57 could be worth to your business, and which plan pays off.",
+  "faqs": [
+   {
+    "q": "Is the result a quote?",
+    "a": "No. It is an estimate based on your inputs and standard prices. Local prices may be lower in your market."
+   },
+   {
+    "q": "Do you keep my data?",
+    "a": "Only if you choose to save or share your result."
+   }
+  ],
+  "title": "ROI Calculator | Savings and Best Plan for Your Volume | T57",
+  "description": "Estimate the time and money T57 could save your food business, net of fees, and find the plan with the lowest total cost for your trade volume.",
+  "parent": "pricing"
+ },
  "governments": {
   "route": "/who-we-serve/governments",
   "section": "who-we-serve",

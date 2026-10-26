@@ -422,5 +422,25 @@
  "mkt-tr-start": {
   "title": "Get Started with T57 in Türkiye",
   "description": "Join T57 in Türkiye in four steps: apply, get verified, set up and trade, with help from our local team."
+ },
+ "pricing": {
+  "title": "Pricing | Plans from $199 a Month | T57",
+  "description": "Public prices for verified food trade: Explore, Core, Growth and Enterprise plans, two months free on annual billing, and a small fee only on completed trades."
+ },
+ "pricing-plans": {
+  "title": "Plans and Pricing | Explore, Core, Growth, Enterprise | T57",
+  "description": "Compare T57 plans from $199 a month, with verification included, two months free on annual billing and trade fees from 0.75% down to 0.20% per side."
+ },
+ "pricing-enterprise": {
+  "title": "Enterprise Pricing | Custom Terms for Food Groups | T57",
+  "description": "Custom terms, the lowest trade fees, ERP integrations and dedicated support for large food groups, retailers and multi-country traders."
+ },
+ "pricing-government": {
+  "title": "Government & Institutional Programs | Food Security, Tenders, Subsidies | T57",
+  "description": "Programs for ministries and development partners: subsidized memberships, local and global food tenders, and an AI-driven government module for food security."
+ },
+ "pricing-roi": {
+  "title": "ROI Calculator | Savings and Best Plan for Your Volume | T57",
+  "description": "Estimate the time and money T57 could save your food business, net of fees, and find the plan with the lowest total cost for your trade volume."
  }
 }

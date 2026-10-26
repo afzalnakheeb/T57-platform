@@ -537,6 +537,41 @@
     if (b.dataset.h1 && h1) { h1.dataset.base ??= h1.innerHTML; h1.innerHTML = '<span class="ln">' + b.dataset.h1 + '</span>'; }
   })));
 
+  // Pricing: monthly / annual switch on the plan table
+  document.querySelectorAll('.bill').forEach(g => g.addEventListener('click', e => {
+    const b = e.target.closest('[data-bill]'); if (!b) return;
+    g.querySelectorAll('[data-bill]').forEach(x => x.setAttribute('aria-pressed', x === b));
+    g.parentElement.querySelectorAll('[data-bill-row]').forEach(r => r.hidden = r.dataset.billRow !== b.dataset.bill);
+  }));
+
+  // Pricing: ROI calculator. Standard list prices; annual billing is ten months for twelve, Enterprise at its starting price.
+  document.querySelectorAll('[data-roi]').forEach(f => {
+    const PLANS = [['Explore', 199, .0075, 1990], ['Core', 499, .006, 4990], ['Growth', 749, .004, 7490], ['Enterprise', 1499, .002, 1499 * 12]];
+    const usd = n => (n < 0 ? '−$' : '$') + Math.round(Math.abs(n)).toLocaleString('en-US');
+    const v = k => { const el = f.querySelector(`[data-roi-in="${k}"]`); return el.tagName === 'SELECT' ? el.value : Math.max(0, +el.value || 0); };
+    const out = k => f.querySelector(`[data-r="${k}"]`);
+    function run() {
+      f.querySelectorAll('input[type=range]').forEach(r => f.querySelector(`[data-roi-out="${r.dataset.roiIn}"]`).textContent = r.value + '%');
+      const vol = v('trades') * v('value') * 12, c = k => v(k) / 100;
+      const time = v('days') * v('dayrate') * 12 * c('c_days');
+      const rework = v('trades') * 12 * v('rework') * c('c_rework');
+      const margin = vol * c('margin') * c('c_margin');
+      const fin = vol * c('rate') * (v('wait') / 365) - vol * c('rate') * (1 - c('c_rate')) * (v('wait') * (1 - c('c_wait')) / 365);
+      const gross = time + rework + margin + fin;
+      const costs = PLANS.map(([n, m, fee, yr]) => [n, yr + vol * fee]);
+      const best = costs.reduce((a, b) => b[1] < a[1] ? b : a);
+      out('net').textContent = usd(gross - best[1]);
+      out('net').classList.toggle('neg', gross - best[1] < 0);
+      out('gross').textContent = usd(gross);
+      out('plan').textContent = best[0];
+      out('fees').textContent = usd(best[1]) + (best[0] === 'Enterprise' ? ' (from)' : '');
+      out('ctx').textContent = `For a ${v('role').toLowerCase()} in ${v('market')}, on ${usd(vol / 12)} of trade a month.`;
+      out('rows').innerHTML = costs.map(([n, t]) => `<tr${n === best[0] ? ' class="on"' : ''}><th scope="row">${n}</th><td>${usd(t)}${n === 'Enterprise' ? ' (from)' : ''}</td></tr>`).join('');
+    }
+    f.addEventListener('input', run); run();
+    f.querySelector('[data-roi-print]').addEventListener('click', () => print());
+  });
+
   document.querySelectorAll('[data-explainer]').forEach(fx => {
     const btn = fx.querySelector('.fx-pause');
     if (reduce) return;
