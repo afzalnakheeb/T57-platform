@@ -330,5 +330,97 @@
  "trust-disputes": {
   "title": "Trade Dispute Resolution | T57 Trade Assurance",
   "description": "Resolve food trade disputes from one shared record, with escrow paused through licensed partners and independent inspection."
+ },
+ "markets": {
+  "title": "Markets | T57 in Saudi Arabia, UAE, India, Malaysia and Türkiye",
+  "description": "One verified food trade network across five founding markets, for domestic wholesale and cross-border trade, with local teams and partners."
+ },
+ "markets-oic": {
+  "title": "OIC & Halal Food Trade | Verified Halal Suppliers | T57",
+  "description": "Find verified halal food suppliers and buyers across OIC countries, with certificates recorded, documents on one record and finance through licensed partners."
+ },
+ "markets-asean": {
+  "title": "ASEAN Food Trade | Verified Exporters and Buyers | T57",
+  "description": "Connect ASEAN food producers to verified buyers in the Gulf, India and Türkiye, with digital documents, halal records and trade finance through partners."
+ },
+ "mkt-sa-overview": {
+  "title": "T57 in Saudi Arabia | Verified Food Trade Network",
+  "description": "Verified domestic wholesale and cross-border food trade in Saudi Arabia, with a local team and licensed partners."
+ },
+ "mkt-sa-features": {
+  "title": "T57 Features in Saudi Arabia | Trade, Finance, Logistics",
+  "description": "Verified membership, trade execution, finance, escrow, insurance, logistics and AI intelligence for food businesses in Saudi Arabia."
+ },
+ "mkt-sa-compliance": {
+  "title": "Food Import Rules in Saudi Arabia | T57 Regulatory Guide",
+  "description": "The main bodies, documents and rules for food trade in Saudi Arabia: SFDA, halal, ZATCA, FASAH and PDPL, and how T57 helps you comply."
+ },
+ "mkt-sa-start": {
+  "title": "Get Started with T57 in Saudi Arabia",
+  "description": "Join T57 in Saudi Arabia in four steps: apply, get verified, set up and trade, with help from our local team."
+ },
+ "mkt-uae-overview": {
+  "title": "T57 in the UAE | Verified Food Trade and Re-export Network",
+  "description": "Verified food import, domestic wholesale and re-export in the UAE, with a local team and licensed partners for finance and payments."
+ },
+ "mkt-uae-features": {
+  "title": "T57 Features in the UAE | Trade, Finance, Logistics",
+  "description": "Verified membership, trade execution, finance, escrow, insurance, logistics and AI intelligence for food businesses in the UAE."
+ },
+ "mkt-uae-compliance": {
+  "title": "Food Import Rules in the UAE | T57 Regulatory Guide",
+  "description": "The main bodies, documents and rules for food trade in the UAE: MOCCAE, MoIAT halal, emirate food authorities, customs and PDPL."
+ },
+ "mkt-uae-start": {
+  "title": "Get Started with T57 in the UAE",
+  "description": "Join T57 in the UAE in four steps: apply, get verified, set up and trade, with help from our local team."
+ },
+ "mkt-in-overview": {
+  "title": "T57 in India | Verified Food Trade for FPOs, Processors and Exporters",
+  "description": "Sell to verified domestic business buyers and importers in the Gulf and Southeast Asia, with finance, inspection and logistics through licensed partners."
+ },
+ "mkt-in-features": {
+  "title": "T57 Features in India | Trade, Finance, Logistics",
+  "description": "Verified membership, trade execution, finance, escrow, insurance, logistics and AI intelligence for food businesses in India."
+ },
+ "mkt-in-compliance": {
+  "title": "Food Export Rules in India | T57 Regulatory Guide",
+  "description": "The main bodies, documents and rules for food trade in India: DGFT IEC, APEDA, FSSAI, plant quarantine, customs and the DPDP Act."
+ },
+ "mkt-in-start": {
+  "title": "Get Started with T57 in India",
+  "description": "Join T57 in India in four steps: apply, get verified, set up and trade, with help from our local team."
+ },
+ "mkt-my-overview": {
+  "title": "T57 in Malaysia | Verified Halal Food Trade Network",
+  "description": "Take Malaysian halal food to verified buyers in the Gulf, India and ASEAN, with halal certificates recorded and finance through licensed partners."
+ },
+ "mkt-my-features": {
+  "title": "T57 Features in Malaysia | Trade, Finance, Logistics",
+  "description": "Verified membership, trade execution, finance, escrow, insurance, logistics and AI intelligence for food businesses in Malaysia."
+ },
+ "mkt-my-compliance": {
+  "title": "Food Trade Rules in Malaysia | T57 Regulatory Guide",
+  "description": "The main bodies, documents and rules for food trade in Malaysia: MOH food safety, MAQIS, JAKIM halal, customs, e-invoicing and PDPA."
+ },
+ "mkt-my-start": {
+  "title": "Get Started with T57 in Malaysia",
+  "description": "Join T57 in Malaysia in four steps: apply, get verified, set up and trade, with help from our local team."
+ },
+ "mkt-tr-overview": {
+  "title": "T57 in Türkiye | Verified Food Export Network",
+  "description": "Sell Turkish fruit, nuts and food products to verified buyers in the Gulf and Asia, with documents on one record and payments through licensed partners."
+ },
+ "mkt-tr-features": {
+  "title": "T57 Features in Türkiye | Trade, Finance, Logistics",
+  "description": "Verified membership, trade execution, finance, escrow, insurance, logistics and AI intelligence for food businesses in Türkiye."
+ },
+ "mkt-tr-compliance": {
+  "title": "Food Trade Rules in Türkiye | T57 Regulatory Guide",
+  "description": "The main bodies, documents and rules for food trade in Türkiye: Ministry of Agriculture and Forestry, Ministry of Trade customs, HAK halal, e-Fatura and KVKK."
+ },
+ "mkt-tr-start": {
+  "title": "Get Started with T57 in Türkiye",
+  "description": "Join T57 in Türkiye in four steps: apply, get verified, set up and trade, with help from our local team."
  }
 }

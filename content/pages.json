@@ -1619,6 +1619,557 @@
   "title": "Trade Dispute Resolution | T57 Trade Assurance",
   "description": "Resolve food trade disputes from one shared record, with escrow paused through licensed partners and independent inspection."
  },
+ "markets": {
+  "route": "/markets",
+  "section": "markets",
+  "name": "Markets",
+  "h1": "Five founding markets. One verified network.",
+  "answer": "Trade across five founding markets on one verified network.",
+  "faqs": [
+   {
+    "q": "Which countries does T57 operate in?",
+    "a": "Saudi Arabia, the UAE, India, Malaysia and Türkiye. More markets will follow."
+   },
+   {
+    "q": "Can I trade with a country that is not a T57 market?",
+    "a": "Members in founding markets can buy from or sell to verified members in other founding markets."
+   },
+   {
+    "q": "Does T57 support domestic trade, or only exports?",
+    "a": "Both. Domestic wholesale and cross-border trade run on the same platform."
+   }
+  ],
+  "title": "Markets | T57 in Saudi Arabia, UAE, India, Malaysia and Türkiye",
+  "description": "One verified food trade network across five founding markets, for domestic wholesale and cross-border trade, with local teams and partners."
+ },
+ "markets-oic": {
+  "route": "/markets/oic-halal",
+  "section": "markets",
+  "name": "OIC Nations & Halal Trade",
+  "h1": "Halal trade across the OIC, verified end to end.",
+  "answer": "Connect halal food producers and buyers across the OIC on one trusted network.",
+  "faqs": [
+   {
+    "q": "Does T57 issue halal certificates?",
+    "a": "No. Halal certificates are issued by accredited halal bodies. T57 records them, tracks expiry and shows them to buyers."
+   },
+   {
+    "q": "Which OIC countries can use T57?",
+    "a": "T57's founding markets include Saudi Arabia, the UAE, Malaysia and Türkiye, all OIC members, and India, a major supplier to OIC markets. More OIC countries will follow."
+   },
+   {
+    "q": "Is Islamic trade finance available?",
+    "a": "T57 connects members with licensed partners, including those offering Shariah-compliant finance where available."
+   }
+  ],
+  "title": "OIC & Halal Food Trade | Verified Halal Suppliers | T57",
+  "description": "Find verified halal food suppliers and buyers across OIC countries, with certificates recorded, documents on one record and finance through licensed partners.",
+  "parent": "markets"
+ },
+ "markets-asean": {
+  "route": "/markets/asean",
+  "section": "markets",
+  "name": "ASEAN Markets",
+  "h1": "Southeast Asian food, to the Gulf and India.",
+  "answer": "Link Southeast Asian food producers to buyers across Asia and the Gulf.",
+  "faqs": [
+   {
+    "q": "Which ASEAN countries can use T57?",
+    "a": "Malaysia is a founding market. Other ASEAN countries will follow."
+   },
+   {
+    "q": "Can ASEAN producers sell within ASEAN?",
+    "a": "Yes. Domestic wholesale is available in Malaysia, and cross-border trade grows as more ASEAN markets join."
+   },
+   {
+    "q": "How does T57 relate to DEFA?",
+    "a": "T57 is an independent platform. Its digital records and consent-based data sharing are designed to fit regional digital trade rules such as DEFA, once in force."
+   }
+  ],
+  "title": "ASEAN Food Trade | Verified Exporters and Buyers | T57",
+  "description": "Connect ASEAN food producers to verified buyers in the Gulf, India and Türkiye, with digital documents, halal records and trade finance through partners.",
+  "parent": "markets"
+ },
+ "mkt-sa-overview": {
+  "route": "/markets/saudi-arabia/overview",
+  "section": "markets",
+  "name": "Saudi Arabia: Market Overview",
+  "h1": "Trade food in Saudi Arabia, at home and abroad.",
+  "answer": "Trade food in Saudi Arabia with verified partners, at home and abroad.",
+  "faqs": [
+   {
+    "q": "Who can join T57 in Saudi Arabia?",
+    "a": "Registered food and agriculture businesses, from producers and cooperatives to traders, wholesalers, retailers, hotels, restaurants and institutions."
+   },
+   {
+    "q": "Do I need to export to use T57?",
+    "a": "No. Many members use T57 for domestic wholesale only."
+   },
+   {
+    "q": "Is T57 available in Arabic?",
+    "a": "Yes."
+   }
+  ],
+  "title": "T57 in Saudi Arabia | Verified Food Trade Network",
+  "description": "Verified domestic wholesale and cross-border food trade in Saudi Arabia, with a local team and licensed partners.",
+  "parent": "markets"
+ },
+ "mkt-sa-features": {
+  "route": "/markets/saudi-arabia/features",
+  "section": "markets",
+  "name": "Saudi Arabia: Features Available",
+  "h1": "Every T57 capability, in Saudi Arabia.",
+  "answer": "Everything you need to trade food in Saudi Arabia, in one place.",
+  "faqs": [
+   {
+    "q": "Are all features available in every market?",
+    "a": "Yes. The partners that deliver regulated services differ by country."
+   },
+   {
+    "q": "Can I pay in SAR?",
+    "a": "Yes, through licensed payment and escrow partners."
+   },
+   {
+    "q": "Who provides finance in Saudi Arabia?",
+    "a": "Licensed Saudi banks and finance companies. T57 does not lend."
+   }
+  ],
+  "title": "T57 Features in Saudi Arabia | Trade, Finance, Logistics",
+  "description": "Verified membership, trade execution, finance, escrow, insurance, logistics and AI intelligence for food businesses in Saudi Arabia.",
+  "parent": "mkt-sa-overview"
+ },
+ "mkt-sa-compliance": {
+  "route": "/markets/saudi-arabia/compliance",
+  "section": "markets",
+  "name": "Saudi Arabia: Regulatory Guide",
+  "h1": "Know the rules before you ship.",
+  "answer": "Know the rules for food trade in Saudi Arabia before you ship.",
+  "faqs": [
+   {
+    "q": "Is this guide legal advice?",
+    "a": "No. It is a summary to help you prepare. Always confirm requirements with the relevant authority or your customs broker."
+   },
+   {
+    "q": "How often is the guide updated?",
+    "a": "T57 reviews it regularly."
+   },
+   {
+    "q": "Can T57 handle customs clearance for me?",
+    "a": "T57 connects you with licensed customs brokers, who handle clearance on the shared trade record."
+   }
+  ],
+  "title": "Food Import Rules in Saudi Arabia | T57 Regulatory Guide",
+  "description": "The main bodies, documents and rules for food trade in Saudi Arabia: SFDA, halal, ZATCA, FASAH and PDPL, and how T57 helps you comply.",
+  "parent": "mkt-sa-overview"
+ },
+ "mkt-sa-start": {
+  "route": "/markets/saudi-arabia/getting-started",
+  "section": "markets",
+  "name": "Saudi Arabia: Getting Started",
+  "h1": "Four steps to your first trade.",
+  "answer": "Start trading on T57 in Saudi Arabia in four steps.",
+  "faqs": [
+   {
+    "q": "How long until I can trade?",
+    "a": "Once verification is complete."
+   },
+   {
+    "q": "Is there a cost to join?",
+    "a": "See Pricing for membership options."
+   },
+   {
+    "q": "Can someone help me in Arabic?",
+    "a": "Yes. Our Riyadh team supports members in Arabic and English."
+   }
+  ],
+  "title": "Get Started with T57 in Saudi Arabia",
+  "description": "Join T57 in Saudi Arabia in four steps: apply, get verified, set up and trade, with help from our local team.",
+  "parent": "mkt-sa-overview"
+ },
+ "mkt-uae-overview": {
+  "route": "/markets/uae/overview",
+  "section": "markets",
+  "name": "UAE: Market Overview",
+  "h1": "Trade through the UAE hub, with verified partners.",
+  "answer": "Trade food through the UAE with verified partners across the region.",
+  "faqs": [
+   {
+    "q": "Can free zone companies join?",
+    "a": "Yes. Mainland and free zone companies can apply, subject to verification."
+   },
+   {
+    "q": "Do I need to export to use T57?",
+    "a": "No. Many members use T57 for domestic wholesale only."
+   },
+   {
+    "q": "Is T57 available in Arabic?",
+    "a": "Yes, in Arabic and English."
+   }
+  ],
+  "title": "T57 in the UAE | Verified Food Trade and Re-export Network",
+  "description": "Verified food import, domestic wholesale and re-export in the UAE, with a local team and licensed partners for finance and payments.",
+  "parent": "markets"
+ },
+ "mkt-uae-features": {
+  "route": "/markets/uae/features",
+  "section": "markets",
+  "name": "UAE: Features Available",
+  "h1": "Every T57 capability, in the UAE.",
+  "answer": "Everything you need to trade food in the UAE, in one place.",
+  "faqs": [
+   {
+    "q": "Are all features available in every market?",
+    "a": "Yes. The partners that deliver regulated services differ by country."
+   },
+   {
+    "q": "Can I pay in AED?",
+    "a": "Yes, through licensed payment and escrow partners."
+   },
+   {
+    "q": "Who provides finance in the UAE?",
+    "a": "Licensed UAE banks and finance companies. T57 does not lend."
+   }
+  ],
+  "title": "T57 Features in the UAE | Trade, Finance, Logistics",
+  "description": "Verified membership, trade execution, finance, escrow, insurance, logistics and AI intelligence for food businesses in the UAE.",
+  "parent": "mkt-uae-overview"
+ },
+ "mkt-uae-compliance": {
+  "route": "/markets/uae/compliance",
+  "section": "markets",
+  "name": "UAE: Regulatory Guide",
+  "h1": "Know the rules before you ship.",
+  "answer": "Know the rules for food trade in the UAE before you ship.",
+  "faqs": [
+   {
+    "q": "Is this guide legal advice?",
+    "a": "No. It is a summary to help you prepare. Always confirm requirements with the relevant authority or your customs broker."
+   },
+   {
+    "q": "How often is the guide updated?",
+    "a": "T57 reviews it regularly."
+   },
+   {
+    "q": "Can T57 handle customs clearance for me?",
+    "a": "T57 connects you with licensed customs brokers, who handle clearance on the shared trade record."
+   }
+  ],
+  "title": "Food Import Rules in the UAE | T57 Regulatory Guide",
+  "description": "The main bodies, documents and rules for food trade in the UAE: MOCCAE, MoIAT halal, emirate food authorities, customs and PDPL.",
+  "parent": "mkt-uae-overview"
+ },
+ "mkt-uae-start": {
+  "route": "/markets/uae/getting-started",
+  "section": "markets",
+  "name": "UAE: Getting Started",
+  "h1": "Four steps to your first trade.",
+  "answer": "Start trading on T57 in the UAE in four steps.",
+  "faqs": [
+   {
+    "q": "How long until I can trade?",
+    "a": "Once verification is complete."
+   },
+   {
+    "q": "Is there a cost to join?",
+    "a": "See Pricing for membership options."
+   },
+   {
+    "q": "Can someone help me in Arabic?",
+    "a": "Yes. Our UAE team supports members in Arabic and English."
+   }
+  ],
+  "title": "Get Started with T57 in the UAE",
+  "description": "Join T57 in the UAE in four steps: apply, get verified, set up and trade, with help from our local team.",
+  "parent": "mkt-uae-overview"
+ },
+ "mkt-in-overview": {
+  "route": "/markets/india/overview",
+  "section": "markets",
+  "name": "India: Market Overview",
+  "h1": "India's farms and food makers, to buyers at home and abroad.",
+  "answer": "Connect India's farmers and food makers to verified buyers at home and abroad.",
+  "faqs": [
+   {
+    "q": "Can a farmer producer organization join?",
+    "a": "Yes. FPOs and cooperatives can join as members and onboard their member farmers."
+   },
+   {
+    "q": "Is T57 only for exporters?",
+    "a": "No. Many members use T57 to sell to domestic business buyers."
+   },
+   {
+    "q": "Which languages are supported?",
+    "a": "English and Hindi, with more Indian languages planned."
+   }
+  ],
+  "title": "T57 in India | Verified Food Trade for FPOs, Processors and Exporters",
+  "description": "Sell to verified domestic business buyers and importers in the Gulf and Southeast Asia, with finance, inspection and logistics through licensed partners.",
+  "parent": "markets"
+ },
+ "mkt-in-features": {
+  "route": "/markets/india/features",
+  "section": "markets",
+  "name": "India: Features Available",
+  "h1": "Every T57 capability, in India.",
+  "answer": "Everything you need to trade food in India, in one place.",
+  "faqs": [
+   {
+    "q": "Are all features available in every market?",
+    "a": "Yes. The partners that deliver regulated services differ by country."
+   },
+   {
+    "q": "Can I pay in INR?",
+    "a": "Yes, through licensed payment and escrow partners."
+   },
+   {
+    "q": "Who provides finance in India?",
+    "a": "Licensed Indian banks and NBFCs. T57 does not lend."
+   }
+  ],
+  "title": "T57 Features in India | Trade, Finance, Logistics",
+  "description": "Verified membership, trade execution, finance, escrow, insurance, logistics and AI intelligence for food businesses in India.",
+  "parent": "mkt-in-overview"
+ },
+ "mkt-in-compliance": {
+  "route": "/markets/india/compliance",
+  "section": "markets",
+  "name": "India: Regulatory Guide",
+  "h1": "Know the rules before you ship.",
+  "answer": "Know the rules for food trade in India before you ship.",
+  "faqs": [
+   {
+    "q": "Is this guide legal advice?",
+    "a": "No. It is a summary to help you prepare. Always confirm requirements with the relevant authority or your customs broker."
+   },
+   {
+    "q": "How often is the guide updated?",
+    "a": "T57 reviews it regularly."
+   },
+   {
+    "q": "Can T57 handle customs clearance for me?",
+    "a": "T57 connects you with licensed customs brokers, who handle clearance on the shared trade record."
+   }
+  ],
+  "title": "Food Export Rules in India | T57 Regulatory Guide",
+  "description": "The main bodies, documents and rules for food trade in India: DGFT IEC, APEDA, FSSAI, plant quarantine, customs and the DPDP Act.",
+  "parent": "mkt-in-overview"
+ },
+ "mkt-in-start": {
+  "route": "/markets/india/getting-started",
+  "section": "markets",
+  "name": "India: Getting Started",
+  "h1": "Four steps to your first trade.",
+  "answer": "Start trading on T57 in India in four steps.",
+  "faqs": [
+   {
+    "q": "How long until I can trade?",
+    "a": "Once verification is complete."
+   },
+   {
+    "q": "Is there a cost to join?",
+    "a": "See Pricing for membership options."
+   },
+   {
+    "q": "Can someone help me in Hindi?",
+    "a": "Yes. Our India team supports members in English and Hindi."
+   }
+  ],
+  "title": "Get Started with T57 in India",
+  "description": "Join T57 in India in four steps: apply, get verified, set up and trade, with help from our local team.",
+  "parent": "mkt-in-overview"
+ },
+ "mkt-my-overview": {
+  "route": "/markets/malaysia/overview",
+  "section": "markets",
+  "name": "Malaysia: Market Overview",
+  "h1": "Malaysian halal food, to buyers across three regions.",
+  "answer": "Take Malaysian halal food to verified buyers across the Gulf, India and ASEAN.",
+  "faqs": [
+   {
+    "q": "Does T57 recognize JAKIM certification?",
+    "a": "T57 records halal certificates from JAKIM and other bodies, and shows buyers whether a certificate is recognized in their market."
+   },
+   {
+    "q": "Is Islamic trade finance available?",
+    "a": "Through licensed partners, where available."
+   },
+   {
+    "q": "Is T57 available in Malay?",
+    "a": "English and Malay."
+   }
+  ],
+  "title": "T57 in Malaysia | Verified Halal Food Trade Network",
+  "description": "Take Malaysian halal food to verified buyers in the Gulf, India and ASEAN, with halal certificates recorded and finance through licensed partners.",
+  "parent": "markets"
+ },
+ "mkt-my-features": {
+  "route": "/markets/malaysia/features",
+  "section": "markets",
+  "name": "Malaysia: Features Available",
+  "h1": "Every T57 capability, in Malaysia.",
+  "answer": "Everything you need to trade food in Malaysia, in one place.",
+  "faqs": [
+   {
+    "q": "Are all features available in every market?",
+    "a": "Yes. The partners that deliver regulated services differ by country."
+   },
+   {
+    "q": "Can I pay in MYR?",
+    "a": "Yes, through licensed payment and escrow partners."
+   },
+   {
+    "q": "Who provides finance in Malaysia?",
+    "a": "Licensed Malaysian banks, including Islamic banks. T57 does not lend."
+   }
+  ],
+  "title": "T57 Features in Malaysia | Trade, Finance, Logistics",
+  "description": "Verified membership, trade execution, finance, escrow, insurance, logistics and AI intelligence for food businesses in Malaysia.",
+  "parent": "mkt-my-overview"
+ },
+ "mkt-my-compliance": {
+  "route": "/markets/malaysia/compliance",
+  "section": "markets",
+  "name": "Malaysia: Regulatory Guide",
+  "h1": "Know the rules before you ship.",
+  "answer": "Know the rules for food trade in Malaysia before you ship.",
+  "faqs": [
+   {
+    "q": "Is this guide legal advice?",
+    "a": "No. It is a summary to help you prepare. Always confirm requirements with the relevant authority or your customs broker."
+   },
+   {
+    "q": "How often is the guide updated?",
+    "a": "T57 reviews it regularly."
+   },
+   {
+    "q": "Can T57 handle customs clearance for me?",
+    "a": "T57 connects you with licensed customs brokers, who handle clearance on the shared trade record."
+   }
+  ],
+  "title": "Food Trade Rules in Malaysia | T57 Regulatory Guide",
+  "description": "The main bodies, documents and rules for food trade in Malaysia: MOH food safety, MAQIS, JAKIM halal, customs, e-invoicing and PDPA.",
+  "parent": "mkt-my-overview"
+ },
+ "mkt-my-start": {
+  "route": "/markets/malaysia/getting-started",
+  "section": "markets",
+  "name": "Malaysia: Getting Started",
+  "h1": "Four steps to your first trade.",
+  "answer": "Start trading on T57 in Malaysia in four steps.",
+  "faqs": [
+   {
+    "q": "How long until I can trade?",
+    "a": "Once verification is complete."
+   },
+   {
+    "q": "Is there a cost to join?",
+    "a": "See Pricing for membership options."
+   },
+   {
+    "q": "Can someone help me in Malay?",
+    "a": "Yes. Our Malaysia team supports members in English and Malay."
+   }
+  ],
+  "title": "Get Started with T57 in Malaysia",
+  "description": "Join T57 in Malaysia in four steps: apply, get verified, set up and trade, with help from our local team.",
+  "parent": "mkt-my-overview"
+ },
+ "mkt-tr-overview": {
+  "route": "/markets/turkiye/overview",
+  "section": "markets",
+  "name": "Türkiye: Market Overview",
+  "h1": "Türkiye's fruit, nuts and food, to the Gulf and Asia.",
+  "answer": "Sell Türkiye's fruit, nuts and food products to verified buyers across the Gulf and Asia.",
+  "faqs": [
+   {
+    "q": "Can Turkish companies trade in USD or EUR?",
+    "a": "Yes, through licensed payment and escrow partners, in any currency they support."
+   },
+   {
+    "q": "Is halal certification needed for Gulf exports?",
+    "a": "For some products, yes. T57 shows the requirements for each product and destination."
+   },
+   {
+    "q": "Is T57 available in Turkish?",
+    "a": "English and Turkish."
+   }
+  ],
+  "title": "T57 in Türkiye | Verified Food Export Network",
+  "description": "Sell Turkish fruit, nuts and food products to verified buyers in the Gulf and Asia, with documents on one record and payments through licensed partners.",
+  "parent": "markets"
+ },
+ "mkt-tr-features": {
+  "route": "/markets/turkiye/features",
+  "section": "markets",
+  "name": "Türkiye: Features Available",
+  "h1": "Every T57 capability, in Türkiye.",
+  "answer": "Everything you need to trade food in Türkiye, in one place.",
+  "faqs": [
+   {
+    "q": "Are all features available in every market?",
+    "a": "Yes. The partners that deliver regulated services differ by country."
+   },
+   {
+    "q": "Can I pay in TRY?",
+    "a": "Yes, through licensed payment and escrow partners."
+   },
+   {
+    "q": "Who provides finance in Türkiye?",
+    "a": "Licensed Turkish banks, including participation banks. T57 does not lend."
+   }
+  ],
+  "title": "T57 Features in Türkiye | Trade, Finance, Logistics",
+  "description": "Verified membership, trade execution, finance, escrow, insurance, logistics and AI intelligence for food businesses in Türkiye.",
+  "parent": "mkt-tr-overview"
+ },
+ "mkt-tr-compliance": {
+  "route": "/markets/turkiye/compliance",
+  "section": "markets",
+  "name": "Türkiye: Regulatory Guide",
+  "h1": "Know the rules before you ship.",
+  "answer": "Know the rules for food trade in Türkiye before you ship.",
+  "faqs": [
+   {
+    "q": "Is this guide legal advice?",
+    "a": "No. It is a summary to help you prepare. Always confirm requirements with the relevant authority or your customs broker."
+   },
+   {
+    "q": "How often is the guide updated?",
+    "a": "T57 reviews it regularly."
+   },
+   {
+    "q": "Can T57 handle customs clearance for me?",
+    "a": "T57 connects you with licensed customs brokers, who handle clearance on the shared trade record."
+   }
+  ],
+  "title": "Food Trade Rules in Türkiye | T57 Regulatory Guide",
+  "description": "The main bodies, documents and rules for food trade in Türkiye: Ministry of Agriculture and Forestry, Ministry of Trade customs, HAK halal, e-Fatura and KVKK.",
+  "parent": "mkt-tr-overview"
+ },
+ "mkt-tr-start": {
+  "route": "/markets/turkiye/getting-started",
+  "section": "markets",
+  "name": "Türkiye: Getting Started",
+  "h1": "Four steps to your first trade.",
+  "answer": "Start trading on T57 in Türkiye in four steps.",
+  "faqs": [
+   {
+    "q": "How long until I can trade?",
+    "a": "Once verification is complete."
+   },
+   {
+    "q": "Is there a cost to join?",
+    "a": "See Pricing for membership options."
+   },
+   {
+    "q": "Can someone help me in Turkish?",
+    "a": "Yes. Our Türkiye team supports members in English and Turkish."
+   }
+  ],
+  "title": "Get Started with T57 in Türkiye",
+  "description": "Join T57 in Türkiye in four steps: apply, get verified, set up and trade, with help from our local team.",
+  "parent": "mkt-tr-overview"
+ },
  "governments": {
   "route": "/who-we-serve/governments",
   "section": "who-we-serve",

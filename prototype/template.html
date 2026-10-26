@@ -13,7 +13,7 @@
   color-scheme: light;
 }
 [data-world="financiers"] { --world:var(--amber-flame); --world-text:var(--amber-flame); --world-ink:var(--persian-indigo); }
-[data-world="home"], [data-world="who-we-serve"], [data-world="why-t57"], [data-world="capabilities"], [data-world^="cap-"], [data-world^="ai-"], [data-world^="platform"], [data-world="trust"], [data-world^="trust-"], [data-world="club-membership"], [data-world="rfq-bidding"], [data-world="virtual-trade-desk"], [data-world="market-intelligence"], [data-world="trade-finance"], [data-world="nft-funding"], [data-world="elc-15-minutes"], [data-world="escrow-payments"], [data-world="alternative-payments"], [data-world="digital-bank"], [data-world="document-audit-trail"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
+[data-world="home"], [data-world="who-we-serve"], [data-world="why-t57"], [data-world="capabilities"], [data-world^="cap-"], [data-world^="ai-"], [data-world^="platform"], [data-world="trust"], [data-world^="trust-"], [data-world^="markets"], [data-world^="mkt-"], [data-world="club-membership"], [data-world="rfq-bidding"], [data-world="virtual-trade-desk"], [data-world="market-intelligence"], [data-world="trade-finance"], [data-world="nft-funding"], [data-world="elc-15-minutes"], [data-world="escrow-payments"], [data-world="alternative-payments"], [data-world="digital-bank"], [data-world="document-audit-trail"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
 [data-world="governments"] { --world:var(--electric-sapphire); --world-text:#8f93ff; --world-ink:#ffffff; }
 [data-world="sellers"], [data-world="buyers"], [data-world="enterprises"], [data-world="food-processors"], [data-world="cooperatives"], [data-world="collaborators"], [data-world="service-providers"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
 [data-world="traders"] { --world:var(--persian-blue); --world-text:var(--mint-cream); --world-ink:#ffffff; }
@@ -717,6 +717,36 @@ a.feat.twelve b::after { content:" →"; color:var(--strong-cyan); } a.feat.twel
 @keyframes tp-stamp { 0%, 48% { opacity:0; transform:rotate(-4deg) scale(1.4); } 54%, 88% { opacity:1; transform:rotate(-4deg) scale(1); } 96%, 100% { opacity:0; } }
 @media (prefers-reduced-motion: reduce) { .tp-card li svg, .tp-stamp { animation:none; stroke:var(--strong-cyan); opacity:1; } }
 @media (max-width: 1000px) { .tpass-wrap { grid-template-columns:1fr; gap:32px; } .tpass { position:static; } }
+
+/* Markets: the corridor map, corridor cards, document checklist */
+.mkmap { margin:36px 0 8px; border-radius:16px; overflow:hidden; background:var(--night); box-shadow:0 24px 60px -24px #02246c66; }
+.mkmap svg { display:block; width:100%; height:auto; }
+.cm-grid circle { fill:#c9cdf026; }
+.cm-arc { fill:none; stroke:#39c4c440; stroke-width:2; }
+.cm-arc.cm-af { stroke:#f8b71666; stroke-dasharray:6 8; }
+.cm-go, .cm-back { fill:none; stroke-width:3; stroke-linecap:round; stroke-dasharray:14 600; animation:cm-run 3.6s linear infinite; animation-delay:var(--d); }
+.cm-go { stroke:var(--strong-cyan); } .cm-back { stroke:#8f93ff; animation-direction:reverse; }
+@keyframes cm-run { from { stroke-dashoffset:614; } to { stroke-dashoffset:0; } }
+.cm-pt circle { fill:var(--strong-cyan); } .cm-pt .cm-halo { fill:#39c4c41f; stroke:#39c4c466; stroke-width:1.5; animation:cm-halo 3s var(--ease-in-out) infinite; transform-box:fill-box; transform-origin:center; }
+@keyframes cm-halo { 50% { transform:scale(1.35); opacity:.4; } }
+.cm-pt text { font:500 22px var(--font-text); fill:#fff; } .cm-pt.on circle { fill:var(--amber-flame); } .cm-pt.on text { font-weight:700; fill:var(--amber-flame); }
+.cm-pt.af circle { fill:var(--amber-flame); } .cm-pt.af text { fill:#f8d27a; font-size:20px; }
+a.cm-pt:hover text { text-decoration:underline; }
+.mkmap figcaption { display:flex; flex-wrap:wrap; gap:8px 24px; padding:14px 24px 18px; font-size:13px; color:#c9cdf0; }
+.mkmap figcaption i { display:inline-block; width:22px; height:3px; margin-right:8px; vertical-align:middle; background:var(--strong-cyan); } .mkmap figcaption i.lg-af { background:var(--amber-flame); }
+.mkmap figcaption em { margin-left:auto; font-style:normal; opacity:.7; }
+@media (prefers-reduced-motion: reduce) { .cm-go, .cm-back, .cm-halo { animation:none !important; } .cm-go, .cm-back { display:none; } }
+@media (max-width: 640px) { .cm-pt text { font-size:46px; } .cm-pt.af text { font-size:40px; } }
+.corr { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap:16px; margin-top:28px; }
+.corr-i { display:grid; gap:6px; padding:20px; border-radius:12px; background:#fff; border:1px solid var(--line); border-left:4px solid var(--strong-cyan); }
+.chapter:not(.alt) .corr-i { background:var(--surface-alt, #f4f6fb); }
+.corr-i b { font:500 18px/24px var(--font-display); color:var(--ink-strong); } .corr-i span { font-size:15px; line-height:23px; }
+.need { list-style:none; margin:32px 0 0; padding:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap:12px; }
+.need li { position:relative; padding:16px 18px 16px 52px; border-radius:10px; background:#fff; border:1px solid var(--line); font:500 16px/22px var(--font-display); color:var(--ink-strong); }
+.need li::before { content:""; position:absolute; left:18px; top:15px; width:20px; height:20px; border-radius:6px; border:2px solid var(--strong-cyan); }
+.need li::after { content:""; position:absolute; left:24px; top:19px; width:7px; height:11px; border:solid var(--persian-indigo); border-width:0 2.5px 2.5px 0; transform:rotate(45deg); }
+.life.cmap-nav.c3 { grid-template-columns:repeat(3, minmax(0, 1fr)); }
+@media (max-width: 1000px) { .life.cmap-nav.c3 { grid-template-columns:repeat(2, minmax(0, 1fr)); } } @media (max-width: 640px) { .life.cmap-nav.c3 { grid-template-columns:1fr; } }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -729,7 +759,7 @@ a.feat.twelve b::after { content:" →"; color:var(--strong-cyan); } a.feat.twel
     <a href="#home" data-go="home" aria-label="T57.ai home">
       <svg class="logo" id="logo" viewBox="775 418 998 244" role="img" aria-label="T57">{{LOGO}}</svg>
     </a>
-    <span class="label-proto">Prototype · home, audiences, Why T57, Capabilities, AI Native, Platform and Trust</span>
+    <span class="label-proto">Prototype · home, audiences, Why T57, Capabilities, AI Native, Platform, Trust and Markets</span>
     <nav class="worlds" aria-label="Microsites in this prototype">
       <a href="#governments" data-go="governments" data-petal="all"><i style="background:var(--electric-sapphire)"></i><span>Governments</span><span class="long">&nbsp;&amp; Regulators</span></a>
       <a href="#financiers" data-go="financiers" data-petal="finance"><i style="background:var(--amber-flame)"></i><span>Financiers</span><span class="long">&nbsp;&amp; Investors</span></a>
@@ -745,7 +775,7 @@ a.feat.twelve b::after { content:" →"; color:var(--strong-cyan); } a.feat.twel
 <nav class="menu gutter" id="menu" aria-label="All sections" hidden>
   <div class="wrap menu-grid">
     <div class="menu-aud"><h2>Who we serve</h2><ul><li><a href="#governments" data-go="governments">Governments &amp; Regulators<em></em></a></li><li><a href="#financiers" data-go="financiers">Financiers &amp; Investors<em></em></a></li><li><a href="#sellers" data-go="sellers">Sellers &amp; Exporters<em></em></a></li><li><a href="#buyers" data-go="buyers">Buyers &amp; Importers<em></em></a></li><li><a href="#traders" data-go="traders">Traders &amp; Aggregators<em></em></a></li><li><a href="#enterprises" data-go="enterprises">Manufacturers &amp; Enterprises<em></em></a></li><li><a href="#food-processors" data-go="food-processors">Food Processors<em></em></a></li><li><a href="#farmers" data-go="farmers">Farmers &amp; Producers<em></em></a></li><li><a href="#cooperatives" data-go="cooperatives">Cooperatives &amp; FPOs<em></em></a></li><li><a href="#collaborators" data-go="collaborators">Partners &amp; Collaborators<em></em></a></li><li><a href="#service-providers" data-go="service-providers">Service Providers<em></em></a></li></ul></div>
-    <div><h2>All sections</h2><ul class="menu-l0"><li><a href="#home" data-go="home">Home<em>/</em></a></li><li><a href="#who-we-serve" data-go="who-we-serve">Who We Serve<em>/who-we-serve</em></a></li><li><a href="#why-t57" data-go="why-t57">Why T57<em>/why-t57</em></a></li><li><a href="#capabilities" data-go="capabilities">Capabilities<em>/capabilities</em></a></li><li><a href="#ai-native" data-go="ai-native">AI Native<em>/ai-native</em></a></li><li><a href="#platform" data-go="platform">Platform<em>/platform</em></a></li><li><a href="#trust" data-go="trust">Trust &amp; Compliance<em>/trust</em></a></li><li><span>Markets<em>/markets</em></span></li><li><span>Pricing<em>/pricing</em></span></li><li><span>Resources<em>/resources</em></span></li><li><span>Help Center<em>/help</em></span></li><li><span>Partnerships<em>/partnerships</em></span></li><li><span>About T57<em>/about</em></span></li><li><span>Contact<em>/contact</em></span></li></ul></div>
+    <div><h2>All sections</h2><ul class="menu-l0"><li><a href="#home" data-go="home">Home<em>/</em></a></li><li><a href="#who-we-serve" data-go="who-we-serve">Who We Serve<em>/who-we-serve</em></a></li><li><a href="#why-t57" data-go="why-t57">Why T57<em>/why-t57</em></a></li><li><a href="#capabilities" data-go="capabilities">Capabilities<em>/capabilities</em></a></li><li><a href="#ai-native" data-go="ai-native">AI Native<em>/ai-native</em></a></li><li><a href="#platform" data-go="platform">Platform<em>/platform</em></a></li><li><a href="#trust" data-go="trust">Trust &amp; Compliance<em>/trust</em></a></li><li><a href="#markets" data-go="markets">Markets<em>/markets</em></a></li><li><span>Pricing<em>/pricing</em></span></li><li><span>Resources<em>/resources</em></span></li><li><span>Help Center<em>/help</em></span></li><li><span>Partnerships<em>/partnerships</em></span></li><li><span>About T57<em>/about</em></span></li><li><span>Contact<em>/contact</em></span></li></ul></div>
   </div>
 </nav>
 <main id="main">
