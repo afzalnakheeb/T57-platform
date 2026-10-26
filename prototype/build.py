@@ -51,11 +51,11 @@ open(f'{R}/content/chrome-top.html', 'w').write(relink(top))
 open(f'{R}/content/chrome-bottom.html', 'w').write(relink(bottom))
 
 text = lambda s: re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
-pages = {}
+pages, ARTS = {}, {}
 for m in re.finditer(r'(<article class="world" id="([a-z0-9-]+)".*?</article>)', worlds, re.S):
     art, i = m.group(1), m.group(2)
     art = art.replace(' hidden>', '>', 1)
-    open(f'{R}/content/pages/{i}.html', 'w').write(relink(art, i) + '\n')
+    ARTS[i] = art
     h1 = text(re.search(r'<h1[^>]*>(.*?)</h1>', art, re.S).group(1))
     std = text(re.search(r'<p class="std">(.*?)</p>', art, re.S).group(1))
     faqs = [{'q': text(q), 'a': text(x)} for q, x in re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p></details>', art, re.S)]
@@ -64,6 +64,59 @@ for m in re.finditer(r'(<article class="world" id="([a-z0-9-]+)".*?</article>)',
     pm = re.search(r'data-parent="([^"]+)"', art[:400])
     if pm: pages[i]['parent'] = pm.group(1)
 json.dump(pages, open(f'{R}/content/pages.json', 'w'), indent=1, ensure_ascii=False)
+
+# Microsite bar: every page shows the real pages of its microsite, never jump links within the page.
+# A section's bar lists its overview and first-level pages; a group with pages of its own (a capability
+# group, a market) lists the group and its pages. Who We Serve lists the audiences.
+BY_ROUTE = {p['route']: i for i, p in pages.items()}
+def up(i):
+    p = pages[i]
+    if p.get('parent'): return p['parent']
+    parts = p['route'].strip('/').split('/')
+    for k in range(len(parts) - 1, 0, -1):
+        r = '/' + '/'.join(parts[:k])
+        if r in BY_ROUTE: return BY_ROUTE[r]
+    return None
+PARENT = {i: up(i) for i in pages if i != 'home'}
+KIDS = {}
+for i, q in PARENT.items():
+    if q: KIDS.setdefault(q, []).append(i)
+def short(i, role=''):
+    n = re.sub(r'\s+and\s+', ' & ', html.unescape(pages[i]['name']))
+    if ': ' in n: n = n.split(': ')[0] if role == 'group' else n.split(': ', 1)[1]
+    if role == 'section': n = re.sub(r' Overview$', '', n)
+    return n
+AUD = re.findall(r'data-go="([a-z-]+)"', re.search(r'<div class="menu-aud">.*?</ul>', t, re.S).group(0))
+def bar(i):
+    chain = [i]
+    while PARENT.get(chain[-1]): chain.append(PARENT[chain[-1]])
+    top = chain[-1]                      # section overview
+    group = next((c for c in chain if c != top and KIDS.get(c) and PARENT.get(c) == top), None)
+    if group:
+        head, items = top, [group] + KIDS[group]
+    else:
+        kids = KIDS.get(top, [])
+        if top == 'who-we-serve': kids = sorted(kids, key=lambda k: AUD.index(k) if k in AUD else 99)
+        head, items = None, [top] + kids
+    links = []
+    for k in items:
+        label = 'Overview' if k == top else short(k, 'group' if KIDS.get(k) else '')
+        cur = ' aria-current="page"' if k == i or (k in chain and k != top and k != group) else ''
+        links.append(f'<a href="#{k}" data-go="{k}"{cur}>{html.escape(label, quote=False)}</a>')
+    return head, ''.join(links)
+for i, art in ARTS.items():
+    m = re.search(r'(<div class="micro gutter">\s*<div class="wrap micro-in">\s*)(<b>.*?</b>)?(.*?)(\s*</div>\s*</div>)', art, re.S)
+    if m and i != 'home':
+        head, links = bar(i)
+        b = m.group(2) or ''
+        if b:
+            # the section name in the bar always links to the section overview
+            top = head or [c for c in [i] + [PARENT.get(i)] if c][-1]
+            sec = i
+            while PARENT.get(sec): sec = PARENT[sec]
+            b = re.sub(r'(</svg>).*?(</b>)', lambda mm: f'{mm.group(1)}<a href="#{sec}" data-go="{sec}">{html.escape(short(sec, 'section'), quote=False)}</a>{mm.group(2)}', b, count=1, flags=re.S)
+        art = art[:m.start()] + m.group(1) + b + '\n      ' + links + m.group(4) + art[m.end():]
+    open(f'{R}/content/pages/{i}.html', 'w').write(relink(art, i) + '\n')
 
 os.makedirs(f'{R}/public/proto', exist_ok=True)
 names = {i: html.unescape(re.search(r'aria-label="([^"]+)"', a).group(1)) for i, a in arts}
