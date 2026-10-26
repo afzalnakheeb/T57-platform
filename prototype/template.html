@@ -13,7 +13,7 @@
   color-scheme: light;
 }
 [data-world="financiers"] { --world:var(--amber-flame); --world-text:var(--amber-flame); --world-ink:var(--persian-indigo); }
-[data-world="home"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
+[data-world="home"], [data-world="who-we-serve"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
 [data-world="governments"] { --world:var(--electric-sapphire); --world-text:#8f93ff; --world-ink:#ffffff; }
 [data-world="sellers"], [data-world="buyers"], [data-world="enterprises"], [data-world="food-processors"], [data-world="cooperatives"], [data-world="collaborators"], [data-world="service-providers"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
 [data-world="traders"] { --world:var(--persian-blue); --world-text:var(--mint-cream); --world-ink:#ffffff; }
@@ -196,6 +196,7 @@ body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-
 /* Transition overlay */
 .veil { position:fixed; inset:0; z-index:100; pointer-events:none; display:grid; place-items:center; visibility:hidden; }
 .veil.go { visibility:visible; pointer-events:auto; }
+html.arriving .veil { visibility:visible; } html.arriving .veil .bg, html.arriving .veil .mark { opacity:1; } html.arriving .veil svg.arc { display:none; }
 .veil .bg { position:absolute; inset:0; background:var(--night); opacity:0; }
 .veil svg.arc { position:absolute; inset:0; width:100%; height:100%; }
 .veil svg.arc path { fill:none; stroke:var(--persian-indigo); }
@@ -613,7 +614,7 @@ a.aud:hover { transform:translateY(-3px); box-shadow:0 14px 30px -18px #02246c66
 <nav class="menu gutter" id="menu" aria-label="All sections" hidden>
   <div class="wrap menu-grid">
     <div class="menu-aud"><h2>Who we serve</h2><ul><li><a href="#governments" data-go="governments">Governments &amp; Regulators<em></em></a></li><li><a href="#financiers" data-go="financiers">Financiers &amp; Investors<em></em></a></li><li><a href="#sellers" data-go="sellers">Sellers &amp; Exporters<em></em></a></li><li><a href="#buyers" data-go="buyers">Buyers &amp; Importers<em></em></a></li><li><a href="#traders" data-go="traders">Traders &amp; Aggregators<em></em></a></li><li><a href="#enterprises" data-go="enterprises">Manufacturers &amp; Enterprises<em></em></a></li><li><a href="#food-processors" data-go="food-processors">Food Processors<em></em></a></li><li><a href="#farmers" data-go="farmers">Farmers &amp; Producers<em></em></a></li><li><a href="#cooperatives" data-go="cooperatives">Cooperatives &amp; FPOs<em></em></a></li><li><a href="#collaborators" data-go="collaborators">Partners &amp; Collaborators<em></em></a></li><li><a href="#service-providers" data-go="service-providers">Service Providers<em></em></a></li></ul></div>
-    <div><h2>All sections</h2><ul class="menu-l0"><li><a href="#home" data-go="home">Home<em>/</em></a></li><li><a href="#home" data-go="home">Who We Serve<em>/who-we-serve</em></a></li><li><span>Why T57<em>/why-t57</em></span></li><li><span>Capabilities<em>/capabilities</em></span></li><li><span>AI Native<em>/ai-native</em></span></li><li><span>Platform<em>/platform</em></span></li><li><span>Trust &amp; Compliance<em>/trust</em></span></li><li><span>Markets<em>/markets</em></span></li><li><span>Pricing<em>/pricing</em></span></li><li><span>Resources<em>/resources</em></span></li><li><span>Help Center<em>/help</em></span></li><li><span>Partnerships<em>/partnerships</em></span></li><li><span>About T57<em>/about</em></span></li><li><span>Contact<em>/contact</em></span></li></ul></div>
+    <div><h2>All sections</h2><ul class="menu-l0"><li><a href="#home" data-go="home">Home<em>/</em></a></li><li><a href="#who-we-serve" data-go="who-we-serve">Who We Serve<em>/who-we-serve</em></a></li><li><span>Why T57<em>/why-t57</em></span></li><li><span>Capabilities<em>/capabilities</em></span></li><li><span>AI Native<em>/ai-native</em></span></li><li><span>Platform<em>/platform</em></span></li><li><span>Trust &amp; Compliance<em>/trust</em></span></li><li><span>Markets<em>/markets</em></span></li><li><span>Pricing<em>/pricing</em></span></li><li><span>Resources<em>/resources</em></span></li><li><span>Help Center<em>/help</em></span></li><li><span>Partnerships<em>/partnerships</em></span></li><li><span>About T57<em>/about</em></span></li><li><span>Contact<em>/contact</em></span></li></ul></div>
   </div>
 </nav>
 <main id="main">

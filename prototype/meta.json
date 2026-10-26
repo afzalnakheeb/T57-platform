@@ -1,0 +1,54 @@
+{
+ "governments": {
+  "title": "T57 for Governments & Regulators | Live Food Security Intelligence & Clean Procurement",
+  "description": "T57 helps governments and regulators build live, governable food systems by unifying food security intelligence and secure, transparent procurement on a single platform, turning fragmented agrifood data into actionable, policy-ready insights that reduce waste and stabilize prices."
+ },
+ "financiers": {
+  "title": "T57 for Financiers & Investors | Vetted Food & Agri Opportunities",
+  "description": "T57 helps financiers and investors deploy capital into curated, contract-backed food and agri opportunities. Gain faster due diligence, stronger transaction visibility, and tighter counterparty risk control across the food system."
+ },
+ "sellers": {
+  "title": "T57 for Sellers & Exporters | Trusted Agri Export Platform with Finance, Intelligence & Smart Contracts",
+  "description": "Discover how T57 helps food and agri sellers & exporters find verified buyers, manage documentation, secure payments, and use real-time intelligence to grow markets with lowered risk."
+ },
+ "farmers": {
+  "title": "T57 for Farmers and Producers | Improve Market Access and Leverage World-Class AI Tools",
+  "description": "T57 helps farmers and producers access verified buyers, market and price intelligence, secure contracts, faster payments, and trade finance in the food and agri sector."
+ },
+ "enterprises": {
+  "title": "T57 for Manufacturers & Enterprises | Improved Business Velocity for Food and Agri Trade",
+  "description": "T57 helps food and agri manufacturers and enterprises digitize sourcing, RFQs, payments, settlements, trade finance, and audit trails on a single secure platform."
+ },
+ "food-processors": {
+  "title": "T57 for Food Processors | Supply Assurance and Trade Execution Platform for Food and Agri Trade",
+  "description": "T57 helps food processors digitize sourcing, RFQs, payments, trade finance, and documentation on a single secure platform, enabling plants to run with more reliable inputs and faster cash cycles."
+ },
+ "cooperatives": {
+  "title": "T57 for Cooperatives & FPOs | Superior Market Access, Finance and Trade Tools",
+  "description": "See how T57 helps Cooperatives & Farmer Producer Organizations trade directly, access real-time market and price intelligence, secure finance, manage logistics, and run clean, auditable operations for their members."
+ },
+ "collaborators": {
+  "title": "T57 Partner & Collaborator Network | Powering the Food and Agri Ecosystem",
+  "description": "T57 brings agronomists, financiers, logistics providers, certification bodies, universities, and agri specialists on one verified platform to enable smarter food trade, faster finance, and greater impact across the agri value chain."
+ },
+ "service-providers": {
+  "title": "T57 for Service Providers | Creating Impact in the Food and Agri Industry",
+  "description": "Join T57 as a service provider in food and agriculture. Reach verified demand, deliver trusted expertise, and grow through structured, lower-risk trade workflows."
+ },
+ "home": {
+  "title": "T57 | AI-Native Digital Trade Infrastructure for Food",
+  "description": "Verified food trade on one record: RFQs, contracts, trade finance, insurance, inspection and logistics for farmers, processors, traders and buyers."
+ },
+ "who-we-serve": {
+  "title": "Who We Serve | T57 Verified Food Trade Club",
+  "description": "T57 connects farmers, processors, traders, buyers, financiers, service providers and regulators on one verified food trade record."
+ },
+ "buyers": {
+  "title": "T57 for Buyers & Importers | Source from Verified Suppliers",
+  "description": "Source food from verified producers and processors. RFQs, contracts, escrow, LCs, inspection and logistics on one trade record."
+ },
+ "traders": {
+  "title": "T57 for Traders & Aggregators | Fund and Run Deals on One Record",
+  "description": "Verified suppliers and buyers, back-to-back contracts and finance from competing lenders, all on one food trade record."
+ }
+}

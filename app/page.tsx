@@ -1,19 +1,8 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import Script from 'next/script';
+import MicrositePage from '../components/MicrositePage';
+import { metadataFor } from '../lib/site';
 
-// Two-world prototype (Farmers, Financiers). Markup is rendered on the server
-// so it is crawlable; the scenes and transitions run from public/proto/worlds.js.
-const markup = fs.readFileSync(
-  path.join(process.cwd(), 'content', 'worlds-body.html'),
-  'utf8',
-);
+export const metadata = metadataFor('home');
 
 export default function Home() {
-  return (
-    <>
-      <div dangerouslySetInnerHTML={{ __html: markup }} />
-      <Script src="/proto/worlds.js" strategy="afterInteractive" />
-    </>
-  );
+  return <MicrositePage id="home" />;
 }

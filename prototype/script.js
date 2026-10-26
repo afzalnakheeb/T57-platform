@@ -1,8 +1,8 @@
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const C = { green:'#008b8c', cyan:'#39c4c4', indigo:'#2f2e7d', amber:'#f8b716', night:'#0b1340', sapphire:'#8f93ff', mist:'#c9cdf0' };
-  const WORLD_PETAL = { home:'all', governments:'all', financiers:'finance', traders:'trade', sellers:'trade', farmers:'agri', buyers:'trade', enterprises:'agri', 'food-processors':'agri', cooperatives:'agri', collaborators:'all', 'service-providers':'logistics' };
-  const WORLD_NAME = { home:'T57.ai', governments:'Governments & Regulators', financiers:'Financiers & Investors', traders:'Traders & Aggregators', sellers:'Sellers & Exporters', farmers:'Farmers & Producers', buyers:'Buyers & Importers', enterprises:'Manufacturers & Enterprises', 'food-processors':'Food Processors', cooperatives:'Cooperatives & FPOs', collaborators:'Partners & Collaborators', 'service-providers':'Service Providers' };
+  const WORLD_PETAL = { home:'all', 'who-we-serve':'all', governments:'all', financiers:'finance', traders:'trade', sellers:'trade', farmers:'agri', buyers:'trade', enterprises:'agri', 'food-processors':'agri', cooperatives:'agri', collaborators:'all', 'service-providers':'logistics' };
+  const WORLD_NAME = { home:'T57.ai', 'who-we-serve':'Who We Serve', governments:'Governments & Regulators', financiers:'Financiers & Investors', traders:'Traders & Aggregators', sellers:'Sellers & Exporters', farmers:'Farmers & Producers', buyers:'Buyers & Importers', enterprises:'Manufacturers & Enterprises', 'food-processors':'Food Processors', cooperatives:'Cooperatives & FPOs', collaborators:'Partners & Collaborators', 'service-providers':'Service Providers' };
 
   /* ---------- Market data (real, published figures; refreshed monthly) ----------
      FAO Food Price Index and sub-indices, nominal, 2014-2016 = 100. Source: FAO, food_price_indices_data.csv, release of 2 Oct 2026.
@@ -384,11 +384,13 @@
   }
   const anim = (el, kf, o) => el.animate(kf, Object.assign({ fill: 'forwards', easing: 'cubic-bezier(.65,0,.35,1)' }, o)).finished;
 
-  async function go(name, push) {
-    if (name === current || busy) return;
+  // Leaving: the veil closes over this page with the destination's petal, then the browser loads the real page.
+  async function go(name, href) {
+    if (busy) return;
+    if (name === current) { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); return; }
+    if (reduce) { location.href = href; return; }
     busy = true;
-    if (push !== false) { try { history.replaceState(null, '', '#' + name); } catch (e) {} }
-    if (reduce || !current) { show(name); scrollTo(0, 0); busy = false; return; }
+    try { sessionStorage.setItem('t57-go', name); } catch (e) {}
     const petal = WORLD_PETAL[name];
     dest.textContent = WORLD_NAME[name];
     const petals = [...mark.querySelectorAll('.petal')];
@@ -396,7 +398,7 @@
     petals.forEach(p => p.getAnimations().forEach(a => a.cancel()));
     veil.classList.add('go');
     const out = document.getElementById(current);
-    anim(out, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.4, transform: 'scale(0.985)' }], { duration: 400 });
+    if (out) anim(out, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.4, transform: 'scale(0.985)' }], { duration: 400 });
     anim(vbg, [{ opacity: 0 }, { opacity: 1 }], { duration: 450, delay: 150 });
     anim(arcBold, [{ strokeDashoffset: arcBold.dataset.len }, { strokeDashoffset: 0 }], { duration: 700, delay: 100 });
     anim(arcSweep, [{ strokeDashoffset: arcSweep.dataset.len }, { strokeDashoffset: 0 }], { duration: 700, delay: 250 });
@@ -405,8 +407,24 @@
     anim(dest, [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 400, delay: 850 });
     const glowCol = petal === 'all' ? 'rgba(143,147,255,.9)' : 'rgba(57,196,196,.9)';
     await anim(target, [{ filter: 'none' }, { filter: `drop-shadow(0 0 6px ${glowCol})` }], { duration: 500, delay: 800 });
-    out.style.opacity = ''; out.style.transform = ''; out.getAnimations().forEach(a => a.cancel());
-    show(name); scrollTo(0, 0);
+    location.href = href;
+    addEventListener('pageshow', e => { if (e.persisted) { veil.classList.remove('go'); [vbg, mark, dest, arcBold, arcSweep, ...petals].forEach(el => el.getAnimations().forEach(a => a.cancel())); if (out) out.getAnimations().forEach(a => a.cancel()); busy = false; } }, { once: true });
+  }
+
+  // Arriving: the new page starts under the veil (set before first paint) and the petal opens onto it.
+  async function arrive(name) {
+    busy = true;
+    const petal = WORLD_PETAL[name] || 'all';
+    const petals = [...mark.querySelectorAll('.petal')];
+    const target = petal === 'all' ? mark : mark.querySelector('.p-' + petal);
+    dest.textContent = WORLD_NAME[name] || '';
+    veil.classList.add('go');
+    document.documentElement.classList.remove('arriving');
+    const hold = (el, k) => el.animate([k, k], { duration: 10, fill: 'forwards' });
+    hold(vbg, { opacity: 1 }); hold(mark, { opacity: 1, transform: 'scale(1)' }); hold(dest, { opacity: 1 });
+    [arcBold, arcSweep].forEach(p => hold(p, { strokeDashoffset: 0 }));
+    petals.forEach(p => { if (petal !== 'all' && p !== target) hold(p, { opacity: p.classList.contains('p-ring') ? 0.35 : 0.12 }); });
+    await new Promise(r => setTimeout(r, 120));
     const lines = [...document.querySelectorAll('#' + name + ' .hero h1 .ln, #' + name + ' .hero .std, #' + name + ' .hero .actions')];
     lines.forEach((l, i) => l.animate([{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }], { duration: 600, delay: 250 + i * 90, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
     anim(mark, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0, transform: 'scale(2.6)' }], { duration: 650, easing: 'cubic-bezier(.65,0,.35,1)' });
@@ -504,12 +522,14 @@
 
   document.addEventListener('click', e => {
     const tp = e.target.closest('[data-tone-pick]'); if (tp) { setTone(tp.dataset.tonePick); if (!busy) intro(); return; }
-    const a = e.target.closest('[data-go]'); if (a) { e.preventDefault(); go(a.dataset.go); return; }
+    const a = e.target.closest('a[data-go]'); if (a && !e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0) { e.preventDefault(); go(a.dataset.go, a.href); return; }
     if (e.target.closest('#replay')) { e.preventDefault(); intro(); }
   });
 
-  const start = (location.hash || '').slice(1);
-  show(WORLD_PETAL[start] ? start : 'home'); scrollTo(0, 0); setTimeout(() => scrollTo(0, 0), 300);
-  addEventListener('hashchange', () => { const h = location.hash.slice(1); if (WORLD_PETAL[h]) go(h, false); });
-  setTimeout(intro, 150);
+  const here = (document.querySelector('.world') || {}).id || 'home';
+  show(here);
+  let arriving = null, seen = false;
+  try { arriving = sessionStorage.getItem('t57-go'); sessionStorage.removeItem('t57-go'); seen = !!sessionStorage.getItem('t57-seen'); sessionStorage.setItem('t57-seen', '1'); } catch (e) {}
+  if (arriving && !reduce) arrive(here);
+  else { document.documentElement.classList.remove('arriving'); if (!seen) setTimeout(intro, 150); }
 })();

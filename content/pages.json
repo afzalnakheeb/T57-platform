@@ -1,0 +1,328 @@
+{
+ "home": {
+  "route": "/",
+  "name": "Home",
+  "h1": "Trade food with trust, from farm to buyer.",
+  "answer": "T57 connects verified producers, buyers, banks and logistics on one AI-native trade platform.",
+  "faqs": [
+   {
+    "q": "What is T57?",
+    "a": "T57 is AI-native digital trade infrastructure for the food industry. It brings verification, quotes, contracts, finance access, insurance, inspection and logistics onto one trade record for verified members."
+   },
+   {
+    "q": "Who can join T57?",
+    "a": "Any business in the food chain can apply, including farmers, fishers, processors, manufacturers, brands, traders, importers, wholesalers, supermarkets and HoReCa buyers. Every member is verified before trading."
+   },
+   {
+    "q": "Does T57 lend money or hold my funds?",
+    "a": "No. T57 does not lend, hold client funds, own goods or provide transport. Finance, escrow, insurance and logistics are provided by licensed partners through the platform."
+   },
+   {
+    "q": "Which countries does T57 cover?",
+    "a": "T57's founding markets are Saudi Arabia, the UAE, India, Malaysia and Türkiye. Businesses in other countries can apply for membership online."
+   },
+   {
+    "q": "How does T57 use AI?",
+    "a": "AI helps with matching, risk checks, document preparation and forecasting. People make the final decisions, and any adverse decision is reviewed by a person."
+   }
+  ],
+  "title": "T57 | AI-Native Digital Trade Infrastructure for Food",
+  "description": "Verified food trade on one record: RFQs, contracts, trade finance, insurance, inspection and logistics for farmers, processors, traders and buyers."
+ },
+ "who-we-serve": {
+  "route": "/who-we-serve",
+  "name": "Who We Serve",
+  "h1": "Bring every part of the food chain into one verified trade club.",
+  "answer": "T57 exists to connect everyone who grows, makes, buys, finances and regulates food on one trusted record.",
+  "faqs": [
+   {
+    "q": "Who can join T57?",
+    "a": "Any business or institution in the food chain can apply, from farmers and fishers to processors, brands, traders, importers, supermarkets, HoReCa buyers, lenders, insurers, service providers and government bodies."
+   },
+   {
+    "q": "Why does T57 verify every member?",
+    "a": "Verification lets every member trade with confidence. It also gives lenders and insurers the trusted information they need to support a trade."
+   },
+   {
+    "q": "Can individuals join T57?",
+    "a": "T57 is built for registered businesses and institutions. Individual farmers can join through a cooperative or producer organization."
+   }
+  ],
+  "title": "Who We Serve | T57 Verified Food Trade Club",
+  "description": "T57 connects farmers, processors, traders, buyers, financiers, service providers and regulators on one verified food trade record."
+ },
+ "governments": {
+  "route": "/who-we-serve/governments",
+  "name": "Governments and Regulators",
+  "h1": "See your food supply. Act before shortages.",
+  "answer": "Live trade data, food-security alerts and transparent tenders, in one view for ministries and agencies.",
+  "faqs": [
+   {
+    "q": "How does T57 support national and regional food-security strategies in practice?",
+    "a": "Many countries are now expanding strategic reserves and silo capacity to hold months’ worth of essential commodities. T57 complements such physical infrastructure by tracking self-sufficiency, stock levels, and import exposure in real time. This combination of physical reserves and digital intelligence helps governments move from reactive to anticipatory food-security management."
+   },
+   {
+    "q": "Why is it important to channel private and impact capital into agriculture and food systems, beyond public budgets?",
+    "a": "Despite agriculture’s historical role in employment and food security, global investors are only now seeking credible, measurable pathways to support food systems as part of their climate and SDG commitments. T57 helps governments present investable, data-backed opportunities, from model support centers to special agri zones and CSR programs, with transparent performance and impact tracking that meets both regulatory and investor expectations."
+   }
+  ],
+  "title": "T57 for Governments & Regulators | Live Food Security Intelligence & Clean Procurement",
+  "description": "T57 helps governments and regulators build live, governable food systems by unifying food security intelligence and secure, transparent procurement on a single platform, turning fragmented agrifood data into actionable, policy-ready insights that reduce waste and stabilize prices."
+ },
+ "financiers": {
+  "route": "/who-we-serve/financiers",
+  "name": "Financiers and Investors",
+  "h1": "Finance verified food trade, with less risk.",
+  "answer": "Every deal comes with verified parties, documents and shipment data, from deal to settlement.",
+  "faqs": [
+   {
+    "q": "How does T57 handle disputes and reduce risks for financiers and investors?",
+    "a": "T57 reduces risk through its curated club membership model, which ensures vetted, credible counterparties in a high-trust environment. Its virtual trade desk supports execution, manages disputes, oversees documentation, and ensures consistent transaction follow-through for greater investor confidence."
+   },
+   {
+    "q": "Why is food and agri finance an important opportunity for investors now?",
+    "a": "Global food import demand remains enormous: FAO puts the global food import bill at $2.22 trillion in 2025, which underlines the scale and persistence of trade-linked financing needs in food markets."
+   },
+   {
+    "q": "Is trade finance generally considered a lower risk than other forms of credit exposure?",
+    "a": "Yes. The ICC Trade Register highlights that trade, supply chain, and export finance products continue to exhibit low-risk profiles and resilient default performance across challenging market conditions."
+   },
+   {
+    "q": "Why do financiers need stronger diligence and monitoring tools in agri markets?",
+    "a": "Food and agri transactions often involve fragmented supply chains, cross-border counterparties, and climate or logistics volatility, which makes visibility and verification especially valuable. The International Fund for Agricultural Development (IFAD) notes that small-scale producers remain underserved by finance, highlighting that large financing needs go unmet because risk gaps discourage capital."
+   }
+  ],
+  "title": "T57 for Financiers & Investors | Vetted Food & Agri Opportunities",
+  "description": "T57 helps financiers and investors deploy capital into curated, contract-backed food and agri opportunities. Gain faster due diligence, stronger transaction visibility, and tighter counterparty risk control across the food system."
+ },
+ "sellers": {
+  "route": "/who-we-serve/sellers",
+  "name": "Sellers and Exporters",
+  "h1": "Sell to verified buyers, and get paid safely.",
+  "answer": "Find buyers, agree terms and get paid, with finance and logistics on one platform.",
+  "faqs": [
+   {
+    "q": "How does T57's virtual trade desk help in disputes and risk management?",
+    "a": "The virtual trade desk acts as a risk manager. In the event of disputes, the desk steps in to mediate, enforce agreed-upon terms and protect the seller's interests. If a buyer becomes insolvent or defaults, T57 shifts to a commission-based recovery and resale approach, helping redirect goods or recover value."
+   },
+   {
+    "q": "How does a platform help with the financing gap?",
+    "a": "Dedicated trade platforms that provide rich transaction and compliance data can lower perceived risk for financiers, improving access to credit and reducing the cost of capital. T57 is designed to expose this data in an auditable way so that funders can underwrite your deals with greater confidence."
+   },
+   {
+    "q": "Why is documentation and certification such a big issue in food exports?",
+    "a": "Food exports are subject to stringent import-country inspection and certification regimes. Incomplete or incorrect certification can lead to rejection or non-compliance at the border. A system that centralizes documents, links them to lots and shipments, and validates certifications reduces the risk of costly rejections and delays."
+   },
+   {
+    "q": "Can better intelligence really help in volatile export markets?",
+    "a": "Agricultural prices remain exposed to extreme weather, changing biofuel policies and rising trade barriers. Exporters using structured market, crop and price intelligence are better able to adjust sourcing and pricing to protect margins."
+   }
+  ],
+  "title": "T57 for Sellers & Exporters | Trusted Agri Export Platform with Finance, Intelligence & Smart Contracts",
+  "description": "Discover how T57 helps food and agri sellers & exporters find verified buyers, manage documentation, secure payments, and use real-time intelligence to grow markets with lowered risk."
+ },
+ "traders": {
+  "route": "/who-we-serve/traders",
+  "name": "Traders and Aggregators",
+  "h1": "Trade more volume, with less risk.",
+  "answer": "Match supply and demand faster, with verified partners, live prices and finance for each deal.",
+  "faqs": [
+   {
+    "q": "Can intermediaries join T57?",
+    "a": "Yes. Traders and intermediaries are welcome. They are labelled by role so every counterparty knows how the trade is structured."
+   },
+   {
+    "q": "Does T57 lend to traders?",
+    "a": "No. T57 does not lend. It sends your deal file to licensed lenders, who decide whether to fund the trade and on what terms."
+   },
+   {
+    "q": "How do back-to-back contracts work on T57?",
+    "a": "The supplier's accepted quote and the buyer's accepted order each generate a contract, and both sit on the same trade record so terms stay consistent."
+   },
+   {
+    "q": "What does a track record show?",
+    "a": "Your completed trades, verification status and role, so new counterparties and lenders can see your history before they deal with you."
+   }
+  ],
+  "title": "T57 for Traders & Aggregators | Fund and Run Deals on One Record",
+  "description": "Verified suppliers and buyers, back-to-back contracts and finance from competing lenders, all on one food trade record."
+ },
+ "buyers": {
+  "route": "/who-we-serve/buyers",
+  "name": "Buyers and Importers",
+  "h1": "Source food from suppliers you can trust.",
+  "answer": "Compare verified suppliers, track every shipment and pay only when terms are met.",
+  "faqs": [
+   {
+    "q": "How does T57 verify suppliers?",
+    "a": "T57 runs business and identity checks, compliance screening and, where needed, a physical check of the supplier's premises. Each verified supplier receives a T57 Passport and a role label."
+   },
+   {
+    "q": "Can I buy only from producers?",
+    "a": "Yes. Role labels show whether a supplier is an owner-producer, processor, trader or intermediary, so you can filter for producers."
+   },
+   {
+    "q": "Does T57 hold my payment?",
+    "a": "No. T57 does not hold client funds. Escrow and letters of credit are provided by licensed partners."
+   },
+   {
+    "q": "Can I buy locally as well as import?",
+    "a": "Yes. T57 supports domestic wholesale for supermarkets, HoReCa and institutions as well as cross-border trade."
+   }
+  ],
+  "title": "T57 for Buyers & Importers | Source from Verified Suppliers",
+  "description": "Source food from verified producers and processors. RFQs, contracts, escrow, LCs, inspection and logistics on one trade record."
+ },
+ "enterprises": {
+  "route": "/who-we-serve/enterprises",
+  "name": "Manufacturers and Enterprises",
+  "h1": "Secure supply. Protect your margins.",
+  "answer": "Source from verified producers, see price moves early and run every contract in one place.",
+  "faqs": [
+   {
+    "q": "Why do manufacturers and enterprises need a digital trade workflow now?",
+    "a": "Digital trade workflow is important for countering high losses, volatility, and operational friction in the industry. FAO reports 13.3% food loss before retail, while the World Bank points to ongoing food inflation and uneven commodity movement across markets."
+   },
+   {
+    "q": "How does T57 help reduce procurement risk?",
+    "a": "T57 helps structure RFQs, centralize bid visibility, and support trade in a more verified counterparty environment. In volatile markets, faster sourcing decisions and improved documentation can help protect supply continuity and margins."
+   },
+   {
+    "q": "Why is settlement speed so important in food and agri trade?",
+    "a": "Delayed settlement can slow shipments, tie up working capital, and undermine confidence in the trade relationship. Digital platforms that accelerate settlement improve market access and business efficiency."
+   },
+   {
+    "q": "Can T57 support governance, audit readiness, and compliance?",
+    "a": "Yes. T57 is designed to connect documents, milestones, counterparties, and payment records within a single, trackable workflow. This makes it easier for enterprise teams to support internal controls, reviews, and audit requirements across complex trade operations."
+   }
+  ],
+  "title": "T57 for Manufacturers & Enterprises | Improved Business Velocity for Food and Agri Trade",
+  "description": "T57 helps food and agri manufacturers and enterprises digitize sourcing, RFQs, payments, settlements, trade finance, and audit trails on a single secure platform."
+ },
+ "food-processors": {
+  "route": "/who-we-serve/food-processors",
+  "name": "Food Processors",
+  "h1": "Keep your plant running at full capacity.",
+  "answer": "Steady raw materials from verified farms, with quality checks and finance built in.",
+  "faqs": [
+   {
+    "q": "Why is digitizing trade especially important for food processors?",
+    "a": "Processors depend on timely and predictable raw material supplies and operate on tight margins. Supply assurance and trade execution platforms make inputs more predictable, optimize capacity utilization, and protect margins in volatile markets."
+   },
+   {
+    "q": "Does T57 help with working capital and financing challenges?",
+    "a": "Partner banks, escrow structures, faster eLC workflows, and tokenized-trade capabilities are designed to shorten settlement cycles and connect real trade to innovative finance solutions. For processors, that can mean less cash stuck in transit and more capacity to invest in inventory, maintenance, or growth."
+   },
+   {
+    "q": "How does T57 help reduce supply and loss-related risks?",
+    "a": "T57 supports more reliable sourcing by structuring RFQs, working with vetted counterparties, and creating better visibility across deals."
+   },
+   {
+    "q": "Can T57 support compliance and audit requirements for processing plants?",
+    "a": "Yes. T57 keeps trade, payment, and documentation data linked within a single audit trail, supporting internal controls and external audits. This helps processors meet the documentation demands of regulators and financial compliance frameworks."
+   }
+  ],
+  "title": "T57 for Food Processors | Supply Assurance and Trade Execution Platform for Food and Agri Trade",
+  "description": "T57 helps food processors digitize sourcing, RFQs, payments, trade finance, and documentation on a single secure platform, enabling plants to run with more reliable inputs and faster cash cycles."
+ },
+ "cooperatives": {
+  "route": "/who-we-serve/cooperatives",
+  "name": "Cooperatives and FPOs",
+  "h1": "Turn your members' harvest into market power.",
+  "answer": "Pool produce, reach bigger buyers and pay members faster, with every trade on record.",
+  "faqs": [
+   {
+    "q": "Why do cooperatives & FPOs need digital platforms like T57?",
+    "a": "Scale alone is not enough. Cooperatives and FPOs need systems that professionalize operations, improve market access, and strengthen bargaining power. When properly supported and organized by platforms like T57, agricultural cooperatives play a critical role in sustainable agrifood systems and food security."
+   },
+   {
+    "q": "How do members gain when their cooperative or FPO wins government tenders or a contract farming agreement?",
+    "a": "Government tenders and contract farming agreements lock in demand and timelines, so members know what to produce, when it will be picked up, and at what terms, which leads to more consistent prices and lower post-harvest losses. T57 helps members plan volumes and crop mix, match supply to tender requirements, coordinate logistics and documentation, and track fulfillment and payments in one place, turning tender wins and contracts into a distributed benefit for individual farmers."
+   }
+  ],
+  "title": "T57 for Cooperatives & FPOs | Superior Market Access, Finance and Trade Tools",
+  "description": "See how T57 helps Cooperatives & Farmer Producer Organizations trade directly, access real-time market and price intelligence, secure finance, manage logistics, and run clean, auditable operations for their members."
+ },
+ "collaborators": {
+  "route": "/who-we-serve/collaborators",
+  "name": "Partners and Collaborators",
+  "h1": "Build a stronger food system, together.",
+  "answer": "Development partners, associations and institutions reach the whole food chain through one platform.",
+  "faqs": [
+   {
+    "q": "How do T57 partners help me reach better markets?",
+    "a": "T57's vetted partners help you meet standards, reliably move produce, and access premium capabilities to help you grow, without having to build these relationships yourself."
+   },
+   {
+    "q": "What kind of partners can I access on T57?",
+    "a": "You can connect with a diverse range of partners who help you meet complex compliance requirements, reduce logistics losses, unlock financing and insurance, accelerate innovation, and turn more of your effort into predictable, higher-value trade outcomes."
+   },
+   {
+    "q": "How does T57 ensure that collaborators are trustworthy?",
+    "a": "T57 uses a club-style model that includes due diligence, track-record checks, and ongoing performance data, ensuring that ecosystem participants work only with verified partners."
+   },
+   {
+    "q": "Why should governments and regulators care about the T57 partner network?",
+    "a": "By providing access to trusted partners across the value chain, T57 helps users align their goals with the policy and regulatory boundaries established by governments."
+   }
+  ],
+  "title": "T57 Partner & Collaborator Network | Powering the Food and Agri Ecosystem",
+  "description": "T57 brings agronomists, financiers, logistics providers, certification bodies, universities, and agri specialists on one verified platform to enable smarter food trade, faster finance, and greater impact across the agri value chain."
+ },
+ "service-providers": {
+  "route": "/who-we-serve/service-providers",
+  "name": "Service Providers",
+  "h1": "Turn your expertise into steady work.",
+  "answer": "Inspection, logistics, legal and advisory firms are matched to live trades that need them.",
+  "faqs": [
+   {
+    "q": "How is T57 different from a simple marketplace?",
+    "a": "T57 is built on verified participants, trade-linked workflows, and governed execution, not just listings and introductions."
+   },
+   {
+    "q": "Can I offer services across borders without a local office?",
+    "a": "Yes. T57 is designed to help providers engage digitally across regions while reducing friction in discovery, contracting, and payment processes."
+   },
+   {
+    "q": "How does T57 help me build trust with clients?",
+    "a": "Verified profiles, service histories, ratings, and performance records help buyers assess credibility before engaging."
+   },
+   {
+    "q": "Why are service providers becoming more important in the food trade?",
+    "a": "Buyers and regulators increasingly expect traceability, food safety, reliable documentation, and faster issue resolution throughout supply chains. This makes service providers an important part of the supply chain."
+   }
+  ],
+  "title": "T57 for Service Providers | Creating Impact in the Food and Agri Industry",
+  "description": "Join T57 as a service provider in food and agriculture. Reach verified demand, deliver trusted expertise, and grow through structured, lower-risk trade workflows."
+ },
+ "farmers": {
+  "route": "/who-we-serve/farmers",
+  "name": "Farmers and Producers",
+  "h1": "Sell your harvest at a fair price.",
+  "answer": "Reach verified buyers directly, see market prices and get paid faster.",
+  "faqs": [
+   {
+    "q": "Why should a farmer or producer use a digital trade platform like T57?",
+    "a": "T57 provides access to verified buyers and transparent payment processes. This reduces uncertainty and improves income realization."
+   },
+   {
+    "q": "What should farmers watch out for in contract farming?",
+    "a": "Contract farming deals are often between stronger buyers and weaker farmers. This could result in unfair terms, over-dependence on a single buyer, or disputes over quality and deductions. Farmers can access T57's expertise to negotiate the best terms."
+   },
+   {
+    "q": "Can better market access really reduce waste?",
+    "a": "Yes. Better matching of supply with demand, along with more coordinated trade execution, can reduce losses between harvest and market."
+   },
+   {
+    "q": "Why is finance such a major issue for producers?",
+    "a": "The World Bank notes that agriculture finance remains disproportionately limited in many developing markets due to risk, transaction costs, and the difficulty of serving fragmented rural borrowers. That is why trade-linked and digitally enabled finance models matter for producers who need working capital tied to real orders."
+   },
+   {
+    "q": "Does price intelligence really matter at the farm level?",
+    "a": "Yes. When producers lack visibility into demand and prices, they negotiate from a weaker position and often rely too heavily on intermediaries. T57's core model directly addresses this by improving access to market and price intelligence."
+   }
+  ],
+  "title": "T57 for Farmers and Producers | Improve Market Access and Leverage World-Class AI Tools",
+  "description": "T57 helps farmers and producers access verified buyers, market and price intelligence, secure contracts, faster payments, and trade finance in the food and agri sector."
+ }
+}
