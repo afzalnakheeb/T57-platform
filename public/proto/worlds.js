@@ -482,6 +482,12 @@
   }
   setTone('white'); // chosen: the brand guide's reversed logo (p.13)
 
+  const menu = document.getElementById('menu'), menuBtn = document.getElementById('menu-btn');
+  const setMenu = open => { menu.hidden = !open; menuBtn.setAttribute('aria-expanded', open); };
+  menuBtn.addEventListener('click', () => setMenu(menu.hidden));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); menuBtn.focus(); } });
+  menu.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+
   document.addEventListener('click', e => {
     const tp = e.target.closest('[data-tone-pick]'); if (tp) { setTone(tp.dataset.tonePick); if (!busy) intro(); return; }
     const a = e.target.closest('[data-go]'); if (a) { e.preventDefault(); go(a.dataset.go); return; }
