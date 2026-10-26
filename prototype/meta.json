@@ -208,8 +208,8 @@
   "description": "AI that prepares negotiating briefs, benchmarks offers and suggests counter-offers for food deals, while people make every decision, on T57."
  },
  "cap-equipment-rental": {
-  "title": "Farm & Food Equipment Rental Marketplace | T57",
-  "description": "Rent tractors, harvesters, cold storage and processing equipment from verified owners, with escrow payments and insurance, on T57."
+  "title": "Rent Farm Equipment, Drones & Agritech | T57",
+  "description": "Rent tractors, drones, sensors, cold rooms and testing from verified owners, by the day, the hectare or the job, with escrow payments on T57."
  },
  "ai-native": {
   "title": "AI-Native Food Trade Platform | How T57 Uses AI",
@@ -550,5 +550,9 @@
  "contact-offices": {
   "title": "Regional Offices | T57 in Dubai, Riyadh, India, Malaysia, Türkiye",
   "description": "Find T57's offices and country teams in the UAE, Saudi Arabia, India, Malaysia and Türkiye."
+ },
+ "cap-hire-expert": {
+  "title": "Hire a Food & Agriculture Expert | T57",
+  "description": "Hire verified agronomists, inspectors, food scientists and packaging experts by the job, with prices agreed up front, escrow payment and ratings, on T57."
  }
 }
