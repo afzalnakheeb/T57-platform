@@ -13,7 +13,7 @@
   color-scheme: light;
 }
 [data-world="financiers"] { --world:var(--amber-flame); --world-text:var(--amber-flame); --world-ink:var(--persian-indigo); }
-[data-world="home"], [data-world="who-we-serve"], [data-world="why-t57"], [data-world="capabilities"], [data-world^="cap-"], [data-world="club-membership"], [data-world="rfq-bidding"], [data-world="virtual-trade-desk"], [data-world="market-intelligence"], [data-world="trade-finance"], [data-world="nft-funding"], [data-world="elc-15-minutes"], [data-world="escrow-payments"], [data-world="alternative-payments"], [data-world="digital-bank"], [data-world="document-audit-trail"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
+[data-world="home"], [data-world="who-we-serve"], [data-world="why-t57"], [data-world="capabilities"], [data-world^="cap-"], [data-world^="ai-"], [data-world="club-membership"], [data-world="rfq-bidding"], [data-world="virtual-trade-desk"], [data-world="market-intelligence"], [data-world="trade-finance"], [data-world="nft-funding"], [data-world="elc-15-minutes"], [data-world="escrow-payments"], [data-world="alternative-payments"], [data-world="digital-bank"], [data-world="document-audit-trail"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
 [data-world="governments"] { --world:var(--electric-sapphire); --world-text:#8f93ff; --world-ink:#ffffff; }
 [data-world="sellers"], [data-world="buyers"], [data-world="enterprises"], [data-world="food-processors"], [data-world="cooperatives"], [data-world="collaborators"], [data-world="service-providers"] { --world:var(--strong-cyan); --world-text:var(--strong-cyan); --world-ink:var(--imperial-blue); }
 [data-world="traders"] { --world:var(--persian-blue); --world-text:var(--mint-cream); --world-ink:#ffffff; }
@@ -626,6 +626,50 @@ a.feat.twelve b::after { content:" →"; color:var(--strong-cyan); } a.feat.twel
 .life-st h3 a { color:inherit; text-decoration:none; } .life-st h3 a:hover { text-decoration:underline; } .life-st h3 a[aria-current] { color:var(--persian-blue); }
 @media (max-width: 1000px) { .life.cmap-nav { grid-template-columns:repeat(2, minmax(0, 1fr)); } .life.cmap-nav .life-st { grid-template-columns:1fr; } .life.cmap-nav .life-st ul { grid-column:1; } }
 @media (max-width: 640px) { .life.cmap-nav { grid-template-columns:1fr; } }
+
+/* AI Native: pipeline, layers, groups, proof list, before and after */
+.aipipe { margin:40px 0 8px; padding:36px 32px; border-radius:16px; background:var(--night); box-shadow:0 24px 60px -24px #02246c66; display:grid; grid-template-columns:1.25fr 56px 1fr 56px 1fr 56px 1fr; align-items:center; gap:0; color:#fff; }
+.ap-col { display:grid; gap:12px; justify-items:start; align-content:center; min-width:0; }
+.ap-k { margin:0; font:500 12px/16px var(--font-text); letter-spacing:.18em; text-transform:uppercase; color:var(--c); }
+.ap-col b { font:500 18px/25px var(--font-display); color:#fff; }
+.ap-in ul { list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+.ap-in li { padding:8px 12px; border-radius:8px; background:#ffffff12; border-left:3px solid var(--c); font-size:15px; line-height:21px; color:#e6e8f6; animation:ap-in 4s var(--ease-in-out) infinite; animation-delay:calc(var(--k) * .35s); }
+@keyframes ap-in { 0%, 100% { background:#ffffff12; } 20% { background:#ffffff26; } }
+.ap-model svg { width:96px; height:96px; overflow:visible; }
+.ap-model polygon { fill:#131d55; stroke:var(--c); stroke-width:2.5; }
+.ap-model .ap-in2 { fill:none; stroke:#c9cdf066; stroke-width:2; animation:ap-spin 6s linear infinite; transform-origin:center; transform-box:fill-box; }
+.ap-model circle { fill:var(--c); animation:ap-pulse 2s var(--ease-in-out) infinite; transform-origin:center; transform-box:fill-box; }
+@keyframes ap-spin { to { transform:rotate(60deg); } } @keyframes ap-pulse { 50% { transform:scale(1.8); opacity:.6; } }
+.ap-out b { padding:14px 16px; border-radius:10px; border:1px solid var(--c); background:#ffffff0d; }
+.ap-human svg { width:44px; height:44px; fill:none; stroke:var(--c); stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.ap-flow { position:relative; height:2px; margin:0 8px; background:#c9cdf033; overflow:hidden; }
+.ap-flow i { position:absolute; top:-2px; left:-8px; width:6px; height:6px; border-radius:50%; background:var(--c); animation:ap-flow 1.8s linear infinite; }
+.ap-flow i:nth-child(2) { animation-delay:.6s; } .ap-flow i:nth-child(3) { animation-delay:1.2s; }
+@keyframes ap-flow { to { left:100%; } }
+.ai-how { margin-top:32px; } .ai-rel { margin:24px 0 0; } .ai-rel a { font-weight:500; color:var(--persian-blue); }
+@media (max-width: 1000px) { .aipipe { grid-template-columns:1fr; padding:28px 22px; } .ap-flow { width:2px; height:36px; margin:8px 0 8px 22px; } .ap-flow i { left:-2px; top:-8px; animation-name:ap-flow-v; } @keyframes ap-flow-v { to { top:100%; } } }
+@media (prefers-reduced-motion: reduce) { .aipipe *, .ailayers * { animation:none !important; } }
+.ailayers { margin:40px 0 0; }
+.ailayers ol { list-style:none; margin:0; padding:0; display:flex; flex-direction:column-reverse; gap:10px; }
+.ailayers li { position:relative; display:grid; grid-template-columns:56px minmax(180px, 260px) 1fr; gap:20px; align-items:center; padding:22px 28px; border-radius:14px; color:#fff; background:linear-gradient(90deg, var(--persian-indigo), #131d55); border:1px solid #39c4c433; margin-left:calc(var(--k) * 28px); margin-right:calc(var(--k) * 28px); overflow:hidden; }
+.ailayers li::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg, transparent, #39c4c42e, transparent); transform:translateX(-100%); animation:ly-scan 6s var(--ease-in-out) infinite; animation-delay:calc(var(--k) * 1.2s); }
+@keyframes ly-scan { 0%, 30% { transform:translateX(-100%); } 60%, 100% { transform:translateX(100%); } }
+.ly-n { font:700 15px/1 var(--font-display); color:var(--strong-cyan); } .ailayers b { font:500 20px/26px var(--font-display); } .ailayers li > span:last-child { font-size:15px; line-height:23px; color:#c9cdf0; }
+@media (max-width: 800px) { .ailayers li { grid-template-columns:1fr; gap:6px; margin:0; padding:18px 20px; } }
+.aigroups { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:24px; margin-top:40px; }
+.aig { padding:24px; border-radius:14px; background:#fff; border:1px solid var(--line); border-top:4px solid var(--c); }
+.aig i { font:700 13px/1 var(--font-display); font-style:normal; color:var(--persian-blue); letter-spacing:.08em; } .aig h3 { margin:10px 0 14px; font:500 22px/28px var(--font-display); color:var(--ink-strong); }
+.aig ul { list-style:none; margin:0; padding:0; display:grid; gap:10px; } .aig a { color:var(--ink-strong); text-decoration:none; font-size:16px; line-height:22px; } .aig a::after { content:" →"; color:var(--c); } .aig a:hover { text-decoration:underline; }
+@media (max-width: 1100px) { .aigroups { grid-template-columns:repeat(2, minmax(0, 1fr)); } } @media (max-width: 640px) { .aigroups { grid-template-columns:1fr; } }
+.proof-list { list-style:none; margin:32px 0 0; padding:0; display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); gap:16px; }
+.proof-list li { padding:20px; border-radius:12px; background:#fff; border:1px dashed var(--line-strong); font:500 16px/22px var(--font-display); color:var(--ink-strong); }
+@media (max-width: 1100px) { .proof-list { grid-template-columns:repeat(2, minmax(0, 1fr)); } } @media (max-width: 640px) { .proof-list { grid-template-columns:1fr; } }
+.ba { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:36px; }
+.ba > div { padding:28px; border-radius:14px; } .ba p { margin:0; } .ba-k { margin:0 0 10px !important; font:500 12px/16px var(--font-text); letter-spacing:.18em; text-transform:uppercase; }
+.ba-b { background:#fff; border:1px solid var(--line); } .ba-b .ba-k { color:var(--amber-flame); }
+.ba-a { background:var(--night); color:#e6e8f6; } .ba-a .ba-k { color:var(--strong-cyan); }
+.chapter:not(.alt) .ba-b { background:var(--surface-alt, #f4f6fb); }
+@media (max-width: 800px) { .ba { grid-template-columns:1fr; } }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -638,7 +682,7 @@ a.feat.twelve b::after { content:" →"; color:var(--strong-cyan); } a.feat.twel
     <a href="#home" data-go="home" aria-label="T57.ai home">
       <svg class="logo" id="logo" viewBox="775 418 998 244" role="img" aria-label="T57">{{LOGO}}</svg>
     </a>
-    <span class="label-proto">Prototype · home, audiences, Why T57 and Capabilities</span>
+    <span class="label-proto">Prototype · home, audiences, Why T57, Capabilities and AI Native</span>
     <nav class="worlds" aria-label="Microsites in this prototype">
       <a href="#governments" data-go="governments" data-petal="all"><i style="background:var(--electric-sapphire)"></i><span>Governments</span><span class="long">&nbsp;&amp; Regulators</span></a>
       <a href="#financiers" data-go="financiers" data-petal="finance"><i style="background:var(--amber-flame)"></i><span>Financiers</span><span class="long">&nbsp;&amp; Investors</span></a>
@@ -654,7 +698,7 @@ a.feat.twelve b::after { content:" →"; color:var(--strong-cyan); } a.feat.twel
 <nav class="menu gutter" id="menu" aria-label="All sections" hidden>
   <div class="wrap menu-grid">
     <div class="menu-aud"><h2>Who we serve</h2><ul><li><a href="#governments" data-go="governments">Governments &amp; Regulators<em></em></a></li><li><a href="#financiers" data-go="financiers">Financiers &amp; Investors<em></em></a></li><li><a href="#sellers" data-go="sellers">Sellers &amp; Exporters<em></em></a></li><li><a href="#buyers" data-go="buyers">Buyers &amp; Importers<em></em></a></li><li><a href="#traders" data-go="traders">Traders &amp; Aggregators<em></em></a></li><li><a href="#enterprises" data-go="enterprises">Manufacturers &amp; Enterprises<em></em></a></li><li><a href="#food-processors" data-go="food-processors">Food Processors<em></em></a></li><li><a href="#farmers" data-go="farmers">Farmers &amp; Producers<em></em></a></li><li><a href="#cooperatives" data-go="cooperatives">Cooperatives &amp; FPOs<em></em></a></li><li><a href="#collaborators" data-go="collaborators">Partners &amp; Collaborators<em></em></a></li><li><a href="#service-providers" data-go="service-providers">Service Providers<em></em></a></li></ul></div>
-    <div><h2>All sections</h2><ul class="menu-l0"><li><a href="#home" data-go="home">Home<em>/</em></a></li><li><a href="#who-we-serve" data-go="who-we-serve">Who We Serve<em>/who-we-serve</em></a></li><li><a href="#why-t57" data-go="why-t57">Why T57<em>/why-t57</em></a></li><li><a href="#capabilities" data-go="capabilities">Capabilities<em>/capabilities</em></a></li><li><span>AI Native<em>/ai-native</em></span></li><li><span>Platform<em>/platform</em></span></li><li><span>Trust &amp; Compliance<em>/trust</em></span></li><li><span>Markets<em>/markets</em></span></li><li><span>Pricing<em>/pricing</em></span></li><li><span>Resources<em>/resources</em></span></li><li><span>Help Center<em>/help</em></span></li><li><span>Partnerships<em>/partnerships</em></span></li><li><span>About T57<em>/about</em></span></li><li><span>Contact<em>/contact</em></span></li></ul></div>
+    <div><h2>All sections</h2><ul class="menu-l0"><li><a href="#home" data-go="home">Home<em>/</em></a></li><li><a href="#who-we-serve" data-go="who-we-serve">Who We Serve<em>/who-we-serve</em></a></li><li><a href="#why-t57" data-go="why-t57">Why T57<em>/why-t57</em></a></li><li><a href="#capabilities" data-go="capabilities">Capabilities<em>/capabilities</em></a></li><li><a href="#ai-native" data-go="ai-native">AI Native<em>/ai-native</em></a></li><li><span>Platform<em>/platform</em></span></li><li><span>Trust &amp; Compliance<em>/trust</em></span></li><li><span>Markets<em>/markets</em></span></li><li><span>Pricing<em>/pricing</em></span></li><li><span>Resources<em>/resources</em></span></li><li><span>Help Center<em>/help</em></span></li><li><span>Partnerships<em>/partnerships</em></span></li><li><span>About T57<em>/about</em></span></li><li><span>Contact<em>/contact</em></span></li></ul></div>
   </div>
 </nav>
 <main id="main">

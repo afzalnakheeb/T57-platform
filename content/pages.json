@@ -937,6 +937,280 @@
   "title": "Farm & Food Equipment Rental Marketplace | T57",
   "description": "Rent tractors, harvesters, cold storage and processing equipment from verified owners, with escrow payments and insurance, on T57."
  },
+ "ai-native": {
+  "route": "/ai-native",
+  "section": "ai-native",
+  "name": "AI Native",
+  "h1": "AI in every step of the trade. People make every decision.",
+  "answer": "T57 is AI-native. Here is what that means for your business.",
+  "faqs": [
+   {
+    "q": "What does \"AI-native\" mean at T57?",
+    "a": "AI is built into every step of the trade, from matching and pricing to compliance and documents, rather than added as a separate tool."
+   },
+   {
+    "q": "Does AI make decisions about my business?",
+    "a": "AI makes suggestions and flags issues. People make decisions, and every adverse decision is reviewed by a person."
+   },
+   {
+    "q": "What data does T57's AI use?",
+    "a": "Verified trade records, public market, trade and climate data, licensed data from partners, and farmer knowledge recorded with consent. Individual members' data is never shared with other members."
+   },
+   {
+    "q": "Why small, local models?",
+    "a": "Food is global but hyper-local. Small models trained for a region, crop and value chain understand local conditions and languages better, cost less to run and are easier to test and explain."
+   }
+  ],
+  "title": "AI-Native Food Trade Platform | How T57 Uses AI",
+  "description": "Small, local AI models for matching, pricing, forecasting, compliance and documents across food trade. AI advises, people decide, on T57."
+ },
+ "ai-matchmaking": {
+  "route": "/ai-native/trade-matchmaking",
+  "section": "ai-native",
+  "name": "AI Trade Matchmaking",
+  "h1": "The right partner, in minutes, not weeks.",
+  "answer": "Find the right verified buyer or supplier in minutes, ranked by fit and track record.",
+  "faqs": [
+   {
+    "q": "Can suppliers pay to rank higher?",
+    "a": "No. Ranking is based on fit, verification and track record, never on payment."
+   },
+   {
+    "q": "Why was a particular partner suggested?",
+    "a": "Every suggestion shows its main reasons, such as product match, capacity, corridor experience and on-time performance."
+   }
+  ],
+  "title": "AI Trade Matchmaking for Food Buyers & Suppliers | T57",
+  "description": "AI ranks verified food buyers and suppliers by specification, capacity, corridor and track record, and explains every match, on T57."
+ },
+ "ai-negotiations": {
+  "route": "/ai-native/negotiations",
+  "section": "ai-native",
+  "name": "AI Negotiations Engine",
+  "h1": "Walk into every negotiation knowing the market.",
+  "answer": "AI that prepares every negotiation with market data, and leaves every decision to you.",
+  "faqs": [
+   {
+    "q": "Does the AI negotiate on my behalf?",
+    "a": "No. It prepares and suggests. You decide every offer and acceptance."
+   },
+   {
+    "q": "Can both parties use the engine in the same deal?",
+    "a": "Yes. Each party gets its own private brief based on the same public market data."
+   }
+  ],
+  "title": "AI Negotiation Support for Food Trade | T57 AI Native",
+  "description": "How T57's negotiation AI benchmarks offers, values payment and delivery terms and suggests counter-offers, while people make every decision."
+ },
+ "ai-orders": {
+  "route": "/ai-native/llm-orders",
+  "section": "ai-native",
+  "name": "LLM-Based Trade Orders",
+  "h1": "A voice note in. A confirmed order out.",
+  "answer": "Turn a WhatsApp message or voice note into a confirmed, structured trade order.",
+  "faqs": [
+   {
+    "q": "Which languages are supported?",
+    "a": "Arabic, English, Hindi, Malay and Turkish, with more added as T57 grows into new markets."
+   },
+   {
+    "q": "What happens if the AI is unsure?",
+    "a": "It asks a short question instead of guessing, and the order is not sent until you confirm."
+   }
+  ],
+  "title": "LLM-Based Trade Orders by WhatsApp & Voice | T57 AI Native",
+  "description": "How T57's language models turn WhatsApp messages and voice notes into confirmed, structured food trade orders, in Arabic and local languages."
+ },
+ "ai-price-index": {
+  "route": "/ai-native/price-index",
+  "section": "ai-native",
+  "name": "Live Food Price Index, AI-Powered",
+  "h1": "A price for every grade and origin, explained.",
+  "answer": "An AI-built price for every product, grade and origin, explained in plain language.",
+  "faqs": [
+   {
+    "q": "How accurate are the AI estimates?",
+    "a": "Each price shows a confidence level. Accuracy is measured by comparing estimates with later verified trades, and results are published by product group."
+   },
+   {
+    "q": "Can the index be manipulated by fake trades?",
+    "a": "Only trades between verified members count, outliers are detected and down-weighted, and no single trade can move the index alone."
+   }
+  ],
+  "title": "AI-Powered Food Price Index | T57 AI Native",
+  "description": "How T57's AI estimates prices for every food product, grade and origin from market data and verified trades, with confidence levels and explanations."
+ },
+ "ai-forecasting": {
+  "route": "/ai-native/supply-demand-forecasting",
+  "section": "ai-native",
+  "name": "Supply & Demand Forecasting",
+  "h1": "See shortages and surpluses coming, weeks ahead.",
+  "answer": "See shortages, surpluses and price turns coming, weeks before they reach you.",
+  "faqs": [
+   {
+    "q": "How far ahead do forecasts look?",
+    "a": "From a few weeks to a season, depending on the product and the data available. Every forecast shows its range."
+   },
+   {
+    "q": "Can governments use the forecasts?",
+    "a": "Yes. Governments and institutions can access aggregated supply status and forecasts through T57's food security view."
+   }
+  ],
+  "title": "AI Supply & Demand Forecasting for Food | T57 AI Native",
+  "description": "AI forecasts of food supply, demand and prices by product and origin, with supply status signals and alerts for buyers, sellers and governments."
+ },
+ "ai-risk": {
+  "route": "/ai-native/risk-intelligence",
+  "section": "ai-native",
+  "name": "Risk Intelligence & Heatmaps",
+  "h1": "Every risk to your trade, on one map.",
+  "answer": "See every risk to your trade on one map: counterparties, routes, markets and weather.",
+  "faqs": [
+   {
+    "q": "Can I see my own risk score?",
+    "a": "Yes. Members can see the scores that relate to them and the main reasons, and can ask for a review."
+   },
+   {
+    "q": "Who else can see risk heatmaps?",
+    "a": "Lenders and insurers see risk only for the trades you share with them. Governments see aggregated, anonymized views."
+   }
+  ],
+  "title": "AI Risk Intelligence & Heatmaps for Food Trade | T57 AI Native",
+  "description": "AI risk scores and heatmaps for counterparties, routes, markets and climate in food trade, with explainable factors and early-warning alerts, on T57."
+ },
+ "ai-crop-yield": {
+  "route": "/ai-native/crop-yield-forecasting",
+  "section": "ai-native",
+  "name": "Crop & Yield Forecasting",
+  "h1": "Know your harvest before it happens.",
+  "answer": "Know how much your fields will produce, and when, before the harvest.",
+  "faqs": [
+   {
+    "q": "Do farmers need special equipment?",
+    "a": "No. Forecasts use satellite and weather data. Farmers can add observations by voice or photo from a basic smartphone, or through their cooperative."
+   },
+   {
+    "q": "Who can see a farm's forecast?",
+    "a": "The farmer or cooperative, and anyone they choose to share it with, such as a buyer or lender."
+   }
+  ],
+  "title": "AI Crop & Yield Forecasting for Farmers & Buyers | T57 AI Native",
+  "description": "Field-level yield and harvest forecasts from local AI models, satellite and weather data, and farmer knowledge, for farmers, cooperatives, buyers and lenders."
+ },
+ "ai-profit-loss": {
+  "route": "/ai-native/profit-loss-prediction",
+  "section": "ai-native",
+  "name": "Profit & Loss Prediction",
+  "h1": "Know if it will pay before you commit.",
+  "answer": "Know whether a crop, a trade or a season will make money before you commit.",
+  "faqs": [
+   {
+    "q": "Is the prediction a guarantee?",
+    "a": "No. It shows the most likely outcome and a range, based on current data. Actual results depend on weather, markets and execution."
+   },
+   {
+    "q": "Can I add my own costs?",
+    "a": "Yes. Adding your own costs makes predictions more accurate, and your data stays private."
+   }
+  ],
+  "title": "AI Profit & Loss Prediction for Farms & Food Trades | T57 AI Native",
+  "description": "Predict the likely margin of a crop, contract or trade from yields, prices and costs, with break-even prices and scenario comparisons, on T57."
+ },
+ "ai-crop-planning": {
+  "route": "/ai-native/crop-planning",
+  "section": "ai-native",
+  "name": "AI Crop Planning & Analytics",
+  "h1": "Plant what the market will want.",
+  "answer": "Plan what to plant, when and how much, based on what the market will want.",
+  "faqs": [
+   {
+    "q": "Does the AI tell me exactly what to plant?",
+    "a": "It recommends options with expected yields and margins. You decide, and you can adjust the plan at any time."
+   },
+   {
+    "q": "Can cooperatives plan for all their members?",
+    "a": "Yes. Cooperatives can build plans across members' farms to balance supply and meet buyer demand."
+   }
+  ],
+  "title": "AI Crop Planning & Farm Analytics | T57 AI Native",
+  "description": "AI crop plans based on market demand, soil, water and climate, with expected yields, margins and season analytics, for farmers and cooperatives."
+ },
+ "ai-agronomy": {
+  "route": "/ai-native/agronomy-ai",
+  "section": "ai-native",
+  "name": "Agronomy Expert Network, AI-Assisted",
+  "h1": "Farming advice in your language, in minutes.",
+  "answer": "Expert farming advice in your own language, from AI first and agronomists when it matters.",
+  "faqs": [
+   {
+    "q": "Which languages does the agronomy AI speak?",
+    "a": "Local languages in T57's markets, starting with Arabic, Hindi, Malay, Turkish and English and expanding to regional languages, including by voice."
+   },
+   {
+    "q": "Who are the agronomists?",
+    "a": "Verified agronomists and agricultural experts who join T57 as service providers. Their qualifications are checked before they can advise."
+   }
+  ],
+  "title": "AI Agronomy Advice & Expert Network for Farmers | T57 AI Native",
+  "description": "Instant crop advice in local languages from AI, with verified agronomists for complex cases. Photo and voice diagnosis for farmers on T57."
+ },
+ "ai-compliance": {
+  "route": "/ai-native/ai-compliance",
+  "section": "ai-native",
+  "name": "AI-Powered Compliance & KYC",
+  "h1": "Verified faster. Reviewed by people.",
+  "answer": "Verify businesses and screen every trade faster, with people reviewing every adverse decision.",
+  "faqs": [
+   {
+    "q": "Can AI reject my application?",
+    "a": "No. AI can flag issues, but only a person can make an adverse decision, and you can ask for a review."
+   },
+   {
+    "q": "How is my data protected?",
+    "a": "Your data is used for verification and shared with partners only with your consent, under T57's privacy policy and applicable data protection laws."
+   }
+  ],
+  "title": "AI-Powered KYC, KYB & Compliance Screening | T57 AI Native",
+  "description": "AI document checks, ownership matching and sanctions screening for food businesses, with people reviewing every adverse decision, on T57."
+ },
+ "ai-analytics": {
+  "route": "/ai-native/predictive-analytics",
+  "section": "ai-native",
+  "name": "Predictive Trade Analytics Dashboard",
+  "h1": "See where your business is heading.",
+  "answer": "See where your trading business is heading, not just where it has been.",
+  "faqs": [
+   {
+    "q": "Do I need to upload my own data?",
+    "a": "No. The dashboard is built from your activity on T57. You can add other data, such as costs, for better forecasts."
+   },
+   {
+    "q": "Can I share the dashboard with my lender?",
+    "a": "Yes. You can share selected views with lenders or investors, with your consent."
+   }
+  ],
+  "title": "Predictive Trade Analytics Dashboard | T57 AI Native",
+  "description": "AI forecasts of volumes, margins and cash, with alerts on slow payers and supplier risk, and suggested actions for food trading businesses on T57."
+ },
+ "ai-documents": {
+  "route": "/ai-native/ai-documentation",
+  "section": "ai-native",
+  "name": "AI Trade Document Generation",
+  "h1": "One accepted quote. Every document, checked.",
+  "answer": "Generate contracts, invoices and trade documents from one accepted quote, checked by AI.",
+  "faqs": [
+   {
+    "q": "Are AI-generated contracts legally binding?",
+    "a": "Contracts become binding when the parties sign them. T57 uses standard trade terms, and members can have their own lawyers review any document."
+   },
+   {
+    "q": "Which documents can be generated?",
+    "a": "Contracts, pro forma and commercial invoices, packing lists, LC applications and supporting documents, and data for certificates and customs declarations."
+   }
+  ],
+  "title": "AI Trade Document Generation & Checks | T57 AI Native",
+  "description": "Generate contracts, invoices and packing lists from the accepted quote, and catch LC and customs discrepancies with AI checks, on T57."
+ },
  "governments": {
   "route": "/who-we-serve/governments",
   "section": "who-we-serve",

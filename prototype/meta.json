@@ -210,5 +210,61 @@
  "cap-equipment-rental": {
   "title": "Farm & Food Equipment Rental Marketplace | T57",
   "description": "Rent tractors, harvesters, cold storage and processing equipment from verified owners, with escrow payments and insurance, on T57."
+ },
+ "ai-native": {
+  "title": "AI-Native Food Trade Platform | How T57 Uses AI",
+  "description": "Small, local AI models for matching, pricing, forecasting, compliance and documents across food trade. AI advises, people decide, on T57."
+ },
+ "ai-matchmaking": {
+  "title": "AI Trade Matchmaking for Food Buyers & Suppliers | T57",
+  "description": "AI ranks verified food buyers and suppliers by specification, capacity, corridor and track record, and explains every match, on T57."
+ },
+ "ai-negotiations": {
+  "title": "AI Negotiation Support for Food Trade | T57 AI Native",
+  "description": "How T57's negotiation AI benchmarks offers, values payment and delivery terms and suggests counter-offers, while people make every decision."
+ },
+ "ai-orders": {
+  "title": "LLM-Based Trade Orders by WhatsApp & Voice | T57 AI Native",
+  "description": "How T57's language models turn WhatsApp messages and voice notes into confirmed, structured food trade orders, in Arabic and local languages."
+ },
+ "ai-price-index": {
+  "title": "AI-Powered Food Price Index | T57 AI Native",
+  "description": "How T57's AI estimates prices for every food product, grade and origin from market data and verified trades, with confidence levels and explanations."
+ },
+ "ai-forecasting": {
+  "title": "AI Supply & Demand Forecasting for Food | T57 AI Native",
+  "description": "AI forecasts of food supply, demand and prices by product and origin, with supply status signals and alerts for buyers, sellers and governments."
+ },
+ "ai-risk": {
+  "title": "AI Risk Intelligence & Heatmaps for Food Trade | T57 AI Native",
+  "description": "AI risk scores and heatmaps for counterparties, routes, markets and climate in food trade, with explainable factors and early-warning alerts, on T57."
+ },
+ "ai-crop-yield": {
+  "title": "AI Crop & Yield Forecasting for Farmers & Buyers | T57 AI Native",
+  "description": "Field-level yield and harvest forecasts from local AI models, satellite and weather data, and farmer knowledge, for farmers, cooperatives, buyers and lenders."
+ },
+ "ai-profit-loss": {
+  "title": "AI Profit & Loss Prediction for Farms & Food Trades | T57 AI Native",
+  "description": "Predict the likely margin of a crop, contract or trade from yields, prices and costs, with break-even prices and scenario comparisons, on T57."
+ },
+ "ai-crop-planning": {
+  "title": "AI Crop Planning & Farm Analytics | T57 AI Native",
+  "description": "AI crop plans based on market demand, soil, water and climate, with expected yields, margins and season analytics, for farmers and cooperatives."
+ },
+ "ai-agronomy": {
+  "title": "AI Agronomy Advice & Expert Network for Farmers | T57 AI Native",
+  "description": "Instant crop advice in local languages from AI, with verified agronomists for complex cases. Photo and voice diagnosis for farmers on T57."
+ },
+ "ai-compliance": {
+  "title": "AI-Powered KYC, KYB & Compliance Screening | T57 AI Native",
+  "description": "AI document checks, ownership matching and sanctions screening for food businesses, with people reviewing every adverse decision, on T57."
+ },
+ "ai-analytics": {
+  "title": "Predictive Trade Analytics Dashboard | T57 AI Native",
+  "description": "AI forecasts of volumes, margins and cash, with alerts on slow payers and supplier risk, and suggested actions for food trading businesses on T57."
+ },
+ "ai-documents": {
+  "title": "AI Trade Document Generation & Checks | T57 AI Native",
+  "description": "Generate contracts, invoices and packing lists from the accepted quote, and catch LC and customs discrepancies with AI checks, on T57."
  }
 }

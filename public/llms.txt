@@ -65,6 +65,23 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [AI Negotiations Engine](https://t57.ai/capabilities/intelligence/ai-negotiations): Negotiate every food deal with market data and AI preparation behind you.
 - [Equipment Rental Marketplace](https://t57.ai/capabilities/agritech/equipment-rental): Rent tractors, harvesters, cold storage and processing equipment when you need it.
 
+## AI Native
+
+- [AI Native](https://t57.ai/ai-native): T57 is AI-native. Here is what that means for your business.
+- [AI Trade Matchmaking](https://t57.ai/ai-native/trade-matchmaking): Find the right verified buyer or supplier in minutes, ranked by fit and track record.
+- [AI Negotiations Engine](https://t57.ai/ai-native/negotiations): AI that prepares every negotiation with market data, and leaves every decision to you.
+- [LLM-Based Trade Orders](https://t57.ai/ai-native/llm-orders): Turn a WhatsApp message or voice note into a confirmed, structured trade order.
+- [Live Food Price Index, AI-Powered](https://t57.ai/ai-native/price-index): An AI-built price for every product, grade and origin, explained in plain language.
+- [Supply & Demand Forecasting](https://t57.ai/ai-native/supply-demand-forecasting): See shortages, surpluses and price turns coming, weeks before they reach you.
+- [Risk Intelligence & Heatmaps](https://t57.ai/ai-native/risk-intelligence): See every risk to your trade on one map: counterparties, routes, markets and weather.
+- [Crop & Yield Forecasting](https://t57.ai/ai-native/crop-yield-forecasting): Know how much your fields will produce, and when, before the harvest.
+- [Profit & Loss Prediction](https://t57.ai/ai-native/profit-loss-prediction): Know whether a crop, a trade or a season will make money before you commit.
+- [AI Crop Planning & Analytics](https://t57.ai/ai-native/crop-planning): Plan what to plant, when and how much, based on what the market will want.
+- [Agronomy Expert Network, AI-Assisted](https://t57.ai/ai-native/agronomy-ai): Expert farming advice in your own language, from AI first and agronomists when it matters.
+- [AI-Powered Compliance & KYC](https://t57.ai/ai-native/ai-compliance): Verify businesses and screen every trade faster, with people reviewing every adverse decision.
+- [Predictive Trade Analytics Dashboard](https://t57.ai/ai-native/predictive-analytics): See where your trading business is heading, not just where it has been.
+- [AI Trade Document Generation](https://t57.ai/ai-native/ai-documentation): Generate contracts, invoices and trade documents from one accepted quote, checked by AI.
+
 ## Common questions
 
 - [What is T57?](https://t57.ai/): T57 is AI-native digital trade infrastructure for the food industry. It brings verification, quotes, contracts, finance access, insurance, inspection and logistics onto one trade record for verified members.
@@ -151,6 +168,34 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Can the other side see the engine's suggestions to me?](https://t57.ai/capabilities/intelligence/ai-negotiations): No. Your briefs and suggestions are private to you.
 - [Can I list my equipment for rent?](https://t57.ai/capabilities/agritech/equipment-rental): Yes. Verified members can list equipment, set prices and availability, and choose who can rent it.
 - [Who is responsible if equipment is damaged?](https://t57.ai/capabilities/agritech/equipment-rental): The rental terms, condition records and any insurance set out responsibility. Disputes are handled under those terms and the payment partner's rules.
+- [What does "AI-native" mean at T57?](https://t57.ai/ai-native): AI is built into every step of the trade, from matching and pricing to compliance and documents, rather than added as a separate tool.
+- [Does AI make decisions about my business?](https://t57.ai/ai-native): AI makes suggestions and flags issues. People make decisions, and every adverse decision is reviewed by a person.
+- [Can suppliers pay to rank higher?](https://t57.ai/ai-native/trade-matchmaking): No. Ranking is based on fit, verification and track record, never on payment.
+- [Why was a particular partner suggested?](https://t57.ai/ai-native/trade-matchmaking): Every suggestion shows its main reasons, such as product match, capacity, corridor experience and on-time performance.
+- [Does the AI negotiate on my behalf?](https://t57.ai/ai-native/negotiations): No. It prepares and suggests. You decide every offer and acceptance.
+- [Can both parties use the engine in the same deal?](https://t57.ai/ai-native/negotiations): Yes. Each party gets its own private brief based on the same public market data.
+- [Which languages are supported?](https://t57.ai/ai-native/llm-orders): Arabic, English, Hindi, Malay and Turkish, with more added as T57 grows into new markets.
+- [What happens if the AI is unsure?](https://t57.ai/ai-native/llm-orders): It asks a short question instead of guessing, and the order is not sent until you confirm.
+- [How accurate are the AI estimates?](https://t57.ai/ai-native/price-index): Each price shows a confidence level. Accuracy is measured by comparing estimates with later verified trades, and results are published by product group.
+- [Can the index be manipulated by fake trades?](https://t57.ai/ai-native/price-index): Only trades between verified members count, outliers are detected and down-weighted, and no single trade can move the index alone.
+- [How far ahead do forecasts look?](https://t57.ai/ai-native/supply-demand-forecasting): From a few weeks to a season, depending on the product and the data available. Every forecast shows its range.
+- [Can governments use the forecasts?](https://t57.ai/ai-native/supply-demand-forecasting): Yes. Governments and institutions can access aggregated supply status and forecasts through T57's food security view.
+- [Can I see my own risk score?](https://t57.ai/ai-native/risk-intelligence): Yes. Members can see the scores that relate to them and the main reasons, and can ask for a review.
+- [Who else can see risk heatmaps?](https://t57.ai/ai-native/risk-intelligence): Lenders and insurers see risk only for the trades you share with them. Governments see aggregated, anonymized views.
+- [Do farmers need special equipment?](https://t57.ai/ai-native/crop-yield-forecasting): No. Forecasts use satellite and weather data. Farmers can add observations by voice or photo from a basic smartphone, or through their cooperative.
+- [Who can see a farm's forecast?](https://t57.ai/ai-native/crop-yield-forecasting): The farmer or cooperative, and anyone they choose to share it with, such as a buyer or lender.
+- [Is the prediction a guarantee?](https://t57.ai/ai-native/profit-loss-prediction): No. It shows the most likely outcome and a range, based on current data. Actual results depend on weather, markets and execution.
+- [Can I add my own costs?](https://t57.ai/ai-native/profit-loss-prediction): Yes. Adding your own costs makes predictions more accurate, and your data stays private.
+- [Does the AI tell me exactly what to plant?](https://t57.ai/ai-native/crop-planning): It recommends options with expected yields and margins. You decide, and you can adjust the plan at any time.
+- [Can cooperatives plan for all their members?](https://t57.ai/ai-native/crop-planning): Yes. Cooperatives can build plans across members' farms to balance supply and meet buyer demand.
+- [Which languages does the agronomy AI speak?](https://t57.ai/ai-native/agronomy-ai): Local languages in T57's markets, starting with Arabic, Hindi, Malay, Turkish and English and expanding to regional languages, including by voice.
+- [Who are the agronomists?](https://t57.ai/ai-native/agronomy-ai): Verified agronomists and agricultural experts who join T57 as service providers. Their qualifications are checked before they can advise.
+- [Can AI reject my application?](https://t57.ai/ai-native/ai-compliance): No. AI can flag issues, but only a person can make an adverse decision, and you can ask for a review.
+- [How is my data protected?](https://t57.ai/ai-native/ai-compliance): Your data is used for verification and shared with partners only with your consent, under T57's privacy policy and applicable data protection laws.
+- [Do I need to upload my own data?](https://t57.ai/ai-native/predictive-analytics): No. The dashboard is built from your activity on T57. You can add other data, such as costs, for better forecasts.
+- [Can I share the dashboard with my lender?](https://t57.ai/ai-native/predictive-analytics): Yes. You can share selected views with lenders or investors, with your consent.
+- [Are AI-generated contracts legally binding?](https://t57.ai/ai-native/ai-documentation): Contracts become binding when the parties sign them. T57 uses standard trade terms, and members can have their own lawyers review any document.
+- [Which documents can be generated?](https://t57.ai/ai-native/ai-documentation): Contracts, pro forma and commercial invoices, packing lists, LC applications and supporting documents, and data for certificates and customs declarations.
 - [How does T57 support national and regional food-security strategies in practice?](https://t57.ai/who-we-serve/governments): Many countries are now expanding strategic reserves and silo capacity to hold months’ worth of essential commodities. T57 complements such physical infrastructure by tracking self-sufficiency, stock levels, and import exposure in real time. This combination of physical reserves and digital intelligence helps governments move from reactive to anticipatory food-security management.
 - [Why is it important to channel private and impact capital into agriculture and food systems, beyond public budgets?](https://t57.ai/who-we-serve/governments): Despite agriculture’s historical role in employment and food security, global investors are only now seeking credible, measurable pathways to support food systems as part of their climate and SDG commitments. T57 helps governments present investable, data-backed opportunities, from model support centers to special agri zones and CSR programs, with transparent performance and impact tracking that meets both regulatory and investor expectations.
 - [How does T57 handle disputes and reduce risks for financiers and investors?](https://t57.ai/who-we-serve/financiers): T57 reduces risk through its curated club membership model, which ensures vetted, credible counterparties in a high-trust environment. Its virtual trade desk supports execution, manages disputes, oversees documentation, and ensures consistent transaction follow-through for greater investor confidence.
