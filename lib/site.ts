@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 
 // Pages built by prototype/build.py, one per sitemap v7 route.
 export type Faq = { q: string; a: string };
@@ -15,6 +16,8 @@ const dir = path.join(process.cwd(), 'content');
 export const pages: Record<string, PageInfo> = JSON.parse(fs.readFileSync(path.join(dir, 'pages.json'), 'utf8'));
 export const byRoute: Record<string, string> = Object.fromEntries(Object.entries(pages).map(([id, p]) => [p.route, id]));
 export const markup = (id: string) => fs.readFileSync(path.join(dir, 'pages', `${id}.html`), 'utf8');
+// Changes whenever the site script changes, so browsers never run an old copy.
+export const assetVersion = crypto.createHash('sha1').update(fs.readFileSync(path.join(process.cwd(), 'public', 'proto', 'worlds.js'))).digest('hex').slice(0, 10);
 export const chrome = (part: 'top' | 'bottom') => fs.readFileSync(path.join(dir, `chrome-${part}.html`), 'utf8');
 
 export function metadataFor(id: string) {

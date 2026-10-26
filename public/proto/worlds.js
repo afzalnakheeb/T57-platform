@@ -448,34 +448,36 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     anim(main, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.5, transform: 'scale(0.985)' }], { duration: 380 });
     anim(vbg, [{ opacity: 0 }, { opacity: 1 }], { duration: 340 });
     await anim(mark, [{ opacity: 0, transform: 'scale(.82)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 400, delay: 80, easing: 'cubic-bezier(.2,.8,.2,1)' });
-    veilPetals.forEach(p => { if (petal !== 'all' && p !== target) anim(p, [{ opacity: 1 }, { opacity: p.classList.contains('p-ring') ? 0.3 : 0.14 }], { duration: 280 }); });
-    if (target !== mark) anim(target, [{ transform: 'scale(1)' }, { transform: 'scale(1.14)' }], { duration: 300, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    if (target !== mark) anim(target, [{ transform: 'scale(1)' }, { transform: 'scale(1.12)' }], { duration: 300, easing: 'cubic-bezier(.2,.8,.2,1)' });
     anim(dest, [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 280 });
     await anim(target, [{ filter: 'none' }, { filter: 'drop-shadow(0 0 8px rgba(57,196,196,.9))' }], { duration: 320 });
     location.href = href;
     addEventListener('pageshow', e => { if (e.persisted) { veil.classList.remove('go'); clearAll([vbg, mark, dest, main, ...veilPetals]); busy = false; } }, { once: true });
   }
 
-  // Arriving from another microsite: the page waits under the logo, then opens out of its petal shell.
+  // Arriving from another microsite: the page waits under the logo, then the logo opens and the page shows
+  // through a hole shaped like its petal shell, growing from the logo's size until it clears the screen.
+  // The hole is sized frame by frame so it runs the same in every browser.
   async function arrive(name) {
     busy = true;
-    const petal = WORLD_PETAL[name] || 'all';
-    const target = petal === 'all' ? mark : mark.querySelector('.p-' + petal);
     dest.textContent = WORLD_NAME[name] || '';
     veil.classList.add('go');
     document.documentElement.classList.remove('arriving');
     const hold = (el, k) => el.animate([k, k], { duration: 10, fill: 'forwards' });
     hold(vbg, { opacity: 1 }); hold(mark, { opacity: 1, transform: 'scale(1)' }); hold(dest, { opacity: 1 });
-    veilPetals.forEach(p => { if (petal !== 'all' && p !== target) hold(p, { opacity: p.classList.contains('p-ring') ? 0.3 : 0.14 }); });
-    await new Promise(r => setTimeout(r, 140));
-    const size = mark.getBoundingClientRect().width, far = Math.hypot(innerWidth, innerHeight) * 3.2;
+    await new Promise(r => setTimeout(r, 120));
+    const start = mark.getBoundingClientRect().width * 0.9, end = Math.hypot(innerWidth, innerHeight) * 2.4, dur = 900;
+    const setSize = w => { const v = w.toFixed(1) + 'px auto, 100% 100%'; vbg.style.webkitMaskSize = v; vbg.style.maskSize = v; };
+    setSize(start); veil.classList.add('reveal');
     const lines = [...document.querySelectorAll('#' + name + ' .hero h1 .ln, #' + name + ' .hero .std, #' + name + ' .hero .actions')];
-    lines.forEach((l, i) => l.animate([{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }], { duration: 600, delay: 300 + i * 90, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
-    anim(dest, [{ opacity: 1 }, { opacity: 0 }], { duration: 220 });
-    anim(mark, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0, transform: 'scale(1.6)' }], { duration: 420, easing: 'ease-in' });
-    await anim(vbg, [{ '--shell': size * 0.92 + 'px' }, { '--shell': far + 'px' }], { duration: 760, easing: 'cubic-bezier(.7,0,.2,1)' });
+    lines.forEach((l, i) => l.animate([{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }], { duration: 600, delay: 380 + i * 90, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
+    anim(dest, [{ opacity: 1 }, { opacity: 0 }], { duration: 200 });
+    // the logo grows with the hole for the first part, then fades, so it seems to open into the page
+    anim(mark, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.9, transform: 'scale(1.5)', offset: 0.35 }, { opacity: 0, transform: 'scale(3)' }], { duration: 520, easing: 'cubic-bezier(.4,0,.6,1)' });
+    const ease = t => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    await new Promise(res => { const t0 = performance.now(); const step = now => { const t = Math.min(1, (now - t0) / dur); setSize(start + (end - start) * ease(t)); t < 1 ? requestAnimationFrame(step) : res(); }; requestAnimationFrame(step); });
     clearAll([vbg, mark, dest, ...veilPetals]);
-    veil.classList.remove('go');
+    veil.classList.remove('go', 'reveal'); vbg.style.webkitMaskSize = vbg.style.maskSize = '';
     busy = false;
   }
 

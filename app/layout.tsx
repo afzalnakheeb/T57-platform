@@ -1,7 +1,7 @@
 import React from 'react';
 import Script from 'next/script';
 import './globals.css';
-import { SITE, chrome } from '../lib/site';
+import { SITE, chrome, assetVersion } from '../lib/site';
 
 export const metadata = {
   metadataBase: new URL(SITE),
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div dangerouslySetInnerHTML={{ __html: chrome('top') }} />
         {children}
         <div dangerouslySetInnerHTML={{ __html: chrome('bottom') }} />
-        <Script src="/proto/worlds.js" strategy="afterInteractive" />
+        <Script src={`/proto/worlds.js?v=${assetVersion}`} strategy="afterInteractive" />
       </body>
     </html>
   );
