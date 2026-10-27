@@ -73,8 +73,8 @@
     "a": "No. The same rails that serve ministries and multilaterals also serve farmers, cooperatives, SMEs and enterprises, giving every player, big and small, access to verified markets and trusted counterparties."
    }
   ],
-  "title": "T57: the Global Food Operating System | AI-Native Food Trade Platform",
-  "description": "Discover T57, the AI-native food trade ecosystem working with IOFS and ASEAN, unifying policy, finance and logistics to turn fragmented data into trusted global food flows."
+  "title": "Why T57 | The AI-Native Global Food Operating System",
+  "description": "T57 is the AI-native food trade ecosystem working with IOFS and ASEAN, joining policy, finance and logistics into trusted global food flows."
  },
  "club-membership": {
   "route": "/why-t57/club-membership",
@@ -92,8 +92,9 @@
     "a": "The T57 ID provides these stakeholders with a structured view of whether an organization has been verified across key trust factors, including compliance, field validation, references, and ecosystem reputation. That makes it easier to evaluate risk and engage with businesses whose credentials are supported by a more advanced process than standard marketplace profiles or basic business identifiers."
    }
   ],
-  "title": "T57 Club Membership | Verified Global Food-Trade Club, Not an Open Marketplace",
-  "description": "Discover T57's club membership: a curated, blockchain-enabled food and agri trade club that uses trust scoring, verified IDs, badges, and scores to help counterparties reduce risk and trade with more confidence"
+  "title": "T57 Club Membership | A Verified Global Food-Trade Club",
+  "description": "T57 is a curated food and agri trade club, not an open marketplace: verified IDs, trust scores and badges help members trade with confidence.",
+  "parent": "why-t57"
  },
  "rfq-bidding": {
   "route": "/why-t57/rfq-bidding",
@@ -112,7 +113,8 @@
    }
   ],
   "title": "RFQ Bidding for Food Trade | T57",
-  "description": "Send one structured RFQ to verified food suppliers, compare like-for-like bids and turn the best quote into a contract on T57."
+  "description": "Send one structured RFQ to verified food suppliers, compare like-for-like bids and turn the best quote into a contract on T57.",
+  "parent": "why-t57"
  },
  "virtual-trade-desk": {
   "route": "/why-t57/virtual-trade-desk",
@@ -131,7 +133,8 @@
    }
   ],
   "title": "Virtual Trade Desk for Food SMEs | T57",
-  "description": "AI matching, price data, contracts from quotes and compliance screening in one trade desk for food SMEs. AI advises, people decide."
+  "description": "AI matching, price data, contracts from quotes and compliance screening in one trade desk for food SMEs. AI advises, people decide.",
+  "parent": "why-t57"
  },
  "market-intelligence": {
   "route": "/why-t57/market-intelligence",
@@ -150,7 +153,8 @@
    }
   ],
   "title": "Food Market & Price Intelligence | T57",
-  "description": "Food prices, supply status by origin and AI forecasts inside your trade workflow. Quote, buy and plan with the full picture on T57."
+  "description": "Food prices, supply status by origin and AI forecasts inside your trade workflow. Quote, buy and plan with the full picture on T57.",
+  "parent": "why-t57"
  },
  "trade-finance": {
   "route": "/why-t57/trade-finance",
@@ -169,7 +173,8 @@
    }
   ],
   "title": "Trade Finance for Food SMEs | Lenders Compete | T57",
-  "description": "Send one verified deal file to several licensed lenders and compare offers. Self-liquidating food trade finance through escrow on T57."
+  "description": "Send one verified deal file to several licensed lenders and compare offers. Self-liquidating food trade finance through escrow on T57.",
+  "parent": "why-t57"
  },
  "nft-funding": {
   "route": "/why-t57/nft-funding",
@@ -188,7 +193,8 @@
    }
   ],
   "title": "Digital Asset Trade Finance | Tokenized Trade Documents | T57",
-  "description": "Turn verified invoices, warehouse receipts and bills of lading into unique digital assets that lenders can trust and fund, on T57."
+  "description": "Turn verified invoices, warehouse receipts and bills of lading into unique digital assets that lenders can trust and fund, on T57.",
+  "parent": "why-t57"
  },
  "elc-15-minutes": {
   "route": "/why-t57/elc-15-minutes",
@@ -207,7 +213,8 @@
    }
   ],
   "title": "Electronic Letter of Credit in About 15 Minutes | T57",
-  "description": "Electronic LCs built from your verified contract and issued by partner banks in about 15 minutes after approval. Digital documents, fewer discrepancies."
+  "description": "Electronic LCs built from your verified contract and issued by partner banks in about 15 minutes after approval. Digital documents, fewer discrepancies.",
+  "parent": "why-t57"
  },
  "escrow-payments": {
   "route": "/why-t57/escrow-payments",
@@ -226,7 +233,8 @@
    }
   ],
   "title": "Escrow Payments for Food Trade | Pay on Milestones | T57",
-  "description": "Buyers pay into escrow with a licensed partner, and funds release only when inspection, shipment or delivery milestones are met on T57."
+  "description": "Buyers pay into escrow with a licensed partner, and funds release only when inspection, shipment or delivery milestones are met on T57.",
+  "parent": "why-t57"
  },
  "alternative-payments": {
   "route": "/why-t57/alternative-payments",
@@ -245,7 +253,8 @@
    }
   ],
   "title": "Stablecoin, Crypto & Bullion Payments for Food Trade | T57",
-  "description": "Settle cross-border food trades in stablecoins, digital assets or bullion-backed payments through regulated partners, where lawful, on T57."
+  "description": "Settle cross-border food trades in stablecoins, digital assets or bullion-backed payments through regulated partners, where lawful, on T57.",
+  "parent": "why-t57"
  },
  "digital-bank": {
   "route": "/why-t57/digital-bank",
@@ -263,8 +272,9 @@
     "a": "Any currency your trade needs. T57's banking partners hold, convert and settle across currencies, so you can pay suppliers and get paid by buyers in their own currency."
    }
   ],
-  "title": "Digital Bank for Food Trade | Any Currency, Instant Settlement | T57",
-  "description": "Hold, pay and settle in any currency with near-instant settlement from licensed partners, linked to every contract and invoice on your T57 trade record."
+  "title": "Digital Bank for Food Trade | Any Currency | T57",
+  "description": "Hold, pay and settle in any currency with near-instant settlement from licensed partners, linked to every contract and invoice on your T57 trade record.",
+  "parent": "why-t57"
  },
  "document-audit-trail": {
   "route": "/why-t57/document-audit-trail",
@@ -283,7 +293,8 @@
    }
   ],
   "title": "Trade Document Management & Audit Trail | T57",
-  "description": "Contracts, invoices, certificates and inspection reports on one tamper-evident trade record, with a full audit trail for every food trade."
+  "description": "Contracts, invoices, certificates and inspection reports on one tamper-evident trade record, with a full audit trail for every food trade.",
+  "parent": "why-t57"
  },
  "capabilities": {
   "route": "/capabilities",
@@ -302,7 +313,7 @@
    },
    {
     "q": "Can I use T57 for domestic trade as well as exports?",
-    "a": "Yes. T57 supports domestic wholesale to supermarkets, HoReCa and institutions, as well as cross-border trade."
+    "a": "Yes. T57 supports domestic wholesale to supermarkets, HoReCa and institutions, as well as cross-border trade. See domestic B2B trade ."
    }
   ],
   "title": "T57 Capabilities | Every Step of Food Trade on One Record",
@@ -329,7 +340,8 @@
    }
   ],
   "title": "Food Trade Execution | RFQs, Contracts & Traceability | T57",
-  "description": "RFQs, contract farming, government tenders, traceability and chat-based orders, from first enquiry to delivery on one T57 trade record."
+  "description": "RFQs, contract farming, government tenders, traceability and chat-based orders, from first enquiry to delivery on one T57 trade record.",
+  "parent": "capabilities"
  },
  "cap-rfq": {
   "route": "/capabilities/trade/rfq",
@@ -352,7 +364,8 @@
    }
   ],
   "title": "RFQ & Trade Execution for Food | T57",
-  "description": "Structured RFQs, verified bidders, like-for-like comparison and contracts from the accepted quote. Source and execute food trades on one T57 record."
+  "description": "Structured RFQs, verified bidders, like-for-like comparison and contracts from the accepted quote. Source and execute food trades on one T57 record.",
+  "parent": "cap-trade"
  },
  "cap-trade-desk": {
   "route": "/capabilities/trade/virtual-trade-desk",
@@ -375,7 +388,8 @@
    }
   ],
   "title": "Virtual Trade Desk for Food Trade | AI + Human Review | T57",
-  "description": "AI counterparty matching, price data, contract drafting, sanctions screening and document checks for food SMEs, with people making every decision."
+  "description": "AI counterparty matching, price data, contract drafting, sanctions screening and document checks for food SMEs, with people making every decision.",
+  "parent": "cap-trade"
  },
  "cap-contract-farming": {
   "route": "/capabilities/trade/contract-farming",
@@ -398,7 +412,8 @@
    }
   ],
   "title": "Contract Farming Platform | Forward Contracts for Food | T57",
-  "description": "Forward agreements, quality standards, input finance and milestone payments between buyers, farmers and cooperatives on one T57 record."
+  "description": "Forward agreements, quality standards, input finance and milestone payments between buyers, farmers and cooperatives on one T57 record.",
+  "parent": "cap-trade"
  },
  "cap-tenders": {
   "route": "/capabilities/trade/government-tenders",
@@ -421,7 +436,8 @@
    }
   ],
   "title": "Government Food Tenders | Find & Win Public Contracts | T57",
-  "description": "Discover public food tenders, get AI summaries and eligibility checks, build compliant responses and deliver on one T57 trade record."
+  "description": "Discover public food tenders, get AI summaries and eligibility checks, build compliant responses and deliver on one T57 trade record.",
+  "parent": "cap-trade"
  },
  "cap-traceability": {
   "route": "/capabilities/trade/traceability",
@@ -444,7 +460,8 @@
    }
   ],
   "title": "Food Traceability from Source to Buyer | T57",
-  "description": "Lot-level food traceability with verified origins, linked certificates and a tamper-evident record. Prove provenance and speed up recalls on T57."
+  "description": "Lot-level food traceability with verified origins, linked certificates and a tamper-evident record. Prove provenance and speed up recalls on T57.",
+  "parent": "cap-trade"
  },
  "cap-chat-orders": {
   "route": "/capabilities/trade/whatsapp-orders",
@@ -467,7 +484,8 @@
    }
   ],
   "title": "WhatsApp & AI Chat Ordering for Food Businesses | T57",
-  "description": "Order food by WhatsApp message or voice note. AI turns plain language into confirmed, structured orders on your T57 trade record."
+  "description": "Order food by WhatsApp message or voice note. AI turns plain language into confirmed, structured orders on your T57 trade record.",
+  "parent": "cap-trade"
  },
  "cap-trust-payments": {
   "route": "/capabilities/finance/trust-payments",
@@ -490,7 +508,8 @@
    }
   ],
   "title": "Trust & Payments for Food Trade | Escrow, Wallets, eLC | T57",
-  "description": "Escrow, wallets in any currency and electronic letters of credit from licensed partners, tied to milestones on one verified T57 trade record."
+  "description": "Escrow, wallets in any currency and electronic letters of credit from licensed partners, tied to milestones on one verified T57 trade record.",
+  "parent": "capabilities"
  },
  "cap-escrow": {
   "route": "/capabilities/finance/escrow",
@@ -585,7 +604,8 @@
    }
   ],
   "title": "Banking & Money Movement for Food Trade | T57",
-  "description": "Digital banking, accounts in any currency, cross-border transfers and regulated digital-asset settlement for verified food businesses on T57."
+  "description": "Digital banking, accounts in any currency, cross-border transfers and regulated digital-asset settlement for verified food businesses on T57.",
+  "parent": "capabilities"
  },
  "cap-digital-bank": {
   "route": "/capabilities/finance/digital-bank",
@@ -631,7 +651,7 @@
     "a": "Where partners offer it, verified business members can send remittances for staff. T57 is built for business payments, not personal accounts."
    }
   ],
-  "title": "Any-Currency Accounts & Cross-Border Transfers for Food Trade | T57",
+  "title": "Any-Currency Accounts for Food Trade | T57",
   "description": "Hold, convert and send money in any currency with upfront rates and fast cross-border transfers, linked to every trade on T57.",
   "parent": "cap-banking"
  },
@@ -655,7 +675,7 @@
     "a": "Views differ among scholars. Members who need Shariah-compliant settlement should seek guidance and can choose gold-backed tokens or conventional options instead."
    }
   ],
-  "title": "Crypto, Stablecoin & Gold-Backed Token Settlement for Trade | T57",
+  "title": "Crypto, Stablecoin & Gold-Token Trade Settlement | T57",
   "description": "Settle food trades in stablecoins, digital assets or gold-backed tokens through licensed partners, where lawful, linked to your T57 trade record.",
   "parent": "cap-banking"
  },
@@ -680,7 +700,8 @@
    }
   ],
   "title": "Food Trade Financing & Capital | Lenders Compete | T57",
-  "description": "Trade and supply chain finance, Shariah-compliant finance and tokenized funding for verified food trades, from competing licensed lenders on T57."
+  "description": "Trade and supply chain finance, Shariah-compliant finance and tokenized funding for verified food trades, from competing licensed lenders on T57.",
+  "parent": "capabilities"
  },
  "cap-supply-chain-finance": {
   "route": "/capabilities/finance/supply-chain-finance",
@@ -750,8 +771,9 @@
     "a": "Sanctions lists, watchlists, adverse media and beneficial ownership for every counterparty, before a deal moves forward."
    }
   ],
-  "title": "Trade Risk & Protection | Cargo, Credit Insurance & Takaful | T57",
-  "description": "Cargo insurance, trade credit cover, takaful, crop cover and compliance screening for food trade, from licensed partners, linked to every T57 trade."
+  "title": "Trade Risk & Protection | Cargo, Credit & Takaful | T57",
+  "description": "Cargo insurance, trade credit cover, takaful, crop cover and compliance screening for food trade, from licensed partners, linked to every T57 trade.",
+  "parent": "capabilities"
  },
  "cap-logistics": {
   "route": "/capabilities/logistics",
@@ -774,7 +796,8 @@
    }
   ],
   "title": "Food Logistics & Fulfilment | Freight, Tracking, Customs | T57",
-  "description": "Book vetted freight, cold-chain, inspection and customs partners, track shipments in real time and clear borders faster, on one T57 trade record."
+  "description": "Book vetted freight, cold-chain, inspection and customs partners, track shipments in real time and clear borders faster, on one T57 trade record.",
+  "parent": "capabilities"
  },
  "cap-logistics-network": {
   "route": "/capabilities/logistics/network",
@@ -785,7 +808,7 @@
   "faqs": [
    {
     "q": "How are logistics partners vetted?",
-    "a": "Partners go through business verification, licence and insurance checks, and their performance is rated on recorded shipments."
+    "a": "Partners go through business verification, license and insurance checks, and their performance is rated on recorded shipments."
    },
    {
     "q": "Can I invite my own forwarder?",
@@ -796,8 +819,9 @@
     "a": "T57 aggregates demand and shows comparable quotes, which helps members get competitive rates. Members choose and book."
    }
   ],
-  "title": "Food Logistics Network | Vetted Freight & Cold-Chain Partners | T57",
-  "description": "Compare and book vetted freight forwarders, carriers, cold-chain and warehousing partners matched to each food trade, with route risk alerts on T57."
+  "title": "Food Logistics Network | Freight & Cold Chain | T57",
+  "description": "Compare and book vetted freight forwarders, carriers, cold-chain and warehousing partners matched to each food trade, with route risk alerts on T57.",
+  "parent": "cap-logistics"
  },
  "cap-tracking": {
   "route": "/capabilities/logistics/tracking",
@@ -820,7 +844,8 @@
    }
   ],
   "title": "Real-Time Shipment & Cold-Chain Tracking for Food | T57",
-  "description": "Track food shipments across sea, air and road, with live temperature monitoring, predicted arrival and alerts, all on one T57 trade record."
+  "description": "Track food shipments across sea, air and road, with live temperature monitoring, predicted arrival and alerts, all on one T57 trade record.",
+  "parent": "cap-logistics"
  },
  "cap-customs": {
   "route": "/capabilities/logistics/customs",
@@ -843,7 +868,8 @@
    }
   ],
   "title": "Customs & Trade Documentation Hub for Food | T57",
-  "description": "Generate export and import documents from your contract, get HS code guidance and consistency checks, and pre-clear food shipments with vetted brokers on T57."
+  "description": "Generate export and import documents from your contract, get HS code guidance and consistency checks, and pre-clear food shipments with vetted brokers on T57.",
+  "parent": "cap-logistics"
  },
  "cap-intelligence": {
   "route": "/capabilities/intelligence",
@@ -865,8 +891,9 @@
     "a": "Core intelligence is included. Higher membership tiers include deeper data, credit reports and forecasts."
    }
   ],
-  "title": "Food Trade Intelligence & Data | Prices, Forecasts, Credit | T57",
-  "description": "Food price index, supply and demand forecasts, AI negotiation support, credit reports and port trade data, built into food trade on T57."
+  "title": "Food Trade Intelligence | Prices, Forecasts, Credit | T57",
+  "description": "Food price index, supply and demand forecasts, AI negotiation support, credit reports and port trade data, built into food trade on T57.",
+  "parent": "capabilities"
  },
  "cap-price-index": {
   "route": "/capabilities/intelligence/price-index",
@@ -889,7 +916,8 @@
    }
   ],
   "title": "Live Food Price Index by Product & Origin | T57",
-  "description": "Current food prices by product, grade and origin from public data and anonymized verified trades. Benchmark quotes and set alerts on T57."
+  "description": "Current food prices by product, grade and origin from public data and anonymized verified trades. Benchmark quotes and set alerts on T57.",
+  "parent": "cap-intelligence"
  },
  "cap-negotiations": {
   "route": "/capabilities/intelligence/ai-negotiations",
@@ -912,7 +940,8 @@
    }
   ],
   "title": "AI Negotiations Engine for Food Trade | T57",
-  "description": "AI that prepares negotiating briefs, benchmarks offers and suggests counter-offers for food deals, while people make every decision, on T57."
+  "description": "AI that prepares negotiating briefs, benchmarks offers and suggests counter-offers for food deals, while people make every decision, on T57.",
+  "parent": "cap-intelligence"
  },
  "cap-equipment-rental": {
   "route": "/capabilities/agritech/equipment-rental",
@@ -939,7 +968,8 @@
    }
   ],
   "title": "Rent Farm Equipment, Drones & Agritech | T57",
-  "description": "Rent tractors, drones, sensors, cold rooms and testing from verified owners, by the day, the hectare or the job, with escrow payments on T57."
+  "description": "Rent tractors, drones, sensors, cold rooms and testing from verified owners, by the day, the hectare or the job, with escrow payments on T57.",
+  "parent": "capabilities"
  },
  "cap-hire-expert": {
   "route": "/capabilities/hire-an-expert",
@@ -966,7 +996,8 @@
    }
   ],
   "title": "Hire a Food & Agriculture Expert | T57",
-  "description": "Hire verified agronomists, inspectors, food scientists and packaging experts by the job, with prices agreed up front, escrow payment and ratings, on T57."
+  "description": "Hire verified agronomists, inspectors, food scientists and packaging experts by the job, with prices agreed up front, escrow payment and ratings, on T57.",
+  "parent": "capabilities"
  },
  "ai-native": {
   "route": "/ai-native",
@@ -1012,7 +1043,8 @@
    }
   ],
   "title": "AI Trade Matchmaking for Food Buyers & Suppliers | T57",
-  "description": "AI ranks verified food buyers and suppliers by specification, capacity, corridor and track record, and explains every match, on T57."
+  "description": "AI ranks verified food buyers and suppliers by specification, capacity, corridor and track record, and explains every match, on T57.",
+  "parent": "ai-native"
  },
  "ai-negotiations": {
   "route": "/ai-native/negotiations",
@@ -1031,7 +1063,8 @@
    }
   ],
   "title": "AI Negotiation Support for Food Trade | T57 AI Native",
-  "description": "How T57's negotiation AI benchmarks offers, values payment and delivery terms and suggests counter-offers, while people make every decision."
+  "description": "How T57's negotiation AI benchmarks offers, values payment and delivery terms and suggests counter-offers, while people make every decision.",
+  "parent": "ai-native"
  },
  "ai-orders": {
   "route": "/ai-native/llm-orders",
@@ -1050,7 +1083,8 @@
    }
   ],
   "title": "LLM-Based Trade Orders by WhatsApp & Voice | T57 AI Native",
-  "description": "How T57's language models turn WhatsApp messages and voice notes into confirmed, structured food trade orders, in Arabic and local languages."
+  "description": "How T57's language models turn WhatsApp messages and voice notes into confirmed, structured food trade orders, in Arabic and local languages.",
+  "parent": "ai-native"
  },
  "ai-price-index": {
   "route": "/ai-native/price-index",
@@ -1069,7 +1103,8 @@
    }
   ],
   "title": "AI-Powered Food Price Index | T57 AI Native",
-  "description": "How T57's AI estimates prices for every food product, grade and origin from market data and verified trades, with confidence levels and explanations."
+  "description": "How T57's AI estimates prices for every food product, grade and origin from market data and verified trades, with confidence levels and explanations.",
+  "parent": "ai-native"
  },
  "ai-forecasting": {
   "route": "/ai-native/supply-demand-forecasting",
@@ -1088,7 +1123,8 @@
    }
   ],
   "title": "AI Supply & Demand Forecasting for Food | T57 AI Native",
-  "description": "AI forecasts of food supply, demand and prices by product and origin, with supply status signals and alerts for buyers, sellers and governments."
+  "description": "AI forecasts of food supply, demand and prices by product and origin, with supply status signals and alerts for buyers, sellers and governments.",
+  "parent": "ai-native"
  },
  "ai-risk": {
   "route": "/ai-native/risk-intelligence",
@@ -1107,7 +1143,8 @@
    }
   ],
   "title": "AI Risk Intelligence & Heatmaps for Food Trade | T57 AI Native",
-  "description": "AI risk scores and heatmaps for counterparties, routes, markets and climate in food trade, with explainable factors and early-warning alerts, on T57."
+  "description": "AI risk scores and heatmaps for counterparties, routes, markets and climate in food trade, with explainable factors and early-warning alerts, on T57.",
+  "parent": "ai-native"
  },
  "ai-crop-yield": {
   "route": "/ai-native/crop-yield-forecasting",
@@ -1125,8 +1162,9 @@
     "a": "The farmer or cooperative, and anyone they choose to share it with, such as a buyer or lender."
    }
   ],
-  "title": "AI Crop & Yield Forecasting for Farmers & Buyers | T57 AI Native",
-  "description": "Field-level yield and harvest forecasts from local AI models, satellite and weather data, and farmer knowledge, for farmers, cooperatives, buyers and lenders."
+  "title": "AI Crop & Yield Forecasting | T57 AI Native",
+  "description": "Field-level yield and harvest forecasts from local AI models, satellite and weather data, and farmer knowledge, for farmers, cooperatives, buyers and lenders.",
+  "parent": "ai-native"
  },
  "ai-profit-loss": {
   "route": "/ai-native/profit-loss-prediction",
@@ -1144,8 +1182,9 @@
     "a": "Yes. Adding your own costs makes predictions more accurate, and your data stays private."
    }
   ],
-  "title": "AI Profit & Loss Prediction for Farms & Food Trades | T57 AI Native",
-  "description": "Predict the likely margin of a crop, contract or trade from yields, prices and costs, with break-even prices and scenario comparisons, on T57."
+  "title": "AI Profit & Loss Prediction for Food Trades | T57",
+  "description": "Predict the likely margin of a crop, contract or trade from yields, prices and costs, with break-even prices and scenario comparisons, on T57.",
+  "parent": "ai-native"
  },
  "ai-crop-planning": {
   "route": "/ai-native/crop-planning",
@@ -1164,7 +1203,8 @@
    }
   ],
   "title": "AI Crop Planning & Farm Analytics | T57 AI Native",
-  "description": "AI crop plans based on market demand, soil, water and climate, with expected yields, margins and season analytics, for farmers and cooperatives."
+  "description": "AI crop plans based on market demand, soil, water and climate, with expected yields, margins and season analytics, for farmers and cooperatives.",
+  "parent": "ai-native"
  },
  "ai-agronomy": {
   "route": "/ai-native/agronomy-ai",
@@ -1182,8 +1222,9 @@
     "a": "Verified agronomists and agricultural experts who join T57 as service providers. Their qualifications are checked before they can advise."
    }
   ],
-  "title": "AI Agronomy Advice & Expert Network for Farmers | T57 AI Native",
-  "description": "Instant crop advice in local languages from AI, with verified agronomists for complex cases. Photo and voice diagnosis for farmers on T57."
+  "title": "AI Agronomy Advice for Farmers | T57 AI Native",
+  "description": "Instant crop advice in local languages from AI, with verified agronomists for complex cases. Photo and voice diagnosis for farmers on T57.",
+  "parent": "ai-native"
  },
  "ai-compliance": {
   "route": "/ai-native/ai-compliance",
@@ -1202,7 +1243,8 @@
    }
   ],
   "title": "AI-Powered KYC, KYB & Compliance Screening | T57 AI Native",
-  "description": "AI document checks, ownership matching and sanctions screening for food businesses, with people reviewing every adverse decision, on T57."
+  "description": "AI document checks, ownership matching and sanctions screening for food businesses, with people reviewing every adverse decision, on T57.",
+  "parent": "ai-native"
  },
  "ai-analytics": {
   "route": "/ai-native/predictive-analytics",
@@ -1221,7 +1263,8 @@
    }
   ],
   "title": "Predictive Trade Analytics Dashboard | T57 AI Native",
-  "description": "AI forecasts of volumes, margins and cash, with alerts on slow payers and supplier risk, and suggested actions for food trading businesses on T57."
+  "description": "AI forecasts of volumes, margins and cash, with alerts on slow payers and supplier risk, and suggested actions for food trading businesses on T57.",
+  "parent": "ai-native"
  },
  "ai-documents": {
   "route": "/ai-native/ai-documentation",
@@ -1240,7 +1283,8 @@
    }
   ],
   "title": "AI Trade Document Generation & Checks | T57 AI Native",
-  "description": "Generate contracts, invoices and packing lists from the accepted quote, and catch LC and customs discrepancies with AI checks, on T57."
+  "description": "Generate contracts, invoices and packing lists from the accepted quote, and catch LC and customs discrepancies with AI checks, on T57.",
+  "parent": "ai-native"
  },
  "platform": {
   "route": "/platform",
@@ -1265,6 +1309,53 @@
   "title": "T57 Platform | The Food Operating System",
   "description": "Verified identity, one trade record, connected finance and logistics partners, AI and blockchain on one secure platform built for food trade."
  },
+ "platform-trade-cycle": {
+  "route": "/platform/trade-cycle",
+  "section": "platform",
+  "name": "One Trade, Every Step",
+  "h1": "One trade. Every step. One record.",
+  "answer": "Agree a price, ship, insure, finance, pay and clear customs on one platform, with every party verified and every step on one record.",
+  "faqs": [],
+  "title": "One Trade, Every Step: Food Trade on One Record | T57",
+  "description": "Agree a price, ship, insure, finance, pay and clear customs for any food on one platform, with verified parties, competing lenders and milestone-based finance.",
+  "parent": "platform"
+ },
+ "platform-domestic": {
+  "route": "/platform/domestic-trade",
+  "section": "platform",
+  "name": "Domestic B2B Trade",
+  "h1": "From the factory to every shop in town.",
+  "answer": "Local factories and farms sell direct to supermarkets, restaurants and offices at factory price, by the carton, delivered to the door.",
+  "faqs": [
+   {
+    "q": "Does T57 charge listing fees or rebates?",
+    "a": "No. There are no listing fees, slotting rebates or forced promotions. Sellers set their own prices. T57 membership options are on the Pricing page."
+   },
+   {
+    "q": "Who delivers the orders?",
+    "a": "Licensed local logistics partners, booked from the order. Sellers can also invite the delivery company they already use."
+   },
+   {
+    "q": "Can buyers pay later?",
+    "a": "Yes, where a licensed B2B credit or pay-later partner approves the buyer. T57 does not lend."
+   },
+   {
+    "q": "What is the minimum order?",
+    "a": "Each seller sets it, for example 2, 5 or 20 cartons, with lower prices for larger orders."
+   },
+   {
+    "q": "Can farms and cooperatives sell this way?",
+    "a": "Yes. Farms, cooperatives and food processors can list fresh and packed products for local business buyers."
+   },
+   {
+    "q": "Which countries is this for?",
+    "a": "Domestic B2B trade is built for each of T57's founding markets: Saudi Arabia, the UAE, India, Malaysia and Türkiye."
+   }
+  ],
+  "title": "Domestic B2B Food Trade | Factory to Shop, Direct | T57",
+  "description": "Local factories and farms sell direct to supermarkets, restaurants and offices at factory price, by the carton, with local delivery and pay-later partners.",
+  "parent": "platform"
+ },
  "platform-architecture": {
   "route": "/platform/architecture",
   "section": "platform",
@@ -1285,8 +1376,9 @@
     "a": "Yes. Partners exchange only the data each trade needs, under agreement and with consent, and keep their own systems of record."
    }
   ],
-  "title": "T57 System Architecture | Cloud-Native, API-First Trade Platform",
-  "description": "Region-aware cloud on Microsoft Azure, modular services, partner connectors and member APIs, built for verified, regulated food trade across borders."
+  "title": "T57 Architecture | Cloud-Native, API-First Platform",
+  "description": "Region-aware cloud on Microsoft Azure, modular services, partner connectors and member APIs, built for verified, regulated food trade across borders.",
+  "parent": "platform"
  },
  "platform-roadmap": {
   "route": "/platform/roadmap",
@@ -1308,8 +1400,9 @@
     "a": "Yes. Partners and institutional members can join pilot programs and advisory groups."
    }
   ],
-  "title": "T57 Platform Roadmap | Verified Trade, Connected Finance, Food Ecosystem",
-  "description": "How the T57 platform grows in stages, from verified food trade to connected finance and a full food ecosystem, across founding and expanding markets."
+  "title": "T57 Platform Roadmap | Trade, Finance, Ecosystem",
+  "description": "How the T57 platform grows in stages, from verified food trade to connected finance and a full food ecosystem, across founding and expanding markets.",
+  "parent": "platform"
  },
  "platform-intelligence": {
   "route": "/platform/intelligence-layer",
@@ -1332,7 +1425,8 @@
    }
   ],
   "title": "T57 Intelligence Layer | Small, Local AI for Food Trade",
-  "description": "Small, local AI models trained on verified trade data and consented farmer knowledge, governed so people review every adverse decision."
+  "description": "Small, local AI models trained on verified trade data and consented farmer knowledge, governed so people review every adverse decision.",
+  "parent": "platform"
  },
  "platform-blockchain": {
   "route": "/platform/blockchain",
@@ -1354,8 +1448,9 @@
     "a": "The smart contract pauses release, and the dispute is handled under the contract and the partner's rules."
    }
   ],
-  "title": "Blockchain & Smart Contract Layer for Food Trade | T57 Platform",
-  "description": "Tamper-evident record anchoring, tokenized trade documents and smart-contract milestone payments, with privacy and licensed partners, on T57."
+  "title": "Blockchain & Smart Contracts for Food Trade | T57",
+  "description": "Tamper-evident record anchoring, tokenized trade documents and smart-contract milestone payments, with privacy and licensed partners, on T57.",
+  "parent": "platform"
  },
  "platform-security": {
   "route": "/platform/security",
@@ -1378,7 +1473,8 @@
    }
   ],
   "title": "Security Architecture | How T57 Protects Trade Data",
-  "description": "Verified identity, multi-factor sign-in, role-based access, encryption, regional data residency on Azure and a full audit trail on T57."
+  "description": "Verified identity, multi-factor sign-in, role-based access, encryption, regional data residency on Azure and a full audit trail on T57.",
+  "parent": "platform"
  },
  "trust": {
   "route": "/trust",
@@ -1432,7 +1528,8 @@
    }
   ],
   "title": "Verification Process | How T57 Verifies Every Member",
-  "description": "KYC, KYB, sanctions screening, site visits and role labels: how T57 verifies every buyer and seller before they trade."
+  "description": "KYC, KYB, sanctions screening, site visits and role labels: how T57 verifies every buyer and seller before they trade.",
+  "parent": "trust"
  },
  "trust-kyb": {
   "route": "/trust/verification/kyb",
@@ -1443,7 +1540,7 @@
   "faqs": [
    {
     "q": "What documents do I need for KYB?",
-    "a": "Company registration, licences, details of directors and owners, and bank information. The exact list depends on your country and role."
+    "a": "Company registration, licenses, details of directors and owners, and bank information. The exact list depends on your country and role."
    },
    {
     "q": "Who sees my KYB documents?",
@@ -1451,7 +1548,7 @@
    },
    {
     "q": "How often is KYB renewed?",
-    "a": "Periodically, and whenever key details such as ownership or licences change."
+    "a": "Periodically, and whenever key details such as ownership or licenses change."
    },
    {
     "q": "Can a cooperative pass KYB on behalf of its farmers?",
@@ -1459,7 +1556,8 @@
    }
   ],
   "title": "KYB Business Verification | T57",
-  "description": "How T57 verifies member companies: registry checks, beneficial ownership, licences, bank details and sanctions screening."
+  "description": "How T57 verifies member companies: registry checks, beneficial ownership, licenses, bank details and sanctions screening.",
+  "parent": "trust-verification"
  },
  "trust-kyc": {
   "route": "/trust/verification/kyc",
@@ -1486,7 +1584,8 @@
    }
   ],
   "title": "KYC Individual Verification | T57",
-  "description": "How T57 verifies owners, directors and users: identity checks, sanctions screening and signing authority for every trade."
+  "description": "How T57 verifies owners, directors and users: identity checks, sanctions screening and signing authority for every trade.",
+  "parent": "trust-verification"
  },
  "trust-scoring": {
   "route": "/trust/verification/membership-scoring",
@@ -1513,7 +1612,8 @@
    }
   ],
   "title": "Membership Scoring & Trust Rating | T57",
-  "description": "A trust rating built from verified checks and real trade behavior, explained to every member and reviewed by people."
+  "description": "A trust rating built from verified checks and real trade behavior, explained to every member and reviewed by people.",
+  "parent": "trust-verification"
  },
  "trust-audit-trail": {
   "route": "/trust/audit-trail",
@@ -1540,7 +1640,8 @@
    }
   ],
   "title": "Audit Trail for Food Trade | T57 Trust & Compliance",
-  "description": "Every action on every trade, attributed to a verified person, time-stamped and tamper-evident. Audit-ready evidence on T57."
+  "description": "Every action on every trade, attributed to a verified person, time-stamped and tamper-evident. Audit-ready evidence on T57.",
+  "parent": "trust"
  },
  "trust-documents": {
   "route": "/trust/document-management",
@@ -1567,7 +1668,8 @@
    }
   ],
   "title": "Trade Document Management | T57 Trust & Compliance",
-  "description": "Create, check, store and share every food trade document on one record, with AI checks, expiry alerts and authenticity verification."
+  "description": "Create, check, store and share every food trade document on one record, with AI checks, expiry alerts and authenticity verification.",
+  "parent": "trust"
  },
  "trust-security": {
   "route": "/trust/security",
@@ -1594,7 +1696,8 @@
    }
   ],
   "title": "Security & Privacy | Your Trade Data on T57",
-  "description": "Multi-factor sign-in, role-based access, consent controls and access history. You decide who sees your trade data on T57."
+  "description": "Multi-factor sign-in, role-based access, consent controls and access history. You decide who sees your trade data on T57.",
+  "parent": "trust"
  },
  "trust-data-protection": {
   "route": "/trust/security/data-protection",
@@ -1621,7 +1724,8 @@
    }
   ],
   "title": "Data Protection | PDPL, DPDP and PDPA Compliance | T57",
-  "description": "How T57 handles data under Saudi and UAE PDPL, India's DPDP Act, Malaysia's PDPA and Türkiye's Law 6698, with consent and data residency."
+  "description": "How T57 handles data under Saudi and UAE PDPL, India's DPDP Act, Malaysia's PDPA and Türkiye's Law 6698, with consent and data residency.",
+  "parent": "trust-security"
  },
  "trust-disputes": {
   "route": "/trust/trade-assurance/disputes",
@@ -1648,7 +1752,8 @@
    }
   ],
   "title": "Trade Dispute Resolution | T57 Trade Assurance",
-  "description": "Resolve food trade disputes from one shared record, with escrow paused through licensed partners and independent inspection."
+  "description": "Resolve food trade disputes from one shared record, with escrow paused through licensed partners and independent inspection.",
+  "parent": "trust"
  },
  "markets": {
   "route": "/markets",
@@ -1667,11 +1772,47 @@
    },
    {
     "q": "Does T57 support domestic trade, or only exports?",
-    "a": "Both. Domestic wholesale and cross-border trade run on the same platform."
+    "a": "Both. Domestic B2B trade and cross-border trade run on the same platform."
    }
   ],
-  "title": "Markets | T57 in Saudi Arabia, UAE, India, Malaysia and Türkiye",
+  "title": "Markets | Saudi Arabia, UAE, India, Malaysia, Türkiye | T57",
   "description": "One verified food trade network across five founding markets, for domestic wholesale and cross-border trade, with local teams and partners."
+ },
+ "markets-global": {
+  "route": "/markets/global-rollout",
+  "section": "markets",
+  "name": "Global Rollout",
+  "h1": "Five markets first. Open to the world.",
+  "answer": "T57 starts with teams on the ground in five founding markets, is open online to verified businesses in 195 countries, and opens new markets phase by phase, with country partners where it has no office yet.",
+  "faqs": [
+   {
+    "q": "Is T57 only for the five founding markets?",
+    "a": "No. The five founding markets have country teams on the ground, but T57 is open online to verified businesses in 195 countries, and new markets open phase by phase."
+   },
+   {
+    "q": "Can I join if my country is not a T57 market yet?",
+    "a": "Yes. Apply online and complete digital KYB and KYC checks and compliance screening. Some local services, such as delivery or pay-later terms, depend on partner coverage in your country."
+   },
+   {
+    "q": "What changes when T57 opens a market?",
+    "a": "A local team or country partner, local-language support, local logistics, inspection and finance partners, and a guide to that country's food rules."
+   },
+   {
+    "q": "How does T57 choose the next markets?",
+    "a": "By trade corridors with real supply and demand, partner readiness through IOFS and ASEAN, legal opinions and demand from members. A phase opens only when these are in place."
+   },
+   {
+    "q": "Are the dates fixed?",
+    "a": "No. They are targets from T57's rollout plan, and each phase opens when it is ready."
+   },
+   {
+    "q": "What is a T57 country partner?",
+    "a": "A licensed local business that runs T57 in its country or city, like a franchise. See the Country Partner page to apply."
+   }
+  ],
+  "title": "Global Rollout | 5 Markets to 101, Open Worldwide | T57",
+  "description": "T57 starts with teams in five founding markets, is open online in 195 countries, and opens new markets in phases, with country partners.",
+  "parent": "markets"
  },
  "markets-oic": {
   "route": "/markets/oic-halal",
@@ -1773,7 +1914,7 @@
   "route": "/markets/saudi-arabia/compliance",
   "section": "markets",
   "name": "Saudi Arabia: Regulatory Guide",
-  "h1": "Know the rules before you ship.",
+  "h1": "Know Saudi Arabia's food rules before you ship.",
   "answer": "Know the rules for food trade in Saudi Arabia before you ship.",
   "faqs": [
    {
@@ -1797,7 +1938,7 @@
   "route": "/markets/saudi-arabia/getting-started",
   "section": "markets",
   "name": "Saudi Arabia: Getting Started",
-  "h1": "Four steps to your first trade.",
+  "h1": "Your first trade in Saudi Arabia, in four steps.",
   "answer": "Start trading on T57 in Saudi Arabia in four steps.",
   "faqs": [
    {
@@ -1869,7 +2010,7 @@
   "route": "/markets/uae/compliance",
   "section": "markets",
   "name": "UAE: Regulatory Guide",
-  "h1": "Know the rules before you ship.",
+  "h1": "Know the UAE's food rules before you ship.",
   "answer": "Know the rules for food trade in the UAE before you ship.",
   "faqs": [
    {
@@ -1893,7 +2034,7 @@
   "route": "/markets/uae/getting-started",
   "section": "markets",
   "name": "UAE: Getting Started",
-  "h1": "Four steps to your first trade.",
+  "h1": "Your first trade in the UAE, in four steps.",
   "answer": "Start trading on T57 in the UAE in four steps.",
   "faqs": [
    {
@@ -1933,7 +2074,7 @@
     "a": "English and Hindi, with more Indian languages planned."
    }
   ],
-  "title": "T57 in India | Verified Food Trade for FPOs, Processors and Exporters",
+  "title": "T57 in India | Verified Food Trade for FPOs and Exporters",
   "description": "Sell to verified domestic business buyers and importers in the Gulf and Southeast Asia, with finance, inspection and logistics through licensed partners.",
   "parent": "markets"
  },
@@ -1965,7 +2106,7 @@
   "route": "/markets/india/compliance",
   "section": "markets",
   "name": "India: Regulatory Guide",
-  "h1": "Know the rules before you ship.",
+  "h1": "Know India's food rules before you ship.",
   "answer": "Know the rules for food trade in India before you ship.",
   "faqs": [
    {
@@ -1989,7 +2130,7 @@
   "route": "/markets/india/getting-started",
   "section": "markets",
   "name": "India: Getting Started",
-  "h1": "Four steps to your first trade.",
+  "h1": "Your first trade in India, in four steps.",
   "answer": "Start trading on T57 in India in four steps.",
   "faqs": [
    {
@@ -2061,7 +2202,7 @@
   "route": "/markets/malaysia/compliance",
   "section": "markets",
   "name": "Malaysia: Regulatory Guide",
-  "h1": "Know the rules before you ship.",
+  "h1": "Know Malaysia's food rules before you ship.",
   "answer": "Know the rules for food trade in Malaysia before you ship.",
   "faqs": [
    {
@@ -2085,7 +2226,7 @@
   "route": "/markets/malaysia/getting-started",
   "section": "markets",
   "name": "Malaysia: Getting Started",
-  "h1": "Four steps to your first trade.",
+  "h1": "Your first trade in Malaysia, in four steps.",
   "answer": "Start trading on T57 in Malaysia in four steps.",
   "faqs": [
    {
@@ -2157,7 +2298,7 @@
   "route": "/markets/turkiye/compliance",
   "section": "markets",
   "name": "Türkiye: Regulatory Guide",
-  "h1": "Know the rules before you ship.",
+  "h1": "Know Türkiye's food rules before you ship.",
   "answer": "Know the rules for food trade in Türkiye before you ship.",
   "faqs": [
    {
@@ -2181,7 +2322,7 @@
   "route": "/markets/turkiye/getting-started",
   "section": "markets",
   "name": "Türkiye: Getting Started",
-  "h1": "Four steps to your first trade.",
+  "h1": "Your first trade in Türkiye, in four steps.",
   "answer": "Start trading on T57 in Türkiye in four steps.",
   "faqs": [
    {
@@ -2292,7 +2433,7 @@
     "a": "Yes, if you open a tender to them. Every supplier is verified before it can bid."
    }
   ],
-  "title": "Government & Institutional Programs | Food Security, Tenders, Subsidies | T57",
+  "title": "Government & Institutional Programs | T57 Pricing",
   "description": "Programs for ministries and development partners: subsidized memberships, local and global food tenders, and an AI-driven government module for food security.",
   "parent": "pricing"
  },
@@ -2321,7 +2462,7 @@
   "section": "resources",
   "name": "Resources Overview",
   "h1": "Learn how food trade is changing, and how to trade better.",
-  "answer": "Learn how food trade is changing, and how to trade better.",
+  "answer": "Insight, research, news, videos, events and plain-language guides on digital food trade, food security, trade finance and AI.",
   "faqs": [
    {
     "q": "Are T57 resources free?",
@@ -2395,7 +2536,7 @@
   "section": "resources",
   "name": "Explainer Videos",
   "h1": "See how T57 works, in a few minutes.",
-  "answer": "See how T57 works, in a few minutes.",
+  "answer": "Short videos on verification, the trade record, escrow, letters of credit and responsible AI.",
   "faqs": [],
   "title": "Explainer Videos | How T57 Works",
   "description": "Short videos on T57 and digital food trade: verification, the trade record, escrow, letters of credit and responsible AI.",
@@ -2406,7 +2547,7 @@
   "section": "resources",
   "name": "Webinars & Events",
   "h1": "Meet T57, online and in person.",
-  "answer": "Meet T57 online and in person.",
+  "answer": "Live webinars, market briefings and trade events where you can meet T57's teams.",
   "faqs": [
    {
     "q": "Are webinars recorded?",
@@ -2426,7 +2567,7 @@
   "section": "resources",
   "name": "FAQ & Glossary",
   "h1": "Food trade terms, explained in plain language.",
-  "answer": "Food trade terms, explained in plain language.",
+  "answer": "Plain-language answers about T57, and the trade, finance and technology terms behind it, from escrow to HS codes.",
   "faqs": [
    {
     "q": "What is T57?",
@@ -2473,7 +2614,7 @@
   "section": "help",
   "name": "Getting Started Guides",
   "h1": "From sign-up to your first trade.",
-  "answer": "From sign-up to your first trade, step by step.",
+  "answer": "Step-by-step guides for new members: account, plan, verification, Passport, team, listings and your first request for quote.",
   "faqs": [],
   "title": "Getting Started with T57 | Step-by-Step Guides",
   "description": "Step-by-step guides for new T57 members: account, plan, verification, Passport, team, listings and your first request for quote.",
@@ -2484,7 +2625,7 @@
   "section": "help",
   "name": "Platform How-Tos",
   "h1": "How to do everything on T57.",
-  "answer": "How to do everything on T57.",
+  "answer": "Guides for quotes, contracts, documents, escrow, letters of credit, finance, logistics, team settings and market intelligence.",
   "faqs": [],
   "title": "Platform How-Tos | T57 Help Center",
   "description": "How to trade on T57: quotes, contracts, documents, escrow, letters of credit, finance, logistics, team settings and market intelligence.",
@@ -2527,7 +2668,7 @@
   "section": "help",
   "name": "Contact Support",
   "h1": "Talk to a person when you need one.",
-  "answer": "Talk to a person when you need one.",
+  "answer": "Reach T57 support by chat, email or your local team in Saudi Arabia, the UAE, India, Malaysia or Türkiye.",
   "faqs": [],
   "title": "Contact Support | T57 Help Center",
   "description": "Reach T57 support by chat, email or your local country team in Saudi Arabia, the UAE, India, Malaysia or Türkiye.",
@@ -2553,7 +2694,7 @@
     "a": "Partners licensed in T57's markets, or serving trade with them, can apply."
    }
   ],
-  "title": "Partnerships | Finance, Logistics and Technology Partners | T57",
+  "title": "Partnerships | Finance, Logistics & Technology | T57",
   "description": "Partner with T57 to serve verified food businesses with finance, insurance, logistics, inspection and technology, connected to one trade record."
  },
  "partners-technology": {
@@ -2561,7 +2702,7 @@
   "section": "partners",
   "name": "Technology Partners",
   "h1": "Build the future of food trade with us.",
-  "answer": "Build the future of food trade with us.",
+  "answer": "Partner with T57 in cloud, identity, data, integration and AI to serve verified food businesses.",
   "faqs": [
    {
     "q": "Do you offer APIs?",
@@ -2592,7 +2733,7 @@
     "a": "Yes."
    }
   ],
-  "title": "Financial Services Partners | Trade Finance and Insurance | T57",
+  "title": "Financial Services Partners | Finance & Insurance | T57",
   "description": "Banks, finance companies, escrow providers, insurers and takaful operators reach verified food businesses with the trade record behind every request.",
   "parent": "partnerships"
  },
@@ -2601,7 +2742,7 @@
   "section": "partners",
   "name": "Logistics Partners",
   "h1": "Move and check food for verified traders.",
-  "answer": "Move and check food for verified traders.",
+  "answer": "Freight, cold chain, warehouse, inspection and customs partners serve verified traders from inside the T57 trade record.",
   "faqs": [
    {
     "q": "Do members choose their own logistics partner?",
@@ -2616,12 +2757,72 @@
   "description": "Freight, cold chain, warehouse, inspection and customs partners serve verified food traders from inside the T57 trade record.",
   "parent": "partnerships"
  },
+ "partners-research": {
+  "route": "/partners/research",
+  "section": "partners",
+  "name": "Research & University Partners",
+  "h1": "From the lab to the farm.",
+  "answer": "T57 works with agricultural universities and research institutes to bring their research to farmers and food SMEs, and to turn it into income for the scientists behind it.",
+  "faqs": [
+   {
+    "q": "Who owns the research and data?",
+    "a": "The partner institution. T57 uses research and data only under the terms agreed with each partner, and credits the source."
+   },
+   {
+    "q": "How are scientists paid?",
+    "a": "Through license fees and royalties agreed up front, and through paid advice on Hire an Expert."
+   },
+   {
+    "q": "Can start-ups from a university join?",
+    "a": "Yes. Start-ups can list their technology for rent or sale, and offer services, to T57 members."
+   },
+   {
+    "q": "Which institutions can apply?",
+    "a": "Agricultural universities, research institutes, academies and their start-ups, in any country."
+   }
+  ],
+  "title": "Research & University Partners: From the Lab to the Farm | T57",
+  "description": "T57 works with agricultural universities and research institutes to bring research to farmers, train local AI, pilot new tech and reward scientists.",
+  "parent": "partnerships"
+ },
+ "partners-country": {
+  "route": "/partners/country-partner",
+  "section": "partners",
+  "name": "Country Partners",
+  "h1": "Bring T57 to your country.",
+  "answer": "Run T57 in your country or city as a licensed country partner, like a franchise. You build the local network of verified food businesses; T57 provides the platform, the brand and the support.",
+  "faqs": [
+   {
+    "q": "Is this a franchise?",
+    "a": "It works like one. You run T57 in an agreed territory under licence, with the T57 brand, platform and support, and share in the revenue from the members you bring."
+   },
+   {
+    "q": "Which countries are open to partners?",
+    "a": "Countries and cities where T57 has no country team yet. See the Global Rollout page for the phases."
+   },
+   {
+    "q": "Can I cover just one city?",
+    "a": "Yes. Territories can be a whole country, a region or a trading city."
+   },
+   {
+    "q": "Do partners handle money or goods?",
+    "a": "No. Members pay through licensed payment and escrow partners, and goods move with logistics partners. Partners do not lend."
+   },
+   {
+    "q": "Is there a fee to become a partner?",
+    "a": "Terms are agreed with each partner and set out in the partner license."
+   }
+  ],
+  "title": "Country Partner Franchise | Bring T57 Home | T57",
+  "description": "Run T57 in your country or city as a licensed country partner. You build the local network; T57 provides the platform, brand and support.",
+  "parent": "partnerships"
+ },
  "partners-apply": {
   "route": "/partners/apply",
   "section": "partners",
   "name": "Become a Partner",
   "h1": "Apply to become a T57 partner.",
-  "answer": "Apply to become a T57 partner.",
+  "answer": "Partner with T57 in finance, insurance, logistics, inspection or technology. Tell us about your business to start.",
   "faqs": [],
   "title": "Become a Partner | T57",
   "description": "Apply to partner with T57 in finance, insurance, logistics, inspection or technology.",
@@ -2655,7 +2856,7 @@
   "section": "about",
   "name": "Leadership & Advisors",
   "h1": "The people building T57.",
-  "answer": "The people building T57.",
+  "answer": "The founders, leadership team, board and advisors behind T57, with experience in food trade, food security, technology, finance and governance.",
   "faqs": [
    {
     "q": "Who leads T57?",
@@ -2666,7 +2867,7 @@
     "a": "T57 has a 10-year MoU with IOFS. Its Director General, Strategic Relations, Prof. Yerlan Baidaulet, is the former Director-General of IOFS."
    }
   ],
-  "title": "Leadership & Advisors | Founders, Team and Advisory Board | T57",
+  "title": "Leadership & Advisors | T57",
   "description": "Meet the founders, leadership team, board and thirteen advisors building T57, with experience in food trade, food security, technology, finance and governance.",
   "parent": "about"
  },
@@ -2675,7 +2876,7 @@
   "section": "about",
   "name": "Innovation & Impact",
   "h1": "Technology that serves the people who feed the world.",
-  "answer": "Technology that serves the people who feed the world.",
+  "answer": "How T57 uses small, local AI responsibly, and the impact it works toward: market access, finance, less food loss and inclusion.",
   "faqs": [],
   "title": "Innovation & Impact | Responsible AI for Food Trade | T57",
   "description": "How T57 uses small, local AI responsibly, and the impact it works toward: market access, finance, less food loss and inclusion.",
@@ -2686,7 +2887,7 @@
   "section": "about",
   "name": "T57 for Food Security",
   "h1": "Make food security visible, verifiable and actionable.",
-  "answer": "Make food security visible, verifiable and actionable.",
+  "answer": "Verified supply across borders, supply status by origin, AI early warning and a government module, in one system.",
   "faqs": [
    {
     "q": "Is T57 a government system?",
@@ -2730,7 +2931,7 @@
   "section": "about",
   "name": "Careers",
   "h1": "Help build the infrastructure food trade runs on.",
-  "answer": "Help build the infrastructure food trade runs on.",
+  "answer": "Join T57's teams in technology, AI, product, country operations and partnerships across five founding markets.",
   "faqs": [
    {
     "q": "Can I apply if no role fits?",
@@ -2750,7 +2951,7 @@
   "section": "about",
   "name": "Media & Press Kit",
   "h1": "Resources for journalists and partners.",
-  "answer": "Resources for journalists and partners.",
+  "answer": "Company facts, logos and press contacts for journalists and partners.",
   "faqs": [],
   "title": "Media & Press Kit | T57",
   "description": "T57 company facts, logos, leadership photos and press contacts for journalists.",
@@ -2784,7 +2985,7 @@
   "section": "contact",
   "name": "Request a Demo",
   "h1": "See T57 working on your own products.",
-  "answer": "See T57 working on your own products.",
+  "answer": "Book a 30-minute demo on your own products and markets, then start your free trial.",
   "faqs": [
    {
     "q": "Is the demo free?",
@@ -2804,7 +3005,7 @@
   "section": "contact",
   "name": "Regional Offices",
   "h1": "Find T57 near you.",
-  "answer": "Find T57 near you.",
+  "answer": "T57's country teams in Saudi Arabia, the UAE, India, Malaysia and Türkiye.",
   "faqs": [
    {
     "q": "Can I visit an office?",
@@ -2815,8 +3016,8 @@
     "a": "Your nearest founding-market team, or contact us and we'll route you."
    }
   ],
-  "title": "Regional Offices | T57 in Dubai, Riyadh, India, Malaysia, Türkiye",
-  "description": "Find T57's offices and country teams in the UAE, Saudi Arabia, India, Malaysia and Türkiye.",
+  "title": "T57 Offices | Saudi Arabia, UAE, India, Malaysia, Türkiye",
+  "description": "Find T57's offices and country teams in Saudi Arabia, the UAE, India, Malaysia and Türkiye.",
   "parent": "contact"
  },
  "governments": {
@@ -2835,8 +3036,9 @@
     "a": "Despite agriculture’s historical role in employment and food security, global investors are only now seeking credible, measurable pathways to support food systems as part of their climate and SDG commitments. T57 helps governments present investable, data-backed opportunities, from model support centers to special agri zones and CSR programs, with transparent performance and impact tracking that meets both regulatory and investor expectations."
    }
   ],
-  "title": "T57 for Governments & Regulators | Live Food Security Intelligence & Clean Procurement",
-  "description": "T57 helps governments and regulators build live, governable food systems by unifying food security intelligence and secure, transparent procurement on a single platform, turning fragmented agrifood data into actionable, policy-ready insights that reduce waste and stabilize prices."
+  "title": "T57 for Governments | Food Security & Clean Procurement",
+  "description": "T57 gives governments and regulators live food security intelligence and transparent procurement on one platform, to cut waste and steady prices.",
+  "parent": "who-we-serve"
  },
  "financiers": {
   "route": "/who-we-serve/financiers",
@@ -2862,8 +3064,9 @@
     "a": "Food and agri transactions often involve fragmented supply chains, cross-border counterparties, and climate or logistics volatility, which makes visibility and verification especially valuable. The International Fund for Agricultural Development (IFAD) notes that small-scale producers remain underserved by finance, highlighting that large financing needs go unmet because risk gaps discourage capital."
    }
   ],
-  "title": "T57 for Financiers & Investors | Vetted Food & Agri Opportunities",
-  "description": "T57 helps financiers and investors deploy capital into curated, contract-backed food and agri opportunities. Gain faster due diligence, stronger transaction visibility, and tighter counterparty risk control across the food system."
+  "title": "T57 for Financiers | Vetted Food & Agri Opportunities",
+  "description": "Deploy capital into curated, contract-backed food and agri trades, with faster due diligence, full transaction visibility and tighter counterparty risk.",
+  "parent": "who-we-serve"
  },
  "sellers": {
   "route": "/who-we-serve/sellers",
@@ -2889,8 +3092,9 @@
     "a": "Agricultural prices remain exposed to extreme weather, changing biofuel policies and rising trade barriers. Exporters using structured market, crop and price intelligence are better able to adjust sourcing and pricing to protect margins."
    }
   ],
-  "title": "T57 for Sellers & Exporters | Trusted Agri Export Platform with Finance, Intelligence & Smart Contracts",
-  "description": "Discover how T57 helps food and agri sellers & exporters find verified buyers, manage documentation, secure payments, and use real-time intelligence to grow markets with lowered risk."
+  "title": "T57 for Sellers & Exporters | Trusted Agri Export Platform",
+  "description": "T57 helps food and agri exporters find verified buyers, manage documents, get paid securely and grow with real-time market intelligence.",
+  "parent": "who-we-serve"
  },
  "traders": {
   "route": "/who-we-serve/traders",
@@ -2901,7 +3105,7 @@
   "faqs": [
    {
     "q": "Can intermediaries join T57?",
-    "a": "Yes. Traders and intermediaries are welcome. They are labelled by role so every counterparty knows how the trade is structured."
+    "a": "Yes. Traders and intermediaries are welcome. They are labeled by role so every counterparty knows how the trade is structured."
    },
    {
     "q": "Does T57 lend to traders?",
@@ -2916,8 +3120,9 @@
     "a": "Your completed trades, verification status and role, so new counterparties and lenders can see your history before they deal with you."
    }
   ],
-  "title": "T57 for Traders & Aggregators | Fund and Run Deals on One Record",
-  "description": "Verified suppliers and buyers, back-to-back contracts and finance from competing lenders, all on one food trade record."
+  "title": "T57 for Traders & Aggregators | Fund and Run Deals",
+  "description": "Verified suppliers and buyers, back-to-back contracts and finance from competing lenders, all on one food trade record.",
+  "parent": "who-we-serve"
  },
  "buyers": {
   "route": "/who-we-serve/buyers",
@@ -2940,11 +3145,12 @@
    },
    {
     "q": "Can I buy locally as well as import?",
-    "a": "Yes. T57 supports domestic wholesale for supermarkets, HoReCa and institutions as well as cross-border trade."
+    "a": "Yes. T57 supports domestic wholesale for supermarkets, HoReCa and institutions as well as cross-border trade. See domestic B2B trade ."
    }
   ],
   "title": "T57 for Buyers & Importers | Source from Verified Suppliers",
-  "description": "Source food from verified producers and processors. RFQs, contracts, escrow, LCs, inspection and logistics on one trade record."
+  "description": "Source food from verified producers and processors. RFQs, contracts, escrow, LCs, inspection and logistics on one trade record.",
+  "parent": "who-we-serve"
  },
  "enterprises": {
   "route": "/who-we-serve/enterprises",
@@ -2970,8 +3176,9 @@
     "a": "Yes. T57 is designed to connect documents, milestones, counterparties, and payment records within a single, trackable workflow. This makes it easier for enterprise teams to support internal controls, reviews, and audit requirements across complex trade operations."
    }
   ],
-  "title": "T57 for Manufacturers & Enterprises | Improved Business Velocity for Food and Agri Trade",
-  "description": "T57 helps food and agri manufacturers and enterprises digitize sourcing, RFQs, payments, settlements, trade finance, and audit trails on a single secure platform."
+  "title": "T57 for Manufacturers & Enterprises | Faster Food Trade",
+  "description": "T57 helps food manufacturers and enterprises digitize sourcing, RFQs, payments, trade finance and audit trails on one secure platform.",
+  "parent": "who-we-serve"
  },
  "food-processors": {
   "route": "/who-we-serve/food-processors",
@@ -2997,8 +3204,9 @@
     "a": "Yes. T57 keeps trade, payment, and documentation data linked within a single audit trail, supporting internal controls and external audits. This helps processors meet the documentation demands of regulators and financial compliance frameworks."
    }
   ],
-  "title": "T57 for Food Processors | Supply Assurance and Trade Execution Platform for Food and Agri Trade",
-  "description": "T57 helps food processors digitize sourcing, RFQs, payments, trade finance, and documentation on a single secure platform, enabling plants to run with more reliable inputs and faster cash cycles."
+  "title": "T57 for Food Processors | Supply Assurance & Trade Execution",
+  "description": "T57 helps food processors digitize sourcing, RFQs, payments, finance and documents on one platform, for steadier inputs and faster cash cycles.",
+  "parent": "who-we-serve"
  },
  "cooperatives": {
   "route": "/who-we-serve/cooperatives",
@@ -3016,8 +3224,9 @@
     "a": "Government tenders and contract farming agreements lock in demand and timelines, so members know what to produce, when it will be picked up, and at what terms, which leads to more consistent prices and lower post-harvest losses. T57 helps members plan volumes and crop mix, match supply to tender requirements, coordinate logistics and documentation, and track fulfillment and payments in one place, turning tender wins and contracts into a distributed benefit for individual farmers."
    }
   ],
-  "title": "T57 for Cooperatives & FPOs | Superior Market Access, Finance and Trade Tools",
-  "description": "See how T57 helps Cooperatives & Farmer Producer Organizations trade directly, access real-time market and price intelligence, secure finance, manage logistics, and run clean, auditable operations for their members."
+  "title": "T57 for Cooperatives & FPOs | Market Access and Finance",
+  "description": "T57 helps cooperatives and FPOs trade directly, see live prices, secure finance, manage logistics and run auditable operations for members.",
+  "parent": "who-we-serve"
  },
  "collaborators": {
   "route": "/who-we-serve/collaborators",
@@ -3043,8 +3252,9 @@
     "a": "By providing access to trusted partners across the value chain, T57 helps users align their goals with the policy and regulatory boundaries established by governments."
    }
   ],
-  "title": "T57 Partner & Collaborator Network | Powering the Food and Agri Ecosystem",
-  "description": "T57 brings agronomists, financiers, logistics providers, certification bodies, universities, and agri specialists on one verified platform to enable smarter food trade, faster finance, and greater impact across the agri value chain."
+  "title": "T57 Partner & Collaborator Network | Food & Agri Ecosystem",
+  "description": "T57 brings agronomists, financiers, logistics firms, certifiers and universities onto one verified platform for smarter food trade and more impact.",
+  "parent": "who-we-serve"
  },
  "service-providers": {
   "route": "/who-we-serve/service-providers",
@@ -3070,8 +3280,9 @@
     "a": "Buyers and regulators increasingly expect traceability, food safety, reliable documentation, and faster issue resolution throughout supply chains. This makes service providers an important part of the supply chain."
    }
   ],
-  "title": "T57 for Service Providers | Creating Impact in the Food and Agri Industry",
-  "description": "Join T57 as a service provider in food and agriculture. Reach verified demand, deliver trusted expertise, and grow through structured, lower-risk trade workflows."
+  "title": "T57 for Service Providers | Grow in Food and Agri",
+  "description": "Join T57 as a food and agri service provider. Reach verified demand, deliver trusted expertise and grow through structured, lower-risk workflows.",
+  "parent": "who-we-serve"
  },
  "farmers": {
   "route": "/who-we-serve/farmers",
@@ -3101,7 +3312,8 @@
     "a": "Yes. When producers lack visibility into demand and prices, they negotiate from a weaker position and often rely too heavily on intermediaries. T57's core model directly addresses this by improving access to market and price intelligence."
    }
   ],
-  "title": "T57 for Farmers and Producers | Improve Market Access and Leverage World-Class AI Tools",
-  "description": "T57 helps farmers and producers access verified buyers, market and price intelligence, secure contracts, faster payments, and trade finance in the food and agri sector."
+  "title": "T57 for Farmers & Producers | Market Access and AI Tools",
+  "description": "T57 helps farmers and producers reach verified buyers, see market prices, sign secure contracts, get paid faster and access trade finance.",
+  "parent": "who-we-serve"
  }
 }

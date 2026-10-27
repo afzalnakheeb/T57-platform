@@ -148,13 +148,19 @@
   // Hubs: the five markets plus ASEAN and East Africa. s = surplus-leaning (teal), d = deficit-leaning (amber), for illustration.
   const HUBS = { riyadh:[24.7, 46.7, 'd'], dubai:[25.2, 55.3, 'd'], mumbai:[19.1, 72.9, 's'], kl:[3.1, 101.7, 's'], istanbul:[41.0, 29.0, 's'], jakarta:[-6.2, 106.8, 'd'], nairobi:[-1.3, 36.8, 'd'], cairo:[30.0, 31.2, 'd'], bangkok:[13.8, 100.5, 's'] };
   const ROUTES = [['mumbai','riyadh'],['mumbai','dubai'],['kl','riyadh'],['istanbul','riyadh'],['bangkok','jakarta'],['mumbai','nairobi'],['istanbul','cairo'],['kl','dubai'],['bangkok','dubai'],['istanbul','kl']];
-  function globeScene(ctx, w, h, t, px, py) {
+  // A market page focuses the globe on its country: the globe turns to the hub, zooms in and draws that market's corridors.
+  const FOCUS = { riyadh: 'Saudi Arabia', dubai: 'UAE', mumbai: 'India', kl: 'Malaysia', istanbul: 'Türkiye' };
+  const FOCUS_TO = ['riyadh', 'dubai', 'mumbai', 'kl', 'istanbul', 'cairo', 'nairobi', 'jakarta'];
+  function globeScene(ctx, w, h, t, px, py, focus) {
     ctx.fillStyle = C.night; ctx.fillRect(0, 0, w, h);
-    const narrow = w < 700, cx = narrow ? w * 0.6 : w * 0.72, cy = h * (narrow ? 0.62 : 0.54), R = Math.min(h * (narrow ? 0.5 : 0.5), w * (narrow ? 0.62 : 0.32));
+    const F = focus && HUBS[focus], e = F ? 1 - Math.pow(1 - Math.min(1, t / 2600), 3) : 0;
+    const narrow = w < 700, cx = narrow ? w * 0.6 : w * 0.72, cy = h * (narrow ? 0.62 : 0.54), R = Math.min(h * (narrow ? 0.5 : 0.5), w * (narrow ? 0.62 : 0.32)) * (1 + e * 0.35);
     const halo = ctx.createRadialGradient(cx, cy, R * 0.6, cx, cy, R * 1.5); halo.addColorStop(0, 'rgba(91,95,239,0.22)'); halo.addColorStop(1, 'rgba(11,19,64,0)');
     ctx.fillStyle = halo; ctx.fillRect(0, 0, w, h);
     ctx.fillStyle = 'rgba(19,29,85,0.9)'; ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.283); ctx.fill();
-    const rot = (62 + Math.sin(t * 0.00006) * 28 + (px - 0.5) * 16) * Math.PI / 180, tilt = (24 + (py - 0.5) * 8) * Math.PI / 180;
+    const sway = F ? Math.sin(t * 0.00008) * 5 : Math.sin(t * 0.00006) * 28;
+    const ox = narrow ? 0 : 18, oy = narrow ? 8 : 24; // on wide screens the market sits below-left of centre, clear of the glance panel
+    const rot = ((F ? 62 + (F[1] + ox - 62) * e : 62) + sway + (px - 0.5) * 16) * Math.PI / 180, tilt = ((F ? 24 + (F[0] + oy - 24) * e : 24) + (py - 0.5) * 8) * Math.PI / 180;
     const ct = Math.cos(tilt), st = Math.sin(tilt);
     const proj = (lat, lon) => { const cl = Math.cos(lat), x = cl * Math.sin(lon - rot), y0 = Math.sin(lat), z0 = cl * Math.cos(lon - rot); const y = y0 * ct - z0 * st, z = y0 * st + z0 * ct; return [cx + x * R, cy - y * R, z]; };
     const grow = Math.min(1, t / 1800);
@@ -164,7 +170,7 @@
     }
     ctx.strokeStyle = 'rgba(143,147,255,0.35)'; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.283); ctx.stroke();
     const rad = d => d * Math.PI / 180;
-    ROUTES.forEach(([a, b], k) => {
+    (F ? FOCUS_TO.filter(x => x !== focus).map(x => [focus, x]) : ROUTES).forEach(([a, b], k) => {
       const A = HUBS[a], B = HUBS[b], la1 = rad(A[0]), lo1 = rad(A[1]), la2 = rad(B[0]), lo2 = rad(B[1]);
       const v1 = [Math.cos(la1) * Math.cos(lo1), Math.cos(la1) * Math.sin(lo1), Math.sin(la1)], v2 = [Math.cos(la2) * Math.cos(lo2), Math.cos(la2) * Math.sin(lo2), Math.sin(la2)];
       const dot = Math.min(1, v1[0] * v2[0] + v1[1] * v2[1] + v1[2] * v2[2]), om = Math.acos(dot), so = Math.sin(om) || 1;
@@ -183,6 +189,17 @@
       ctx.strokeStyle = `rgba(${col},${0.7 * (1 - pulse)})`; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.arc(x, y, 4 + pulse * 16, 0, 6.283); ctx.stroke();
       ctx.fillStyle = `rgb(${col})`; ctx.beginPath(); ctx.arc(x, y, 3.2, 0, 6.283); ctx.fill();
     });
+    if (F) {
+      const [x, y, z] = proj(rad(F[0]), rad(F[1])), a = Math.min(1, Math.max(0, (t - 1800) / 700)); if (z <= 0) return;
+      const p = (t * 0.0004) % 1;
+      ctx.strokeStyle = `rgba(240,248,241,${0.8 * (1 - p) * a})`; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(x, y, 8 + p * 26, 0, 6.283); ctx.stroke();
+      ctx.fillStyle = `rgba(240,248,241,${a})`; ctx.beginPath(); ctx.arc(x, y, 5, 0, 6.283); ctx.fill();
+      ctx.font = '600 12px Gilroy, system-ui, sans-serif'; ctx.textBaseline = 'middle';
+      const label = FOCUS[focus].toUpperCase(), tw = ctx.measureText(label).width + label.length * 1.8, lx = Math.min(x + 16, w - tw - 28);
+      ctx.fillStyle = `rgba(11,19,64,${0.82 * a})`; ctx.fillRect(lx, y - 13, tw + 20, 26);
+      ctx.strokeStyle = `rgba(57,196,196,${0.8 * a})`; ctx.lineWidth = 1; ctx.strokeRect(lx + 0.5, y - 12.5, tw + 19, 25);
+      ctx.fillStyle = `rgba(255,255,255,${a})`; ctx.letterSpacing = '1.8px'; ctx.fillText(label, lx + 10, y + 0.5); ctx.letterSpacing = '0px';
+    }
   }
 
   // Honeycomb ledger: a field of hex cells; a trade's blocks light up one after another and link into a chain.
@@ -282,14 +299,14 @@
   document.querySelectorAll('canvas[data-scene]').forEach(cv => {
     const ctx = cv.getContext('2d');
     const s = { cv, ctx, fn: { seed: seedScene, value: valueScene, globe: globeScene, bids: bidsScene, market: marketScene, chain: chainScene }[cv.dataset.scene], t0: performance.now(), px: 0.7, py: 0.5, visible: false, w: 0, h: 0 };
-    const size = () => { const r = cv.getBoundingClientRect(), d = Math.min(2, devicePixelRatio || 1); s.w = r.width; s.h = r.height; cv.width = Math.round(r.width * d); cv.height = Math.round(r.height * d); ctx.setTransform(d, 0, 0, d, 0, 0); if (reduce && s.w && s.h) s.fn(ctx, s.w, s.h, 99999, s.px, s.py); };
+    const size = () => { const r = cv.getBoundingClientRect(), d = Math.min(2, devicePixelRatio || 1); s.w = r.width; s.h = r.height; cv.width = Math.round(r.width * d); cv.height = Math.round(r.height * d); ctx.setTransform(d, 0, 0, d, 0, 0); if (reduce && s.w && s.h) s.fn(ctx, s.w, s.h, 99999, s.px, s.py, cv.dataset.focus); };
     new ResizeObserver(size).observe(cv);
     cv.parentElement.addEventListener('pointermove', e => { const r = cv.getBoundingClientRect(); if (!r.width || !r.height) return; s.px = (e.clientX - r.left) / r.width; s.py = (e.clientY - r.top) / r.height; });
     new IntersectionObserver(([en]) => { s.visible = en.isIntersecting; }).observe(cv);
     scenes.push(s);
   });
   function loop(now) {
-    scenes.forEach(s => { if (s.visible && s.w && s.h && !reduce && !s.cv.closest('[hidden]')) s.fn(s.ctx, s.w, s.h, Math.max(0, now - s.t0), s.px, s.py); });
+    scenes.forEach(s => { if (s.visible && s.w && s.h && !reduce && !s.cv.closest('[hidden]')) s.fn(s.ctx, s.w, s.h, Math.max(0, now - s.t0), s.px, s.py, s.cv.dataset.focus); });
     requestAnimationFrame(loop);
   }
   requestAnimationFrame(loop);
@@ -380,7 +397,7 @@
     requestAnimationFrame(step);
   });
   const coverIO = new IntersectionObserver(ents => ents.forEach(en => { const was = en.target.classList.contains('in'); en.target.classList.toggle('in', en.isIntersecting); if (en.isIntersecting && !was) countUp(en.target); }), { threshold: 0.25 });
-  document.querySelectorAll('.cover-frame').forEach(el => reduce ? el.classList.add('in') : coverIO.observe(el));
+  document.querySelectorAll('.cover-frame, .arr-frame').forEach(el => reduce ? el.classList.add('in') : coverIO.observe(el));
   if (reduce) document.querySelectorAll('[data-run]').forEach(el => el.classList.add('run'));
 
   function railUpdate() {
@@ -402,12 +419,21 @@
   const veil = document.getElementById('veil'), vbg = veil.querySelector('.bg'), mark = document.getElementById('veil-mark'), dest = document.getElementById('veil-dest');
   let current = null, busy = false;
 
+  function setSub(li, open) { const b = li.querySelector('.sub-t'), u = li.querySelector('.menu-sub'); if (!b || !u) return; b.setAttribute('aria-expanded', open); u.hidden = !open; }
   function show(name) {
     document.querySelectorAll('.world').forEach(w => w.hidden = w.id !== name);
-    document.querySelectorAll('.worlds a').forEach(a => a.toggleAttribute('aria-current', a.dataset.go === name) || a.setAttribute('aria-current', a.dataset.go === name ? 'page' : 'false'));
-    document.querySelectorAll('.worlds a').forEach(a => { if (a.dataset.go === name) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    // The header pill marks the audience you are on; the menu marks your section (and audience) wherever you are in it.
+    const site = (TP.site || {})[name] || name, aud = !!document.querySelector(`.menu-aud a[data-go="${site}"]`);
+    const quick = !!document.querySelector(`.worlds a[data-go="${site}"]:not(.w-all)`);
+    document.querySelectorAll('.worlds a').forEach(a => { const on = a.dataset.go === site || (a.classList.contains('w-all') && aud && !quick); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    const PAR = TP.parent || {}, chain = [name]; while (PAR[chain[chain.length - 1]]) chain.push(PAR[chain[chain.length - 1]]);
+    const sec = chain[chain.length - 1];
+    document.querySelectorAll('.menu-aud a[data-go], .menu-l0 > li > a[data-go]').forEach(a => { const on = a.dataset.go === site || a.dataset.go === sec || (aud && a.dataset.go === 'who-we-serve'); if (on) a.setAttribute('aria-current', a.dataset.go === name ? 'page' : 'true'); else a.removeAttribute('aria-current'); });
+    document.querySelectorAll('.menu-start a[data-go]').forEach(a => { if (a.dataset.go === name) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    document.querySelectorAll('.menu-sub a[data-go]').forEach(a => { const k = a.dataset.go; if (k === name) a.setAttribute('aria-current', 'page'); else if (chain.includes(k) && k !== sec) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+    document.querySelectorAll('.menu-l0 > li.has-sub').forEach(li => setSub(li, li.querySelector(':scope > a').dataset.go === sec));
     document.querySelector('.hdr .demo').setAttribute('href', '#cta-' + name);
-    const sc = scenes.find(s => s.cv.closest('.world').id === name); if (sc) { sc.t0 = performance.now(); if (reduce && sc.w && sc.h) sc.fn(sc.ctx, sc.w, sc.h, 99999, sc.px, sc.py); }
+    const sc = scenes.find(s => s.cv.closest('.world').id === name); if (sc) { sc.t0 = performance.now(); if (reduce && sc.w && sc.h) sc.fn(sc.ctx, sc.w, sc.h, 99999, sc.px, sc.py, sc.cv.dataset.focus); }
     current = name; railUpdate();
   }
   const anim = (el, kf, o) => el.animate(kf, Object.assign({ fill: 'forwards', easing: 'cubic-bezier(.65,0,.35,1)' }, o)).finished;
@@ -719,6 +745,7 @@
   });
 
   const menu = document.getElementById('menu'), menuBtn = document.getElementById('menu-btn');
+  menu.querySelectorAll('.sub-t').forEach(b => b.addEventListener('click', () => setSub(b.parentElement, b.getAttribute('aria-expanded') !== 'true')));
   const setMenu = open => { menu.hidden = !open; menuBtn.setAttribute('aria-expanded', open); };
   menuBtn.addEventListener('click', () => setMenu(menu.hidden));
   addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); menuBtn.focus(); } });
