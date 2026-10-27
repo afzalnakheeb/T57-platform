@@ -1123,10 +1123,20 @@
       <a href="/who-we-serve/farmers" data-go="farmers" data-petal="agri"><i style="background:var(--electric-green)"></i><span>Farmers</span><span class="long">&nbsp;&amp; Producers</span></a>
       <a href="/who-we-serve" data-go="who-we-serve" data-petal="all" class="w-all"><span>All 11</span><span class="long">&nbsp;audiences</span></a>
     </nav>
+    <button class="srch-btn" type="button" id="srch-btn" aria-haspopup="dialog" aria-controls="srch" title="Search (press /)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span class="sr">Search the site</span></button>
     <a class="demo" href="/#cta-home">Request a demo</a>
     <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</button>
   </div>
 </header>
+
+<dialog class="srch" id="srch" aria-labelledby="srch-h">
+  <div class="srch-in">
+    <form class="srch-f" role="search" onsubmit="return false"><h2 class="sr" id="srch-h">Search T57.ai</h2><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="srch-q" type="search" placeholder="Search pages, services and answers" autocomplete="off" spellcheck="false" aria-label="Search T57.ai" aria-controls="srch-res" aria-autocomplete="list"><button class="srch-x" type="button" data-srch-close>Close<kbd>Esc</kbd></button></form>
+    <p class="srch-k" id="srch-k">Popular</p>
+    <ul class="srch-res" id="srch-res" role="listbox" aria-labelledby="srch-k"></ul>
+    <p class="srch-none" id="srch-none" hidden>No pages match yet. Try fewer or different words, or <a href="/contact" data-go="contact">ask us</a>.</p>
+  </div>
+</dialog>
 
 <nav class="menu gutter" id="menu" aria-label="All sections" hidden>
   <div class="wrap menu-start"><h2>Start here</h2><ul><li><a href="/platform/trade-cycle" data-go="platform-trade-cycle" style="--c:var(--strong-cyan)"><small>Global</small>Trade across borders</a></li><li><a href="/platform/domestic-trade" data-go="platform-domestic" style="--c:var(--electric-green)"><small>Domestic</small>Sell direct at home</a></li><li><a href="/why-t57/club-membership" data-go="club-membership" style="--c:var(--persian-indigo)"><small>Membership</small>Join the trust club</a></li><li><a href="/capabilities/hire-an-expert" data-go="cap-hire-expert" style="--c:var(--amber-flame)"><small>On demand</small>Hire an expert</a></li><li><a href="/capabilities/agritech/equipment-rental" data-go="cap-equipment-rental" style="--c:var(--persian-blue)"><small>On demand</small>Rent equipment and technology</a></li><li><a href="/about" data-go="about" style="--c:var(--electric-sapphire)"><small>The 5 in T57</small>Five industries, one trade</a></li><li><a href="/markets/global-rollout" data-go="markets-global" style="--c:var(--strong-cyan)"><small>Global</small>Open in 195 countries</a></li><li><a href="/partners/country-partner" data-go="partners-country" style="--c:var(--amber-flame)"><small>Franchise</small>Bring T57 to your country</a></li></ul></div>

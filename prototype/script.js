@@ -644,6 +644,44 @@
     });
   });
 
+  // Site search: the header icon (or "/" or Ctrl+K) opens a panel that searches every page's name, summary,
+  // headings and FAQ questions. The index loads on first open.
+  const srch = document.getElementById('srch'), srchBtn = document.getElementById('srch-btn');
+  if (srch && srch.showModal) {
+    const q = document.getElementById('srch-q'), list = document.getElementById('srch-res'), none = document.getElementById('srch-none'), kick = document.getElementById('srch-k');
+    const POP = ['platform-domestic', 'markets-global', 'club-membership', 'cap-hire-expert', 'cap-equipment-rental', 'partners-country', 'pricing', 'trust-verification'];
+    const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+    const norm = t => String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    let IDX = null, sel = -1;
+    const load = () => IDX ? Promise.resolve(IDX) : fetch('/proto/search.json').then(r => r.json()).then(d => (IDX = d.map(([id, route, name, sec, h1, ans, hd, faq]) => ({ id, route, name, sec, ans, f: [norm(name), norm(h1), norm(hd + ' ' + faq), norm(ans + ' ' + sec)] }))));
+    const mark = (t, words) => { let h = esc(t); words.forEach(w => { h = h.replace(new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>'); }); return h; };
+    const row = (p, words) => `<li role="option" aria-selected="false"><a href="${p.route}" data-go="${p.id}">${p.sec ? `<small>${esc(p.sec)}</small>` : ''}<b>${mark(p.name, words)}</b><span>${mark(p.ans, words)}</span></a></li>`;
+    const pick = n => { const it = [...list.children]; if (!it.length) return; sel = (n + it.length) % it.length; it.forEach((li, k) => li.setAttribute('aria-selected', k === sel ? 'true' : 'false')); it[sel].scrollIntoView({ block: 'nearest' }); };
+    const run = () => {
+      const words = norm(q.value).trim().split(/\s+/).filter(w => w.length > 1); sel = -1;
+      if (!words.length) { kick.textContent = 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
+      const W = [8, 5, 2, 1], hits = [];
+      IDX.forEach(p => { let s = 0; for (const w of words) { let m = 0; p.f.forEach((f, k) => { if (f.includes(w)) m += W[k] * (new RegExp('\\b' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(f) ? 2 : 1); }); if (!m) return; s += m; } hits.push([s, p]); });
+      hits.sort((a, b) => b[0] - a[0]);
+      kick.textContent = hits.length ? `${hits.length} page${hits.length === 1 ? '' : 's'}` : ''; kick.hidden = !hits.length; none.hidden = !!hits.length;
+      list.innerHTML = hits.slice(0, 12).map(([, p]) => row(p, words)).join('');
+    };
+    const open = () => { if (srch.open) return; srch.showModal(); q.value = ''; q.focus(); load().then(run).catch(() => { none.hidden = false; }); };
+    srchBtn && srchBtn.addEventListener('click', open);
+    q.addEventListener('input', () => IDX && run());
+    q.addEventListener('keydown', e => {
+      if (e.key === 'ArrowDown') { e.preventDefault(); pick(sel + 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); pick(sel - 1); }
+      else if (e.key === 'Enter') { const a = list.children[sel < 0 ? 0 : sel]?.querySelector('a'); if (a) { e.preventDefault(); a.click(); } }
+    });
+    srch.addEventListener('click', e => { if (e.target === srch || e.target.closest('[data-srch-close]') || e.target.closest('a[data-go]')) srch.close(); });
+    srch.addEventListener('close', () => srchBtn && srchBtn.focus({ preventScroll: true }));
+    addEventListener('keydown', e => {
+      const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName) || document.activeElement?.isContentEditable;
+      if ((e.key === '/' && !typing) || ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k')) { e.preventDefault(); open(); }
+    });
+  }
+
   // Forms: sign-up, demo, partner, contact, support and subscribe all post to /api/forms.
   // If the backend is not switched on yet (503), the visitor is offered an email with their answers instead.
   const FORM = {

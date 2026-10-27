@@ -142,6 +142,16 @@ for i in pages:
     if PARENT.get(i): pages[i]['parent'] = PARENT[i]
 json.dump(pages, open(f'{R}/content/pages.json', 'w'), indent=1, ensure_ascii=False)
 CRUMBS = {i: crumbs(i) for i in pages if i != 'home'}
+# Site search: a small index of every page (name, H1, summary, headings and FAQ questions), loaded only when
+# a visitor opens search from the header.
+def heads(a): return ' · '.join(text(h) for h in re.findall(r'<h[23][^>]*>(.*?)</h[23]>', a, re.S))[:900]
+def sec_of(i):
+    while PARENT.get(i): i = PARENT[i]
+    return i
+SEARCH = [[i, p['route'], html.unescape(p['name']), re.sub(r' Overview$', '', html.unescape(pages[sec_of(i)]['name'])) if sec_of(i) != i else '', p['h1'], p['answer'], heads(ARTS[i]), ' · '.join(f['q'] for f in p['faqs'])] for i, p in pages.items()]
+os.makedirs(f'{R}/public/proto', exist_ok=True)
+json.dump(SEARCH, open(f'{R}/public/proto/search.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+
 
 # Menu: each section opens to show its pages (and a group's pages under it), so all 141 pages are two taps away.
 def sub_items(k, depth=0):
