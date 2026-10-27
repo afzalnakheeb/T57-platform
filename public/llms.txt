@@ -110,6 +110,7 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 ## Markets
 
 - [Markets](https://www.t57.ai/markets): Trade across five founding markets on one verified network.
+- [Global Rollout](https://www.t57.ai/markets/global-rollout): T57 starts with teams on the ground in five founding markets, is open online to verified businesses in 195 countries, and opens new markets phase by phase, with country partners where it has no office yet.
 - [OIC Nations & Halal Trade](https://www.t57.ai/markets/oic-halal): Connect halal food producers and buyers across the OIC on one trusted network.
 - [ASEAN Markets](https://www.t57.ai/markets/asean): Link Southeast Asian food producers to buyers across Asia and the Gulf.
 - [Saudi Arabia: Market Overview](https://www.t57.ai/markets/saudi-arabia/overview): Trade food in Saudi Arabia with verified partners, at home and abroad.
@@ -169,6 +170,7 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Financial Services Partners](https://www.t57.ai/partners/financial-services): Reach verified food businesses with better data and less risk.
 - [Logistics Partners](https://www.t57.ai/partners/logistics): Freight, cold chain, warehouse, inspection and customs partners serve verified traders from inside the T57 trade record.
 - [Research & University Partners](https://www.t57.ai/partners/research): T57 works with agricultural universities and research institutes to bring their research to farmers and food SMEs, and to turn it into income for the scientists behind it.
+- [Country Partners](https://www.t57.ai/partners/country-partner): Run T57 in your country or city as a licensed country partner, like a franchise. You build the local network of verified food businesses; T57 provides the platform, the brand and the support.
 - [Become a Partner](https://www.t57.ai/partners/apply): Partner with T57 in finance, insurance, logistics, inspection or technology. Tell us about your business to start.
 
 ## About T57
@@ -341,6 +343,8 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Does T57 decide who is right?](https://www.t57.ai/trust/trade-assurance/disputes): T57 helps the parties reach an agreement based on the record and their contract. Where they cannot agree, the dispute follows the route set in the contract.
 - [Which countries does T57 operate in?](https://www.t57.ai/markets): Saudi Arabia, the UAE, India, Malaysia and Türkiye. More markets will follow.
 - [Can I trade with a country that is not a T57 market?](https://www.t57.ai/markets): Members in founding markets can buy from or sell to verified members in other founding markets.
+- [Is T57 only for the five founding markets?](https://www.t57.ai/markets/global-rollout): No. The five founding markets have country teams on the ground, but T57 is open online to verified businesses in 195 countries, and new markets open phase by phase.
+- [Can I join if my country is not a T57 market yet?](https://www.t57.ai/markets/global-rollout): Yes. Apply online and complete digital KYB and KYC checks and compliance screening. Some local services, such as delivery or pay-later terms, depend on partner coverage in your country.
 - [Does T57 issue halal certificates?](https://www.t57.ai/markets/oic-halal): No. Halal certificates are issued by accredited halal bodies. T57 records them, tracks expiry and shows them to buyers.
 - [Which OIC countries can use T57?](https://www.t57.ai/markets/oic-halal): T57's founding markets include Saudi Arabia, the UAE, Malaysia and Türkiye, all OIC members, and India, a major supplier to OIC markets. More OIC countries will follow.
 - [Which ASEAN countries can use T57?](https://www.t57.ai/markets/asean): Malaysia is a founding market. Other ASEAN countries will follow.
@@ -419,6 +423,8 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Can inspection results trigger payment?](https://www.t57.ai/partners/logistics): Yes, when the parties agree it in their contract.
 - [Who owns the research and data?](https://www.t57.ai/partners/research): The partner institution. T57 uses research and data only under the terms agreed with each partner, and credits the source.
 - [How are scientists paid?](https://www.t57.ai/partners/research): Through license fees and royalties agreed up front, and through paid advice on Hire an Expert.
+- [Is this a franchise?](https://www.t57.ai/partners/country-partner): It works like one. You run T57 in an agreed territory under licence, with the T57 brand, platform and support, and share in the revenue from the members you bring.
+- [Which countries are open to partners?](https://www.t57.ai/partners/country-partner): Countries and cities where T57 has no country team yet. See the Global Rollout page for the phases.
 - [Where is T57 based?](https://www.t57.ai/about): T57's operating company is in Dubai, its regional headquarters is in Riyadh, and it has teams in India and Malaysia, with country teams in all five founding markets.
 - [What does the name T57 mean?](https://www.t57.ai/about): T stands for trade, built on trust, transparency and traceability. The 5 stands for the five industries T57 connects: agriculture and food production, trade, logistics, finance and technology. The 7 stands for the seven outcomes we work toward: food security, less food lost, integration, access to finance, higher incomes, inclusion and resilience.
 - [Who leads T57?](https://www.t57.ai/about/leadership): T57 is led by its Founder and Chairman, Afzal Hussain Mohammed Nakheeb, with four co-founders who lead technology, product, communication and governance.

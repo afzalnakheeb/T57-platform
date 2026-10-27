@@ -335,6 +335,10 @@
   "title": "Markets | Saudi Arabia, UAE, India, Malaysia, Türkiye | T57",
   "description": "One verified food trade network across five founding markets, for domestic wholesale and cross-border trade, with local teams and partners."
  },
+ "markets-global": {
+  "title": "Global Rollout | 5 Markets to 101, Open Worldwide | T57",
+  "description": "T57 starts with teams in five founding markets, is open online in 195 countries, and opens new markets in phases, with country partners."
+ },
  "markets-oic": {
   "title": "OIC & Halal Food Trade | Verified Halal Suppliers | T57",
   "description": "Find verified halal food suppliers and buyers across OIC countries, with certificates recorded, documents on one record and finance through licensed partners."
@@ -566,5 +570,9 @@
  "partners-research": {
   "title": "Research & University Partners: From the Lab to the Farm | T57",
   "description": "T57 works with agricultural universities and research institutes to bring research to farmers, train local AI, pilot new tech and reward scientists."
+ },
+ "partners-country": {
+  "title": "Country Partner Franchise | Bring T57 Home | T57",
+  "description": "Run T57 in your country or city as a licensed country partner. You build the local network; T57 provides the platform, brand and support."
  }
 }
