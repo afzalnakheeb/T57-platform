@@ -1315,32 +1315,7 @@
   "name": "One Trade, Every Step",
   "h1": "One trade. Every step. One record.",
   "answer": "Agree a price, ship, insure, finance, pay and clear customs on one platform, with every party verified and every step on one record.",
-  "faqs": [
-   {
-    "q": "Does T57 lend money or move the goods?",
-    "a": "No. T57 is the platform. Licensed banks and finance partners fund trades, licensed partners provide escrow and insurance, and logistics partners move and store the goods."
-   },
-   {
-    "q": "Can I keep my current freight forwarder?",
-    "a": "Yes. Invite them to T57 and they work on the same trade record, or choose a vetted forwarder in your city by rating and reviews."
-   },
-   {
-    "q": "How do smart contracts protect a lender?",
-    "a": "Funds are released in stages as milestones such as loading, departure and arrival are verified. If a milestone fails, later payments stop."
-   },
-   {
-    "q": "Which ports support pre-arrival clearance?",
-    "a": "T57 prepares and checks documents before shipment for every trade. Where a port or customs authority runs pre-arrival clearance, the documents can be reviewed before the goods arrive."
-   },
-   {
-    "q": "Is there a size limit on a trade?",
-    "a": "No. T57 is built for anything from a single container to national food-reserve tenders of millions of tonnes."
-   },
-   {
-    "q": "When will carbon credits be available?",
-    "a": "Carbon income for farmers is planned for phase two, through specialist partners."
-   }
-  ],
+  "faqs": [],
   "title": "One Trade, Every Step: Food Trade on One Record | T57",
   "description": "Agree a price, ship, insure, finance, pay and clear customs for any food on one platform, with verified parties, competing lenders and milestone-based finance.",
   "parent": "platform"
