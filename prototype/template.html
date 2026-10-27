@@ -172,6 +172,30 @@ body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-
 @media (min-width: 641px) and (max-width: 900px) { .steps.steps-3 { grid-template-columns:repeat(3, minmax(0, 1fr)); gap:20px; } .steps.steps-5 > :last-child { grid-column:1 / -1; } }
 @media (min-width: 901px) and (max-width: 1100px) { .steps.steps-5 > :last-child { grid-column:1 / -1; } }
 
+
+/* Core offers: the two ways to trade and the services around them, one tap from home and the menu */
+.offers-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:20px; margin-top:40px; }
+.usp { position:relative; display:grid; gap:6px; align-content:start; padding:28px 24px 24px; border:1px solid var(--line); border-radius:14px; background:var(--surface); text-decoration:none; color:var(--ink); overflow:hidden; transition:transform .3s var(--ease-out), box-shadow .3s var(--ease-out), border-color .3s; }
+.usp::before { content:""; position:absolute; inset:0 0 auto; height:4px; background:var(--c); transform:scaleX(.18); transform-origin:left; transition:transform .5s var(--ease-out); }
+.usp:hover, .usp:focus-visible { transform:translateY(-4px); box-shadow:0 18px 40px -22px #02246c55; border-color:color-mix(in srgb, var(--c) 45%, var(--line)); }
+.usp:hover::before, .usp:focus-visible::before { transform:scaleX(1); }
+.usp svg { width:40px; height:40px; padding:8px; border-radius:10px; fill:none; stroke:var(--c); stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; background:color-mix(in srgb, var(--c) 10%, transparent); margin-bottom:10px; }
+.usp small { font:600 12px/16px var(--font-text); letter-spacing:.16em; text-transform:uppercase; color:var(--ink-muted); }
+.usp b { font:700 21px/26px var(--font-display); color:var(--ink-strong); }
+.usp b::after { content:" →"; color:var(--c); }
+.usp span { font:400 15px/22px var(--font-text); color:var(--ink); }
+@media (max-width: 1000px) { .offers-grid { grid-template-columns:repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .offers-grid { grid-template-columns:minmax(0, 1fr); gap:12px; } .usp { padding:20px 18px; } .usp b { font-size:19px; } }
+@media (prefers-reduced-motion: reduce) { .usp, .usp::before { transition:none; } }
+.menu-start { margin-bottom:32px; }
+.menu-start ul { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:10px; }
+.menu .menu-start li > a { display:grid; gap:2px; min-height:0; padding:12px 14px; border:1px solid var(--line); border-left:3px solid var(--c); border-radius:8px; font:600 16px/20px var(--font-display); }
+.menu .menu-start li > a small { font:500 12px/16px var(--font-text); letter-spacing:.14em; text-transform:uppercase; color:var(--ink-muted); }
+.menu .menu-start li > a[aria-current]::after { content:none; }
+.menu .menu-start li > a[aria-current] { background:var(--surface-alt); }
+@media (max-width: 900px) { .menu-start ul { grid-template-columns:repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .menu-start ul { grid-template-columns:minmax(0, 1fr); } }
+
 /* Chapters */
 .chapter { padding-block:clamp(72px, 9vw, 112px); }
 .chapter.alt { background:var(--surface-alt); }
@@ -924,6 +948,7 @@ a.cm-pt:hover text { text-decoration:underline; }
 /* Resources and Help: hub shelves, in-preparation cards, report covers, video tiles, events, glossary, help search, guide path, channels */
 .pr-opts .aud { --c:var(--amber-flame); }
 .life.cmap-nav.c2 { grid-template-columns:repeat(2, minmax(0, 1fr)); } @media (max-width: 640px) { .life.cmap-nav.c2 { grid-template-columns:1fr; } }
+.life.cmap-nav.c5 { grid-template-columns:repeat(5, minmax(0, 1fr)); gap:12px; } @media (max-width: 1100px) { .life.cmap-nav.c5 { grid-template-columns:repeat(3, minmax(0, 1fr)); } } @media (max-width: 760px) { .life.cmap-nav.c5 { grid-template-columns:repeat(2, minmax(0, 1fr)); } } @media (max-width: 520px) { .life.cmap-nav.c5 { grid-template-columns:1fr; } }
 .shelf { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:16px; margin-top:40px; } .shelf.s4 { grid-template-columns:repeat(4, minmax(0, 1fr)); }
 .shelf-i { position:relative; display:grid; align-content:start; gap:8px; min-height:200px; padding:24px; border-radius:16px; background:#fff; border:1px solid var(--line); text-decoration:none; color:var(--ink); overflow:hidden; transition:transform .3s var(--ease-out), box-shadow .3s; animation:sh-in .6s var(--ease-out) both; animation-delay:calc(var(--k) * .07s); }
 .shelf-i::after { content:""; position:absolute; right:-40px; bottom:-40px; width:120px; height:120px; border-radius:50%; border:18px solid var(--world); opacity:.12; transition:transform .4s var(--ease-out); }
@@ -1118,6 +1143,7 @@ a.cm-pt:hover text { text-decoration:underline; }
 </header>
 
 <nav class="menu gutter" id="menu" aria-label="All sections" hidden>
+  <div class="wrap menu-start"><h2>Start here</h2><ul><li><a href="#platform-trade-cycle" data-go="platform-trade-cycle" style="--c:var(--strong-cyan)"><small>Global</small>Trade across borders</a></li><li><a href="#platform-domestic" data-go="platform-domestic" style="--c:var(--electric-green)"><small>Domestic</small>Sell direct at home</a></li><li><a href="#club-membership" data-go="club-membership" style="--c:var(--persian-indigo)"><small>Membership</small>Join the trust club</a></li><li><a href="#cap-hire-expert" data-go="cap-hire-expert" style="--c:var(--amber-flame)"><small>On demand</small>Hire an expert</a></li><li><a href="#cap-equipment-rental" data-go="cap-equipment-rental" style="--c:var(--persian-blue)"><small>On demand</small>Rent equipment and technology</a></li><li><a href="#about" data-go="about" style="--c:var(--electric-sapphire)"><small>The 5 in T57</small>Five industries, one trade</a></li></ul></div>
   <div class="wrap menu-grid">
     <div class="menu-aud"><h2>Who we serve</h2><ul><li><a href="#governments" data-go="governments">Governments &amp; Regulators<em></em></a></li><li><a href="#financiers" data-go="financiers">Financiers &amp; Investors<em></em></a></li><li><a href="#sellers" data-go="sellers">Sellers &amp; Exporters<em></em></a></li><li><a href="#buyers" data-go="buyers">Buyers &amp; Importers<em></em></a></li><li><a href="#traders" data-go="traders">Traders &amp; Aggregators<em></em></a></li><li><a href="#enterprises" data-go="enterprises">Manufacturers &amp; Enterprises<em></em></a></li><li><a href="#food-processors" data-go="food-processors">Food Processors<em></em></a></li><li><a href="#farmers" data-go="farmers">Farmers &amp; Producers<em></em></a></li><li><a href="#cooperatives" data-go="cooperatives">Cooperatives &amp; FPOs<em></em></a></li><li><a href="#collaborators" data-go="collaborators">Partners &amp; Collaborators<em></em></a></li><li><a href="#service-providers" data-go="service-providers">Service Providers<em></em></a></li></ul></div>
     <div><h2>All sections</h2><ul class="menu-l0"><li><a href="#home" data-go="home">Home<em></em></a></li><li><a href="#who-we-serve" data-go="who-we-serve">Who We Serve<em></em></a></li><li><a href="#why-t57" data-go="why-t57">Why T57<em></em></a></li><li><a href="#capabilities" data-go="capabilities">Capabilities<em></em></a></li><li><a href="#ai-native" data-go="ai-native">AI Native<em></em></a></li><li><a href="#platform" data-go="platform">Platform<em></em></a></li><li><a href="#trust" data-go="trust">Trust &amp; Compliance<em></em></a></li><li><a href="#markets" data-go="markets">Markets<em></em></a></li><li><a href="#pricing" data-go="pricing">Pricing<em></em></a></li><li><a href="#resources" data-go="resources">Resources<em></em></a></li><li><a href="#help" data-go="help">Help Center<em></em></a></li><li><a href="#partnerships" data-go="partnerships">Partnerships<em></em></a></li><li><a href="#about" data-go="about">About T57<em></em></a></li><li><a href="#contact" data-go="contact">Contact<em></em></a></li></ul></div>
@@ -1146,7 +1172,7 @@ a.cm-pt:hover text { text-decoration:underline; }
   <div class="ftr-in">
     <div class="ftr-brand"><p>AI-native digital trade infrastructure for food. T57 does not lend or hold funds; finance, escrow and insurance come from licensed partners.</p><p><a href="mailto:hello@t57.ai">hello@t57.ai</a></p></div>
     <div><h2>Who we serve</h2><ul><li><a href="#governments" data-go="governments">Governments &amp; Regulators</a></li><li><a href="#financiers" data-go="financiers">Financiers &amp; Investors</a></li><li><a href="#sellers" data-go="sellers">Sellers &amp; Exporters</a></li><li><a href="#buyers" data-go="buyers">Buyers &amp; Importers</a></li><li><a href="#farmers" data-go="farmers">Farmers &amp; Producers</a></li><li><a href="#who-we-serve" data-go="who-we-serve">All audiences</a></li></ul></div>
-    <div><h2>Platform</h2><ul><li><a href="#why-t57" data-go="why-t57">Why T57</a></li><li><a href="#capabilities" data-go="capabilities">Capabilities</a></li><li><a href="#ai-native" data-go="ai-native">AI Native</a></li><li><a href="#platform" data-go="platform">Platform</a></li><li><a href="#trust" data-go="trust">Trust &amp; Compliance</a></li><li><a href="#markets" data-go="markets">Markets</a></li><li><a href="#pricing" data-go="pricing">Pricing</a></li></ul></div>
+    <div><h2>Platform</h2><ul><li><a href="#why-t57" data-go="why-t57">Why T57</a></li><li><a href="#capabilities" data-go="capabilities">Capabilities</a></li><li><a href="#ai-native" data-go="ai-native">AI Native</a></li><li><a href="#platform" data-go="platform">Platform</a></li><li><a href="#platform-domestic" data-go="platform-domestic">Domestic B2B Trade</a></li><li><a href="#club-membership" data-go="club-membership">Trust Club Membership</a></li><li><a href="#cap-hire-expert" data-go="cap-hire-expert">Hire an Expert</a></li><li><a href="#cap-equipment-rental" data-go="cap-equipment-rental">Equipment &amp; Technology Rental</a></li><li><a href="#trust" data-go="trust">Trust &amp; Compliance</a></li><li><a href="#markets" data-go="markets">Markets</a></li><li><a href="#pricing" data-go="pricing">Pricing</a></li></ul></div>
     <div><h2>Company</h2><ul><li><a href="#about" data-go="about">About T57</a></li><li><a href="#about-leadership" data-go="about-leadership">Leadership</a></li><li><a href="#partnerships" data-go="partnerships">Partnerships</a></li><li><a href="#about-careers" data-go="about-careers">Careers</a></li><li><a href="#about-media" data-go="about-media">Media</a></li><li><a href="#resources" data-go="resources">Resources</a></li><li><a href="#help" data-go="help">Help Center</a></li><li><a href="#contact" data-go="contact">Contact</a></li></ul></div>
   </div>
   <div class="ftr-legal"><span>© 2026 T57.ai</span><span><a href="#trust-data-protection" data-go="trust-data-protection">Data Protection</a> · <a href="#trust-security" data-go="trust-security">Security &amp; Privacy</a></span></div>

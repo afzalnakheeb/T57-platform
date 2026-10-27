@@ -429,6 +429,7 @@
     const PAR = TP.parent || {}, chain = [name]; while (PAR[chain[chain.length - 1]]) chain.push(PAR[chain[chain.length - 1]]);
     const sec = chain[chain.length - 1];
     document.querySelectorAll('.menu-aud a[data-go], .menu-l0 > li > a[data-go]').forEach(a => { const on = a.dataset.go === site || a.dataset.go === sec || (aud && a.dataset.go === 'who-we-serve'); if (on) a.setAttribute('aria-current', a.dataset.go === name ? 'page' : 'true'); else a.removeAttribute('aria-current'); });
+    document.querySelectorAll('.menu-start a[data-go]').forEach(a => { if (a.dataset.go === name) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
     document.querySelectorAll('.menu-sub a[data-go]').forEach(a => { const k = a.dataset.go; if (k === name) a.setAttribute('aria-current', 'page'); else if (chain.includes(k) && k !== sec) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
     document.querySelectorAll('.menu-l0 > li.has-sub').forEach(li => setSub(li, li.querySelector(':scope > a').dataset.go === sec));
     document.querySelector('.hdr .demo').setAttribute('href', '#cta-' + name);
