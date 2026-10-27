@@ -924,4 +924,18 @@
     $$('.hp', hm).forEach(g => { g.addEventListener('pointerenter', () => { held = true; light(g.dataset.p); }); g.addEventListener('pointerleave', () => { held = false; idx = order.indexOf(g.dataset.p); }); });
     if (!reduce) setTimeout(() => { next(); timer = setInterval(next, 2800); }, 2400);
   }
+
+  // The story: one pinned stage walks through verify, agree, finance and deliver
+  const st = $('[data-story]');
+  if (st) {
+    const mq = matchMedia('(min-width: 901px)'), sls = $$('.sl', st), sps = $$('.sp', st), bar = $('.story-bar', st);
+    const setIdx = i => { sls.forEach((x, k) => x.classList.toggle('on', k === i)); sps.forEach((x, k) => x.classList.toggle('on', k === i)); };
+    const run = () => {
+      const pin = mq.matches && !reduce; st.classList.toggle('pin', pin);
+      if (!pin) { sps.forEach(x => x.classList.add('on')); sls.forEach(x => x.classList.add('on')); return; }
+      const r = st.getBoundingClientRect(), p = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight)));
+      bar.style.setProperty('--sp', p.toFixed(3)); setIdx(Math.min(sls.length - 1, Math.floor(p * sls.length)));
+    };
+    addEventListener('scroll', () => requestAnimationFrame(run), { passive: true }); addEventListener('resize', run); run();
+  }
 })();
