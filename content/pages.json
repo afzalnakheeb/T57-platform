@@ -1803,6 +1803,42 @@
   "title": "Markets | Saudi Arabia, UAE, India, Malaysia, Türkiye | T57",
   "description": "One verified food trade network across five founding markets, for domestic wholesale and cross-border trade, with local teams and partners."
  },
+ "markets-global": {
+  "route": "/markets/global-rollout",
+  "section": "markets",
+  "name": "Global Rollout",
+  "h1": "Five markets first. Open to the world.",
+  "answer": "T57 starts with teams on the ground in five founding markets, is open online to verified businesses in 195 countries, and opens new markets phase by phase, with country partners where it has no office yet.",
+  "faqs": [
+   {
+    "q": "Is T57 only for the five founding markets?",
+    "a": "No. The five founding markets have country teams on the ground, but T57 is open online to verified businesses in 195 countries, and new markets open phase by phase."
+   },
+   {
+    "q": "Can I join if my country is not a T57 market yet?",
+    "a": "Yes. Apply online and complete digital KYB and KYC checks and compliance screening. Some local services, such as delivery or pay-later terms, depend on partner coverage in your country."
+   },
+   {
+    "q": "What changes when T57 opens a market?",
+    "a": "A local team or country partner, local-language support, local logistics, inspection and finance partners, and a guide to that country's food rules."
+   },
+   {
+    "q": "How does T57 choose the next markets?",
+    "a": "By trade corridors with real supply and demand, partner readiness through IOFS and ASEAN, legal opinions and demand from members. A phase opens only when these are in place."
+   },
+   {
+    "q": "Are the dates fixed?",
+    "a": "No. They are targets from T57's rollout plan, and each phase opens when it is ready."
+   },
+   {
+    "q": "What is a T57 country partner?",
+    "a": "A licensed local business that runs T57 in its country or city, like a franchise. See the Country Partner page to apply."
+   }
+  ],
+  "title": "Global Rollout | 5 Markets to 101, Open Worldwide | T57",
+  "description": "T57 starts with teams in five founding markets, is open online in 195 countries, and opens new markets in phases, with country partners.",
+  "parent": "markets"
+ },
  "markets-oic": {
   "route": "/markets/oic-halal",
   "section": "markets",
@@ -2772,6 +2808,38 @@
   ],
   "title": "Research & University Partners: From the Lab to the Farm | T57",
   "description": "T57 works with agricultural universities and research institutes to bring research to farmers, train local AI, pilot new tech and reward scientists.",
+  "parent": "partnerships"
+ },
+ "partners-country": {
+  "route": "/partners/country-partner",
+  "section": "partners",
+  "name": "Country Partners",
+  "h1": "Bring T57 to your country.",
+  "answer": "Run T57 in your country or city as a licensed country partner, like a franchise. You build the local network of verified food businesses; T57 provides the platform, the brand and the support.",
+  "faqs": [
+   {
+    "q": "Is this a franchise?",
+    "a": "It works like one. You run T57 in an agreed territory under licence, with the T57 brand, platform and support, and share in the revenue from the members you bring."
+   },
+   {
+    "q": "Which countries are open to partners?",
+    "a": "Countries and cities where T57 has no country team yet. See the Global Rollout page for the phases."
+   },
+   {
+    "q": "Can I cover just one city?",
+    "a": "Yes. Territories can be a whole country, a region or a trading city."
+   },
+   {
+    "q": "Do partners handle money or goods?",
+    "a": "No. Members pay through licensed payment and escrow partners, and goods move with logistics partners. Partners do not lend."
+   },
+   {
+    "q": "Is there a fee to become a partner?",
+    "a": "Terms are agreed with each partner and set out in the partner license."
+   }
+  ],
+  "title": "Country Partner Franchise | Bring T57 Home | T57",
+  "description": "Run T57 in your country or city as a licensed country partner. You build the local network; T57 provides the platform, brand and support.",
   "parent": "partnerships"
  },
  "partners-apply": {
