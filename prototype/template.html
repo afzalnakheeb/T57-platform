@@ -1409,6 +1409,44 @@ html.rv-on .rv0.in { opacity:1; transform:none; transition:opacity .9s var(--eas
 }
 @media (max-width:760px) { .ftr { padding-bottom:84px; } }
 @media (max-width:640px) { [data-world="home"] .route { overflow-x:auto; } [data-world="home"] .route svg { min-width:680px; } }
+
+/* Hero v2: the T57 mark is the visual */
+.hx-stage { display:grid; place-items:center; max-width:560px; animation:none; }
+.hx-stage .bl, .hx-mark { display:none; }
+.hm-orbit { position:absolute; inset:0; width:100%; height:100%; overflow:visible; animation:rvIn 1.4s var(--ease-out) .2s both; }
+.hm-orbit circle { fill:none; stroke:#fff; stroke-opacity:.26; stroke-dasharray:2 8; stroke-linecap:round; }
+.hm-orbit circle:nth-child(2) { stroke-opacity:.14; }
+.hm-orbit .spin { transform-origin:200px 200px; animation:spin 80s linear infinite; }
+.hm-orbit .spin .dot { fill:#fff; stroke:none; stroke-dasharray:none; }
+@keyframes spin { to { transform:rotate(360deg); } }
+.hm-mono { position:relative; width:70%; height:auto; overflow:visible; translate:calc(var(--px, 0) * -10px) calc(var(--py, 0) * -10px); filter:drop-shadow(0 30px 50px #0b134059); }
+.hm-mono use { fill:#fff; }
+.hm-mono .hp { transform-box:fill-box; transform-origin:center; cursor:pointer; transition:transform .7s var(--ease-out), opacity .5s; animation:petalIn 1.4s var(--ease-out) backwards; animation-delay:calc(.35s + var(--k, 0) * .13s); }
+.hm-mono [data-p="tech"] { --k:0; } .hm-mono [data-p="trade"] { --k:1; } .hm-mono [data-p="logistics"] { --k:2; } .hm-mono [data-p="agri"] { --k:3; } .hm-mono [data-p="finance"] { --k:4; }
+@keyframes petalIn { from { opacity:0; transform:translate(var(--tx), var(--ty)) rotate(var(--r)) scale(.7); } }
+.hm-mono.has .hp:not(.on) { opacity:.38; }
+.hm-mono .hp.on { transform:scale(1.1); }
+.hm-cap { position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); display:grid; gap:2px; text-align:center; color:#fff; pointer-events:none; animation:rvIn 1s var(--ease-out) 1.8s both; }
+.hm-cap small { font:600 10px/12px var(--font-text); letter-spacing:.18em; text-transform:uppercase; color:#ffffffb3; }
+.hm-cap b { font:700 clamp(14px, 1.4vw, 18px)/1.1 var(--font-display); }
+.hx .c1 { margin:10% 0 0 2%; } .hx .c3 { margin:0 8% 12% 0; }
+.hx .quote-card { margin:0 0 0 0; }
+.hx h1 { font-weight:700; letter-spacing:-.03em; }
+[data-world="home"] .h2, .pl h3, .bst b, .tr b, .hx-tag { font-weight:700; }
+[data-world="home"] .h2 { letter-spacing:-.02em; }
+.watch .wrap { text-align:center; }
+.watch .h2, .watch .lede { margin-inline:auto; }
+.watch .vids.v1 { margin-inline:auto; }
+.watch .vid figcaption { text-align:center; }
+@media (max-width:900px) { .hx-stage { max-width:380px; } }
+@media (prefers-reduced-motion: reduce) { .hm-orbit .spin { animation:none; } .hm-mono .hp { animation:none; } }
+
+.hx-stage { max-width:520px; }
+.hx .quote-card { width:auto; gap:4px; padding:14px 20px; border-radius:16px; align-self:end; justify-self:start; margin:0 0 2% 2%; }
+.hx .quote-card .qc-spark, .hx .quote-card .qc-foot { display:none; }
+.hx .quote-card .qc-v b { font-size:34px; }
+.hx .c1 { margin:12% 0 0 6%; } .hx .c2 { margin-right:0; } .hx .c3 { margin:0 4% 8% 0; }
+@media (max-width:900px) { .hx .quote-card { width:100%; justify-self:stretch; } }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">

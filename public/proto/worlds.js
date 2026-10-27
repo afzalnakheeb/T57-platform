@@ -913,4 +913,16 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     e.preventDefault(); const v = cm.elements.email.value.trim();
     if (window.T57_openForm) { window.T57_openForm('join', 'Apply for membership'); const f = document.querySelector('#get-started input[name=email]'); if (f && v) f.value = v; }
   });
+
+  // Hero mark: the pillars take turns to light up, or follow the pointer
+  const hm = $('.hm-mono');
+  if (hm) {
+    const NM = { agri: ['Seed', 'Agriculture'], trade: ['Ripple', 'Trade'], finance: ['Value index', 'Finance'], logistics: ['Honeycomb', 'Logistics'], tech: ['Fingerprint', 'Technology'] };
+    const order = ['agri', 'trade', 'finance', 'logistics', 'tech'], cs = $('[data-hm-s]'), cn = $('[data-hm-n]');
+    let idx = -1, held = false, timer = 0;
+    const light = p => { hm.classList.toggle('has', !!p); $$('.hp', hm).forEach(g => g.classList.toggle('on', g.dataset.p === p)); cs.textContent = p ? NM[p][0] : 'Five pillars'; cn.textContent = p ? NM[p][1] : 'One ecosystem'; };
+    const next = () => { if (held || document.hidden) return; idx = (idx + 1) % order.length; light(order[idx]); };
+    $$('.hp', hm).forEach(g => { g.addEventListener('pointerenter', () => { held = true; light(g.dataset.p); }); g.addEventListener('pointerleave', () => { held = false; idx = order.indexOf(g.dataset.p); }); });
+    if (!reduce) setTimeout(() => { next(); timer = setInterval(next, 2800); }, 2400);
+  }
 })();
