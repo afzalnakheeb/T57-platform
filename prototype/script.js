@@ -803,3 +803,113 @@
   else if (arriving && !reduce) arrive(here);
   else { document.documentElement.classList.remove('arriving', 'lifting'); if (!seen) setTimeout(intro, 150); }
 })();
+
+/* ---------- Home: scroll storytelling, role picker, pillars, conversion helpers ---------- */
+(() => {
+  const home = document.getElementById('home');
+  if (!home) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const $ = (s, r = home) => r.querySelector(s), $$ = (s, r = home) => [...r.querySelectorAll(s)];
+
+  // Reveal on scroll (below-the-fold elements only; the hero animates in with CSS)
+  if (!reduce) {
+    document.documentElement.classList.add('rv-on');
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
+    $$('[data-rv]').filter(el => !el.closest('.hx')).forEach(el => { el.classList.add('rv0'); io.observe(el); });
+  }
+
+  // Progress bar, chapter rail, sticky mobile CTA
+  const prog = $('.hx-prog'), rail = $('.rail'), sticky = $('.sticky-cta'), hx = $('#hx'), cta = $('#cta-home');
+  const links = $$('.rail a'), secs = links.map(a => document.getElementById(a.dataset.rail));
+  let tick = false;
+  const onScroll = () => {
+    tick = false;
+    const H = document.documentElement.scrollHeight - innerHeight;
+    prog.style.setProperty('--sp', H > 0 ? Math.min(1, scrollY / H).toFixed(4) : 0);
+    const past = hx.getBoundingClientRect().bottom < innerHeight * 0.35;
+    rail.classList.toggle('show', past);
+    const ct = cta.getBoundingClientRect();
+    sticky.classList.toggle('show', past && ct.top > innerHeight * 0.8);
+    let cur = 0; secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < innerHeight * 0.5) cur = i; });
+    links.forEach((a, i) => a.classList.toggle('on', i === cur));
+  };
+  addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  addEventListener('resize', onScroll); onScroll();
+  links.forEach(a => a.addEventListener('click', e => { const s = document.getElementById(a.dataset.rail); if (s) { e.preventDefault(); s.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); } }));
+  $$('a[href="#watch-home"], a[href="#board"]').forEach(a => a.addEventListener('click', e => { const s = document.querySelector(a.getAttribute('href')); if (s) { e.preventDefault(); s.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); } }));
+
+  // Hero pointer parallax and magnetic buttons
+  if (fine && !reduce) {
+    let raf = 0, px = 0, py = 0;
+    hx.addEventListener('pointermove', e => {
+      const r = hx.getBoundingClientRect(); px = (e.clientX - r.left) / r.width * 2 - 1; py = (e.clientY - r.top) / r.height * 2 - 1;
+      if (!raf) raf = requestAnimationFrame(() => { raf = 0; hx.style.setProperty('--px', px.toFixed(3)); hx.style.setProperty('--py', py.toFixed(3)); });
+    });
+    $$('.mag').forEach(b => {
+      b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(); b.style.translate = `${((e.clientX - r.left) / r.width - .5) * 10}px ${((e.clientY - r.top) / r.height - .5) * 8}px`; });
+      b.addEventListener('pointerleave', () => { b.style.translate = ''; });
+    });
+    const pp = $('.passport');
+    if (pp) {
+      pp.addEventListener('pointermove', e => { const r = pp.getBoundingClientRect(); pp.style.setProperty('--tx', (((e.clientX - r.left) / r.width - .5) * 14).toFixed(1) + 'deg'); pp.style.setProperty('--ty', ((.5 - (e.clientY - r.top) / r.height) * 14).toFixed(1) + 'deg'); });
+      pp.addEventListener('pointerleave', () => { pp.style.removeProperty('--tx'); pp.style.removeProperty('--ty'); });
+    }
+  }
+
+  // Five pillars: the active pillar lights its petal in the mark and the rest step back
+  const mono = $('.mono'), pls = $$('.pl');
+  const lightPetal = p => { mono.classList.add('has'); $$('.pt', mono).forEach(g => g.classList.toggle('on', g.dataset.p === p)); pls.forEach(x => x.classList.toggle('on', x.dataset.p === p)); };
+  if (mono && pls.length) {
+    lightPetal(pls[0].dataset.p);
+    const pio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) lightPetal(e.target.dataset.p); }), { rootMargin: '-42% 0px -42% 0px' });
+    pls.forEach(x => pio.observe(x));
+  }
+
+  // Role picker: hover, focus or tap a role to preview what T57 does for it
+  const prev = $('[data-role-prev]'), rls = $$('.rl');
+  if (prev) {
+    const img = $('img', prev), nm = $('[data-rp-name]', prev), sm = $('[data-rp-sum]', prev), go = $('[data-rp-go]', prev);
+    const pick = a => {
+      if (a.classList.contains('on')) return;
+      rls.forEach(x => x.classList.toggle('on', x === a));
+      prev.classList.add('swap');
+      setTimeout(() => { img.src = a.dataset.img; nm.innerHTML = a.dataset.name; sm.textContent = a.dataset.sum; go.href = a.getAttribute('href'); go.dataset.go = a.dataset.go; prev.classList.remove('swap'); }, reduce ? 0 : 220);
+    };
+    rls[0].classList.add('on');
+    rls.forEach(a => { a.addEventListener('pointerenter', () => fine && pick(a)); a.addEventListener('focus', () => pick(a)); });
+  }
+
+  // Capability tabs
+  const tl = $$('.ct'), tp = $$('.cp');
+  const sel = i => { tl.forEach((b, k) => { b.setAttribute('aria-selected', k === i); b.tabIndex = k === i ? 0 : -1; tp[k].hidden = k !== i; }); };
+  tl.forEach((b, i) => { b.addEventListener('click', () => sel(i)); b.addEventListener('keydown', e => {
+    const n = e.key === 'ArrowRight' ? (i + 1) % tl.length : e.key === 'ArrowLeft' ? (i + tl.length - 1) % tl.length : e.key === 'Home' ? 0 : e.key === 'End' ? tl.length - 1 : -1;
+    if (n >= 0) { e.preventDefault(); sel(n); tl[n].focus(); } }); });
+
+  // Film: a large play button over the poster
+  const vf = $('.cine'); if (vf) { const v = $('video', vf), pb = $('.vid-play', vf);
+    pb.addEventListener('click', () => { v.play(); });
+    v.addEventListener('play', () => vf.classList.add('playing')); v.addEventListener('pause', () => { if (v.currentTime === 0) vf.classList.remove('playing'); }); }
+
+  // Scrubbed explainer: scrolling through the tall section plays the trade forward and back
+  const wrap = $('[data-scrub-wrap]'), fx = $('[data-scrub]');
+  if (wrap && fx && !reduce) {
+    const TOTAL = 6240; let anims = [];
+    const arm = () => { fx.classList.add('play', 'paused'); fx.classList.remove('done'); requestAnimationFrame(() => { anims = fx.getAnimations({ subtree: true }); anims.forEach(a => a.pause()); upd(); }); };
+    const upd = () => {
+      const r = wrap.getBoundingClientRect(), span = r.height - innerHeight;
+      const p = Math.min(1, Math.max(0, -r.top / span));
+      anims.forEach(a => { a.currentTime = p * TOTAL; });
+    };
+    wrap.classList.add('on'); arm();
+    addEventListener('scroll', () => requestAnimationFrame(upd), { passive: true }); addEventListener('resize', upd);
+  }
+
+  // Final CTA: start with an email, finish in the join dialog
+  const cm = $('[data-cta-mail]');
+  if (cm) cm.addEventListener('submit', e => {
+    e.preventDefault(); const v = cm.elements.email.value.trim();
+    if (window.T57_openForm) { window.T57_openForm('join', 'Apply for membership'); const f = document.querySelector('#get-started input[name=email]'); if (f && v) f.value = v; }
+  });
+})();

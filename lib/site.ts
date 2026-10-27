@@ -57,7 +57,7 @@ export function jsonLd(id: string) {
       isPartOf: { '@type': 'WebSite', '@id': `${SITE}/#site`, name: 'T57.ai', url: SITE, publisher: { '@id': `${SITE}/#org` } },
       about: { '@id': `${SITE}/#org` },
       abstract: p.answer,
-      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.hero .std'] },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.std'] },
     },
     {
       '@type': 'BreadcrumbList',
