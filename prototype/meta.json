@@ -1,39 +1,39 @@
 {
  "governments": {
-  "title": "T57 for Governments & Regulators | Live Food Security Intelligence & Clean Procurement",
-  "description": "T57 helps governments and regulators build live, governable food systems by unifying food security intelligence and secure, transparent procurement on a single platform, turning fragmented agrifood data into actionable, policy-ready insights that reduce waste and stabilize prices."
+  "title": "T57 for Governments | Food Security & Clean Procurement",
+  "description": "T57 gives governments and regulators live food security intelligence and transparent procurement on one platform, to cut waste and steady prices."
  },
  "financiers": {
-  "title": "T57 for Financiers & Investors | Vetted Food & Agri Opportunities",
-  "description": "T57 helps financiers and investors deploy capital into curated, contract-backed food and agri opportunities. Gain faster due diligence, stronger transaction visibility, and tighter counterparty risk control across the food system."
+  "title": "T57 for Financiers | Vetted Food & Agri Opportunities",
+  "description": "Deploy capital into curated, contract-backed food and agri trades, with faster due diligence, full transaction visibility and tighter counterparty risk."
  },
  "sellers": {
-  "title": "T57 for Sellers & Exporters | Trusted Agri Export Platform with Finance, Intelligence & Smart Contracts",
-  "description": "Discover how T57 helps food and agri sellers & exporters find verified buyers, manage documentation, secure payments, and use real-time intelligence to grow markets with lowered risk."
+  "title": "T57 for Sellers & Exporters | Trusted Agri Export Platform",
+  "description": "T57 helps food and agri exporters find verified buyers, manage documents, get paid securely and grow with real-time market intelligence."
  },
  "farmers": {
-  "title": "T57 for Farmers and Producers | Improve Market Access and Leverage World-Class AI Tools",
-  "description": "T57 helps farmers and producers access verified buyers, market and price intelligence, secure contracts, faster payments, and trade finance in the food and agri sector."
+  "title": "T57 for Farmers & Producers | Market Access and AI Tools",
+  "description": "T57 helps farmers and producers reach verified buyers, see market prices, sign secure contracts, get paid faster and access trade finance."
  },
  "enterprises": {
-  "title": "T57 for Manufacturers & Enterprises | Improved Business Velocity for Food and Agri Trade",
-  "description": "T57 helps food and agri manufacturers and enterprises digitize sourcing, RFQs, payments, settlements, trade finance, and audit trails on a single secure platform."
+  "title": "T57 for Manufacturers & Enterprises | Faster Food Trade",
+  "description": "T57 helps food manufacturers and enterprises digitize sourcing, RFQs, payments, trade finance and audit trails on one secure platform."
  },
  "food-processors": {
-  "title": "T57 for Food Processors | Supply Assurance and Trade Execution Platform for Food and Agri Trade",
-  "description": "T57 helps food processors digitize sourcing, RFQs, payments, trade finance, and documentation on a single secure platform, enabling plants to run with more reliable inputs and faster cash cycles."
+  "title": "T57 for Food Processors | Supply Assurance & Trade Execution",
+  "description": "T57 helps food processors digitize sourcing, RFQs, payments, finance and documents on one platform, for steadier inputs and faster cash cycles."
  },
  "cooperatives": {
-  "title": "T57 for Cooperatives & FPOs | Superior Market Access, Finance and Trade Tools",
-  "description": "See how T57 helps Cooperatives & Farmer Producer Organizations trade directly, access real-time market and price intelligence, secure finance, manage logistics, and run clean, auditable operations for their members."
+  "title": "T57 for Cooperatives & FPOs | Market Access and Finance",
+  "description": "T57 helps cooperatives and FPOs trade directly, see live prices, secure finance, manage logistics and run auditable operations for members."
  },
  "collaborators": {
-  "title": "T57 Partner & Collaborator Network | Powering the Food and Agri Ecosystem",
-  "description": "T57 brings agronomists, financiers, logistics providers, certification bodies, universities, and agri specialists on one verified platform to enable smarter food trade, faster finance, and greater impact across the agri value chain."
+  "title": "T57 Partner & Collaborator Network | Food & Agri Ecosystem",
+  "description": "T57 brings agronomists, financiers, logistics firms, certifiers and universities onto one verified platform for smarter food trade and more impact."
  },
  "service-providers": {
-  "title": "T57 for Service Providers | Creating Impact in the Food and Agri Industry",
-  "description": "Join T57 as a service provider in food and agriculture. Reach verified demand, deliver trusted expertise, and grow through structured, lower-risk trade workflows."
+  "title": "T57 for Service Providers | Grow in Food and Agri",
+  "description": "Join T57 as a food and agri service provider. Reach verified demand, deliver trusted expertise and grow through structured, lower-risk workflows."
  },
  "home": {
   "title": "T57 | AI-Native Digital Trade Infrastructure for Food",
@@ -48,16 +48,16 @@
   "description": "Source food from verified producers and processors. RFQs, contracts, escrow, LCs, inspection and logistics on one trade record."
  },
  "traders": {
-  "title": "T57 for Traders & Aggregators | Fund and Run Deals on One Record",
+  "title": "T57 for Traders & Aggregators | Fund and Run Deals",
   "description": "Verified suppliers and buyers, back-to-back contracts and finance from competing lenders, all on one food trade record."
  },
  "why-t57": {
-  "title": "T57: the Global Food Operating System | AI-Native Food Trade Platform",
-  "description": "Discover T57, the AI-native food trade ecosystem working with IOFS and ASEAN, unifying policy, finance and logistics to turn fragmented data into trusted global food flows."
+  "title": "Why T57 | The AI-Native Global Food Operating System",
+  "description": "T57 is the AI-native food trade ecosystem working with IOFS and ASEAN, joining policy, finance and logistics into trusted global food flows."
  },
  "club-membership": {
-  "title": "T57 Club Membership | Verified Global Food-Trade Club, Not an Open Marketplace",
-  "description": "Discover T57's club membership: a curated, blockchain-enabled food and agri trade club that uses trust scoring, verified IDs, badges, and scores to help counterparties reduce risk and trade with more confidence"
+  "title": "T57 Club Membership | A Verified Global Food-Trade Club",
+  "description": "T57 is a curated food and agri trade club, not an open marketplace: verified IDs, trust scores and badges help members trade with confidence."
  },
  "rfq-bidding": {
   "title": "RFQ Bidding for Food Trade | T57",
@@ -92,7 +92,7 @@
   "description": "Settle cross-border food trades in stablecoins, digital assets or bullion-backed payments through regulated partners, where lawful, on T57."
  },
  "digital-bank": {
-  "title": "Digital Bank for Food Trade | Any Currency, Instant Settlement | T57",
+  "title": "Digital Bank for Food Trade | Any Currency | T57",
   "description": "Hold, pay and settle in any currency with near-instant settlement from licensed partners, linked to every contract and invoice on your T57 trade record."
  },
  "document-audit-trail": {
@@ -156,11 +156,11 @@
   "description": "Business accounts in any currency, cards and near-instant settlement from licensed partners, opened with your T57 Passport and linked to every trade."
  },
  "cap-any-currency": {
-  "title": "Any-Currency Accounts & Cross-Border Transfers for Food Trade | T57",
+  "title": "Any-Currency Accounts for Food Trade | T57",
   "description": "Hold, convert and send money in any currency with upfront rates and fast cross-border transfers, linked to every trade on T57."
  },
  "cap-digital-assets": {
-  "title": "Crypto, Stablecoin & Gold-Backed Token Settlement for Trade | T57",
+  "title": "Crypto, Stablecoin & Gold-Token Trade Settlement | T57",
   "description": "Settle food trades in stablecoins, digital assets or gold-backed tokens through licensed partners, where lawful, linked to your T57 trade record."
  },
  "cap-financing": {
@@ -176,7 +176,7 @@
   "description": "Tokenize verified invoices, warehouse receipts and food assets so licensed lenders and investors can fund them, where the law allows, on T57."
  },
  "cap-risk": {
-  "title": "Trade Risk & Protection | Cargo, Credit Insurance & Takaful | T57",
+  "title": "Trade Risk & Protection | Cargo, Credit & Takaful | T57",
   "description": "Cargo insurance, trade credit cover, takaful, crop cover and compliance screening for food trade, from licensed partners, linked to every T57 trade."
  },
  "cap-logistics": {
@@ -184,7 +184,7 @@
   "description": "Book vetted freight, cold-chain, inspection and customs partners, track shipments in real time and clear borders faster, on one T57 trade record."
  },
  "cap-logistics-network": {
-  "title": "Food Logistics Network | Vetted Freight & Cold-Chain Partners | T57",
+  "title": "Food Logistics Network | Freight & Cold Chain | T57",
   "description": "Compare and book vetted freight forwarders, carriers, cold-chain and warehousing partners matched to each food trade, with route risk alerts on T57."
  },
  "cap-tracking": {
@@ -196,7 +196,7 @@
   "description": "Generate export and import documents from your contract, get HS code guidance and consistency checks, and pre-clear food shipments with vetted brokers on T57."
  },
  "cap-intelligence": {
-  "title": "Food Trade Intelligence & Data | Prices, Forecasts, Credit | T57",
+  "title": "Food Trade Intelligence | Prices, Forecasts, Credit | T57",
   "description": "Food price index, supply and demand forecasts, AI negotiation support, credit reports and port trade data, built into food trade on T57."
  },
  "cap-price-index": {
@@ -240,11 +240,11 @@
   "description": "AI risk scores and heatmaps for counterparties, routes, markets and climate in food trade, with explainable factors and early-warning alerts, on T57."
  },
  "ai-crop-yield": {
-  "title": "AI Crop & Yield Forecasting for Farmers & Buyers | T57 AI Native",
+  "title": "AI Crop & Yield Forecasting | T57 AI Native",
   "description": "Field-level yield and harvest forecasts from local AI models, satellite and weather data, and farmer knowledge, for farmers, cooperatives, buyers and lenders."
  },
  "ai-profit-loss": {
-  "title": "AI Profit & Loss Prediction for Farms & Food Trades | T57 AI Native",
+  "title": "AI Profit & Loss Prediction for Food Trades | T57",
   "description": "Predict the likely margin of a crop, contract or trade from yields, prices and costs, with break-even prices and scenario comparisons, on T57."
  },
  "ai-crop-planning": {
@@ -252,7 +252,7 @@
   "description": "AI crop plans based on market demand, soil, water and climate, with expected yields, margins and season analytics, for farmers and cooperatives."
  },
  "ai-agronomy": {
-  "title": "AI Agronomy Advice & Expert Network for Farmers | T57 AI Native",
+  "title": "AI Agronomy Advice for Farmers | T57 AI Native",
   "description": "Instant crop advice in local languages from AI, with verified agronomists for complex cases. Photo and voice diagnosis for farmers on T57."
  },
  "ai-compliance": {
@@ -272,11 +272,11 @@
   "description": "Verified identity, one trade record, connected finance and logistics partners, AI and blockchain on one secure platform built for food trade."
  },
  "platform-architecture": {
-  "title": "T57 System Architecture | Cloud-Native, API-First Trade Platform",
+  "title": "T57 Architecture | Cloud-Native, API-First Platform",
   "description": "Region-aware cloud on Microsoft Azure, modular services, partner connectors and member APIs, built for verified, regulated food trade across borders."
  },
  "platform-roadmap": {
-  "title": "T57 Platform Roadmap | Verified Trade, Connected Finance, Food Ecosystem",
+  "title": "T57 Platform Roadmap | Trade, Finance, Ecosystem",
   "description": "How the T57 platform grows in stages, from verified food trade to connected finance and a full food ecosystem, across founding and expanding markets."
  },
  "platform-intelligence": {
@@ -284,7 +284,7 @@
   "description": "Small, local AI models trained on verified trade data and consented farmer knowledge, governed so people review every adverse decision."
  },
  "platform-blockchain": {
-  "title": "Blockchain & Smart Contract Layer for Food Trade | T57 Platform",
+  "title": "Blockchain & Smart Contracts for Food Trade | T57",
   "description": "Tamper-evident record anchoring, tokenized trade documents and smart-contract milestone payments, with privacy and licensed partners, on T57."
  },
  "platform-security": {
@@ -301,7 +301,7 @@
  },
  "trust-kyb": {
   "title": "KYB Business Verification | T57",
-  "description": "How T57 verifies member companies: registry checks, beneficial ownership, licences, bank details and sanctions screening."
+  "description": "How T57 verifies member companies: registry checks, beneficial ownership, licenses, bank details and sanctions screening."
  },
  "trust-kyc": {
   "title": "KYC Individual Verification | T57",
@@ -332,7 +332,7 @@
   "description": "Resolve food trade disputes from one shared record, with escrow paused through licensed partners and independent inspection."
  },
  "markets": {
-  "title": "Markets | T57 in Saudi Arabia, UAE, India, Malaysia and Türkiye",
+  "title": "Markets | Saudi Arabia, UAE, India, Malaysia, Türkiye | T57",
   "description": "One verified food trade network across five founding markets, for domestic wholesale and cross-border trade, with local teams and partners."
  },
  "markets-oic": {
@@ -376,7 +376,7 @@
   "description": "Join T57 in the UAE in four steps: apply, get verified, set up and trade, with help from our local team."
  },
  "mkt-in-overview": {
-  "title": "T57 in India | Verified Food Trade for FPOs, Processors and Exporters",
+  "title": "T57 in India | Verified Food Trade for FPOs and Exporters",
   "description": "Sell to verified domestic business buyers and importers in the Gulf and Southeast Asia, with finance, inspection and logistics through licensed partners."
  },
  "mkt-in-features": {
@@ -436,7 +436,7 @@
   "description": "Custom terms, the lowest trade fees, ERP integrations and dedicated support for large food groups, retailers and multi-country traders."
  },
  "pricing-government": {
-  "title": "Government & Institutional Programs | Food Security, Tenders, Subsidies | T57",
+  "title": "Government & Institutional Programs | T57 Pricing",
   "description": "Programs for ministries and development partners: subsidized memberships, local and global food tenders, and an AI-driven government module for food security."
  },
  "pricing-roi": {
@@ -492,7 +492,7 @@
   "description": "Guides, how-tos, FAQs and support for trading on T57, from sign-up and verification to payments and shipments."
  },
  "partnerships": {
-  "title": "Partnerships | Finance, Logistics and Technology Partners | T57",
+  "title": "Partnerships | Finance, Logistics & Technology | T57",
   "description": "Partner with T57 to serve verified food businesses with finance, insurance, logistics, inspection and technology, connected to one trade record."
  },
  "partners-technology": {
@@ -500,7 +500,7 @@
   "description": "Partner with T57 in cloud, identity, data, integration and AI to serve verified food businesses."
  },
  "partners-finance": {
-  "title": "Financial Services Partners | Trade Finance and Insurance | T57",
+  "title": "Financial Services Partners | Finance & Insurance | T57",
   "description": "Banks, finance companies, escrow providers, insurers and takaful operators reach verified food businesses with the trade record behind every request."
  },
  "partners-logistics": {
@@ -516,7 +516,7 @@
   "description": "Why T57 exists: access to markets, technology and finance for the food ecosystem, built from food security work across more than 60 countries."
  },
  "about-leadership": {
-  "title": "Leadership & Advisors | Founders, Team and Advisory Board | T57",
+  "title": "Leadership & Advisors | T57",
   "description": "Meet the founders, leadership team, board and thirteen advisors building T57, with experience in food trade, food security, technology, finance and governance."
  },
  "about-impact": {
@@ -548,8 +548,8 @@
   "description": "Book a 30-minute T57 demo on your own products and markets, then start your free trial."
  },
  "contact-offices": {
-  "title": "Regional Offices | T57 in Dubai, Riyadh, India, Malaysia, Türkiye",
-  "description": "Find T57's offices and country teams in the UAE, Saudi Arabia, India, Malaysia and Türkiye."
+  "title": "T57 Offices | Saudi Arabia, UAE, India, Malaysia, Türkiye",
+  "description": "Find T57's offices and country teams in Saudi Arabia, the UAE, India, Malaysia and Türkiye."
  },
  "cap-hire-expert": {
   "title": "Hire a Food & Agriculture Expert | T57",
@@ -561,6 +561,6 @@
  },
  "partners-research": {
   "title": "Research & University Partners: From the Lab to the Farm | T57",
-  "description": "T57 works with agricultural universities and research institutes to bring research to farmers and food SMEs, train local AI, pilot new technology and pay royalties to scientists."
+  "description": "T57 works with agricultural universities and research institutes to bring research to farmers, train local AI, pilot new tech and reward scientists."
  }
 }

@@ -104,7 +104,71 @@ def bar(i):
         cur = ' aria-current="page"' if k == i or (k in chain and k != top and k != group) else ''
         links.append(f'<a href="#{k}" data-go="{k}"{cur}>{html.escape(label, quote=False)}</a>')
     return head, ''.join(links)
+def seq(i):
+    # the pages of i's microsite, in bar order
+    chain = [i]
+    while PARENT.get(chain[-1]): chain.append(PARENT[chain[-1]])
+    top = chain[-1]
+    group = next((c for c in chain if c != top and KIDS.get(c) and PARENT.get(c) == top), None)
+    if group: return [group] + KIDS[group]
+    kids = KIDS.get(top, [])
+    if top == 'who-we-serve': kids = sorted(kids, key=lambda k: AUD.index(k) if k in AUD else 99)
+    return [top] + kids
+def pager(i):
+    items = seq(i)
+    if i not in items or len(items) < 2: return ''
+    k = items.index(i)
+    prev, nxt = (items[k - 1] if k else None), (items[k + 1] if k + 1 < len(items) else None)
+    up_ = items[0] if i != items[0] else (PARENT.get(items[0]) or 'home')
+    if prev == up_: prev = None
+    cell = lambda c, cls, word: f'<a class="pg-{cls}" href="#{c}" data-go="{c}"><small>{word}</small><b>{html.escape(short(c, "group") if KIDS.get(c) and c != items[0] else ("Overview" if c == items[0] and not PARENT.get(c) else short(c)), quote=False)}</b></a>'
+    back = f'<a class="pg-up" href="#{up_}" data-go="{up_}"><small>Back to</small><b>{"Home" if up_ == "home" else html.escape(short(up_, "section") if not PARENT.get(up_) else short(up_, "group"), quote=False)}</b></a>'
+    return ('<nav class="pager gutter" aria-label="Pages in this section"><div class="wrap pager-in">'
+            + (cell(prev, 'prev', 'Previous') if prev else '<span></span>') + back
+            + (cell(nxt, 'next', 'Next') if nxt else '<span></span>') + f'<p class="pg-n">Page {k + 1} of {len(items)}</p></div></nav>\n  ')
+# Breadcrumbs: every page below Home shows its trail (Home > section > group > page) in place of the
+# hero eyebrow, so a visitor always sees where they are and can step back up one level at a time.
+def label(k):
+    if not PARENT.get(k): return short(k, 'section')
+    return short(k, 'group') if KIDS.get(k) else short(k)
+def crumbs(i):
+    chain = [i]
+    while PARENT.get(chain[-1]): chain.append(PARENT[chain[-1]])
+    items = ['<li><a href="#home" data-go="home">Home</a></li>']
+    for k in reversed(chain[1:]): items.append(f'<li><a href="#{k}" data-go="{k}">{html.escape(label(k), quote=False)}</a></li>')
+    items.append(f'<li><span aria-current="page">{html.escape(label(i), quote=False)}</span></li>')
+    return '<nav class="crumbs" aria-label="Breadcrumb"><ol>' + ''.join(items) + '</ol></nav>'
+for i in pages:
+    if PARENT.get(i): pages[i]['parent'] = PARENT[i]
+json.dump(pages, open(f'{R}/content/pages.json', 'w'), indent=1, ensure_ascii=False)
+CRUMBS = {i: crumbs(i) for i in pages if i != 'home'}
+
+# Menu: each section opens to show its pages (and a group's pages under it), so all 141 pages are two taps away.
+def sub_items(k, depth=0):
+    out = []
+    for c in KIDS.get(k, []):
+        lab = html.escape(label(c) if not KIDS.get(c) else short(c, 'group'), quote=False)
+        if KIDS.get(c) and depth == 0:
+            out.append(f'<li class="grp"><a href="#{c}" data-go="{c}">{lab}</a><ul>' + ''.join(f'<li><a href="#{g}" data-go="{g}">{html.escape(label(g), quote=False)}</a></li>' for g in KIDS[c]) + '</ul></li>')
+        else:
+            out.append(f'<li><a href="#{c}" data-go="{c}">{lab}</a></li>')
+    return ''.join(out)
+def menu_sec(mm):
+    k, name = mm.group(1), mm.group(2)
+    if k in ('home', 'who-we-serve') or not KIDS.get(k): return mm.group(0)
+    n = len(KIDS[k]) + sum(len(KIDS.get(c, [])) for c in KIDS[k])
+    return (f'<li class="has-sub"><a href="#{k}" data-go="{k}">{name}<em>{n} pages</em></a>'
+            f'<button class="sub-t" type="button" aria-expanded="false" aria-controls="ms-{k}"><span class="sr">Show the pages in {name}</span></button>'
+            f'<ul class="menu-sub" id="ms-{k}" hidden><li><a href="#{k}" data-go="{k}">{name} overview</a></li>{sub_items(k)}</ul></li>')
+top2 = re.sub(r'(<ul class="menu-l0">.*?</ul>)', lambda mm: re.sub(r'<li><a href="#([a-z0-9-]+)" data-go="[^"]+">([^<]+)<em></em></a></li>', menu_sec, mm.group(1)), top, count=1, flags=re.S)
+assert top2.count('class="has-sub"') >= 10, top2.count('class="has-sub"')
+open(f'{R}/content/chrome-top.html', 'w').write(relink(top2))
+
 for i, art in ARTS.items():
+    if i in CRUMBS:
+        art, k = re.subn(r'(<div class="hero-copy">\s*)<p class="eyebrow">.*?</p>', lambda mm: mm.group(1) + CRUMBS[i], art, count=1, flags=re.S)
+        if not k: art, k = re.subn(r'(<section class="hero[^>]*>.*?)<p class="eyebrow">.*?</p>', lambda mm: mm.group(1) + CRUMBS[i], art, count=1, flags=re.S)
+        assert k, f'no hero eyebrow on {i}'
     m = re.search(r'(<div class="micro gutter">\s*<div class="wrap micro-in">\s*)(<b>.*?</b>)?(.*?)(\s*</div>\s*</div>)', art, re.S)
     if m and i != 'home':
         head, links = bar(i)
@@ -116,11 +180,14 @@ for i, art in ARTS.items():
             while PARENT.get(sec): sec = PARENT[sec]
             b = re.sub(r'(</svg>).*?(</b>)', lambda mm: f'{mm.group(1)}<a href="#{sec}" data-go="{sec}">{html.escape(short(sec, 'section'), quote=False)}</a>{mm.group(2)}', b, count=1, flags=re.S)
         art = art[:m.start()] + m.group(1) + b + '\n      ' + links + m.group(4) + art[m.end():]
+    if i != 'home':
+        pg = pager(i)
+        if pg: art = re.sub(r'(<section class="cta[^"]*" id="cta-)', lambda mm: pg + mm.group(1), art, count=1)
     open(f'{R}/content/pages/{i}.html', 'w').write(relink(art, i) + '\n')
 
 os.makedirs(f'{R}/public/proto', exist_ok=True)
 names = {i: html.unescape(re.search(r'aria-label="([^"]+)"', a).group(1)) for i, a in arts}
-open(f'{R}/public/proto/worlds.js', 'w').write(f'window.T57_PAGES = {json.dumps({"petal": PETAL, "name": names, "site": {i: (i if p['route'].startswith('/who-we-serve/') else {'partners': 'partnerships', '': 'home'}.get(p['section'], p['section'])) for i, p in pages.items()}}, ensure_ascii=False)};\n' + open(f'{D}/script.js').read())
+open(f'{R}/public/proto/worlds.js', 'w').write(f'window.T57_PAGES = {json.dumps({"petal": PETAL, "name": names, "parent": {k: v for k, v in PARENT.items() if v}, "site": {i: (i if p['route'].startswith('/who-we-serve/') else {'partners': 'partnerships', '': 'home'}.get(p['section'], p['section'])) for i, p in pages.items()}}, ensure_ascii=False)};\n' + open(f'{D}/script.js').read())
 
 # llms.txt: a plain summary that AI assistants can read and cite (llmstxt.org format)
 SITE = 'https://www.t57.ai'
