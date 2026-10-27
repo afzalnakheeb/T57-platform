@@ -567,6 +567,7 @@ a.aud:hover { transform:translateY(-3px); box-shadow:0 14px 30px -18px #02246c66
 .twelve-grid { grid-template-columns:repeat(4, minmax(0, 1fr)); gap:0 28px; }
 .feat.twelve { text-decoration:none; color:inherit; } .feat.twelve i { font:700 13px/1 var(--font-display); font-style:normal; color:var(--persian-blue); letter-spacing:.08em; }
 a.feat.twelve b::after { content:" →"; color:var(--strong-cyan); } a.feat.twelve:hover b { text-decoration:underline; }
+a.feat:not(.twelve) { text-decoration:none; color:inherit; } a.feat:not(.twelve) b::after { content:" →"; color:var(--strong-cyan); } a.feat:not(.twelve):hover b { text-decoration:underline; }
 @media (max-width: 1100px) { .twelve-grid { grid-template-columns:repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .twelve-grid { grid-template-columns:1fr; } }
 .uc-text { max-width:820px; margin-top:24px; } .uc-text p { margin:0 0 16px; }
