@@ -559,6 +559,10 @@
   "title": "One Trade, Every Step: Food Trade on One Record | T57",
   "description": "Agree a price, ship, insure, finance, pay and clear customs for any food on one platform, with verified parties, competing lenders and milestone-based finance."
  },
+ "platform-domestic": {
+  "title": "Domestic B2B Food Trade | Factory to Shop, Direct | T57",
+  "description": "Local factories and farms sell direct to supermarkets, restaurants and offices at factory price, by the carton, with local delivery and pay-later partners."
+ },
  "partners-research": {
   "title": "Research & University Partners: From the Lab to the Farm | T57",
   "description": "T57 works with agricultural universities and research institutes to bring research to farmers, train local AI, pilot new tech and reward scientists."

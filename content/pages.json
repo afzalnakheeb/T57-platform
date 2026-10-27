@@ -313,7 +313,7 @@
    },
    {
     "q": "Can I use T57 for domestic trade as well as exports?",
-    "a": "Yes. T57 supports domestic wholesale to supermarkets, HoReCa and institutions, as well as cross-border trade."
+    "a": "Yes. T57 supports domestic wholesale to supermarkets, HoReCa and institutions, as well as cross-border trade. See domestic B2B trade ."
    }
   ],
   "title": "T57 Capabilities | Every Step of Food Trade on One Record",
@@ -1345,6 +1345,42 @@
   "description": "Agree a price, ship, insure, finance, pay and clear customs for any food on one platform, with verified parties, competing lenders and milestone-based finance.",
   "parent": "platform"
  },
+ "platform-domestic": {
+  "route": "/platform/domestic-trade",
+  "section": "platform",
+  "name": "Domestic B2B Trade",
+  "h1": "From the factory to every shop in town.",
+  "answer": "Local factories and farms sell direct to supermarkets, restaurants and offices at factory price, by the carton, delivered to the door.",
+  "faqs": [
+   {
+    "q": "Does T57 charge listing fees or rebates?",
+    "a": "No. There are no listing fees, slotting rebates or forced promotions. Sellers set their own prices. T57 membership options are on the Pricing page."
+   },
+   {
+    "q": "Who delivers the orders?",
+    "a": "Licensed local logistics partners, booked from the order. Sellers can also invite the delivery company they already use."
+   },
+   {
+    "q": "Can buyers pay later?",
+    "a": "Yes, where a licensed B2B credit or pay-later partner approves the buyer. T57 does not lend."
+   },
+   {
+    "q": "What is the minimum order?",
+    "a": "Each seller sets it, for example 2, 5 or 20 cartons, with lower prices for larger orders."
+   },
+   {
+    "q": "Can farms and cooperatives sell this way?",
+    "a": "Yes. Farms, cooperatives and food processors can list fresh and packed products for local business buyers."
+   },
+   {
+    "q": "Which countries is this for?",
+    "a": "Domestic B2B trade is built for each of T57's founding markets: Saudi Arabia, the UAE, India, Malaysia and Türkiye."
+   }
+  ],
+  "title": "Domestic B2B Food Trade | Factory to Shop, Direct | T57",
+  "description": "Local factories and farms sell direct to supermarkets, restaurants and offices at factory price, by the carton, with local delivery and pay-later partners.",
+  "parent": "platform"
+ },
  "platform-architecture": {
   "route": "/platform/architecture",
   "section": "platform",
@@ -1761,7 +1797,7 @@
    },
    {
     "q": "Does T57 support domestic trade, or only exports?",
-    "a": "Both. Domestic wholesale and cross-border trade run on the same platform."
+    "a": "Both. Domestic B2B trade and cross-border trade run on the same platform."
    }
   ],
   "title": "Markets | Saudi Arabia, UAE, India, Malaysia, Türkiye | T57",
@@ -3066,7 +3102,7 @@
    },
    {
     "q": "Can I buy locally as well as import?",
-    "a": "Yes. T57 supports domestic wholesale for supermarkets, HoReCa and institutions as well as cross-border trade."
+    "a": "Yes. T57 supports domestic wholesale for supermarkets, HoReCa and institutions as well as cross-border trade. See domestic B2B trade ."
    }
   ],
   "title": "T57 for Buyers & Importers | Source from Verified Suppliers",
