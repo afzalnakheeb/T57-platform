@@ -1530,3 +1530,22 @@ html.rv-on .rv0.in { opacity:1; transform:none; transition:opacity .9s var(--eas
 .story-track.pin .sp.on .row { opacity:1; transform:none; transition:opacity .6s var(--ease-out), transform .6s var(--ease-out); transition-delay:calc(var(--i, 0) * .1s + .15s); }
 @media (max-width:900px) { .story-in { grid-template-columns:minmax(0, 1fr); } }
 .story .sl h3 { color:#fff; }
+
+/* Explainer: truly centred (the figure carries an inline margin) */
+.scrub .explainer { margin-inline:auto !important; }
+.scrub-stick > .wrap { display:flex; flex-direction:column; align-items:center; }
+.scrub .explainer { width:100%; }
+
+/* Page transitions: a brand curtain wipes between pages of the same section; the petal veil still opens a new section */
+.wipe { position:fixed; inset:0; z-index:99; pointer-events:none; background:var(--scallop), linear-gradient(118deg, #2f2e7d 0%, #26417f 45%, #008b8c 100%); clip-path:inset(100% 0 0 0); }
+html.lifting .wipe { clip-path:inset(0); }
+.veil .bg { background:var(--scallop), linear-gradient(118deg, #2f2e7d 0%, #1b2a6b 50%, #0f5d63 100%); }
+html { scroll-behavior:smooth; } html.sm { scroll-behavior:auto !important; }
+
+/* Subtle cursor and press feedback */
+.cur { position:fixed; left:0; top:0; z-index:200; width:34px; height:34px; margin:-17px 0 0 -17px; border-radius:50%; border:1.5px solid #fff; mix-blend-mode:difference; pointer-events:none; opacity:0; transition:opacity .3s, width .35s var(--ease-out), height .35s var(--ease-out), margin .35s var(--ease-out), background .3s; will-change:transform; }
+.cur.on { opacity:.85; } .cur.link { width:58px; height:58px; margin:-29px 0 0 -29px; background:#ffffff26; } .cur.down { width:22px; height:22px; margin:-11px 0 0 -11px; }
+.cur::after { content:""; position:absolute; left:50%; top:50%; width:5px; height:5px; margin:-2.5px; border-radius:50%; background:#fff; }
+.btn:active, .ct:active, .also a:active, .rl:active { transform:scale(.97); }
+.btn { transition:background .15s, border-color .15s, color .15s, transform .2s var(--ease-out); }
+@media (hover:none), (prefers-reduced-motion:reduce) { .cur { display:none; } }

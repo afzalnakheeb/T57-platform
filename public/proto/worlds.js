@@ -460,9 +460,10 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       const hp = logo.querySelector('.p-' + (WORLD_PETAL[name] || 'all')) || logo;
       groundTo();
       hp.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.2)' }, { transform: 'scale(1)' }], { duration: 420, easing: 'ease-in-out' });
-      await anim(main, [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(-10px)' }], { duration: 200, easing: 'ease-in' });
+      const wp = document.getElementById('wipe');
+      await wp.animate([{ clipPath: 'inset(100% 0 0 0)' }, { clipPath: 'inset(0 0 0 0)' }], { duration: 420, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' }).finished;
       location.href = href;
-      addEventListener('pageshow', e => { if (e.persisted) { clearAll([main]); busy = false; } }, { once: true });
+      addEventListener('pageshow', e => { if (e.persisted) { wp.getAnimations().forEach(a => a.cancel()); clearAll([main]); busy = false; } }, { once: true });
       return;
     }
     try { sessionStorage.setItem('t57-go', name); } catch (e) {}
@@ -511,8 +512,10 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   function liftIn() {
     const main = document.getElementById('main');
     groundTo();
+    const wp = document.getElementById('wipe');
+    wp.animate([{ clipPath: 'inset(0 0 0 0)' }, { clipPath: 'inset(0 0 100% 0)' }], { duration: 560, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'both' }).finished.then(() => wp.getAnimations().forEach(a => a.cancel()));
     document.documentElement.classList.remove('lifting');
-    main.animate([{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'none' }], { duration: 360, easing: 'cubic-bezier(.2,.8,.2,1)' }).finished.then(() => { document.body.style.backgroundColor = ''; });
+    main.animate([{ opacity: 0, transform: 'translateY(22px)' }, { opacity: 1, transform: 'none' }], { duration: 640, delay: 180, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }).finished.then(() => { document.body.style.backgroundColor = ''; });
   }
 
   /* ---------- Logo intro: the five petals assemble into the mark ---------- */
@@ -939,4 +942,46 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     };
     addEventListener('scroll', () => requestAnimationFrame(run), { passive: true }); addEventListener('resize', run); run();
   }
+})();
+
+/* ---------- Feel: inertial scrolling and a quiet cursor (fine pointers only) ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  const root = document.documentElement;
+
+  // Inertial scroll: wheel input eases toward a target; everything else (keys, anchors, touch) stays native
+  let target = scrollY, cur = scrollY, active = false;
+  const max = () => root.scrollHeight - innerHeight;
+  const blocked = el => {
+    if (el.closest('dialog[open], textarea, select, input, video, .menu, .srch')) return true;
+    for (let n = el; n && n !== document.body && n !== root; n = n.parentElement) {
+      const o = getComputedStyle(n).overflowY;
+      if ((o === 'auto' || o === 'scroll') && n.scrollHeight > n.clientHeight + 1) return true;
+    }
+    return false;
+  };
+  const loop = () => {
+    cur += (target - cur) * 0.11;
+    if (Math.abs(target - cur) < 0.4) { cur = target; active = false; scrollTo(0, cur); root.classList.remove('sm'); return; }
+    scrollTo(0, cur); requestAnimationFrame(loop);
+  };
+  addEventListener('wheel', e => {
+    if (e.ctrlKey || e.metaKey || Math.abs(e.deltaX) > Math.abs(e.deltaY) || blocked(e.target)) return;
+    e.preventDefault();
+    const d = e.deltaMode === 1 ? e.deltaY * 34 : e.deltaMode === 2 ? e.deltaY * innerHeight : e.deltaY;
+    if (!active) { cur = scrollY; target = scrollY; active = true; root.classList.add('sm'); requestAnimationFrame(loop); }
+    target = Math.min(max(), Math.max(0, target + d * 0.9));
+  }, { passive: false });
+  addEventListener('scroll', () => { if (!active) { cur = target = scrollY; } }, { passive: true });
+
+  // Cursor: a trailing ring that swells over links and buttons
+  const ring = document.createElement('div'); ring.className = 'cur'; ring.setAttribute('aria-hidden', 'true'); document.body.appendChild(ring);
+  let x = -100, y = -100, rx = x, ry = y, seen = false;
+  addEventListener('pointermove', e => { x = e.clientX; y = e.clientY; if (!seen) { seen = true; rx = x; ry = y; ring.classList.add('on'); }
+    ring.classList.toggle('link', !!e.target.closest('a, button, summary, label, [role=tab], .rl, input, .vid-play')); }, { passive: true });
+  addEventListener('pointerdown', () => ring.classList.add('down')); addEventListener('pointerup', () => ring.classList.remove('down'));
+  document.addEventListener('pointerleave', () => ring.classList.remove('on')); document.addEventListener('pointerenter', () => seen && ring.classList.add('on'));
+  const tick = () => { rx += (x - rx) * 0.2; ry += (y - ry) * 0.2; ring.style.transform = `translate3d(${rx}px, ${ry}px, 0)`; requestAnimationFrame(tick); };
+  tick();
 })();
