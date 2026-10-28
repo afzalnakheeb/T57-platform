@@ -11,8 +11,9 @@ import json, re, os, html, sys
 D = os.path.dirname(os.path.abspath(__file__)); R = os.path.dirname(D)
 parts = json.load(open(f'{D}/parts.json')); led = open(f'{D}/ledger.tpl').read()
 META = json.load(open(f'{D}/meta.json'))
-sys.path.insert(0, D); import blog
-META.update(blog.meta())
+sys.path.insert(0, D); import blog, legal, investors
+from svgslim import slim
+META.update(blog.meta()); META.update(legal.meta()); META.update(investors.meta())
 orig = ["Buyer match","AI MATCHED","Offer","PRICE INTELLIGENCE","Contract","SMART CONTRACT","Logistics","TRACKED SHIPMENT","Payment","ESCROW RELEASE"]
 n = [0]
 def ledger(m):
@@ -22,7 +23,7 @@ def ledger(m):
     s = s.replace('id="hexes"', f'id="hexes{n[0]}"').replace('url(#hexes)', f'url(#hexes{n[0]})')
     if aria: s = re.sub(r'aria-label="[^"]*"', f'aria-label="{aria}"', s, count=1)
     return '<figure class="ledger">\n' + s + '</figure>'
-worlds = re.sub(r'\{\{LEDGER:([^}#]*)(?:#([^}]*))?\}\}', ledger, open(f'{D}/worlds.html').read()) + blog.articles()
+worlds = re.sub(r'\{\{LEDGER:([^}#]*)(?:#([^}]*))?\}\}', ledger, open(f'{D}/worlds.html').read()) + investors.articles() + blog.articles() + legal.articles()
 
 # Sitemap v7 routes (IDs 1-13)
 # Sitemap v7 routes: an article's data-route, else Home, Who We Serve and its audiences (IDs 1-13)
@@ -39,7 +40,7 @@ def relink(s, page=None):
     return s
 
 t = open(f'{D}/template.html').read()
-for k, v in {'DEFS': parts['defs'], 'LOGO': parts['logo'], 'MARK': parts['mark']}.items():
+for k, v in {'DEFS': slim(parts['defs']), 'LOGO': slim(parts['logo']), 'MARK': slim(parts['mark'])}.items():
     t = t.replace('{{' + k + '}}', v)
 a = t.index('<style>') + 7; b = t.index('</style>')
 open(f'{R}/app/globals.css', 'w').write(t[a:b].strip() + '\n')

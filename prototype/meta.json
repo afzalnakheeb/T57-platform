@@ -76,7 +76,7 @@
   "description": "Send one verified deal file to several licensed lenders and compare offers. Self-liquidating food trade finance through escrow on T57."
  },
  "nft-funding": {
-  "title": "Digital Asset Trade Finance | Tokenized Trade Documents | T57",
+  "title": "Digital Asset Trade Finance | Tokenized Documents | T57",
   "description": "Turn verified invoices, warehouse receipts and bills of lading into unique digital assets that lenders can trust and fund, on T57."
  },
  "elc-15-minutes": {
@@ -180,7 +180,7 @@
   "description": "Cargo insurance, trade credit cover, takaful, crop cover and compliance screening for food trade, from licensed partners, linked to every T57 trade."
  },
  "cap-logistics": {
-  "title": "Food Logistics & Fulfilment | Freight, Tracking, Customs | T57",
+  "title": "Food Logistics & Fulfilment: Freight and Customs | T57",
   "description": "Book vetted freight, cold-chain, inspection and customs partners, track shipments in real time and clear borders faster, on one T57 trade record."
  },
  "cap-logistics-network": {
@@ -236,7 +236,7 @@
   "description": "AI forecasts of food supply, demand and prices by product and origin, with supply status signals and alerts for buyers, sellers and governments."
  },
  "ai-risk": {
-  "title": "AI Risk Intelligence & Heatmaps for Food Trade | T57 AI Native",
+  "title": "AI Risk Intelligence for Food Trade | T57 AI Native",
   "description": "AI risk scores and heatmaps for counterparties, routes, markets and climate in food trade, with explainable factors and early-warning alerts, on T57."
  },
  "ai-crop-yield": {
@@ -568,7 +568,7 @@
   "description": "Local factories and farms sell direct to supermarkets, restaurants and offices at factory price, by the carton, with local delivery and pay-later partners."
  },
  "partners-research": {
-  "title": "Research & University Partners: From the Lab to the Farm | T57",
+  "title": "Research & University Partners | T57",
   "description": "T57 works with agricultural universities and research institutes to bring research to farmers, train local AI, pilot new tech and reward scientists."
  },
  "partners-country": {
