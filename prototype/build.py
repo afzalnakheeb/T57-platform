@@ -11,7 +11,7 @@ import json, re, os, html, sys
 D = os.path.dirname(os.path.abspath(__file__)); R = os.path.dirname(D)
 parts = json.load(open(f'{D}/parts.json')); led = open(f'{D}/ledger.tpl').read()
 META = json.load(open(f'{D}/meta.json'))
-sys.path.insert(0, D); import blog, legal, investors
+sys.path.insert(0, D); import blog, legal, investors, photos
 from svgslim import slim
 META.update(blog.meta()); META.update(legal.meta()); META.update(investors.meta())
 orig = ["Buyer match","AI MATCHED","Offer","PRICE INTELLIGENCE","Contract","SMART CONTRACT","Logistics","TRACKED SHIPMENT","Payment","ESCROW RELEASE"]
@@ -24,6 +24,7 @@ def ledger(m):
     if aria: s = re.sub(r'aria-label="[^"]*"', f'aria-label="{aria}"', s, count=1)
     return '<figure class="ledger">\n' + s + '</figure>'
 worlds = re.sub(r'\{\{LEDGER:([^}#]*)(?:#([^}]*))?\}\}', ledger, open(f'{D}/worlds.html').read()) + investors.articles() + blog.articles() + legal.articles()
+worlds = photos.apply(worlds)
 
 # Sitemap v7 routes (IDs 1-13)
 # Sitemap v7 routes: an article's data-route, else Home, Who We Serve and its audiences (IDs 1-13)
