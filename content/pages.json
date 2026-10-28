@@ -192,7 +192,7 @@
     "a": "Trade documents on a verified T57 trade record, such as invoices, warehouse receipts and bills of lading, where local law recognizes electronic trade documents."
    }
   ],
-  "title": "Digital Asset Trade Finance | Tokenized Trade Documents | T57",
+  "title": "Digital Asset Trade Finance | Tokenized Documents | T57",
   "description": "Turn verified invoices, warehouse receipts and bills of lading into unique digital assets that lenders can trust and fund, on T57.",
   "parent": "why-t57"
  },
@@ -795,7 +795,7 @@
     "a": "Sea, air and road freight, plus warehousing and cold storage, through vetted partners."
    }
   ],
-  "title": "Food Logistics & Fulfilment | Freight, Tracking, Customs | T57",
+  "title": "Food Logistics & Fulfilment: Freight and Customs | T57",
   "description": "Book vetted freight, cold-chain, inspection and customs partners, track shipments in real time and clear borders faster, on one T57 trade record.",
   "parent": "capabilities"
  },
@@ -1142,7 +1142,7 @@
     "a": "Lenders and insurers see risk only for the trades you share with them. Governments see aggregated, anonymized views."
    }
   ],
-  "title": "AI Risk Intelligence & Heatmaps for Food Trade | T57 AI Native",
+  "title": "AI Risk Intelligence for Food Trade | T57 AI Native",
   "description": "AI risk scores and heatmaps for counterparties, routes, markets and climate in food trade, with explainable factors and early-warning alerts, on T57.",
   "parent": "ai-native"
  },
@@ -2785,7 +2785,7 @@
     "a": "Agricultural universities, research institutes, academies and their start-ups, in any country."
    }
   ],
-  "title": "Research & University Partners: From the Lab to the Farm | T57",
+  "title": "Research & University Partners | T57",
   "description": "T57 works with agricultural universities and research institutes to bring research to farmers, train local AI, pilot new tech and reward scientists.",
   "parent": "partnerships"
  },
@@ -3344,6 +3344,17 @@
   "description": "T57 helps farmers and producers reach verified buyers, see market prices, sign secure contracts, get paid faster and access trade finance.",
   "parent": "who-we-serve"
  },
+ "about-investors": {
+  "route": "/about/investors",
+  "section": "about",
+  "name": "Investor Relations",
+  "h1": "Invest in the rails food trade runs on.",
+  "answer": "T57 is raising its launch round to open five founding markets from Riyadh. Qualified investors can request the investor pack today.",
+  "faqs": [],
+  "title": "Investor Relations | Invest in T57",
+  "description": "T57 is raising its launch round from Riyadh. See the traction, partners and team, and request the investor pack as a qualified investor.",
+  "parent": "about"
+ },
  "blog-systems-marketing-ai-global-food-trade": {
   "route": "/resources/blog/systems-marketing-ai-global-food-trade",
   "section": "resources",
@@ -3351,7 +3362,7 @@
   "h1": "Marketing a System, Not a Product: Designing Trade Infrastructure for Multi-Party Value",
   "answer": "Why verification and trust, not vendor promises, are what a trade platform really sells.",
   "faqs": [],
-  "title": "Marketing a System, Not a Product: Designing Trade Infrastructure for Multi-Party Value | T57 Insights",
+  "title": "Marketing Trade Infrastructure, Not a Product | T57",
   "description": "Discover why T57 markets trust instead of technology by using AI, blockchain, smart contracts, and digital finance to transform global food trade.",
   "post": {
    "author": "Umme Habeeba Khanum",
@@ -3370,8 +3381,8 @@
   "h1": "The Day Our MoUs and LoIs Turned Into a Learning Machine",
   "answer": "How early MoU and LoI partners became co-designers, with pilots tied to measurable outcomes.",
   "faqs": [],
-  "title": "The Day Our MoUs and LoIs Turned Into a Learning Machine | T57 Insights",
-  "description": "Discover how T57 uses MoUs and LoIs from Gulfood 2026 as live market signals to refine sales strategy, identify high-intent buyers, and accelerate adoption in global food trade.",
+  "title": "How Gulfood MoUs Became a Learning Machine | T57",
+  "description": "How T57 uses the MoUs and LoIs signed at Gulfood 2026 as live market signals to find high-intent buyers and sharpen its sales strategy.",
   "post": {
    "author": "Mohammed Umair",
    "role": "Chief Sales Officer",
@@ -3389,7 +3400,7 @@
   "h1": "Why 150 MoUs + LoIs at Gulfood 2026 Change T57’s Growth Math",
   "answer": "What 150 signed MoUs and letters of intent mean as pre-qualified demand.",
   "faqs": [],
-  "title": "Why 150 MoUs + LoIs at Gulfood 2026 Change T57’s Growth Math | T57 Insights",
+  "title": "Why 150 Gulfood MoUs Change T57’s Growth Math | T57",
   "description": "T57 secured 150 MoUs and LoIs at Gulfood 2026, demonstrating strong global demand for AI-powered food trade infrastructure before launch.",
   "post": {
    "author": "Mohammed Umair",
@@ -3408,8 +3419,8 @@
   "h1": "When a Nation Becomes Your Customer: Inside the Race to Sell AI to India’s Farms",
   "answer": "India’s Digital Agriculture Mission and the push for traceable public investment in farming.",
   "faqs": [],
-  "title": "When a Nation Becomes Your Customer: Inside the Race to Sell AI to India’s Farms | T57 Insights",
-  "description": "Explore how T57 positions itself within India’s Digital Agriculture Mission, leveraging AgriStack, AI, and digital farmer IDs to transform agriculture at scale across 11 crore farmers.",
+  "title": "Selling AI to India’s Farms | T57 Insights",
+  "description": "How T57 fits India’s Digital Agriculture Mission, with AgriStack, AI and digital farmer IDs, to reach 11 crore farmers at scale.",
   "post": {
    "author": "Umme Habeeba Khanum",
    "role": "Chief Marketing Officer",
@@ -3427,7 +3438,7 @@
   "h1": "When Food Trade Deals Happen Before the Handshake",
   "answer": "Why discovery and contracting are moving from trade-show floors to AI-native trade platforms.",
   "faqs": [],
-  "title": "When Food Trade Deals Happen Before the Handshake | T57 Insights",
+  "title": "Food Trade Deals Before the Handshake | T57 Insights",
   "description": "Explore how AI, KYC/KYB, and embedded finance are transforming food trade by enabling faster, trusted deals before physical trade events even begin.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
@@ -3446,7 +3457,7 @@
   "h1": "The Missing Middle of Food Systems: Why Model Support Centers Will Rewrite the Future of Agriculture",
   "answer": "Modular hubs that bring digital tools and services within reach of farmers.",
   "faqs": [],
-  "title": "The Missing Middle of Food Systems: Why Model Support Centers Will Rewrite the Future of Agriculture | T57 Insights",
+  "title": "The Missing Middle of Food Systems | T57 Insights",
   "description": "Discover how Model Support Centers bridge the gap between farmers, markets, and technology to transform agriculture, reduce waste, and drive value creation.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
@@ -3465,8 +3476,8 @@
   "h1": "From 90 Days to 5 Years: How the Gulf Can Turn a Food Crisis into a Strategic Advantage",
   "answer": "A long-term response to the Gulf’s dependence on the Strait of Hormuz for food.",
   "faqs": [],
-  "title": "From 90 Days to 5 Years: How the Gulf Can Turn a Food Crisis into a Strategic Advantage | T57 Insights",
-  "description": "How can the GCC turn a food supply crisis into long-term advantage? A strategic roadmap covering supply chains, reserves, production, and digital infrastructure.",
+  "title": "Turning a Gulf Food Crisis into Advantage | T57",
+  "description": "How the GCC can turn a food supply crisis into long-term advantage: a roadmap for supply chains, reserves, production and digital infrastructure.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3484,8 +3495,8 @@
   "h1": "Hormuz Shock: How the Gulf’s Food-Security Model Could Fail Its First Real Test",
   "answer": "The stress a Hormuz disruption puts on GCC food supply.",
   "faqs": [],
-  "title": "Hormuz Shock: How the Gulf’s Food-Security Model Could Fail Its First Real Test | T57 Insights",
-  "description": "With over 70% of food imports passing through Hormuz, the GCC faces a major stress test. Here’s what the crisis reveals about supply chain vulnerabilities and future resilience.",
+  "title": "Hormuz Shock and Gulf Food Security | T57 Insights",
+  "description": "With most Gulf food imports passing through Hormuz, the crisis is a stress test. What it reveals about supply chain weak points and resilience.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3503,8 +3514,8 @@
   "h1": "Date Farming in Saudi Arabia: How One Platform Can Rewrite a Centuries-Old Struggle (and Reshape Farming Across the World)",
   "answer": "How date farmers could list harvests, receive buyer offers and be paid faster.",
   "faqs": [],
-  "title": "Date Farming in Saudi Arabia: How One Platform Can Rewrite a Centuries-Old Struggle | T57 Insights",
-  "description": "Saudi Arabia leads global date exports, yet farmers face waste, price uncertainty, and limited market access. Discover how T57 is transforming the date supply chain.",
+  "title": "Saudi Date Farming and a Better Supply Chain | T57",
+  "description": "Saudi Arabia leads global date exports, yet farmers face waste, price swings and limited market access. How T57 changes the date supply chain.",
   "post": {
    "author": "Dr. Moaz Abdullah Mohammed Mojaddidi",
    "role": "Geo Head, Saudi Arabia",
@@ -3522,8 +3533,8 @@
   "h1": "Building Trust at Scale: Why a Club Membership Model Can Transform Agriculture Markets",
   "answer": "Why a curated membership with trade history and ratings reduces disputes.",
   "faqs": [],
-  "title": "Building Trust at Scale: Why a Club Membership Model Can Transform Agriculture Markets | T57 Insights",
-  "description": "Discover how T57’s exclusive club membership model builds trust, reduces disputes, and transforms agricultural trading with verified members, AI, and blockchain-backed transparency.",
+  "title": "Why a Club Membership Model Builds Trust | T57",
+  "description": "How T57’s verified club membership builds trust, reduces disputes and changes agricultural trading with verified members, AI and tamper-evident records.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3541,7 +3552,7 @@
   "h1": "Bridging the Gap: How T57 Can Transform India’s Emerging Avocado Industry",
   "answer": "India’s fast-growing avocado imports, and the gaps growers face.",
   "faqs": [],
-  "title": "Bridging the Gap: How T57 Can Transform India’s Emerging Avocado Industry | T57 Insights",
+  "title": "India’s Emerging Avocado Industry | T57 Insights",
   "description": "India’s avocado sector is booming—but risks like oversupply and poor market alignment remain. Discover how T57 is enabling smarter, data-driven farming.",
   "post": {
    "author": "Abdul Bari Kareem",
@@ -3560,7 +3571,7 @@
   "h1": "Structural Shifts That Will Redefine Turkish Agriculture in 2026",
   "answer": "The pressures on Türkiye’s farm sector, and where market intelligence helps.",
   "faqs": [],
-  "title": "Structural Shifts That Will Redefine Turkish Agriculture in 2026 | T57 Insights",
+  "title": "Shifts Redefining Turkish Agriculture in 2026 | T57",
   "description": "Five Structural Shifts That Will Redefine Turkish Agriculture in 2026",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
@@ -3579,7 +3590,7 @@
   "h1": "Can Blockchain Finally Close the $1 Trillion Annual Global Cost of Food Waste?*",
   "answer": "How a shared, tamper-evident record can make long food supply chains trustworthy.",
   "faqs": [],
-  "title": "Can Blockchain Finally Close the $1 Trillion Annual Global Cost of Food Waste? | T57 Insights",
+  "title": "Can Blockchain Cut the $1T Cost of Food Waste? | T57",
   "description": "Discover how blockchain can bring transparency to food supply chains, reduces waste, and helps farmers receive fair value in global markets.",
   "post": {
    "author": "Abdul Bari Kareem",
@@ -3598,8 +3609,8 @@
   "h1": "Five Forces Reshaping Malaysian Agriculture: A 2026 Outlook for Policymakers",
   "answer": "Self-sufficiency, climate risk and EUDR compliance in Malaysia.",
   "faqs": [],
-  "title": "Five Forces Reshaping Malaysian Agriculture: A 2026 Outlook for Policymakers | T57 Insights",
-  "description": "Explore five strategic shifts transforming Malaysian agriculture in 2026, enabling higher-value, resilient, and traceable supply chains that support food security, trade assurance, and rural livelihoods.",
+  "title": "Five Forces Reshaping Malaysian Agriculture | T57",
+  "description": "Five shifts changing Malaysian agriculture in 2026, toward higher-value, resilient and traceable supply chains that support food security and rural incomes.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3617,7 +3628,7 @@
   "h1": "Five Forces Reshaping Middle East Agriculture: A Strategic Outlook for 2026",
   "answer": "Import dependence, climate-smart technology and traceability across the region.",
   "faqs": [],
-  "title": "Five Forces Reshaping Middle East Agriculture: A Strategic Outlook for 2026 | T57 Insights",
+  "title": "Five Forces Reshaping Middle East Agriculture | T57",
   "description": "Five Forces Reshaping Middle East Agriculture: A Strategic Outlook for 2026",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
@@ -3636,8 +3647,8 @@
   "h1": "The Quiet Upload of Agriculture into the AI Stack",
   "answer": "Agriculture is becoming an AI-native, automation-first industry.",
   "faqs": [],
-  "title": "The Quiet Upload of Agriculture into the AI Stack | T57 Insights",
-  "description": "Agriculture is quietly becoming an AI-native, automation-first industry where software, sensing, and robotics define competitiveness as much as soil and seeds do",
+  "title": "The Quiet Upload of Agriculture into AI | T57",
+  "description": "Agriculture is becoming an AI-native, automation-first industry, where software, sensing and robotics matter as much as soil and seeds.",
   "post": {
    "author": "Abdul Bari Kareem",
    "role": "Co-founder & CTO",
@@ -3655,7 +3666,7 @@
   "h1": "India-US Trade Deal After the Supreme Court Shock: Tactical Truce, Hidden Traps, or Trump’s Next Tariff Gambit?",
   "answer": "What the interim India-US deal means for agriculture.",
   "faqs": [],
-  "title": "India-US Trade Deal After the Supreme Court Shock: Tactical Truce, Hidden Traps, or Trump’s Next Tariff Gambit? | T57 Insights",
+  "title": "India-US Trade Deal and Agriculture | T57 Insights",
   "description": "India–US Trade Deal 2026 explained: tariffs, policy shifts, and the long-term impact on Indian agriculture, farmers, and agri-food value chains.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
@@ -3674,8 +3685,8 @@
   "h1": "How Smart Contracts Can Repair Trust in Global Agri Trade",
   "answer": "Late payments and disputes, and how agreed terms that execute themselves can fix them.",
   "faqs": [],
-  "title": "How Smart Contracts Can Repair Trust in Global Agri Trade | T57 Insights",
-  "description": "Smart contracts offer a fundamentally different way to build trust: through code that executes automatically once agreed-upon conditions are met. Recent research in agriculture and food systems shows that smart contracts can automate delivery confirmation, quality verification, and payment release",
+  "title": "How Smart Contracts Repair Trust in Agri Trade | T57",
+  "description": "Smart contracts build trust through code that runs once agreed conditions are met, automating delivery confirmation, quality checks and payment release.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3693,7 +3704,7 @@
   "h1": "From Farm to Fork at Gulfood: How AI, Blockchain, and Human Talent Will Rewire Trust in the Global Food Chain",
   "answer": "Takeaways from a Gulfood 2026 panel on trust in the food chain.",
   "faqs": [],
-  "title": "From Farm to Fork at Gulfood: How AI, Blockchain, and Human Talent Will Rewire Trust in the Global Food Chain | T57 Insights",
+  "title": "Farm to Fork at Gulfood: AI, Blockchain, Talent | T57",
   "description": "From Farm to Fork at Gulfood: How AI, Blockchain, and Human Talent Will Rewire Trust in the Global Food Chain - Thoughts from Gulfood 2026",
   "post": {
    "author": "Abdul Bari Kareem",
@@ -3712,8 +3723,8 @@
   "h1": "From Data to Dinner: The AI-driven Food Decisions That Must Scale",
   "answer": "Scale the high-stakes decisions first, then the AI.",
   "faqs": [],
-  "title": "From Data to Dinner: The AI-driven Food Decisions That Must Scale | T57 Insights",
-  "description": "Gulfood 2026 - Insights from the panel discussion - Break-Through Technologies and AI-Powered Automations: Strategic Value Creators for an Intelligent Food System. ",
+  "title": "From Data to Dinner: AI Food Decisions | T57",
+  "description": "Insights from the Gulfood 2026 panel on breakthrough technologies and AI-powered automation as value creators for an intelligent food system.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3731,7 +3742,7 @@
   "h1": "Navigating the New Agricultural Paradigm: 5 Strategic Shifts for India’s Farm Sector in 2026",
   "answer": "Five developments shaping India’s agricultural trade and food security.",
   "faqs": [],
-  "title": "Navigating the New Agricultural Paradigm: 5 Strategic Shifts for India’s Farm Sector in 2026 | T57 Insights",
+  "title": "5 Strategic Shifts for India’s Farms in 2026 | T57",
   "description": "Discover the five strategic shifts reshaping India’s agriculture in 2026, from climate resilience and agri-stack to biofuels, logistics, and global food demand.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
@@ -3750,7 +3761,7 @@
   "h1": "How a Digital Agri-Finance Alliance Can Drive Global Food System Transformation",
   "answer": "What the T57–MAIB MoU means for farmers and agri-entrepreneurs.",
   "faqs": [],
-  "title": "How a Digital Agri-Finance Alliance Can Drive Global Food System Transformation | T57 Insights",
+  "title": "How a Digital Agri-Finance Alliance Helps | T57",
   "description": "Learn how AI-driven trade finance is reshaping global agriculture by improving liquidity, transparency, and access to capital for farmers and traders.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
@@ -3769,7 +3780,7 @@
   "h1": "Trust in Clicks, Not Weeks: How Escrow, Crypto, and AI Agents Will Replace Endless Paperwork in the Agricultural Sector",
   "answer": "Why slow payments hurt farmers, and what can make them faster.",
   "faqs": [],
-  "title": "Trust in Clicks, Not Weeks: How Escrow, Crypto, and AI Agents Will Replace Endless Paperwork in the Agricultural Sector | T57 Insights",
+  "title": "Escrow, Crypto and AI Agents in Agriculture | T57",
   "description": "Discover how escrow, crypto solutions and AI agents are securing payments, reducing risk, and modernizing agricultural trade across global supply chains",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
@@ -3788,7 +3799,7 @@
   "h1": "How T57 Is Rewriting Trade Finance for Global Agriculture",
   "answer": "The trade finance gap that leaves agricultural businesses underfunded.",
   "faqs": [],
-  "title": "How T57 Is Rewriting Trade Finance for Global Agriculture | T57 Insights",
+  "title": "Rewriting Trade Finance for Agriculture | T57",
   "description": "Learn how AI-driven trade finance is reshaping global agriculture by improving liquidity, transparency, and access to capital for farmers and traders.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
@@ -3807,7 +3818,7 @@
   "h1": "Busting the Middlemen Cartel: How Data Can Save Farmers’ Lives",
   "answer": "How data and direct access can lift farmer incomes.",
   "faqs": [],
-  "title": "Busting the Middlemen Cartel: How Data Can Save Farmers’ Lives | T57 Insights",
+  "title": "How Data Can Break the Middlemen Cartel | T57",
   "description": "Explore how real-time data and AI insights help protect farmers from climate risk, market shocks, and financial instability worldwide.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
@@ -3818,5 +3829,59 @@
    "minutes": 5
   },
   "parent": "res-blog"
+ },
+ "legal": {
+  "route": "/legal",
+  "section": "legal",
+  "name": "Legal &amp; Policies",
+  "h1": "Clear policies, plainly written.",
+  "answer": "How T57 handles your data, the terms for using this website, the browser storage it uses and how we make it accessible.",
+  "faqs": [],
+  "title": "Legal & Policies | T57",
+  "description": "T57 privacy notice, terms of use, cookie policy and accessibility statement for the t57.ai website, in plain language."
+ },
+ "legal-privacy": {
+  "route": "/legal/privacy",
+  "section": "legal",
+  "name": "Privacy Notice",
+  "h1": "What we collect, and why.",
+  "answer": "How T57 handles personal data sent through this website, and the rights you have over it.",
+  "faqs": [],
+  "title": "Privacy Notice | T57",
+  "description": "What personal data t57.ai collects, why T57 uses it, who it is shared with, how long it is kept and how to exercise your rights.",
+  "parent": "legal"
+ },
+ "legal-terms": {
+  "route": "/legal/terms",
+  "section": "legal",
+  "name": "Terms of Use",
+  "h1": "The terms for using t57.ai.",
+  "answer": "The rules for using this website, and what it is and is not.",
+  "faqs": [],
+  "title": "Terms of Use | T57",
+  "description": "The terms that govern use of the t57.ai website, including partner services, accuracy of information, intellectual property and governing law.",
+  "parent": "legal"
+ },
+ "legal-cookies": {
+  "route": "/legal/cookies",
+  "section": "legal",
+  "name": "Cookie Policy",
+  "h1": "No tracking. No ad cookies.",
+  "answer": "What this website stores in your browser, and what it never does.",
+  "faqs": [],
+  "title": "Cookie Policy | T57",
+  "description": "t57.ai sets no tracking or advertising cookies. See the three small browser storage items the site uses and how to control them.",
+  "parent": "legal"
+ },
+ "legal-accessibility": {
+  "route": "/legal/accessibility",
+  "section": "legal",
+  "name": "Accessibility Statement",
+  "h1": "Built to be used by everyone.",
+  "answer": "Our accessibility standard, what we have built in, the known gaps and how to tell us about a problem.",
+  "faqs": [],
+  "title": "Accessibility Statement | T57",
+  "description": "How t57.ai meets WCAG 2.2 AA, the known limitations, how we test and how to report an accessibility problem to T57.",
+  "parent": "legal"
  }
 }

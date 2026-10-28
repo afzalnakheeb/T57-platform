@@ -690,11 +690,13 @@
     partner: ['Partnerships', 'Become a T57 partner', 'Tell us about your services, licences and markets.', 'Submit application', ['name', 'email', 'company', 'type']],
     contact: ['Contact', 'Talk to T57', 'We will connect you with the right team.', 'Send', ['name', 'email']],
     support: ['Help Center', 'Contact support', 'Have your company name and trade reference ready, so we can help faster.', 'Send to support', ['name', 'email']],
+    invest: ['Investors', 'Request the investor pack', 'For qualified investors. We send the teaser and presentation, then arrange a call with the founder and access to the memorandum and data room under NDA.', 'Request the pack', ['name', 'email', 'company', 'investor']],
     subscribe: ['T57 Insights', 'Subscribe to T57 Insights', 'Market insight on food trade, finance and AI. Unsubscribe at any time.', 'Subscribe', ['email']],
   };
   const DONE = { join: 'Thank you. Your country team will contact you within two working days.', demo: 'Thank you. A specialist will contact you to confirm a time.', partner: 'Thank you. Our partnerships team will be in touch.',
-    contact: 'Thank you. We will reply within two working days.', support: 'Thank you. Our support team has your request.', subscribe: 'Thank you. You are subscribed to T57 Insights.' };
-  const kindOf = t => /subscri/i.test(t) ? 'subscribe' : /support|security team/i.test(t) ? 'support' : /partner/i.test(t) ? 'partner'
+    contact: 'Thank you. We will reply within two working days.', support: 'Thank you. Our support team has your request.', subscribe: 'Thank you. You are subscribed to T57 Insights.',
+    invest: 'Thank you. Our investor relations team will send the pack and contact you within two working days.' };
+  const kindOf = t => /invest/i.test(t) ? 'invest' : /subscri/i.test(t) ? 'subscribe' : /support|security team/i.test(t) ? 'support' : /partner/i.test(t) ? 'partner'
     : /demo|see how t57 works|watch/i.test(t) ? 'demo' : /chat/i.test(t) ? 'support' : /apply|join|register|free trial|membership|sign up|start|trade with|use escrow|post your|list your|try |track your/i.test(t) ? 'join' : 'contact';
   function required(f) { return (FORM[f.dataset.apiForm] || FORM.contact)[4].filter(n => f.elements[n] && !f.elements[n].closest('[hidden]')); }
   function payload(f) {
