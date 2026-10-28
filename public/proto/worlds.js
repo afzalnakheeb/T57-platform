@@ -449,11 +449,16 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   // While content lifts, the page behind it takes the colour of the top of the page, so light and dark pages never flash white.
   const groundTo = () => { const m = document.getElementById('main'); let el = m && m.querySelector('.world'); for (let i = 0; el && i < 4; i++, el = el.firstElementChild) { const c = getComputedStyle(el).backgroundColor; if (c && c !== 'transparent' && !c.endsWith(', 0)')) { document.body.style.backgroundColor = c; return; } } };
 
+  // If a transition is already running (the intro, an arrival, or a leave that is still waiting on the network),
+  // a click goes straight to its page, so a tap is never swallowed.
   async function go(name, href) {
-    if (busy) return;
+    if (busy) { location.href = href; return; }
     if (name === current) { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); return; }
     if (reduce) { location.href = href; return; }
     busy = true;
+    try { await leave(name, href); } catch (e) { location.href = href; }
+  }
+  async function leave(name, href) {
     const main = document.getElementById('main');
     if (sameSite(name)) {
       try { sessionStorage.setItem('t57-go', 'lift:' + name); } catch (e) {}
@@ -518,9 +523,24 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   /* ---------- Logo intro: the five petals assemble into the mark ---------- */
   const CENTER = [898, 540];
   const PC = { agri:[898, 617], logistics:[975, 566], trade:[952, 470], tech:[847, 470], finance:[822, 567] };
+  // A tap, key press or scroll during the intro skips straight to the page.
+  let introOn = false;
+  function endIntro() {
+    if (!introOn) return; introOn = false;
+    [vbg, mark, dest, ...mark.querySelectorAll('.petal')].forEach(el => el.getAnimations().forEach(a => a.cancel()));
+    logo.querySelectorAll('.petal').forEach(p => p.style.opacity = '');
+    const wm = logo.querySelector('.wordmark'); if (wm) wm.style.opacity = '';
+    veil.classList.remove('go');
+    busy = false;
+  }
+  ['pointerdown', 'keydown', 'wheel', 'touchmove'].forEach(t => addEventListener(t, endIntro, { passive: true }));
   async function intro() {
     if (reduce) return;
-    busy = true;
+    busy = true; introOn = true;
+    try { await introRun(); } catch (e) { /* skipped: endIntro has restored the page */ }
+    introOn = false;
+  }
+  async function introRun() {
     veil.classList.add('go');
     vbg.animate([{ opacity: 1 }, { opacity: 1 }], { duration: 10, fill: 'forwards' });
     mark.animate([{ opacity: 1 }, { opacity: 1 }], { duration: 10, fill: 'forwards' });
@@ -537,9 +557,11 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     });
     dest.textContent = 'T57.ai';
     await Promise.all(ps);
+    if (!introOn) return;
     ring.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, fill: 'forwards' });
     dest.animate([{ opacity: 0, letterSpacing: '.6em' }, { opacity: 1, letterSpacing: '.24em' }], { duration: 700, fill: 'forwards', easing: 'cubic-bezier(.2,.8,.2,1)' });
     await new Promise(r => setTimeout(r, 750));
+    if (!introOn) return;
     // fly the mark to the header logo
     const from = mark.getBoundingClientRect(), to = logo.getBoundingClientRect();
     const toW = to.height * (250 / 244);
@@ -803,7 +825,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   let arriving = null, seen = false;
   try { arriving = sessionStorage.getItem('t57-go'); sessionStorage.removeItem('t57-go'); seen = !!sessionStorage.getItem('t57-seen'); sessionStorage.setItem('t57-seen', '1'); } catch (e) {}
   if (arriving && arriving.startsWith('lift:')) liftIn();
-  else if (arriving && !reduce) arrive(here);
+  else if (arriving && !reduce) arrive(here).catch(() => { veil.classList.remove('go', 'reveal'); vbg.style.webkitMaskSize = vbg.style.maskSize = ''; busy = false; });
   else { document.documentElement.classList.remove('arriving', 'lifting'); if (!seen) setTimeout(intro, 150); }
 })();
 
