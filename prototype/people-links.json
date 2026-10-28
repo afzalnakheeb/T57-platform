@@ -1,31 +1,40 @@
 {
  "Afzal Hussain Mohammed Nakheeb": {
   "linkedin": "https://www.linkedin.com/in/afzalhussain/",
-  "web": "https://afzalnakheeb.com"
+  "web": "https://afzalnakheeb.com",
+  "photo": "/img/people/afzal-hussain-mohammed-nakheeb.jpg"
  },
  "Abdul Bari Kareem": {
-  "linkedin": "https://www.linkedin.com/in/abdul-bari-aba4094/"
+  "linkedin": "https://www.linkedin.com/in/abdul-bari-aba4094/",
+  "photo": "/img/people/abdul-bari-kareem.jpg"
  },
  "Muneeb Hanbali": {
-  "linkedin": "https://www.linkedin.com/in/muneeb-hanbali-3a6459355/"
+  "linkedin": "https://www.linkedin.com/in/muneeb-hanbali-3a6459355/",
+  "photo": "/img/people/muneeb-hanbali.jpg"
  },
  "Dr. Mohamad Basheer Karubi": {
-  "linkedin": "https://www.linkedin.com/in/mohamed-bashir-kharrubi-04025947/"
+  "linkedin": "https://www.linkedin.com/in/mohamed-bashir-kharrubi-04025947/",
+  "photo": "/img/people/mohamad-basheer-karubi.jpg"
  },
  "Prof. Yerlan Baidaulet": {
-  "linkedin": "https://www.linkedin.com/in/yerlanbaidaulet/"
+  "linkedin": "https://www.linkedin.com/in/yerlanbaidaulet/",
+  "photo": "/img/people/yerlan-baidaulet.jpg"
  },
  "Dr. Moaz Abdullah Mojaddidi": {
-  "linkedin": "https://www.linkedin.com/in/moaz-mojaddidi-9612b042/"
+  "linkedin": "https://www.linkedin.com/in/moaz-mojaddidi-9612b042/",
+  "photo": "/img/people/moaz-abdullah-mojaddidi.jpg"
  },
  "Noor Azmi Said": {
-  "linkedin": "https://www.linkedin.com/in/azmisaidmalaysia/"
+  "linkedin": "https://www.linkedin.com/in/azmisaidmalaysia/",
+  "photo": "/img/people/noor-azmi-said.jpg"
  },
  "Mohammed Umair": {
-  "linkedin": "https://www.linkedin.com/in/mdumair17/"
+  "linkedin": "https://www.linkedin.com/in/mdumair17/",
+  "photo": "/img/people/mohammed-umair.jpg"
  },
  "Umme Habeeba Khanum": {
-  "linkedin": "https://www.linkedin.com/in/habeebakhanum/"
+  "linkedin": "https://www.linkedin.com/in/habeebakhanum/",
+  "photo": "/img/people/umme-habeeba-khanum.jpg"
  },
  "Saalim Ahmed": {
   "linkedin": "https://www.linkedin.com/in/saalim-ahmed-65808524/"
@@ -34,24 +43,58 @@
   "linkedin": "https://www.linkedin.com/in/rathinikesh/"
  },
  "Ajmal Shrafuddin": {
-  "linkedin": "https://www.linkedin.com/in/ajmalsharafuddin/"
+  "linkedin": "https://www.linkedin.com/in/ajmalsharafuddin/",
+  "photo": "/img/people/ajmal-shrafuddin.jpg"
  },
  "Dr. Saeed Awad M Alqahtani": {
-  "linkedin": "https://www.linkedin.com/in/sam-alqahtani/"
+  "linkedin": "https://www.linkedin.com/in/sam-alqahtani/",
+  "photo": "/img/people/saeed-awad-m-alqahtani.jpg"
  },
  "K Nizardeen": {
-  "linkedin": "https://www.linkedin.com/in/k-nizardeen-cdcs-ctfc/"
+  "linkedin": "https://www.linkedin.com/in/k-nizardeen-cdcs-ctfc/",
+  "photo": "/img/people/k-nizardeen.jpg"
  },
  "Fawaz Abdulnour": {
-  "linkedin": "https://www.linkedin.com/in/fawaz-abdulnour-6237862b/"
+  "linkedin": "https://www.linkedin.com/in/fawaz-abdulnour-6237862b/",
+  "photo": "/img/people/fawaz-abdulnour.jpg"
  },
  "Vinod Harith": {
-  "linkedin": "https://www.linkedin.com/in/vinodharith/"
+  "linkedin": "https://www.linkedin.com/in/vinodharith/",
+  "photo": "/img/people/vinod-harith.jpg"
  },
  "Ishrat Hakim": {
-  "linkedin": "https://www.linkedin.com/in/ishrathakim/"
+  "linkedin": "https://www.linkedin.com/in/ishrathakim/",
+  "photo": "/img/people/ishrat-hakim.jpg"
  },
  "Ashmath Ali": {
-  "linkedin": "https://www.linkedin.com/in/ashmath/"
+  "linkedin": "https://www.linkedin.com/in/ashmath/",
+  "photo": "/img/people/ashmath-ali.jpg"
+ },
+ "Zaid Adi": {
+  "photo": "/img/people/zaid-adi.jpg"
+ },
+ "Sheikh Salem Mubarak Salem Al-Hudaiyan": {
+  "photo": "/img/people/salem-mubarak-salem-al-hudaiyan.jpg"
+ },
+ "Muhammad Al Abdel Latif Al Ghazali": {
+  "photo": "/img/people/muhammad-al-abdel-latif-al-ghazali.jpg"
+ },
+ "Mohammed Ahdel Akram": {
+  "photo": "/img/people/mohammed-ahdel-akram.jpg"
+ },
+ "Aboo Baker Mahomed SC": {
+  "photo": "/img/people/aboo-baker-mahomed-sc.jpg"
+ },
+ "Dr. Md Abdul Rahman": {
+  "photo": "/img/people/md-abdul-rahman.jpg"
+ },
+ "Rohit Adlakha": {
+  "photo": "/img/people/rohit-adlakha.jpg"
+ },
+ "Ahmed Zaki Kamel": {
+  "photo": "/img/people/ahmed-zaki-kamel.jpg"
+ },
+ "Anasse El Hasnaoui": {
+  "photo": "/img/people/anasse-el-hasnaoui.jpg"
  }
 }
