@@ -252,6 +252,10 @@ for lang in LANGS:
         lp[i] = dict(pages[i], route=pre(pages[i]['route']), name=tr.get('Home', 'Home') if i == 'home' else name, h1=h1, answer=std, faqs=faqs,
                      title=tr[pages[i]['title']], description=tr[pages[i]['description']])
     json.dump(lp, open(f'{R}/content/{lang}/pages.json', 'w'), indent=1, ensure_ascii=False)
+    # the site search index for this language: translated pages only, in the same shape as search.json
+    sec_l = lambda i: re.sub(r' Overview$', '', lp[sec_of(i)]['name']) if sec_of(i) != i and sec_of(i) in lp else ''
+    json.dump([[i, q['route'], q['name'], sec_l(i), q['h1'], q['answer'], heads(done[i]), ' · '.join(f['q'] for f in q['faqs'])] for i, q in lp.items()],
+              open(f'{R}/public/proto/search-{lang}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     for part in ('top', 'bottom'):
         src = open(f'{R}/content/chrome-{part}.html').read()
         miss = set(); c = i18n.apply(src, tr, miss)

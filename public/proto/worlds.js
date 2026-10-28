@@ -460,11 +460,16 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   // While content lifts, the page behind it takes the colour of the top of the page, so light and dark pages never flash white.
   const groundTo = () => { const m = document.getElementById('main'); let el = m && m.querySelector('.world'); for (let i = 0; el && i < 4; i++, el = el.firstElementChild) { const c = getComputedStyle(el).backgroundColor; if (c && c !== 'transparent' && !c.endsWith(', 0)')) { document.body.style.backgroundColor = c; return; } } };
 
+  // If a transition is already running (the intro, an arrival, or a leave that is still waiting on the network),
+  // a click goes straight to its page, so a tap is never swallowed.
   async function go(name, href) {
-    if (busy) return;
+    if (busy) { location.href = href; return; }
     if (name === current) { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); return; }
     if (reduce) { location.href = href; return; }
     busy = true;
+    try { await leave(name, href); } catch (e) { location.href = href; }
+  }
+  async function leave(name, href) {
     const main = document.getElementById('main');
     if (sameSite(name)) {
       try { sessionStorage.setItem('t57-go', 'lift:' + name); } catch (e) {}
@@ -529,9 +534,24 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   /* ---------- Logo intro: the five petals assemble into the mark ---------- */
   const CENTER = [898, 540];
   const PC = { agri:[898, 617], logistics:[975, 566], trade:[952, 470], tech:[847, 470], finance:[822, 567] };
+  // A tap, key press or scroll during the intro skips straight to the page.
+  let introOn = false;
+  function endIntro() {
+    if (!introOn) return; introOn = false;
+    [vbg, mark, dest, ...mark.querySelectorAll('.petal')].forEach(el => el.getAnimations().forEach(a => a.cancel()));
+    logo.querySelectorAll('.petal').forEach(p => p.style.opacity = '');
+    const wm = logo.querySelector('.wordmark'); if (wm) wm.style.opacity = '';
+    veil.classList.remove('go');
+    busy = false;
+  }
+  ['pointerdown', 'keydown', 'wheel', 'touchmove'].forEach(t => addEventListener(t, endIntro, { passive: true }));
   async function intro() {
     if (reduce) return;
-    busy = true;
+    busy = true; introOn = true;
+    try { await introRun(); } catch (e) { /* skipped: endIntro has restored the page */ }
+    introOn = false;
+  }
+  async function introRun() {
     veil.classList.add('go');
     vbg.animate([{ opacity: 1 }, { opacity: 1 }], { duration: 10, fill: 'forwards' });
     mark.animate([{ opacity: 1 }, { opacity: 1 }], { duration: 10, fill: 'forwards' });
@@ -548,9 +568,11 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     });
     dest.textContent = 'T57.ai';
     await Promise.all(ps);
+    if (!introOn) return;
     ring.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, fill: 'forwards' });
     dest.animate([{ opacity: 0, letterSpacing: '.6em' }, { opacity: 1, letterSpacing: '.24em' }], { duration: 700, fill: 'forwards', easing: 'cubic-bezier(.2,.8,.2,1)' });
     await new Promise(r => setTimeout(r, 750));
+    if (!introOn) return;
     // fly the mark to the header logo
     const from = mark.getBoundingClientRect(), to = logo.getBoundingClientRect();
     const toW = to.height * (250 / 244);
@@ -663,19 +685,20 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     const q = document.getElementById('srch-q'), list = document.getElementById('srch-res'), none = document.getElementById('srch-none'), kick = document.getElementById('srch-k');
     const POP = ['platform-domestic', 'markets-global', 'club-membership', 'cap-hire-expert', 'cap-equipment-rental', 'partners-country', 'pricing', 'trust-verification'];
     const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
-    const norm = t => String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    // Arabic: drop short vowels and tatweel, and fold alef, yaa and taa marbuta forms, so spelling variants still match.
+    const norm = t => String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f\u064b-\u0652\u0670\u0640]/g, '').replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه');
     let IDX = null, sel = -1;
-    const load = () => IDX ? Promise.resolve(IDX) : fetch('/proto/search.json').then(r => r.json()).then(d => (IDX = d.map(([id, route, name, sec, h1, ans, hd, faq]) => ({ id, route, name, sec, ans, f: [norm(name), norm(h1), norm(hd + ' ' + faq), norm(ans + ' ' + sec)] }))));
+    const load = () => IDX ? Promise.resolve(IDX) : fetch(AR ? '/proto/search-ar.json' : '/proto/search.json').then(r => r.json()).then(d => (IDX = d.map(([id, route, name, sec, h1, ans, hd, faq]) => ({ id, route, name, sec, ans, f: [norm(name), norm(h1), norm(hd + ' ' + faq), norm(ans + ' ' + sec)] }))));
     const mark = (t, words) => { let h = esc(t); words.forEach(w => { h = h.replace(new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>'); }); return h; };
     const row = (p, words) => `<li role="option" aria-selected="false"><a href="${p.route}" data-go="${p.id}">${p.sec ? `<small>${esc(p.sec)}</small>` : ''}<b>${mark(p.name, words)}</b><span>${mark(p.ans, words)}</span></a></li>`;
     const pick = n => { const it = [...list.children]; if (!it.length) return; sel = (n + it.length) % it.length; it.forEach((li, k) => li.setAttribute('aria-selected', k === sel ? 'true' : 'false')); it[sel].scrollIntoView({ block: 'nearest' }); };
     const run = () => {
       const words = norm(q.value).trim().split(/\s+/).filter(w => w.length > 1); sel = -1;
-      if (!words.length) { kick.textContent = 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
+      if (!words.length) { kick.textContent = AR ? 'الأكثر زيارة' : 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
       const W = [8, 5, 2, 1], hits = [];
       IDX.forEach(p => { let s = 0; for (const w of words) { let m = 0; p.f.forEach((f, k) => { if (f.includes(w)) m += W[k] * (new RegExp('\\b' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(f) ? 2 : 1); }); if (!m) return; s += m; } hits.push([s, p]); });
       hits.sort((a, b) => b[0] - a[0]);
-      kick.textContent = hits.length ? `${hits.length} page${hits.length === 1 ? '' : 's'}` : ''; kick.hidden = !hits.length; none.hidden = !!hits.length;
+      kick.textContent = !hits.length ? '' : AR ? (hits.length === 1 ? 'صفحة واحدة' : hits.length === 2 ? 'صفحتان' : `${hits.length} ${hits.length <= 10 ? 'صفحات' : 'صفحة'}`) : `${hits.length} page${hits.length === 1 ? '' : 's'}`; kick.hidden = !hits.length; none.hidden = !!hits.length;
       list.innerHTML = hits.slice(0, 12).map(([, p]) => row(p, words)).join('');
     };
     const open = () => { if (srch.open) return; srch.showModal(); q.value = ''; q.focus(); load().then(run).catch(() => { none.hidden = false; }); };
@@ -833,7 +856,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   let arriving = null, seen = false;
   try { arriving = sessionStorage.getItem('t57-go'); sessionStorage.removeItem('t57-go'); seen = !!sessionStorage.getItem('t57-seen'); sessionStorage.setItem('t57-seen', '1'); } catch (e) {}
   if (arriving && arriving.startsWith('lift:')) liftIn();
-  else if (arriving && !reduce) arrive(here);
+  else if (arriving && !reduce) arrive(here).catch(() => { veil.classList.remove('go', 'reveal'); vbg.style.webkitMaskSize = vbg.style.maskSize = ''; busy = false; });
   else { document.documentElement.classList.remove('arriving', 'lifting'); if (!seen) setTimeout(intro, 150); }
 })();
 

@@ -18,8 +18,9 @@ export const viewport = { themeColor: '#2f2e7d' };
 
 // Each page renders the header, menu, footer and transition veil in its own language (components/MicrositePage).
 // The inline script covers the screen (or, inside a microsite, hides the content) before first paint when arriving from
-// another microsite, so the petal transition continues without a flash.
-const arrive = `try{var g=sessionStorage.getItem('t57-go');if(g)document.documentElement.classList.add(g.indexOf('lift:')===0?'lifting':'arriving')}catch(e){}`;
+// another microsite, so the petal transition continues without a flash. If the page script is slow or fails to load,
+// the cover lifts after 3 seconds anyway, so a page can never stay hidden.
+const arrive = `try{var g=sessionStorage.getItem('t57-go');if(g)document.documentElement.classList.add(g.indexOf('lift:')===0?'lifting':'arriving')}catch(e){}setTimeout(function(){document.documentElement.classList.remove('arriving','lifting')},3000)`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
