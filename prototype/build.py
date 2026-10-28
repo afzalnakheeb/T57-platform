@@ -219,3 +219,48 @@ for i, p in pages.items():
     for f in p['faqs'][:2]: L.append(f'- [{f["q"]}]({SITE}{p["route"]}): {f["a"]}')
 open(f'{R}/public/llms.txt', 'w').write('\n'.join(L) + '\n')
 print('built', len(pages), 'pages,', n[0], 'ledgers')
+
+# Other languages: a page is built under /<lang> once every text unit on it, and its title and description,
+# have a translation in prototype/<lang>/*.json (see i18n.py). Links to translated pages stay in the language.
+import glob, i18n
+LANGS = ['ar']
+for lang in LANGS:
+    tr = {}
+    for f in sorted(glob.glob(f'{D}/{lang}/*.json')): tr.update(json.load(open(f)))
+    if lang == 'ar':
+        # a right-to-left mark after closing punctuation keeps it at the end of the line inside left-to-right SVG text
+        tr = {k: re.sub(r'([.:!؟،])$', '\\1\u200f', v) for k, v in tr.items()}
+    done, out = {}, {}
+    for i, p in pages.items():
+        src = open(f'{R}/content/pages/{i}.html').read()
+        miss = set(); art = i18n.apply(src, tr, miss)
+        if miss or p['title'] not in tr or p['description'] not in tr: continue
+        done[i] = art
+    pre = lambda r: f'/{lang}' + ('' if r == '/' else r)
+    LR = {pages[i]['route'] for i in done}
+    def relang(s):
+        return re.sub(r'href="(/[^"#?]*)(#[^"]*)?"', lambda m: f'href="{pre(m.group(1))}{m.group(2) or ""}"' if m.group(1) in LR else m.group(0), s)
+    os.makedirs(f'{R}/content/{lang}/pages', exist_ok=True)
+    for f in glob.glob(f'{R}/content/{lang}/pages/*.html'): os.remove(f)
+    lp = {}
+    for i, art in done.items():
+        open(f'{R}/content/{lang}/pages/{i}.html', 'w').write(relang(art))
+        h1 = text(re.search(r'<h1[^>]*>(.*?)</h1>', art, re.S).group(1))
+        std = text(re.search(r'<p class="std">(.*?)</p>', art, re.S).group(1))
+        faqs = [{'q': text(q), 'a': text(x)} for q, x in re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p></details>', art, re.S)]
+        name = html.unescape(re.search(r'aria-label="([^"]+)"', art).group(1))
+        lp[i] = dict(pages[i], route=pre(pages[i]['route']), name=tr.get('Home', 'Home') if i == 'home' else name, h1=h1, answer=std, faqs=faqs,
+                     title=tr[pages[i]['title']], description=tr[pages[i]['description']])
+    json.dump(lp, open(f'{R}/content/{lang}/pages.json', 'w'), indent=1, ensure_ascii=False)
+    # the site search index for this language: translated pages only, in the same shape as search.json
+    sec_l = lambda i: re.sub(r' Overview$', '', lp[sec_of(i)]['name']) if sec_of(i) != i and sec_of(i) in lp else ''
+    json.dump([[i, q['route'], q['name'], sec_l(i), q['h1'], q['answer'], heads(done[i]), ' · '.join(f['q'] for f in q['faqs'])] for i, q in lp.items()],
+              open(f'{R}/public/proto/search-{lang}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+    for part in ('top', 'bottom'):
+        src = open(f'{R}/content/chrome-{part}.html').read()
+        miss = set(); c = i18n.apply(src, tr, miss)
+        assert not miss, f'{lang} chrome-{part} untranslated: {sorted(miss)[:8]}'
+        c, k = re.subn(r'<a class="lang-sw" href="/[a-z]+" hreflang="[a-z]+" lang="[a-z]+">.*?</a>', f'<a class="lang-sw" href="/" hreflang="en" lang="en"><span class="ls-l">English</span><span class="ls-s" aria-hidden="true">EN</span></a>', c)
+        assert part == 'bottom' or k == 1
+        open(f'{R}/content/{lang}/chrome-{part}.html', 'w').write(relang(c))
+    print(lang, len(done), 'pages translated')

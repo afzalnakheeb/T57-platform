@@ -55,6 +55,17 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     ['Beef', 'Proteins and produce', '/kg', 7.28, 6.86], ['Chicken', 'Proteins and produce', '/kg', 1.69, 1.81], ['Oranges', 'Proteins and produce', '/kg', 0.77, 0.79], ['Bananas', 'Proteins and produce', '/kg', 1.10, 1.12],
     ['Urea', 'Inputs and energy', '/t', 390.0, 407.5], ['DAP fertilizer', 'Inputs and energy', '/t', 793.5, 800.6], ['Brent crude', 'Inputs and energy', '/bbl', 90.9, 116.8]
   ].map(([name, group, unit, a, b]) => ({ name, group, unit, prev: a, last: b, ch: (b - a) / a * 100 }));
+  // Arabic labels for the market board and other text the script writes (pages under /ar set <html lang="ar">).
+  const AR = document.documentElement.lang === 'ar';
+  const TX = AR ? { 'Food Price Index': 'مؤشر أسعار الغذاء', Cereals: 'الحبوب', 'Vegetable oils': 'الزيوت النباتية', Dairy: 'الألبان', Meat: 'اللحوم', Sugar: 'السكر',
+    'Wheat, US HRW': 'القمح الأمريكي الصلب', 'Wheat, US SRW': 'القمح الأمريكي الطري', Maize: 'الذرة', 'Rice, Thai 5%': 'الأرز التايلندي 5%', 'Rice, Viet Nam 5%': 'الأرز الفيتنامي 5%',
+    Soybeans: 'فول الصويا', 'Soybean oil': 'زيت الصويا', 'Palm oil': 'زيت النخيل', 'Coffee, Arabica': 'البن العربي', Cocoa: 'الكاكاو', Tea: 'الشاي', Beef: 'لحم البقر', Chicken: 'الدجاج',
+    Oranges: 'البرتقال', Bananas: 'الموز', Urea: 'اليوريا', 'DAP fertilizer': 'سماد DAP', 'Brent crude': 'خام برنت', Grains: 'الحبوب', 'Oils and oilseeds': 'الزيوت والبذور الزيتية',
+    'Sugar and softs': 'السكر والمحاصيل الاستوائية', 'Proteins and produce': 'البروتينات والفواكه', 'Inputs and energy': 'المدخلات والطاقة',
+    Explore: 'استكشاف', Core: 'الأساسية', Growth: 'النمو', Enterprise: 'الشركات', ' (from)': ' (ابتداءً من)',
+    'on the month': 'على أساس شهري', 'on the year': 'على أساس سنوي', 'on a year earlier': 'عن العام السابق', trillion: 'تريليون', Replay: 'إعادة', Play: 'تشغيل', Pause: 'إيقاف مؤقت' } : {};
+  const tx = s => TX[s] || s;
+  const DATE_LOCALE = AR ? 'ar-u-ca-gregory-nu-latn' : 'en-US';
   const IMPORT_BILL_PER_YEAR = 2.22e12; // FAO Food Outlook, Nov 2025 (2025 forecast)
 
   /* ---------- Living scenes ---------- */
@@ -321,30 +332,30 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     const mom = (last[1] - prev[1]) / prev[1] * 100, yoy = (last[1] - yago[1]) / yago[1] * 100;
     document.querySelectorAll('[data-fpi-latest]').forEach(e => e.textContent = (+last[1]).toFixed(1));
     document.querySelectorAll('[data-fpi-mom]').forEach(e => { e.textContent = sign(mom); e.className = dir(mom); });
-    document.querySelectorAll('[data-fpi-yoy]').forEach(e => e.textContent = (yoy >= 0 ? '+' : '') + yoy.toFixed(1) + '% on a year earlier');
+    document.querySelectorAll('[data-fpi-yoy]').forEach(e => e.innerHTML = `<bdi dir="ltr">${(yoy >= 0 ? '+' : '') + yoy.toFixed(1)}%</bdi> ${tx('on a year earlier')}`);
     const spark = document.querySelector('[data-fpi-spark]');
     if (spark) { const v = FAO.map(r => +r[1]), lo = Math.min(...v), hi = Math.max(...v); spark.setAttribute('d', v.map((y, i) => (i ? 'L' : 'M') + (i / (v.length - 1) * 300).toFixed(1) + ' ' + (64 - (y - lo) / (hi - lo) * 58).toFixed(1)).join(' ')); }
     // ticker
     const tk = document.querySelector('[data-ticker]');
-    if (tk) { const items = PINK.map(p => `<span class="tk"><b>${p.name}</b> $${fmtPrice(p.last, p.unit)}${p.unit} <em class="${dir(p.ch)}">${sign(p.ch)}</em></span>`).join('');
+    if (tk) { const items = PINK.map(p => `<span class="tk"><b>${tx(p.name)}</b> $${fmtPrice(p.last, p.unit)}${p.unit} <em class="${dir(p.ch)}">${sign(p.ch)}</em></span>`).join('');
       tk.innerHTML = `<div class="tk-run">${items}</div><div class="tk-run" aria-hidden="true">${items}</div>`; }
     // movers
     const mv = document.querySelector('[data-movers]');
     if (mv) mv.innerHTML = [...PINK].filter(p => p.group !== 'Inputs and energy').sort((a, b) => Math.abs(b.ch) - Math.abs(a.ch)).slice(0, 6)
-      .map(p => `<li><span class="mv-n">${p.name}</span><span class="mv-p">$${fmtPrice(p.last, p.unit)}${p.unit}</span><span class="mv-c ${dir(p.ch)}">${sign(p.ch)}</span><i class="mv-bar ${dir(p.ch)}" style="--w:${Math.min(1, Math.abs(p.ch) / 10)}"></i></li>`).join('');
+      .map(p => `<li><span class="mv-n">${tx(p.name)}</span><span class="mv-p">$${fmtPrice(p.last, p.unit)}${p.unit}</span><span class="mv-c ${dir(p.ch)}">${sign(p.ch)}</span><i class="mv-bar ${dir(p.ch)}" style="--w:${Math.min(1, Math.abs(p.ch) / 10)}"></i></li>`).join('');
     // heat tiles, grouped
     const ht = document.querySelector('[data-heat]');
     if (ht) { const groups = [...new Set(PINK.map(p => p.group))];
-      ht.innerHTML = groups.map(g => `<div class="hg"><span class="hg-k">${g}</span><div class="hg-tiles">${PINK.filter(p => p.group === g).map(p => {
+      ht.innerHTML = groups.map(g => `<div class="hg"><span class="hg-k">${tx(g)}</span><div class="hg-tiles">${PINK.filter(p => p.group === g).map(p => {
         const a = Math.min(1, Math.abs(p.ch) / 8);
-        return `<div class="tile ${dir(p.ch)}" style="--a:${(0.12 + a * 0.6).toFixed(2)}"><span class="t-n">${p.name}</span><span class="t-p">$${fmtPrice(p.last, p.unit)}<small>${p.unit}</small></span><span class="t-c">${sign(p.ch)}</span></div>`; }).join('')}</div></div>`).join(''); }
+        return `<div class="tile ${dir(p.ch)}" style="--a:${(0.12 + a * 0.6).toFixed(2)}"><span class="t-n">${tx(p.name)}</span><span class="t-p">$${fmtPrice(p.last, p.unit)}<small>${p.unit}</small></span><span class="t-c">${sign(p.ch)}</span></div>`; }).join('')}</div></div>`).join(''); }
     // chart with tabs
     const svg = document.querySelector('[data-chart]'), tabs = document.querySelector('[data-tabs]'), tip = document.querySelector('[data-chart-tip]');
     if (!svg) return;
     let W = 720, H = 300; const L = 44, Rr = 12, T = 16, B = 34, months = FAO.map(r => r[0]);
-    const label = m => new Date(m + '-01T00:00:00Z').toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+    const label = m => new Date(m + '-01T00:00:00Z').toLocaleDateString(DATE_LOCALE, { month: 'short', year: 'numeric', timeZone: 'UTC' });
     let cur = 0;
-    tabs.innerHTML = FAO_SERIES.map(([n], i) => `<button type="button" role="tab" aria-selected="${i === 0}" data-i="${i}">${n}</button>`).join('');
+    tabs.innerHTML = FAO_SERIES.map(([n], i) => `<button type="button" role="tab" aria-selected="${i === 0}" data-i="${i}">${tx(n)}</button>`).join('');
     function render(i, animate) {
       cur = i; W = Math.max(320, Math.round(svg.clientWidth) || 720); H = W < 520 ? 240 : 300; svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
       const col = FAO_SERIES[i][1], v = FAO.map(r => +r[col]), lo = Math.floor(Math.min(...v) / 10) * 10, hi = Math.ceil(Math.max(...v) / 10) * 10;
@@ -357,7 +368,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       if (animate && !reduce) svg.querySelector('.line').animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }], { duration: 1200, easing: 'cubic-bezier(.2,.8,.2,1)' });
       const lm = (v[v.length - 1] - v[v.length - 2]) / v[v.length - 2] * 100, ly = (v[v.length - 1] - v[v.length - 13]) / v[v.length - 13] * 100;
       document.querySelector('[data-chart-v]').textContent = v[v.length - 1].toFixed(1);
-      const cd = document.querySelector('[data-chart-d]'); cd.innerHTML = `<em class="${dir(lm)}">${sign(lm)}</em> on the month · <em class="${dir(ly)}">${sign(ly)}</em> on the year`;
+      const cd = document.querySelector('[data-chart-d]'); cd.innerHTML = `<em class="${dir(lm)}">${sign(lm)}</em> ${tx('on the month')} · <em class="${dir(ly)}">${sign(ly)}</em> ${tx('on the year')}`;
       svg.setAttribute('aria-label', `FAO ${FAO_SERIES[i][0]}, monthly, January 2024 to September 2026. Latest ${v[v.length - 1].toFixed(1)}.`);
       tabs.querySelectorAll('button').forEach((b, k) => b.setAttribute('aria-selected', k === i));
       svg.onpointermove = e => { const r = svg.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * W, k = Math.max(0, Math.min(v.length - 1, Math.round((x - L) / (W - L - Rr) * (v.length - 1))));
@@ -373,7 +384,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     // import bill counter, paced from the annual figure
     const ib = document.querySelector('[data-importbill]');
     if (ib) { const y0 = Date.UTC(new Date().getUTCFullYear(), 0, 1), perMs = IMPORT_BILL_PER_YEAR / (365 * 864e5);
-      const tick = () => { const v = (Date.now() - y0) * perMs; ib.textContent = '$' + (v / 1e12).toFixed(4) + ' trillion'; if (!reduce) requestAnimationFrame(tick); }; tick(); }
+      const tick = () => { const v = (Date.now() - y0) * perMs; ib.textContent = AR ? (v / 1e12).toFixed(4) + ' ' + tx('trillion') + ' دولار' : '$' + (v / 1e12).toFixed(4) + ' trillion'; if (!reduce) requestAnimationFrame(tick); }; tick(); }
   })();
 
   /* ---------- Scroll storytelling ---------- */
@@ -458,9 +469,9 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     busy = true;
     try { await leave(name, href); } catch (e) { location.href = href; }
   }
-  async function leave(name, href) {
+  async function leave(name, href, label) {
     const main = document.getElementById('main');
-    if (sameSite(name)) {
+    if (!label && sameSite(name)) {
       try { sessionStorage.setItem('t57-go', 'lift:' + name); } catch (e) {}
       const hp = logo.querySelector('.p-' + (WORLD_PETAL[name] || 'all')) || logo;
       groundTo();
@@ -472,8 +483,8 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     }
     try { sessionStorage.setItem('t57-go', name); } catch (e) {}
     const petal = WORLD_PETAL[name];
-    const target = petal === 'all' ? mark : mark.querySelector('.p-' + petal);
-    dest.textContent = WORLD_NAME[name];
+    const target = (petal && petal !== 'all' && mark.querySelector('.p-' + petal)) || mark;
+    dest.textContent = label || WORLD_NAME[name];
     clearAll(veilPetals);
     veil.classList.add('go');
     anim(main, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.5, transform: 'scale(0.985)' }], { duration: 380 });
@@ -633,10 +644,10 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       out('net').textContent = usd(gross - best[1]);
       out('net').classList.toggle('neg', gross - best[1] < 0);
       out('gross').textContent = usd(gross);
-      out('plan').textContent = best[0];
-      out('fees').textContent = usd(best[1]) + (best[0] === 'Enterprise' ? ' (from)' : '');
-      out('ctx').textContent = `For a ${v('role').toLowerCase()} in ${v('market')}, on ${usd(vol / 12)} of trade a month.`;
-      out('rows').innerHTML = costs.map(([n, t]) => `<tr${n === best[0] ? ' class="on"' : ''}><th scope="row">${n}</th><td>${usd(t)}${n === 'Enterprise' ? ' (from)' : ''}</td></tr>`).join('');
+      out('plan').textContent = tx(best[0]);
+      out('fees').textContent = usd(best[1]) + (best[0] === 'Enterprise' ? tx(' (from)') : '');
+      out('ctx').textContent = AR ? `${v('role')} في ${v('market')}، بحجم تجارة شهري قدره ${usd(vol / 12)}.` : `For a ${v('role').toLowerCase()} in ${v('market')}, on ${usd(vol / 12)} of trade a month.`;
+      out('rows').innerHTML = costs.map(([n, t]) => `<tr${n === best[0] ? ' class="on"' : ''}><th scope="row">${tx(n)}</th><td>${usd(t)}${n === 'Enterprise' ? tx(' (from)') : ''}</td></tr>`).join('');
     }
     f.addEventListener('input', run); run();
     f.querySelector('[data-roi-print]').addEventListener('click', () => print());
@@ -674,19 +685,20 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     const q = document.getElementById('srch-q'), list = document.getElementById('srch-res'), none = document.getElementById('srch-none'), kick = document.getElementById('srch-k');
     const POP = ['platform-domestic', 'markets-global', 'club-membership', 'cap-hire-expert', 'cap-equipment-rental', 'partners-country', 'pricing', 'trust-verification'];
     const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
-    const norm = t => String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    // Arabic: drop short vowels and tatweel, and fold alef, yaa and taa marbuta forms, so spelling variants still match.
+    const norm = t => String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f\u064b-\u0652\u0670\u0640]/g, '').replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه');
     let IDX = null, sel = -1;
-    const load = () => IDX ? Promise.resolve(IDX) : fetch('/proto/search.json').then(r => r.json()).then(d => (IDX = d.map(([id, route, name, sec, h1, ans, hd, faq]) => ({ id, route, name, sec, ans, f: [norm(name), norm(h1), norm(hd + ' ' + faq), norm(ans + ' ' + sec)] }))));
+    const load = () => IDX ? Promise.resolve(IDX) : fetch(AR ? '/proto/search-ar.json' : '/proto/search.json').then(r => r.json()).then(d => (IDX = d.map(([id, route, name, sec, h1, ans, hd, faq]) => ({ id, route, name, sec, ans, f: [norm(name), norm(h1), norm(hd + ' ' + faq), norm(ans + ' ' + sec)] }))));
     const mark = (t, words) => { let h = esc(t); words.forEach(w => { h = h.replace(new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>'); }); return h; };
     const row = (p, words) => `<li role="option" aria-selected="false"><a href="${p.route}" data-go="${p.id}">${p.sec ? `<small>${esc(p.sec)}</small>` : ''}<b>${mark(p.name, words)}</b><span>${mark(p.ans, words)}</span></a></li>`;
     const pick = n => { const it = [...list.children]; if (!it.length) return; sel = (n + it.length) % it.length; it.forEach((li, k) => li.setAttribute('aria-selected', k === sel ? 'true' : 'false')); it[sel].scrollIntoView({ block: 'nearest' }); };
     const run = () => {
       const words = norm(q.value).trim().split(/\s+/).filter(w => w.length > 1); sel = -1;
-      if (!words.length) { kick.textContent = 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
+      if (!words.length) { kick.textContent = AR ? 'الأكثر زيارة' : 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
       const W = [8, 5, 2, 1], hits = [];
       IDX.forEach(p => { let s = 0; for (const w of words) { let m = 0; p.f.forEach((f, k) => { if (f.includes(w)) m += W[k] * (new RegExp('\\b' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(f) ? 2 : 1); }); if (!m) return; s += m; } hits.push([s, p]); });
       hits.sort((a, b) => b[0] - a[0]);
-      kick.textContent = hits.length ? `${hits.length} page${hits.length === 1 ? '' : 's'}` : ''; kick.hidden = !hits.length; none.hidden = !!hits.length;
+      kick.textContent = !hits.length ? '' : AR ? (hits.length === 1 ? 'صفحة واحدة' : hits.length === 2 ? 'صفحتان' : `${hits.length} ${hits.length <= 10 ? 'صفحات' : 'صفحة'}`) : `${hits.length} page${hits.length === 1 ? '' : 's'}`; kick.hidden = !hits.length; none.hidden = !!hits.length;
       list.innerHTML = hits.slice(0, 12).map(([, p]) => row(p, words)).join('');
     };
     const open = () => { if (srch.open) return; srch.showModal(); q.value = ''; q.focus(); load().then(run).catch(() => { none.hidden = false; }); };
@@ -719,7 +731,26 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   const DONE = { join: 'Thank you. Your country team will contact you within two working days.', demo: 'Thank you. A specialist will contact you to confirm a time.', partner: 'Thank you. Our partnerships team will be in touch.',
     contact: 'Thank you. We will reply within two working days.', support: 'Thank you. Our support team has your request.', subscribe: 'Thank you. You are subscribed to T57 Insights.',
     invest: 'Thank you. Our investor relations team will send the pack and contact you within two working days.' };
-  const kindOf = t => /invest/i.test(t) ? 'invest' : /subscri/i.test(t) ? 'subscribe' : /support|security team/i.test(t) ? 'support' : /partner/i.test(t) ? 'partner'
+  if (AR) {
+    Object.assign(FORM, {
+      join: ['ابدأ الآن', 'انضم إلى T57', 'يحصل الأعضاء المؤسِّسون على تجربة مجانية لمدة 90 يومًا عند الإطلاق. أخبرنا عن منشأتك وسيتواصل معك فريق بلدك.', 'قدّم طلب العضوية', FORM.join[4]],
+      demo: ['اطلب عرضًا توضيحيًا', 'شاهد T57 على منتجاتك', 'عرض توضيحي مدته 30 دقيقة مع متخصص من فريق بلدك.', 'احجز العرض', FORM.demo[4]],
+      partner: ['الشراكات', 'كن شريكًا لـ T57', 'أخبرنا عن خدماتك وتراخيصك وأسواقك.', 'أرسل الطلب', FORM.partner[4]],
+      contact: ['تواصل معنا', 'تحدّث إلى T57', 'سنوصلك بالفريق المناسب.', 'إرسال', FORM.contact[4]],
+      support: ['مركز المساعدة', 'تواصل مع الدعم', 'جهّز اسم منشأتك ومرجع الصفقة لنساعدك أسرع.', 'أرسل إلى الدعم', FORM.support[4]],
+      invest: ['المستثمرون', 'اطلب ملف المستثمرين', 'للمستثمرين المؤهلين. نرسل الملخص التعريفي والعرض التقديمي، ثم نرتب مكالمة مع المؤسس والوصول إلى مذكرة الاستثمار وغرفة البيانات بموجب اتفاقية سرية.', 'اطلب الملف', FORM.invest[4]],
+      subscribe: ['رؤى T57', 'اشترك في رؤى T57', 'رؤى حول تجارة الغذاء والتمويل والذكاء الاصطناعي. يمكنك إلغاء الاشتراك في أي وقت.', 'اشترك', FORM.subscribe[4]],
+    });
+    Object.assign(DONE, { join: 'شكرًا لك. سيتواصل معك فريق بلدك خلال يومي عمل.', demo: 'شكرًا لك. سيتواصل معك متخصص لتأكيد الموعد.', partner: 'شكرًا لك. سيتواصل معك فريق الشراكات.',
+      contact: 'شكرًا لك. سنرد خلال يومي عمل.', support: 'شكرًا لك. وصل طلبك إلى فريق الدعم.', subscribe: 'شكرًا لك. تم اشتراكك في رؤى T57.',
+      invest: 'شكرًا لك. سيرسل فريق علاقات المستثمرين الملف ويتواصل معك خلال يومي عمل.' });
+  }
+  const MSG = AR ? { fields: 'يرجى إكمال الحقول المظللة.', consent: 'يرجى تحديد المربع للموافقة على طريقة استخدامنا لبياناتك.', sending: 'جارٍ الإرسال…', check: 'يرجى مراجعة الحقول المظللة.',
+      busy: 'طلبات كثيرة من هذا الاتصال. يرجى المحاولة بعد بضع دقائق.', fail: m => `تعذّر الإرسال عبر الإنترنت الآن. <a href="${m}">أرسله بالبريد الإلكتروني بدلًا من ذلك</a>، مع إجاباتك معبأة.` }
+    : { fields: 'Please complete the highlighted fields.', consent: 'Please tick the box to agree to how we use your details.', sending: 'Sending…', check: 'Please check the highlighted fields.',
+      busy: 'Too many requests from this connection. Please try again in a few minutes.', fail: m => `We could not send this online just now. <a href="${m}">Send it by email instead</a>, with your answers filled in.` };
+  const kindOf = t => AR ? (/مستثمر/.test(t) ? 'invest' : /اشترك/.test(t) ? 'subscribe' : /الدعم/.test(t) ? 'support' : /شريك|الشراك/.test(t) ? 'partner'
+    : /عرض توضيحي|عرضًا توضيحيًا|شاهد/.test(t) ? 'demo' : /انضم|قدّم طلب|العضوية|ابدأ|سجّل|جرّب/.test(t) ? 'join' : 'contact') : /invest/i.test(t) ? 'invest' : /subscri/i.test(t) ? 'subscribe' : /support|security team/i.test(t) ? 'support' : /partner/i.test(t) ? 'partner'
     : /demo|see how t57 works|watch/i.test(t) ? 'demo' : /chat/i.test(t) ? 'support' : /apply|join|register|free trial|membership|sign up|start|trade with|use escrow|post your|list your|try |track your/i.test(t) ? 'join' : 'contact';
   function required(f) { return (FORM[f.dataset.apiForm] || FORM.contact)[4].filter(n => f.elements[n] && !f.elements[n].closest('[hidden]')); }
   function payload(f) {
@@ -743,17 +774,17 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       const consent = f.elements.consent;
       miss.forEach(n => f.elements[n].closest('label').classList.add('bad'));
       if (!consent.checked) consent.closest('label').classList.add('bad');
-      if (miss.length || !consent.checked) { say('err', miss.length ? 'Please complete the highlighted fields.' : 'Please tick the box to agree to how we use your details.'); (miss.length ? f.elements[miss[0]] : consent).focus(); return; }
-      const o = payload(f); btn.disabled = true; say('', 'Sending…');
+      if (miss.length || !consent.checked) { say('err', miss.length ? MSG.fields : MSG.consent); (miss.length ? f.elements[miss[0]] : consent).focus(); return; }
+      const o = payload(f); btn.disabled = true; say('', MSG.sending);
       try {
         const r = await fetch('/api/forms', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(o) });
         const j = await r.json().catch(() => ({}));
         if (r.ok && j.ok) { f.classList.add('sent'); say('ok', DONE[o.kind] || DONE.contact); return; }
-        if (r.status === 422 && j.fields) { j.fields.forEach(n => f.elements[n] && f.elements[n].closest('label').classList.add('bad')); say('err', 'Please check the highlighted fields.'); return; }
-        if (r.status === 429) { say('err', 'Too many requests from this connection. Please try again in a few minutes.'); return; }
+        if (r.status === 422 && j.fields) { j.fields.forEach(n => f.elements[n] && f.elements[n].closest('label').classList.add('bad')); say('err', MSG.check); return; }
+        if (r.status === 429) { say('err', MSG.busy); return; }
         throw new Error(j.error || r.status);
       } catch (err) {
-        say('err', `We could not send this online just now. <a href="${mailto(f, o)}">Send it by email instead</a>, with your answers filled in.`);
+        say('err', MSG.fail(mailto(f, o)));
       } finally { btn.disabled = false; }
     });
   });
@@ -788,7 +819,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     if (reduce) return;
     // Plays once when it scrolls into view, holds the result, then offers Replay
     let timer, left = 6240, t0 = 0;
-    const done = () => { fx.classList.add('done'); btn.setAttribute('aria-pressed', 'false'); btn.textContent = 'Replay'; };
+    const done = () => { fx.classList.add('done'); btn.setAttribute('aria-pressed', 'false'); btn.textContent = tx('Replay'); };
     const run = () => { clearTimeout(timer); t0 = performance.now(); timer = setTimeout(done, left); };
     const stop = () => { if (t0) left -= performance.now() - t0; clearTimeout(timer); t0 = 0; };
     new IntersectionObserver(([en]) => {
@@ -800,9 +831,9 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     btn.addEventListener('click', () => {
       if (fx.classList.contains('done')) {
         fx.classList.remove('done', 'play', 'paused'); void fx.offsetWidth; fx.classList.add('play');
-        btn.textContent = 'Pause'; left = 6240; run(); return;
+        btn.textContent = tx('Pause'); left = 6240; run(); return;
       }
-      const p = btn.getAttribute('aria-pressed') !== 'true'; btn.setAttribute('aria-pressed', p); btn.textContent = p ? 'Play' : 'Pause';
+      const p = btn.getAttribute('aria-pressed') !== 'true'; btn.setAttribute('aria-pressed', p); btn.textContent = p ? tx('Play') : tx('Pause');
       fx.classList.toggle('paused', p); p ? stop() : run();
     });
   });
@@ -818,6 +849,13 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     const tp = e.target.closest('[data-tone-pick]'); if (tp) { setTone(tp.dataset.tonePick); if (!busy) intro(); return; }
     const a = e.target.closest('a[data-go]'); if (a && !e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0) { e.preventDefault(); go(a.dataset.go, a.getAttribute('href')); return; }
     if (e.target.closest('#replay')) { e.preventDefault(); intro(); }
+    // The language switch opens the same page in the other language behind the full petal veil, named in that language.
+    const ls = e.target.closest('a.lang-sw');
+    if (ls && !e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0 && !busy && !reduce) {
+      e.preventDefault(); busy = true;
+      const href = ls.getAttribute('href'), label = (ls.querySelector('.ls-l') || ls).textContent;
+      leave(current, href, label).catch(() => { location.href = href; });
+    }
   });
 
   const here = (document.querySelector('.world') || {}).id || 'home';
