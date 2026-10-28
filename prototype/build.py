@@ -32,6 +32,12 @@ def plinks(m):
     a = [f'<a href="{l[k]}" target="_blank" rel="noopener">{t}</a>' for k, t in (('linkedin', 'LinkedIn'), ('web', re.sub(r'^https?://(www\.)?', '', l.get('web', '')).rstrip('/'))) if l.get(k)]
     return m.group(1) + (f'<span class="pc-links">{"".join(a)}</span>' if a else '')
 worlds = re.sub(r'(<b>([^<]+)</b><em>[^<]*</em>)', plinks, worlds)
+# Headshots replace the initials on cards, and lead each board roster entry, wherever a photo is on file.
+def headshot(name):
+    p = LINKS.get(html.unescape(name), {}).get('photo')
+    return f'<img class="pc-av pc-ph" src="{p}" alt="" width="96" height="96" loading="lazy" decoding="async">' if p else ''
+worlds = re.sub(r'(<span class="pc-av" aria-hidden="true">[A-Z]{1,3}</span>)((?:<div>)?<b>([^<]+)</b>)', lambda m: (headshot(m.group(3)) or m.group(1)) + m.group(2), worlds)
+worlds = re.sub(r'<li><b>([^<]+)</b>', lambda m: f'<li>{headshot(m.group(1))}<b>{m.group(1)}</b>', worlds)
 
 # Sitemap v7 routes (IDs 1-13)
 # Sitemap v7 routes: an article's data-route, else Home, Who We Serve and its audiences (IDs 1-13)
