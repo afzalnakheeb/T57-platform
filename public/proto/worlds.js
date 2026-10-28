@@ -398,7 +398,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     requestAnimationFrame(step);
   });
   const coverIO = new IntersectionObserver(ents => ents.forEach(en => { const was = en.target.classList.contains('in'); en.target.classList.toggle('in', en.isIntersecting); if (en.isIntersecting && !was) countUp(en.target); }), { threshold: 0.25 });
-  document.querySelectorAll('.cover-frame, .arr-frame').forEach(el => reduce ? el.classList.add('in') : coverIO.observe(el));
+  document.querySelectorAll('.cover-frame, .arr-frame, .pb-frame').forEach(el => reduce ? el.classList.add('in') : coverIO.observe(el));
   if (reduce) document.querySelectorAll('[data-run]').forEach(el => el.classList.add('run'));
 
   function railUpdate() {

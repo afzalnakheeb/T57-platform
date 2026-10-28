@@ -134,6 +134,16 @@ body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-
 
 /* Market arrival: a country photo with an arrival card, so each market feels like a place you step into */
 .arrival { position:relative; z-index:2; margin-top:-48px; padding-bottom:8px; }
+.pband { position:relative; margin-top:-56px; z-index:2; }
+.pband + .cover { margin-top:clamp(24px, 3vw, 40px); }
+.pb-frame { position:relative; margin:0; border-radius:16px; overflow:hidden; aspect-ratio:21/8; background:var(--night-2); box-shadow:0 24px 60px -24px #02246c66; }
+.pb-frame .photo { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform:scale(1.08); transition:transform 2.4s var(--ease-out); }
+.pb-frame.in .photo { transform:scale(1); }
+.pb-frame::after { content:""; position:absolute; inset:0; background:linear-gradient(0deg, #0b1340d9 0%, #0b134000 45%); pointer-events:none; }
+.pb-cap { position:absolute; z-index:1; left:clamp(16px, 3vw, 32px); right:clamp(16px, 3vw, 32px); bottom:clamp(14px, 2.4vw, 26px); max-width:620px; color:#fff; font:500 clamp(15px, 1.4vw, 18px)/1.4 var(--font-text); opacity:0; transform:translateY(12px); transition:opacity .7s var(--ease-out) .3s, transform .7s var(--ease-out) .3s; }
+.pb-frame.in .pb-cap { opacity:1; transform:none; }
+@media (max-width: 640px) { .pb-frame { aspect-ratio:4/3; } }
+@media (prefers-reduced-motion: reduce) { .pb-frame .photo, .pb-cap { transition:none; } }
 .arr-frame { position:relative; margin:0; border-radius:16px; overflow:hidden; aspect-ratio:21/9; background:var(--night-2); box-shadow:0 24px 60px -24px #02246c66; }
 .arr-frame .photo { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform:scale(1.12); transition:transform 2.8s var(--ease-out); }
 .arr-frame::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg, #0b1340e6 0%, #0b1340a6 38%, #0b134000 70%); pointer-events:none; }
