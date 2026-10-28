@@ -25,6 +25,13 @@ def ledger(m):
     return '<figure class="ledger">\n' + s + '</figure>'
 worlds = re.sub(r'\{\{LEDGER:([^}#]*)(?:#([^}]*))?\}\}', ledger, open(f'{D}/worlds.html').read()) + investors.articles() + blog.articles() + legal.articles()
 worlds = photos.apply(worlds)
+# Leadership cards: a LinkedIn link for each person whose profile is confirmed, and a personal website where there is one.
+LINKS = json.load(open(f'{D}/people-links.json'))
+def plinks(m):
+    l = LINKS.get(html.unescape(m.group(2)), {})
+    a = [f'<a href="{l[k]}" target="_blank" rel="noopener">{t}</a>' for k, t in (('linkedin', 'LinkedIn'), ('web', re.sub(r'^https?://(www\.)?', '', l.get('web', '')).rstrip('/'))) if l.get(k)]
+    return m.group(1) + (f'<span class="pc-links">{"".join(a)}</span>' if a else '')
+worlds = re.sub(r'(<b>([^<]+)</b><em>[^<]*</em>)', plinks, worlds)
 
 # Sitemap v7 routes (IDs 1-13)
 # Sitemap v7 routes: an article's data-route, else Home, Who We Serve and its audiences (IDs 1-13)
