@@ -2851,6 +2851,30 @@
   "title": "About T57 | AI-Native Digital Trade Infrastructure for Food",
   "description": "Why T57 exists: access to markets, technology and finance for the food ecosystem, built from food security work across more than 60 countries."
  },
+ "about-journey": {
+  "route": "/about/journey",
+  "section": "about",
+  "name": "Our Journey",
+  "h1": "From one question to 150 signed agreements.",
+  "answer": "Since 2023, T57 and its founding company, AlMukarramah, have signed agreements with governments, development institutions and food companies, and taken the case for connected food trade to stages from Cape Town to Yinchuan.",
+  "faqs": [
+   {
+    "q": "Who has T57 signed agreements with?",
+    "a": "T57 and its founding company, AlMukarramah, have agreements with the Islamic Organization for Food Security (IOFS), the Government of the Chechen Republic, the Development Bank of Maldives, Food Contract Corporation of Kazakhstan, the International Assembly of Islamic Business, Dar Al Halal Nigeria and the Aquaculture Centre of Excellence in Singapore, and signed 150 MoUs and letters of intent at Gulfood 2026."
+   },
+   {
+    "q": "When did T57 start?",
+    "a": "T57 was introduced at the Food Security Conference in Cape Town in August 2023 and pre-launched at the 2nd IOFS Food Security Forum in Doha in October 2023. It grew out of Trade57, built by AlMukarramah."
+   },
+   {
+    "q": "Are the MoUs binding?",
+    "a": "Most are memoranda of understanding and letters of intent: frameworks for working together. Any subscription or commercial commitment is made in a separate agreement."
+   }
+  ],
+  "title": "Our Journey: Agreements, Partnerships and Keynotes | T57",
+  "description": "The T57 timeline since 2023: the IOFS agreements, MoUs with governments and development banks, 150 MoUs at Gulfood 2026 and keynotes from Cape Town to Yinchuan.",
+  "parent": "about"
+ },
  "about-leadership": {
   "route": "/about/leadership",
   "section": "about",
