@@ -61,6 +61,7 @@
     Soybeans: 'فول الصويا', 'Soybean oil': 'زيت الصويا', 'Palm oil': 'زيت النخيل', 'Coffee, Arabica': 'البن العربي', Cocoa: 'الكاكاو', Tea: 'الشاي', Beef: 'لحم البقر', Chicken: 'الدجاج',
     Oranges: 'البرتقال', Bananas: 'الموز', Urea: 'اليوريا', 'DAP fertilizer': 'سماد DAP', 'Brent crude': 'خام برنت', Grains: 'الحبوب', 'Oils and oilseeds': 'الزيوت والبذور الزيتية',
     'Sugar and softs': 'السكر والمحاصيل الاستوائية', 'Proteins and produce': 'البروتينات والفواكه', 'Inputs and energy': 'المدخلات والطاقة',
+    Explore: 'استكشاف', Core: 'الأساسية', Growth: 'النمو', Enterprise: 'الشركات', ' (from)': ' (ابتداءً من)',
     'on the month': 'على أساس شهري', 'on the year': 'على أساس سنوي', 'on a year earlier': 'عن العام السابق', trillion: 'تريليون', Replay: 'إعادة', Play: 'تشغيل', Pause: 'إيقاف مؤقت' } : {};
   const tx = s => TX[s] || s;
   const DATE_LOCALE = AR ? 'ar-u-ca-gregory-nu-latn' : 'en-US';
@@ -620,10 +621,10 @@
       out('net').textContent = usd(gross - best[1]);
       out('net').classList.toggle('neg', gross - best[1] < 0);
       out('gross').textContent = usd(gross);
-      out('plan').textContent = best[0];
-      out('fees').textContent = usd(best[1]) + (best[0] === 'Enterprise' ? ' (from)' : '');
-      out('ctx').textContent = `For a ${v('role').toLowerCase()} in ${v('market')}, on ${usd(vol / 12)} of trade a month.`;
-      out('rows').innerHTML = costs.map(([n, t]) => `<tr${n === best[0] ? ' class="on"' : ''}><th scope="row">${n}</th><td>${usd(t)}${n === 'Enterprise' ? ' (from)' : ''}</td></tr>`).join('');
+      out('plan').textContent = tx(best[0]);
+      out('fees').textContent = usd(best[1]) + (best[0] === 'Enterprise' ? tx(' (from)') : '');
+      out('ctx').textContent = AR ? `${v('role')} في ${v('market')}، بحجم تجارة شهري قدره ${usd(vol / 12)}.` : `For a ${v('role').toLowerCase()} in ${v('market')}, on ${usd(vol / 12)} of trade a month.`;
+      out('rows').innerHTML = costs.map(([n, t]) => `<tr${n === best[0] ? ' class="on"' : ''}><th scope="row">${tx(n)}</th><td>${usd(t)}${n === 'Enterprise' ? tx(' (from)') : ''}</td></tr>`).join('');
     }
     f.addEventListener('input', run); run();
     f.querySelector('[data-roi-print]').addEventListener('click', () => print());
