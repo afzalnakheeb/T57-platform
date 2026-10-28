@@ -3,6 +3,8 @@
 @font-face { font-family:Roboto; font-style:normal; font-weight:400; font-display:swap; src:url(/fonts/roboto-400.woff2) format('woff2'); }
 @font-face { font-family:Roboto; font-style:normal; font-weight:500; font-display:swap; src:url(/fonts/roboto-500.woff2) format('woff2'); }
 @font-face { font-family:Roboto; font-style:normal; font-weight:700; font-display:swap; src:url(/fonts/roboto-700.woff2) format('woff2'); }
+@font-face { font-family:"Noto Kufi Arabic"; font-style:normal; font-weight:500 700; font-display:swap; src:url(/fonts/noto-kufi-arabic.woff2) format('woff2'); unicode-range:U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family:Rubik; font-style:normal; font-weight:300 700; font-display:swap; src:url(/fonts/rubik-arabic.woff2) format('woff2'); unicode-range:U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
 /* Layout: white header, a full-bleed living scene per world, then calm light chapters. One look, committed (light chrome, night heroes). */
 :root {
   --electric-green:#008b8c; --persian-indigo:#2f2e7d; --imperial-blue:#02246c; --electric-sapphire:#5b5fef;
@@ -250,6 +252,10 @@ body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-
 
 
 /* Site search: a small icon in the header opens a panel that searches every page */
+.lang-sw { display:inline-flex; align-items:center; min-height:44px; padding:0 12px; flex:none; border-radius:8px; border:1.5px solid var(--line); background:#fff; color:var(--ink-strong); text-decoration:none; font:500 15px/20px var(--font-text); }
+.lang-sw:hover, .lang-sw:focus-visible { border-color:var(--persian-blue); }
+.lang-sw .ls-s { display:none; }
+@media (max-width: 640px) { .lang-sw { padding:0 10px; } .lang-sw .ls-l { display:none; } .lang-sw .ls-s { display:inline; } .hdr-in { column-gap:8px; } }
 .srch-btn { display:inline-grid; place-items:center; width:44px; height:44px; flex:none; border-radius:8px; border:1.5px solid var(--line); background:#fff; color:var(--ink-strong); cursor:pointer; }
 .srch-btn svg { width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; }
 .srch-btn:hover, .srch-btn:focus-visible { border-color:var(--persian-blue); }
@@ -272,7 +278,7 @@ body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-
 .srch-res a mark { background:color-mix(in srgb, var(--strong-cyan) 28%, transparent); color:inherit; border-radius:3px; }
 .srch-res [aria-selected="true"] a, .srch-res a:hover { background:var(--surface-alt); }
 .srch-none { margin:8px 20px 20px; font-size:15px; }
-@media (max-width: 900px) { .hdr-in .srch-btn { margin-inline-start:auto; } .hdr-in .srch-btn ~ .menu-btn { margin-inline-start:0; } }
+@media (max-width: 900px) { .hdr-in .lang-sw { margin-inline-start:auto; } .hdr-in .lang-sw ~ .srch-btn { margin-inline-start:0; } .hdr-in .srch-btn { margin-inline-start:auto; } .hdr-in .srch-btn ~ .menu-btn { margin-inline-start:0; } }
 @media (max-width: 640px) { .srch { margin-top:16px; max-height:calc(100vh - 32px); } .srch-f input { font-size:17px; } .srch-x { padding:6px 8px; } .srch-x kbd { display:none; } }
 @media (prefers-reduced-motion: reduce) { .srch[open] { animation:none; } }
 
@@ -1354,6 +1360,15 @@ a.jr-art b { color:var(--ink-strong); }
 .post-pager b { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
 @media (max-width:1020px) { .post-in { grid-template-columns:minmax(0, 720px); } .post-side { position:static; grid-template-columns:1fr; } }
 @media (max-width:640px) { .post-body { font-size:17px; } .post-body > p:first-child { font-size:19px; } .post-cover img { border-radius:12px; } .post-facts { flex-wrap:wrap; } }
+
+/* Arabic: brand Arabic typefaces (Noto Kufi Arabic for headings, Rubik for text), no letter-spacing or
+   capitals (they break joined Arabic script), and mirrored layout where physical sides are used. */
+html[lang=ar], .lang-ar { --font-display:"Noto Kufi Arabic", Gilroy, Roboto, system-ui, sans-serif; --font-text:Rubik, Gilroy, Roboto, system-ui, sans-serif; }
+.lang-ar * { letter-spacing:0 !important; text-transform:none !important; }
+.lang-ar h1, .lang-ar h2, .lang-ar h3 { line-height:1.35; }
+.lang-ar .h2, .lang-ar .lede, .lang-ar p { line-height:1.75; }
+.lang-ar svg { direction:ltr; }
+.lang-ar .up, .lang-ar .down, .lang-ar .t-c, .lang-ar .t-p, .lang-ar .mv-c, .lang-ar .mv-p, .lang-ar .tk em, .lang-ar [data-fpi-mom], .lang-ar [data-chart-v] { direction:ltr; unicode-bidi:isolate; }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -1374,6 +1389,7 @@ a.jr-art b { color:var(--ink-strong); }
       <a href="#farmers" data-go="farmers" data-petal="agri"><i style="background:var(--electric-green)"></i><span>Farmers</span><span class="long">&nbsp;&amp; Producers</span></a>
       <a href="#who-we-serve" data-go="who-we-serve" data-petal="all" class="w-all"><span>All 11</span><span class="long">&nbsp;audiences</span></a>
     </nav>
+    <a class="lang-sw" href="/ar" hreflang="ar" lang="ar"><span class="ls-l">العربية</span><span class="ls-s" aria-hidden="true">عربي</span></a>
     <button class="srch-btn" type="button" id="srch-btn" aria-haspopup="dialog" aria-controls="srch" title="Search (press /)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span class="sr">Search the site</span></button>
     <a class="demo" href="#cta-home">Request a demo</a>
     <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</button>

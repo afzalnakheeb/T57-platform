@@ -1,7 +1,7 @@
 import React from 'react';
 import Script from 'next/script';
 import './globals.css';
-import { SITE, chrome, assetVersion } from '../lib/site';
+import { SITE, assetVersion } from '../lib/site';
 
 export const metadata = {
   metadataBase: new URL(SITE),
@@ -16,7 +16,7 @@ export const metadata = {
 
 export const viewport = { themeColor: '#2f2e7d' };
 
-// Header, menu, footer and the transition veil are shared by every page.
+// Each page renders the header, menu, footer and transition veil in its own language (components/MicrositePage).
 // The inline script covers the screen (or, inside a microsite, hides the content) before first paint when arriving from
 // another microsite, so the petal transition continues without a flash.
 const arrive = `try{var g=sessionStorage.getItem('t57-go');if(g)document.documentElement.classList.add(g.indexOf('lift:')===0?'lifting':'arriving')}catch(e){}`;
@@ -31,9 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preload" href="/fonts/roboto-700.woff2" as="font" type="font/woff2" crossOrigin="" />
       </head>
       <body>
-        <div dangerouslySetInnerHTML={{ __html: chrome('top') }} />
         {children}
-        <div dangerouslySetInnerHTML={{ __html: chrome('bottom') }} />
         <Script src={`/proto/worlds.js?v=${assetVersion}`} strategy="afterInteractive" />
       </body>
     </html>
