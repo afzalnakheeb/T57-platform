@@ -176,6 +176,7 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 ## About T57
 
 - [About T57](https://www.t57.ai/about): We exist so that food that exists reaches the people and markets that need it.
+- [Our Journey](https://www.t57.ai/about/journey): Since 2023, T57 and its founding company, AlMukarramah, have signed agreements with governments, development institutions and food companies, and taken the case for connected food trade to stages from Cape Town to Yinchuan.
 - [Leadership & Advisors](https://www.t57.ai/about/leadership): The founders, leadership team, board and advisors behind T57, with experience in food trade, food security, technology, finance and governance.
 - [Innovation & Impact](https://www.t57.ai/about/impact): How T57 uses small, local AI responsibly, and the impact it works toward: market access, finance, less food loss and inclusion.
 - [T57 for Food Security](https://www.t57.ai/about/food-security): Verified supply across borders, supply status by origin, AI early warning and a government module, in one system.
@@ -425,6 +426,8 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Which countries are open to partners?](https://www.t57.ai/partners/country-partner): Countries and cities where T57 has no country team yet. See the Global Rollout page for the phases.
 - [Where is T57 based?](https://www.t57.ai/about): T57's operating company is in Dubai, its regional headquarters is in Riyadh, and it has teams in India and Malaysia, with country teams in all five founding markets.
 - [What does the name T57 mean?](https://www.t57.ai/about): T stands for trade, built on trust, transparency and traceability. The 5 stands for the five industries T57 connects: agriculture and food production, trade, logistics, finance and technology. The 7 stands for the seven outcomes we work toward: food security, less food lost, integration, access to finance, higher incomes, inclusion and resilience.
+- [Who has T57 signed agreements with?](https://www.t57.ai/about/journey): T57 and its founding company, AlMukarramah, have agreements with the Islamic Organization for Food Security (IOFS), the Government of the Chechen Republic, the Development Bank of Maldives, Food Contract Corporation of Kazakhstan, the International Assembly of Islamic Business, Dar Al Halal Nigeria and the Aquaculture Centre of Excellence in Singapore, and signed 150 MoUs and letters of intent at Gulfood 2026.
+- [When did T57 start?](https://www.t57.ai/about/journey): T57 was introduced at the Food Security Conference in Cape Town in August 2023 and pre-launched at the 2nd IOFS Food Security Forum in Doha in October 2023. It grew out of Trade57, built by AlMukarramah.
 - [Who leads T57?](https://www.t57.ai/about/leadership): T57 is led by its Founder and Chairman, Afzal Hussain Mohammed Nakheeb, with four co-founders who lead technology, product, communication and governance.
 - [How does T57 work with IOFS?](https://www.t57.ai/about/leadership): T57 has a 10-year MoU with IOFS. Its Director General, Strategic Relations, Prof. Yerlan Baidaulet, is the former Director-General of IOFS.
 - [Is T57 a government system?](https://www.t57.ai/about/food-security): No. T57 is an independent platform that governments and institutions can use, with permissioned data.
