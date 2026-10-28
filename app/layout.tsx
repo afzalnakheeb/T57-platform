@@ -19,12 +19,13 @@ export const viewport = { themeColor: '#2f2e7d' };
 // Each page renders the header, menu, footer and transition veil in its own language (components/MicrositePage).
 // The inline script covers the screen (or, inside a microsite, hides the content) before first paint when arriving from
 // another microsite, so the petal transition continues without a flash. If the page script is slow or fails to load,
-// the cover lifts after 3 seconds anyway, so a page can never stay hidden.
-const arrive = `try{var g=sessionStorage.getItem('t57-go');if(g)document.documentElement.classList.add(g.indexOf('lift:')===0?'lifting':'arriving')}catch(e){}setTimeout(function(){document.documentElement.classList.remove('arriving','lifting')},3000)`;
+// the cover lifts after 3 seconds anyway, so a page can never stay hidden. Arabic pages get their language and right-to-left
+// direction here too, before anything paints.
+const arrive = `var d=document.documentElement,p=location.pathname;if(p==='/ar'||p.indexOf('/ar/')===0){d.lang='ar';d.dir='rtl'}try{var g=sessionStorage.getItem('t57-go');if(g)document.documentElement.classList.add(g.indexOf('lift:')===0?'lifting':'arriving')}catch(e){}setTimeout(function(){d.classList.remove('arriving','lifting')},3000)`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: arrive }} />
         {/* Roboto is self-hosted (public/fonts, Latin subset), so no third-party font request delays the first paint. */}

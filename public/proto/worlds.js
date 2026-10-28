@@ -469,9 +469,9 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     busy = true;
     try { await leave(name, href); } catch (e) { location.href = href; }
   }
-  async function leave(name, href) {
+  async function leave(name, href, label) {
     const main = document.getElementById('main');
-    if (sameSite(name)) {
+    if (!label && sameSite(name)) {
       try { sessionStorage.setItem('t57-go', 'lift:' + name); } catch (e) {}
       const hp = logo.querySelector('.p-' + (WORLD_PETAL[name] || 'all')) || logo;
       groundTo();
@@ -483,8 +483,8 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     }
     try { sessionStorage.setItem('t57-go', name); } catch (e) {}
     const petal = WORLD_PETAL[name];
-    const target = petal === 'all' ? mark : mark.querySelector('.p-' + petal);
-    dest.textContent = WORLD_NAME[name];
+    const target = (petal && petal !== 'all' && mark.querySelector('.p-' + petal)) || mark;
+    dest.textContent = label || WORLD_NAME[name];
     clearAll(veilPetals);
     veil.classList.add('go');
     anim(main, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.5, transform: 'scale(0.985)' }], { duration: 380 });
@@ -849,6 +849,13 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     const tp = e.target.closest('[data-tone-pick]'); if (tp) { setTone(tp.dataset.tonePick); if (!busy) intro(); return; }
     const a = e.target.closest('a[data-go]'); if (a && !e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0) { e.preventDefault(); go(a.dataset.go, a.getAttribute('href')); return; }
     if (e.target.closest('#replay')) { e.preventDefault(); intro(); }
+    // The language switch opens the same page in the other language behind the full petal veil, named in that language.
+    const ls = e.target.closest('a.lang-sw');
+    if (ls && !e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0 && !busy && !reduce) {
+      e.preventDefault(); busy = true;
+      const href = ls.getAttribute('href'), label = (ls.querySelector('.ls-l') || ls).textContent;
+      leave(current, href, label).catch(() => { location.href = href; });
+    }
   });
 
   const here = (document.querySelector('.world') || {}).id || 'home';

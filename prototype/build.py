@@ -239,7 +239,7 @@ for lang in LANGS:
     pre = lambda r: f'/{lang}' + ('' if r == '/' else r)
     LR = {pages[i]['route'] for i in done}
     def relang(s):
-        return re.sub(r'href="(/[^"#?]*)"', lambda m: f'href="{pre(m.group(1))}"' if m.group(1) in LR else m.group(0), s)
+        return re.sub(r'href="(/[^"#?]*)(#[^"]*)?"', lambda m: f'href="{pre(m.group(1))}{m.group(2) or ""}"' if m.group(1) in LR else m.group(0), s)
     os.makedirs(f'{R}/content/{lang}/pages', exist_ok=True)
     for f in glob.glob(f'{R}/content/{lang}/pages/*.html'): os.remove(f)
     lp = {}

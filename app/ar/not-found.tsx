@@ -1,3 +1,4 @@
+import DocumentLang from '../../components/DocumentLang';
 import { chrome } from '../../lib/site';
 
 // Shown for any /ar address that is not a translated page, inside the Arabic header and footer.
@@ -9,7 +10,8 @@ export default function NotFound() {
   return (
     <div lang="ar" dir="rtl" className="lang-ar">
       <script dangerouslySetInnerHTML={{ __html: set }} />
-      <div dangerouslySetInnerHTML={{ __html: chrome('top', 'ar') }} />
+      <DocumentLang lang="ar" dir="rtl" title={metadata.title} />
+      <div dangerouslySetInnerHTML={{ __html: chrome('top', 'ar', 'home') }} />
       <main id="main">
         <section className="gutter" style={{ padding: '120px 0 140px', maxWidth: 760, margin: '0 auto' }}>
           <p className="eyebrow">404</p>
