@@ -104,8 +104,35 @@ def article(n, p):
 def articles():
     return ''.join(article(n, p) for n, p in enumerate(POSTS, 1))
 
+# Search titles (60 characters or fewer) and descriptions (160 or fewer) where the headline or summary runs longer.
+SEO = {'systems-marketing-ai-global-food-trade': ('Marketing Trade Infrastructure, Not a Product | T57', None),
+    't57-gulfood-2026-mous-learning-sales-engine': ('How Gulfood MoUs Became a Learning Machine | T57', 'How T57 uses the MoUs and LoIs signed at Gulfood 2026 as live market signals to find high-intent buyers and sharpen its sales strategy.'),
+    'future-of-ai-food-trade-t57': ('Why 150 Gulfood MoUs Change T57’s Growth Math | T57', None),
+    'marketing-11-crore-farmers-digital-agriculture-mission-t57': ('Selling AI to India’s Farms | T57 Insights', 'How T57 fits India’s Digital Agriculture Mission, with AgriStack, AI and digital farmer IDs, to reach 11 crore farmers at scale.'),
+    'food-trade-deals-before-handshake-virtual-trade-infrastructure': ('Food Trade Deals Before the Handshake | T57 Insights', None),
+    'model-support-centers-missing-middle-food-systems': ('The Missing Middle of Food Systems | T57 Insights', None),
+    'gcc-food-security-strategy-hormuz-crisis': ('Turning a Gulf Food Crisis into Advantage | T57', 'How the GCC can turn a food supply crisis into long-term advantage: a roadmap for supply chains, reserves, production and digital infrastructure.'),
+    'hormuz-shock-gcc-food-security-risk': ('Hormuz Shock and Gulf Food Security | T57 Insights', 'With most Gulf food imports passing through Hormuz, the crisis is a stress test. What it reveals about supply chain weak points and resilience.'),
+    'saudi-date-industry-challenges-t57-supply-chain': ('Saudi Date Farming and a Better Supply Chain | T57', 'Saudi Arabia leads global date exports, yet farmers face waste, price swings and limited market access. How T57 changes the date supply chain.'),
+    't57-club-membership-agriculture-trust-model': ('Why a Club Membership Model Builds Trust | T57', 'How T57’s verified club membership builds trust, reduces disputes and changes agricultural trading with verified members, AI and tamper-evident records.'),
+    'india-avocado-market-growth-farmer-challenge': ('India’s Emerging Avocado Industry | T57 Insights', None),
+    'structural-shifts-reshaping-turkish-agriculture-2026': ('Shifts Redefining Turkish Agriculture in 2026 | T57', None),
+    'blockchain-food-supply-chain': ('Can Blockchain Cut the $1T Cost of Food Waste? | T57', None),
+    'five-forces-reshaping-malaysian-agriculture-2026': ('Five Forces Reshaping Malaysian Agriculture | T57', 'Five shifts changing Malaysian agriculture in 2026, toward higher-value, resilient and traceable supply chains that support food security and rural incomes.'),
+    'five-forces-reshaping-middle-east-agriculture-2026': ('Five Forces Reshaping Middle East Agriculture | T57', None),
+    'agriculture-ai-stack': ('The Quiet Upload of Agriculture into AI | T57', 'Agriculture is becoming an AI-native, automation-first industry, where software, sensing and robotics matter as much as soil and seeds.'),
+    'india-us-trade-deal-2026-agriculture-impact': ('India-US Trade Deal and Agriculture | T57 Insights', None),
+    'smart-contracts-in-global-agri-trade': ('How Smart Contracts Repair Trust in Agri Trade | T57', 'Smart contracts build trust through code that runs once agreed conditions are met, automating delivery confirmation, quality checks and payment release.'),
+    'gulfood-2026-farm-to-fork': ('Farm to Fork at Gulfood: AI, Blockchain, Talent | T57', None),
+    'gulfood-2026-ai-powered-food-decisions': ('From Data to Dinner: AI Food Decisions | T57', 'Insights from the Gulfood 2026 panel on breakthrough technologies and AI-powered automation as value creators for an intelligent food system.'),
+    'india-farm-sector-2026-strategic-outlook': ('5 Strategic Shifts for India’s Farms in 2026 | T57', None),
+    'digital-agri-finance-alliance-global-food-system-transformation': ('How a Digital Agri-Finance Alliance Helps | T57', None),
+    'escrow-crypto-ai-agents-agriculture': ('Escrow, Crypto and AI Agents in Agriculture | T57', None),
+    'rewriting-trade-finance-for-global-agriculture': ('Rewriting Trade Finance for Agriculture | T57', None),
+    'how-data-can-save-farmers-lives': ('How Data Can Break the Middlemen Cartel | T57', None)}
+
 def meta():
     # page title and description, plus the article facts lib/site.ts turns into BlogPosting structured data
-    return {f'blog-{p["slug"]}': dict(title=f'{p["card"]} | T57 Insights', description=p['description'],
+    return {f'blog-{p["slug"]}': dict(title=SEO.get(p['slug'], (f'{p["card"]} | T57 Insights',))[0], description=(SEO.get(p['slug'], (None, None))[1] or p['description']),
             post=dict(author=AUTHORS[p['author']][0], role=AUTHORS[p['author']][1], date=p['date'], topic=TOPICS[p['topic']][0],
                       image=f'/blog/{p["slug"]}.jpg', minutes=p['minutes'])) for p in POSTS}

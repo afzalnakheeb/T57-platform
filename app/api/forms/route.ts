@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { put } from '@vercel/blob';
 
-// Form submissions from the site: sign-up, demo requests, partner applications, contact and subscriptions.
+// Form submissions from the site: sign-up, demo requests, partner applications, investor pack requests, contact and subscriptions.
 // Each submission is validated, then saved (Vercel Blob) and sent to the team by email (Resend).
 // Both are switched on by environment variables; with neither set the route answers 503 and the
 // page falls back to opening the visitor's email app, so no enquiry is lost.
@@ -14,6 +14,7 @@ export const runtime = 'nodejs';
 
 type Field = { max: number; required?: boolean; email?: boolean; options?: string[] };
 const ROLES = ['Producer or farmer', 'Cooperative or FPO', 'Processor', 'Trader', 'Buyer', 'Financier', 'Service provider', 'Government or institution', 'Partner', 'Other'];
+const INVESTORS = ['Family office', 'Venture or private equity fund', 'Strategic or corporate investor', 'Sovereign or development institution', 'Qualified individual investor', 'Other'];
 const COMMON: Record<string, Field> = {
   name: { max: 120, required: true }, email: { max: 160, required: true, email: true }, company: { max: 160 },
   country: { max: 80 }, phone: { max: 40 }, message: { max: 2000 }, page: { max: 200 }, cta: { max: 120 },
@@ -24,6 +25,7 @@ const KINDS: Record<string, { label: string; fields: Record<string, Field> }> = 
   partner: { label: 'Partner application', fields: { ...COMMON, company: { max: 160, required: true }, type: { max: 40, required: true }, licences: { max: 400 }, markets: { max: 600 } } },
   contact: { label: 'Contact', fields: { ...COMMON, topic: { max: 80 } } },
   support: { label: 'Support request', fields: { ...COMMON, reference: { max: 80 }, urgent: { max: 5 } } },
+  invest: { label: 'Investor pack request', fields: { ...COMMON, company: { max: 160, required: true }, investor: { max: 60, required: true, options: INVESTORS } } },
   subscribe: { label: 'T57 Insights subscription', fields: { email: COMMON.email, name: { max: 120 }, page: COMMON.page, cta: COMMON.cta } },
 };
 

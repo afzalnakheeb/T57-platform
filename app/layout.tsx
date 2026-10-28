@@ -26,8 +26,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <script dangerouslySetInnerHTML={{ __html: arrive }} />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+        {/* Roboto is self-hosted (public/fonts, Latin subset), so no third-party font request delays the first paint. */}
+        <link rel="preload" href="/fonts/roboto-400.woff2" as="font" type="font/woff2" crossOrigin="" />
+        <link rel="preload" href="/fonts/roboto-700.woff2" as="font" type="font/woff2" crossOrigin="" />
       </head>
       <body>
         <div dangerouslySetInnerHTML={{ __html: chrome('top') }} />
