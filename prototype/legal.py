@@ -1,7 +1,7 @@
 # Legal & Policies: an overview and four policy pages (privacy, terms, cookies, accessibility) at /legal/<slug>.
 # build.py appends these articles to the worlds and their titles and descriptions to the page metadata; the
 # footer links to each page. The text describes the website as built: the forms (app/api/forms), browser storage
-# in prototype/script.js and the absence of analytics or advertising cookies.
+# in prototype/script.js, the cookie-free Vercel Web Analytics and Speed Insights (app/layout.tsx) and the absence of analytics or advertising cookies.
 import html
 UPDATED = ('2026-10-28', '28 October 2026')
 MARK = '<svg viewBox="774 418 250 244" aria-hidden="true"><use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-finance"></use><use href="#mk-agri"></use></svg>'
@@ -14,8 +14,8 @@ PRIVACY = f'''<p>This notice explains what personal data T57 collects through t5
 <p>T57 operates t57.ai and is the controller of the personal data described here. You can reach us at {CONTACT}.</p>
 <h2>What we collect</h2>
 <ul><li><strong>What you send us through a form:</strong> your name, work email, company, country, role, phone number, the products or plan you are interested in, a trade reference and your message. Only name, email and your consent are required; everything else is optional.</li>
-<li><strong>What your browser sends:</strong> your IP address, browser type and the page you asked for. Our hosting provider records these in short-lived server logs to deliver the site and protect it from abuse.</li>
-<li><strong>What we do not collect:</strong> this website has no analytics, advertising or social-media tracking, and it does not build a profile of you.</li></ul>
+<li><strong>What your browser sends:</strong> your IP address, browser type and the page you asked for. Our hosting provider records these in short-lived server logs to deliver the site and protect it from abuse. It also gives us anonymous, aggregated counts of visits and page speed (Vercel Web Analytics and Speed Insights), with no cookies and nothing that identifies you.</li>
+<li><strong>What we do not collect:</strong> this website sets no analytics cookies, has no advertising or social-media tracking, and does not build a profile of you.</li></ul>
 <p>Membership of the T57 platform, including identity and business verification, is covered by the separate privacy terms you accept when you open a T57 account.</p>
 <h2>Why we use it</h2>
 <ul><li>To answer your request, arrange a demo or review your application. The legal basis is your consent, which you give on the form, and our legitimate interest in responding to business enquiries.</li>
@@ -24,7 +24,7 @@ PRIVACY = f'''<p>This notice explains what personal data T57 collects through t5
 <p>We do not sell personal data, and we do not use it for automated decisions that affect you.</p>
 <h2>Who we share it with</h2>
 <p>We share personal data only with service providers that help us run this website, under contracts that require them to protect it and use it only on our instructions:</p>
-<ul><li>Vercel Inc., which hosts the website and stores form submissions in private, access-controlled storage.</li>
+<ul><li>Vercel Inc., which hosts the website, stores form submissions in private, access-controlled storage, and provides the cookie-free visit and page-speed statistics (Vercel Web Analytics and Speed Insights).</li>
 <li>Our email delivery provider, which sends form notifications to our team.</li></ul>
 <p>If you ask to be introduced to a country team or a partner, we share only what is needed for that introduction. We may disclose data where the law requires it.</p>
 <h2>International transfers</h2>
@@ -74,7 +74,7 @@ COOKIES = '''<p>This page explains how t57.ai uses cookies and similar browser s
 </tbody></table></div>
 <p>These items stay in your browser. They are not sent to us, and they contain no personal data.</p>
 <h2>What the site does not use</h2>
-<ul><li>No analytics cookies or analytics scripts.</li><li>No advertising or retargeting cookies.</li><li>No social-media pixels or embedded tracking.</li></ul>
+<ul><li>No analytics cookies. We count visits and measure page speed with Vercel Web Analytics and Speed Insights, which set no cookies, store nothing in your browser and do not identify you. Their small scripts are served from t57.ai itself.</li><li>No advertising or retargeting cookies.</li><li>No social-media pixels or embedded tracking.</li></ul>
 <p>Fonts and every other file on the site are served from t57.ai itself, so loading a page does not send your IP address to a third party. Our hosting provider sees standard request data, as explained in the <a href="#legal-privacy" data-go="legal-privacy">Privacy Notice</a>.</p>
 <h2>How to control browser storage</h2>
 <p>You can clear or block site storage in your browser settings. The site still works if you do; page transitions and the opening animation simply play differently.</p>
