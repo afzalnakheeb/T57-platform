@@ -7,10 +7,12 @@
 #   public/proto/worlds.js          scenes, explainers and transitions
 #   public/llms.txt                 plain-language site summary for AI answer engines
 # Run: python3 prototype/build.py
-import json, re, os, html
+import json, re, os, html, sys
 D = os.path.dirname(os.path.abspath(__file__)); R = os.path.dirname(D)
 parts = json.load(open(f'{D}/parts.json')); led = open(f'{D}/ledger.tpl').read()
 META = json.load(open(f'{D}/meta.json'))
+sys.path.insert(0, D); import blog
+META.update(blog.meta())
 orig = ["Buyer match","AI MATCHED","Offer","PRICE INTELLIGENCE","Contract","SMART CONTRACT","Logistics","TRACKED SHIPMENT","Payment","ESCROW RELEASE"]
 n = [0]
 def ledger(m):
@@ -20,7 +22,7 @@ def ledger(m):
     s = s.replace('id="hexes"', f'id="hexes{n[0]}"').replace('url(#hexes)', f'url(#hexes{n[0]})')
     if aria: s = re.sub(r'aria-label="[^"]*"', f'aria-label="{aria}"', s, count=1)
     return '<figure class="ledger">\n' + s + '</figure>'
-worlds = re.sub(r'\{\{LEDGER:([^}#]*)(?:#([^}]*))?\}\}', ledger, open(f'{D}/worlds.html').read())
+worlds = re.sub(r'\{\{LEDGER:([^}#]*)(?:#([^}]*))?\}\}', ledger, open(f'{D}/worlds.html').read()) + blog.articles()
 
 # Sitemap v7 routes (IDs 1-13)
 # Sitemap v7 routes: an article's data-route, else Home, Who We Serve and its audiences (IDs 1-13)
@@ -78,9 +80,11 @@ def up(i):
         if r in BY_ROUTE: return BY_ROUTE[r]
     return None
 PARENT = {i: up(i) for i in pages if i != 'home'}
+# Blog articles hang under Blog & Insights for breadcrumbs, but are not pages of the microsite bar or the menu.
+POSTS = set(re.findall(r'<article class="world" id="([a-z0-9-]+)"[^>]*data-kind="post"', worlds))
 KIDS = {}
 for i, q in PARENT.items():
-    if q: KIDS.setdefault(q, []).append(i)
+    if q and i not in POSTS: KIDS.setdefault(q, []).append(i)
 def short(i, role=''):
     n = re.sub(r'\s+and\s+', ' & ', html.unescape(pages[i]['name']))
     if ': ' in n: n = n.split(': ')[0] if role == 'group' else n.split(': ', 1)[1]
@@ -129,6 +133,7 @@ def pager(i):
 # Breadcrumbs: every page below Home shows its trail (Home > section > group > page) in place of the
 # hero eyebrow, so a visitor always sees where they are and can step back up one level at a time.
 def label(k):
+    if k in POSTS: return 'Article'
     if not PARENT.get(k): return short(k, 'section')
     return short(k, 'group') if KIDS.get(k) else short(k)
 def crumbs(i):

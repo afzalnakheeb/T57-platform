@@ -151,6 +151,31 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Explainer Videos](https://www.t57.ai/resources/videos): Short videos on verification, the trade record, escrow, letters of credit and responsible AI.
 - [Webinars & Events](https://www.t57.ai/resources/events): Live webinars, market briefings and trade events where you can meet T57's teams.
 - [FAQ & Glossary](https://www.t57.ai/resources/faq-glossary): Plain-language answers about T57, and the trade, finance and technology terms behind it, from escrow to HS codes.
+- [Marketing a System, Not a Product: Designing Trade Infrastructure for Multi-Party Value](https://www.t57.ai/resources/blog/systems-marketing-ai-global-food-trade): Why verification and trust, not vendor promises, are what a trade platform really sells.
+- [The Day Our MoUs and LoIs Turned Into a Learning Machine](https://www.t57.ai/resources/blog/t57-gulfood-2026-mous-learning-sales-engine): How early MoU and LoI partners became co-designers, with pilots tied to measurable outcomes.
+- [Why 150 MoUs + LoIs at Gulfood 2026 Change T57’s Growth Math](https://www.t57.ai/resources/blog/future-of-ai-food-trade-t57): What 150 signed MoUs and letters of intent mean as pre-qualified demand.
+- [When a Nation Becomes Your Customer: Inside the Race to Sell AI to India’s Farms](https://www.t57.ai/resources/blog/marketing-11-crore-farmers-digital-agriculture-mission-t57): India’s Digital Agriculture Mission and the push for traceable public investment in farming.
+- [When Food Trade Deals Happen Before the Handshake](https://www.t57.ai/resources/blog/food-trade-deals-before-handshake-virtual-trade-infrastructure): Why discovery and contracting are moving from trade-show floors to AI-native trade platforms.
+- [The Missing Middle of Food Systems: Why Model Support Centers Will Rewrite the Future of Agriculture](https://www.t57.ai/resources/blog/model-support-centers-missing-middle-food-systems): Modular hubs that bring digital tools and services within reach of farmers.
+- [From 90 Days to 5 Years: How the Gulf Can Turn a Food Crisis into a Strategic Advantage](https://www.t57.ai/resources/blog/gcc-food-security-strategy-hormuz-crisis): A long-term response to the Gulf’s dependence on the Strait of Hormuz for food.
+- [Hormuz Shock: How the Gulf’s Food-Security Model Could Fail Its First Real Test](https://www.t57.ai/resources/blog/hormuz-shock-gcc-food-security-risk): The stress a Hormuz disruption puts on GCC food supply.
+- [Date Farming in Saudi Arabia: How One Platform Can Rewrite a Centuries-Old Struggle](https://www.t57.ai/resources/blog/saudi-date-industry-challenges-t57-supply-chain): How date farmers could list harvests, receive buyer offers and be paid faster.
+- [Building Trust at Scale: Why a Club Membership Model Can Transform Agriculture Markets](https://www.t57.ai/resources/blog/t57-club-membership-agriculture-trust-model): Why a curated membership with trade history and ratings reduces disputes.
+- [Bridging the Gap: How T57 Can Transform India’s Emerging Avocado Industry](https://www.t57.ai/resources/blog/india-avocado-market-growth-farmer-challenge): India’s fast-growing avocado imports, and the gaps growers face.
+- [Structural Shifts That Will Redefine Turkish Agriculture in 2026](https://www.t57.ai/resources/blog/structural-shifts-reshaping-turkish-agriculture-2026): The pressures on Türkiye’s farm sector, and where market intelligence helps.
+- [Can Blockchain Finally Close the $1 Trillion Annual Global Cost of Food Waste?](https://www.t57.ai/resources/blog/blockchain-food-supply-chain): How a shared, tamper-evident record can make long food supply chains trustworthy.
+- [Five Forces Reshaping Malaysian Agriculture: A 2026 Outlook for Policymakers](https://www.t57.ai/resources/blog/five-forces-reshaping-malaysian-agriculture-2026): Self-sufficiency, climate risk and EUDR compliance in Malaysia.
+- [Five Forces Reshaping Middle East Agriculture: A Strategic Outlook for 2026](https://www.t57.ai/resources/blog/five-forces-reshaping-middle-east-agriculture-2026): Import dependence, climate-smart technology and traceability across the region.
+- [The Quiet Upload of Agriculture into the AI Stack](https://www.t57.ai/resources/blog/agriculture-ai-stack): Agriculture is becoming an AI-native, automation-first industry.
+- [India-US Trade Deal After the Supreme Court Shock: Tactical Truce, Hidden Traps, or Trump’s Next Tariff Gambit?](https://www.t57.ai/resources/blog/india-us-trade-deal-2026-agriculture-impact): What the interim India-US deal means for agriculture.
+- [How Smart Contracts Can Repair Trust in Global Agri Trade](https://www.t57.ai/resources/blog/smart-contracts-in-global-agri-trade): Late payments and disputes, and how agreed terms that execute themselves can fix them.
+- [From Farm to Fork at Gulfood: How AI, Blockchain, and Human Talent Will Rewire Trust in the Global Food Chain](https://www.t57.ai/resources/blog/gulfood-2026-farm-to-fork): Takeaways from a Gulfood 2026 panel on trust in the food chain.
+- [From Data to Dinner: The AI-driven Food Decisions That Must Scale](https://www.t57.ai/resources/blog/gulfood-2026-ai-powered-food-decisions): Scale the high-stakes decisions first, then the AI.
+- [Navigating the New Agricultural Paradigm: 5 Strategic Shifts for India’s Farm Sector in 2026](https://www.t57.ai/resources/blog/india-farm-sector-2026-strategic-outlook): Five developments shaping India’s agricultural trade and food security.
+- [How a Digital Agri-Finance Alliance Can Drive Global Food System Transformation](https://www.t57.ai/resources/blog/digital-agri-finance-alliance-global-food-system-transformation): What the T57–MAIB MoU means for farmers and agri-entrepreneurs.
+- [Trust in Clicks, Not Weeks: How Escrow, Crypto, and AI Agents Will Replace Endless Paperwork in the Agricultural Sector](https://www.t57.ai/resources/blog/escrow-crypto-ai-agents-agriculture): Why slow payments hurt farmers, and what can make them faster.
+- [How T57 Is Rewriting Trade Finance for Global Agriculture](https://www.t57.ai/resources/blog/rewriting-trade-finance-for-global-agriculture): The trade finance gap that leaves agricultural businesses underfunded.
+- [Busting the Middlemen Cartel: How Data Can Save Farmers’ Lives](https://www.t57.ai/resources/blog/how-data-can-save-farmers-lives): How data and direct access can lift farmer incomes.
 
 ## Help Center
 
@@ -176,6 +201,7 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 ## About T57
 
 - [About T57](https://www.t57.ai/about): We exist so that food that exists reaches the people and markets that need it.
+- [Our Journey](https://www.t57.ai/about/journey): Since 2023, T57 and its founding company, AlMukarramah, have signed agreements with governments, development institutions and food companies, and taken the case for connected food trade to stages from Cape Town to Yinchuan.
 - [Leadership & Advisors](https://www.t57.ai/about/leadership): The founders, leadership team, board and advisors behind T57, with experience in food trade, food security, technology, finance and governance.
 - [Innovation & Impact](https://www.t57.ai/about/impact): How T57 uses small, local AI responsibly, and the impact it works toward: market access, finance, less food loss and inclusion.
 - [T57 for Food Security](https://www.t57.ai/about/food-security): Verified supply across borders, supply status by origin, AI early warning and a government module, in one system.
@@ -399,8 +425,8 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Do you keep my data?](https://www.t57.ai/pricing/roi-calculator): Only if you choose to save or share your result.
 - [Are T57 resources free?](https://www.t57.ai/resources): Most are free. Some in-depth reports may ask for your email.
 - [Can I suggest a topic?](https://www.t57.ai/resources): Yes. Contact our team with the topic you would like us to cover.
-- [How often do you publish?](https://www.t57.ai/resources/blog): Regularly, with new market insights each month.
-- [Can I write for T57?](https://www.t57.ai/resources/blog): Partners and experts can contact our team with a proposal.
+- [How often do you publish?](https://www.t57.ai/resources/blog): Several times a month. T57 Insights has published 25 articles since December 2025.
+- [Who writes T57 Insights?](https://www.t57.ai/resources/blog): T57’s founders and leadership team: Afzal Hussain Mohammed Nakheeb, Abdul Bari Kareem, Umme Habeeba Khanum, Mohammed Umair and Dr. Moaz Abdullah Mohammed Mojaddidi.
 - [Are reports free?](https://www.t57.ai/resources/reports): Yes. Some may ask for your email.
 - [Can institutions commission research?](https://www.t57.ai/resources/reports): Yes, contact our team.
 - [Are webinars recorded?](https://www.t57.ai/resources/events): Yes, recordings are posted here.
@@ -423,8 +449,10 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [How are scientists paid?](https://www.t57.ai/partners/research): Through license fees and royalties agreed up front, and through paid advice on Hire an Expert.
 - [Is this a franchise?](https://www.t57.ai/partners/country-partner): It works like one. You run T57 in an agreed territory under licence, with the T57 brand, platform and support, and share in the revenue from the members you bring.
 - [Which countries are open to partners?](https://www.t57.ai/partners/country-partner): Countries and cities where T57 has no country team yet. See the Global Rollout page for the phases.
-- [Where is T57 based?](https://www.t57.ai/about): T57's operating company is in Dubai, its regional headquarters is in Riyadh, and it has teams in India and Malaysia, with country teams in all five founding markets.
+- [Where is T57 based?](https://www.t57.ai/about): T57 is a Saudi initiative. It started in Madinah Al Munawwarah and is moving its headquarters to Riyadh, with teams in India and Malaysia and country teams in all five founding markets.
 - [What does the name T57 mean?](https://www.t57.ai/about): T stands for trade, built on trust, transparency and traceability. The 5 stands for the five industries T57 connects: agriculture and food production, trade, logistics, finance and technology. The 7 stands for the seven outcomes we work toward: food security, less food lost, integration, access to finance, higher incomes, inclusion and resilience.
+- [Who has T57 signed agreements with?](https://www.t57.ai/about/journey): T57 and its founding company, AlMukarramah, have agreements with the Islamic Organization for Food Security (IOFS), the Government of the Chechen Republic, the Development Bank of Maldives, Food Contract Corporation of Kazakhstan, the International Assembly of Islamic Business, Dar Al Halal Nigeria and the Aquaculture Centre of Excellence in Singapore, and signed 150 MoUs and letters of intent at Gulfood 2026.
+- [When did T57 start?](https://www.t57.ai/about/journey): T57 was introduced at the Food Security Conference in Cape Town in August 2023 and pre-launched at the 2nd IOFS Food Security Forum in Doha in October 2023. It grew out of Trade57, built by AlMukarramah.
 - [Who leads T57?](https://www.t57.ai/about/leadership): T57 is led by its Founder and Chairman, Afzal Hussain Mohammed Nakheeb, with four co-founders who lead technology, product, communication and governance.
 - [How does T57 work with IOFS?](https://www.t57.ai/about/leadership): T57 has a 10-year MoU with IOFS. Its Director General, Strategic Relations, Prof. Yerlan Baidaulet, is the former Director-General of IOFS.
 - [Is T57 a government system?](https://www.t57.ai/about/food-security): No. T57 is an independent platform that governments and institutions can use, with permissioned data.

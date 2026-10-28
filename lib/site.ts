@@ -4,9 +4,11 @@ import crypto from 'node:crypto';
 
 // Pages built by prototype/build.py, one per sitemap v7 route.
 export type Faq = { q: string; a: string };
+// A T57 Insights article (prototype/blog.py): its author, publication date and cover image.
+export type Post = { author: string; role: string; date: string; topic: string; image: string; minutes: number };
 export type PageInfo = {
   route: string; section: string; name: string; h1: string; answer: string;
-  title: string; description: string; faqs: Faq[]; parent?: string;
+  title: string; description: string; faqs: Faq[]; parent?: string; post?: Post;
 };
 
 // The live address: t57.ai redirects to www.t57.ai in Vercel, so canonical links use www.
@@ -23,12 +25,16 @@ export const chrome = (part: 'top' | 'bottom') => fs.readFileSync(path.join(dir,
 export function metadataFor(id: string) {
   const p = pages[id];
   const url = `${SITE}${p.route}`;
+  const a = p.post;
+  const og = a ? { url: `${SITE}${a.image}`, width: 1200, alt: p.name } : OG;
   return {
     title: p.title,
     description: p.description,
     alternates: { canonical: url },
-    openGraph: { title: p.title, description: p.description, url, siteName: 'T57.ai', type: 'website', images: [OG] },
-    twitter: { card: 'summary_large_image', title: p.title, description: p.description, images: [OG.url] },
+    openGraph: a
+      ? { title: p.title, description: p.description, url, siteName: 'T57.ai', type: 'article' as const, publishedTime: a.date, authors: [a.author], section: a.topic, images: [og] }
+      : { title: p.title, description: p.description, url, siteName: 'T57.ai', type: 'website' as const, images: [og] },
+    twitter: { card: 'summary_large_image', title: p.title, description: p.description, images: [og.url] },
   };
 }
 
@@ -64,6 +70,17 @@ export function jsonLd(id: string) {
       itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.url })),
     },
   ];
+  if (p.post) {
+    const a = p.post;
+    graph.push({
+      '@type': 'BlogPosting', '@id': `${url}#article`, mainEntityOfPage: { '@id': `${url}#page` },
+      headline: p.h1, description: p.description, abstract: p.answer, image: `${SITE}${a.image}`,
+      datePublished: a.date, articleSection: a.topic, timeRequired: `PT${a.minutes}M`, inLanguage: 'en',
+      author: { '@type': 'Person', name: a.author, jobTitle: a.role, worksFor: { '@id': `${SITE}/#org` } },
+      publisher: { '@id': `${SITE}/#org` },
+      isPartOf: { '@type': 'Blog', '@id': `${SITE}/resources/blog#blog`, name: 'T57 Insights', url: `${SITE}/resources/blog` },
+    });
+  }
   if (p.faqs.length) {
     graph.push({
       '@type': 'FAQPage', '@id': `${url}#faq`,
