@@ -23,12 +23,12 @@
 "<i class=\"lg-bar\"></i>Membership a month": "<i class=\"lg-bar\"></i>العضوية شهريًا",
 "<i class=\"lg-fee\"></i>Trade fee per side, only on completed trades": "<i class=\"lg-fee\"></i>رسوم الصفقة لكل طرف، على الصفقات المكتملة فقط",
 "Choose a membership": "اختر عضوية",
-"Explore from $199 a month, Core $499, Growth $749, or Enterprise from $1,499. Pay annually and get two months free.": "خطة Explore من 199 دولارًا شهريًا، وCore بـ 499 دولارًا، وGrowth بـ 749 دولارًا، وEnterprise من 1,499 دولارًا. ادفع سنويًا واحصل على شهرين مجانًا.",
+"Explore from $199 a month, Core $499, Growth $749, or Enterprise from $1,499. Pay annually and get two months free.": "خطة «استكشاف» من 199 دولارًا شهريًا، و«الأساسية» بـ 499 دولارًا، و«النمو» بـ 749 دولارًا، و«الشركات» من 1,499 دولارًا. ادفع سنويًا واحصل على شهرين مجانًا.",
 "Your membership includes KYC and KYB verification and your reusable T57 Passport.": "تشمل عضويتك التحقق من الهوية (KYC) والتحقق من المنشأة (KYB) وجواز T57 القابل لإعادة الاستخدام.",
-"A small fee per side applies only when a trade is completed, from 0.75% on Explore down to 0.20% on Enterprise. Listing, quoting and negotiating are free.": "تُطبق رسوم صغيرة على كل طرف فقط عند إتمام الصفقة، من 0.75% في Explore نزولًا إلى 0.20% في Enterprise. الإدراج وتقديم العروض والتفاوض مجانية.",
+"A small fee per side applies only when a trade is completed, from 0.75% on Explore down to 0.20% on Enterprise. Listing, quoting and negotiating are free.": "تُطبق رسوم صغيرة على كل طرف فقط عند إتمام الصفقة، من 0.75% في «استكشاف» نزولًا إلى 0.20% في «الشركات». الإدراج وتقديم العروض والتفاوض مجانية.",
 "Add services as you need them": "أضف الخدمات عند حاجتك إليها",
 "Finance, insurance, logistics and inspection partners quote for their own services.": "يقدّم شركاء التمويل والتأمين والخدمات اللوجستية والفحص عروض أسعار لخدماتهم.",
-"A <b>$20,000</b> trade on <b>Core</b>": "صفقة بقيمة <b>20,000 دولار</b> على خطة <b>Core</b>",
+"A <b>$20,000</b> trade on <b>Core</b>": "صفقة بقيمة <b>20,000 دولار</b> على خطة <b>«الأساسية»</b>",
 "× 0.60% per side": "× 0.60% لكل طرف",
 "= <b>$120</b> for each side": "= <b>120 دولارًا</b> لكل طرف",
 "Find the right option": "اعثر على الخيار المناسب",
@@ -66,7 +66,7 @@
 "A farmer holds up a small sack of rice in front of a green paddy field.": "مزارع يرفع كيسًا صغيرًا من الأرز أمام حقل أرز أخضر.",
 "Join the club: four steps to your T57 Passport": "انضم إلى النادي: أربع خطوات إلى جواز T57",
 "Membership rises from $199 to $1,499 a month while the trade fee per side falls from 0.75% to 0.20%": "ترتفع العضوية من 199 إلى 1,499 دولارًا شهريًا بينما تنخفض رسوم الصفقة لكل طرف من 0.75% إلى 0.20%",
-"For example, a $20,000 trade on the Core plan costs each side a fee of $120.": "مثال: صفقة بقيمة 20,000 دولار على خطة Core تكلّف كل طرف رسومًا قدرها 120 دولارًا.",
+"For example, a $20,000 trade on the Core plan costs each side a fee of $120.": "مثال: صفقة بقيمة 20,000 دولار على خطة «الأساسية» تكلّف كل طرف رسومًا قدرها 120 دولارًا.",
 "Pricing pages": "صفحات التسعير",
 "Hidden costs and lead fees": "تكاليف خفية ورسوم على العملاء المحتملين",
 "From $199 a month, published": "من 199 دولارًا شهريًا، معلنة",
@@ -77,5 +77,5 @@
 "Pay before you see it": "ادفع قبل أن ترى",
 "90 days free at launch": "90 يومًا مجانًا عند الإطلاق",
 "Pricing | Plans from $199 a Month | T57": "التسعير | خطط من 199 دولارًا شهريًا | T57",
-"Public prices for verified food trade: Explore, Core, Growth and Enterprise plans, two months free on annual billing, and a small fee only on completed trades.": "أسعار معلنة لتجارة غذاء موثّقة: خطط Explore وCore وGrowth وEnterprise، وشهران مجانًا مع الفوترة السنوية، ورسوم صغيرة على الصفقات المكتملة فقط."
+"Public prices for verified food trade: Explore, Core, Growth and Enterprise plans, two months free on annual billing, and a small fee only on completed trades.": "أسعار معلنة لتجارة غذاء موثّقة: خطط «استكشاف» و«الأساسية» و«النمو» و«الشركات»، وشهران مجانًا مع الفوترة السنوية، ورسوم صغيرة على الصفقات المكتملة فقط."
 }

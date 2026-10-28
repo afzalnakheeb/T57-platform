@@ -1368,6 +1368,13 @@ html[lang=ar], .lang-ar { --font-display:"Noto Kufi Arabic", Gilroy, Roboto, sys
 .lang-ar h1, .lang-ar h2, .lang-ar h3 { line-height:1.35; }
 .lang-ar .h2, .lang-ar .lede, .lang-ar p { line-height:1.75; }
 .lang-ar svg { direction:ltr; }
+/* Arrows point the way you read: right to left. */
+.lang-ar .glance .gl-ar, .lang-ar .glance.run .gl-ar { transform:scaleX(-1); }
+.lang-ar .gl-b { background-position:100% 55%; }
+.lang-ar .pg-prev small::before { content:"→ "; } .lang-ar .pg-next small::after,
+.lang-ar .usp b::after, .lang-ar .way a::after, .lang-ar a.aud b::after, .lang-ar .life-st li a::after,
+.lang-ar a.feat b::after, .lang-ar .aig a::after, .lang-ar .post-all::after { content:" ←"; }
+.lang-ar .slq li:not(:last-child)::after { content:"←"; right:auto; left:-11px; }
 .lang-ar .up, .lang-ar .down, .lang-ar .t-c, .lang-ar .t-p, .lang-ar .mv-c, .lang-ar .mv-p, .lang-ar .tk em, .lang-ar [data-fpi-mom], .lang-ar [data-chart-v] { direction:ltr; unicode-bidi:isolate; }
 </style>
 
