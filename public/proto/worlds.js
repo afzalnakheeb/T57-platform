@@ -832,3 +832,19 @@ document.querySelectorAll('.jr').forEach(sec => {
   addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(tick); }, { passive: true });
   addEventListener('resize', tick); tick();
 });
+
+// T57 Insights: filter articles by author and topic; author cards set the author filter
+document.querySelectorAll('.bl').forEach(sec => {
+  const cards = [...sec.querySelectorAll('.bl-c')], st = { a: 'all', t: 'all' };
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  sec.classList.add('js');
+  const io = new IntersectionObserver(ents => ents.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { threshold: 0.1 });
+  cards.forEach(c => reduce ? c.classList.add('in') : io.observe(c));
+  const apply = () => {
+    sec.querySelectorAll('.bl-f button').forEach(b => { const k = 'a' in b.dataset ? 'a' : 't'; b.setAttribute('aria-pressed', String(b.dataset[k] === st[k])); });
+    cards.forEach(c => { c.hidden = (st.a !== 'all' && c.dataset.a !== st.a) || (st.t !== 'all' && c.dataset.t !== st.t); if (!c.hidden) c.classList.add('in'); });
+    sec.querySelector('.bl-none').hidden = cards.some(c => !c.hidden);
+  };
+  sec.querySelectorAll('.bl-f button').forEach(b => b.addEventListener('click', () => { const k = 'a' in b.dataset ? 'a' : 't'; st[k] = b.dataset[k]; apply(); }));
+  document.querySelectorAll('.bl-au').forEach(b => b.addEventListener('click', () => { st.a = b.dataset.a; st.t = 'all'; apply(); sec.querySelector('.bl-bar').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }));
+});
