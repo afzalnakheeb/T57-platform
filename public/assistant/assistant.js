@@ -1,7 +1,5 @@
 // T57 AI: the floating assistant on every page. It asks /api/assistant, which answers from the site's own pages.
 // The conversation lasts for the visit (sessionStorage), so it survives moving between pages.
-// Two launcher designs are on preview for sign-off: "mark" (an AI mark in the honeycomb shape) and "logo" (the T57 mark
-// plus "AI"). Add ?ai=logo or ?ai=mark to any address to switch; the choice is remembered in this browser.
 (() => {
   if (window.__t57ai || location.pathname.startsWith('/decks')) return;
   window.__t57ai = true;
@@ -20,13 +18,6 @@
     ask: ['What is T57?', 'How do I join, and what does it cost?', 'How do finance and escrow work?', 'Which markets does T57 cover?'],
   };
 
-  let look = 'mark';
-  try {
-    const q = new URLSearchParams(location.search).get('ai');
-    if (q === 'logo' || q === 'mark') localStorage.setItem('t57-ai-look', q);
-    look = localStorage.getItem('t57-ai-look') || 'mark';
-  } catch (e) {}
-
   const KEY = 't57-ai';
   let state = { open: false, msgs: [] };
   try { state = Object.assign(state, JSON.parse(sessionStorage.getItem(KEY) || '{}')); } catch (e) {}
@@ -34,8 +25,7 @@
 
   // The AI mark: a honeycomb cell (the brand's hexagon motif) holding the letters AI.
   const MARK = '<svg class="ai-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3.5 34.3 11.75v16.5L20 36.5 5.7 28.25v-16.5Z" fill="none" stroke="#39c4c4" stroke-width="2.4" stroke-linejoin="round"/><text x="20" y="25.2" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-size="13.5" font-weight="700" fill="currentColor" letter-spacing=".5">AI</text></svg>';
-  const LOGO = '<span class="ai-logo" aria-hidden="true"><img src="/favicon.svg" alt="" width="26" height="26"><b>AI</b></span>';
-  const badge = look === 'logo' ? LOGO : MARK;
+  const badge = MARK;
 
   const css = document.createElement('link');
   const me = document.querySelector('script[src*="/assistant/assistant.js"]');
@@ -43,7 +33,7 @@
   document.head.appendChild(css);
 
   const root = document.createElement('div');
-  root.className = 't57ai look-' + look; root.dir = ar ? 'rtl' : 'ltr'; root.lang = ar ? 'ar' : 'en';
+  root.className = 't57ai'; root.dir = ar ? 'rtl' : 'ltr'; root.lang = ar ? 'ar' : 'en';
   root.innerHTML = `
     <button class="ai-launch" type="button" aria-haspopup="dialog" aria-expanded="false">${badge}<span class="ai-launch-t">${L.open}</span></button>
     <section class="ai-panel" role="dialog" aria-modal="false" aria-label="${L.title}" hidden>

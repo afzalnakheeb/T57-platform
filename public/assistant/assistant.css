@@ -16,9 +16,6 @@
 .ai-launch:focus-visible, .t57ai :focus-visible { outline:2px solid #f8b716; outline-offset:3px; }
 .t57ai.on .ai-launch { display:none; }
 .ai-mark { width:40px; height:40px; flex:none; color:#fff; }
-.ai-logo { display:inline-flex; align-items:center; gap:6px; height:40px; padding:0 10px 0 7px; border-radius:999px; background:#fff; flex:none; }
-.ai-logo img { width:26px; height:26px; display:block; }
-.ai-logo b { color:var(--ai-indigo); font-weight:700; font-size:15px; letter-spacing:.04em; }
 @media (max-width: 520px) { .ai-launch-t { display:none; } .ai-launch, .t57ai[dir="rtl"] .ai-launch { padding:8px; } }
 
 /* Panel */
@@ -32,7 +29,6 @@
 .ai-head > div { flex:1; min-width:0; display:flex; flex-direction:column; }
 .ai-head b { font-size:16px; font-weight:700; }
 .ai-head span { font-size:12.5px; color:#c9cdf0; }
-.ai-head .ai-logo { height:36px; }
 .ai-ic { width:40px; height:40px; display:grid; place-items:center; border:0; border-radius:10px; background:transparent; color:#fff; }
 .ai-ic:hover { background:#ffffff1a; }
 .ai-ic svg { width:20px; height:20px; }
