@@ -2841,7 +2841,7 @@
   "faqs": [
    {
     "q": "Where is T57 based?",
-    "a": "T57 is a Saudi initiative. It started in Madinah Al Munawwarah and is moving its headquarters to Riyadh, with teams in India and Malaysia and country teams in all five founding markets."
+    "a": "T57 is a global SaaS platform, so any food business, anywhere in the world, can apply online, get verified and trade. The pilot starts in five countries: Saudi Arabia, the UAE, India, Malaysia and Türkiye."
    },
    {
     "q": "What does the name T57 mean?",
@@ -3002,7 +3002,7 @@
    },
    {
     "q": "Where are you based?",
-    "a": "Saudi Arabia. T57 started in Madinah Al Munawwarah and is moving its headquarters to Riyadh, with teams in India, Malaysia and Türkiye."
+    "a": "Online, everywhere. T57 is a global SaaS platform that any food business can join from any country. The pilot starts in Saudi Arabia, the UAE, India, Malaysia and Türkiye."
    }
   ],
   "title": "Contact T57",
@@ -3031,21 +3031,21 @@
  "contact-offices": {
   "route": "/contact/offices",
   "section": "contact",
-  "name": "Regional Offices",
-  "h1": "Find T57 near you.",
-  "answer": "T57's country teams in Saudi Arabia, the UAE, India, Malaysia and Türkiye.",
+  "name": "Where We Work",
+  "h1": "Join T57 from anywhere.",
+  "answer": "T57 is a global SaaS platform. The pilot starts in five countries, and any food business, anywhere in the world, can apply online and join.",
   "faqs": [
    {
-    "q": "Can I visit an office?",
-    "a": "Yes, by appointment."
+    "q": "Do I need to visit an office?",
+    "a": "No. T57 is a global SaaS platform, so you apply, get verified and trade online. To meet the team, email hello@t57.ai."
    },
    {
-    "q": "Which office handles my country?",
-    "a": "Your nearest founding-market team, or contact us and we'll route you."
+    "q": "Who supports my country?",
+    "a": "In the five pilot markets, the local team. Anywhere else, our global team, by chat or at hello@t57.ai."
    }
   ],
-  "title": "T57 Offices | Saudi Arabia, UAE, India, Malaysia, Türkiye",
-  "description": "Find T57's offices and country teams in Saudi Arabia, the UAE, India, Malaysia and Türkiye.",
+  "title": "Where T57 Works | Global SaaS, Five Pilot Markets",
+  "description": "T57 is a global SaaS platform for food trade. The pilot starts in Saudi Arabia, the UAE, India, Malaysia and Türkiye, and any business can join online from anywhere.",
   "parent": "contact"
  },
  "governments": {

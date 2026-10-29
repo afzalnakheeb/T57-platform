@@ -81,9 +81,7 @@ export function jsonLd(id: string, lang: Lang = 'en') {
     {
       '@type': 'Organization', '@id': `${SITE}/#org`, name: 'T57.ai', url: SITE, logo: `${SITE}/icon-512.png`,
       email: 'hello@t57.ai', telephone: '+966569712222',
-      address: { '@type': 'PostalAddress', streetAddress: '6709 King Fahad Street', addressLocality: 'Riyadh', addressCountry: 'SA' },
-      foundingLocation: { '@type': 'Place', name: 'Madinah, Saudi Arabia' },
-      areaServed: ['SA', 'AE', 'IN', 'MY', 'TR'],
+      areaServed: 'Worldwide',
       description: 'AI-native digital trade platform for food. T57 connects verified producers, buyers, banks and logistics on one trade record. Finance, escrow and insurance come from licensed partners.',
     },
     {
