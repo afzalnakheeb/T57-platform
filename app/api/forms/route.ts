@@ -1,14 +1,10 @@
 import { NextResponse } from 'next/server';
-import { put } from '@vercel/blob';
+import { canMail, canStore, deliver, limited } from '../../../lib/notify';
 
 // Form submissions from the site: sign-up, demo requests, partner applications, investor pack requests, contact and subscriptions.
-// Each submission is validated, then saved (Vercel Blob) and sent to the team by email (Resend).
-// Both are switched on by environment variables; with neither set the route answers 503 and the
-// page falls back to opening the visitor's email app, so no enquiry is lost.
-//   BLOB_READ_WRITE_TOKEN   added by Vercel when a Blob store is connected to the project
-//   RESEND_API_KEY          Resend key, for the notification email
-//   FORMS_TO                where notifications go (default hello@t57.ai)
-//   FORMS_FROM              sender on a domain verified in Resend (default T57 Website <forms@t57.ai>)
+// Each submission is validated, then saved (Vercel Blob) and sent to the team by email (Resend), see lib/notify.ts.
+// With neither switched on the route answers 503 and the page falls back to opening the visitor's email app,
+// so no enquiry is lost.
 
 export const runtime = 'nodejs';
 
@@ -26,18 +22,11 @@ const KINDS: Record<string, { label: string; fields: Record<string, Field> }> = 
   contact: { label: 'Contact', fields: { ...COMMON, topic: { max: 80 } } },
   support: { label: 'Support request', fields: { ...COMMON, reference: { max: 80 }, urgent: { max: 5 } } },
   invest: { label: 'Investor pack request', fields: { ...COMMON, company: { max: 160, required: true }, investor: { max: 60, required: true, options: INVESTORS } } },
+  // A founding-offer reservation when online payment is not switched on yet: the team sends a payment link
+  preonboard: { label: 'Pre-onboarding reservation (40% founding offer)', fields: { ...COMMON, company: { max: 160, required: true }, tier: { max: 20, required: true, options: ['Explore', 'Core', 'Growth'] }, billing: { max: 20, options: ['Monthly', 'Annual'] } } },
   subscribe: { label: 'T57 Insights subscription', fields: { email: COMMON.email, name: { max: 120 }, page: COMMON.page, cta: COMMON.cta } },
 };
 
-// Best-effort limit per instance: at most 5 submissions per IP every 10 minutes
-const hits = new Map<string, number[]>();
-function limited(ip: string) {
-  const now = Date.now(), recent = (hits.get(ip) || []).filter((t) => now - t < 600_000);
-  recent.push(now); hits.set(ip, recent);
-  return recent.length > 5;
-}
-
-const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
 const fail = (status: number, error: string, fields?: string[]) => NextResponse.json({ ok: false, error, fields }, { status });
 
 export async function POST(req: Request) {
@@ -57,36 +46,11 @@ export async function POST(req: Request) {
   }
   if (bad.length) return fail(422, 'invalid', bad);
 
-  const ip = (req.headers.get('x-forwarded-for') || '').split(',')[0].trim() || 'unknown';
-  if (limited(ip)) return fail(429, 'too_many');
+  if (limited(req)) return fail(429, 'too_many');
+  if (!canStore() && !canMail()) return fail(503, 'not_configured');
 
-  const store = !!process.env.BLOB_READ_WRITE_TOKEN, mail = !!process.env.RESEND_API_KEY;
-  if (!store && !mail) return fail(503, 'not_configured');
-
-  const at = new Date().toISOString();
-  const record = { kind: String(body.kind), at, env: process.env.VERCEL_ENV || 'local', ...data };
-  const done: string[] = [];
-  if (store) {
-    try {
-      await put(`forms/${record.kind}/${at.slice(0, 10)}/${at.replace(/[:.]/g, '-')}.json`, JSON.stringify(record, null, 1), { access: 'private', addRandomSuffix: true, contentType: 'application/json' });
-      done.push('stored');
-    } catch (e) { console.error('forms: blob', e); }
-  }
-  if (mail) {
-    const rows = Object.entries(data).map(([k, v]) => `<tr><th align="left" style="padding:4px 12px 4px 0">${esc(k)}</th><td>${esc(v).replace(/\n/g, '<br>')}</td></tr>`).join('');
-    try {
-      const r = await fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          from: process.env.FORMS_FROM || 'T57 Website <forms@t57.ai>', to: (process.env.FORMS_TO || 'hello@t57.ai').split(','),
-          reply_to: data.email, subject: `${kind.label}: ${data.company || data.name || data.email}`,
-          html: `<p><b>${esc(kind.label)}</b> from the T57 website (${esc(record.env)}), ${at}</p><table>${rows}</table>`,
-        }),
-      });
-      if (r.ok) done.push('emailed'); else console.error('forms: resend', r.status, await r.text());
-    } catch (e) { console.error('forms: resend', e); }
-  }
+  const record = { kind: String(body.kind), at: new Date().toISOString(), env: process.env.VERCEL_ENV || 'local', ...data };
+  const done = await deliver('forms', kind.label, `${kind.label}: ${data.company || data.name || data.email}`, record, data.email);
   if (!done.length) return fail(502, 'delivery_failed');
   return NextResponse.json({ ok: true, done });
 }

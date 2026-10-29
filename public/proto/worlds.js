@@ -727,10 +727,12 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     support: ['Help Center', 'Contact support', 'Have your company name and trade reference ready, so we can help faster.', 'Send to support', ['name', 'email']],
     invest: ['Investors', 'Request the investor pack', 'For qualified investors. We send the teaser and presentation, then arrange a call with the founder and access to the memorandum and data room under NDA.', 'Request the pack', ['name', 'email', 'company', 'investor']],
     subscribe: ['T57 Insights', 'Subscribe to T57 Insights', 'Market insight on food trade, finance and AI. Unsubscribe at any time.', 'Subscribe', ['email']],
+    preonboard: ['Founding member offer', 'Reserve your plan at 40% off', 'Next, you pay on a secure page run by our payment partner. Your founding rate applies for your first 12 months.', 'Continue to secure payment', ['name', 'email', 'company', 'tier']],
   };
   const DONE = { join: 'Thank you. Your country team will contact you within two working days.', demo: 'Thank you. A specialist will contact you to confirm a time.', partner: 'Thank you. Our partnerships team will be in touch.',
     contact: 'Thank you. We will reply within two working days.', support: 'Thank you. Our support team has your request.', subscribe: 'Thank you. You are subscribed to T57 Insights.',
-    invest: 'Thank you. Our investor relations team will send the pack and contact you within two working days.' };
+    invest: 'Thank you. Our investor relations team will send the pack and contact you within two working days.',
+    preonboard: 'Thank you. Your founding rate is reserved. We will email you a secure payment link within two working days.' };
   if (AR) {
     Object.assign(FORM, {
       join: ['ابدأ الآن', 'انضم إلى T57', 'يحصل الأعضاء المؤسِّسون على تجربة مجانية لمدة 90 يومًا عند الإطلاق. أخبرنا عن منشأتك وسيتواصل معك فريق بلدك.', 'قدّم طلب العضوية', FORM.join[4]],
@@ -740,15 +742,17 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       support: ['مركز المساعدة', 'تواصل مع الدعم', 'جهّز اسم منشأتك ومرجع الصفقة لنساعدك أسرع.', 'أرسل إلى الدعم', FORM.support[4]],
       invest: ['المستثمرون', 'اطلب ملف المستثمرين', 'للمستثمرين المؤهلين. نرسل الملخص التعريفي والعرض التقديمي، ثم نرتب مكالمة مع المؤسس والوصول إلى مذكرة الاستثمار وغرفة البيانات بموجب اتفاقية سرية.', 'اطلب الملف', FORM.invest[4]],
       subscribe: ['رؤى T57', 'اشترك في رؤى T57', 'رؤى حول تجارة الغذاء والتمويل والذكاء الاصطناعي. يمكنك إلغاء الاشتراك في أي وقت.', 'اشترك', FORM.subscribe[4]],
+      preonboard: ['عرض الأعضاء المؤسِّسين', 'احجز باقتك بخصم 40%', 'في الخطوة التالية تدفع عبر صفحة آمنة يديرها شريكنا في المدفوعات، ويسري سعرك التأسيسي طوال أول 12 شهرًا.', 'تابع إلى الدفع الآمن', FORM.preonboard[4]],
     });
     Object.assign(DONE, { join: 'شكرًا لك. سيتواصل معك فريق بلدك خلال يومي عمل.', demo: 'شكرًا لك. سيتواصل معك متخصص لتأكيد الموعد.', partner: 'شكرًا لك. سيتواصل معك فريق الشراكات.',
       contact: 'شكرًا لك. سنرد خلال يومي عمل.', support: 'شكرًا لك. وصل طلبك إلى فريق الدعم.', subscribe: 'شكرًا لك. تم اشتراكك في رؤى T57.',
-      invest: 'شكرًا لك. سيرسل فريق علاقات المستثمرين الملف ويتواصل معك خلال يومي عمل.' });
+      invest: 'شكرًا لك. سيرسل فريق علاقات المستثمرين الملف ويتواصل معك خلال يومي عمل.',
+      preonboard: 'شكرًا لك. حجزنا لك السعر التأسيسي، وسنرسل إليك رابط دفع آمنًا عبر البريد الإلكتروني خلال يومي عمل.' });
   }
   const MSG = AR ? { fields: 'يرجى إكمال الحقول المظللة.', consent: 'يرجى تحديد المربع للموافقة على طريقة استخدامنا لبياناتك.', sending: 'جارٍ الإرسال…', check: 'يرجى مراجعة الحقول المظللة.',
-      busy: 'طلبات كثيرة من هذا الاتصال. يرجى المحاولة بعد بضع دقائق.', fail: m => `تعذّر الإرسال عبر الإنترنت الآن. <a href="${m}">أرسله بالبريد الإلكتروني بدلًا من ذلك</a>، مع إجاباتك معبأة.` }
+      busy: 'طلبات كثيرة من هذا الاتصال. يرجى المحاولة بعد بضع دقائق.', paying: 'جارٍ فتح صفحة الدفع الآمنة…', fail: m => `تعذّر الإرسال عبر الإنترنت الآن. <a href="${m}">أرسله بالبريد الإلكتروني بدلًا من ذلك</a>، مع إجاباتك معبأة.` }
     : { fields: 'Please complete the highlighted fields.', consent: 'Please tick the box to agree to how we use your details.', sending: 'Sending…', check: 'Please check the highlighted fields.',
-      busy: 'Too many requests from this connection. Please try again in a few minutes.', fail: m => `We could not send this online just now. <a href="${m}">Send it by email instead</a>, with your answers filled in.` };
+      busy: 'Too many requests from this connection. Please try again in a few minutes.', paying: 'Opening the secure payment page…', fail: m => `We could not send this online just now. <a href="${m}">Send it by email instead</a>, with your answers filled in.` };
   const kindOf = t => AR ? (/مستثمر/.test(t) ? 'invest' : /اشترك/.test(t) ? 'subscribe' : /الدعم/.test(t) ? 'support' : /شريك|الشراك/.test(t) ? 'partner'
     : /عرض توضيحي|عرضًا توضيحيًا|شاهد/.test(t) ? 'demo' : /انضم|قدّم طلب|العضوية|ابدأ|سجّل|جرّب/.test(t) ? 'join' : 'contact') : /invest/i.test(t) ? 'invest' : /subscri/i.test(t) ? 'subscribe' : /support|security team/i.test(t) ? 'support' : /partner/i.test(t) ? 'partner'
     : /demo|see how t57 works|watch/i.test(t) ? 'demo' : /chat/i.test(t) ? 'support' : /apply|join|register|free trial|membership|sign up|start|trade with|use escrow|post your|list your|try |track your/i.test(t) ? 'join' : 'contact';
@@ -776,9 +780,16 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       if (!consent.checked) consent.closest('label').classList.add('bad');
       if (miss.length || !consent.checked) { say('err', miss.length ? MSG.fields : MSG.consent); (miss.length ? f.elements[miss[0]] : consent).focus(); return; }
       const o = payload(f); btn.disabled = true; say('', MSG.sending);
+      const post = async (url, data) => { const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }); return [r, await r.json().catch(() => ({}))]; };
       try {
-        const r = await fetch('/api/forms', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(o) });
-        const j = await r.json().catch(() => ({}));
+        let r, j;
+        // Founding offer: straight to the payment partner's page. If online payment is not switched on yet,
+        // the reservation goes to the team as a form and they send a payment link.
+        if (o.kind === 'preonboard') {
+          [r, j] = await post('/api/checkout', { ...o, lang: AR ? 'ar' : 'en' });
+          if (r.ok && j.url) { say('', MSG.paying); location.assign(j.url); return; }
+        }
+        if (!r || (r.status !== 422 && r.status !== 429)) [r, j] = await post('/api/forms', o);
         if (r.ok && j.ok) { f.classList.add('sent'); say('ok', DONE[o.kind] || DONE.contact); return; }
         if (r.status === 422 && j.fields) { j.fields.forEach(n => f.elements[n] && f.elements[n].closest('label').classList.add('bad')); say('err', MSG.check); return; }
         if (r.status === 429) { say('err', MSG.busy); return; }
@@ -793,8 +804,9 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   const dlg = document.getElementById('get-started');
   if (dlg && dlg.showModal) {
     const df = dlg.querySelector('form');
-    const open = (kind, cta) => {
+    const open = (kind, cta, tier) => {
       const c = FORM[kind] || FORM.contact;
+      if (tier && df.elements.tier) df.elements.tier.value = tier;
       df.dataset.apiForm = kind; df.dataset.cta = cta; df.dataset.t = Date.now(); df.classList.remove('sent');
       dlg.querySelector('[data-fdlg-eb]').textContent = c[0]; dlg.querySelector('[data-fdlg-h]').textContent = c[1];
       dlg.querySelector('[data-fdlg-sub]').textContent = c[2]; dlg.querySelector('[data-fdlg-btn]').textContent = c[3];
@@ -806,12 +818,22 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       const a = e.target.closest('a[href$="#cta-home"], section.cta a[href^="#cta-"], [data-form]');
       if (!a || a.closest('#get-started') || e.metaKey || e.ctrlKey || e.shiftKey) return;
       e.preventDefault(); e.stopPropagation();
-      const t = a.textContent.trim(); open(a.dataset.form || kindOf(t), t);
+      const t = a.textContent.trim(); open(a.dataset.form || kindOf(t), t, a.dataset.tier);
     }, true);
     dlg.querySelector('[data-fdlg-close]').addEventListener('click', () => dlg.close());
     dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
     dlg.querySelector('form').addEventListener('click', e => { if (e.target.closest('a[data-go]')) dlg.close(); });
     window.T57_openForm = open;
+  }
+
+  // Back from the payment page: confirm the reservation, or say nothing was charged
+  const po = document.querySelector('[data-po-msg]'), qs = new URLSearchParams(location.search);
+  if (po && (qs.has('reserved') || qs.get('checkout') === 'cancelled')) {
+    const paid = qs.has('reserved');
+    po.className = 'mf-msg ' + (paid ? 'ok' : 'err'); po.hidden = false;
+    po.textContent = paid ? (AR ? 'تم الدفع. أهلًا بك عضوًا مؤسِّسًا في T57. ستصلك الفاتورة عبر البريد الإلكتروني، وسيتواصل معك فريق بلدك لبدء التوثيق.' : 'Payment received. Welcome to T57 as a founding member. Your receipt is on its way by email, and your country team will contact you to start verification.')
+      : (AR ? 'أُلغيت عملية الدفع ولم يُخصم أي مبلغ. يمكنك الحجز مجددًا متى شئت.' : 'Payment cancelled. Nothing was charged. You can reserve again whenever you are ready.');
+    history.replaceState(null, '', location.pathname + location.hash);
   }
 
   document.querySelectorAll('[data-explainer]').forEach(fx => {
