@@ -1,7 +1,7 @@
 import React from 'react';
 import Script from 'next/script';
 import './globals.css';
-import { SITE, assetVersion } from '../lib/site';
+import { SITE, assetVersion, assistantVersion } from '../lib/site';
 
 export const metadata = {
   metadataBase: new URL(SITE),
@@ -35,6 +35,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {children}
         <Script src={`/proto/worlds.js?v=${assetVersion}`} strategy="afterInteractive" />
+        {/* T57 AI, the site assistant (public/assistant, app/api/assistant): loads once the page is idle. */}
+        <Script src={`/assistant/assistant.js?v=${assistantVersion}`} strategy="lazyOnload" />
       </body>
     </html>
   );
