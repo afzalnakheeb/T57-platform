@@ -17,8 +17,6 @@ export const PLANS = {
 } as const;
 export type Tier = keyof typeof PLANS;
 export type Billing = 'Monthly' | 'Annual';
-// The founding offer is a one-year commitment, paid upfront (Afzal, 29 Oct 2026)
-export const FOUNDING_BILLING: Billing[] = ['Annual'];
 
 export const offer = () => {
   const percent = Math.min(90, Math.max(1, Number(process.env.PREONBOARD_PERCENT) || 40));
