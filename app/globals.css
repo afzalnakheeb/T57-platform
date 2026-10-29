@@ -1006,6 +1006,11 @@ a.cm-pt:hover text { text-decoration:underline; }
 .po-how { margin:28px 0 0; padding:0; list-style:none; display:grid; gap:8px; } .po-how li { position:relative; padding-inline-start:26px; font-size:15.5px; line-height:24px; }
 .po-how li::before { content:""; position:absolute; inset-inline-start:0; top:7px; width:10px; height:10px; border-radius:50%; background:var(--world); }
 [data-po-msg] { max-width:760px; margin-top:20px; }
+.po-perks { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px; } @media (max-width: 760px) { .po-perks { grid-template-columns:1fr; } }
+.po-perk { padding:22px 24px; border-radius:18px; background:var(--surface-alt); border:1px solid var(--line); }
+.po-perk h3 { font:700 18px var(--font-display); color:var(--persian-indigo); margin:0 0 10px; }
+.po-perk ul { margin:0; padding-inline-start:20px; display:grid; gap:6px; font-size:15.5px; line-height:23px; }
+.po-perk-yr { background:#fff8e1; border-color:var(--world); } .po-perk-yr li::marker { color:#9a6b00; }
 .pt .tick { display:inline-block; width:10px; height:16px; margin-left:4px; border:solid var(--strong-cyan); border-width:0 3px 3px 0; transform:rotate(45deg); }
 .pt .no { color:#b8bccf; }
 .pt-note { margin-top:16px; font-size:14px; line-height:21px; color:var(--ink-soft, #5a5f80); }

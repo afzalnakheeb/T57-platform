@@ -6,7 +6,8 @@ import crypto from 'node:crypto';
 //   STRIPE_WEBHOOK_SECRET    whsec_... for the endpoint /api/checkout/webhook (records each paid reservation)
 //   PAYMENTS_LIVE            must be "true" before a live key is used, so real money is never taken by accident
 //   PREONBOARD_PERCENT       founding discount, default 40
-//   PREONBOARD_MONTHS        how many months the discount lasts, default 12 (an annual plan's first year)
+//   PREONBOARD_MONTHS        how many months the discount lasts on a monthly plan, default 12
+// Annual founding members keep the founding price for a second year when they renew, so their discount runs twice as long.
 // With no usable key the checkout answers 503 and the page takes the reservation as a form instead.
 
 // Standard list prices in US cents (Pricing > Plans). Annual is two months free. Enterprise is quoted, not sold online.
@@ -18,9 +19,10 @@ export const PLANS = {
 export type Tier = keyof typeof PLANS;
 export type Billing = 'Monthly' | 'Annual';
 
-export const offer = () => {
+export const offer = (billing: Billing = 'Monthly') => {
   const percent = Math.min(90, Math.max(1, Number(process.env.PREONBOARD_PERCENT) || 40));
-  const months = Math.min(36, Math.max(1, Number(process.env.PREONBOARD_MONTHS) || 12));
+  const base = Math.min(36, Math.max(1, Number(process.env.PREONBOARD_MONTHS) || 12));
+  const months = billing === 'Annual' ? base * 2 : base;
   return { percent, months, coupon: `T57-FOUNDING-${percent}-${months}M` };
 };
 
@@ -52,8 +54,8 @@ export async function stripe(path: string, body?: Record<string, unknown>, idemp
 }
 
 // The founding coupon is created once in the Stripe account, the first time anyone checks out
-export async function ensureCoupon() {
-  const o = offer();
+export async function ensureCoupon(billing: Billing) {
+  const o = offer(billing);
   const got = await stripe(`coupons/${o.coupon}`);
   if (got.ok) return o.coupon;
   const made = await stripe('coupons', { id: o.coupon, name: `Founding member ${o.percent}% off`, percent_off: o.percent, duration: 'repeating', duration_in_months: o.months });

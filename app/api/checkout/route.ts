@@ -32,10 +32,10 @@ export async function POST(req: Request) {
   const host = req.headers.get('host') || '';
   const origin = process.env.VERCEL_ENV === 'production' ? 'https://www.t57.ai' : `${/^localhost(:\d+)?$/.test(host) ? 'http' : 'https'}://${host}`;
   const back = `${origin}${body.lang === 'ar' ? '/ar' : ''}/pricing/plans`;
-  const o = offer();
+  const o = offer(billing);
   const meta = { offer: `founding-${o.percent}`, plan: tier, billing, name, company, country, phone };
   try {
-    const coupon = await ensureCoupon();
+    const coupon = await ensureCoupon(billing);
     const s = await stripe('checkout/sessions', {
       mode: 'subscription',
       customer_email: email,
