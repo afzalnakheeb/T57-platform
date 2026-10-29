@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { limited } from '../../../lib/notify';
-import { PLANS, ensureCoupon, offer, stripe, stripeKey, type Billing, type Tier } from '../../../lib/payments';
+import { FOUNDING_BILLING, PLANS, ensureCoupon, offer, stripe, stripeKey, type Billing, type Tier } from '../../../lib/payments';
 
 // Pre-onboarding checkout: a founding member picks a plan and is sent to a Stripe-hosted payment page,
 // with the founding discount applied (lib/payments.ts). Answers 503 while payments are not switched on,
@@ -17,11 +17,11 @@ export async function POST(req: Request) {
   if (body.website) return fail(400, 'bad_request');
   if (body.consent !== true) return fail(422, 'invalid', ['consent']);
 
-  const tier = str(body.tier, 20) as Tier, billing = str(body.billing, 20) as Billing;
+  const tier = str(body.tier, 20) as Tier, billing = (str(body.billing, 20) || FOUNDING_BILLING[0]) as Billing;
   const name = str(body.name, 120), email = str(body.email, 160), company = str(body.company, 160);
   const country = str(body.country, 80), phone = str(body.phone, 40);
   const bad = [
-    !PLANS[tier] && 'tier', billing !== 'Monthly' && billing !== 'Annual' && 'billing', !name && 'name', !company && 'company',
+    !PLANS[tier] && 'tier', !FOUNDING_BILLING.includes(billing) && 'billing', !name && 'name', !company && 'company',
     !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) && 'email',
   ].filter(Boolean) as string[];
   if (bad.length) return fail(422, 'invalid', bad);

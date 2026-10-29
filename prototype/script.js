@@ -726,7 +726,7 @@
     support: ['Help Center', 'Contact support', 'Have your company name and trade reference ready, so we can help faster.', 'Send to support', ['name', 'email']],
     invest: ['Investors', 'Request the investor pack', 'For qualified investors. We send the teaser and presentation, then arrange a call with the founder and access to the memorandum and data room under NDA.', 'Request the pack', ['name', 'email', 'company', 'investor']],
     subscribe: ['T57 Insights', 'Subscribe to T57 Insights', 'Market insight on food trade, finance and AI. Unsubscribe at any time.', 'Subscribe', ['email']],
-    preonboard: ['Founding member offer', 'Reserve your plan at 40% off', 'Next, you pay on a secure page run by our payment partner. Your founding rate applies for your first 12 months.', 'Continue to secure payment', ['name', 'email', 'company', 'tier']],
+    preonboard: ['Founding member offer', 'Reserve your plan at 40% off', 'Next, you pay for your first year at 40% off, on a secure page run by our payment partner.', 'Continue to secure payment', ['name', 'email', 'company', 'tier']],
   };
   const DONE = { join: 'Thank you. Your country team will contact you within two working days.', demo: 'Thank you. A specialist will contact you to confirm a time.', partner: 'Thank you. Our partnerships team will be in touch.',
     contact: 'Thank you. We will reply within two working days.', support: 'Thank you. Our support team has your request.', subscribe: 'Thank you. You are subscribed to T57 Insights.',
@@ -741,7 +741,7 @@
       support: ['مركز المساعدة', 'تواصل مع الدعم', 'جهّز اسم منشأتك ومرجع الصفقة لنساعدك أسرع.', 'أرسل إلى الدعم', FORM.support[4]],
       invest: ['المستثمرون', 'اطلب ملف المستثمرين', 'للمستثمرين المؤهلين. نرسل الملخص التعريفي والعرض التقديمي، ثم نرتب مكالمة مع المؤسس والوصول إلى مذكرة الاستثمار وغرفة البيانات بموجب اتفاقية سرية.', 'اطلب الملف', FORM.invest[4]],
       subscribe: ['رؤى T57', 'اشترك في رؤى T57', 'رؤى حول تجارة الغذاء والتمويل والذكاء الاصطناعي. يمكنك إلغاء الاشتراك في أي وقت.', 'اشترك', FORM.subscribe[4]],
-      preonboard: ['عرض الأعضاء المؤسِّسين', 'احجز باقتك بخصم 40%', 'في الخطوة التالية تدفع عبر صفحة آمنة يديرها شريكنا في المدفوعات، ويسري سعرك التأسيسي طوال أول 12 شهرًا.', 'تابع إلى الدفع الآمن', FORM.preonboard[4]],
+      preonboard: ['عرض الأعضاء المؤسِّسين', 'احجز باقتك بخصم 40%', 'في الخطوة التالية تدفع رسوم سنتك الأولى بخصم 40% عبر صفحة آمنة يديرها شريكنا في المدفوعات.', 'تابع إلى الدفع الآمن', FORM.preonboard[4]],
     });
     Object.assign(DONE, { join: 'شكرًا لك. سيتواصل معك فريق بلدك خلال يومي عمل.', demo: 'شكرًا لك. سيتواصل معك متخصص لتأكيد الموعد.', partner: 'شكرًا لك. سيتواصل معك فريق الشراكات.',
       contact: 'شكرًا لك. سنرد خلال يومي عمل.', support: 'شكرًا لك. وصل طلبك إلى فريق الدعم.', subscribe: 'شكرًا لك. تم اشتراكك في رؤى T57.',
