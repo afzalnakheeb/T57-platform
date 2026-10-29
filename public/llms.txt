@@ -214,7 +214,7 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 
 - [Contact](https://www.t57.ai/contact): Talk to T57.
 - [Request a Demo](https://www.t57.ai/contact/demo): Book a 30-minute demo on your own products and markets, then start your free trial.
-- [Regional Offices](https://www.t57.ai/contact/offices): T57's country teams in Saudi Arabia, the UAE, India, Malaysia and Türkiye.
+- [Where We Work](https://www.t57.ai/contact/offices): T57 is a global SaaS platform. The pilot starts in five countries, and any food business, anywhere in the world, can apply online and join.
 
 ## Common questions
 
@@ -450,7 +450,7 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [How are scientists paid?](https://www.t57.ai/partners/research): Through license fees and royalties agreed up front, and through paid advice on Hire an Expert.
 - [Is this a franchise?](https://www.t57.ai/partners/country-partner): It works like one. You run T57 in an agreed territory under licence, with the T57 brand, platform and support, and share in the revenue from the members you bring.
 - [Which countries are open to partners?](https://www.t57.ai/partners/country-partner): Countries and cities where T57 has no country team yet. See the Global Rollout page for the phases.
-- [Where is T57 based?](https://www.t57.ai/about): T57 is a Saudi initiative. It started in Madinah Al Munawwarah and is moving its headquarters to Riyadh, with teams in India and Malaysia and country teams in all five founding markets.
+- [Where is T57 based?](https://www.t57.ai/about): T57 is a global SaaS platform, so any food business, anywhere in the world, can apply online, get verified and trade. The pilot starts in five countries: Saudi Arabia, the UAE, India, Malaysia and Türkiye.
 - [What does the name T57 mean?](https://www.t57.ai/about): T stands for trade, built on trust, transparency and traceability. The 5 stands for the five industries T57 connects: agriculture and food production, trade, logistics, finance and technology. The 7 stands for the seven outcomes we work toward: food security, less food lost, integration, access to finance, higher incomes, inclusion and resilience.
 - [Who has T57 signed agreements with?](https://www.t57.ai/about/journey): T57 and its founding company, AlMukarramah, have agreements with the Islamic Organization for Food Security (IOFS), the Government of the Chechen Republic, the Development Bank of Maldives, Food Contract Corporation of Kazakhstan, the International Assembly of Islamic Business, Dar Al Halal Nigeria and the Aquaculture Centre of Excellence in Singapore, and signed 150 MoUs and letters of intent at Gulfood 2026.
 - [When did T57 start?](https://www.t57.ai/about/journey): T57 was introduced at the Food Security Conference in Cape Town in August 2023 and pre-launched at the 2nd IOFS Food Security Forum in Doha in October 2023. It grew out of Trade57, built by AlMukarramah.
@@ -466,8 +466,8 @@ T57 works with the Islamic Organization for Food Security (IOFS), an OIC institu
 - [Can I contact you in Arabic?](https://www.t57.ai/contact): Yes.
 - [Is the demo free?](https://www.t57.ai/contact/demo): Yes.
 - [Can my team join?](https://www.t57.ai/contact/demo): Yes, invite as many colleagues as you like.
-- [Can I visit an office?](https://www.t57.ai/contact/offices): Yes, by appointment.
-- [Which office handles my country?](https://www.t57.ai/contact/offices): Your nearest founding-market team, or contact us and we'll route you.
+- [Do I need to visit an office?](https://www.t57.ai/contact/offices): No. T57 is a global SaaS platform, so you apply, get verified and trade online. To meet the team, email hello@t57.ai.
+- [Who supports my country?](https://www.t57.ai/contact/offices): In the five pilot markets, the local team. Anywhere else, our global team, by chat or at hello@t57.ai.
 - [How does T57 support national and regional food-security strategies in practice?](https://www.t57.ai/who-we-serve/governments): Many countries are now expanding strategic reserves and silo capacity to hold months’ worth of essential commodities. T57 complements such physical infrastructure by tracking self-sufficiency, stock levels, and import exposure in real time. This combination of physical reserves and digital intelligence helps governments move from reactive to anticipatory food-security management.
 - [Why is it important to channel private and impact capital into agriculture and food systems, beyond public budgets?](https://www.t57.ai/who-we-serve/governments): Despite agriculture’s historical role in employment and food security, global investors are only now seeking credible, measurable pathways to support food systems as part of their climate and SDG commitments. T57 helps governments present investable, data-backed opportunities, from model support centers to special agri zones and CSR programs, with transparent performance and impact tracking that meets both regulatory and investor expectations.
 - [How does T57 handle disputes and reduce risks for financiers and investors?](https://www.t57.ai/who-we-serve/financiers): T57 reduces risk through its curated club membership model, which ensures vetted, credible counterparties in a high-trust environment. Its virtual trade desk supports execution, manages disputes, oversees documentation, and ensures consistent transaction follow-through for greater investor confidence.
