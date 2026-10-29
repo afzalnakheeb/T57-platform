@@ -140,7 +140,7 @@ body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-
 .pwall { list-style:none; display:grid; grid-template-columns:repeat(6, minmax(0, 1fr)); gap:12px; margin:36px 0 0; padding:0; }
 .pwall li { display:grid; place-items:center; min-height:104px; padding:18px 20px; border:1px solid #ffffff1f; border-radius:14px; background:#ffffff0a; }
 .pwall img { width:auto; height:auto; max-width:100%; max-height:52px; }
-.pwall .pw-wide { grid-column:span 2; } .pwall .pw-wide img { max-height:64px; }
+.pwall .pw-wide { grid-column:span 2; } .pwall .pw-wide img { max-height:64px; } .pwall .pw-tall img { max-height:72px; }
 .pwall .pw-tx { font:600 15px/1.3 var(--font-display); color:#fff; text-align:center; }
 @media (max-width: 1000px) { .pwall { grid-template-columns:repeat(4, minmax(0, 1fr)); } } @media (max-width: 640px) { .pwall { grid-template-columns:repeat(2, minmax(0, 1fr)); } .pwall li { min-height:88px; } }
 .ms-card { margin-top:36px; padding:28px; border-radius:16px; background:var(--night); color:#fff; } .ms-card .eyebrow { color:var(--strong-cyan); } .ms-name { font:700 34px/40px var(--font-display); margin:6px 0 8px; } .ms-card p:last-child { color:#c9cdf0; max-width:62ch; margin:0; }
