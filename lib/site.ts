@@ -29,6 +29,8 @@ export const byRoute = byRouteIn.en;
 export const markup = (id: string, lang: Lang = 'en') => fs.readFileSync(path.join(base(lang), 'pages', `${id}.html`), 'utf8');
 // Changes whenever the site script changes, so browsers never run an old copy.
 export const assetVersion = crypto.createHash('sha1').update(fs.readFileSync(path.join(process.cwd(), 'public', 'proto', 'worlds.js'))).digest('hex').slice(0, 10);
+// The same for the T57 AI assistant's script and its stylesheet.
+export const assistantVersion = crypto.createHash('sha1').update(['assistant.js', 'assistant.css'].map((f) => fs.readFileSync(path.join(process.cwd(), 'public', 'assistant', f), 'utf8')).join('')).digest('hex').slice(0, 10);
 // The header and footer. The language switch points at this page in the other language when it exists.
 export function chrome(part: 'top' | 'bottom', lang: Lang = 'en', id?: string) {
   const html = fs.readFileSync(path.join(base(lang), `chrome-${part}.html`), 'utf8');
