@@ -1476,6 +1476,285 @@
   "description": "T57'de doğrulanmış kimlik, çok faktörlü giriş, role dayalı erişim, şifreleme, Azure üzerinde bölgesel veri yerelleştirme ve eksiksiz bir denetim izi.",
   "parent": "platform"
  },
+ "trust": {
+  "route": "/tr/trust",
+  "section": "trust",
+  "name": "Güven ve Uyum",
+  "h1": "Kiminle ticaret yaptığınızı bilin. Ne olduğunu kanıtlayın.",
+  "answer": "Doğrulanmış işletmelerle, tek kayıtta ve net kurallarla ticaret yapın.",
+  "faqs": [
+   {
+    "q": "T57 açık bir pazar yeri mi?",
+    "a": "Hayır. T57 yalnızca üyelere açık bir ticaret kulübüdür. Her alıcı ve satıcı ticaret yapmadan önce doğrulanır ve doğrulama yenilenir."
+   },
+   {
+    "q": "T57 paramı tutuyor mu?",
+    "a": "Hayır. Ödemeler, emanet hesabı ve akreditifler lisanslı iş ortakları tarafından yürütülür. T57 işlemi organize eder ve her adımı kaydeder."
+   },
+   {
+    "q": "Kiminle ticaret yaptığımı nasıl bilirim?",
+    "a": "Her üyenin rolünü, geçtiği kontrolleri ve ticaret geçmişini gösteren, onayla paylaşılan doğrulanmış bir T57 Pasaportu vardır."
+   },
+   {
+    "q": "Bir işlem ters giderse ne olur?",
+    "a": "T57 ortak ticaret kaydına dayalı yapılandırılmış bir anlaşmazlık süreci sunar; anlaşmazlık çözülene kadar emanet hesabı serbest bırakmayı durdurabilir."
+   }
+  ],
+  "title": "Güven ve Uyum | T57'de Doğrulanmış Gıda Ticareti",
+  "description": "Doğrulanmış üyeler, tek ticaret kaydı, denetim izi ve ödemeler için lisanslı iş ortakları. T57'nin güveni gıda ticaretinin başlangıç noktası nasıl yaptığını görün."
+ },
+ "trust-verification": {
+  "route": "/tr/trust/verification",
+  "section": "trust",
+  "name": "Doğrulama Süreci",
+  "h1": "Yalnızca ekranda değil, sahada doğrulanır.",
+  "answer": "Ticaret yapmadan önce kiminle ticaret yaptığınızı tam olarak bilin.",
+  "faqs": [
+   {
+    "q": "Doğrulama ne kadar sürüyor?",
+    "a": "İşletmeye ve saha ziyareti gerekip gerekmediğine bağlıdır. T57 her aşamada nelerin eksik olduğunu size bildirir."
+   },
+   {
+    "q": "T57 neden çiftliğimi ya da fabrikamı ziyaret ediyor?",
+    "a": "Üretici olduğunu beyan eden işletmelerin gerçekten üretim yaptığını teyit etmek için. Alıcıların üretici-sahip etiketine güvenmesini sağlayan budur."
+   },
+   {
+    "q": "Her işlem için yeniden doğrulanmam gerekiyor mu?",
+    "a": "Hayır. T57 Pasaportunuz yeniden kullanılabilir. Dönemsel olarak yenilenir; bilgileriniz değiştiğinde de siz güncellersiniz."
+   },
+   {
+    "q": "Başvurum reddedilirse ne olur?",
+    "a": "Gerekçesi size bildirilir ve bir insan tarafından inceleme talep edebilirsiniz."
+   }
+  ],
+  "title": "Doğrulama Süreci | T57 Her Üyeyi Nasıl Doğruluyor",
+  "description": "KYC, KYB, yaptırım taraması, saha ziyaretleri ve rol etiketleri: T57 her alıcıyı ve satıcıyı ticaret yapmadan önce nasıl doğruluyor.",
+  "parent": "trust"
+ },
+ "trust-kyb": {
+  "route": "/tr/trust/verification/kyb",
+  "section": "trust",
+  "name": "KYB: İşletme Doğrulaması",
+  "h1": "Her işlemin arkasındaki gerçek işletme.",
+  "answer": "Her işlemin arkasındaki işletmeyi doğrulayın.",
+  "faqs": [
+   {
+    "q": "KYB için hangi belgelere ihtiyacım var?",
+    "a": "Şirket tescili, lisanslar, yönetici ve ortak bilgileri ve banka bilgileri. Kesin liste ülkenize ve rolünüze göre değişir."
+   },
+   {
+    "q": "KYB belgelerimi kimler görüyor?",
+    "a": "T57'nin doğrulama ekibi. Diğerleri yalnızca doğrulanmış Pasaportunuzu ve yalnızca paylaşmayı seçtiğiniz kısmını görür."
+   },
+   {
+    "q": "KYB ne sıklıkla yenileniyor?",
+    "a": "Dönemsel olarak ve ortaklık ya da lisanslar gibi temel bilgiler değiştiğinde."
+   },
+   {
+    "q": "Bir kooperatif çiftçileri adına KYB'den geçebilir mi?",
+    "a": "Evet. Kooperatif ya da üretici örgütü işletme olarak doğrulanır, üye üreticiler de onun üzerinden sisteme dahil edilir."
+   }
+  ],
+  "title": "KYB İşletme Doğrulaması | T57",
+  "description": "T57 üye şirketleri nasıl doğruluyor: sicil kontrolleri, gerçek faydalanıcılar, lisanslar, banka bilgileri ve yaptırım taraması.",
+  "parent": "trust-verification"
+ },
+ "trust-kyc": {
+  "route": "/tr/trust/verification/kyc",
+  "section": "trust",
+  "name": "KYC: Kişi Doğrulaması",
+  "h1": "Her imza, doğrulanmış bir kişi.",
+  "answer": "Her üyenin sahiplerini ve onun adına hareket eden kişileri doğrulayın.",
+  "faqs": [
+   {
+    "q": "KYC'yi kimlerin tamamlaması gerekiyor?",
+    "a": "Ortaklar, yöneticiler ve T57'de şirket adına hareket edecek herkes."
+   },
+   {
+    "q": "Kimliğim diğer üyelerle paylaşılıyor mu?",
+    "a": "Hayır. Diğer üyeler belgelerinizi değil, doğrulanmış olduğunuzu görür."
+   },
+   {
+    "q": "Şirketten ayrılırsam ne olur?",
+    "a": "Şirket erişiminizi kaldırır; geçmiş eylemleriniz denetim izinde kalır."
+   },
+   {
+    "q": "Tek bir kimliği birden fazla şirket için kullanabilir miyim?",
+    "a": "Evet. Her şirket bağlantısı kendi rolü ve yetkisiyle ayrı ayrı doğrulanır."
+   }
+  ],
+  "title": "KYC Kişi Doğrulaması | T57",
+  "description": "T57 ortakları, yöneticileri ve kullanıcıları nasıl doğruluyor: her işlem için kimlik kontrolleri, yaptırım taraması ve imza yetkisi.",
+  "parent": "trust-verification"
+ },
+ "trust-scoring": {
+  "route": "/tr/trust/verification/membership-scoring",
+  "section": "trust",
+  "name": "Üyelik Puanlaması ve Güven Derecesi",
+  "h1": "İtibara değil, kanıta dayalı güven.",
+  "answer": "İşletmeniz adına geçmiş performansınız konuşsun.",
+  "faqs": [
+   {
+    "q": "Güven derecemi neler etkiler?",
+    "a": "Doğrulamanız, tamamlanmış işlemleriniz, zamanında teslim, belge doğruluğu, ödeme performansı ve ticaret ortaklarınızın geri bildirimleri."
+   },
+   {
+    "q": "Kendi derecemi görebilir miyim?",
+    "a": "Evet, arkasındaki ana etkenlerle birlikte."
+   },
+   {
+    "q": "Bir dereceye itiraz edebilir miyim?",
+    "a": "Evet. Her dereceye ya da geri bildirime itiraz edebilirsiniz; bir insan inceler."
+   },
+   {
+    "q": "Yeni üyeler sıfırdan mı başlıyor?",
+    "a": "Yeni üyeler doğrulamalarına dayalı bir dereceyle başlar; ticaret yaptıkça derece yükselir."
+   }
+  ],
+  "title": "Üyelik Puanlaması ve Güven Derecesi | T57",
+  "description": "Doğrulanmış kontroller ve gerçek ticari davranışlardan oluşturulan, her üyeye açıklanan ve insanlarca incelenen bir güven derecesi.",
+  "parent": "trust-verification"
+ },
+ "trust-audit-trail": {
+  "route": "/tr/trust/audit-trail",
+  "section": "trust",
+  "name": "Denetim İzi",
+  "h1": "Kim neyi, ne zaman yaptı. Her işlemde.",
+  "answer": "Her işlemde kimin neyi, ne zaman yaptığını görün.",
+  "faqs": [
+   {
+    "q": "Denetim izini herhangi biri düzenleyebilir mi?",
+    "a": "Hayır. Kayıtlar değiştirilemez ya da silinemez. Düzeltmeler yeni kayıtlar olarak eklenir."
+   },
+   {
+    "q": "İşlemimin denetim izini kimler görebilir?",
+    "a": "İşlemin tarafları ve onların paylaşmayı seçtiği, kredi veren ya da denetçi gibi kişiler."
+   },
+   {
+    "q": "Kayıtlar ne kadar süre saklanıyor?",
+    "a": "Her pazarda yasanın öngördüğü süre boyunca."
+   },
+   {
+    "q": "Yapay zekâ kararları kaydediliyor mu?",
+    "a": "Evet. Yapay zekâ önerileri ve bunlara ilişkin insan kararları kaydedilir."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Denetim İzi | T57 Güven ve Uyum",
+  "description": "Her işlemdeki her eylem doğrulanmış bir kişiye bağlı, zaman damgalı ve değişikliğe karşı korumalı. T57'de denetime hazır kanıt.",
+  "parent": "trust"
+ },
+ "trust-documents": {
+  "route": "/tr/trust/document-management",
+  "section": "trust",
+  "name": "Belge Yönetim Sistemi",
+  "h1": "Her ticaret belgesi, gerçeğin tek versiyonu.",
+  "answer": "Her ticaret belgesini doğru, güncel ve tek bir yerde tutun.",
+  "faqs": [
+   {
+    "q": "T57 hangi belgeleri oluşturabilir?",
+    "a": "Faturalar, çeki listeleri ve sözleşmeye dayalı formlar gibi ticari belgeler. Resmî sertifikalar ilgili makam ya da iş ortağı tarafından düzenlenir ve kayda yüklenir."
+   },
+   {
+    "q": "T57 belgelerimi kontrol ediyor mu?",
+    "a": "Yapay zekâ eksikleri ve uyumsuzlukları kontrol edip işaretler. Nihai kararları ekibiniz ve iş ortaklarınız verir."
+   },
+   {
+    "q": "Belgelerimi kimler görebilir?",
+    "a": "Yalnızca her işlem için yetki verdiğiniz taraflar."
+   },
+   {
+    "q": "Asıl kâğıt belgelere hâlâ ihtiyaç var mı?",
+    "a": "Bazı pazarlarda ve bazı belgeler için evet. T57 kâğıt asıllarının hâlâ nerede gerektiğini gösterir."
+   }
+  ],
+  "title": "Ticaret Belgesi Yönetimi | T57 Güven ve Uyum",
+  "description": "Her gıda ticareti belgesini yapay zekâ kontrolleri, süre uyarıları ve sahicilik doğrulamasıyla tek kayıtta oluşturun, kontrol edin, saklayın ve paylaşın.",
+  "parent": "trust"
+ },
+ "trust-security": {
+  "route": "/tr/trust/security",
+  "section": "trust",
+  "name": "Güvenlik ve Gizlilik",
+  "h1": "Verileriniz sizindir. Kimin göreceğine siz karar verirsiniz.",
+  "answer": "Ticaret verileriniz sizin kalır; korunur ve gizli tutulur.",
+  "faqs": [
+   {
+    "q": "T57 verilerimi satıyor mu?",
+    "a": "Hayır. T57 üyelerin bireysel verilerini satmaz. Piyasa içgörüleri toplulaştırılmış, anonimleştirilmiş verileri kullanır."
+   },
+   {
+    "q": "T57 çalışanları verilerimi görebilir mi?",
+    "a": "Yalnızca doğrulama, destek ya da uyum için ihtiyaç duyan çalışanlar, sıkı erişim kontrolleri altında görebilir ve erişimler kaydedilir."
+   },
+   {
+    "q": "Verilerimi silebilir miyim?",
+    "a": "T57'nin ya da iş ortaklarının yasa gereği saklaması gereken kayıtlar saklı kalmak üzere silinmesini talep edebilirsiniz."
+   },
+   {
+    "q": "Bir güvenlik endişesini nasıl bildiririm?",
+    "a": "Güvenlik ekibimize hello@t57.ai adresinden ulaşın."
+   }
+  ],
+  "title": "Güvenlik ve Gizlilik | T57'de Ticaret Verileriniz",
+  "description": "Çok faktörlü giriş, role dayalı erişim, onay kontrolleri ve erişim geçmişi. T57'de ticaret verilerinizi kimin göreceğine siz karar verirsiniz.",
+  "parent": "trust"
+ },
+ "trust-data-protection": {
+  "route": "/tr/trust/security/data-protection",
+  "section": "trust",
+  "name": "Veri Koruma",
+  "h1": "Her pazarda hukuka uygun veri işleme.",
+  "answer": "Ticaret yaptığımız her pazarda veriler hukuka uygun işlenir.",
+  "faqs": [
+   {
+    "q": "Verilerim nerede saklanıyor?",
+    "a": "Birden çok bölgede Microsoft Azure üzerinde. Yerel mevzuatın gerektirdiği yerlerde veriler bölge içinde saklanır."
+   },
+   {
+    "q": "Verilerime nasıl erişir ya da onları nasıl düzeltirim?",
+    "a": "Hesap ayarlarınızdan ya da veri koruma ekibimizle iletişime geçerek."
+   },
+   {
+    "q": "T57 verilerimi iş ortaklarıyla paylaşıyor mu?",
+    "a": "Yalnızca onayınızla ya da seçtiğiniz bir iş ortağı bankayla belge paylaşmak gibi bir işlemin veya yasanın gerektirdiği durumlarda."
+   },
+   {
+    "q": "T57'de veri korumadan kim sorumlu?",
+    "a": "T57'nin veri koruma sorumlusu; hello@t57.ai adresinden ulaşılabilir."
+   }
+  ],
+  "title": "Veri Koruma | PDPL, DPDP, PDPA ve KVKK Uyumu | T57",
+  "description": "T57, Suudi Arabistan ve BAE PDPL'si, Hindistan'ın DPDP Kanunu, Malezya'nın PDPA'sı ve Türkiye'nin 6698 sayılı KVKK'sı kapsamında verileri onay ve veri yerelleştirmeyle nasıl işliyor.",
+  "parent": "trust-security"
+ },
+ "trust-disputes": {
+  "route": "/tr/trust/trade-assurance/disputes",
+  "section": "trust",
+  "name": "Uyuşmazlık Çözümü",
+  "h1": "Anlaşmazlıklar en yüksek sesle bağırana göre değil, olgulara göre çözülür.",
+  "answer": "Ticari anlaşmazlıkları olgulara dayanarak hızlı ve adil biçimde çözün.",
+  "faqs": [
+   {
+    "q": "T57 hangi anlaşmazlıkları kapsıyor?",
+    "a": "T57'de yapılan işlemlerle ilgili kalite, miktar, teslim, belge ve ödeme gibi anlaşmazlıkları."
+   },
+   {
+    "q": "Kimin haklı olduğuna T57 mi karar veriyor?",
+    "a": "T57 tarafların kayda ve sözleşmelerine dayanarak anlaşmaya varmasına yardımcı olur. Anlaşamazlarsa anlaşmazlık sözleşmede belirlenen yolu izler."
+   },
+   {
+    "q": "Anlaşmazlık sırasında parama ne olur?",
+    "a": "İşlemde emanet hesabı kullanılıyorsa tartışmalı tutar, anlaşmazlık çözülene kadar lisanslı emanet iş ortağı tarafından tutulur."
+   },
+   {
+    "q": "Bir anlaşmazlık güven derecemi etkiler mi?",
+    "a": "Sonuç kaydedilir. Adil bir çözüm iki tarafın da aleyhine sayılmaz; derecenize olan her etkiye itiraz edebilirsiniz."
+   }
+  ],
+  "title": "Ticari Anlaşmazlık Çözümü | T57 Ticaret Güvencesi",
+  "description": "Gıda ticareti anlaşmazlıklarını tek bir ortak kayıttan, lisanslı iş ortakları aracılığıyla durdurulan emanet hesabı ve bağımsız gözetimle çözün.",
+  "parent": "trust"
+ },
  "markets": {
   "route": "/tr/markets",
   "section": "markets",
@@ -2062,6 +2341,57 @@
   "title": "Türkiye'de T57 ile Başlayın",
   "description": "Türkiye'de dört adımda T57'ye katılın: başvurun, doğrulanın, kurulumu yapın ve ticarete başlayın; yerel ekibimiz her adımda yanınızda.",
   "parent": "mkt-tr-overview"
+ },
+ "pricing": {
+  "route": "/tr/pricing",
+  "section": "pricing",
+  "name": "Fiyatlandırmaya Genel Bakış",
+  "h1": "Vaadi için değil, gerçekleşen ticaret için ödeyin.",
+  "answer": "Doğrulanmış ticaret için net fiyatlar; ücretler yalnızca ticaret yaptığınızda.",
+  "faqs": [
+   {
+    "q": "Ürün listelemek ya da teklif göndermek için ödeme yapıyor muyum?",
+    "a": "Hayır. Listeleme, teklif verme ve pazarlık üyeliğinize dahildir. İşlem ücreti yalnızca bir işlem tamamlandığında uygulanır."
+   },
+   {
+    "q": "T57 finansman ya da sigortadan bir şey kazanıyor mu?",
+    "a": "Evet. T57 bazı finansman ve sigorta iş ortaklarından küçük bir komisyon alır. Bu, bir iş ortağının teklifini kabul etmeden önce açıklanır."
+   },
+   {
+    "q": "Fiyatlar her ülkede aynı mı?",
+    "a": "Gösterilen fiyatlar ABD doları cinsinden standart liste fiyatlarıdır. Satın alma gücünün daha düşük olduğu pazarlarda yerel fiyatlar daha düşük olabilir. Ülkenizdeki fiyatlar için bizimle iletişime geçin."
+   },
+   {
+    "q": "Ücretsiz deneme var mı?",
+    "a": "Evet. Kurucu üyeler lansmanda 90 gün ücretsiz kullanır. Deneme süresince ağı ve araçları keşfedebilirsiniz. Ticaret, abone olup doğrulandığınızda başlar."
+   }
+  ],
+  "title": "Fiyatlandırma | Aylık 199 Dolardan Başlayan Paketler | T57",
+  "description": "Doğrulanmış gıda ticareti için açık fiyatlar: Keşif, Temel, Büyüme ve Kurumsal paketler, yıllık ödemede iki ay ücretsiz ve yalnızca tamamlanan işlemlerde küçük bir ücret."
+ },
+ "pricing-plans": {
+  "route": "/tr/pricing/plans",
+  "section": "pricing",
+  "name": "Üyelik Paketleri ve Fiyatlar",
+  "h1": "Ne kadar çok ticaret yaparsanız, işlem başına o kadar az ödersiniz.",
+  "answer": "Ne kadar ticaret yaptığınıza uyan paketi seçin.",
+  "faqs": [
+   {
+    "q": "Hangi paketi seçmeliyim?",
+    "a": "Ara sıra ticaret yapıyorsanız Keşif'le başlayın. Kabaca, aylık işlem hacminiz yeterince büyüdüğünde üst paketteki işlem ücreti tasarrufu daha yüksek üyelik bedelini karşılar. Yatırım getirisi hesaplayıcı işletmeniz için başa baş noktasını gösterir."
+   },
+   {
+    "q": "Ücretsiz deneme neleri kapsıyor?",
+    "a": "Profilinizi oluşturabilir, doğrulanmış üyeleri ve piyasa analizlerini keşfedebilir, yapay zekâ araçlarını kullanabilir ve teklif talebi gönderebilirsiniz. Doğrulama ekibimizin ve iş ortaklarımızın gerçek kontrollerini içerdiği için doğrulama, sözleşmeler, emanet hesabı ve finansman abone olduğunuzda başlar. Kurucu üyeler lansmanda 90 gün ücretsiz kullanır."
+   },
+   {
+    "q": "Paket değiştirebilir miyim?",
+    "a": "Evet. İstediğiniz zaman üst pakete geçebilir, yenileme döneminde alt pakete inebilirsiniz."
+   }
+  ],
+  "title": "Paketler ve Fiyatlar | Keşif, Temel, Büyüme, Kurumsal | T57",
+  "description": "Doğrulamanın dahil olduğu, yıllık ödemede iki ayın ücretsiz olduğu ve taraf başına işlem ücretlerinin %0,75'ten %0,20'ye indiği, aylık 199 dolardan başlayan T57 paketlerini karşılaştırın.",
+  "parent": "pricing"
  },
  "governments": {
   "route": "/tr/who-we-serve/governments",
