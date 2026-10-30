@@ -4,13 +4,19 @@
   if (window.__t57ai || location.pathname.startsWith('/decks')) return;
   window.__t57ai = true;
   const at = l => document.documentElement.lang === l || location.pathname === '/' + l || location.pathname.startsWith('/' + l + '/');
-  const ar = at('ar'), ms = !ar && at('ms'), trk = !ar && !ms && at('tr'), lang = ar ? 'ar' : ms ? 'ms' : trk ? 'tr' : 'en';
+  const ar = at('ar'), ms = !ar && at('ms'), trk = !ar && !ms && at('tr'), hi = !ar && !ms && !trk && at('hi'), lang = ar ? 'ar' : ms ? 'ms' : trk ? 'tr' : hi ? 'hi' : 'en';
   const L = ar ? {
     open: 'اسأل T57 AI', title: 'T57 AI', sub: 'إجابات من صفحات t57.ai', close: 'إغلاق', reset: 'محادثة جديدة',
     hello: 'مرحبًا بك. اسألني عن T57: العضوية والأسعار، والتمويل والضمان عبر الشركاء، والأسواق، وكيف يعمل سجل التجارة الموحّد.',
     ph: 'اكتب سؤالك…', send: 'إرسال', note: 'قد يخطئ الذكاء الاصطناعي. للتفاصيل المهمة راسلنا على hello@t57.ai',
     err: 'تعذّر الاتصال الآن. حاول مرة أخرى أو راسلنا على hello@t57.ai.', thinking: 'يكتب…',
     ask: ['ما هي T57؟', 'كيف أنضم وكم التكلفة؟', 'كيف يتم التمويل والضمان؟', 'ما الأسواق التي تغطيها T57؟'],
+  } : hi ? {
+    open: 'T57 AI से पूछें', title: 'T57 AI', sub: 't57.ai के पेजों से जवाब', close: 'बंद करें', reset: 'नई बातचीत',
+    hello: 'नमस्ते। T57 के बारे में कुछ भी पूछिए: सदस्यता और कीमतें, पार्टनरों के ज़रिए फ़ाइनेंस और एस्क्रो, हमारे बाज़ार, या एक ट्रेड रिकॉर्ड कैसे काम करता है।',
+    ph: 'अपना सवाल लिखें…', send: 'भेजें', note: 'AI से गलती हो सकती है। ज़रूरी बातों के लिए hello@t57.ai पर लिखें।',
+    err: 'T57 AI अभी जवाब नहीं दे पा रहा है। कृपया फिर कोशिश करें या hello@t57.ai पर लिखें।', thinking: 'लिख रहा है…',
+    ask: ['T57 क्या है?', 'मैं कैसे जुड़ूँ और इसकी लागत क्या है?', 'फ़ाइनेंस और एस्क्रो कैसे काम करते हैं?', 'T57 किन बाज़ारों में है?'],
   } : trk ? {
     open: "T57 AI'ya sorun", title: 'T57 AI', sub: 't57.ai sayfalarından yanıtlar', close: 'Kapat', reset: 'Yeni sohbet',
     hello: 'Hoş geldiniz. T57 hakkında her şeyi sorabilirsiniz: üyelik ve fiyatlar, iş ortakları aracılığıyla finansman ve emanet hesabı, pazarlarımız veya tek ticaret kaydının nasıl çalıştığı.',

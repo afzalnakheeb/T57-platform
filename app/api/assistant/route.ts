@@ -22,8 +22,8 @@ The name: T stands for trade built on trust, transparency and traceability; 5 fo
 HOW TO ANSWER
 - Answer only from SITE CONTENT and SITE MAP below. If they do not cover the question, say so plainly and offer the right page or hello@t57.ai. Never guess, and never fill gaps from general knowledge about other companies.
 - Write like a senior business editor: clear, confident, warm, jargon-free. Lead with the answer in the first sentence. Short paragraphs, plain words, no hype, no exclamation marks, no emoji. Usually 40 to 120 words; use a short list only when it really helps.
-- Reply in the language the visitor writes in. Arabic replies are natural Modern Standard Arabic written for Arabic readers, never a word-for-word translation. Malay replies are natural Bahasa Malaysia (Malaysian spelling and usage, never Indonesian), written for Malaysian business readers. Turkish replies are natural, formal business Turkish (siz form), written for readers in Türkiye, never a word-for-word translation.
-- Link the pages your answer comes from as Markdown links with the site path, e.g. [Pricing plans](/pricing/plans). Use only paths that appear in the SITE MAP, and prefer paths in the visitor's language (Arabic pages start with /ar, Malay pages with /ms, Turkish pages with /tr). One to three links is plenty.
+- Reply in the language the visitor writes in. Arabic replies are natural Modern Standard Arabic written for Arabic readers, never a word-for-word translation. Malay replies are natural Bahasa Malaysia (Malaysian spelling and usage, never Indonesian), written for Malaysian business readers. Turkish replies are natural, formal business Turkish (siz form), written for readers in Türkiye, never a word-for-word translation. Hindi replies are natural business Hindi in Devanagari, as Indian business media write it: the formal आप form, everyday Hindi words, and the English terms Indian businesses actually use (platform, escrow, AI), never a word-for-word translation and never heavily Sanskritised.
+- Link the pages your answer comes from as Markdown links with the site path, e.g. [Pricing plans](/pricing/plans). Use only paths that appear in the SITE MAP, and prefer paths in the visitor's language (Arabic pages start with /ar, Malay pages with /ms, Turkish pages with /tr, Hindi pages with /hi). One to three links is plenty.
 - Describe each capability with the status the site gives it (live in beta, launching, through partners, or later). Never present something planned as available today.
 - Use a number only if it appears in SITE CONTENT, and keep its source and year with it. Never invent or update statistics, prices, dates, names or partners.
 
@@ -50,6 +50,7 @@ type Msg = { role: 'user' | 'assistant'; content: string };
 const clip = (s: unknown, n: number) => String(s ?? '').slice(0, n);
 const LETTER = new RegExp('\\p{L}', 'u');
 const hasArabic = (s: string) => /[؀-ۿ]/.test(s);
+const hasDevanagari = (s: string) => /[\u0900-\u097f]/.test(s);
 const MALAY = new Set('yang dan di ke dari untuk dengan ini itu ialah adalah apa apakah bagaimana berapa bila mana siapa mengapa kenapa adakah boleh saya kami kita anda tidak tak ada akan sudah pada bagi harga kos sertai daftar ahli keahlian perdagangan makanan petani pembeli penjual syarikat kerajaan'.split(' '));
 const ENGLISH = new Set('the and is are what how much does do can i you your to of for in on with this that who where when why which join cost price member membership trade food farmer buyer seller company government'.split(' '));
 const TURKISH = new Set('ve ile bir bu ne nasıl neden nerede hangi kim için mi mı mu mü nedir var mı fiyat ücret üyelik katılmak ticaret gıda çiftçi alıcı satıcı şirket hükümet'.split(' '));
@@ -59,7 +60,7 @@ function latin(s: string, page: AssistantLang): AssistantLang {
   let m = 0, e = 0, t = 0;
   for (const w of s.toLocaleLowerCase('tr-TR').split(/[^a-zçğıöşü]+/)) { if (MALAY.has(w)) m++; if (ENGLISH.has(w)) e++; if (TURKISH.has(w)) t++; }
   const top = Math.max(m, e, t);
-  if (!top || [m, e, t].filter((x) => x === top).length > 1) return page === 'ar' ? 'en' : page;
+  if (!top || [m, e, t].filter((x) => x === top).length > 1) return page === 'ar' || page === 'hi' ? 'en' : page;
   return t === top ? 'tr' : m === top ? 'ms' : 'en';
 }
 
@@ -76,11 +77,12 @@ function limited(ip: string) {
 
 const SORRY = {
   en: 'T57 AI is not available right now. Please email hello@t57.ai and the team will reply.',
+  hi: 'T57 AI अभी उपलब्ध नहीं है। कृपया hello@t57.ai पर ईमेल करें, हमारी टीम जवाब देगी।',
   tr: 'T57 AI şu anda kullanılamıyor. Lütfen hello@t57.ai adresine e-posta gönderin, ekibimiz yanıt verecektir.',
   ms: 'T57 AI tidak tersedia buat masa ini. Sila e-mel hello@t57.ai dan pasukan kami akan membalas.',
   ar: 'المساعد غير متاح الآن. يسعدنا تواصلك عبر hello@t57.ai وسيرد عليك فريقنا.',
-  busy: { en: 'T57 AI has reached its limit for now. Please try again later, or email hello@t57.ai.', ar: 'وصل المساعد إلى حده المؤقت. حاول لاحقًا أو راسلنا على hello@t57.ai.', ms: 'T57 AI telah mencapai hadnya buat masa ini. Sila cuba lagi nanti, atau e-mel hello@t57.ai.', tr: 'T57 AI şimdilik kullanım sınırına ulaştı. Lütfen daha sonra tekrar deneyin ya da hello@t57.ai adresine yazın.' },
-  refused: { en: 'I can only help with questions about T57 and food trade. For anything else, please email hello@t57.ai.', ar: 'أستطيع المساعدة في الأسئلة المتعلقة بـ T57 وتجارة الغذاء فقط. لأي استفسار آخر راسلنا على hello@t57.ai.', ms: 'Saya hanya boleh membantu dengan soalan tentang T57 dan perdagangan makanan. Bagi perkara lain, sila e-mel hello@t57.ai.', tr: 'Yalnızca T57 ve gıda ticaretiyle ilgili sorularda yardımcı olabilirim. Diğer konular için lütfen hello@t57.ai adresine yazın.' },
+  busy: { en: 'T57 AI has reached its limit for now. Please try again later, or email hello@t57.ai.', ar: 'وصل المساعد إلى حده المؤقت. حاول لاحقًا أو راسلنا على hello@t57.ai.', ms: 'T57 AI telah mencapai hadnya buat masa ini. Sila cuba lagi nanti, atau e-mel hello@t57.ai.', tr: 'T57 AI şimdilik kullanım sınırına ulaştı. Lütfen daha sonra tekrar deneyin ya da hello@t57.ai adresine yazın.', hi: 'T57 AI अभी अपनी सीमा तक पहुँच गया है। कृपया बाद में फिर कोशिश करें, या hello@t57.ai पर ईमेल करें।' },
+  refused: { en: 'I can only help with questions about T57 and food trade. For anything else, please email hello@t57.ai.', ar: 'أستطيع المساعدة في الأسئلة المتعلقة بـ T57 وتجارة الغذاء فقط. لأي استفسار آخر راسلنا على hello@t57.ai.', ms: 'Saya hanya boleh membantu dengan soalan tentang T57 dan perdagangan makanan. Bagi perkara lain, sila e-mel hello@t57.ai.', tr: 'Yalnızca T57 ve gıda ticaretiyle ilgili sorularda yardımcı olabilirim. Diğer konular için lütfen hello@t57.ai adresine yazın.', hi: 'मैं केवल T57 और खाद्य व्यापार से जुड़े सवालों में मदद कर सकता हूँ। बाकी किसी भी बात के लिए कृपया hello@t57.ai पर ईमेल करें।' },
 };
 const reply = (status: number, error: string, text: string) =>
   new Response(JSON.stringify({ error, text }), { status, headers: { 'content-type': 'application/json' } });
@@ -88,7 +90,7 @@ const reply = (status: number, error: string, text: string) =>
 export async function POST(req: Request) {
   let body: { messages?: Msg[]; lang?: string; path?: string };
   try { body = await req.json(); } catch { return reply(400, 'bad_request', SORRY.en); }
-  const pageLang: AssistantLang = body.lang === 'ar' || body.lang === 'ms' || body.lang === 'tr' ? body.lang : 'en';
+  const pageLang: AssistantLang = body.lang === 'ar' || body.lang === 'ms' || body.lang === 'tr' || body.lang === 'hi' ? body.lang : 'en';
   const messages = (Array.isArray(body.messages) ? body.messages : [])
     .filter((m) => (m?.role === 'user' || m?.role === 'assistant') && typeof m.content === 'string' && m.content.trim())
     .slice(-12)
@@ -98,7 +100,7 @@ export async function POST(req: Request) {
   if (!last || last.role !== 'user') return reply(400, 'empty', SORRY[pageLang]);
   // Answer from the pages in the language of the question (Arabic script → Arabic pages; Latin script → Malay or English pages,
   // by which language's common words the question uses, with the page's language deciding a tie).
-  const lang: AssistantLang = hasArabic(last.content) ? 'ar' : LETTER.test(last.content) ? latin(last.content, pageLang) : pageLang;
+  const lang: AssistantLang = hasArabic(last.content) ? 'ar' : hasDevanagari(last.content) ? 'hi' : LETTER.test(last.content) ? latin(last.content, pageLang) : pageLang;
 
   const key = (process.env.ANTHROPIC_API_KEY || '').trim().replace(/^["']|["']$/g, '');
   if (!key) return reply(503, 'not_configured', SORRY[lang]);

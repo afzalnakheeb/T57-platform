@@ -236,9 +236,9 @@ print('built', len(pages), 'pages,', n[0], 'ledgers')
 # Other languages: a page is built under /<lang> once every text unit on it, and its title and description,
 # have a translation in prototype/<lang>/*.json (see i18n.py). Links to translated pages stay in the language.
 import glob, i18n
-LANGS = ['ar', 'ms', 'tr']
+LANGS = ['ar', 'ms', 'tr', 'hi']
 # The header's language switch lists every other language, each named in its own language.
-SWITCH = {'en': ('/', 'English', 'EN'), 'ar': ('/ar', 'العربية', 'عربي'), 'ms': ('/ms', 'Bahasa Malaysia', 'BM'), 'tr': ('/tr', 'Türkçe', 'TR')}
+SWITCH = {'en': ('/', 'English', 'EN'), 'ar': ('/ar', 'العربية', 'عربي'), 'ms': ('/ms', 'Bahasa Malaysia', 'BM'), 'tr': ('/tr', 'Türkçe', 'TR'), 'hi': ('/hi', 'हिन्दी', 'हिं')}
 def switch(lang):
     return '<div class="langs">' + ''.join(f'<a class="lang-sw" href="{h}" hreflang="{l}" lang="{l}"><span class="ls-l">{a}</span><span class="ls-s" aria-hidden="true">{b}</span></a>'
                                            for l, (h, a, b) in SWITCH.items() if l != lang) + '</div>'

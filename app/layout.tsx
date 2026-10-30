@@ -22,8 +22,8 @@ export const viewport = { themeColor: '#2f2e7d' };
 // The inline script covers the screen (or, inside a microsite, hides the content) before first paint when arriving from
 // another microsite, so the petal transition continues without a flash. If the page script is slow or fails to load,
 // the cover lifts after 3 seconds anyway, so a page can never stay hidden. Arabic pages get their language and right-to-left
-// direction here too, before anything paints, and Malay pages their language.
-const arrive = `var d=document.documentElement,p=location.pathname;if(p==='/ar'||p.indexOf('/ar/')===0){d.lang='ar';d.dir='rtl'}else if(p==='/ms'||p.indexOf('/ms/')===0){d.lang='ms'}else if(p==='/tr'||p.indexOf('/tr/')===0){d.lang='tr'}try{var g=sessionStorage.getItem('t57-go');if(g)document.documentElement.classList.add(g.indexOf('lift:')===0?'lifting':'arriving')}catch(e){}setTimeout(function(){d.classList.remove('arriving','lifting')},3000)`;
+// direction here too, before anything paints, and Malay, Turkish and Hindi pages their language.
+const arrive = `var d=document.documentElement,p=location.pathname;if(p==='/ar'||p.indexOf('/ar/')===0){d.lang='ar';d.dir='rtl'}else if(p==='/ms'||p.indexOf('/ms/')===0){d.lang='ms'}else if(p==='/tr'||p.indexOf('/tr/')===0){d.lang='tr'}else if(p==='/hi'||p.indexOf('/hi/')===0){d.lang='hi'}try{var g=sessionStorage.getItem('t57-go');if(g)document.documentElement.classList.add(g.indexOf('lift:')===0?'lifting':'arriving')}catch(e){}setTimeout(function(){d.classList.remove('arriving','lifting')},3000)`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

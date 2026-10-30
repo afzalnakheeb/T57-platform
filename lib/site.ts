@@ -17,14 +17,14 @@ const OG = { url: `${SITE}/og.png`, width: 1200, height: 630, alt: 'T57: trade f
 const dir = path.join(process.cwd(), 'content');
 // English is the default at the root; each other language lives under /<lang> with its own built pages
 // (prototype/build.py writes content/<lang>/ for every page that is fully translated).
-export type Lang = 'en' | 'ar' | 'ms' | 'tr';
-export const LANGS: Lang[] = ['en', 'ar', 'ms', 'tr'];
+export type Lang = 'en' | 'ar' | 'ms' | 'tr' | 'hi';
+export const LANGS: Lang[] = ['en', 'ar', 'ms', 'tr', 'hi'];
 const base = (lang: Lang) => (lang === 'en' ? dir : path.join(dir, lang));
 const load = (lang: Lang): Record<string, PageInfo> => JSON.parse(fs.readFileSync(path.join(base(lang), 'pages.json'), 'utf8'));
-export const pagesIn: Record<Lang, Record<string, PageInfo>> = { en: load('en'), ar: load('ar'), ms: load('ms'), tr: load('tr') };
+export const pagesIn: Record<Lang, Record<string, PageInfo>> = { en: load('en'), ar: load('ar'), ms: load('ms'), tr: load('tr'), hi: load('hi') };
 export const pages = pagesIn.en;
 const routes = (lang: Lang) => Object.fromEntries(Object.entries(pagesIn[lang]).map(([id, p]) => [p.route, id]));
-export const byRouteIn: Record<Lang, Record<string, string>> = { en: routes('en'), ar: routes('ar'), ms: routes('ms'), tr: routes('tr') };
+export const byRouteIn: Record<Lang, Record<string, string>> = { en: routes('en'), ar: routes('ar'), ms: routes('ms'), tr: routes('tr'), hi: routes('hi') };
 export const byRoute = byRouteIn.en;
 export const markup = (id: string, lang: Lang = 'en') => fs.readFileSync(path.join(base(lang), 'pages', `${id}.html`), 'utf8');
 // Changes whenever the site script changes, so browsers never run an old copy.
@@ -57,7 +57,7 @@ export function metadataFor(id: string, lang: Lang = 'en') {
     alternates: { canonical: url, ...(languages['x-default'] ? { languages } : {}) },
     openGraph: a
       ? { title: p.title, description: p.description, url, siteName: 'T57.ai', type: 'article' as const, publishedTime: a.date, authors: [a.author], section: a.topic, images: [og] }
-      : { title: p.title, description: p.description, url, siteName: 'T57.ai', type: 'website' as const, images: [og], locale: lang === 'ar' ? 'ar_SA' : lang === 'ms' ? 'ms_MY' : lang === 'tr' ? 'tr_TR' : 'en_US' },
+      : { title: p.title, description: p.description, url, siteName: 'T57.ai', type: 'website' as const, images: [og], locale: lang === 'ar' ? 'ar_SA' : lang === 'ms' ? 'ms_MY' : lang === 'tr' ? 'tr_TR' : lang === 'hi' ? 'hi_IN' : 'en_US' },
     twitter: { card: 'summary_large_image', title: p.title, description: p.description, images: [og.url] },
   };
 }

@@ -95,7 +95,7 @@ def norm(s):
 def split(text):
     if len(text) <= MAX: return [text]
     out, cur = [], ''
-    for s in re.split(r'(?<=[.!?؟。])\s+|\n', text):
+    for s in re.split(r'(?<=[.!?؟。।])\s+|\n', text):
         if cur and len(cur) + len(s) > MAX:
             out.append(cur.strip()); cur = ''
         cur += s + ' '
@@ -128,5 +128,5 @@ def build(lang):
     print(lang, len(pages), 'pages', len(chunks), 'passages', os.path.getsize(out) // 1024, 'KB')
 
 
-for lang in ('en', 'ar', 'ms', 'tr'):
+for lang in ('en', 'ar', 'ms', 'tr', 'hi'):
     build(lang)
