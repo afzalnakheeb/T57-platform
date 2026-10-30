@@ -583,6 +583,78 @@
   "description": "LC yang disediakan daripada kontrak anda, dikeluarkan oleh bank rakan kongsi dalam kira-kira 15 minit selepas kelulusan, dengan semakan percanggahan AI dan pengemukaan digital di T57.",
   "parent": "cap-trust-payments"
  },
+ "cap-banking": {
+  "route": "/ms/capabilities/finance/banking",
+  "section": "capabilities",
+  "name": "Perbankan & Pergerakan Wang",
+  "h1": "Berbank dan gerakkan wang di tempat anda berdagang.",
+  "answer": "Berbank, tukar dan gerakkan wang merentas sempadan, dalam apa jua mata wang, di tempat anda berdagang.",
+  "faqs": [
+   {
+    "q": "Adakah T57 sebuah bank?",
+    "a": "Bukan. T57 menghubungkan ahli yang disahkan dengan rakan kongsi perbankan dan pembayaran berlesen serta mengaitkan perkhidmatan mereka dengan rekod dagangan."
+   },
+   {
+    "q": "Bolehkah saya mengekalkan bank sedia ada?",
+    "a": "Boleh. Anda boleh terus menggunakan bank anda sendiri dan menyambungkannya ke T57, atau menggunakan rakan kongsi T57 bersamanya."
+   },
+   {
+    "q": "Adakah perkhidmatan aset digital tersedia di semua tempat?",
+    "a": "Tidak. Ia hanya ditawarkan di tempat yang dibenarkan undang-undang, melalui rakan kongsi terkawal."
+   }
+  ],
+  "title": "Perbankan & Pergerakan Wang untuk Perdagangan Makanan | T57",
+  "description": "Perbankan digital, akaun dalam apa jua mata wang, pindahan rentas sempadan dan penyelesaian aset digital terkawal untuk perniagaan makanan yang disahkan di T57.",
+  "parent": "capabilities"
+ },
+ "cap-digital-bank": {
+  "route": "/ms/capabilities/finance/digital-bank",
+  "section": "capabilities",
+  "name": "Perbankan Digital",
+  "h1": "Perbankan perniagaan, dibuka dengan Pasport anda.",
+  "answer": "Perbankan perniagaan yang dibina di sekitar dagangan makanan anda, dibuka dengan Pasport T57 anda.",
+  "faqs": [
+   {
+    "q": "Siapa yang menyediakan akaun bank?",
+    "a": "Rakan kongsi perbankan berlesen di pasaran anda, di bawah terma dan peraturannya sendiri."
+   },
+   {
+    "q": "Adakah saya perlu memindahkan perbankan sedia ada?",
+    "a": "Tidak. Anda boleh menggunakan rakan kongsi perbankan T57 bersama bank semasa anda."
+   },
+   {
+    "q": "Negara mana yang diliputi?",
+    "a": "Pasaran pengasas T57 terlebih dahulu (Arab Saudi, UAE, India, Malaysia dan Türkiye), dengan lebih banyak ditambah apabila rakan kongsi menyertai."
+   }
+  ],
+  "title": "Perbankan Perniagaan Digital untuk Perniagaan Makanan | T57",
+  "description": "Akaun perniagaan dalam apa jua mata wang, kad dan penyelesaian hampir serta-merta daripada rakan kongsi berlesen, dibuka dengan Pasport T57 anda dan dikaitkan dengan setiap dagangan.",
+  "parent": "cap-banking"
+ },
+ "cap-any-currency": {
+  "route": "/ms/capabilities/finance/multi-currency",
+  "section": "capabilities",
+  "name": "Akaun Apa Jua Mata Wang & Kiriman Wang",
+  "h1": "Apa jua mata wang. Kadar dipaparkan dahulu.",
+  "answer": "Simpan, tukar dan hantar wang dalam apa jua mata wang, pada kadar yang anda lihat sebelum membayar.",
+  "faqs": [
+   {
+    "q": "Mata wang apakah yang boleh saya simpan dan hantar?",
+    "a": "Apa jua mata wang yang diperlukan dagangan anda, melalui rakan kongsi perbankan dan pembayaran T57."
+   },
+   {
+    "q": "Berapa lama pindahan mengambil masa?",
+    "a": "Bayaran antara ahli T57 diselesaikan hampir dalam masa nyata. Pindahan luar bergantung pada destinasi dan rangkaian rakan kongsi, dan anggaran masa dipaparkan sebelum anda mengesahkan."
+   },
+   {
+    "q": "Bolehkah saya menghantar kiriman wang peribadi?",
+    "a": "Jika ditawarkan oleh rakan kongsi, ahli perniagaan yang disahkan boleh menghantar kiriman wang untuk kakitangan. T57 dibina untuk bayaran perniagaan, bukan akaun peribadi."
+   }
+  ],
+  "title": "Akaun Apa Jua Mata Wang untuk Perdagangan Makanan | T57",
+  "description": "Simpan, tukar dan hantar wang dalam apa jua mata wang dengan kadar di awal dan pindahan rentas sempadan yang pantas, dikaitkan dengan setiap dagangan di T57.",
+  "parent": "cap-banking"
+ },
  "markets": {
   "route": "/ms/markets",
   "section": "markets",
