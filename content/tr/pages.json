@@ -3354,5 +3354,59 @@
   "title": "Yatırımcı İlişkileri | T57'ye Yatırım Yapın",
   "description": "T57 lansman yatırım turunu Riyad'dan topluyor. Çekiş gücünü, iş ortaklarını ve ekibi görün; nitelikli yatırımcı olarak yatırımcı dosyasını talep edin.",
   "parent": "about"
+ },
+ "legal": {
+  "route": "/tr/legal",
+  "section": "legal",
+  "name": "Hukuki Bilgiler ve Politikalar",
+  "h1": "Açık politikalar, sade bir dille.",
+  "answer": "T57'nin verilerinizi nasıl işlediği, bu web sitesinin kullanım koşulları, sitenin tarayıcınızda kullandığı depolama ve siteyi nasıl erişilebilir kıldığımız.",
+  "faqs": [],
+  "title": "Hukuki Bilgiler ve Politikalar | T57",
+  "description": "t57.ai web sitesi için T57 gizlilik bildirimi, kullanım koşulları, çerez politikası ve erişilebilirlik beyanı; sade bir dille."
+ },
+ "legal-privacy": {
+  "route": "/tr/legal/privacy",
+  "section": "legal",
+  "name": "Gizlilik Bildirimi",
+  "h1": "Neleri topluyoruz, ve neden.",
+  "answer": "T57'nin bu web sitesi aracılığıyla iletilen kişisel verileri nasıl işlediği ve bu veriler üzerindeki haklarınız.",
+  "faqs": [],
+  "title": "Gizlilik Bildirimi | T57",
+  "description": "t57.ai'nin hangi kişisel verileri topladığı, T57'nin bunları neden kullandığı, kimlerle paylaşıldığı, ne kadar süre saklandığı ve haklarınızı nasıl kullanabileceğiniz.",
+  "parent": "legal"
+ },
+ "legal-terms": {
+  "route": "/tr/legal/terms",
+  "section": "legal",
+  "name": "Kullanım Koşulları",
+  "h1": "t57.ai'nin kullanım koşulları.",
+  "answer": "Bu web sitesinin kullanım kuralları; sitenin ne olduğu ve ne olmadığı.",
+  "faqs": [],
+  "title": "Kullanım Koşulları | T57",
+  "description": "t57.ai web sitesinin kullanımını düzenleyen koşullar: iş ortağı hizmetleri, bilgilerin doğruluğu, fikrî mülkiyet ve uygulanacak hukuk.",
+  "parent": "legal"
+ },
+ "legal-cookies": {
+  "route": "/tr/legal/cookies",
+  "section": "legal",
+  "name": "Çerez Politikası",
+  "h1": "İzleme yok. Reklam çerezi yok.",
+  "answer": "Bu web sitesinin tarayıcınızda neleri sakladığı ve asla neleri yapmadığı.",
+  "faqs": [],
+  "title": "Çerez Politikası | T57",
+  "description": "t57.ai hiçbir izleme veya reklam çerezi kullanmaz. Sitenin kullandığı üç küçük tarayıcı depolama öğesini ve bunları nasıl kontrol edebileceğinizi görün.",
+  "parent": "legal"
+ },
+ "legal-accessibility": {
+  "route": "/tr/legal/accessibility",
+  "section": "legal",
+  "name": "Erişilebilirlik Beyanı",
+  "h1": "Herkesin kullanabileceği şekilde tasarlandı.",
+  "answer": "Erişilebilirlik standardımız, sitede sunduklarımız, bilinen eksikler ve bir sorunu bize nasıl bildirebileceğiniz.",
+  "faqs": [],
+  "title": "Erişilebilirlik Beyanı | T57",
+  "description": "t57.ai'nin WCAG 2.2 AA düzeyini nasıl karşıladığı, bilinen sınırlamalar, test yöntemimiz ve T57'ye bir erişilebilirlik sorununu nasıl bildirebileceğiniz.",
+  "parent": "legal"
  }
 }
