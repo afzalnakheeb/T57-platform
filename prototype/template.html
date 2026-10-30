@@ -1121,7 +1121,7 @@ a.cm-pt:hover text { text-decoration:underline; }
 .pwall .pw-tx { font:600 15px/1.3 var(--font-display); color:#fff; text-align:center; }
 @media (max-width: 1000px) { .pwall { grid-template-columns:repeat(4, minmax(0, 1fr)); } }
 /* Home: one hero (the explainer is its only visual), a trust strip, AI and the club side by side, one row of logos */
-.home-in:has(.hero-fx) { grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); column-gap:56px; align-items:center; }
+@media (min-width: 901px) { .home-in:has(.hero-fx) { grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); column-gap:56px; align-items:center; } }
 .hero-fx { box-shadow:0 32px 80px -32px #000a; border:1px solid #c9cdf026; }
 .trust-strip { list-style:none; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px 32px; max-width:1200px; margin:0 auto; padding:20px 0 28px; border-top:1px solid #c9cdf026; color:var(--on-night-muted); font-size:15px; line-height:22px; }
 .trust-strip b { font:700 20px/22px var(--font-display); color:#fff; margin-inline-end:6px; }
