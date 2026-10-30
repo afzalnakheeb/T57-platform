@@ -871,6 +871,134 @@
   "description": "Jana dokumen eksport dan import daripada kontrak anda, dapatkan panduan kod HS dan semakan ketekalan, dan pra-lepaskan penghantaran makanan dengan ejen yang disaring di T57.",
   "parent": "cap-logistics"
  },
+ "cap-intelligence": {
+  "route": "/ms/capabilities/intelligence",
+  "section": "capabilities",
+  "name": "Risikan & Data",
+  "h1": "Berdagang dengan gambaran penuh.",
+  "answer": "Berdagang dengan gambaran penuh: harga, bekalan, rakan dagang dan pasaran, dalam setiap urus niaga.",
+  "faqs": [
+   {
+    "q": "Dari mana datangnya data T57?",
+    "a": "Sumber pasaran dan dagangan awam, rakan kongsi data berlesen, dan data dagangan di T57 yang dianonimkan dan diagregat."
+   },
+   {
+    "q": "Adakah data dagangan saya dikongsi dengan ahli lain?",
+    "a": "Tidak. Dagangan individu tidak pernah dipaparkan. Ia hanya menyumbang kepada statistik yang dianonimkan dan diagregat."
+   },
+   {
+    "q": "Adakah risikan termasuk dalam keahlian?",
+    "a": "Risikan teras disertakan. Peringkat keahlian yang lebih tinggi menawarkan data lebih mendalam, laporan kredit dan ramalan."
+   }
+  ],
+  "title": "Risikan Perdagangan Makanan | Harga, Ramalan, Kredit | T57",
+  "description": "Indeks harga makanan, ramalan bekalan dan permintaan, sokongan rundingan AI, laporan kredit dan data dagangan pelabuhan, terbina dalam perdagangan makanan di T57.",
+  "parent": "capabilities"
+ },
+ "cap-price-index": {
+  "route": "/ms/capabilities/intelligence/price-index",
+  "section": "capabilities",
+  "name": "Indeks Harga Makanan Langsung",
+  "h1": "Harga makanan hari ini, daripada dagangan sebenar.",
+  "answer": "Harga makanan semasa mengikut produk, gred dan asal usul, dibina daripada dagangan sebenar.",
+  "faqs": [
+   {
+    "q": "Bagaimana indeks T57 dikira?",
+    "a": "Ia menggabungkan data pasaran awam, rakan kongsi data berlesen dan harga dagangan T57 yang disahkan, dianonimkan dan diagregat, dengan kaedah yang menghalang harga mana-mana ahli secara individu daripada dikenal pasti."
+   },
+   {
+    "q": "Berapa kerap ia dikemas kini?",
+    "a": "Ia dikemas kini apabila data pasaran baharu tiba dan apabila dagangan yang disahkan ditutup di T57. Sesetengah baris dikemas kini setiap hari, yang lain setiap minggu, bergantung pada jumlah dagangan."
+   },
+   {
+    "q": "Bolehkah bukan ahli melihat indeks?",
+    "a": "Sebahagian baris indeks dipaparkan secara awam di laman web T57. Butiran penuh, sejarah dan amaran tersedia kepada ahli."
+   }
+  ],
+  "title": "Indeks Harga Makanan Langsung mengikut Produk & Asal Usul | T57",
+  "description": "Harga makanan semasa mengikut produk, gred dan asal usul daripada data awam dan dagangan disahkan yang dianonimkan. Tanda aras sebut harga dan tetapkan amaran di T57.",
+  "parent": "cap-intelligence"
+ },
+ "cap-negotiations": {
+  "route": "/ms/capabilities/intelligence/ai-negotiations",
+  "section": "capabilities",
+  "name": "Enjin Rundingan AI",
+  "h1": "Berunding dengan data dan AI di belakang anda.",
+  "answer": "Rundingkan setiap urus niaga makanan dengan data pasaran dan persediaan AI di belakang anda.",
+  "faqs": [
+   {
+    "q": "Adakah AI berunding bagi pihak saya?",
+    "a": "Tidak. Ia menyediakan dan mencadangkan. Anda yang memutuskan apa yang hendak ditawarkan, dibalas atau diterima, dan tiada apa dihantar tanpa pengesahan anda."
+   },
+   {
+    "q": "Bolehkah pihak sebelah melihat cadangan enjin kepada saya?",
+    "a": "Tidak. Taklimat dan cadangan anda adalah sulit untuk anda sahaja."
+   },
+   {
+    "q": "Data apakah yang digunakan enjin?",
+    "a": "Indeks harga T57, data dagangan yang dianonimkan dan diagregat, profil awam T57 dan rekod prestasi rakan dagang, serta kos dan sejarah anda sendiri jika anda memilih untuk menambahnya."
+   }
+  ],
+  "title": "Enjin Rundingan AI untuk Perdagangan Makanan | T57",
+  "description": "AI yang menyediakan taklimat rundingan, menanda aras tawaran dan mencadangkan tawaran balas untuk urus niaga makanan, sementara manusia membuat setiap keputusan, di T57.",
+  "parent": "cap-intelligence"
+ },
+ "cap-equipment-rental": {
+  "route": "/ms/capabilities/agritech/equipment-rental",
+  "section": "capabilities",
+  "name": "Sewaan Peralatan & Teknologi",
+  "h1": "Sewa teknologi yang terlalu mahal untuk dimiliki.",
+  "answer": "Traktor, dron, penderia, bilik sejuk dan ujian makmal, ditempah mengikut hari, hektar atau kerja.",
+  "faqs": [
+   {
+    "q": "Bolehkah saya menyenaraikan peralatan atau dron saya untuk disewa?",
+    "a": "Boleh. Ahli yang disahkan menyenaraikan peralatan dan perkhidmatan dengan harga, kawasan liputan dan ketersediaan."
+   },
+   {
+    "q": "Adakah saya perlu tahu cara mengendalikannya?",
+    "a": "Tidak. Tempahnya bersama pengendali terlatih, atau tempah kerjanya sahaja, seperti menyembur 10 hektar."
+   },
+   {
+    "q": "Siapa yang bertanggungjawab jika ada yang rosak?",
+    "a": "Terma sewaan, rekod keadaan dan sebarang insurans menetapkan tanggungjawab. Pertikaian dikendalikan mengikut terma tersebut dan peraturan rakan kongsi pembayaran."
+   },
+   {
+    "q": "Apa yang berlaku kepada pemilik yang mendapat penarafan rendah?",
+    "a": "Penarafan hanya datang daripada kerja yang direkodkan. Aduan berulang yang disahkan membawa kepada penggantungan dan kemudian penyingkiran daripada T57."
+   }
+  ],
+  "title": "Sewa Peralatan Ladang, Dron & Agroteknologi | T57",
+  "description": "Sewa traktor, dron, penderia, bilik sejuk dan ujian makmal daripada pemilik yang disahkan, mengikut hari, hektar atau kerja, dengan bayaran eskrow di T57.",
+  "parent": "capabilities"
+ },
+ "cap-hire-expert": {
+  "route": "/ms/capabilities/hire-an-expert",
+  "section": "capabilities",
+  "name": "Khidmat Pakar",
+  "h1": "Pakar yang tepat, pada harga sehidang makan.",
+  "answer": "Ahli agronomi, pemeriksa, saintis makanan dan pakar pembungkusan di seluruh ekosistem makanan, ditempah mengikut kerja dan dinilai oleh ahli.",
+  "faqs": [
+   {
+    "q": "Bagaimana pakar disemak?",
+    "a": "Identiti, kelayakan dan rujukan disahkan sebelum pakar boleh menerima kerja."
+   },
+   {
+    "q": "Bagaimana jika nasihatnya salah atau kerja tidak dibuat?",
+    "a": "Anda boleh membangkitkan pertikaian sebelum bayaran dilepaskan. Aduan yang disahkan dikira terhadap pakar itu, dan aduan berulang membawa kepada penyingkiran."
+   },
+   {
+    "q": "Adakah pakar mengesyorkan bahan kimia?",
+    "a": "Pakar hanya mengesyorkan produk yang diluluskan di negara pelanggan dan merekodkan dos yang dinasihatkan."
+   },
+   {
+    "q": "Bolehkah syarikat saya menawarkan perkhidmatan?",
+    "a": "Boleh. Firma menyertai sebagai penyedia perkhidmatan; individu menyertai sebagai pakar."
+   }
+  ],
+  "title": "Upah Pakar Makanan & Pertanian | T57",
+  "description": "Upah ahli agronomi, pemeriksa, saintis makanan dan pakar pembungkusan yang disahkan mengikut kerja, dengan harga dipersetujui di awal, bayaran eskrow dan penarafan, di T57.",
+  "parent": "capabilities"
+ },
  "markets": {
   "route": "/ms/markets",
   "section": "markets",
