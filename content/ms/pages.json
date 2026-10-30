@@ -999,6 +999,293 @@
   "description": "Upah ahli agronomi, pemeriksa, saintis makanan dan pakar pembungkusan yang disahkan mengikut kerja, dengan harga dipersetujui di awal, bayaran eskrow dan penarafan, di T57.",
   "parent": "capabilities"
  },
+ "ai-native": {
+  "route": "/ms/ai-native",
+  "section": "ai-native",
+  "name": "Berteraskan AI",
+  "h1": "AI dalam setiap langkah dagangan. Manusia membuat setiap keputusan.",
+  "answer": "T57 berteraskan AI. Inilah maksudnya bagi perniagaan anda.",
+  "faqs": [
+   {
+    "q": "Apakah maksud \"berteraskan AI\" di T57?",
+    "a": "AI terbina dalam setiap langkah dagangan, daripada padanan dan harga hingga pematuhan dan dokumen, bukan ditambah sebagai alat berasingan."
+   },
+   {
+    "q": "Adakah AI membuat keputusan tentang perniagaan saya?",
+    "a": "AI memberi cadangan dan menanda isu. Manusia membuat keputusan, dan setiap keputusan negatif disemak oleh manusia."
+   },
+   {
+    "q": "Data apakah yang digunakan AI T57?",
+    "a": "Rekod dagangan yang disahkan, data pasaran, dagangan dan iklim awam, data berlesen daripada rakan kongsi, dan pengetahuan petani yang direkodkan dengan persetujuan. Data ahli secara individu tidak pernah dikongsi dengan ahli lain."
+   },
+   {
+    "q": "Mengapa model kecil dan tempatan?",
+    "a": "Makanan bersifat global tetapi sangat tempatan. Model kecil yang dilatih untuk sesuatu rantau, tanaman dan rantaian nilai lebih memahami keadaan dan bahasa tempatan, lebih murah untuk dijalankan dan lebih mudah diuji serta diterangkan."
+   }
+  ],
+  "title": "Platform Perdagangan Makanan Berteraskan AI | Cara T57 Menggunakan AI",
+  "description": "Model AI kecil dan tempatan untuk padanan, harga, ramalan, pematuhan dan dokumen merentas perdagangan makanan. AI menasihati, manusia membuat keputusan, di T57."
+ },
+ "ai-matchmaking": {
+  "route": "/ms/ai-native/trade-matchmaking",
+  "section": "ai-native",
+  "name": "Padanan Dagangan AI",
+  "h1": "Rakan dagang yang tepat, dalam minit, bukan minggu.",
+  "answer": "Cari pembeli atau pembekal yang disahkan dan tepat dalam beberapa minit, disusun mengikut kesesuaian dan rekod prestasi.",
+  "faqs": [
+   {
+    "q": "Bolehkah pembekal membayar untuk kedudukan lebih tinggi?",
+    "a": "Tidak. Kedudukan berdasarkan kesesuaian, pengesahan dan rekod prestasi, tidak sekali-kali berdasarkan bayaran."
+   },
+   {
+    "q": "Mengapa rakan dagang tertentu dicadangkan?",
+    "a": "Setiap cadangan menunjukkan sebab utamanya, seperti padanan produk, kapasiti, pengalaman koridor dan prestasi tepat masa."
+   }
+  ],
+  "title": "Padanan Dagangan AI untuk Pembeli & Pembekal Makanan | T57",
+  "description": "AI menyusun pembeli dan pembekal makanan yang disahkan mengikut spesifikasi, kapasiti, koridor dan rekod prestasi, dan menerangkan setiap padanan, di T57.",
+  "parent": "ai-native"
+ },
+ "ai-negotiations": {
+  "route": "/ms/ai-native/negotiations",
+  "section": "ai-native",
+  "name": "Enjin Rundingan AI",
+  "h1": "Masuki setiap rundingan dengan memahami pasaran.",
+  "answer": "AI yang menyediakan setiap rundingan dengan data pasaran, dan menyerahkan setiap keputusan kepada anda.",
+  "faqs": [
+   {
+    "q": "Adakah AI berunding bagi pihak saya?",
+    "a": "Tidak. Ia menyediakan dan mencadangkan. Anda yang memutuskan setiap tawaran dan penerimaan."
+   },
+   {
+    "q": "Bolehkah kedua-dua pihak menggunakan enjin dalam urus niaga yang sama?",
+    "a": "Boleh. Setiap pihak mendapat taklimat sulitnya sendiri berdasarkan data pasaran awam yang sama."
+   }
+  ],
+  "title": "Sokongan Rundingan AI untuk Perdagangan Makanan | T57 Berteraskan AI",
+  "description": "Cara AI rundingan T57 menanda aras tawaran, menilai terma bayaran dan penghantaran serta mencadangkan tawaran balas, sementara manusia membuat setiap keputusan.",
+  "parent": "ai-native"
+ },
+ "ai-orders": {
+  "route": "/ms/ai-native/llm-orders",
+  "section": "ai-native",
+  "name": "Pesanan Dagangan Berasaskan LLM",
+  "h1": "Nota suara masuk. Pesanan disahkan keluar.",
+  "answer": "Tukar mesej WhatsApp atau nota suara kepada pesanan dagangan berstruktur yang disahkan.",
+  "faqs": [
+   {
+    "q": "Bahasa apakah yang disokong?",
+    "a": "Bahasa Arab, Inggeris, Hindi, Melayu dan Turki, dengan lebih banyak ditambah apabila T57 berkembang ke pasaran baharu."
+   },
+   {
+    "q": "Apa yang berlaku jika AI tidak pasti?",
+    "a": "Ia bertanya soalan pendek dan bukan meneka, dan pesanan tidak dihantar sehingga anda mengesahkannya."
+   }
+  ],
+  "title": "Pesanan Dagangan Berasaskan LLM melalui WhatsApp & Suara | T57 Berteraskan AI",
+  "description": "Cara model bahasa T57 menukar mesej WhatsApp dan nota suara kepada pesanan dagangan makanan berstruktur yang disahkan, dalam bahasa Arab dan bahasa tempatan.",
+  "parent": "ai-native"
+ },
+ "ai-price-index": {
+  "route": "/ms/ai-native/price-index",
+  "section": "ai-native",
+  "name": "Indeks Harga Makanan Langsung, Dikuasakan AI",
+  "h1": "Harga untuk setiap gred dan asal usul, dengan penjelasan.",
+  "answer": "Harga yang dibina AI bagi setiap produk, gred dan asal usul, diterangkan dalam bahasa mudah.",
+  "faqs": [
+   {
+    "q": "Sejauh mana ketepatan anggaran AI?",
+    "a": "Setiap harga menunjukkan tahap keyakinan. Ketepatan diukur dengan membandingkan anggaran dengan dagangan disahkan yang berikutnya, dan hasilnya diterbitkan mengikut kumpulan produk."
+   },
+   {
+    "q": "Bolehkah indeks dimanipulasi dengan dagangan palsu?",
+    "a": "Hanya dagangan antara ahli yang disahkan dikira, nilai luar biasa dikesan dan dikurangkan pemberatnya, dan tiada satu dagangan pun boleh menggerakkan indeks secara bersendirian."
+   }
+  ],
+  "title": "Indeks Harga Makanan Berkuasa AI | T57 Berteraskan AI",
+  "description": "Cara AI T57 menganggarkan harga bagi setiap produk, gred dan asal usul makanan daripada data pasaran dan dagangan yang disahkan, dengan tahap keyakinan dan penjelasan.",
+  "parent": "ai-native"
+ },
+ "ai-forecasting": {
+  "route": "/ms/ai-native/supply-demand-forecasting",
+  "section": "ai-native",
+  "name": "Ramalan Bekalan & Permintaan",
+  "h1": "Lihat kekurangan dan lebihan lebih awal, beberapa minggu sebelumnya.",
+  "answer": "Lihat kekurangan, lebihan dan perubahan harga yang akan datang, beberapa minggu sebelum ia sampai kepada anda.",
+  "faqs": [
+   {
+    "q": "Berapa jauh ke hadapan ramalan ini melihat?",
+    "a": "Daripada beberapa minggu hingga satu musim, bergantung pada produk dan data yang tersedia. Setiap ramalan menunjukkan julatnya."
+   },
+   {
+    "q": "Bolehkah kerajaan menggunakan ramalan ini?",
+    "a": "Boleh. Kerajaan dan institusi boleh mengakses status bekalan dan ramalan yang diagregat melalui paparan sekuriti makanan T57."
+   }
+  ],
+  "title": "Ramalan Bekalan & Permintaan Makanan AI | T57 Berteraskan AI",
+  "description": "Ramalan AI bagi bekalan, permintaan dan harga makanan mengikut produk dan asal usul, dengan isyarat status bekalan dan amaran untuk pembeli, penjual dan kerajaan.",
+  "parent": "ai-native"
+ },
+ "ai-risk": {
+  "route": "/ms/ai-native/risk-intelligence",
+  "section": "ai-native",
+  "name": "Risikan Risiko & Peta Haba",
+  "h1": "Setiap risiko kepada dagangan anda, dalam satu peta.",
+  "answer": "Lihat setiap risiko kepada dagangan anda dalam satu peta: rakan dagang, laluan, pasaran dan cuaca.",
+  "faqs": [
+   {
+    "q": "Bolehkah saya melihat skor risiko saya sendiri?",
+    "a": "Boleh. Ahli boleh melihat skor yang berkaitan dengan mereka dan sebab utamanya, serta boleh meminta semakan semula."
+   },
+   {
+    "q": "Siapa lagi yang boleh melihat peta haba risiko?",
+    "a": "Pemberi pinjaman dan syarikat insurans hanya melihat risiko bagi dagangan yang anda kongsi dengan mereka. Kerajaan melihat paparan yang diagregat dan dianonimkan."
+   }
+  ],
+  "title": "Risikan Risiko AI untuk Perdagangan Makanan | T57 Berteraskan AI",
+  "description": "Skor risiko dan peta haba AI bagi rakan dagang, laluan, pasaran dan iklim dalam perdagangan makanan, dengan faktor yang boleh diterangkan dan amaran awal, di T57.",
+  "parent": "ai-native"
+ },
+ "ai-crop-yield": {
+  "route": "/ms/ai-native/crop-yield-forecasting",
+  "section": "ai-native",
+  "name": "Ramalan Tanaman & Hasil",
+  "h1": "Ketahui hasil tuaian anda sebelum ia berlaku.",
+  "answer": "Ketahui berapa banyak ladang anda akan hasilkan, dan bila, sebelum musim menuai.",
+  "faqs": [
+   {
+    "q": "Adakah petani memerlukan peralatan khas?",
+    "a": "Tidak. Ramalan menggunakan data satelit dan cuaca. Petani boleh menambah pemerhatian melalui suara atau foto daripada telefon pintar biasa, atau melalui koperasi mereka."
+   },
+   {
+    "q": "Siapa yang boleh melihat ramalan sesebuah ladang?",
+    "a": "Petani atau koperasi, dan sesiapa yang mereka pilih untuk berkongsi, seperti pembeli atau pemberi pinjaman."
+   }
+  ],
+  "title": "Ramalan Tanaman & Hasil AI | T57 Berteraskan AI",
+  "description": "Ramalan hasil dan musim menuai peringkat ladang daripada model AI tempatan, data satelit dan cuaca, serta pengetahuan petani, untuk petani, koperasi, pembeli dan pemberi pinjaman.",
+  "parent": "ai-native"
+ },
+ "ai-profit-loss": {
+  "route": "/ms/ai-native/profit-loss-prediction",
+  "section": "ai-native",
+  "name": "Ramalan Untung & Rugi",
+  "h1": "Ketahui sama ada ia menguntungkan sebelum anda membuat komitmen.",
+  "answer": "Ketahui sama ada sesuatu tanaman, dagangan atau musim akan menguntungkan sebelum anda membuat komitmen.",
+  "faqs": [
+   {
+    "q": "Adakah ramalan ini satu jaminan?",
+    "a": "Tidak. Ia menunjukkan hasil yang paling mungkin dan julatnya, berdasarkan data semasa. Hasil sebenar bergantung pada cuaca, pasaran dan pelaksanaan."
+   },
+   {
+    "q": "Bolehkah saya menambah kos sendiri?",
+    "a": "Boleh. Menambah kos sendiri menjadikan ramalan lebih tepat, dan data anda kekal sulit."
+   }
+  ],
+  "title": "Ramalan Untung & Rugi AI untuk Dagangan Makanan | T57",
+  "description": "Ramalkan margin sesuatu tanaman, kontrak atau dagangan daripada hasil, harga dan kos, dengan harga pulang modal dan perbandingan senario, di T57.",
+  "parent": "ai-native"
+ },
+ "ai-crop-planning": {
+  "route": "/ms/ai-native/crop-planning",
+  "section": "ai-native",
+  "name": "Perancangan Tanaman & Analitik AI",
+  "h1": "Tanam apa yang akan dikehendaki pasaran.",
+  "answer": "Rancang apa yang hendak ditanam, bila dan berapa banyak, berdasarkan apa yang akan dikehendaki pasaran.",
+  "faqs": [
+   {
+    "q": "Adakah AI memberitahu saya dengan tepat apa yang perlu ditanam?",
+    "a": "Ia mengesyorkan pilihan dengan anggaran hasil dan margin. Anda yang memutuskan, dan anda boleh melaraskan pelan pada bila-bila masa."
+   },
+   {
+    "q": "Bolehkah koperasi merancang untuk semua ahlinya?",
+    "a": "Boleh. Koperasi boleh membina pelan merentas ladang ahli untuk mengimbangi bekalan dan memenuhi permintaan pembeli."
+   }
+  ],
+  "title": "Perancangan Tanaman & Analitik Ladang AI | T57 Berteraskan AI",
+  "description": "Pelan tanaman AI berdasarkan permintaan pasaran, tanah, air dan iklim, dengan anggaran hasil, margin dan analitik musim, untuk petani dan koperasi.",
+  "parent": "ai-native"
+ },
+ "ai-agronomy": {
+  "route": "/ms/ai-native/agronomy-ai",
+  "section": "ai-native",
+  "name": "Rangkaian Pakar Agronomi, Dibantu AI",
+  "h1": "Nasihat pertanian dalam bahasa anda, dalam beberapa minit.",
+  "answer": "Nasihat pertanian pakar dalam bahasa anda sendiri, daripada AI terlebih dahulu dan ahli agronomi apabila benar-benar perlu.",
+  "faqs": [
+   {
+    "q": "Bahasa apakah yang dituturkan AI agronomi?",
+    "a": "Bahasa tempatan di pasaran T57, bermula dengan bahasa Arab, Hindi, Melayu, Turki dan Inggeris dan berkembang ke bahasa serantau, termasuk melalui suara."
+   },
+   {
+    "q": "Siapakah ahli agronominya?",
+    "a": "Ahli agronomi dan pakar pertanian yang disahkan yang menyertai T57 sebagai penyedia perkhidmatan. Kelayakan mereka disemak sebelum mereka boleh memberi nasihat."
+   }
+  ],
+  "title": "Nasihat Agronomi AI untuk Petani | T57 Berteraskan AI",
+  "description": "Nasihat tanaman serta-merta dalam bahasa tempatan daripada AI, dengan ahli agronomi yang disahkan untuk kes rumit. Diagnosis melalui foto dan suara untuk petani di T57.",
+  "parent": "ai-native"
+ },
+ "ai-compliance": {
+  "route": "/ms/ai-native/ai-compliance",
+  "section": "ai-native",
+  "name": "Pematuhan & KYC Berkuasa AI",
+  "h1": "Disahkan lebih pantas. Disemak oleh manusia.",
+  "answer": "Sahkan perniagaan dan saring setiap dagangan dengan lebih pantas, dengan manusia menyemak setiap keputusan negatif.",
+  "faqs": [
+   {
+    "q": "Bolehkah AI menolak permohonan saya?",
+    "a": "Tidak. AI boleh menanda isu, tetapi hanya manusia boleh membuat keputusan negatif, dan anda boleh meminta semakan semula."
+   },
+   {
+    "q": "Bagaimana data saya dilindungi?",
+    "a": "Data anda digunakan untuk pengesahan dan hanya dikongsi dengan rakan kongsi atas persetujuan anda, di bawah dasar privasi T57 dan undang-undang perlindungan data yang terpakai."
+   }
+  ],
+  "title": "Saringan KYC, KYB & Pematuhan Berkuasa AI | T57 Berteraskan AI",
+  "description": "Semakan dokumen AI, padanan pemilikan dan saringan sekatan untuk perniagaan makanan, dengan manusia menyemak setiap keputusan negatif, di T57.",
+  "parent": "ai-native"
+ },
+ "ai-analytics": {
+  "route": "/ms/ai-native/predictive-analytics",
+  "section": "ai-native",
+  "name": "Papan Pemuka Analitik Dagangan Ramalan",
+  "h1": "Lihat ke mana perniagaan anda sedang menuju.",
+  "answer": "Lihat ke mana perniagaan dagangan anda sedang menuju, bukan sekadar di mana ia pernah berada.",
+  "faqs": [
+   {
+    "q": "Adakah saya perlu memuat naik data sendiri?",
+    "a": "Tidak. Papan pemuka dibina daripada aktiviti anda di T57. Anda boleh menambah data lain, seperti kos, untuk ramalan yang lebih baik."
+   },
+   {
+    "q": "Bolehkah saya berkongsi papan pemuka dengan pemberi pinjaman saya?",
+    "a": "Boleh. Anda boleh berkongsi paparan terpilih dengan pemberi pinjaman atau pelabur, dengan persetujuan anda."
+   }
+  ],
+  "title": "Papan Pemuka Analitik Dagangan Ramalan | T57 Berteraskan AI",
+  "description": "Ramalan AI bagi jumlah, margin dan tunai, dengan amaran tentang pembayar lambat dan risiko pembekal, serta cadangan tindakan untuk perniagaan dagangan makanan di T57.",
+  "parent": "ai-native"
+ },
+ "ai-documents": {
+  "route": "/ms/ai-native/ai-documentation",
+  "section": "ai-native",
+  "name": "Penjanaan Dokumen Dagangan AI",
+  "h1": "Satu sebut harga diterima. Setiap dokumen, disemak.",
+  "answer": "Jana kontrak, invois dan dokumen dagangan daripada satu sebut harga yang diterima, disemak oleh AI.",
+  "faqs": [
+   {
+    "q": "Adakah kontrak yang dijana AI mengikat dari segi undang-undang?",
+    "a": "Kontrak menjadi mengikat apabila pihak-pihak menandatanganinya. T57 menggunakan terma perdagangan standard, dan ahli boleh meminta peguam mereka sendiri menyemak mana-mana dokumen."
+   },
+   {
+    "q": "Dokumen apakah yang boleh dijana?",
+    "a": "Kontrak, invois proforma dan komersial, senarai pembungkusan, permohonan LC dan dokumen sokongan, serta data untuk sijil dan pengisytiharan kastam."
+   }
+  ],
+  "title": "Penjanaan & Semakan Dokumen Dagangan AI | T57 Berteraskan AI",
+  "description": "Jana kontrak, invois dan senarai pembungkusan daripada sebut harga yang diterima, dan kesan percanggahan LC dan kastam dengan semakan AI, di T57.",
+  "parent": "ai-native"
+ },
  "markets": {
   "route": "/ms/markets",
   "section": "markets",
