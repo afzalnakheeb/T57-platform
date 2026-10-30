@@ -2985,6 +2985,69 @@
   "description": "Fakta syarikat, logo, foto kepimpinan dan maklumat hubungan media T57 untuk wartawan.",
   "parent": "about"
  },
+ "contact": {
+  "route": "/ms/contact",
+  "section": "contact",
+  "name": "Hubungi Kami",
+  "h1": "Hubungi T57. Kami akan menemukan pasukan yang tepat.",
+  "answer": "Hubungi T57.",
+  "faqs": [
+   {
+    "q": "Berapa cepat anda akan membalas?",
+    "a": "Dalam tempoh dua hari bekerja."
+   },
+   {
+    "q": "Bolehkah saya menghubungi anda dalam bahasa Melayu atau Arab?",
+    "a": "Ya."
+   },
+   {
+    "q": "Di manakah anda berpangkalan?",
+    "a": "Dalam talian, di mana-mana sahaja. T57 ialah platform SaaS global yang boleh disertai mana-mana perniagaan makanan dari mana-mana negara. Projek perintis bermula di Arab Saudi, UAE, India, Malaysia dan Türkiye."
+   }
+  ],
+  "title": "Hubungi T57",
+  "description": "Hubungi T57 untuk menyertai, melihat demo, bekerjasama, bekerja bersama kami dalam sekuriti makanan, atau untuk pertanyaan media."
+ },
+ "contact-demo": {
+  "route": "/ms/contact/demo",
+  "section": "contact",
+  "name": "Tempah Demo",
+  "h1": "Lihat T57 berfungsi dengan produk anda sendiri.",
+  "answer": "Tempah demo 30 minit berdasarkan produk dan pasaran anda sendiri, kemudian mulakan percubaan percuma anda.",
+  "faqs": [
+   {
+    "q": "Adakah demo ini percuma?",
+    "a": "Ya."
+   },
+   {
+    "q": "Bolehkah pasukan saya turut serta?",
+    "a": "Boleh, jemput seberapa ramai rakan sekerja yang anda mahu."
+   }
+  ],
+  "title": "Tempah Demo | T57",
+  "description": "Tempah demo T57 selama 30 minit berdasarkan produk dan pasaran anda sendiri, kemudian mulakan percubaan percuma anda.",
+  "parent": "contact"
+ },
+ "contact-offices": {
+  "route": "/ms/contact/offices",
+  "section": "contact",
+  "name": "Di Mana Kami Beroperasi",
+  "h1": "Sertai T57 dari mana-mana sahaja.",
+  "answer": "T57 ialah platform SaaS global. Projek perintis bermula di lima negara, dan mana-mana perniagaan makanan, di mana-mana di dunia, boleh memohon dalam talian dan menyertai.",
+  "faqs": [
+   {
+    "q": "Perlukah saya melawat pejabat?",
+    "a": "Tidak. T57 ialah platform SaaS global, jadi anda memohon, disahkan dan berdagang dalam talian. Untuk bertemu pasukan, e-mel ke hello@t57.ai."
+   },
+   {
+    "q": "Siapa yang menyokong negara saya?",
+    "a": "Di lima pasaran perintis, pasukan tempatan. Di tempat lain, pasukan global kami, melalui sembang atau di hello@t57.ai."
+   }
+  ],
+  "title": "Di Mana T57 Beroperasi | SaaS Global, Lima Pasaran Perintis",
+  "description": "T57 ialah platform SaaS global untuk perdagangan makanan. Projek perintis bermula di Arab Saudi, UAE, India, Malaysia dan Türkiye, dan mana-mana perniagaan boleh menyertai dalam talian dari mana-mana sahaja.",
+  "parent": "contact"
+ },
  "governments": {
   "route": "/ms/who-we-serve/governments",
   "section": "who-we-serve",
@@ -3291,5 +3354,59 @@
   "title": "Perhubungan Pelabur | Melabur dalam T57",
   "description": "T57 sedang mengumpul dana pusingan pelancarannya dari Riyadh. Lihat daya tarikan, rakan kongsi dan pasukannya, dan minta pek pelabur sebagai pelabur yang layak.",
   "parent": "about"
+ },
+ "legal": {
+  "route": "/ms/legal",
+  "section": "legal",
+  "name": "Perundangan & Dasar",
+  "h1": "Dasar yang jelas, ditulis dengan mudah.",
+  "answer": "Bagaimana T57 mengendalikan data anda, terma penggunaan laman web ini, storan pelayar yang digunakannya dan cara kami menjadikannya mudah diakses.",
+  "faqs": [],
+  "title": "Perundangan & Dasar | T57",
+  "description": "Notis privasi, terma penggunaan, dasar kuki dan penyata kebolehcapaian T57 untuk laman web t57.ai, dalam bahasa mudah."
+ },
+ "legal-privacy": {
+  "route": "/ms/legal/privacy",
+  "section": "legal",
+  "name": "Notis Privasi",
+  "h1": "Apa yang kami kumpul, dan mengapa.",
+  "answer": "Bagaimana T57 mengendalikan data peribadi yang dihantar melalui laman web ini, dan hak anda ke atasnya.",
+  "faqs": [],
+  "title": "Notis Privasi | T57",
+  "description": "Data peribadi yang dikumpul t57.ai, sebab T57 menggunakannya, dengan siapa ia dikongsi, berapa lama ia disimpan dan cara melaksanakan hak anda.",
+  "parent": "legal"
+ },
+ "legal-terms": {
+  "route": "/ms/legal/terms",
+  "section": "legal",
+  "name": "Terma Penggunaan",
+  "h1": "Terma untuk menggunakan t57.ai.",
+  "answer": "Peraturan penggunaan laman web ini, serta apa yang ia ada dan tiada.",
+  "faqs": [],
+  "title": "Terma Penggunaan | T57",
+  "description": "Terma yang mengawal penggunaan laman web t57.ai, termasuk perkhidmatan rakan kongsi, ketepatan maklumat, harta intelek dan undang-undang yang mentadbir.",
+  "parent": "legal"
+ },
+ "legal-cookies": {
+  "route": "/ms/legal/cookies",
+  "section": "legal",
+  "name": "Dasar Kuki",
+  "h1": "Tiada penjejakan. Tiada kuki iklan.",
+  "answer": "Apa yang disimpan laman web ini dalam pelayar anda, dan apa yang tidak sekali-kali dilakukannya.",
+  "faqs": [],
+  "title": "Dasar Kuki | T57",
+  "description": "t57.ai tidak menetapkan kuki penjejakan atau pengiklanan. Lihat tiga item storan pelayar kecil yang digunakan laman web ini dan cara mengawalnya.",
+  "parent": "legal"
+ },
+ "legal-accessibility": {
+  "route": "/ms/legal/accessibility",
+  "section": "legal",
+  "name": "Penyata Kebolehcapaian",
+  "h1": "Dibina untuk digunakan oleh semua.",
+  "answer": "Piawaian kebolehcapaian kami, apa yang telah kami bina, jurang yang diketahui dan cara memaklumkan kami tentang masalah.",
+  "faqs": [],
+  "title": "Penyata Kebolehcapaian | T57",
+  "description": "Bagaimana t57.ai memenuhi WCAG 2.2 AA, batasan yang diketahui, cara kami menguji dan cara melaporkan masalah kebolehcapaian kepada T57.",
+  "parent": "legal"
  }
 }
