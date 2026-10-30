@@ -2,9 +2,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 
-// Investor videos shared by access code at /videos. Private files (the investor pitch) are kept in
-// private-videos/<name>.enc, encrypted by scripts/videos-encrypt.mjs, because this repository is public.
-// The server decrypts them only for a visitor holding the access-code cookie. Public site films are linked as they are.
+// Investor videos shared by access code at /videos. The pitch is encrypted by scripts/videos-encrypt.mjs,
+// because this repository is public, and served as a plain static file (public/video/pitch/investor-pitch.enc);
+// the page hands its key only to a visitor holding the access-code cookie, and the browser decrypts it.
+// That plays on every browser and lets the visitor save the MP4. The poster is served by app/videos/file/[name].
 //   VIDEO_ACCESS_CODE  the code T57 sends to investors (changing it signs everyone out)
 //   VIDEO_KEY          optional, 32 random bytes, base64: decrypts the private files and signs the cookie;
 //                      without it both use a key derived from VIDEO_ACCESS_CODE, so use a long code
@@ -13,7 +14,7 @@ export type Film = { id: string; title: string; summary: string; length: string;
 export const FEATURED: Film = {
   id: 'investor-pitch', title: 'The T57 investor pitch', length: '2:48',
   summary: 'The problem, the platform, the five founding markets, the revenue plan and the raise, narrated by our founder.',
-  src: '/videos/file/investor-pitch.mp4', poster: '/videos/file/investor-pitch.jpg',
+  src: '/video/pitch/investor-pitch.enc', poster: '/videos/file/investor-pitch.jpg',
   note: 'Confidential. For qualified investors only. Forecasts and returns are the management base case: illustrative, not a promise.',
 };
 
@@ -21,7 +22,7 @@ export const FEATURED: Film = {
 export const FILMS: Film[] = [];
 
 // The only files /videos/file/<name> will serve.
-export const PRIVATE_FILES: Record<string, string> = { 'investor-pitch.mp4': 'video/mp4', 'investor-pitch.jpg': 'image/jpeg' };
+export const PRIVATE_FILES: Record<string, string> = { 'investor-pitch.jpg': 'image/jpeg' };
 
 export const COOKIE = 't57_videos';
 // The pitch key comes from VIDEO_KEY when set, else from the access code itself through scrypt, which is
@@ -37,6 +38,8 @@ const key = () => {
   return derived.key;
 };
 export const codeKey = (code: string) => crypto.scryptSync(code, SALT, 32, { N: 2 ** 17, r: 8, p: 1, maxmem: 256 * 1024 * 1024 });
+// The key the browser needs to decrypt the pitch; only ever sent to a visitor with access.
+export const pitchKey = () => key()!.toString('base64');
 export const configured = () => Boolean(process.env.VIDEO_ACCESS_CODE);
 // Only the file route bundles private-videos/, so this must not look for the files on disk.
 export const pitchReady = () => Boolean(key());
