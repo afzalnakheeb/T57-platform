@@ -236,10 +236,17 @@ print('built', len(pages), 'pages,', n[0], 'ledgers')
 # Other languages: a page is built under /<lang> once every text unit on it, and its title and description,
 # have a translation in prototype/<lang>/*.json (see i18n.py). Links to translated pages stay in the language.
 import glob, i18n
-LANGS = ['ar']
+LANGS = ['ar', 'ms']
+# The header's language switch lists every other language, each named in its own language.
+SWITCH = {'en': ('/', 'English', 'EN'), 'ar': ('/ar', 'العربية', 'عربي'), 'ms': ('/ms', 'Bahasa Malaysia', 'BM')}
+def switch(lang):
+    return '<div class="langs">' + ''.join(f'<a class="lang-sw" href="{h}" hreflang="{l}" lang="{l}"><span class="ls-l">{a}</span><span class="ls-s" aria-hidden="true">{b}</span></a>'
+                                           for l, (h, a, b) in SWITCH.items() if l != lang) + '</div>'
+LANGSW = re.compile(r'<div class="langs">.*?</div>')
 for lang in LANGS:
     tr = {}
     for f in sorted(glob.glob(f'{D}/{lang}/*.json')): tr.update(json.load(open(f)))
+    if not tr: continue
     if lang == 'ar':
         # a right-to-left mark after closing punctuation keeps it at the end of the line inside left-to-right SVG text
         tr = {k: re.sub(r'([.:!؟،])$', '\\1\u200f', v) for k, v in tr.items()}
@@ -270,10 +277,10 @@ for lang in LANGS:
     json.dump([[i, q['route'], q['name'], sec_l(i), q['h1'], q['answer'], heads(done[i]), ' · '.join(f['q'] for f in q['faqs'])] for i, q in lp.items()],
               open(f'{R}/public/proto/search-{lang}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     for part in ('top', 'bottom'):
-        src = open(f'{R}/content/chrome-{part}.html').read()
+        src, k = LANGSW.subn('<div class="langs"></div>', open(f'{R}/content/chrome-{part}.html').read())
+        assert part == 'bottom' or k == 1
         miss = set(); c = i18n.apply(src, tr, miss)
         assert not miss, f'{lang} chrome-{part} untranslated: {sorted(miss)[:8]}'
-        c, k = re.subn(r'<a class="lang-sw" href="/[a-z]+" hreflang="[a-z]+" lang="[a-z]+">.*?</a>', f'<a class="lang-sw" href="/" hreflang="en" lang="en"><span class="ls-l">English</span><span class="ls-s" aria-hidden="true">EN</span></a>', c)
-        assert part == 'bottom' or k == 1
-        open(f'{R}/content/{lang}/chrome-{part}.html', 'w').write(relang(c))
+        # the switch goes in after relang, so its links keep pointing at the other languages
+        open(f'{R}/content/{lang}/chrome-{part}.html', 'w').write(relang(c).replace('<div class="langs"></div>', switch(lang)))
     print(lang, len(done), 'pages translated')

@@ -56,7 +56,15 @@
   ].map(([name, group, unit, a, b]) => ({ name, group, unit, prev: a, last: b, ch: (b - a) / a * 100 }));
   // Arabic labels for the market board and other text the script writes (pages under /ar set <html lang="ar">).
   const AR = document.documentElement.lang === 'ar';
-  const TX = AR ? { 'Food Price Index': 'مؤشر أسعار الغذاء', Cereals: 'الحبوب', 'Vegetable oils': 'الزيوت النباتية', Dairy: 'الألبان', Meat: 'اللحوم', Sugar: 'السكر',
+  // Bahasa Malaysia labels (pages under /ms set <html lang="ms">).
+  const MS = document.documentElement.lang === 'ms';
+  const TX = MS ? { 'Food Price Index': 'Indeks Harga Makanan', Cereals: 'Bijirin', 'Vegetable oils': 'Minyak sayuran', Dairy: 'Tenusu', Meat: 'Daging', Sugar: 'Gula',
+    'Wheat, US HRW': 'Gandum, HRW AS', 'Wheat, US SRW': 'Gandum, SRW AS', Maize: 'Jagung', 'Rice, Thai 5%': 'Beras Thai 5%', 'Rice, Viet Nam 5%': 'Beras Vietnam 5%',
+    Soybeans: 'Kacang soya', 'Soybean oil': 'Minyak soya', 'Palm oil': 'Minyak sawit', 'Coffee, Arabica': 'Kopi Arabika', Cocoa: 'Koko', Tea: 'Teh', Beef: 'Daging lembu', Chicken: 'Ayam',
+    Oranges: 'Oren', Bananas: 'Pisang', Urea: 'Urea', 'DAP fertilizer': 'Baja DAP', 'Brent crude': 'Minyak mentah Brent', Grains: 'Bijirin', 'Oils and oilseeds': 'Minyak dan biji minyak',
+    'Sugar and softs': 'Gula dan komoditi lembut', 'Proteins and produce': 'Protein dan hasil segar', 'Inputs and energy': 'Input dan tenaga',
+    Explore: 'Teroka', Core: 'Teras', Growth: 'Pertumbuhan', Enterprise: 'Perusahaan', ' (from)': ' (dari)',
+    'on the month': 'berbanding bulan lalu', 'on the year': 'berbanding tahun lalu', 'on a year earlier': 'berbanding setahun lalu', trillion: 'trilion', Replay: 'Main semula', Play: 'Main', Pause: 'Jeda' } : AR ? { 'Food Price Index': 'مؤشر أسعار الغذاء', Cereals: 'الحبوب', 'Vegetable oils': 'الزيوت النباتية', Dairy: 'الألبان', Meat: 'اللحوم', Sugar: 'السكر',
     'Wheat, US HRW': 'القمح الأمريكي الصلب', 'Wheat, US SRW': 'القمح الأمريكي الطري', Maize: 'الذرة', 'Rice, Thai 5%': 'الأرز التايلندي 5%', 'Rice, Viet Nam 5%': 'الأرز الفيتنامي 5%',
     Soybeans: 'فول الصويا', 'Soybean oil': 'زيت الصويا', 'Palm oil': 'زيت النخيل', 'Coffee, Arabica': 'البن العربي', Cocoa: 'الكاكاو', Tea: 'الشاي', Beef: 'لحم البقر', Chicken: 'الدجاج',
     Oranges: 'البرتقال', Bananas: 'الموز', Urea: 'اليوريا', 'DAP fertilizer': 'سماد DAP', 'Brent crude': 'خام برنت', Grains: 'الحبوب', 'Oils and oilseeds': 'الزيوت والبذور الزيتية',
@@ -64,7 +72,7 @@
     Explore: 'استكشاف', Core: 'الأساسية', Growth: 'النمو', Enterprise: 'الشركات', ' (from)': ' (ابتداءً من)',
     'on the month': 'على أساس شهري', 'on the year': 'على أساس سنوي', 'on a year earlier': 'عن العام السابق', trillion: 'تريليون', Replay: 'إعادة', Play: 'تشغيل', Pause: 'إيقاف مؤقت' } : {};
   const tx = s => TX[s] || s;
-  const DATE_LOCALE = AR ? 'ar-u-ca-gregory-nu-latn' : 'en-US';
+  const DATE_LOCALE = AR ? 'ar-u-ca-gregory-nu-latn' : MS ? 'ms-MY' : 'en-US';
   const IMPORT_BILL_PER_YEAR = 2.22e12; // FAO Food Outlook, Nov 2025 (2025 forecast)
 
   /* ---------- Living scenes ---------- */
@@ -383,7 +391,7 @@
     // import bill counter, paced from the annual figure
     const ib = document.querySelector('[data-importbill]');
     if (ib) { const y0 = Date.UTC(new Date().getUTCFullYear(), 0, 1), perMs = IMPORT_BILL_PER_YEAR / (365 * 864e5);
-      const tick = () => { const v = (Date.now() - y0) * perMs; ib.textContent = AR ? (v / 1e12).toFixed(4) + ' ' + tx('trillion') + ' دولار' : '$' + (v / 1e12).toFixed(4) + ' trillion'; if (!reduce) requestAnimationFrame(tick); }; tick(); }
+      const tick = () => { const v = (Date.now() - y0) * perMs; ib.textContent = AR ? (v / 1e12).toFixed(4) + ' ' + tx('trillion') + ' دولار' : MS ? 'US$' + (v / 1e12).toFixed(4) + ' trilion' : '$' + (v / 1e12).toFixed(4) + ' trillion'; if (!reduce) requestAnimationFrame(tick); }; tick(); }
   })();
 
   /* ---------- Scroll storytelling ---------- */
@@ -645,7 +653,7 @@
       out('gross').textContent = usd(gross);
       out('plan').textContent = tx(best[0]);
       out('fees').textContent = usd(best[1]) + (best[0] === 'Enterprise' ? tx(' (from)') : '');
-      out('ctx').textContent = AR ? `${v('role')} في ${v('market')}، بحجم تجارة شهري قدره ${usd(vol / 12)}.` : `For a ${v('role').toLowerCase()} in ${v('market')}, on ${usd(vol / 12)} of trade a month.`;
+      out('ctx').textContent = AR ? `${v('role')} في ${v('market')}، بحجم تجارة شهري قدره ${usd(vol / 12)}.` : MS ? `Bagi ${v('role').toLowerCase()} di ${v('market')}, dengan dagangan ${usd(vol / 12)} sebulan.` : `For a ${v('role').toLowerCase()} in ${v('market')}, on ${usd(vol / 12)} of trade a month.`;
       out('rows').innerHTML = costs.map(([n, t]) => `<tr${n === best[0] ? ' class="on"' : ''}><th scope="row">${tx(n)}</th><td>${usd(t)}${n === 'Enterprise' ? tx(' (from)') : ''}</td></tr>`).join('');
     }
     f.addEventListener('input', run); run();
@@ -687,17 +695,17 @@
     // Arabic: drop short vowels and tatweel, and fold alef, yaa and taa marbuta forms, so spelling variants still match.
     const norm = t => String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f\u064b-\u0652\u0670\u0640]/g, '').replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه');
     let IDX = null, sel = -1;
-    const load = () => IDX ? Promise.resolve(IDX) : fetch(AR ? '/proto/search-ar.json' : '/proto/search.json').then(r => r.json()).then(d => (IDX = d.map(([id, route, name, sec, h1, ans, hd, faq]) => ({ id, route, name, sec, ans, f: [norm(name), norm(h1), norm(hd + ' ' + faq), norm(ans + ' ' + sec)] }))));
+    const load = () => IDX ? Promise.resolve(IDX) : fetch(AR ? '/proto/search-ar.json' : MS ? '/proto/search-ms.json' : '/proto/search.json').then(r => r.json()).then(d => (IDX = d.map(([id, route, name, sec, h1, ans, hd, faq]) => ({ id, route, name, sec, ans, f: [norm(name), norm(h1), norm(hd + ' ' + faq), norm(ans + ' ' + sec)] }))));
     const mark = (t, words) => { let h = esc(t); words.forEach(w => { h = h.replace(new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>'); }); return h; };
     const row = (p, words) => `<li role="option" aria-selected="false"><a href="${p.route}" data-go="${p.id}">${p.sec ? `<small>${esc(p.sec)}</small>` : ''}<b>${mark(p.name, words)}</b><span>${mark(p.ans, words)}</span></a></li>`;
     const pick = n => { const it = [...list.children]; if (!it.length) return; sel = (n + it.length) % it.length; it.forEach((li, k) => li.setAttribute('aria-selected', k === sel ? 'true' : 'false')); it[sel].scrollIntoView({ block: 'nearest' }); };
     const run = () => {
       const words = norm(q.value).trim().split(/\s+/).filter(w => w.length > 1); sel = -1;
-      if (!words.length) { kick.textContent = AR ? 'الأكثر زيارة' : 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
+      if (!words.length) { kick.textContent = AR ? 'الأكثر زيارة' : MS ? 'Paling dilawati' : 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
       const W = [8, 5, 2, 1], hits = [];
       IDX.forEach(p => { let s = 0; for (const w of words) { let m = 0; p.f.forEach((f, k) => { if (f.includes(w)) m += W[k] * (new RegExp('\\b' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(f) ? 2 : 1); }); if (!m) return; s += m; } hits.push([s, p]); });
       hits.sort((a, b) => b[0] - a[0]);
-      kick.textContent = !hits.length ? '' : AR ? (hits.length === 1 ? 'صفحة واحدة' : hits.length === 2 ? 'صفحتان' : `${hits.length} ${hits.length <= 10 ? 'صفحات' : 'صفحة'}`) : `${hits.length} page${hits.length === 1 ? '' : 's'}`; kick.hidden = !hits.length; none.hidden = !!hits.length;
+      kick.textContent = !hits.length ? '' : AR ? (hits.length === 1 ? 'صفحة واحدة' : hits.length === 2 ? 'صفحتان' : `${hits.length} ${hits.length <= 10 ? 'صفحات' : 'صفحة'}`) : MS ? `${hits.length} halaman` : `${hits.length} page${hits.length === 1 ? '' : 's'}`; kick.hidden = !hits.length; none.hidden = !!hits.length;
       list.innerHTML = hits.slice(0, 12).map(([, p]) => row(p, words)).join('');
     };
     const open = () => { if (srch.open) return; srch.showModal(); q.value = ''; q.focus(); load().then(run).catch(() => { none.hidden = false; }); };
@@ -730,6 +738,20 @@
   const DONE = { join: 'Thank you. Your country team will contact you within two working days.', demo: 'Thank you. A specialist will contact you to confirm a time.', partner: 'Thank you. Our partnerships team will be in touch.',
     contact: 'Thank you. We will reply within two working days.', support: 'Thank you. Our support team has your request.', subscribe: 'Thank you. You are subscribed to T57 Insights.',
     invest: 'Thank you. Our investor relations team will send the pack and contact you within two working days.' };
+  if (MS) {
+    Object.assign(FORM, {
+      join: ['Mulakan', 'Sertai T57', 'Ahli pengasas menikmati percubaan percuma 90 hari semasa pelancaran. Ceritakan tentang perniagaan anda dan pasukan negara kami akan menghubungi anda.', 'Mohon keahlian', FORM.join[4]],
+      demo: ['Tempah demo', 'Lihat T57 dengan produk anda sendiri', 'Demo 30 minit bersama pakar daripada pasukan negara anda.', 'Tempah demo saya', FORM.demo[4]],
+      partner: ['Perkongsian', 'Jadi rakan kongsi T57', 'Kongsikan perkhidmatan, lesen dan pasaran anda.', 'Hantar permohonan', FORM.partner[4]],
+      contact: ['Hubungi kami', 'Berbincang dengan T57', 'Kami akan menyambungkan anda dengan pasukan yang tepat.', 'Hantar', FORM.contact[4]],
+      support: ['Pusat Bantuan', 'Hubungi sokongan', 'Sediakan nama syarikat dan rujukan dagangan anda supaya kami dapat membantu dengan lebih pantas.', 'Hantar kepada sokongan', FORM.support[4]],
+      invest: ['Pelabur', 'Minta pek pelabur', 'Untuk pelabur yang layak. Kami akan menghantar ringkasan dan pembentangan, kemudian mengatur panggilan bersama pengasas serta akses kepada memorandum dan bilik data di bawah NDA.', 'Minta pek', FORM.invest[4]],
+      subscribe: ['T57 Insights', 'Langgan T57 Insights', 'Analisis pasaran tentang perdagangan makanan, pembiayaan dan AI. Berhenti melanggan pada bila-bila masa.', 'Langgan', FORM.subscribe[4]],
+    });
+    Object.assign(DONE, { join: 'Terima kasih. Pasukan negara anda akan menghubungi anda dalam tempoh dua hari bekerja.', demo: 'Terima kasih. Pakar kami akan menghubungi anda untuk mengesahkan masa.', partner: 'Terima kasih. Pasukan perkongsian kami akan menghubungi anda.',
+      contact: 'Terima kasih. Kami akan membalas dalam tempoh dua hari bekerja.', support: 'Terima kasih. Permintaan anda telah sampai kepada pasukan sokongan kami.', subscribe: 'Terima kasih. Anda kini melanggan T57 Insights.',
+      invest: 'Terima kasih. Pasukan perhubungan pelabur kami akan menghantar pek dan menghubungi anda dalam tempoh dua hari bekerja.' });
+  }
   if (AR) {
     Object.assign(FORM, {
       join: ['ابدأ الآن', 'انضم إلى T57', 'يحصل الأعضاء المؤسِّسون على تجربة مجانية لمدة 90 يومًا عند الإطلاق. أخبرنا عن منشأتك وسيتواصل معك فريق بلدك.', 'قدّم طلب العضوية', FORM.join[4]],
@@ -744,11 +766,14 @@
       contact: 'شكرًا لك. سنرد خلال يومي عمل.', support: 'شكرًا لك. وصل طلبك إلى فريق الدعم.', subscribe: 'شكرًا لك. تم اشتراكك في رؤى T57.',
       invest: 'شكرًا لك. سيرسل فريق علاقات المستثمرين الملف ويتواصل معك خلال يومي عمل.' });
   }
-  const MSG = AR ? { fields: 'يرجى إكمال الحقول المظللة.', consent: 'يرجى تحديد المربع للموافقة على طريقة استخدامنا لبياناتك.', sending: 'جارٍ الإرسال…', check: 'يرجى مراجعة الحقول المظللة.',
+  const MSG = MS ? { fields: 'Sila lengkapkan ruangan yang ditandakan.', consent: 'Sila tandakan kotak untuk bersetuju dengan cara kami menggunakan maklumat anda.', sending: 'Sedang dihantar…', check: 'Sila semak ruangan yang ditandakan.',
+      busy: 'Terlalu banyak permintaan daripada sambungan ini. Sila cuba lagi dalam beberapa minit.', fail: m => `Kami tidak dapat menghantarnya dalam talian buat masa ini. <a href="${m}">Hantar melalui e-mel</a>, dengan jawapan anda sudah diisi.` }
+    : AR ? { fields: 'يرجى إكمال الحقول المظللة.', consent: 'يرجى تحديد المربع للموافقة على طريقة استخدامنا لبياناتك.', sending: 'جارٍ الإرسال…', check: 'يرجى مراجعة الحقول المظللة.',
       busy: 'طلبات كثيرة من هذا الاتصال. يرجى المحاولة بعد بضع دقائق.', fail: m => `تعذّر الإرسال عبر الإنترنت الآن. <a href="${m}">أرسله بالبريد الإلكتروني بدلًا من ذلك</a>، مع إجاباتك معبأة.` }
     : { fields: 'Please complete the highlighted fields.', consent: 'Please tick the box to agree to how we use your details.', sending: 'Sending…', check: 'Please check the highlighted fields.',
       busy: 'Too many requests from this connection. Please try again in a few minutes.', fail: m => `We could not send this online just now. <a href="${m}">Send it by email instead</a>, with your answers filled in.` };
-  const kindOf = t => AR ? (/مستثمر/.test(t) ? 'invest' : /اشترك/.test(t) ? 'subscribe' : /الدعم/.test(t) ? 'support' : /شريك|الشراك/.test(t) ? 'partner'
+  const kindOf = t => MS ? (/pelabur/i.test(t) ? 'invest' : /langgan/i.test(t) ? 'subscribe' : /sokongan|bantuan/i.test(t) ? 'support' : /rakan kongsi|perkongsian/i.test(t) ? 'partner'
+    : /demo|tonton|lihat cara/i.test(t) ? 'demo' : /sertai|mohon|daftar|keahlian|mula|cuba|percuma/i.test(t) ? 'join' : 'contact') : AR ? (/مستثمر/.test(t) ? 'invest' : /اشترك/.test(t) ? 'subscribe' : /الدعم/.test(t) ? 'support' : /شريك|الشراك/.test(t) ? 'partner'
     : /عرض توضيحي|عرضًا توضيحيًا|شاهد/.test(t) ? 'demo' : /انضم|قدّم طلب|العضوية|ابدأ|سجّل|جرّب/.test(t) ? 'join' : 'contact') : /invest/i.test(t) ? 'invest' : /subscri/i.test(t) ? 'subscribe' : /support|security team/i.test(t) ? 'support' : /partner/i.test(t) ? 'partner'
     : /demo|see how t57 works|watch/i.test(t) ? 'demo' : /chat/i.test(t) ? 'support' : /apply|join|register|free trial|membership|sign up|start|trade with|use escrow|post your|list your|try |track your/i.test(t) ? 'join' : 'contact';
   function required(f) { return (FORM[f.dataset.apiForm] || FORM.contact)[4].filter(n => f.elements[n] && !f.elements[n].closest('[hidden]')); }
