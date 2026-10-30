@@ -2832,6 +2832,159 @@
   "description": "Mohon untuk bekerjasama dengan T57 dalam pembiayaan, insurans, logistik, pemeriksaan atau teknologi.",
   "parent": "partnerships"
  },
+ "about": {
+  "route": "/ms/about",
+  "section": "about",
+  "name": "Tentang T57",
+  "h1": "Makanan yang ada sepatutnya sampai kepada mereka yang memerlukannya.",
+  "answer": "Kami wujud supaya makanan yang ada sampai kepada masyarakat dan pasaran yang memerlukannya.",
+  "faqs": [
+   {
+    "q": "Di manakah T57 berpangkalan?",
+    "a": "T57 ialah platform SaaS global, jadi mana-mana perniagaan makanan, di mana-mana di dunia, boleh memohon dalam talian, disahkan dan berdagang. Projek perintis bermula di lima negara: Arab Saudi, UAE, India, Malaysia dan Türkiye."
+   },
+   {
+    "q": "Apakah maksud nama T57?",
+    "a": "T bermaksud dagangan (trade), berteraskan kepercayaan (trust), ketelusan (transparency) dan kebolehkesanan (traceability). Angka 5 mewakili lima industri yang dihubungkan T57: pertanian dan pengeluaran makanan, perdagangan, logistik, kewangan dan teknologi. Angka 7 mewakili tujuh hasil yang kami usahakan: sekuriti makanan, kurang kehilangan makanan, integrasi, akses kepada pembiayaan, pendapatan lebih tinggi, keterangkuman dan daya tahan."
+   },
+   {
+    "q": "Siapa pemilik T57?",
+    "a": "T57 diterajui oleh pengasasnya."
+   }
+  ],
+  "title": "Tentang T57 | Infrastruktur Dagangan Digital Berteraskan AI untuk Makanan",
+  "description": "Mengapa T57 wujud: akses kepada pasaran, teknologi dan pembiayaan untuk ekosistem makanan, dibina daripada kerja sekuriti makanan di lebih 60 negara."
+ },
+ "about-journey": {
+  "route": "/ms/about/journey",
+  "section": "about",
+  "name": "Perjalanan Kami",
+  "h1": "Daripada satu soalan kepada 150 perjanjian yang dimeterai.",
+  "answer": "Sejak 2023, T57 dan syarikat pengasasnya, AlMukarramah, telah memeterai perjanjian dengan kerajaan, institusi pembangunan dan syarikat makanan, serta membawa hujah perdagangan makanan yang bersambung ke pentas dari Cape Town hingga Yinchuan.",
+  "faqs": [
+   {
+    "q": "Dengan siapakah T57 telah memeterai perjanjian?",
+    "a": "T57 dan syarikat pengasasnya, AlMukarramah, mempunyai perjanjian dengan Pertubuhan Islam bagi Sekuriti Makanan (IOFS), Kerajaan Republik Chechen, Development Bank of Maldives, Food Contract Corporation of Kazakhstan, International Assembly of Islamic Business, Dar Al Halal Nigeria dan Aquaculture Centre of Excellence di Singapura, serta memeterai 150 MoU dan surat hasrat di Gulfood 2026."
+   },
+   {
+    "q": "Bilakah T57 bermula?",
+    "a": "T57 diperkenalkan di Persidangan Sekuriti Makanan di Cape Town pada Ogos 2023 dan melalui pra-pelancaran di Forum Sekuriti Makanan IOFS ke-2 di Doha pada Oktober 2023. Ia berkembang daripada Trade57, yang dibina oleh AlMukarramah."
+   },
+   {
+    "q": "Adakah MoU ini mengikat?",
+    "a": "Kebanyakannya ialah memorandum persefahaman dan surat hasrat: rangka kerja untuk bekerjasama. Sebarang langganan atau komitmen komersial dibuat dalam perjanjian berasingan."
+   }
+  ],
+  "title": "Perjalanan Kami: Perjanjian, Perkongsian dan Ucaptama | T57",
+  "description": "Garis masa T57 sejak 2023: perjanjian IOFS, MoU dengan kerajaan dan bank pembangunan, 150 MoU di Gulfood 2026 dan ucaptama dari Cape Town hingga Yinchuan.",
+  "parent": "about"
+ },
+ "about-leadership": {
+  "route": "/ms/about/leadership",
+  "section": "about",
+  "name": "Kepimpinan & Penasihat",
+  "h1": "Individu yang membina T57.",
+  "answer": "Pengasas, pasukan kepimpinan, lembaga dan penasihat di sebalik T57, dengan pengalaman dalam perdagangan makanan, sekuriti makanan, teknologi, kewangan dan tadbir urus.",
+  "faqs": [
+   {
+    "q": "Siapa yang menerajui T57?",
+    "a": "T57 diterajui oleh Pengasas dan Pengerusinya, Afzal Hussain Mohammed Nakheeb, bersama empat pengasas bersama yang menerajui teknologi, produk, komunikasi dan tadbir urus."
+   },
+   {
+    "q": "Bagaimana T57 bekerjasama dengan IOFS?",
+    "a": "T57 mempunyai memorandum persefahaman 10 tahun dengan IOFS. Ketua Pengarah Hubungan Strategiknya, Prof. Yerlan Baidaulet, ialah bekas Ketua Pengarah IOFS."
+   }
+  ],
+  "title": "Kepimpinan & Penasihat | T57",
+  "description": "Kenali pengasas, pasukan kepimpinan, lembaga dan tiga belas penasihat yang membina T57, dengan pengalaman dalam perdagangan makanan, sekuriti makanan, teknologi, kewangan dan tadbir urus.",
+  "parent": "about"
+ },
+ "about-impact": {
+  "route": "/ms/about/impact",
+  "section": "about",
+  "name": "Inovasi & Impak",
+  "h1": "Teknologi yang berkhidmat kepada mereka yang memberi makan dunia.",
+  "answer": "Bagaimana T57 menggunakan AI kecil dan tempatan secara bertanggungjawab, dan impak yang diusahakannya: akses pasaran, pembiayaan, kurang kehilangan makanan dan keterangkuman.",
+  "faqs": [],
+  "title": "Inovasi & Impak | AI Bertanggungjawab untuk Perdagangan Makanan | T57",
+  "description": "Bagaimana T57 menggunakan AI kecil dan tempatan secara bertanggungjawab, dan impak yang diusahakannya: akses pasaran, pembiayaan, kurang kehilangan makanan dan keterangkuman.",
+  "parent": "about"
+ },
+ "about-food-security": {
+  "route": "/ms/about/food-security",
+  "section": "about",
+  "name": "T57 untuk Sekuriti Makanan",
+  "h1": "Jadikan sekuriti makanan kelihatan, boleh disahkan dan boleh ditindaklanjuti.",
+  "answer": "Bekalan yang disahkan merentas sempadan, status bekalan mengikut asal, amaran awal AI dan modul kerajaan, dalam satu sistem.",
+  "faqs": [
+   {
+    "q": "Adakah T57 sebuah sistem kerajaan?",
+    "a": "Tidak. T57 ialah platform bebas yang boleh digunakan kerajaan dan institusi, dengan data berkebenaran."
+   },
+   {
+    "q": "Data apakah yang dilihat kerajaan?",
+    "a": "Data agregat berkebenaran tentang bekalan, harga dan dagangan, bukan data individu ahli tanpa persetujuan."
+   },
+   {
+    "q": "Adakah T57 hanya untuk negara majoriti Muslim?",
+    "a": "Tidak. T57 melayani mana-mana perniagaan makanan atau kerajaan di pasarannya, dan bekerjasama rapat dengan IOFS dan OIC."
+   }
+  ],
+  "title": "T57 untuk Sekuriti Makanan | Amaran Awal dan Bekalan Disahkan",
+  "description": "Bagaimana T57 mengukuhkan sekuriti makanan: bekalan yang disahkan merentas sempadan, status bekalan mengikut asal, amaran awal AI dan modul kerajaan.",
+  "parent": "about"
+ },
+ "about-sdg": {
+  "route": "/ms/about/sdg-delivery",
+  "section": "about",
+  "name": "T57 untuk Pencapaian SDG",
+  "h1": "Dagangan disahkan, kemajuan yang boleh diukur.",
+  "answer": "Tukar dagangan yang disahkan kepada kemajuan yang boleh diukur ke arah Matlamat Pembangunan Mampan.",
+  "faqs": [
+   {
+    "q": "Bolehkah T57 melaporkan impak bagi program kami?",
+    "a": "Boleh. Rakan kongsi mempersetujui penunjuknya, dan T57 melaporkan data agregat berkebenaran."
+   },
+   {
+    "q": "Adakah T57 mendakwa mencapai SDG secara bersendirian?",
+    "a": "Tidak. T57 menyumbang kepada sasaran khusus bersama kerajaan, rakan pembangunan dan sektor swasta."
+   }
+  ],
+  "title": "T57 untuk Pencapaian SDG | Impak Disahkan dalam Perdagangan Makanan",
+  "description": "Bagaimana T57 menyumbang kepada SDG 1, 2, 5, 8, 9, 10, 12 dan 13 dengan membawa pengeluar kecil ke dalam dagangan dan pembiayaan yang disahkan, dengan impak yang boleh diukur.",
+  "parent": "about"
+ },
+ "about-careers": {
+  "route": "/ms/about/careers",
+  "section": "about",
+  "name": "Kerjaya",
+  "h1": "Bantu membina infrastruktur yang menjadi tunjang perdagangan makanan.",
+  "answer": "Sertai pasukan T57 dalam teknologi, AI, produk, operasi negara dan perkongsian di lima pasaran pengasas.",
+  "faqs": [
+   {
+    "q": "Bolehkah saya memohon jika tiada jawatan yang sesuai?",
+    "a": "Boleh. Hantar CV anda ke hr@t57.ai dan beritahu kami pasukan mana yang ingin anda sertai."
+   },
+   {
+    "q": "Adakah anda mengambil pekerja jarak jauh?",
+    "a": "Sesetengah jawatan teknologi boleh dilakukan dari jauh, dan pasukan negara bekerja di setiap pasaran."
+   }
+  ],
+  "title": "Kerjaya di T57 | Bina Infrastruktur Perdagangan Makanan Berteraskan AI",
+  "description": "Sertai pasukan T57 dalam teknologi, AI, produk, operasi negara dan perkongsian di lima pasaran pengasas.",
+  "parent": "about"
+ },
+ "about-media": {
+  "route": "/ms/about/media",
+  "section": "about",
+  "name": "Kit Media & Akhbar",
+  "h1": "Sumber untuk wartawan dan rakan kongsi.",
+  "answer": "Fakta syarikat, logo dan maklumat hubungan media untuk wartawan dan rakan kongsi.",
+  "faqs": [],
+  "title": "Kit Media & Akhbar | T57",
+  "description": "Fakta syarikat, logo, foto kepimpinan dan maklumat hubungan media T57 untuk wartawan.",
+  "parent": "about"
+ },
  "governments": {
   "route": "/ms/who-we-serve/governments",
   "section": "who-we-serve",
@@ -3127,5 +3280,16 @@
   "title": "T57 untuk Petani & Pengeluar | Akses Pasaran dan Alat AI",
   "description": "T57 membantu petani dan pengeluar sampai kepada pembeli yang disahkan, melihat harga pasaran, memeterai kontrak yang selamat, menerima bayaran lebih cepat dan mengakses pembiayaan perdagangan.",
   "parent": "who-we-serve"
+ },
+ "about-investors": {
+  "route": "/ms/about/investors",
+  "section": "about",
+  "name": "Perhubungan Pelabur",
+  "h1": "Labur dalam landasannya yang menjadi tunjang perdagangan makanan.",
+  "answer": "T57 sedang mengumpul dana pusingan pelancarannya untuk membuka lima pasaran pengasas dari Riyadh. Pelabur yang layak boleh meminta pek pelabur hari ini.",
+  "faqs": [],
+  "title": "Perhubungan Pelabur | Melabur dalam T57",
+  "description": "T57 sedang mengumpul dana pusingan pelancarannya dari Riyadh. Lihat daya tarikan, rakan kongsi dan pasukannya, dan minta pek pelabur sebagai pelabur yang layak.",
+  "parent": "about"
  }
 }
