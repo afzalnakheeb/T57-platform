@@ -4,13 +4,19 @@
   if (window.__t57ai || location.pathname.startsWith('/decks')) return;
   window.__t57ai = true;
   const at = l => document.documentElement.lang === l || location.pathname === '/' + l || location.pathname.startsWith('/' + l + '/');
-  const ar = at('ar'), ms = !ar && at('ms'), lang = ar ? 'ar' : ms ? 'ms' : 'en';
+  const ar = at('ar'), ms = !ar && at('ms'), trk = !ar && !ms && at('tr'), lang = ar ? 'ar' : ms ? 'ms' : trk ? 'tr' : 'en';
   const L = ar ? {
     open: 'اسأل T57 AI', title: 'T57 AI', sub: 'إجابات من صفحات t57.ai', close: 'إغلاق', reset: 'محادثة جديدة',
     hello: 'مرحبًا بك. اسألني عن T57: العضوية والأسعار، والتمويل والضمان عبر الشركاء، والأسواق، وكيف يعمل سجل التجارة الموحّد.',
     ph: 'اكتب سؤالك…', send: 'إرسال', note: 'قد يخطئ الذكاء الاصطناعي. للتفاصيل المهمة راسلنا على hello@t57.ai',
     err: 'تعذّر الاتصال الآن. حاول مرة أخرى أو راسلنا على hello@t57.ai.', thinking: 'يكتب…',
     ask: ['ما هي T57؟', 'كيف أنضم وكم التكلفة؟', 'كيف يتم التمويل والضمان؟', 'ما الأسواق التي تغطيها T57؟'],
+  } : trk ? {
+    open: "T57 AI'ya sorun", title: 'T57 AI', sub: 't57.ai sayfalarından yanıtlar', close: 'Kapat', reset: 'Yeni sohbet',
+    hello: 'Hoş geldiniz. T57 hakkında her şeyi sorabilirsiniz: üyelik ve fiyatlar, iş ortakları aracılığıyla finansman ve emanet hesabı, pazarlarımız veya tek ticaret kaydının nasıl çalıştığı.',
+    ph: 'Sorunuzu yazın…', send: 'Gönder', note: 'Yapay zekâ hata yapabilir. Önemli konular için hello@t57.ai adresine yazın.',
+    err: 'T57 AI şu anda yanıt veremiyor. Lütfen tekrar deneyin ya da hello@t57.ai adresine yazın.', thinking: 'Yazıyor…',
+    ask: ['T57 nedir?', 'Nasıl katılabilirim ve maliyeti nedir?', 'Finansman ve emanet hesabı nasıl işliyor?', 'T57 hangi pazarlarda?'],
   } : ms ? {
     open: 'Tanya T57 AI', title: 'T57 AI', sub: 'Jawapan daripada halaman t57.ai', close: 'Tutup', reset: 'Sembang baharu',
     hello: 'Selamat datang. Tanyakan apa sahaja tentang T57: keahlian dan harga, pembiayaan dan eskrow melalui rakan kongsi, pasaran kami, atau cara satu rekod dagangan berfungsi.',

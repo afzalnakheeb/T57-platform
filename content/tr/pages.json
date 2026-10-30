@@ -1,0 +1,33 @@
+{
+ "home": {
+  "route": "/tr",
+  "section": "",
+  "name": "Home",
+  "h1": "Gıda ticaretinde güven, tarladan alıcıya.",
+  "answer": "T57, doğrulanmış üreticileri, alıcıları, bankaları ve lojistik firmalarını yapay zekâ temelli tek bir ticaret platformunda buluşturur.",
+  "faqs": [
+   {
+    "q": "T57 nedir?",
+    "a": "T57, gıda sektörü için yapay zekâ temelli dijital ticaret altyapısıdır. Doğrulamayı, teklifleri, sözleşmeleri, finansmana erişimi, sigortayı, gözetimi ve lojistiği doğrulanmış üyeler için tek bir ticaret kaydında bir araya getirir."
+   },
+   {
+    "q": "T57'ye kimler katılabilir?",
+    "a": "Çiftçiler, balıkçılar, işleyiciler, üreticiler, markalar, tüccarlar, ithalatçılar, toptancılar, süpermarketler ve HoReCa alıcıları dahil gıda zincirindeki her işletme başvurabilir. Her üye ticarete başlamadan önce doğrulanır."
+   },
+   {
+    "q": "T57 kredi verir mi veya paramı tutar mı?",
+    "a": "Hayır. T57 kredi vermez, müşteri fonu tutmaz, mal sahibi olmaz ve nakliye hizmeti sunmaz. Finansman, emanet hesabı, sigorta ve lojistik, platform üzerinden lisanslı iş ortakları tarafından sağlanır."
+   },
+   {
+    "q": "T57 hangi ülkelerde hizmet veriyor?",
+    "a": "T57'nin kurucu pazarları Suudi Arabistan, BAE, Hindistan, Malezya ve Türkiye'dir. Diğer ülkelerdeki işletmeler de çevrimiçi üyelik başvurusu yapabilir."
+   },
+   {
+    "q": "T57 yapay zekâyı nasıl kullanıyor?",
+    "a": "Yapay zekâ eşleştirme, risk kontrolü, belge hazırlama ve tahminlemede yardımcı olur. Son kararları insanlar verir ve her olumsuz karar bir kişi tarafından incelenir."
+   }
+  ],
+  "title": "T57 | Gıda İçin Yapay Zekâ Temelli Dijital Ticaret Altyapısı",
+  "description": "Tek kayıtta doğrulanmış gıda ticareti: çiftçiler, işleyiciler, tüccarlar ve alıcılar için teklif talepleri, sözleşmeler, ticaret finansmanı, sigorta, gözetim ve lojistik."
+ }
+}

@@ -59,7 +59,16 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   const AR = document.documentElement.lang === 'ar';
   // Bahasa Malaysia labels (pages under /ms set <html lang="ms">).
   const MS = document.documentElement.lang === 'ms';
-  const TX = MS ? { 'Food Price Index': 'Indeks Harga Makanan', Cereals: 'Bijirin', 'Vegetable oils': 'Minyak sayuran', Dairy: 'Tenusu', Meat: 'Daging', Sugar: 'Gula',
+  // Turkish labels (pages under /tr set <html lang="tr">). Turkish writes decimals with a comma and thousands with a point.
+  const TR = document.documentElement.lang === 'tr';
+  const num = s => TR ? String(s).replace(/[.,]/g, c => c === '.' ? ',' : '.') : String(s);
+  const TX = TR ? { 'Food Price Index': 'Gıda Fiyat Endeksi', Cereals: 'Tahıllar', 'Vegetable oils': 'Bitkisel yağlar', Dairy: 'Süt ürünleri', Meat: 'Et', Sugar: 'Şeker',
+    'Wheat, US HRW': 'Buğday, ABD HRW', 'Wheat, US SRW': 'Buğday, ABD SRW', Maize: 'Mısır', 'Rice, Thai 5%': 'Pirinç, Tayland %5', 'Rice, Viet Nam 5%': 'Pirinç, Vietnam %5',
+    Soybeans: 'Soya fasulyesi', 'Soybean oil': 'Soya yağı', 'Palm oil': 'Palm yağı', 'Coffee, Arabica': 'Kahve, Arabica', Cocoa: 'Kakao', Tea: 'Çay', Beef: 'Sığır eti', Chicken: 'Tavuk',
+    Oranges: 'Portakal', Bananas: 'Muz', Urea: 'Üre', 'DAP fertilizer': 'DAP gübresi', 'Brent crude': 'Brent ham petrol', Grains: 'Tahıllar', 'Oils and oilseeds': 'Yağlar ve yağlı tohumlar',
+    'Sugar and softs': 'Şeker ve tropikal ürünler', 'Proteins and produce': 'Protein ve taze ürünler', 'Inputs and energy': 'Girdiler ve enerji',
+    Explore: 'Keşif', Core: 'Temel', Growth: 'Büyüme', Enterprise: 'Kurumsal', ' (from)': ' (başlangıç)',
+    'on the month': 'aylık', 'on the year': 'yıllık', 'on a year earlier': 'bir yıl öncesine göre', trillion: 'trilyon', Replay: 'Yeniden oynat', Play: 'Oynat', Pause: 'Duraklat' } : MS ? { 'Food Price Index': 'Indeks Harga Makanan', Cereals: 'Bijirin', 'Vegetable oils': 'Minyak sayuran', Dairy: 'Tenusu', Meat: 'Daging', Sugar: 'Gula',
     'Wheat, US HRW': 'Gandum, HRW AS', 'Wheat, US SRW': 'Gandum, SRW AS', Maize: 'Jagung', 'Rice, Thai 5%': 'Beras Thai 5%', 'Rice, Viet Nam 5%': 'Beras Vietnam 5%',
     Soybeans: 'Kacang soya', 'Soybean oil': 'Minyak soya', 'Palm oil': 'Minyak sawit', 'Coffee, Arabica': 'Kopi Arabika', Cocoa: 'Koko', Tea: 'Teh', Beef: 'Daging lembu', Chicken: 'Ayam',
     Oranges: 'Oren', Bananas: 'Pisang', Urea: 'Urea', 'DAP fertilizer': 'Baja DAP', 'Brent crude': 'Minyak mentah Brent', Grains: 'Bijirin', 'Oils and oilseeds': 'Minyak dan biji minyak',
@@ -73,7 +82,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     Explore: 'استكشاف', Core: 'الأساسية', Growth: 'النمو', Enterprise: 'الشركات', ' (from)': ' (ابتداءً من)',
     'on the month': 'على أساس شهري', 'on the year': 'على أساس سنوي', 'on a year earlier': 'عن العام السابق', trillion: 'تريليون', Replay: 'إعادة', Play: 'تشغيل', Pause: 'إيقاف مؤقت' } : {};
   const tx = s => TX[s] || s;
-  const DATE_LOCALE = AR ? 'ar-u-ca-gregory-nu-latn' : MS ? 'ms-MY' : 'en-US';
+  const DATE_LOCALE = AR ? 'ar-u-ca-gregory-nu-latn' : MS ? 'ms-MY' : TR ? 'tr-TR' : 'en-US';
   const IMPORT_BILL_PER_YEAR = 2.22e12; // FAO Food Outlook, Nov 2025 (2025 forecast)
 
   /* ---------- Living scenes ---------- */
@@ -332,15 +341,15 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   requestAnimationFrame(loop);
 
   /* ---------- Market board ---------- */
-  const fmtPrice = (v, unit) => (unit === '/kg' ? v.toFixed(2) : v >= 1000 ? Math.round(v).toLocaleString('en-US') : v.toFixed(1)).replace(/\.0$/, '');
-  const sign = v => (v >= 0 ? '▲ +' : '▼ ') + v.toFixed(1) + '%';
+  const fmtPrice = (v, unit) => num((unit === '/kg' ? v.toFixed(2) : v >= 1000 ? Math.round(v).toLocaleString('en-US') : v.toFixed(1)).replace(/\.0$/, ''));
+  const sign = v => TR ? (v >= 0 ? '▲ +%' : '▼ −%') + num(Math.abs(v).toFixed(1)) : (v >= 0 ? '▲ +' : '▼ ') + v.toFixed(1) + '%';
   const dir = v => (v >= 0 ? 'up' : 'down');
   (function board() {
     const last = FAO[FAO.length - 1], prev = FAO[FAO.length - 2], yago = FAO[FAO.length - 13];
     const mom = (last[1] - prev[1]) / prev[1] * 100, yoy = (last[1] - yago[1]) / yago[1] * 100;
-    document.querySelectorAll('[data-fpi-latest]').forEach(e => e.textContent = (+last[1]).toFixed(1));
+    document.querySelectorAll('[data-fpi-latest]').forEach(e => e.textContent = num((+last[1]).toFixed(1)));
     document.querySelectorAll('[data-fpi-mom]').forEach(e => { e.textContent = sign(mom); e.className = dir(mom); });
-    document.querySelectorAll('[data-fpi-yoy]').forEach(e => e.innerHTML = `<bdi dir="ltr">${(yoy >= 0 ? '+' : '') + yoy.toFixed(1)}%</bdi> ${tx('on a year earlier')}`);
+    document.querySelectorAll('[data-fpi-yoy]').forEach(e => e.innerHTML = TR ? `${tx('on a year earlier')} <bdi dir="ltr">${yoy >= 0 ? '+' : '−'}%${num(Math.abs(yoy).toFixed(1))}</bdi>` : `<bdi dir="ltr">${(yoy >= 0 ? '+' : '') + yoy.toFixed(1)}%</bdi> ${tx('on a year earlier')}`);
     const spark = document.querySelector('[data-fpi-spark]');
     if (spark) { const v = FAO.map(r => +r[1]), lo = Math.min(...v), hi = Math.max(...v); spark.setAttribute('d', v.map((y, i) => (i ? 'L' : 'M') + (i / (v.length - 1) * 300).toFixed(1) + ' ' + (64 - (y - lo) / (hi - lo) * 58).toFixed(1)).join(' ')); }
     // ticker
@@ -375,13 +384,13 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       svg.innerHTML = `<defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#39c4c4" stop-opacity=".28"/><stop offset="1" stop-color="#39c4c4" stop-opacity="0"/></linearGradient></defs>${g}<path class="area" d="${area}"/><path class="line" d="${d}" pathLength="1"/><circle class="end" cx="${X(v.length - 1)}" cy="${Y(v[v.length - 1])}" r="5"/><line class="cross" y1="${T}" y2="${H - B}" x1="-10" x2="-10"/><circle class="hov" r="5" cx="-10" cy="-10"/>`;
       if (animate && !reduce) svg.querySelector('.line').animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }], { duration: 1200, easing: 'cubic-bezier(.2,.8,.2,1)' });
       const lm = (v[v.length - 1] - v[v.length - 2]) / v[v.length - 2] * 100, ly = (v[v.length - 1] - v[v.length - 13]) / v[v.length - 13] * 100;
-      document.querySelector('[data-chart-v]').textContent = v[v.length - 1].toFixed(1);
+      document.querySelector('[data-chart-v]').textContent = num(v[v.length - 1].toFixed(1));
       const cd = document.querySelector('[data-chart-d]'); cd.innerHTML = `<em class="${dir(lm)}">${sign(lm)}</em> ${tx('on the month')} · <em class="${dir(ly)}">${sign(ly)}</em> ${tx('on the year')}`;
       svg.setAttribute('aria-label', `FAO ${FAO_SERIES[i][0]}, monthly, January 2024 to September 2026. Latest ${v[v.length - 1].toFixed(1)}.`);
       tabs.querySelectorAll('button').forEach((b, k) => b.setAttribute('aria-selected', k === i));
       svg.onpointermove = e => { const r = svg.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * W, k = Math.max(0, Math.min(v.length - 1, Math.round((x - L) / (W - L - Rr) * (v.length - 1))));
         const cx = X(k), cy = Y(v[k]); svg.querySelector('.cross').setAttribute('x1', cx); svg.querySelector('.cross').setAttribute('x2', cx); const hv = svg.querySelector('.hov'); hv.setAttribute('cx', cx); hv.setAttribute('cy', cy);
-        tip.hidden = false; tip.innerHTML = `<b>${v[k].toFixed(1)}</b>${label(months[k])}`; tip.style.left = (cx / W * 100) + '%'; tip.style.top = (cy / H * 100) + '%'; };
+        tip.hidden = false; tip.innerHTML = `<b>${num(v[k].toFixed(1))}</b>${label(months[k])}`; tip.style.left = (cx / W * 100) + '%'; tip.style.top = (cy / H * 100) + '%'; };
       svg.onpointerleave = () => { tip.hidden = true; svg.querySelector('.hov').setAttribute('cx', -10); svg.querySelector('.cross').setAttribute('x1', -10); svg.querySelector('.cross').setAttribute('x2', -10); };
     }
     tabs.addEventListener('click', e => { const b = e.target.closest('button'); if (b) render(+b.dataset.i, true); });
@@ -392,7 +401,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     // import bill counter, paced from the annual figure
     const ib = document.querySelector('[data-importbill]');
     if (ib) { const y0 = Date.UTC(new Date().getUTCFullYear(), 0, 1), perMs = IMPORT_BILL_PER_YEAR / (365 * 864e5);
-      const tick = () => { const v = (Date.now() - y0) * perMs; ib.textContent = AR ? (v / 1e12).toFixed(4) + ' ' + tx('trillion') + ' دولار' : MS ? 'US$' + (v / 1e12).toFixed(4) + ' trilion' : '$' + (v / 1e12).toFixed(4) + ' trillion'; if (!reduce) requestAnimationFrame(tick); }; tick(); }
+      const tick = () => { const v = (Date.now() - y0) * perMs; ib.textContent = AR ? (v / 1e12).toFixed(4) + ' ' + tx('trillion') + ' دولار' : MS ? 'US$' + (v / 1e12).toFixed(4) + ' trilion' : TR ? num((v / 1e12).toFixed(4)) + ' trilyon $' : '$' + (v / 1e12).toFixed(4) + ' trillion'; if (!reduce) requestAnimationFrame(tick); }; tick(); }
   })();
 
   /* ---------- Scroll storytelling ---------- */
@@ -408,11 +417,11 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   document.querySelectorAll('.problem, [data-run], .lede').forEach(el => io.observe(el));
   function countOnView(el) { el.querySelectorAll('[data-count-on-view]').forEach(t => {
     const n = +t.dataset.countOnView, dec = +(t.dataset.dec || 0), t0 = performance.now();
-    const step = now => { const k = Math.min(1, (now - t0) / 1400); t.textContent = (n * (1 - (1 - k) ** 3)).toFixed(dec); if (k < 1) requestAnimationFrame(step); };
+    const step = now => { const k = Math.min(1, (now - t0) / 1400); t.textContent = num((n * (1 - (1 - k) ** 3)).toFixed(dec)); if (k < 1) requestAnimationFrame(step); };
     requestAnimationFrame(step);
   }); }
   const countUp = el => el.querySelectorAll('[data-count]').forEach(t => {
-    const n = +t.dataset.count, t0 = performance.now(), fmt = v => Math.round(v).toLocaleString('en-US');
+    const n = +t.dataset.count, t0 = performance.now(), fmt = v => Math.round(v).toLocaleString(TR ? 'tr-TR' : 'en-US');
     const step = now => { const k = Math.min(1, (now - t0) / 1400); t.textContent = fmt(n * (1 - (1 - k) ** 3)); if (k < 1) requestAnimationFrame(step); };
     requestAnimationFrame(step);
   });
@@ -636,7 +645,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   // Pricing: ROI calculator. Standard list prices; annual billing is ten months for twelve, Enterprise at its starting price.
   document.querySelectorAll('[data-roi]').forEach(f => {
     const PLANS = [['Explore', 199, .0075, 1990], ['Core', 499, .006, 4990], ['Growth', 749, .004, 7490], ['Enterprise', 1499, .002, 1499 * 12]];
-    const usd = n => (n < 0 ? '−$' : '$') + Math.round(Math.abs(n)).toLocaleString('en-US');
+    const usd = n => (n < 0 ? '−$' : '$') + Math.round(Math.abs(n)).toLocaleString(TR ? 'tr-TR' : 'en-US');
     const v = k => { const el = f.querySelector(`[data-roi-in="${k}"]`); return el.tagName === 'SELECT' ? el.value : Math.max(0, +el.value || 0); };
     const out = k => f.querySelector(`[data-r="${k}"]`);
     function run() {
@@ -654,7 +663,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       out('gross').textContent = usd(gross);
       out('plan').textContent = tx(best[0]);
       out('fees').textContent = usd(best[1]) + (best[0] === 'Enterprise' ? tx(' (from)') : '');
-      out('ctx').textContent = AR ? `${v('role')} في ${v('market')}، بحجم تجارة شهري قدره ${usd(vol / 12)}.` : MS ? `Bagi ${v('role').toLowerCase()} di ${v('market')}, dengan dagangan ${usd(vol / 12)} sebulan.` : `For a ${v('role').toLowerCase()} in ${v('market')}, on ${usd(vol / 12)} of trade a month.`;
+      out('ctx').textContent = AR ? `${v('role')} في ${v('market')}، بحجم تجارة شهري قدره ${usd(vol / 12)}.` : MS ? `Bagi ${v('role').toLowerCase()} di ${v('market')}, dengan dagangan ${usd(vol / 12)} sebulan.` : TR ? `${v('market')} pazarındaki bir ${v('role').toLocaleLowerCase('tr-TR')} için, aylık ${usd(vol / 12)} ticaret hacmiyle.` : `For a ${v('role').toLowerCase()} in ${v('market')}, on ${usd(vol / 12)} of trade a month.`;
       out('rows').innerHTML = costs.map(([n, t]) => `<tr${n === best[0] ? ' class="on"' : ''}><th scope="row">${tx(n)}</th><td>${usd(t)}${n === 'Enterprise' ? tx(' (from)') : ''}</td></tr>`).join('');
     }
     f.addEventListener('input', run); run();
@@ -696,17 +705,17 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     // Arabic: drop short vowels and tatweel, and fold alef, yaa and taa marbuta forms, so spelling variants still match.
     const norm = t => String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f\u064b-\u0652\u0670\u0640]/g, '').replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه');
     let IDX = null, sel = -1;
-    const load = () => IDX ? Promise.resolve(IDX) : fetch(AR ? '/proto/search-ar.json' : MS ? '/proto/search-ms.json' : '/proto/search.json').then(r => r.json()).then(d => (IDX = d.map(([id, route, name, sec, h1, ans, hd, faq]) => ({ id, route, name, sec, ans, f: [norm(name), norm(h1), norm(hd + ' ' + faq), norm(ans + ' ' + sec)] }))));
+    const load = () => IDX ? Promise.resolve(IDX) : fetch(AR ? '/proto/search-ar.json' : MS ? '/proto/search-ms.json' : TR ? '/proto/search-tr.json' : '/proto/search.json').then(r => r.json()).then(d => (IDX = d.map(([id, route, name, sec, h1, ans, hd, faq]) => ({ id, route, name, sec, ans, f: [norm(name), norm(h1), norm(hd + ' ' + faq), norm(ans + ' ' + sec)] }))));
     const mark = (t, words) => { let h = esc(t); words.forEach(w => { h = h.replace(new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>'); }); return h; };
     const row = (p, words) => `<li role="option" aria-selected="false"><a href="${p.route}" data-go="${p.id}">${p.sec ? `<small>${esc(p.sec)}</small>` : ''}<b>${mark(p.name, words)}</b><span>${mark(p.ans, words)}</span></a></li>`;
     const pick = n => { const it = [...list.children]; if (!it.length) return; sel = (n + it.length) % it.length; it.forEach((li, k) => li.setAttribute('aria-selected', k === sel ? 'true' : 'false')); it[sel].scrollIntoView({ block: 'nearest' }); };
     const run = () => {
       const words = norm(q.value).trim().split(/\s+/).filter(w => w.length > 1); sel = -1;
-      if (!words.length) { kick.textContent = AR ? 'الأكثر زيارة' : MS ? 'Paling dilawati' : 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
+      if (!words.length) { kick.textContent = AR ? 'الأكثر زيارة' : MS ? 'Paling dilawati' : TR ? 'En çok ziyaret edilenler' : 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
       const W = [8, 5, 2, 1], hits = [];
       IDX.forEach(p => { let s = 0; for (const w of words) { let m = 0; p.f.forEach((f, k) => { if (f.includes(w)) m += W[k] * (new RegExp('\\b' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(f) ? 2 : 1); }); if (!m) return; s += m; } hits.push([s, p]); });
       hits.sort((a, b) => b[0] - a[0]);
-      kick.textContent = !hits.length ? '' : AR ? (hits.length === 1 ? 'صفحة واحدة' : hits.length === 2 ? 'صفحتان' : `${hits.length} ${hits.length <= 10 ? 'صفحات' : 'صفحة'}`) : MS ? `${hits.length} halaman` : `${hits.length} page${hits.length === 1 ? '' : 's'}`; kick.hidden = !hits.length; none.hidden = !!hits.length;
+      kick.textContent = !hits.length ? '' : AR ? (hits.length === 1 ? 'صفحة واحدة' : hits.length === 2 ? 'صفحتان' : `${hits.length} ${hits.length <= 10 ? 'صفحات' : 'صفحة'}`) : MS ? `${hits.length} halaman` : TR ? `${hits.length} sayfa` : `${hits.length} page${hits.length === 1 ? '' : 's'}`; kick.hidden = !hits.length; none.hidden = !!hits.length;
       list.innerHTML = hits.slice(0, 12).map(([, p]) => row(p, words)).join('');
     };
     const open = () => { if (srch.open) return; srch.showModal(); q.value = ''; q.focus(); load().then(run).catch(() => { none.hidden = false; }); };
@@ -753,6 +762,20 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       contact: 'Terima kasih. Kami akan membalas dalam tempoh dua hari bekerja.', support: 'Terima kasih. Permintaan anda telah sampai kepada pasukan sokongan kami.', subscribe: 'Terima kasih. Anda kini melanggan T57 Insights.',
       invest: 'Terima kasih. Pasukan perhubungan pelabur kami akan menghantar pek dan menghubungi anda dalam tempoh dua hari bekerja.' });
   }
+  if (TR) {
+    Object.assign(FORM, {
+      join: ['Başlayın', "T57'ye katılın", 'Kurucu üyeler lansmanda 90 günlük ücretsiz deneme süresinden yararlanır. İşletmenizi tanıtın, ülke ekibimiz sizinle iletişime geçsin.', 'Üyelik başvurusu yap', FORM.join[4]],
+      demo: ['Demo talep edin', "T57'yi kendi ürünlerinizle görün", 'Ülke ekibinizden bir uzmanla 30 dakikalık demo.', 'Demomu planla', FORM.demo[4]],
+      partner: ['İş ortaklıkları', "T57'nin iş ortağı olun", 'Hizmetlerinizi, lisanslarınızı ve faaliyet gösterdiğiniz pazarları paylaşın.', 'Başvuruyu gönder', FORM.partner[4]],
+      contact: ['İletişim', "T57 ile görüşün", 'Sizi doğru ekiple buluşturalım.', 'Gönder', FORM.contact[4]],
+      support: ['Yardım Merkezi', 'Destek ekibine ulaşın', 'Size daha hızlı yardımcı olabilmemiz için şirket adınızı ve ticaret referansınızı hazır bulundurun.', 'Desteğe gönder', FORM.support[4]],
+      invest: ['Yatırımcılar', 'Yatırımcı dosyasını talep edin', 'Nitelikli yatırımcılar içindir. Tanıtım özetini ve sunumu gönderiyor, ardından kurucuyla bir görüşme ve gizlilik sözleşmesi kapsamında bilgi memorandumu ile veri odasına erişim sağlıyoruz.', 'Dosyayı talep et', FORM.invest[4]],
+      subscribe: ['T57 Insights', "T57 Insights'a abone olun", 'Gıda ticareti, finansman ve yapay zekâ üzerine piyasa analizleri. Aboneliğinizi istediğiniz zaman iptal edebilirsiniz.', 'Abone ol', FORM.subscribe[4]],
+    });
+    Object.assign(DONE, { join: 'Teşekkürler. Ülke ekibiniz iki iş günü içinde sizinle iletişime geçecek.', demo: 'Teşekkürler. Bir uzmanımız zamanı teyit etmek için sizinle iletişime geçecek.', partner: 'Teşekkürler. İş ortaklıkları ekibimiz sizinle iletişime geçecek.',
+      contact: 'Teşekkürler. İki iş günü içinde yanıt vereceğiz.', support: 'Teşekkürler. Talebiniz destek ekibimize ulaştı.', subscribe: "Teşekkürler. T57 Insights'a abone oldunuz.",
+      invest: 'Teşekkürler. Yatırımcı ilişkileri ekibimiz dosyayı gönderecek ve iki iş günü içinde sizinle iletişime geçecek.' });
+  }
   if (AR) {
     Object.assign(FORM, {
       join: ['ابدأ الآن', 'انضم إلى T57', 'يحصل الأعضاء المؤسِّسون على تجربة مجانية لمدة 90 يومًا عند الإطلاق. أخبرنا عن منشأتك وسيتواصل معك فريق بلدك.', 'قدّم طلب العضوية', FORM.join[4]],
@@ -767,13 +790,16 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       contact: 'شكرًا لك. سنرد خلال يومي عمل.', support: 'شكرًا لك. وصل طلبك إلى فريق الدعم.', subscribe: 'شكرًا لك. تم اشتراكك في رؤى T57.',
       invest: 'شكرًا لك. سيرسل فريق علاقات المستثمرين الملف ويتواصل معك خلال يومي عمل.' });
   }
-  const MSG = MS ? { fields: 'Sila lengkapkan ruangan yang ditandakan.', consent: 'Sila tandakan kotak untuk bersetuju dengan cara kami menggunakan maklumat anda.', sending: 'Sedang dihantar…', check: 'Sila semak ruangan yang ditandakan.',
+  const MSG = TR ? { fields: 'Lütfen işaretli alanları doldurun.', consent: 'Bilgilerinizin nasıl kullanılacağını kabul etmek için lütfen kutuyu işaretleyin.', sending: 'Gönderiliyor…', check: 'Lütfen işaretli alanları kontrol edin.',
+      busy: 'Bu bağlantıdan çok fazla istek geldi. Lütfen birkaç dakika sonra tekrar deneyin.', fail: m => `Şu anda çevrimiçi gönderemedik. Yanıtlarınız doldurulmuş olarak <a href="${m}">e-postayla gönderin</a>.` }
+    : MS ? { fields: 'Sila lengkapkan ruangan yang ditandakan.', consent: 'Sila tandakan kotak untuk bersetuju dengan cara kami menggunakan maklumat anda.', sending: 'Sedang dihantar…', check: 'Sila semak ruangan yang ditandakan.',
       busy: 'Terlalu banyak permintaan daripada sambungan ini. Sila cuba lagi dalam beberapa minit.', fail: m => `Kami tidak dapat menghantarnya dalam talian buat masa ini. <a href="${m}">Hantar melalui e-mel</a>, dengan jawapan anda sudah diisi.` }
     : AR ? { fields: 'يرجى إكمال الحقول المظللة.', consent: 'يرجى تحديد المربع للموافقة على طريقة استخدامنا لبياناتك.', sending: 'جارٍ الإرسال…', check: 'يرجى مراجعة الحقول المظللة.',
       busy: 'طلبات كثيرة من هذا الاتصال. يرجى المحاولة بعد بضع دقائق.', fail: m => `تعذّر الإرسال عبر الإنترنت الآن. <a href="${m}">أرسله بالبريد الإلكتروني بدلًا من ذلك</a>، مع إجاباتك معبأة.` }
     : { fields: 'Please complete the highlighted fields.', consent: 'Please tick the box to agree to how we use your details.', sending: 'Sending…', check: 'Please check the highlighted fields.',
       busy: 'Too many requests from this connection. Please try again in a few minutes.', fail: m => `We could not send this online just now. <a href="${m}">Send it by email instead</a>, with your answers filled in.` };
-  const kindOf = t => MS ? (/pelabur/i.test(t) ? 'invest' : /langgan/i.test(t) ? 'subscribe' : /sokongan|bantuan/i.test(t) ? 'support' : /rakan kongsi|perkongsian/i.test(t) ? 'partner'
+  const kindOf = t => TR ? (/yatırım/i.test(t) ? 'invest' : /abone/i.test(t) ? 'subscribe' : /destek/i.test(t) ? 'support' : /iş ortağı|İş ortağı|ortaklık/i.test(t) ? 'partner'
+    : /demo|izleyin|nasıl çalış/i.test(t) ? 'demo' : /katıl|başvur|kaydol|üyelik|başla|dene|ücretsiz/i.test(t) ? 'join' : 'contact') : MS ? (/pelabur/i.test(t) ? 'invest' : /langgan/i.test(t) ? 'subscribe' : /sokongan|bantuan/i.test(t) ? 'support' : /rakan kongsi|perkongsian/i.test(t) ? 'partner'
     : /demo|tonton|lihat cara/i.test(t) ? 'demo' : /sertai|mohon|daftar|keahlian|mula|cuba|percuma/i.test(t) ? 'join' : 'contact') : AR ? (/مستثمر/.test(t) ? 'invest' : /اشترك/.test(t) ? 'subscribe' : /الدعم/.test(t) ? 'support' : /شريك|الشراك/.test(t) ? 'partner'
     : /عرض توضيحي|عرضًا توضيحيًا|شاهد/.test(t) ? 'demo' : /انضم|قدّم طلب|العضوية|ابدأ|سجّل|جرّب/.test(t) ? 'join' : 'contact') : /invest/i.test(t) ? 'invest' : /subscri/i.test(t) ? 'subscribe' : /support|security team/i.test(t) ? 'support' : /partner/i.test(t) ? 'partner'
     : /demo|see how t57 works|watch/i.test(t) ? 'demo' : /chat/i.test(t) ? 'support' : /apply|join|register|free trial|membership|sign up|start|trade with|use escrow|post your|list your|try |track your/i.test(t) ? 'join' : 'contact';
