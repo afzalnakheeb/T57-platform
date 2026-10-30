@@ -128,5 +128,5 @@ def build(lang):
     print(lang, len(pages), 'pages', len(chunks), 'passages', os.path.getsize(out) // 1024, 'KB')
 
 
-for lang in ('en', 'ar'):
+for lang in ('en', 'ar', 'ms'):
     build(lang)

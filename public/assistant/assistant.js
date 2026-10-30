@@ -3,13 +3,20 @@
 (() => {
   if (window.__t57ai || location.pathname.startsWith('/decks')) return;
   window.__t57ai = true;
-  const ar = document.documentElement.lang === 'ar' || location.pathname === '/ar' || location.pathname.startsWith('/ar/');
+  const at = l => document.documentElement.lang === l || location.pathname === '/' + l || location.pathname.startsWith('/' + l + '/');
+  const ar = at('ar'), ms = !ar && at('ms'), lang = ar ? 'ar' : ms ? 'ms' : 'en';
   const L = ar ? {
     open: 'اسأل T57 AI', title: 'T57 AI', sub: 'إجابات من صفحات t57.ai', close: 'إغلاق', reset: 'محادثة جديدة',
     hello: 'مرحبًا بك. اسألني عن T57: العضوية والأسعار، والتمويل والضمان عبر الشركاء، والأسواق، وكيف يعمل سجل التجارة الموحّد.',
     ph: 'اكتب سؤالك…', send: 'إرسال', note: 'قد يخطئ الذكاء الاصطناعي. للتفاصيل المهمة راسلنا على hello@t57.ai',
     err: 'تعذّر الاتصال الآن. حاول مرة أخرى أو راسلنا على hello@t57.ai.', thinking: 'يكتب…',
     ask: ['ما هي T57؟', 'كيف أنضم وكم التكلفة؟', 'كيف يتم التمويل والضمان؟', 'ما الأسواق التي تغطيها T57؟'],
+  } : ms ? {
+    open: 'Tanya T57 AI', title: 'T57 AI', sub: 'Jawapan daripada halaman t57.ai', close: 'Tutup', reset: 'Sembang baharu',
+    hello: 'Selamat datang. Tanyakan apa sahaja tentang T57: keahlian dan harga, pembiayaan dan eskrow melalui rakan kongsi, pasaran kami, atau cara satu rekod dagangan berfungsi.',
+    ph: 'Tulis soalan anda…', send: 'Hantar', note: 'AI boleh tersilap. Bagi perkara penting, e-mel hello@t57.ai',
+    err: 'T57 AI tidak dapat dihubungi. Sila cuba lagi, atau e-mel hello@t57.ai.', thinking: 'Sedang menulis…',
+    ask: ['Apakah T57?', 'Bagaimana saya boleh menyertai, dan berapa kosnya?', 'Bagaimana pembiayaan dan eskrow berfungsi?', 'Pasaran mana yang diliputi T57?'],
   } : {
     open: 'Ask T57 AI', title: 'T57 AI', sub: 'Answers from the pages of t57.ai', close: 'Close', reset: 'New chat',
     hello: 'Welcome. Ask me anything about T57: membership and pricing, finance and escrow through partners, our markets, or how one trade record works.',
@@ -33,7 +40,7 @@
   document.head.appendChild(css);
 
   const root = document.createElement('div');
-  root.className = 't57ai'; root.dir = ar ? 'rtl' : 'ltr'; root.lang = ar ? 'ar' : 'en';
+  root.className = 't57ai'; root.dir = ar ? 'rtl' : 'ltr'; root.lang = lang;
   root.innerHTML = `
     <button class="ai-launch" type="button" aria-haspopup="dialog" aria-expanded="false">${badge}<span class="ai-launch-t">${L.open}</span></button>
     <section class="ai-panel" role="dialog" aria-modal="false" aria-label="${L.title}" hidden>
@@ -107,7 +114,7 @@
     try {
       const res = await fetch('/api/assistant', {
         method: 'POST', headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ messages: state.msgs, lang: ar ? 'ar' : 'en', path: location.pathname }),
+        body: JSON.stringify({ messages: state.msgs, lang, path: location.pathname }),
       });
       if (!res.ok || !res.body) { const j = await res.json().catch(() => ({})); throw new Error(j.text || L.err); }
       const rd = res.body.getReader(), dec = new TextDecoder(); let buf = '';
