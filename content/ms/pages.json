@@ -3412,6 +3412,44 @@
   },
   "parent": "res-blog"
  },
+ "blog-hormuz-shock-gcc-food-security-risk": {
+  "route": "/ms/resources/blog/hormuz-shock-gcc-food-security-risk",
+  "section": "resources",
+  "name": "Kejutan Hormuz: Bagaimana Model Sekuriti Makanan Teluk Boleh Gagal dalam Ujian Sebenar Pertamanya",
+  "h1": "Kejutan Hormuz: Bagaimana Model Sekuriti Makanan Teluk Boleh Gagal dalam Ujian Sebenar Pertamanya",
+  "answer": "Tekanan yang dikenakan oleh gangguan di Hormuz terhadap bekalan makanan GCC.",
+  "faqs": [],
+  "title": "Kejutan Hormuz dan Sekuriti Makanan Teluk | T57 Insights",
+  "description": "Dengan kebanyakan import makanan Teluk melalui Hormuz, krisis ini ialah ujian tekanan. Apa yang didedahkan tentang titik lemah dan daya tahan rantaian bekalan.",
+  "post": {
+   "author": "Afzal Hussain Mohammed Nakheeb",
+   "role": "Founder, Chairman & Head of Strategy",
+   "date": "2026-03-31",
+   "topic": "Food security",
+   "image": "/blog/hormuz-shock-gcc-food-security-risk.jpg",
+   "minutes": 8
+  },
+  "parent": "res-blog"
+ },
+ "blog-india-avocado-market-growth-farmer-challenge": {
+  "route": "/ms/resources/blog/india-avocado-market-growth-farmer-challenge",
+  "section": "resources",
+  "name": "Merapatkan Jurang: Bagaimana T57 Boleh Mengubah Industri Avokado India yang Sedang Muncul",
+  "h1": "Merapatkan Jurang: Bagaimana T57 Boleh Mengubah Industri Avokado India yang Sedang Muncul",
+  "answer": "Import avokado India yang berkembang pesat, dan jurang yang dihadapi penanam.",
+  "faqs": [],
+  "title": "Industri Avokado India yang Sedang Berkembang | T57 Insights",
+  "description": "Sektor avokado India sedang berkembang pesat, namun risiko seperti lebihan bekalan dan pasaran yang tidak selaras masih wujud. Ketahui bagaimana T57 memacu pertanian yang lebih bijak dan berasaskan data.",
+  "post": {
+   "author": "Abdul Bari Kareem",
+   "role": "Co-founder & CTO",
+   "date": "2026-03-17",
+   "topic": "Markets and corridors",
+   "image": "/blog/india-avocado-market-growth-farmer-challenge.jpg",
+   "minutes": 3
+  },
+  "parent": "res-blog"
+ },
  "blog-blockchain-food-supply-chain": {
   "route": "/ms/resources/blog/blockchain-food-supply-chain",
   "section": "resources",
@@ -3488,6 +3526,25 @@
   },
   "parent": "res-blog"
  },
+ "blog-india-us-trade-deal-2026-agriculture-impact": {
+  "route": "/ms/resources/blog/india-us-trade-deal-2026-agriculture-impact",
+  "section": "resources",
+  "name": "Perjanjian Dagangan India-AS Selepas Kejutan Mahkamah Agung: Gencatan Taktikal, Perangkap Tersembunyi, atau Pertaruhan Tarif Trump Seterusnya?",
+  "h1": "Perjanjian Dagangan India-AS Selepas Kejutan Mahkamah Agung: Gencatan Taktikal, Perangkap Tersembunyi, atau Pertaruhan Tarif Trump Seterusnya?",
+  "answer": "Apa makna perjanjian interim India-AS bagi pertanian.",
+  "faqs": [],
+  "title": "Perjanjian Perdagangan India-AS dan Pertanian | T57 Insights",
+  "description": "Perjanjian Perdagangan India–AS 2026 dihuraikan: tarif, perubahan dasar, dan kesan jangka panjang terhadap pertanian, petani dan rantaian nilai agri-makanan India.",
+  "post": {
+   "author": "Afzal Hussain Mohammed Nakheeb",
+   "role": "Founder, Chairman & Head of Strategy",
+   "date": "2026-02-21",
+   "topic": "Markets and corridors",
+   "image": "/blog/india-us-trade-deal-2026-agriculture-impact.jpg",
+   "minutes": 10
+  },
+  "parent": "res-blog"
+ },
  "blog-gulfood-2026-farm-to-fork": {
   "route": "/ms/resources/blog/gulfood-2026-farm-to-fork",
   "section": "resources",
@@ -3526,6 +3583,25 @@
   },
   "parent": "res-blog"
  },
+ "blog-india-farm-sector-2026-strategic-outlook": {
+  "route": "/ms/resources/blog/india-farm-sector-2026-strategic-outlook",
+  "section": "resources",
+  "name": "Mengemudi Paradigma Pertanian Baharu: 5 Anjakan Strategik bagi Sektor Pertanian India pada 2026",
+  "h1": "Mengemudi Paradigma Pertanian Baharu: 5 Anjakan Strategik bagi Sektor Pertanian India pada 2026",
+  "answer": "Lima perkembangan yang mencorak perdagangan pertanian dan sekuriti makanan India.",
+  "faqs": [],
+  "title": "5 Peralihan Strategik bagi Ladang India pada 2026 | T57",
+  "description": "Terokai lima peralihan strategik yang membentuk semula pertanian India pada 2026, daripada daya tahan iklim dan agri-stack hingga bahan api bio, logistik dan permintaan makanan global.",
+  "post": {
+   "author": "Afzal Hussain Mohammed Nakheeb",
+   "role": "Founder, Chairman & Head of Strategy",
+   "date": "2026-01-05",
+   "topic": "Markets and corridors",
+   "image": "/blog/india-farm-sector-2026-strategic-outlook.jpg",
+   "minutes": 5
+  },
+  "parent": "res-blog"
+ },
  "blog-digital-agri-finance-alliance-global-food-system-transformation": {
   "route": "/ms/resources/blog/digital-agri-finance-alliance-global-food-system-transformation",
   "section": "resources",
@@ -3561,6 +3637,25 @@
    "topic": "Trade finance",
    "image": "/blog/escrow-crypto-ai-agents-agriculture.jpg",
    "minutes": 3
+  },
+  "parent": "res-blog"
+ },
+ "blog-how-data-can-save-farmers-lives": {
+  "route": "/ms/resources/blog/how-data-can-save-farmers-lives",
+  "section": "resources",
+  "name": "Memecahkan Kartel Orang Tengah: Bagaimana Data Boleh Menyelamatkan Nyawa Petani",
+  "h1": "Memecahkan Kartel Orang Tengah: Bagaimana Data Boleh Menyelamatkan Nyawa Petani",
+  "answer": "Bagaimana data dan akses terus boleh meningkatkan pendapatan petani.",
+  "faqs": [],
+  "title": "Bagaimana Data Memecahkan Kartel Orang Tengah | T57",
+  "description": "Terokai bagaimana data masa nyata dan analisis AI membantu melindungi petani daripada risiko iklim, kejutan pasaran dan ketidakstabilan kewangan di seluruh dunia.",
+  "post": {
+   "author": "Afzal Hussain Mohammed Nakheeb",
+   "role": "Founder, Chairman & Head of Strategy",
+   "date": "2025-12-01",
+   "topic": "Farmers and value chains",
+   "image": "/blog/how-data-can-save-farmers-lives.jpg",
+   "minutes": 5
   },
   "parent": "res-blog"
  },
