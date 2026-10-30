@@ -3355,6 +3355,120 @@
   "description": "T57 sedang mengumpul dana pusingan pelancarannya dari Riyadh. Lihat daya tarikan, rakan kongsi dan pasukannya, dan minta pek pelabur sebagai pelabur yang layak.",
   "parent": "about"
  },
+ "blog-blockchain-food-supply-chain": {
+  "route": "/ms/resources/blog/blockchain-food-supply-chain",
+  "section": "resources",
+  "name": "Bolehkah Blockchain Akhirnya Menutup Kos Global Pembaziran Makanan $1 Trilion Setahun?",
+  "h1": "Bolehkah Blockchain Akhirnya Menutup Kos Global Pembaziran Makanan $1 Trilion Setahun?*",
+  "answer": "Bagaimana rekod dikongsi yang kalis usik boleh menjadikan rantaian bekalan makanan yang panjang boleh dipercayai.",
+  "faqs": [],
+  "title": "Bolehkah Blockchain Mengurangkan Kos Pembaziran Makanan $1T? | T57",
+  "description": "Ketahui bagaimana blockchain boleh membawa ketelusan kepada rantaian bekalan makanan, mengurangkan pembaziran dan membantu petani menerima nilai yang adil di pasaran global.",
+  "post": {
+   "author": "Abdul Bari Kareem",
+   "role": "Co-founder & CTO",
+   "date": "2026-03-05",
+   "topic": "AI and technology",
+   "image": "/blog/blockchain-food-supply-chain.jpg",
+   "minutes": 5
+  },
+  "parent": "res-blog"
+ },
+ "blog-five-forces-reshaping-malaysian-agriculture-2026": {
+  "route": "/ms/resources/blog/five-forces-reshaping-malaysian-agriculture-2026",
+  "section": "resources",
+  "name": "Lima Kuasa yang Mencorak Semula Pertanian Malaysia: Tinjauan 2026 untuk Penggubal Dasar",
+  "h1": "Lima Kuasa yang Mencorak Semula Pertanian Malaysia: Tinjauan 2026 untuk Penggubal Dasar",
+  "answer": "Sara diri, risiko iklim dan pematuhan EUDR di Malaysia.",
+  "faqs": [],
+  "title": "Lima Kuasa yang Mencorak Semula Pertanian Malaysia | T57",
+  "description": "Lima peralihan yang mengubah pertanian Malaysia pada 2026, ke arah rantaian bekalan yang bernilai lebih tinggi, berdaya tahan dan boleh dikesan bagi menyokong sekuriti makanan dan pendapatan luar bandar.",
+  "post": {
+   "author": "Afzal Hussain Mohammed Nakheeb",
+   "role": "Founder, Chairman & Head of Strategy",
+   "date": "2026-03-03",
+   "topic": "Markets and corridors",
+   "image": "/blog/five-forces-reshaping-malaysian-agriculture-2026.jpg",
+   "minutes": 8
+  },
+  "parent": "res-blog"
+ },
+ "blog-five-forces-reshaping-middle-east-agriculture-2026": {
+  "route": "/ms/resources/blog/five-forces-reshaping-middle-east-agriculture-2026",
+  "section": "resources",
+  "name": "Lima Kuasa yang Mencorak Semula Pertanian Timur Tengah: Tinjauan Strategik untuk 2026",
+  "h1": "Lima Kuasa yang Mencorak Semula Pertanian Timur Tengah: Tinjauan Strategik untuk 2026",
+  "answer": "Kebergantungan import, teknologi pintar iklim dan kebolehkesanan di seluruh rantau.",
+  "faqs": [],
+  "title": "Lima Kuasa yang Mencorak Semula Pertanian Timur Tengah | T57",
+  "description": "Lima Kuasa yang Mencorak Semula Pertanian Timur Tengah: Tinjauan Strategik untuk 2026",
+  "post": {
+   "author": "Afzal Hussain Mohammed Nakheeb",
+   "role": "Founder, Chairman & Head of Strategy",
+   "date": "2026-02-28",
+   "topic": "Markets and corridors",
+   "image": "/blog/five-forces-reshaping-middle-east-agriculture-2026.jpg",
+   "minutes": 8
+  },
+  "parent": "res-blog"
+ },
+ "blog-agriculture-ai-stack": {
+  "route": "/ms/resources/blog/agriculture-ai-stack",
+  "section": "resources",
+  "name": "Kemasukan Senyap Pertanian ke dalam Timbunan AI",
+  "h1": "Kemasukan Senyap Pertanian ke dalam Timbunan AI",
+  "answer": "Pertanian sedang menjadi industri berteraskan AI yang mengutamakan automasi.",
+  "faqs": [],
+  "title": "Kemasukan Senyap Pertanian ke dalam AI | T57",
+  "description": "Pertanian sedang menjadi industri berteraskan AI yang mengutamakan automasi, di mana perisian, penderiaan dan robotik sama penting dengan tanah dan benih.",
+  "post": {
+   "author": "Abdul Bari Kareem",
+   "role": "Co-founder & CTO",
+   "date": "2026-02-26",
+   "topic": "AI and technology",
+   "image": "/blog/agriculture-ai-stack.jpg",
+   "minutes": 4
+  },
+  "parent": "res-blog"
+ },
+ "blog-digital-agri-finance-alliance-global-food-system-transformation": {
+  "route": "/ms/resources/blog/digital-agri-finance-alliance-global-food-system-transformation",
+  "section": "resources",
+  "name": "Bagaimana Pakatan Kewangan Agri Digital Boleh Memacu Transformasi Sistem Makanan Global",
+  "h1": "Bagaimana Pakatan Kewangan Agri Digital Boleh Memacu Transformasi Sistem Makanan Global",
+  "answer": "Apa makna MoU T57–MAIB bagi petani dan usahawan tani.",
+  "faqs": [],
+  "title": "Bagaimana Pakatan Kewangan Agri Digital Membantu | T57",
+  "description": "Ketahui bagaimana pembiayaan perdagangan dipacu AI sedang mengubah pertanian global dengan meningkatkan kecairan, ketelusan dan akses kepada modal bagi petani dan pedagang.",
+  "post": {
+   "author": "Afzal Hussain Mohammed Nakheeb",
+   "role": "Founder, Chairman & Head of Strategy",
+   "date": "2025-12-18",
+   "topic": "Trade finance",
+   "image": "/blog/digital-agri-finance-alliance-global-food-system-transformation.jpg",
+   "minutes": 4
+  },
+  "parent": "res-blog"
+ },
+ "blog-escrow-crypto-ai-agents-agriculture": {
+  "route": "/ms/resources/blog/escrow-crypto-ai-agents-agriculture",
+  "section": "resources",
+  "name": "Kepercayaan dalam Beberapa Klik, Bukan Berminggu-minggu: Bagaimana Eskrow, Kripto dan Ejen AI Akan Menggantikan Dokumen yang Tidak Berkesudahan dalam Sektor Pertanian",
+  "h1": "Kepercayaan dalam Beberapa Klik, Bukan Berminggu-minggu: Bagaimana Eskrow, Kripto dan Ejen AI Akan Menggantikan Dokumen yang Tidak Berkesudahan dalam Sektor Pertanian",
+  "answer": "Mengapa bayaran yang lambat merugikan petani, dan apa yang boleh mempercepatnya.",
+  "faqs": [],
+  "title": "Eskrow, Kripto dan Ejen AI dalam Pertanian | T57",
+  "description": "Ketahui bagaimana eskrow, penyelesaian kripto dan ejen AI melindungi bayaran, mengurangkan risiko dan memodenkan perdagangan pertanian merentas rantaian bekalan global.",
+  "post": {
+   "author": "Afzal Hussain Mohammed Nakheeb",
+   "role": "Founder, Chairman & Head of Strategy",
+   "date": "2025-12-16",
+   "topic": "Trade finance",
+   "image": "/blog/escrow-crypto-ai-agents-agriculture.jpg",
+   "minutes": 3
+  },
+  "parent": "res-blog"
+ },
  "legal": {
   "route": "/ms/legal",
   "section": "legal",
