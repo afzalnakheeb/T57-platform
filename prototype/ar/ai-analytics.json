@@ -29,8 +29,8 @@
 "Suggestions explain their reasons. You decide what to do.": "الاقتراحات تشرح أسبابها، وأنت تقرّر ما تفعل.",
 "Do I need to upload my own data?": "هل أحتاج إلى رفع بياناتي؟",
 "No. The dashboard is built from your activity on T57. You can add other data, such as costs, for better forecasts.": "لا، تُبنى اللوحة من نشاطك على T57، وتستطيع إضافة بيانات أخرى كالتكاليف لتوقعات أدق.",
-"Can I share the dashboard with my lender?": "هل أشارك اللوحة مع الممول؟",
-"Yes. You can share selected views with lenders or investors, with your consent.": "نعم، تستطيع مشاركة عروض مختارة مع الممولين أو المستثمرين، بموافقتك.",
+"Can I share the dashboard with my lender?": "هل أشارك اللوحة مع المموّل؟",
+"Yes. You can share selected views with lenders or investors, with your consent.": "نعم، تستطيع مشاركة عروض مختارة مع المموّلين أو المستثمرين، بموافقتك.",
 "Page 13 of 14": "الصفحة 13 من 14",
 "Reports": "التقارير",
 "Where you have been": "أين كنت",
@@ -43,5 +43,7 @@
 "Forecasts, alerts and suggested actions": "توقعات وتنبيهات وإجراءات مقترحة",
 "You decide what to change": "أنت تقرّر ما تغيّره",
 "Predictive Trade Analytics Dashboard | T57 AI Native": "لوحة التحليلات التجارية التنبؤية | ذكاء T57",
-"AI forecasts of volumes, margins and cash, with alerts on slow payers and supplier risk, and suggested actions for food trading businesses on T57.": "توقعات بالذكاء الاصطناعي للكميات والهوامش والنقد، مع تنبيهات ببطء السداد ومخاطر المورّدين، وإجراءات مقترحة لمنشآت تجارة الغذاء على T57."
+"AI forecasts of volumes, margins and cash, with alerts on slow payers and supplier risk, and suggested actions for food trading businesses on T57.": "توقعات بالذكاء الاصطناعي للكميات والهوامش والنقد، مع تنبيهات ببطء السداد ومخاطر المورّدين، وإجراءات مقترحة لمنشآت تجارة الغذاء على T57.",
+"Jeddah food trader spots a cash crunch early": "تاجر أغذية في جدة يرى أزمة سيولة مبكرًا",
+"A Jeddah food trader discovered a cash shortfall only when it could not pay a supplier, after two buyers paid late in the same month.": "لم يكتشف تاجر أغذية في جدة نقص السيولة إلا حين عجز عن الدفع لمورّد، بعد أن تأخر مشتريان في السداد في الشهر نفسه."
 }

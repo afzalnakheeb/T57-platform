@@ -1,5 +1,5 @@
 {
-"Technology Partners | T57": "तकनीकी पार्टनर | T57",
+"Technology Partners | T57": "टेक्नोलॉजी पार्टनर: क्लाउड, पहचान और डेटा | T57",
 "Partner with T57 in cloud, identity, data, integration and AI to serve verified food businesses.": "सत्यापित खाद्य व्यवसायों की सेवा के लिए क्लाउड, पहचान, डेटा, इंटीग्रेशन और AI में T57 के साथ साझेदारी करें।",
 "Build the future": "हमारे साथ बनाएँ",
 "of food trade with us.": "खाद्य व्यापार का भविष्य।",
@@ -34,7 +34,7 @@
 "Logistics Partners | Freight, Cold Chain, Inspection | T57": "लॉजिस्टिक्स पार्टनर | फ़्रेट, कोल्ड चेन, निरीक्षण | T57",
 "Freight, cold chain, warehouse, inspection and customs partners serve verified food traders from inside the T57 trade record.": "फ़्रेट, कोल्ड चेन, गोदाम, निरीक्षण और कस्टम पार्टनर T57 ट्रेड रिकॉर्ड के भीतर से सत्यापित खाद्य ट्रेडरों की सेवा करते हैं।",
 "Move and check food": "सत्यापित ट्रेडरों के लिए",
-"for verified traders.": "भोजन पहुँचाएँ और जाँचें।",
+"for verified traders.": "माल पहुँचाएँ और जाँचें।",
 "Freight, cold chain, warehouse, inspection and customs partners serve verified traders from inside the T57 trade record.": "फ़्रेट, कोल्ड चेन, गोदाम, निरीक्षण और कस्टम पार्टनर T57 ट्रेड रिकॉर्ड के भीतर से सत्यापित ट्रेडरों की सेवा करते हैं।",
 "Become a logistics partner": "लॉजिस्टिक्स पार्टनर बनें",
 "On the trade record": "ट्रेड रिकॉर्ड पर",
@@ -59,7 +59,7 @@
 "Yes. They can choose from T57's partners or bring their own.": "हाँ। वे T57 के पार्टनरों में से चुन सकते हैं या अपना पार्टनर ला सकते हैं।",
 "Can inspection results trigger payment?": "क्या निरीक्षण के नतीजे भुगतान शुरू कर सकते हैं?",
 "Yes, when the parties agree it in their contract.": "हाँ, जब पक्ष अपने कॉन्ट्रैक्ट में इस पर सहमत हों।",
-"Move and check food for verified traders.": "सत्यापित ट्रेडरों के लिए भोजन पहुँचाएँ और जाँचें।",
+"Move and check food for verified traders.": "सत्यापित ट्रेडरों के लिए माल पहुँचाएँ और जाँचें।",
 "Shipment milestones on the trade record, with payment released at delivery": "ट्रेड रिकॉर्ड पर शिपमेंट के पड़ाव, डिलीवरी पर भुगतान जारी",
 "Bookings": "बुकिंग",
 "Re-keyed from email": "ईमेल से दोबारा टाइप",
@@ -213,5 +213,9 @@
 "Who supports my country?": "मेरे देश में सहायता कौन देता है?",
 "In the five pilot markets, the local team. Anywhere else, our global team, by chat or at hello@t57.ai.": "पाँच पायलट बाज़ारों में स्थानीय टीम। बाकी हर जगह हमारी वैश्विक टीम, चैट से या hello@t57.ai पर।",
 "Join T57 from anywhere.": "कहीं से भी T57 से जुड़ें।",
-"The five pilot markets": "पाँच पायलट बाज़ार"
+"The five pilot markets": "पाँच पायलट बाज़ार",
+"Partner with T57 in cloud, identity, data, integration and AI, and help verified food businesses trade, finance and ship on one trade record.": "सत्यापित खाद्य व्यवसायों की सेवा के लिए क्लाउड, पहचान, डेटा, इंटीग्रेशन और AI में T57 के साथ साझेदारी करें।",
+"Contact T57 to apply for membership, book a demo, become a partner, work with us on food security, or reach the press team.": "जुड़ने, डेमो देखने, साझेदारी करने, खाद्य सुरक्षा पर हमारे साथ काम करने या मीडिया पूछताछ के लिए T57 से संपर्क करें।",
+"Request a T57 Demo | Verified Food Trade Platform": "T57 डेमो का अनुरोध करें | सत्यापित खाद्य व्यापार",
+"Book a 30-minute T57 demo on your own products and markets: verified suppliers, RFQs, contracts, trade finance and logistics on one trade record.": "अपने ही उत्पादों और बाज़ारों पर 30 मिनट का T57 डेमो बुक करें, फिर अपना मुफ़्त ट्रायल शुरू करें।"
 }

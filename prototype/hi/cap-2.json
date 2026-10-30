@@ -67,7 +67,7 @@
 "with confidence.": "भरोसे के साथ।",
 "Pay and get paid with confidence, on terms both sides can see and trust.": "भरोसे के साथ भुगतान करें और पाएँ, ऐसी शर्तों पर जिन्हें दोनों पक्ष देख सकें और जिन पर भरोसा कर सकें।",
 "Set up protected payment on your next trade": "अपने अगले सौदे पर सुरक्षित भुगतान सेट करें",
-"Pay and get paid with confidence.": "भरोसे के साथ भुगतान करें और पाएँ।",
+"Pay and get paid with confidence.": "भरोसे के साथ भुगतान करें और पैसा पाएँ।",
 "Animation in three steps. Today: someone always carries the payment risk. With T57: choose protection, link to milestones, settle. The result: both sides protected and paid on proof.": "तीन चरणों का एनिमेशन। आज: भुगतान का जोखिम हमेशा कोई न कोई उठाता है। T57 के साथ: सुरक्षा चुनें, पड़ावों से जोड़ें, निपटान करें। नतीजा: दोनों पक्ष सुरक्षित, और सबूत पर भुगतान।",
 "Paper LC?": "कागज़ी LC?",
 "Someone always carries the payment risk": "भुगतान का जोखिम हमेशा कोई न कोई उठाता है",
@@ -303,5 +303,8 @@
 "Letters of credit are commonly issued and advised electronically between banks. Electronic presentation of trade documents depends on local law, and T57 supports paper presentation where it is still required.": "लेटर ऑफ़ क्रेडिट आम तौर पर बैंकों के बीच इलेक्ट्रॉनिक रूप से जारी और सूचित किए जाते हैं। ट्रेड दस्तावेज़ों की इलेक्ट्रॉनिक प्रस्तुति स्थानीय कानून पर निर्भर करती है, और जहाँ अब भी ज़रूरी है, वहाँ T57 कागज़ी प्रस्तुति को सपोर्ट करता है।",
 "Found at presentation": "प्रस्तुति पर पता चलता है",
 "Checked before presentation": "प्रस्तुति से पहले जाँचा गया",
-"Presented digitally": "डिजिटल रूप से प्रस्तुत"
+"Presented digitally": "डिजिटल रूप से प्रस्तुत",
+"Riyadh restaurant group reorders produce by voice note": "रियाद का रेस्टोरेंट समूह वॉइस नोट से सब्ज़ियाँ दोबारा ऑर्डर करता है",
+"The head chef of a Riyadh restaurant group sends a voice note in Arabic: \"Same vegetables as Monday, but double the tomatoes, deliver tomorrow morning.\" T57's AI matches the request to Monday's order with a verified local supplier, doubles the tomatoes and shows a summary. The chef confirms with one tap, the supplier receives a structured order, and the delivery and invoice are recorded automatically.": "रियाद के एक रेस्टोरेंट समूह के हेड शेफ़ अरबी में वॉइस नोट भेजते हैं: \"सोमवार वाली ही सब्ज़ियाँ, पर टमाटर दोगुने, कल सुबह डिलीवरी।\" T57 का AI इस अनुरोध को एक सत्यापित स्थानीय सप्लायर के साथ सोमवार के ऑर्डर से मिलाता है, टमाटर दोगुने करता है और सारांश दिखाता है। शेफ़ एक टैप से पुष्टि करते हैं, सप्लायर को व्यवस्थित ऑर्डर मिलता है, और डिलीवरी व इनवॉइस अपने-आप दर्ज हो जाते हैं।",
+"Funds are held by regulated escrow providers, never by T57. For both sides, this means money is held separately by a regulated provider.": "पैसा नियंत्रित एस्क्रो प्रदाताओं के पास रहता है, T57 के पास कभी नहीं। दोनों पक्षों के लिए इसका मतलब है कि पैसा एक नियंत्रित प्रदाता के पास अलग रखा जाता है।"
 }

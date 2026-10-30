@@ -30,7 +30,7 @@
 "Execute compliant, financed trade with confidence": "نفّذ صفقات ممولة ومستوفية للمتطلبات بثقة",
 "With smart contracts, escrow, Shariah-compliant and conventional trade finance, banking from licensed partners, and digital wallets, you can structure deals that protect the cooperative and ensure faster payouts to members.": "بالعقود الذكية، وحساب الضمان، وتمويل التجارة المتوافق مع الشريعة أو التقليدي، والخدمات المصرفية من شركاء مرخّصين، والمحافظ الرقمية، تصوغ صفقات تحمي التعاونية وتعجّل بمستحقات الأعضاء.",
 "Manage logistics, records, and risk in one place": "الشحن والسجلات والمخاطر، في مكان واحد",
-"T57 coordinates logistics, storage, and inspections and maintains an end-to-end audit trail.": "تنسّق T57 النقل والتخزين والفحص، وتحفظ سجل تدقيق كاملًا من البداية حتى النهاية.",
+"T57 coordinates logistics, storage, and inspections and maintains an end-to-end audit trail.": "تنسّق T57 النقل والتخزين والفحص، وتحفظ مسار تدقيق كاملًا من البداية حتى النهاية.",
 "AI-powered platforms": "أدوات يدعمها الذكاء الاصطناعي",
 "Access market intelligence, trade matchmaking, and negotiation support that helps FPOs decide what members grow, when to sell, where to focus collective strengths, and how to secure better buyers and terms.": "معلومات السوق، والمطابقة التجارية، ومساعدة في التفاوض، تعين منظمة المنتجين على تحديد ما يزرعه الأعضاء، ومتى يبيعون، وأين يوجّهون قوتهم الجماعية، وكيف يصلون إلى مشترين وشروط أفضل.",
 "AIdriven market, crop, live food index, and price intelligence": "معلومات السوق والمحاصيل والأسعار ومؤشر الغذاء الآني، بالذكاء الاصطناعي",
@@ -72,5 +72,11 @@
 "Hard to reach as a group": "يصعب الحصول عليه كمجموعة",
 "Finance for the whole cooperative": "تمويل للتعاونية بأكملها",
 "T57 for Cooperatives & FPOs | Market Access and Finance": "T57 للتعاونيات ومنظمات المنتجين | أسواق أوسع وتمويل",
-"T57 helps cooperatives and FPOs trade directly, see live prices, secure finance, manage logistics and run auditable operations for members.": "تساعد T57 التعاونيات ومنظمات المنتجين على البيع المباشر، ومعرفة الأسعار الآنية، والحصول على التمويل، وتنظيم النقل، وإدارة عمليات قابلة للتدقيق لأعضائها."
+"T57 helps cooperatives and FPOs trade directly, see live prices, secure finance, manage logistics and run auditable operations for members.": "تساعد T57 التعاونيات ومنظمات المنتجين على البيع المباشر، ومعرفة الأسعار الآنية، والحصول على التمويل، وتنظيم النقل، وإدارة عمليات قابلة للتدقيق لأعضائها.",
+"AI-driven market, crop, live food index, and price intelligence": "معلومات السوق والمحاصيل والأسعار ومؤشر الغذاء الآني، بالذكاء الاصطناعي",
+"The platform draws on research papers, government notifications, logistics events, and social signals to provide early warnings on climate shocks, trade policy shifts, and price movements at the crop and country level.": "تستند المنصة إلى الأبحاث والتعاميم الحكومية وأحداث النقل والمؤشرات العامة، لتنبّه مبكرًا إلى التقلبات المناخية وتغيّر السياسات التجارية وحركة الأسعار، لكل محصول ودولة.",
+"Match your crop, volume, quality, and delivery profile with suitable global buyers (wholesale, retail, and institutional), shortening the path from demand. Contract farming: Secure demand through structured growing arrangements linked to buyer needs.": "تُطابَق محاصيلكم وكمياتكم وجودتها ومواعيد تسليمها مع المشترين المناسبين حول العالم (جملة وتجزئة وجهات مؤسسية)، فيقصر الطريق إلى الطلب. وفي الزراعة التعاقدية: اضمن الطلب باتفاقيات زراعة منظّمة مبنية على احتياج المشترين.",
+"Access to subject experts": "خبراء في متناولك",
+"Through a 'rent an expert' and 'rented technology' model, your members can hire quality inspectors or logistics specialists in a pay-as-you-go service or access advanced machinery and equipment (drones, harvesters, etc.) without needing to own the asset.": "عبر خدمتي «استعن بخبير» و«استأجر التقنية»، يستعين أعضاؤك بمفتشي جودة أو مختصين في النقل، ويدفعون بقدر الاستخدام، أو يستخدمون معدات متقدمة كالطائرات المسيّرة والحصّادات دون أن يشتروها.",
+"FPOs can tap into partner banks, trade finance platforms, and tokenized or crowdfunded pools to finance working capital, pre-shipment needs.": "تستطيع منظمات المنتجين الاستفادة من البنوك الشريكة ومنصات تمويل التجارة وصناديق التمويل الجماعي أو المرمَّزة، لتمويل رأس المال العامل واحتياجات ما قبل الشحن."
 }

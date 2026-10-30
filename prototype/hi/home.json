@@ -71,7 +71,7 @@
 "RFQ to contract": "RFQ से कॉन्ट्रैक्ट",
 "Letter of credit": "लेटर ऑफ़ क्रेडिट",
 "Halal, inspection, shipping": "हलाल, निरीक्षण, शिपिंग",
-"Illustrative example": "उदाहरण के तौर पर",
+"Illustrative example": "सांकेतिक उदाहरण",
 "A family date producer in Madinah has no contacts in Malaysia. A Kuala Lumpur distributor finds it through matching, sends an RFQ and accepts a quote, and the contract is generated automatically. An LC from a partner bank protects payment, and the exporter's first completed trade builds a history it can use for finance next season.": "मदीना के एक पारिवारिक खजूर उत्पादक का मलेशिया में कोई संपर्क नहीं है। कुआलालंपुर का एक डिस्ट्रीब्यूटर मैचिंग से उसे ढूँढता है, RFQ भेजता है और एक कोटेशन स्वीकार करता है, और कॉन्ट्रैक्ट अपने आप तैयार हो जाता है। पार्टनर बैंक का LC भुगतान सुरक्षित करता है, और निर्यातक का पहला पूरा सौदा ऐसा इतिहास बनाता है जिससे अगले सीज़न में फ़ाइनेंस मिल सके।",
 "Follow one trade, every step": "एक सौदे को हर कदम पर देखें",
 "AI native": "AI-नेटिव",
@@ -201,7 +201,7 @@
 "On demand": "ऑन डिमांड",
 "Hire an expert": "विशेषज्ञ की सेवाएँ लें",
 "Agronomists, inspectors and food specialists, by video call at an agreed price.": "कृषि विशेषज्ञ, निरीक्षक और खाद्य विशेषज्ञ, तय कीमत पर वीडियो कॉल से।",
-"Rent equipment and technology": "उपकरण और टेक्नोलॉजी किराये पर लें",
+"Rent equipment and technology": "उपकरण और टेक्नोलॉजी किराए पर लें",
 "Drones, machinery and small processing units, booked by the job.": "ड्रोन, मशीनरी और छोटी प्रोसेसिंग यूनिट, काम के हिसाब से बुक।",
 "The 5 in T57": "T57 में 5",
 "Five industries, one trade": "पाँच उद्योग, एक व्यापार",
@@ -245,5 +245,6 @@
 "See all partners": "सभी पार्टनर देखें",
 "Investors: request the investor pack": "निवेशक: निवेशक पैक मँगाएँ",
 "Gulfood 2026": "Gulfood 2026",
-"Headquarters": "मुख्यालय"
+"Headquarters": "मुख्यालय",
+"The world spends about <b class=\"stat\">$<span data-count-on-view=\"2.22\" data-dec=\"2\">2.22</span> trillion</b> a year importing food (FAO Food Outlook, November 2025). Yet finding a buyer, checking them, agreeing terms, arranging finance, insurance, inspection, shipping and customs each come with their own paperwork, delays and risk. Banks rejected <b class=\"stat\"><span data-count-on-view=\"41\">41</span>%</b> of SME trade finance applications in 2025, part of a <b class=\"stat\">$<span data-count-on-view=\"2.5\" data-dec=\"1\">2.5</span> trillion</b> global gap (ADB, 2026).": "दुनिया हर साल खाद्य आयात पर लगभग <b class=\"stat\">$<span data-count-on-view=\"2.22\" data-dec=\"2\">2.22</span> ट्रिलियन</b> खर्च करती है (FAO फ़ूड आउटलुक, नवंबर 2025)। फिर भी खरीदार ढूँढना, उसकी जाँच, शर्तें तय करना, फ़ाइनेंस, बीमा, निरीक्षण, शिपिंग और कस्टम्स, हर काम की अपनी कागज़ी कार्रवाई, देरी और जोखिम है। 2025 में बैंकों ने SME के ट्रेड फ़ाइनेंस के <b class=\"stat\"><span data-count-on-view=\"41\">41</span>%</b> आवेदन ठुकरा दिए, जो <b class=\"stat\">$<span data-count-on-view=\"2.5\" data-dec=\"1\">2.5</span> ट्रिलियन</b> के वैश्विक अंतर का हिस्सा है (ADB, 2026)।"
 }

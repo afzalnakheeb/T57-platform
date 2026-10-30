@@ -199,7 +199,7 @@
 "Reporting": "रिपोर्टिंग",
 "Manual and late": "हाथ से और देर से",
 "Transparent investor reporting": "निवेशकों के लिए पारदर्शी रिपोर्टिंग",
-"Pricing risk": "प्रीमियम तय करने का जोखिम",
+"Pricing risk": "जोखिम का मूल्य-निर्धारण",
 "Based on paperwork": "कागज़ात पर आधारित",
 "Shipment and inspection data": "शिपमेंट और निरीक्षण का डेटा",
 "Disputed, slow to settle": "विवादित, निपटान में धीमे",
@@ -209,7 +209,7 @@
 "Live scene: capital rises as milestones are verified": "लाइव दृश्य: पड़ाव सत्यापित होने के साथ पूँजी बढ़ती है",
 "t wheat · inspected": "टन गेहूँ · निरीक्षण पूरा",
 "T57 Partner & Collaborator Network | Food & Agri Ecosystem": "T57 पार्टनर और सहयोगी नेटवर्क | खाद्य और कृषि इकोसिस्टम",
-"T57 brings agronomists, financiers, logistics firms, certifiers and universities onto one verified platform for smarter food trade and more impact.": "T57 कृषि विशेषज्ञों, फ़ाइनेंसरों, लॉजिस्टिक्स फ़र्मों, प्रमाणन संस्थाओं और विश्वविद्यालयों को एक सत्यापित प्लेटफ़ॉर्म पर लाता है, ताकि खाद्य व्यापार ज़्यादा समझदारी से हो और प्रभाव बढ़े।",
+"T57 brings agronomists, financiers, logistics firms, certifiers and universities onto one verified platform for smarter food trade and more impact.": "T57 कृषि विशेषज्ञों, फ़ाइनेंसरों, लॉजिस्टिक्स फ़र्मों, प्रमाणन संस्थाओं और विश्वविद्यालयों को एक सत्यापित खाद्य व्यापार प्लेटफ़ॉर्म पर लाता है।",
 "Build a stronger food system,": "मिलकर बनाएँ",
 "together.": "एक मज़बूत खाद्य प्रणाली।",
 "Development partners, associations and institutions reach the whole food chain through one platform.": "विकास पार्टनर, संघ और संस्थाएँ एक ही प्लेटफ़ॉर्म से पूरी खाद्य शृंखला तक पहुँचते हैं।",
@@ -339,5 +339,14 @@
 "Clients": "ग्राहक",
 "Verified clients": "सत्यापित ग्राहक",
 "Disputed or late": "विवादित या देर से",
-"Secure payment on completion": "काम पूरा होने पर सुरक्षित भुगतान"
+"Secure payment on completion": "काम पूरा होने पर सुरक्षित भुगतान",
+"Every document, logistics event, and approval is recorded on a tamper-evident ledger for immediate auditability, and funds are released only when milestones are verified. Tenders run from a single container to national reserve purchases.": "हर दस्तावेज़, लॉजिस्टिक्स घटना और मंज़ूरी ऐसे लेजर पर दर्ज होती है जिसमें छेड़छाड़ पकड़ी जा सके, ताकि तुरंत ऑडिट हो सके, और पैसा पड़ाव सत्यापित होने पर ही जारी होता है। टेंडर एक कंटेनर से लेकर राष्ट्रीय भंडार की खरीद तक चलते हैं।",
+"See your food supply early, and buy it cleanly.": "अपनी खाद्य आपूर्ति पहले से देखें, और साफ़-सुथरी खरीद करें।",
+"See how deals reach you": "देखें, सौदे आप तक कैसे पहुँचते हैं",
+"T57 shortens slow due diligence and weak transaction visibility that constrain capital, and goes beyond listing opportunities to manage execution, disputes, documentation and follow-through.": "T57 पूँजी को रोकने वाली धीमी ड्यू डिलिजेंस और लेन-देन की कमज़ोर जानकारी को कम करता है, और अवसर लिस्ट करने से आगे जाकर निष्पादन, विवाद, दस्तावेज़ और अनुवर्ती काम भी संभालता है।",
+"Each milestone is verified and written to a shared record before the next tranche is released. If something goes wrong at loading, later payments stop. And unlike bank-only networks, T57 shows you every party to the trade: buyer, seller, insurer, forwarder, shipping line and inspector.": "अगली किस्त जारी होने से पहले हर पड़ाव सत्यापित होकर साझा रिकॉर्ड पर दर्ज होता है। लोडिंग के समय कुछ गलत हो जाए, तो आगे के भुगतान रुक जाते हैं। और सिर्फ़ बैंकों वाले नेटवर्क के उलट T57 आपको सौदे का हर पक्ष दिखाता है: खरीदार, विक्रेता, बीमा कंपनी, फ़ॉरवर्डर, शिपिंग लाइन और निरीक्षक।",
+"T57 is built as a collaboration engine for the real economy of food. Here, capital, deep tech, logistics capacity, and on-the-ground expertise compound each other's strengths. Whether you need the expertise of an agronomist, a cold-chain operator, or a university to access the next generation of agri talent, T57 is your platform for connecting and growing.": "T57 खाद्य की असली अर्थव्यवस्था के लिए सहयोग के इंजन के रूप में बना है। यहाँ पूँजी, डीप टेक, लॉजिस्टिक्स क्षमता और ज़मीनी विशेषज्ञता एक-दूसरे की ताक़त बढ़ाते हैं। चाहे आपको कृषि विशेषज्ञ, कोल्ड-चेन ऑपरेटर, या कृषि प्रतिभा की अगली पीढ़ी तक पहुँचने के लिए किसी विश्वविद्यालय की ज़रूरत हो, T57 जुड़ने और बढ़ने का आपका प्लेटफ़ॉर्म है।",
+"T57 is built as a collaboration engine for the real economy of food, where impact capital, deep tech, logistics capacity, and on-the-ground expertise combine to amplify each other's strengths.": "T57 खाद्य की असली अर्थव्यवस्था के लिए सहयोग के इंजन के रूप में बना है, जहाँ इम्पैक्ट पूँजी, डीप टेक, लॉजिस्टिक्स क्षमता और ज़मीनी विशेषज्ञता मिलकर एक-दूसरे की ताक़त कई गुना करते हैं।",
+"Ready to reach the whole food chain?": "पूरी खाद्य शृंखला तक पहुँचने के लिए तैयार हैं?",
+"Few ways to deliver services in cross-border food trade": "सीमा-पार खाद्य व्यापार में सेवाएँ देने के कम रास्ते"
 }

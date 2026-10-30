@@ -130,7 +130,7 @@
 "Competitive quotes in days": "Günler içinde rekabetçi teklifler",
 "Paid upfront, at risk": "Peşin ödenir, risk altında",
 "Pay safely through escrow": "Emanet hesabıyla güvenli ödeme",
-"T57 for Buyers & Importers | Source from Verified Suppliers": "Alıcılar ve İthalatçılar İçin T57 | Doğrulanmış Tedarikçilerden Alın",
+"T57 for Buyers & Importers | Source from Verified Suppliers": "Alıcılar ve İthalatçılar İçin T57 | Doğrulanmış Tedarik",
 "Source food from verified producers and processors. RFQs, contracts, escrow, LCs, inspection and logistics on one trade record.": "Doğrulanmış üretici ve işleyicilerden gıda tedarik edin. Teklif talepleri, sözleşmeler, emanet hesabı, akreditif, gözetim ve lojistik tek ticaret kaydında.",
 "Sell to verified buyers,": "Doğrulanmış alıcılara satın,",
 "and get paid safely.": "ödemenizi güvenle alın.",
@@ -243,8 +243,8 @@
 "Capital runs short": "Sermaye yetmiyor",
 "Finance to fill bigger orders": "Büyük siparişler için finansman",
 "Motion graphic: trade corridors between exporters and verified buyers": "Hareketli grafik: ihracatçılar ile doğrulanmış alıcılar arasındaki ticaret koridorları",
-"T57 for Sellers & Exporters | Trusted Agri Export Platform": "Satıcılar ve İhracatçılar İçin T57 | Güvenilir Tarım İhracatı Platformu",
-"T57 helps food and agri exporters find verified buyers, manage documents, get paid securely and grow with real-time market intelligence.": "T57, gıda ve tarım ihracatçılarının doğrulanmış alıcılar bulmasına, belgelerini yönetmesine, ödemesini güvenle almasına ve anlık piyasa istihbaratıyla büyümesine yardımcı olur.",
+"T57 for Sellers & Exporters | Trusted Agri Export Platform": "Satıcılar ve İhracatçılar İçin T57 | Tarım İhracatı",
+"T57 helps food and agri exporters find verified buyers, manage documents, get paid securely and grow with real-time market intelligence.": "T57, gıda ve tarım ihracatçılarının doğrulanmış alıcılar bulmasına, belgelerini yönetmesine ve ödemesini güvenle almasına yardımcı olur.",
 "Trade more volume,": "Daha fazla hacimle ticaret yapın,",
 "with less risk.": "üstelik daha az riskle.",
 "Match supply and demand faster, with verified partners, live prices and finance for each deal.": "Doğrulanmış iş ortakları, anlık fiyatlar ve her işleme özel finansmanla arz ve talebi daha hızlı eşleştirin.",
@@ -323,6 +323,6 @@
 "Accepted ·": "Kabul edildi ·",
 "t": "t",
 "received · best selected": "alındı · en iyisi seçildi",
-"T57 for Traders & Aggregators | Fund and Run Deals": "Tüccarlar ve Toplayıcılar İçin T57 | İşlemlerinizi Finanse Edin ve Yürütün",
+"T57 for Traders & Aggregators | Fund and Run Deals": "Tüccarlar ve Toplayıcılar İçin T57 | İşlem Finansmanı",
 "Verified suppliers and buyers, back-to-back contracts and finance from competing lenders, all on one food trade record.": "Doğrulanmış tedarikçiler ve alıcılar, karşılıklı sözleşmeler ve yarışan kredi verenlerden finansman; hepsi tek bir gıda ticaret kaydında."
 }

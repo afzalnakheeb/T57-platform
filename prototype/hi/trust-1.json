@@ -1,5 +1,5 @@
 {
-"Trust & Compliance | Verified Food Trade on T57": "ट्रस्ट और अनुपालन | T57 पर सत्यापित खाद्य व्यापार",
+"Trust & Compliance | Verified Food Trade on T57": "भरोसा और अनुपालन | T57 पर सत्यापित खाद्य व्यापार",
 "Verified members, one trade record, an audit trail and licensed partners for payments. See how T57 makes trust the starting point of food trade.": "सत्यापित सदस्य, एक ट्रेड रिकॉर्ड, ऑडिट ट्रेल और भुगतान के लिए लाइसेंस प्राप्त पार्टनर। देखें कि T57 कैसे भरोसे को खाद्य व्यापार की शुरुआत बनाता है।",
 "Know who you trade with.": "जानें कि आप किससे व्यापार कर रहे हैं।",
 "Prove what happened.": "साबित करें कि क्या हुआ।",
@@ -64,7 +64,7 @@
 "Security &amp; privacy": "सुरक्षा और निजता",
 "Trade assurance": "ट्रेड एश्योरेंस",
 "Page 1 of 6": "6 में से पेज 1",
-"Trust & Compliance": "ट्रस्ट और अनुपालन",
+"Trust & Compliance": "भरोसा और अनुपालन",
 "Unknown, unchecked": "अनजान, बिना जाँच",
 "Verified and role-labeled": "सत्यापित और भूमिका लेबल वाले",
 "Paper and scattered files": "कागज़ और बिखरी फ़ाइलें",
@@ -74,10 +74,10 @@
 "Escrow paused, dispute on the record": "एस्क्रो रुका, विवाद रिकॉर्ड पर",
 "T57 PASSPORT": "T57 पासपोर्ट",
 "What is included": "क्या शामिल है",
-"More in Trust &amp; Compliance": "ट्रस्ट और अनुपालन में और",
+"More in Trust &amp; Compliance": "भरोसा और अनुपालन में और",
 "Why members and partners trust it": "सदस्य और पार्टनर इस पर भरोसा क्यों करते हैं",
 "Why trust is hard in food trade": "खाद्य व्यापार में भरोसा मुश्किल क्यों है",
-"Audit Trail for Food Trade | T57 Trust & Compliance": "खाद्य व्यापार के लिए ऑडिट ट्रेल | T57 ट्रस्ट और अनुपालन",
+"Audit Trail for Food Trade | T57 Trust & Compliance": "खाद्य व्यापार के लिए ऑडिट ट्रेल | T57 भरोसा और अनुपालन",
 "Every action on every trade, attributed to a verified person, time-stamped and tamper-evident. Audit-ready evidence on T57.": "हर सौदे की हर कार्रवाई, एक सत्यापित व्यक्ति से जुड़ी, समय के साथ दर्ज और छेड़छाड़ पकड़ने वाली। T57 पर ऑडिट के लिए तैयार सबूत।",
 "Who did what, and when.": "किसने क्या किया, और कब।",
 "On every trade.": "हर सौदे पर।",
@@ -251,5 +251,6 @@
 "Escrow paused until there is an outcome": "नतीजा आने तक एस्क्रो रुका",
 "Time": "समय",
 "Months of argument": "महीनों की बहस",
-"A clear, recorded process": "एक साफ़, दर्ज प्रक्रिया"
+"A clear, recorded process": "एक साफ़, दर्ज प्रक्रिया",
+"No. Entries are tamper-evident: any change can be detected, and nothing is deleted. Corrections are added as new entries.": "नहीं। प्रविष्टियों में छेड़छाड़ पकड़ में आती है: कोई भी बदलाव पकड़ा जा सकता है, और कुछ भी मिटाया नहीं जाता। सुधार नई प्रविष्टियों के रूप में जोड़े जाते हैं।"
 }

@@ -81,14 +81,21 @@ export function jsonLd(id: string, lang: Lang = 'en') {
   const crumbs = [{ name: shown('home').name, url: `${SITE}${shown('home').route}` }, ...(id === 'home' ? [] : trail(id))];
   const graph: object[] = [
     {
-      '@type': 'Organization', '@id': `${SITE}/#org`, name: 'T57.ai', url: SITE, logo: `${SITE}/icon-512.png`,
+      '@type': 'Organization', '@id': `${SITE}/#org`, name: 'T57', alternateName: ['T57.ai', 'تي 57'], url: SITE,
+      logo: { '@type': 'ImageObject', url: `${SITE}/icon-512.png`, width: 512, height: 512 },
       email: 'hello@t57.ai', telephone: '+966569712222',
       areaServed: 'Worldwide',
-      description: 'AI-native digital trade platform for food. T57 connects verified producers, buyers, banks and logistics on one trade record. Finance, escrow and insurance come from licensed partners.',
+      // A Saudi initiative: started in Madinah, headquarters moving to Riyadh (city only, no street address).
+      foundingLocation: { '@type': 'Place', name: 'Madinah, Saudi Arabia' },
+      address: { '@type': 'PostalAddress', addressLocality: 'Riyadh', addressCountry: 'SA' },
+      founder: { '@type': 'Person', name: 'Afzal Hussain Mohammed Nakheeb', jobTitle: 'Founder and Chairman', url: `${SITE}/about/leadership`, sameAs: ['https://www.linkedin.com/in/afzalhussain/', 'https://afzalnakheeb.com'] },
+      knowsAbout: ['digital food trade', 'agri trade finance', 'food security', 'halal food trade', 'trade documentation'],
+      description: 'T57 is an AI-native digital trade platform for food. Started in Madinah, Saudi Arabia, it puts verified farmers, processors, traders, buyers, banks and logistics firms on one trade record, from quote to payment. T57 does not lend, hold funds or own goods; finance, escrow and insurance come through licensed partners.',
     },
+    { '@type': 'WebSite', '@id': `${SITE}/#site`, name: 'T57', alternateName: 'T57.ai', url: SITE, inLanguage: LANGS, publisher: { '@id': `${SITE}/#org` } },
     {
       '@type': 'WebPage', '@id': `${url}#page`, url, name: p.title, description: p.description, inLanguage: lang,
-      isPartOf: { '@type': 'WebSite', '@id': `${SITE}/#site`, name: 'T57.ai', url: SITE, publisher: { '@id': `${SITE}/#org` } },
+      isPartOf: { '@id': `${SITE}/#site` },
       about: { '@id': `${SITE}/#org` },
       abstract: p.answer,
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.hero .std'] },
@@ -102,9 +109,9 @@ export function jsonLd(id: string, lang: Lang = 'en') {
     const a = p.post;
     graph.push({
       '@type': 'BlogPosting', '@id': `${url}#article`, mainEntityOfPage: { '@id': `${url}#page` },
-      headline: p.h1, description: p.description, abstract: p.answer, image: `${SITE}${a.image}`,
-      datePublished: a.date, articleSection: a.topic, timeRequired: `PT${a.minutes}M`, inLanguage: 'en',
-      author: { '@type': 'Person', name: a.author, jobTitle: a.role, worksFor: { '@id': `${SITE}/#org` } },
+      headline: p.h1, description: p.description, abstract: p.answer, image: { '@type': 'ImageObject', url: `${SITE}${a.image}` },
+      datePublished: a.date, dateModified: a.date, articleSection: a.topic, timeRequired: `PT${a.minutes}M`, inLanguage: lang,
+      author: { '@type': 'Person', name: a.author, jobTitle: a.role, url: `${SITE}/about/leadership`, worksFor: { '@id': `${SITE}/#org` } },
       publisher: { '@id': `${SITE}/#org` },
       isPartOf: { '@type': 'Blog', '@id': `${SITE}/resources/blog#blog`, name: 'T57 Insights', url: `${SITE}/resources/blog` },
     });

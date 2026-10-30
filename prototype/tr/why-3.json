@@ -89,8 +89,8 @@
 "Through regulated partners": "Düzenlemeye tabi iş ortakları aracılığıyla",
 "Records": "Kayıtlar",
 "Scattered": "Dağınık",
-"Stablecoin, Crypto & Bullion Payments for Food Trade | T57": "Gıda Ticareti İçin Stabil Kripto Para, Kripto ve Külçe Ödemeleri | T57",
-"Settle cross-border food trades in stablecoins, digital assets or bullion-backed payments through regulated partners, where lawful, on T57.": "T57'de sınır ötesi gıda işlemlerini, yasal olduğu yerlerde, düzenlemeye tabi iş ortakları aracılığıyla stabil kripto paralar, dijital varlıklar ya da külçeye dayalı ödemelerle kapatın.",
+"Stablecoin, Crypto & Bullion Payments for Food Trade | T57": "Gıda Ticaretinde Stablecoin ve Altın Destekli Ödeme | T57",
+"Settle cross-border food trades in stablecoins, digital assets or bullion-backed payments through regulated partners, where lawful, on T57.": "Sınır ötesi gıda işlemlerini, yasaların izin verdiği yerlerde, lisanslı iş ortaklarıyla stablecoin veya altına dayalı ödemelerle kapatın.",
 "Turn trade documents": "Ticaret belgelerini",
 "into fundable assets.": "finanse edilebilir varlıklara dönüştürün.",
 "Turn verified trade documents into digital assets that funders can trust and finance.": "Doğrulanmış ticaret belgelerini finansörlerin güvenip finanse edebileceği dijital varlıklara dönüştürün.",
@@ -134,7 +134,7 @@
 "Funders": "Finansörler",
 "A few local banks": "Birkaç yerel banka",
 "A wider pool of funders": "Daha geniş bir finansör havuzu",
-"Digital Asset Trade Finance | Tokenized Documents | T57": "Dijital Varlıkla Ticaret Finansmanı | Tokenleştirilmiş Belgeler | T57",
+"Digital Asset Trade Finance | Tokenized Documents | T57": "Tokenleştirilmiş Belgelerle Ticaret Finansmanı | T57",
 "Turn verified invoices, warehouse receipts and bills of lading into unique digital assets that lenders can trust and fund, on T57.": "T57'de doğrulanmış faturaları, ürün senetlerini ve konşimentoları kredi verenlerin güvenip finanse edebileceği benzersiz dijital varlıklara dönüştürün.",
 "Every step of a food trade.": "Bir gıda ticaretinin her adımı.",
 "One record.": "Tek kayıt.",
@@ -222,5 +222,5 @@
 "Nobody sees the whole trade": "Kimse işlemin tamamını görmüyor",
 "Every party sees the same facts": "Her taraf aynı gerçekleri görüyor",
 "T57 Capabilities | Every Step of Food Trade on One Record": "T57 Çözümleri | Gıda Ticaretinin Her Adımı Tek Kayıtta",
-"RFQs, contracts, trade finance, escrow, eLCs, insurance, logistics, customs and price intelligence for food trade, connected on one T57 trade record.": "Gıda ticareti için teklif talepleri, sözleşmeler, ticaret finansmanı, emanet hesabı, e-akreditifler, sigorta, lojistik, gümrük ve fiyat istihbaratı; hepsi tek bir T57 ticaret kaydında bağlantılı."
+"RFQs, contracts, trade finance, escrow, eLCs, insurance, logistics, customs and price intelligence for food trade, connected on one T57 trade record.": "Teklif talepleri, sözleşmeler, ticaret finansmanı, emanet, e-akreditif, sigorta, lojistik ve gümrük; hepsi tek bir T57 ticaret kaydında."
 }

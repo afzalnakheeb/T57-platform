@@ -75,7 +75,7 @@
 "Bought separately": "अलग-अलग खरीदी जाती हैं",
 "Connected inside the trade": "सौदे के भीतर जुड़ी हुई",
 "Domestic B2B Food Trade | Factory to Shop, Direct | T57": "घरेलू B2B खाद्य व्यापार | फ़ैक्ट्री से दुकान तक, सीधे | T57",
-"Local factories and farms sell direct to supermarkets, restaurants and offices at factory price, by the carton, with local delivery and pay-later partners.": "स्थानीय फ़ैक्ट्रियाँ और फ़ार्म सुपरमार्केट, रेस्टोरेंट और दफ़्तरों को फ़ैक्ट्री कीमत पर, कार्टन के हिसाब से, स्थानीय डिलीवरी और बाद में भुगतान वाले पार्टनरों के साथ सीधे बेचते हैं।",
+"Local factories and farms sell direct to supermarkets, restaurants and offices at factory price, by the carton, with local delivery and pay-later partners.": "स्थानीय फ़ैक्ट्रियाँ और फ़ार्म सुपरमार्केट, रेस्टोरेंट और दफ़्तरों को फ़ैक्ट्री कीमत पर सीधे बेचते हैं, स्थानीय डिलीवरी और बाद में भुगतान के साथ।",
 "From the factory": "फ़ैक्ट्री से",
 "to every shop in town.": "शहर की हर दुकान तक।",
 "Local factories and farms sell direct to supermarkets, restaurants and offices at factory price, by the carton, delivered to the door.": "स्थानीय फ़ैक्ट्रियाँ और फ़ार्म सुपरमार्केट, रेस्टोरेंट और दफ़्तरों को फ़ैक्ट्री कीमत पर, कार्टन के हिसाब से, दरवाज़े तक डिलीवरी के साथ सीधे बेचते हैं।",
@@ -299,5 +299,10 @@
 "Financed twice": "दो बार फ़ाइनेंस",
 "One token, one owner": "एक टोकन, एक मालिक",
 "Disputed milestones": "विवादित पड़ाव",
-"Released on recorded proof": "दर्ज सबूत पर भुगतान जारी"
+"Released on recorded proof": "दर्ज सबूत पर भुगतान जारी",
+"Food is one of the largest traded goods in the world. The global food import bill reached a record of about $2.22 trillion in 2025 (FAO Food Outlook, November 2025). Yet the trade still runs on disconnected systems: each bank, insurer, forwarder, inspector and customs authority keeps its own records, in its own format, about the same trade. Nothing connects them, so trust is rebuilt at every step, and errors and fraud slip through the gaps. The key challenges T57 addresses include:": "खाद्य उत्पाद दुनिया में सबसे ज़्यादा व्यापार होने वाली चीज़ों में से है। 2025 में वैश्विक खाद्य आयात बिल लगभग 2.22 ट्रिलियन डॉलर के रिकॉर्ड पर पहुँचा (FAO फ़ूड आउटलुक, नवंबर 2025)। फिर भी यह व्यापार आज भी अलग-अलग सिस्टमों पर चलता है: हर बैंक, बीमा कंपनी, फ़ॉरवर्डर, निरीक्षक और कस्टम विभाग एक ही सौदे के अपने रिकॉर्ड, अपने फ़ॉर्मैट में रखता है। उन्हें कुछ नहीं जोड़ता, इसलिए हर कदम पर भरोसा नए सिरे से बनाना पड़ता है, और गलतियाँ और धोखाधड़ी दरारों से निकल जाती हैं। T57 जिन मुख्य चुनौतियों को सुलझाता है, उनमें शामिल हैं:",
+"Records that show any change. Payments that follow proof.": "ऐसे रिकॉर्ड जिनमें हर बदलाव दिखता है। ऐसे भुगतान जो सबूत के बाद होते हैं।",
+"Records that show any change.": "ऐसे रिकॉर्ड जिनमें हर बदलाव दिखता है।",
+"Riyadh lender avoids a double-financed invoice": "रियाद का ऋणदाता दोहरे फ़ाइनेंस वाले इनवॉइस से बचता है",
+"A Riyadh finance company receives a request to fund an invoice from a food trader. Because the invoice was issued as a token on T57, the lender can see that it is unique, linked to a verified delivery and not pledged elsewhere. It funds the invoice. When the buyer confirms delivery, a smart-contract milestone instructs the escrow partner to repay the lender automatically.": "रियाद की एक फ़ाइनेंस कंपनी को एक खाद्य ट्रेडर से इनवॉइस फ़ाइनेंस का अनुरोध मिलता है। क्योंकि इनवॉइस T57 पर टोकन के रूप में जारी हुआ था, ऋणदाता देख सकता है कि वह अनोखा है, एक सत्यापित डिलीवरी से जुड़ा है और कहीं और गिरवी नहीं है। वह इनवॉइस को फ़ाइनेंस करता है। जब खरीदार डिलीवरी की पुष्टि करता है, तो एक स्मार्ट-कॉन्ट्रैक्ट पड़ाव एस्क्रो पार्टनर को ऋणदाता का पैसा अपने-आप लौटाने का निर्देश देता है।"
 }

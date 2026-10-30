@@ -47,5 +47,7 @@
 "Retyped by hand": "يُعاد كتابته يدويًا",
 "Generated from the accepted quote": "يُنشأ من العرض المقبول",
 "RFQ Bidding for Food Trade | T57": "طلبات عروض الأسعار لتجارة الغذاء | T57",
-"Send one structured RFQ to verified food suppliers, compare like-for-like bids and turn the best quote into a contract on T57.": "أرسل طلب عرض سعر منظّمًا واحدًا إلى مورّدي غذاء موثَّقين، وقارن عروضًا متكافئة، وحوّل أفضلها إلى عقد على T57."
+"Send one structured RFQ to verified food suppliers, compare like-for-like bids and turn the best quote into a contract on T57.": "أرسل طلب عرض سعر منظّمًا واحدًا إلى مورّدي غذاء موثَّقين، وقارن عروضًا متكافئة، وحوّل أفضلها إلى عقد على T57.",
+"Jeddah importer sources frozen poultry from Türkiye": "مستورد في جدة يورّد دواجن مجمّدة من تركيا",
+"A Jeddah food importer needs 10 containers of halal frozen poultry for a hotel group contract. It posts one RFQ on T57. Within days, five verified processors in Türkiye and Brazil submit structured bids. The importer filters for owner-producers and processors, compares price, payment terms and delivery dates side by side, and awards the contract to a processor in Türkiye. The contract, inspection booking and LC request all start from the same record.": "يحتاج مستورد أغذية في جدة إلى 10 حاويات من الدواجن الحلال المجمّدة لعقد مع مجموعة فندقية، فيرسل طلب عرض سعر واحدًا على T57. وخلال أيام يقدّم خمسة مصنّعين موثَّقين في تركيا والبرازيل عروضًا منظّمة. يصفّي المستورد العروض ليُبقي المنتجين المالكين والمصنّعين، ويقارن الأسعار وشروط الدفع ومواعيد التسليم جنبًا إلى جنب، ثم يرسي العقد على مصنّع في تركيا. ويبدأ العقد وحجز الفحص وطلب خطاب الاعتماد كلها من السجلّ نفسه."
 }

@@ -24,7 +24,7 @@
 "Identity document checks": "فحص مستندات الهوية",
 "Authenticity checks on IDs and passports. For members, this stops impostors.": "فحص صحة الهويات وجوازات السفر، يمنع المنتحلين.",
 "Liveness and match checks": "التحقق من الحضور والمطابقة",
-"Confirmation that the person is real and matches the ID. For lenders, this means trusted signers.": "تأكيد أن الشخص حقيقي ويطابق هويته، فيطمئن الممول إلى الموقّعين.",
+"Confirmation that the person is real and matches the ID. For lenders, this means trusted signers.": "تأكيد أن الشخص حقيقي ويطابق هويته، فيطمئن المموّل إلى الموقّعين.",
 "Sanctions and watchlist checks for every person. For partners, this supports compliance.": "فحص كل شخص مقابل قوائم العقوبات والمراقبة، دعمًا لامتثال الشركاء.",
 "Authority mapping": "خريطة الصلاحيات",
 "Who can view, quote, sign or approve payments. For businesses, this controls who acts in their name.": "من يطّلع، ومن يقدّم العروض، ومن يوقّع، ومن يعتمد الدفعات، فتتحكم المنشأة في من يتصرف باسمها.",

@@ -44,7 +44,7 @@
 "Escrow can repay a trade finance lender at settlement before the balance goes to the seller or trader. For lenders, this makes finance self-liquidating.": "يمكن أن يسدّد حساب الضمان جهة تمويل التجارة عند التسوية قبل تحويل الباقي إلى البائع أو التاجر، فيصبح التمويل ذاتي السداد.",
 "Domestic and cross-border": "محليًا ودوليًا",
 "Works for local wholesale and international trades. For supermarkets and HoReCa, this protects routine supply too.": "يعمل في تجارة الجملة المحلية وفي الصفقات الدولية، فيحمي الإمداد الروتيني للأسواق الكبرى والفنادق والمطاعم أيضًا.",
-"Full audit trail": "سجلّ تدقيق كامل",
+"Full audit trail": "مسار تدقيق كامل",
 "Every deposit, release and pause is recorded. For finance teams and auditors, this means clean records.": "يُسجَّل كل إيداع وصرف وإيقاف، فتبقى سجلات المالية والمدققين نظيفة.",
 "Karachi rice exporter and Riyadh wholesaler share the risk": "مصدّر أرز في كراتشي وتاجر جملة في الرياض يتقاسمان المخاطرة",
 "A Karachi rice exporter and a verified Riyadh wholesaler are trading for the first time. They agree on T57 to a 20/50/30 escrow: 20% on signing, 50% when pre-shipment inspection confirms grade and weight, and 30% on arrival. The wholesaler funds escrow through T57's licensed partner. The inspection report releases the second payment, and when a few bags arrive damaged, the wholesaler raises a dispute. Only the final 30% pauses, the claim is settled with the insurer, and the balance is released.": "يتعامل مصدّر أرز في كراتشي وتاجر جملة موثَّق في الرياض لأول مرة، فيتفقان على T57 على حساب ضمان بنسب 20/50/30: ‏20% عند التوقيع، و50% حين يؤكد الفحص قبل الشحن الدرجة والوزن، و30% عند الوصول. يودِع التاجر المبلغ لدى شريك T57 المرخّص، فيُطلق تقرير الفحص الدفعة الثانية. وحين تصل بضعة أكياس تالفة، يثير التاجر نزاعًا، فلا يتوقف إلا صرف الـ30% الأخيرة، وتُسوّى المطالبة مع شركة التأمين، ثم يُصرف الباقي.",
@@ -64,5 +64,6 @@
 "On recorded milestones": "عند المراحل المسجّلة",
 "Only the disputed part pauses": "لا يتوقف إلا الجزء المتنازع عليه",
 "Escrow & Trade Assurance for Food Trade | T57": "حساب الضمان وضمان صفقات الغذاء | T57",
-"Buyer funds held by licensed escrow partners and released in stages on inspection, shipment or delivery, with dispute triggers, on T57.": "أموال المشتري لدى شركاء ضمان مرخّصين، تُصرف على مراحل عند الفحص أو الشحن أو التسليم، مع إيقاف تلقائي عند النزاع، على T57."
+"Buyer funds held by licensed escrow partners and released in stages on inspection, shipment or delivery, with dispute triggers, on T57.": "أموال المشتري لدى شركاء ضمان مرخّصين، تُصرف على مراحل عند الفحص أو الشحن أو التسليم، مع إيقاف تلقائي عند النزاع، على T57.",
+"Funds are held by regulated escrow providers, never by T57. For both sides, this means money is held separately by a regulated provider.": "تحتفظ بالأموال جهات ضمان خاضعة للتنظيم، لا T57 أبدًا، فيبقى المال للطرفين في حساب مستقل لدى جهة خاضعة للتنظيم."
 }

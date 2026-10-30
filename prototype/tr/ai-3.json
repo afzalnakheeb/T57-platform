@@ -43,7 +43,7 @@
 "Deal-value model plus a language model": "İşlem değeri modeli ve bir dil modeli",
 "A private brief with targets and counter-offers": "Hedefler ve karşı tekliflerle gizli bir özet",
 "You send every offer": "Her teklifi siz gönderirsiniz",
-"AI Negotiation Support for Food Trade | T57 AI Native": "Gıda Ticareti İçin Yapay Zekâ Müzakere Desteği | T57 Yapay Zekâ Temelli",
+"AI Negotiation Support for Food Trade | T57 AI Native": "Gıda Ticaretinde Yapay Zekâ Müzakere Desteği | T57",
 "How T57's negotiation AI benchmarks offers, values payment and delivery terms and suggests counter-offers, while people make every decision.": "T57'nin müzakere yapay zekâsı teklifleri nasıl karşılaştırır, ödeme ve teslim şartlarının değerini nasıl hesaplar ve karşı teklifleri nasıl önerir; her kararı insanlar verir.",
 "A voice note in.": "Bir sesli not girer,",
 "A confirmed order out.": "teyitli bir sipariş çıkar.",
@@ -87,7 +87,7 @@
 "Food-trade language model with speech-to-text": "Konuşmayı metne dönüştüren gıda ticareti dil modeli",
 "A structured order to confirm": "Teyit edilecek yapılandırılmış bir sipariş",
 "Nothing is ordered until you confirm": "Siz teyit edene kadar hiçbir şey sipariş edilmez",
-"LLM-Based Trade Orders by WhatsApp & Voice | T57 AI Native": "WhatsApp ve Sesle Yapay Zekâ Destekli Ticaret Siparişleri | T57 Yapay Zekâ Temelli",
+"LLM-Based Trade Orders by WhatsApp & Voice | T57 AI Native": "WhatsApp ve Sesle Yapay Zekâ Destekli Sipariş | T57",
 "How T57's language models turn WhatsApp messages and voice notes into confirmed, structured food trade orders, in Arabic and local languages.": "T57'nin dil modelleri WhatsApp mesajlarını ve sesli notları Arapça ve yerel dillerde nasıl teyit edilmiş, yapılandırılmış gıda ticareti siparişlerine dönüştürüyor.",
 "A price for every grade": "Her kalite sınıfı ve menşe için",
 "and origin, explained.": "açıklamalı bir fiyat.",
@@ -227,6 +227,6 @@
 "Risk-scoring and event-detection models": "Risk puanlama ve olay tespit modelleri",
 "Scores with reasons, heatmaps, alerts": "Gerekçeli puanlar, ısı haritaları, uyarılar",
 "You decide how to protect the trade": "İşlemi nasıl koruyacağınıza siz karar verirsiniz",
-"AI Risk Intelligence for Food Trade | T57 AI Native": "Gıda Ticareti İçin Yapay Zekâ Risk Analizi | T57 Yapay Zekâ Temelli",
+"AI Risk Intelligence for Food Trade | T57 AI Native": "Gıda Ticaretinde Yapay Zekâ Risk Analizi | T57",
 "AI risk scores and heatmaps for counterparties, routes, markets and climate in food trade, with explainable factors and early-warning alerts, on T57.": "T57'de gıda ticaretinde karşı taraflar, rotalar, pazarlar ve iklim için açıklanabilir etkenler ve erken uyarılarla yapay zekâ risk puanları ve ısı haritaları."
 }
