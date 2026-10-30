@@ -6,7 +6,8 @@ import crypto from 'node:crypto';
 // private-videos/<name>.enc, encrypted by scripts/videos-encrypt.mjs, because this repository is public.
 // The server decrypts them only for a visitor holding the access-code cookie. Public site films are linked as they are.
 //   VIDEO_ACCESS_CODE  the code T57 sends to investors (changing it signs everyone out)
-//   VIDEO_KEY          32 random bytes, base64: decrypts the private files and signs the cookie
+//   VIDEO_KEY          optional, 32 random bytes, base64: decrypts the private files and signs the cookie;
+//                      without it both use a key derived from VIDEO_ACCESS_CODE, so use a long code
 export type Film = { id: string; title: string; summary: string; length: string; src: string; poster: string; note?: string };
 
 export const FEATURED: Film = {
@@ -35,17 +36,25 @@ export const FILMS: Film[] = [
 export const PRIVATE_FILES: Record<string, string> = { 'investor-pitch.mp4': 'video/mp4', 'investor-pitch.jpg': 'image/jpeg' };
 
 export const COOKIE = 't57_videos';
+// The pitch key comes from VIDEO_KEY when set, else from the access code itself through scrypt, which is
+// slow on purpose: the encrypted file sits in a public repository, so the code is the only lock on it.
+const SALT = 't57-investor-videos-v1';
+let derived: { code: string; key: Buffer } | null = null;
 const key = () => {
   const k = Buffer.from(process.env.VIDEO_KEY || '', 'base64');
-  return k.length === 32 ? k : null;
+  if (k.length === 32) return k;
+  const code = (process.env.VIDEO_ACCESS_CODE || '').trim();
+  if (!code) return null;
+  if (derived?.code !== code) derived = { code, key: codeKey(code) };
+  return derived.key;
 };
-// The page opens with the code alone; the private pitch also needs VIDEO_KEY, and is left off the page until it is set.
+export const codeKey = (code: string) => crypto.scryptSync(code, SALT, 32, { N: 2 ** 17, r: 8, p: 1, maxmem: 256 * 1024 * 1024 });
 export const configured = () => Boolean(process.env.VIDEO_ACCESS_CODE);
-export const pitchReady = () => Boolean(key());
+// The pitch is shown only when the files are there; they must have been encrypted with the current key.
+export const pitchReady = () => Boolean(key()) && fs.existsSync(file('investor-pitch.mp4'));
 
 // The cookie proves the visitor entered the current code, without holding the code itself.
-// Without VIDEO_KEY it is signed with a hash of the code, which only guards the public films.
-const signer = () => key() || crypto.createHash('sha256').update(`t57-videos:${process.env.VIDEO_ACCESS_CODE}`).digest();
+const signer = () => key()!;
 export const token = () => crypto.createHmac('sha256', signer()).update(`videos:${process.env.VIDEO_ACCESS_CODE}`).digest('base64url');
 
 const same = (a: string, b: string) => {
