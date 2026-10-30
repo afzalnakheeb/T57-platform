@@ -2393,6 +2393,70 @@
   "description": "Doğrulamanın dahil olduğu, yıllık ödemede iki ayın ücretsiz olduğu ve taraf başına işlem ücretlerinin %0,75'ten %0,20'ye indiği, aylık 199 dolardan başlayan T57 paketlerini karşılaştırın.",
   "parent": "pricing"
  },
+ "pricing-enterprise": {
+  "route": "/tr/pricing/enterprise",
+  "section": "pricing",
+  "name": "Kurumsal ve Özel Fiyatlandırma",
+  "h1": "Grubunuz için tek sözleşme, işlem başına en düşük ücret.",
+  "answer": "Grubunuzun gıda ticaretini size özel şartlarla T57'de yürütün.",
+  "faqs": [
+   {
+    "q": "T57 ERP'mizle entegre olabilir mi?",
+    "a": "Evet, API'ler aracılığıyla. Ekibimiz entegrasyonun kapsamını sizinle birlikte belirler."
+   },
+   {
+    "q": "Mevcut tedarikçilerimizle devam edebilir miyiz?",
+    "a": "Evet. Onları T57'ye davet edin; diğer her üye gibi doğrulanırlar."
+   }
+  ],
+  "title": "Kurumsal Fiyatlandırma | Gıda Grupları İçin Özel Şartlar | T57",
+  "description": "Büyük gıda grupları, perakendeciler ve çok ülkeli tüccarlar için özel şartlar, en düşük işlem ücretleri, ERP entegrasyonları ve özel destek.",
+  "parent": "pricing"
+ },
+ "pricing-government": {
+  "route": "/tr/pricing/government",
+  "section": "pricing",
+  "name": "Kamu ve Kurumlar İçin Fiyatlandırma",
+  "h1": "Gıda güvenliği programları, sizinle birlikte tasarlanır.",
+  "answer": "Ülkenizin gıda güvenliğini güçlendiren, sizinle birlikte tasarlanan programlar.",
+  "faqs": [
+   {
+    "q": "Kamu fiyatlandırması nasıl belirleniyor?",
+    "a": "Programa göre; kapsam, üye sayısı, pazarlar ve modüllere dayanarak. Teklif için kurumlar ekibimizle iletişime geçin."
+   },
+   {
+    "q": "Bir bakanlık çiftçilerinin üyeliklerini ödeyebilir mi?",
+    "a": "Evet. Hükümetler ve kalkınma iş ortakları çiftçiler, kooperatifler ve KOBİ'ler için üyelikleri ve sisteme alıştırmayı finanse edebilir."
+   },
+   {
+    "q": "Yabancı tedarikçiler ihalelerimize teklif verebilir mi?",
+    "a": "Evet, ihaleyi onlara açarsanız. Her tedarikçi teklif vermeden önce doğrulanır."
+   }
+  ],
+  "title": "Kamu ve Kurum Programları | T57 Fiyatlandırma",
+  "description": "Bakanlıklar ve kalkınma iş ortakları için programlar: desteklenen üyelikler, yerel ve küresel gıda ihaleleri ve gıda güvenliği için yapay zekâ destekli bir kamu modülü.",
+  "parent": "pricing"
+ },
+ "pricing-roi": {
+  "route": "/tr/pricing/roi-calculator",
+  "section": "pricing",
+  "name": "Yatırım Getirisi Hesaplayıcı",
+  "h1": "Sizin rakamlarınız. Sizin varsayımlarınız.",
+  "answer": "T57'nin işletmenize ne kazandırabileceğini ve hangi paketin kendini amorti ettiğini görün.",
+  "faqs": [
+   {
+    "q": "Sonuç bir fiyat teklifi mi?",
+    "a": "Hayır. Girdilerinize ve standart fiyatlara dayalı bir tahmindir. Pazarınızda yerel fiyatlar daha düşük olabilir."
+   },
+   {
+    "q": "Verilerimi saklıyor musunuz?",
+    "a": "Yalnızca sonucunuzu kaydetmeyi ya da paylaşmayı seçerseniz."
+   }
+  ],
+  "title": "Yatırım Getirisi Hesaplayıcı | Hacminize Göre Tasarruf ve En İyi Paket | T57",
+  "description": "T57'nin gıda işletmenize ücretler düşüldükten sonra ne kadar zaman ve para kazandırabileceğini tahmin edin; ticaret hacminiz için en düşük toplam maliyetli paketi bulun.",
+  "parent": "pricing"
+ },
  "governments": {
   "route": "/tr/who-we-serve/governments",
   "section": "who-we-serve",
