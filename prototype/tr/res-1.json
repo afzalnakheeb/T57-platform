@@ -127,7 +127,7 @@
 "The pressures on Türkiye’s farm sector, and where market intelligence helps.": "Türkiye'nin tarım sektörü üzerindeki baskılar ve piyasa analizinin nerede yardımcı olduğu.",
 "15 Mar 2026": "15 Mar 2026",
 "Can Blockchain Finally Close the $1 Trillion Annual Global Cost of Food Waste?": "Blokzincir, Gıda İsrafının Yıllık 1 Trilyon Dolarlık Küresel Maliyetini Sonunda Kapatabilir mi?",
-"How a shared, tamper-evident record can make long food supply chains trustworthy.": "Ortak ve değişikliğe karşı korumalı bir kayıt, uzun gıda tedarik zincirlerini nasıl güvenilir kılabilir.",
+"How a shared, tamper-evident record can make long food supply chains trustworthy.": "Ortak ve her değişikliğin izlendiği bir kayıt, uzun gıda tedarik zincirlerini nasıl güvenilir kılabilir.",
 "5 Mar 2026": "5 Mar 2026",
 "Five Forces Reshaping Malaysian Agriculture: A 2026 Outlook for Policymakers": "Malezya Tarımını Yeniden Şekillendiren Beş Güç: Politika Yapıcılar İçin 2026 Görünümü",
 "Self-sufficiency, climate risk and EUDR compliance in Malaysia.": "Malezya'da kendi kendine yeterlilik, iklim riski ve EUDR uyumu.",
@@ -253,7 +253,7 @@
 "A business that connects buyers and sellers without producing, processing or holding the goods. T57 labels intermediaries so buyers know who they deal with.": "Malı üretmeden, işlemeden ya da elinde tutmadan alıcılarla satıcıları buluşturan işletme. T57, alıcılar kiminle iş yaptığını bilsin diye aracıları etiketler.",
 "Invoice financing": "Invoice financing (fatura finansmanı)",
 "Finance a lender provides against an unpaid invoice, so the seller is paid before the buyer's payment is due.": "Satıcının, alıcının ödeme vadesinden önce ödeme alabilmesi için bir kredi verenin ödenmemiş bir faturaya karşı sağladığı finansman.",
-"KYB (Know Your Business)": "KYB, Know Your Business (İşletmeni Tanı)",
+"KYB (Know Your Business)": "KYB (İşletmenizi Tanıyın)",
 "Checks that confirm a company is real, properly registered and licensed, and who owns it. <a href=#trust-kyb data-go=trust-kyb>On T57 →</a>": "Bir şirketin gerçek, usulüne uygun tescilli ve lisanslı olduğunu ve kime ait olduğunu teyit eden kontroller. <a href=#trust-kyb data-go=trust-kyb>T57'de →</a>",
 "KYC (Know Your Customer)": "KYC, Know Your Customer (Müşterini Tanı)",
 "Checks that confirm the identity of the people who own and act for a business. <a href=#trust-kyc data-go=trust-kyc>On T57 →</a>": "Bir işletmenin sahiplerinin ve onun adına hareket eden kişilerin kimliğini teyit eden kontroller. <a href=#trust-kyc data-go=trust-kyc>T57'de →</a>",
@@ -287,5 +287,10 @@
 "Jump to letter": "Harfe atlayın",
 "Filter terms": "Terimleri filtreleyin",
 "FAQ & Glossary | Food Trade Terms Explained | T57": "SSS ve Sözlük | Gıda Ticareti Terimleri Açıklandı | T57",
-"Plain-language answers about T57, and definitions of food trade, trade finance and technology terms, from escrow and letters of credit to KYB and HS codes.": "T57 hakkında sade dilde yanıtlar ve emanet hesabı ile akreditiften KYB ve GTİP kodlarına kadar gıda ticareti, ticaret finansmanı ve teknoloji terimlerinin tanımları."
+"Plain-language answers about T57, and definitions of food trade, trade finance and technology terms, from escrow and letters of credit to KYB and HS codes.": "T57 hakkında sade dilde yanıtlar ve emanet hesabı ile akreditiften KYB ve GTİP kodlarına kadar gıda ticareti, ticaret finansmanı ve teknoloji terimlerinin tanımları.",
+"Food Trade Webinars & Events | T57": "Web Seminerleri ve Etkinlikler | T57",
+"Live T57 webinars, market briefings and trade shows on digital food trade, trade finance and food security, where you can meet our market teams.": "T57 ekipleriyle tanışabileceğiniz canlı web seminerleri, pazar brifingleri ve ticaret etkinlikleri.",
+"Five forces reshaping Middle East agriculture in 2026: import dependence, climate-smart technology and traceability, and what they mean for food trade.": "Orta Doğu Tarımını Yeniden Şekillendiren Beş Güç: 2026 İçin Stratejik Bir Görünüm",
+"Why 150+ MoUs and LoIs Change T57’s Growth Math": "150'yi Aşkın Mutabakat Zaptı ve Niyet Mektubu T57'nin Büyüme Hesabını Neden Değiştiriyor",
+"What 150+ signed MoUs and letters of intent, 120 of them at Gulfood 2026, mean as pre-qualified demand.": "Gulfood 2026'daki 120'si dahil, imzalanan 150'yi aşkın mutabakat zaptı ve niyet mektubunun ön nitelendirilmiş talep olarak anlamı."
 }

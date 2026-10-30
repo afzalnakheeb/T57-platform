@@ -95,7 +95,7 @@
 "Hard to prove": "Sukar dibuktikan",
 "Impact data you can report": "Data impak yang boleh anda laporkan",
 "Data": "Data",
-"Thin files to underwrite": "Fail nipis untuk dinilai",
+"Thin files to underwrite": "Data terlalu sedikit untuk dinilai",
 "API access to verified trades": "Akses API kepada dagangan yang disahkan",
 "Customers": "Pelanggan",
 "Costly to acquire": "Mahal untuk diperoleh",
@@ -123,5 +123,8 @@
 "t wheat · inspected": "t gandum · diperiksa",
 "Previous": "Sebelumnya",
 "T57 for Financiers | Vetted Food & Agri Opportunities": "T57 untuk Pembiaya | Peluang Makanan & Pertanian yang Ditapis",
-"Deploy capital into curated, contract-backed food and agri trades, with faster due diligence, full transaction visibility and tighter counterparty risk.": "Salurkan modal ke dalam dagangan makanan dan pertanian yang dikurasi dan bersandarkan kontrak, dengan usaha wajar yang lebih pantas, keterlihatan transaksi penuh dan risiko pihak berurus niaga yang lebih terkawal."
+"Deploy capital into curated, contract-backed food and agri trades, with faster due diligence, full transaction visibility and tighter counterparty risk.": "Salurkan modal ke dalam dagangan makanan bersandarkan kontrak, dengan usaha wajar lebih pantas, keterlihatan penuh dan risiko pihak lawan lebih rendah.",
+"See how deals reach you": "Lihat bagaimana urus niaga sampai kepada anda",
+"T57 shortens slow due diligence and weak transaction visibility that constrain capital, and goes beyond listing opportunities to manage execution, disputes, documentation and follow-through.": "T57 memendekkan usaha wajar yang perlahan dan memperbaiki keterlihatan transaksi yang lemah yang mengekang modal, dan bukan sekadar menyenaraikan peluang, malah turut mengurus pelaksanaan, pertikaian, dokumentasi dan tindakan susulan.",
+"Each milestone is verified and written to a shared record before the next tranche is released. If something goes wrong at loading, later payments stop. And unlike bank-only networks, T57 shows you every party to the trade: buyer, seller, insurer, forwarder, shipping line and inspector.": "Setiap peringkat disahkan dan direkodkan dalam rekod dikongsi sebelum ansuran seterusnya dilepaskan. Jika berlaku masalah semasa pemuatan, bayaran seterusnya dihentikan. Dan tidak seperti rangkaian khusus bank, T57 menunjukkan setiap pihak dalam dagangan: pembeli, penjual, syarikat insurans, ejen penghantaran, syarikat perkapalan dan pemeriksa."
 }

@@ -1432,7 +1432,7 @@
   "route": "/platform/blockchain",
   "section": "platform",
   "name": "Blockchain & Smart Contract Layer",
-  "h1": "Records no one can quietly change. Payments that follow proof.",
+  "h1": "Records that show any change. Payments that follow proof.",
   "answer": "Tamper-evident records, tokenized documents and milestone payments that every party can trust.",
   "faqs": [
    {
@@ -1624,7 +1624,7 @@
   "faqs": [
    {
     "q": "Can anyone edit the audit trail?",
-    "a": "No. Entries cannot be changed or deleted. Corrections are added as new entries."
+    "a": "No. Entries are tamper-evident: any change can be detected, and nothing is deleted. Corrections are added as new entries."
    },
    {
     "q": "Who can see my trade's audit trail?",
@@ -2521,7 +2521,7 @@
    }
   ],
   "title": "Reports & Whitepapers | Food Trade Research | T57",
-  "description": "In-depth research on food trade corridors, SME trade finance, responsible AI and food security.",
+  "description": "In-depth T57 research on food trade corridors, SME trade finance, responsible AI and food security, for policymakers, banks and food businesses.",
   "parent": "resources"
  },
  "res-newsroom": {
@@ -2532,7 +2532,7 @@
   "answer": "News, announcements and media resources from T57.",
   "faqs": [],
   "title": "Newsroom | T57 News and Media Resources",
-  "description": "T57 announcements, partnerships, events and media resources for journalists.",
+  "description": "T57 news, announcements and partnerships, with press releases, media resources and contacts for journalists covering digital food trade.",
   "parent": "resources"
  },
  "res-videos": {
@@ -2562,8 +2562,8 @@
     "a": "Yes, through the event page."
    }
   ],
-  "title": "Webinars & Events | T57",
-  "description": "Live webinars, market briefings and trade events where you can meet T57's teams.",
+  "title": "Food Trade Webinars & Events | T57",
+  "description": "Live T57 webinars, market briefings and trade shows on digital food trade, trade finance and food security, where you can meet our market teams.",
   "parent": "resources"
  },
  "res-glossary": {
@@ -2663,7 +2663,7 @@
     "a": "No. Only the parties you quote can see your prices."
    }
   ],
-  "title": "FAQs | T57 Help Center",
+  "title": "Help Center FAQs: Joining, Trading & Payments | T57",
   "description": "Answers about T57 accounts, free trial, plans and billing, verification, trading, payments, documents and security.",
   "parent": "help"
  },
@@ -2718,7 +2718,7 @@
    }
   ],
   "title": "Technology Partners | T57",
-  "description": "Partner with T57 in cloud, identity, data, integration and AI to serve verified food businesses.",
+  "description": "Partner with T57 in cloud, identity, data, integration and AI, and help verified food businesses trade, finance and ship on one trade record.",
   "parent": "partnerships"
  },
  "partners-finance": {
@@ -2828,8 +2828,8 @@
   "h1": "Apply to become a T57 partner.",
   "answer": "Partner with T57 in finance, insurance, logistics, inspection or technology. Tell us about your business to start.",
   "faqs": [],
-  "title": "Become a Partner | T57",
-  "description": "Apply to partner with T57 in finance, insurance, logistics, inspection or technology.",
+  "title": "Become a T57 Partner | Finance, Logistics & Technology",
+  "description": "Apply to partner with T57 in trade finance, insurance, logistics, inspection or technology, and serve verified food businesses on one trade record.",
   "parent": "partnerships"
  },
  "about": {
@@ -2837,7 +2837,7 @@
   "section": "about",
   "name": "About T57",
   "h1": "Food that exists should reach the people who need it.",
-  "answer": "We exist so that food that exists reaches the people and markets that need it.",
+  "answer": "We are here so that food that exists reaches the people and markets that need it.",
   "faqs": [
    {
     "q": "Where is T57 based?",
@@ -2859,12 +2859,12 @@
   "route": "/about/journey",
   "section": "about",
   "name": "Our Journey",
-  "h1": "From one question to 150 signed agreements.",
+  "h1": "From one question to 150+ signed agreements.",
   "answer": "Since 2023, T57 and its founding company, AlMukarramah, have signed agreements with governments, development institutions and food companies, and taken the case for connected food trade to stages from Cape Town to Yinchuan.",
   "faqs": [
    {
     "q": "Who has T57 signed agreements with?",
-    "a": "T57 and its founding company, AlMukarramah, have agreements with the Islamic Organization for Food Security (IOFS), the Government of the Chechen Republic, the Development Bank of Maldives, Food Contract Corporation of Kazakhstan, the International Assembly of Islamic Business, Dar Al Halal Nigeria and the Aquaculture Centre of Excellence in Singapore, and signed 150 MoUs and letters of intent at Gulfood 2026."
+    "a": "T57 and its founding company, AlMukarramah, have agreements with the Islamic Organization for Food Security (IOFS), the Government of the Chechen Republic, the Development Bank of Maldives, Food Contract Corporation of Kazakhstan, the International Assembly of Islamic Business, Dar Al Halal Nigeria and the Aquaculture Centre of Excellence in Singapore, and signed 120 MoUs and letters of intent at Gulfood 2026."
    },
    {
     "q": "When did T57 start?",
@@ -2876,7 +2876,7 @@
    }
   ],
   "title": "Our Journey: Agreements, Partnerships and Keynotes | T57",
-  "description": "The T57 timeline since 2023: the IOFS agreements, MoUs with governments and development banks, 150 MoUs at Gulfood 2026 and keynotes from Cape Town to Yinchuan.",
+  "description": "The T57 timeline since 2023: the IOFS agreement, MoUs with governments and development banks, 120 MoUs at Gulfood 2026 and keynotes worldwide.",
   "parent": "about"
  },
  "about-leadership": {
@@ -2981,8 +2981,8 @@
   "h1": "Resources for journalists and partners.",
   "answer": "Company facts, logos and press contacts for journalists and partners.",
   "faqs": [],
-  "title": "Media & Press Kit | T57",
-  "description": "T57 company facts, logos, leadership photos and press contacts for journalists.",
+  "title": "Media & Press Kit | T57 Fact Sheet and Press Contacts",
+  "description": "The T57 fact sheet, logos, leadership photos, press coverage and media contacts for journalists covering digital food trade and food security.",
   "parent": "about"
  },
  "contact": {
@@ -3005,8 +3005,8 @@
     "a": "Online, everywhere. T57 is a global SaaS platform that any food business can join from any country. The pilot starts in Saudi Arabia, the UAE, India, Malaysia and Türkiye."
    }
   ],
-  "title": "Contact T57",
-  "description": "Contact T57 to join, see a demo, partner, work with us on food security, or for media enquiries."
+  "title": "Contact T57 | Apply, Partner or Request a Demo",
+  "description": "Contact T57 to apply for membership, book a demo, become a partner, work with us on food security, or reach the press team."
  },
  "contact-demo": {
   "route": "/contact/demo",
@@ -3024,8 +3024,8 @@
     "a": "Yes, invite as many colleagues as you like."
    }
   ],
-  "title": "Request a Demo | T57",
-  "description": "Book a 30-minute T57 demo on your own products and markets, then start your free trial.",
+  "title": "Request a T57 Demo | Verified Food Trade Platform",
+  "description": "Book a 30-minute T57 demo on your own products and markets: verified suppliers, RFQs, contracts, trade finance and logistics on one trade record.",
   "parent": "contact"
  },
  "contact-offices": {
@@ -3396,12 +3396,12 @@
  "blog-future-of-ai-food-trade-t57": {
   "route": "/resources/blog/future-of-ai-food-trade-t57",
   "section": "resources",
-  "name": "Why 150 MoUs + LoIs at Gulfood 2026 Change T57’s Growth Math",
-  "h1": "Why 150 MoUs + LoIs at Gulfood 2026 Change T57’s Growth Math",
-  "answer": "What 150 signed MoUs and letters of intent mean as pre-qualified demand.",
+  "name": "Why 150+ MoUs and LoIs Change T57’s Growth Math",
+  "h1": "Why 150+ MoUs and LoIs Change T57’s Growth Math",
+  "answer": "What 150+ signed MoUs and letters of intent, 120 of them at Gulfood 2026, mean as pre-qualified demand.",
   "faqs": [],
   "title": "Why 150 Gulfood MoUs Change T57’s Growth Math | T57",
-  "description": "T57 secured 150 MoUs and LoIs at Gulfood 2026, demonstrating strong global demand for AI-powered food trade infrastructure before launch.",
+  "description": "T57 signed 120 non-binding MoUs and letters of intent at Gulfood 2026, part of 150+ across 67 countries: early demand for verified, AI-native food trade.",
   "post": {
    "author": "Mohammed Umair",
    "role": "Chief Sales Officer",
@@ -3572,7 +3572,7 @@
   "answer": "The pressures on Türkiye’s farm sector, and where market intelligence helps.",
   "faqs": [],
   "title": "Shifts Redefining Turkish Agriculture in 2026 | T57",
-  "description": "Five Structural Shifts That Will Redefine Turkish Agriculture in 2026",
+  "description": "The structural pressures reshaping Türkiye's farm sector in 2026, and where verified market intelligence helps growers, exporters and buyers.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3629,7 +3629,7 @@
   "answer": "Import dependence, climate-smart technology and traceability across the region.",
   "faqs": [],
   "title": "Five Forces Reshaping Middle East Agriculture | T57",
-  "description": "Five Forces Reshaping Middle East Agriculture: A Strategic Outlook for 2026",
+  "description": "Five forces reshaping Middle East agriculture in 2026: import dependence, climate-smart technology and traceability, and what they mean for food trade.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3762,7 +3762,7 @@
   "answer": "What the T57–MAIB MoU means for farmers and agri-entrepreneurs.",
   "faqs": [],
   "title": "How a Digital Agri-Finance Alliance Helps | T57",
-  "description": "Learn how AI-driven trade finance is reshaping global agriculture by improving liquidity, transparency, and access to capital for farmers and traders.",
+  "description": "What the T57–MAIB memorandum of understanding means for farmers and agri-entrepreneurs, and how a digital agri-finance alliance widens access to capital.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3800,7 +3800,7 @@
   "answer": "The trade finance gap that leaves agricultural businesses underfunded.",
   "faqs": [],
   "title": "Rewriting Trade Finance for Agriculture | T57",
-  "description": "Learn how AI-driven trade finance is reshaping global agriculture by improving liquidity, transparency, and access to capital for farmers and traders.",
+  "description": "Why agricultural SMEs are underfunded by the trade finance gap, and how verified trade records help licensed lenders say yes faster.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",

@@ -54,7 +54,7 @@
 "Locked in by contract": "Sözleşmeyle güvenceye alınır",
 "Origin": "Menşe",
 "Traced lot by lot": "Parti parti izlenir",
-"Food Trade Execution | RFQs, Contracts & Traceability | T57": "Gıda Ticaretinin Yürütülmesi | Teklif Talepleri, Sözleşmeler ve İzlenebilirlik | T57",
+"Food Trade Execution | RFQs, Contracts & Traceability | T57": "Gıda Ticaretinin Yürütülmesi: Teklif ve Sözleşme | T57",
 "RFQs, contract farming, government tenders, traceability and chat-based orders, from first enquiry to delivery on one T57 trade record.": "Teklif talepleri, sözleşmeli tarım, kamu ihaleleri, izlenebilirlik ve mesajla siparişler; ilk talepten teslimata kadar tek bir T57 ticaret kaydında.",
 "One request.": "Tek talep.",
 "Like-for-like quotes.": "Birebir kıyaslanabilir teklifler.",
@@ -125,7 +125,7 @@
 "Normalized, side by side": "Normalleştirilmiş, yan yana",
 "Generated from the quote": "Tekliften oluşturulur",
 "RFQ & Trade Execution for Food | T57": "Gıda İçin Teklif Talebi ve Ticaretin Yürütülmesi | T57",
-"Structured RFQs, verified bidders, like-for-like comparison and contracts from the accepted quote. Source and execute food trades on one T57 record.": "Yapılandırılmış teklif talepleri, doğrulanmış teklif verenler, birebir karşılaştırma ve kabul edilen tekliften sözleşme. Gıda işlemlerini tek bir T57 kaydında tedarik edin ve yürütün.",
+"Structured RFQs, verified bidders, like-for-like comparison and contracts from the accepted quote. Source and execute food trades on one T57 record.": "Yapılandırılmış teklif talepleri, doğrulanmış teklif verenler, birebir karşılaştırma ve kabul edilen tekliften sözleşme; hepsi tek T57 kaydında.",
 "A trading house desk,": "Bir ticaret şirketinin masası,",
 "without the headcount.": "kadro kurmadan.",
 "Give your business the trade desk of a global trading house, without hiring one.": "İşletmenize, kimseyi işe almadan küresel bir ticaret şirketinin ticaret masasını kazandırın.",
@@ -190,7 +190,7 @@
 "Paperwork": "Evrak",
 "Inconsistent": "Tutarsız",
 "Prepared and checked for you": "Sizin için hazırlanır ve kontrol edilir",
-"Virtual Trade Desk for Food Trade | AI + Human Review | T57": "Gıda Ticareti İçin Sanal Ticaret Masası | Yapay Zekâ ve İnsan İncelemesi | T57",
+"Virtual Trade Desk for Food Trade | AI + Human Review | T57": "Sanal Ticaret Masası | Yapay Zekâ ve İnsan İncelemesi | T57",
 "AI counterparty matching, price data, contract drafting, sanctions screening and document checks for food SMEs, with people making every decision.": "Gıda KOBİ'leri için yapay zekâ ile karşı taraf eşleştirme, fiyat verileri, sözleşme taslağı, yaptırım taraması ve belge kontrolleri; her kararı insanlar verir.",
 "Agree next season's crop,": "Gelecek sezonun ürününü",
 "today.": "bugünden kararlaştırın.",
@@ -405,5 +405,5 @@
 "At risk": "Risk altında",
 "Proof on request": "İstendiğinde kanıt",
 "Food Traceability from Source to Buyer | T57": "Kaynaktan Alıcıya Gıda İzlenebilirliği | T57",
-"Lot-level food traceability with verified origins, linked certificates and a tamper-evident record. Prove provenance and speed up recalls on T57.": "Doğrulanmış menşeler, bağlı sertifikalar ve her değişikliğin izlendiği bir kayıtla parti düzeyinde gıda izlenebilirliği. T57'de menşeyi kanıtlayın, geri çağırmaları hızlandırın."
+"Lot-level food traceability with verified origins, linked certificates and a tamper-evident record. Prove provenance and speed up recalls on T57.": "Doğrulanmış menşe, bağlı sertifikalar ve her değişikliği gösteren kayıtla parti düzeyinde gıda izlenebilirliği. Geri çağırmaları hızlandırın."
 }

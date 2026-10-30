@@ -4,7 +4,7 @@
 "Know how much your fields will produce, and when, before the harvest.": "اعرف كم ستنتج حقولك، ومتى، قبل الحصاد.",
 "See crop forecasting for your region": "اطّلع على توقعات المحاصيل في منطقتك",
 "T57's crop AI solves the uncertainty that makes farmers hard to finance and supply hard to plan, by forecasting yields and harvest timing field by field, using local models and what farmers know.": "يعالج الذكاء الزراعي في T57 الغموض الذي يجعل تمويل المزارعين صعبًا وتخطيط الإمداد أصعب، بتوقع الإنتاجية وموعد الحصاد حقلًا حقلًا، بنماذج محلية ومعرفة المزارعين أنفسهم.",
-"Small farms produce around a third of the world's food (FAO, 2021), but their output is largely invisible until harvest. Farmers cannot prove what they will produce, so lenders hesitate. Buyers cannot plan how much they will receive. Cooperatives aggregate by guesswork. Weather is becoming less predictable, which makes old rules of thumb less reliable every season.": "تنتج المزارع الصغيرة نحو ثلث غذاء العالم (الفاو، 2021)، لكن إنتاجها يبقى خفيًا إلى حد كبير حتى الحصاد. لا يستطيع المزارع إثبات ما سينتجه، فيتردد الممولون، ولا يستطيع المشتري التخطيط لما سيتسلّمه، وتجمع التعاونيات الإنتاج بالتخمين. والطقس يزداد تقلبًا، فتفقد القواعد المتوارثة موثوقيتها موسمًا بعد موسم.",
+"Small farms produce around a third of the world's food (FAO, 2021), but their output is largely invisible until harvest. Farmers cannot prove what they will produce, so lenders hesitate. Buyers cannot plan how much they will receive. Cooperatives aggregate by guesswork. Weather is becoming less predictable, which makes old rules of thumb less reliable every season.": "تنتج المزارع الصغيرة نحو ثلث غذاء العالم (الفاو، 2021)، لكن إنتاجها يبقى خفيًا إلى حد كبير حتى الحصاد. لا يستطيع المزارع إثبات ما سينتجه، فيتردد المموّلون، ولا يستطيع المشتري التخطيط لما سيتسلّمه، وتجمع التعاونيات الإنتاج بالتخمين. والطقس يزداد تقلبًا، فتفقد القواعد المتوارثة موثوقيتها موسمًا بعد موسم.",
 "Satellite images of the field": "صور الأقمار الصناعية للحقل",
 "Weather, soil and water": "الطقس والتربة والمياه",
 "Planting dates and past yields": "مواعيد الزراعة والإنتاجية السابقة",
@@ -30,13 +30,13 @@
 "Do farmers need special equipment?": "هل يحتاج المزارعون إلى معدّات خاصة؟",
 "No. Forecasts use satellite and weather data. Farmers can add observations by voice or photo from a basic smartphone, or through their cooperative.": "لا، تعتمد التوقعات على بيانات الأقمار الصناعية والطقس، ويضيف المزارعون ملاحظاتهم بالصوت أو الصورة من هاتف ذكي بسيط، أو عبر تعاونيتهم.",
 "Who can see a farm's forecast?": "من يرى توقعات المزرعة؟",
-"The farmer or cooperative, and anyone they choose to share it with, such as a buyer or lender.": "المزارع أو التعاونية، ومن يختارون مشاركتها معه، كالمشتري أو الممول.",
+"The farmer or cooperative, and anyone they choose to share it with, such as a buyer or lender.": "المزارع أو التعاونية، ومن يختارون مشاركتها معه، كالمشتري أو المموّل.",
 "Page 8 of 14": "الصفحة 8 من 14",
 "Crop & Yield Forecasting": "توقعات المحاصيل والإنتاجية",
 "Invisible until harvest": "خفي حتى الحصاد",
 "A forecast for each field": "توقع لكل حقل",
-"Lenders hesitate": "الممولون يترددون",
-"A record lenders can assess": "سجلّ يستطيع الممول تقييمه",
+"Lenders hesitate": "المموّلون يترددون",
+"A record lenders can assess": "سجلّ يستطيع المموّل تقييمه",
 "Conditions": "حالة المحصول",
 "Spotted too late": "تُكتشف متأخرة",
 "Early alerts": "تنبيهات مبكرة",
@@ -44,5 +44,5 @@
 "Yield range and harvest window": "نطاق الإنتاجية وموعد الحصاد",
 "Farmers and cooperatives decide": "القرار للمزارعين والتعاونيات",
 "AI Crop & Yield Forecasting | T57 AI Native": "توقعات المحاصيل والإنتاجية بالذكاء الاصطناعي | ذكاء T57",
-"Field-level yield and harvest forecasts from local AI models, satellite and weather data, and farmer knowledge, for farmers, cooperatives, buyers and lenders.": "توقعات للإنتاجية والحصاد على مستوى الحقل من نماذج ذكاء اصطناعي محلية وبيانات الأقمار الصناعية والطقس ومعرفة المزارعين، للمزارعين والتعاونيات والمشترين والممولين."
+"Field-level yield and harvest forecasts from local AI models, satellite and weather data, and farmer knowledge, for farmers, cooperatives, buyers and lenders.": "توقعات للإنتاجية والحصاد على مستوى الحقل من نماذج ذكاء اصطناعي محلية وبيانات الأقمار الصناعية والطقس ومعرفة المزارعين، للمزارعين والتعاونيات والمشترين والمموّلين."
 }

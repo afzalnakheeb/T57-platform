@@ -16,7 +16,7 @@
 "Every buyer and seller passes KYC and KYB checks, sanctions screening and, where they claim to produce, physical verification.": "Her alıcı ve satıcı KYC ve KYB kontrollerinden, yaptırım taramasından ve üretici olduğunu beyan ediyorsa yerinde doğrulamadan geçer.",
 "Label": "Etiketleyin",
 "Each member is labeled as owner-producer, processor, trader or intermediary, so you always know who you deal with.": "Her üye üretici-sahip, işleyici, tüccar ya da aracı olarak etiketlenir; böylece kiminle iş yaptığınızı her zaman bilirsiniz.",
-"Quotes, contracts, documents and milestones sit on one shared trade record, with an audit trail and tamper-evident anchoring.": "Teklifler, sözleşmeler, belgeler ve aşamalar denetim izi ve değişikliğe karşı korumalı kayıtla tek bir ortak ticaret kaydında durur.",
+"Quotes, contracts, documents and milestones sit on one shared trade record, with an audit trail and tamper-evident anchoring.": "Teklifler, sözleşmeler, belgeler ve aşamalar denetim izi ve her değişikliğin izlendiği kayıtla tek bir ortak ticaret kaydında durur.",
 "Assure": "Güvence altına alın",
 "Escrow, letters of credit and insurance come through licensed partners, and a structured dispute process applies if a party does not perform.": "Emanet hesabı, akreditif ve sigorta lisanslı iş ortakları aracılığıyla sunulur; bir taraf yükümlülüğünü yerine getirmezse yapılandırılmış bir anlaşmazlık süreci işler.",
 "VERIFIED MEMBER": "DOĞRULANMIŞ ÜYE",
@@ -136,7 +136,7 @@
 "Changes": "Değişiklikler",
 "Silent": "Sessiz",
 "Audit Trail for Food Trade | T57 Trust & Compliance": "Gıda Ticareti İçin Denetim İzi | T57 Güven ve Uyum",
-"Every action on every trade, attributed to a verified person, time-stamped and tamper-evident. Audit-ready evidence on T57.": "Her işlemdeki her eylem doğrulanmış bir kişiye bağlı, zaman damgalı ve değişikliğe karşı korumalı. T57'de denetime hazır kanıt.",
+"Every action on every trade, attributed to a verified person, time-stamped and tamper-evident. Audit-ready evidence on T57.": "Her işlemdeki her eylem doğrulanmış bir kişiye bağlı, zaman damgalı ve her değişikliği izlenebilir. T57'de denetime hazır kanıt.",
 "Lawful data handling": "Her pazarda hukuka uygun",
 "in every market.": "veri işleme.",
 "Data handled lawfully in every market where we trade.": "Ticaret yaptığımız her pazarda veriler hukuka uygun işlenir.",
@@ -194,7 +194,7 @@
 "Hard to exercise": "Kullanması zor",
 "Access, correct, delete": "Erişim, düzeltme, silme",
 "Data Protection | PDPL, DPDP and PDPA Compliance | T57": "Veri Koruma | PDPL, DPDP, PDPA ve KVKK Uyumu | T57",
-"How T57 handles data under Saudi and UAE PDPL, India's DPDP Act, Malaysia's PDPA and Türkiye's Law 6698, with consent and data residency.": "T57, Suudi Arabistan ve BAE PDPL'si, Hindistan'ın DPDP Kanunu, Malezya'nın PDPA'sı ve Türkiye'nin 6698 sayılı KVKK'sı kapsamında verileri onay ve veri yerelleştirmeyle nasıl işliyor.",
+"How T57 handles data under Saudi and UAE PDPL, India's DPDP Act, Malaysia's PDPA and Türkiye's Law 6698, with consent and data residency.": "T57, Suudi Arabistan ve BAE PDPL'si, Hindistan DPDP, Malezya PDPA ve Türkiye KVKK kapsamında verileri onay ve yerelleştirmeyle işler.",
 "Disputes settled on the facts,": "Anlaşmazlıklar en yüksek sesle bağırana göre değil,",
 "not on who shouts loudest.": "olgulara göre çözülür.",
 "Resolve trade disputes on the facts, quickly and fairly.": "Ticari anlaşmazlıkları olgulara dayanarak hızlı ve adil biçimde çözün.",
@@ -251,5 +251,6 @@
 "Months of argument": "Aylarca süren tartışma",
 "A clear, recorded process": "Net, kayıtlı bir süreç",
 "Trade Dispute Resolution | T57 Trade Assurance": "Ticari Anlaşmazlık Çözümü | T57 Ticaret Güvencesi",
-"Resolve food trade disputes from one shared record, with escrow paused through licensed partners and independent inspection.": "Gıda ticareti anlaşmazlıklarını tek bir ortak kayıttan, lisanslı iş ortakları aracılığıyla durdurulan emanet hesabı ve bağımsız gözetimle çözün."
+"Resolve food trade disputes from one shared record, with escrow paused through licensed partners and independent inspection.": "Gıda ticareti anlaşmazlıklarını tek bir ortak kayıttan, lisanslı iş ortakları aracılığıyla durdurulan emanet hesabı ve bağımsız gözetimle çözün.",
+"No. Entries are tamper-evident: any change can be detected, and nothing is deleted. Corrections are added as new entries.": "Hayır. Kayıtlarda her değişiklik izlenir ve tespit edilebilir; hiçbir kayıt silinmez. Düzeltmeler yeni kayıtlar olarak eklenir."
 }

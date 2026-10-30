@@ -1,0 +1,474 @@
+# T57
+
+> T57 is an AI-native digital trade platform for food. Started in Madinah, Saudi Arabia, it puts verified farmers, processors, traders, buyers, banks and logistics firms on one trade record, from quote to payment. T57 does not lend, hold funds or own goods; finance, escrow and insurance come through licensed partners.
+
+## Facts
+
+- A Saudi initiative: started in Madinah, headquarters moving to Riyadh. A global SaaS platform, piloting in five founding markets: Saudi Arabia, UAE, India, Malaysia and Türkiye.
+- Founder and Chairman: Afzal Hussain Mohammed Nakheeb.
+- A members-only verified trade club: every member passes KYC/KYB and is labeled by role; every trade runs on one tamper-evident trade record.
+- Works with the Islamic Organization for Food Security (IOFS), an OIC institution, under a 10-year memorandum of understanding signed in June 2023.
+- More than 150 non-binding MoUs and letters of intent from companies in 67 countries, 120 of them signed at Gulfood 2026.
+- Five industries on one trade record: agriculture and food production, trade, logistics, finance and technology.
+- Contact: hello@t57.ai, +966 56 971 22 22.
+
+## Who we serve
+
+- [Who We Serve](https://www.t57.ai/who-we-serve): T57 exists to connect everyone who grows, makes, buys, finances and regulates food on one trusted record.
+- [Governments and Regulators](https://www.t57.ai/who-we-serve/governments): Live trade data, food-security alerts and transparent tenders, in one view for ministries and agencies.
+- [Financiers and Investors](https://www.t57.ai/who-we-serve/financiers): Every deal comes with verified parties, documents and shipment data, from deal to settlement.
+- [Sellers and Exporters](https://www.t57.ai/who-we-serve/sellers): Find buyers, agree terms and get paid, with finance and logistics on one platform.
+- [Traders and Aggregators](https://www.t57.ai/who-we-serve/traders): Match supply and demand faster, with verified partners, live prices and finance for each deal.
+- [Buyers and Importers](https://www.t57.ai/who-we-serve/buyers): Compare verified suppliers, track every shipment and pay only when terms are met.
+- [Manufacturers and Enterprises](https://www.t57.ai/who-we-serve/enterprises): Source from verified producers, see price moves early and run every contract in one place.
+- [Food Processors](https://www.t57.ai/who-we-serve/food-processors): Steady raw materials from verified farms, with quality checks and finance built in.
+- [Cooperatives and FPOs](https://www.t57.ai/who-we-serve/cooperatives): Pool produce, reach bigger buyers and pay members faster, with every trade on record.
+- [Partners and Collaborators](https://www.t57.ai/who-we-serve/collaborators): Development partners, associations and institutions reach the whole food chain through one platform.
+- [Service Providers](https://www.t57.ai/who-we-serve/service-providers): Inspection, logistics, legal and advisory firms are matched to live trades that need them.
+- [Farmers and Producers](https://www.t57.ai/who-we-serve/farmers): Reach verified buyers directly, see market prices and get paid faster.
+
+## Why T57
+
+- [Why T57](https://www.t57.ai/why-t57): Join, discover, finance, settle and close every trade on one AI-native platform, so every actor from farm to fork can see, trust and finance each transaction.
+- [Club Membership](https://www.t57.ai/why-t57/club-membership): Verified food-trade club that matches vetted counterparties, reducing fraud and defaults across every global agri transaction.
+- [RFQ Bidding](https://www.t57.ai/why-t57/rfq-bidding): Get comparable quotes from verified suppliers, and turn the best one into a contract.
+- [Virtual Trade Desk](https://www.t57.ai/why-t57/virtual-trade-desk): A full trade desk for every member, with AI doing the groundwork and people deciding.
+- [Market & Price Intelligence](https://www.t57.ai/why-t57/market-intelligence): See prices, supply and risk by origin before you quote, buy or plan.
+- [Trade Finance](https://www.t57.ai/why-t57/trade-finance): One verified deal file, several lenders competing to fund your food trade.
+- [Digital Asset-Based Funding](https://www.t57.ai/why-t57/nft-funding): Turn verified trade documents into digital assets that funders can trust and finance.
+- [eLC in 15 Minutes](https://www.t57.ai/why-t57/elc-15-minutes): Electronic letters of credit, issued in about 15 minutes once your application is approved.
+- [Escrow Payments](https://www.t57.ai/why-t57/escrow-payments): Your money moves only when the goods do, with escrow released at agreed milestones.
+- [Alternative Payments](https://www.t57.ai/why-t57/alternative-payments): Settle food trades in stablecoins, digital assets or bullion-backed payments, where the law allows.
+- [Digital Bank](https://www.t57.ai/why-t57/digital-bank): Hold, pay and settle in any currency, near-instantly, inside your food trade.
+- [Document Management & Audit Trail](https://www.t57.ai/why-t57/document-audit-trail): Every document, approval and milestone of a trade, on one tamper-evident record.
+
+## Capabilities
+
+- [Capabilities](https://www.t57.ai/capabilities): Run every part of a food trade, from first quote to final payment, on one record.
+- [Trade Execution](https://www.t57.ai/capabilities/trade): Turn a food trade opportunity into an agreed, delivered and documented deal.
+- [RFQ & Trade Execution](https://www.t57.ai/capabilities/trade/rfq): Send one structured request, compare verified quotes and execute the deal you choose.
+- [Virtual Trade Desk](https://www.t57.ai/capabilities/trade/virtual-trade-desk): Give your business the trade desk of a global trading house, without hiring one.
+- [Contract Farming](https://www.t57.ai/capabilities/trade/contract-farming): Agree next season's crop today, with buyers, growers and finance on one record.
+- [Government Tenders](https://www.t57.ai/capabilities/trade/government-tenders): Find, answer and deliver public food tenders as a verified supplier.
+- [Traceability](https://www.t57.ai/capabilities/trade/traceability): Prove where your food came from, how it was handled and who touched it.
+- [LLM-Based Orders](https://www.t57.ai/capabilities/trade/whatsapp-orders): Order food the way you already talk to suppliers, by WhatsApp, voice or chat.
+- [Trust & Payments](https://www.t57.ai/capabilities/finance/trust-payments): Pay and get paid with confidence, on terms both sides can see and trust.
+- [Escrow & Trade Assurance](https://www.t57.ai/capabilities/finance/escrow): Hold payment safely until the goods, the quality and the documents are right.
+- [Digital Wallet & Payments](https://www.t57.ai/capabilities/finance/digital-wallet): One wallet for every trade payment, in any currency, linked to every invoice.
+- [Electronic Letter of Credit](https://www.t57.ai/capabilities/finance/elc): Letters of credit built from your contract, issued digitally and presented without paper.
+- [Banking & Money Movement](https://www.t57.ai/capabilities/finance/banking): Bank, convert and move money across borders, in any currency, where you trade.
+- [Digital Banking](https://www.t57.ai/capabilities/finance/digital-bank): Business banking built around your food trade, opened with your T57 Passport.
+- [Any-Currency Accounts & Remittance](https://www.t57.ai/capabilities/finance/multi-currency): Hold, convert and send money in any currency, at rates you see before you pay.
+- [Crypto & Digital Assets](https://www.t57.ai/capabilities/finance/crypto-banking): Settle trades in stablecoins, digital assets or gold-backed tokens, through regulated partners.
+- [Financing & Capital](https://www.t57.ai/capabilities/finance/financing): Fund every stage of your food trade, from planting and production to shipment and sale.
+- [Trade & Supply Chain Finance](https://www.t57.ai/capabilities/finance/supply-chain-finance): Get working capital at every step of the food chain, from lenders competing for your trade.
+- [Asset-Based Fundraising & Tokenization](https://www.t57.ai/capabilities/finance/crowdfunding): Raise capital against real food assets, from verified trades to warehouse stock and farm equipment.
+- [Risk & Protection](https://www.t57.ai/capabilities/finance/risk-protection): Protect every trade against loss, default and disruption, with cover built from the trade record.
+- [Logistics & Fulfilment](https://www.t57.ai/capabilities/logistics): Move food from farm or factory to buyer, with freight, tracking and customs on one record.
+- [Intelligent Logistics Network](https://www.t57.ai/capabilities/logistics/network): Compare and book vetted freight, cold-chain and warehousing partners, matched to each trade.
+- [Real-Time Shipment Tracking](https://www.t57.ai/capabilities/logistics/tracking): Know where your food is, what condition it is in and when it will arrive.
+- [Customs & Documentation Hub](https://www.t57.ai/capabilities/logistics/customs): Prepare export and import documents once, and clear food through customs faster.
+- [Intelligence & Data](https://www.t57.ai/capabilities/intelligence): Trade with the full picture: prices, supply, counterparties and markets, inside every deal.
+- [Live Food Price Index](https://www.t57.ai/capabilities/intelligence/price-index): Current food prices by product, grade and origin, built from real trades.
+- [AI Negotiations Engine](https://www.t57.ai/capabilities/intelligence/ai-negotiations): Negotiate every food deal with market data and AI preparation behind you.
+- [Equipment & Technology Rental](https://www.t57.ai/capabilities/agritech/equipment-rental): Tractors, drones, sensors, cold rooms and testing, booked by the day, the hectare or the job.
+- [Hire an Expert](https://www.t57.ai/capabilities/hire-an-expert): Agronomists, inspectors, food scientists and packaging specialists across the food ecosystem, booked by the job and rated by members.
+
+## AI Native
+
+- [AI Native](https://www.t57.ai/ai-native): T57 is AI-native. Here is what that means for your business.
+- [AI Trade Matchmaking](https://www.t57.ai/ai-native/trade-matchmaking): Find the right verified buyer or supplier in minutes, ranked by fit and track record.
+- [AI Negotiations Engine](https://www.t57.ai/ai-native/negotiations): AI that prepares every negotiation with market data, and leaves every decision to you.
+- [LLM-Based Trade Orders](https://www.t57.ai/ai-native/llm-orders): Turn a WhatsApp message or voice note into a confirmed, structured trade order.
+- [Live Food Price Index, AI-Powered](https://www.t57.ai/ai-native/price-index): An AI-built price for every product, grade and origin, explained in plain language.
+- [Supply & Demand Forecasting](https://www.t57.ai/ai-native/supply-demand-forecasting): See shortages, surpluses and price turns coming, weeks before they reach you.
+- [Risk Intelligence & Heatmaps](https://www.t57.ai/ai-native/risk-intelligence): See every risk to your trade on one map: counterparties, routes, markets and weather.
+- [Crop & Yield Forecasting](https://www.t57.ai/ai-native/crop-yield-forecasting): Know how much your fields will produce, and when, before the harvest.
+- [Profit & Loss Prediction](https://www.t57.ai/ai-native/profit-loss-prediction): Know whether a crop, a trade or a season will make money before you commit.
+- [AI Crop Planning & Analytics](https://www.t57.ai/ai-native/crop-planning): Plan what to plant, when and how much, based on what the market will want.
+- [Agronomy Expert Network, AI-Assisted](https://www.t57.ai/ai-native/agronomy-ai): Expert farming advice in your own language, from AI first and agronomists when it matters.
+- [AI-Powered Compliance & KYC](https://www.t57.ai/ai-native/ai-compliance): Verify businesses and screen every trade faster, with people reviewing every adverse decision.
+- [Predictive Trade Analytics Dashboard](https://www.t57.ai/ai-native/predictive-analytics): See where your trading business is heading, not just where it has been.
+- [AI Trade Document Generation](https://www.t57.ai/ai-native/ai-documentation): Generate contracts, invoices and trade documents from one accepted quote, checked by AI.
+
+## Platform
+
+- [Platform](https://www.t57.ai/platform): The food operating system: one platform that connects every party, service and record in food trade.
+- [One Trade, Every Step](https://www.t57.ai/platform/trade-cycle): Agree a price, ship, insure, finance, pay and clear customs on one platform, with every party verified and every step on one record.
+- [Domestic B2B Trade](https://www.t57.ai/platform/domestic-trade): Local factories and farms sell direct to supermarkets, restaurants and offices at factory price, by the carton, delivered to the door.
+- [System Architecture](https://www.t57.ai/platform/architecture): A cloud-native, API-first architecture built for verified, regulated, cross-border food trade.
+- [Platform Roadmap](https://www.t57.ai/platform/roadmap): How the T57 platform grows: from verified trade, to connected finance, to a food ecosystem.
+- [Intelligence Layer](https://www.t57.ai/platform/intelligence-layer): The AI layer that learns from verified trade and supports every decision on T57.
+- [Blockchain & Smart Contract Layer](https://www.t57.ai/platform/blockchain): Tamper-evident records, tokenized documents and milestone payments that every party can trust.
+- [Security Architecture](https://www.t57.ai/platform/security): Protect every trade, document and member with security built into the platform.
+
+## Trust and compliance
+
+- [Trust & Compliance](https://www.t57.ai/trust): Trade with verified businesses, on one record, under clear rules.
+- [Verification Process](https://www.t57.ai/trust/verification): Know exactly who you are trading with, before you trade.
+- [KYB: Business Verification](https://www.t57.ai/trust/verification/kyb): Verify the business behind every trade.
+- [KYC: Individual Verification](https://www.t57.ai/trust/verification/kyc): Verify the people who own and act for every member.
+- [Membership Scoring & Trust Rating](https://www.t57.ai/trust/verification/membership-scoring): Let your track record speak for your business.
+- [Audit Trail](https://www.t57.ai/trust/audit-trail): See who did what, and when, on every trade.
+- [Document Management System](https://www.t57.ai/trust/document-management): Keep every trade document correct, current and in one place.
+- [Security & Privacy](https://www.t57.ai/trust/security): Your trade data stays yours, protected and private.
+- [Data Protection](https://www.t57.ai/trust/security/data-protection): Data handled lawfully in every market where we trade.
+- [Dispute Resolution](https://www.t57.ai/trust/trade-assurance/disputes): Resolve trade disputes on the facts, quickly and fairly.
+
+## Markets
+
+- [Markets](https://www.t57.ai/markets): Saudi Arabia, the UAE, India, Malaysia and Türkiye. Buy and sell across all five on one trade record.
+- [Global Rollout](https://www.t57.ai/markets/global-rollout): T57 starts with teams on the ground in five founding markets, is open online to verified businesses in 195 countries, and opens new markets phase by phase, with country partners where it has no office yet.
+- [OIC Nations & Halal Trade](https://www.t57.ai/markets/oic-halal): Connect halal food producers and buyers across the OIC on one trusted network.
+- [ASEAN Markets](https://www.t57.ai/markets/asean): Link Southeast Asian food producers to buyers across Asia and the Gulf.
+- [Saudi Arabia: Market Overview](https://www.t57.ai/markets/saudi-arabia/overview): Reach verified Saudi importers, retailers and hotels, and export Saudi food, with local partners for payments and customs.
+- [Saudi Arabia: Features Available](https://www.t57.ai/markets/saudi-arabia/features): Everything you need to trade food in Saudi Arabia, in one place.
+- [Saudi Arabia: Regulatory Guide](https://www.t57.ai/markets/saudi-arabia/compliance): Know the rules for food trade in Saudi Arabia before you ship.
+- [Saudi Arabia: Getting Started](https://www.t57.ai/markets/saudi-arabia/getting-started): Start trading on T57 in Saudi Arabia in four steps.
+- [UAE: Market Overview](https://www.t57.ai/markets/uae/overview): Trade food through the UAE with verified partners across the region.
+- [UAE: Features Available](https://www.t57.ai/markets/uae/features): Everything you need to trade food in the UAE, in one place.
+- [UAE: Regulatory Guide](https://www.t57.ai/markets/uae/compliance): Know the rules for food trade in the UAE before you ship.
+- [UAE: Getting Started](https://www.t57.ai/markets/uae/getting-started): Start trading on T57 in the UAE in four steps.
+- [India: Market Overview](https://www.t57.ai/markets/india/overview): Connect India's farmers and food makers to verified buyers at home and abroad.
+- [India: Features Available](https://www.t57.ai/markets/india/features): Everything you need to trade food in India, in one place.
+- [India: Regulatory Guide](https://www.t57.ai/markets/india/compliance): Know the rules for food trade in India before you ship.
+- [India: Getting Started](https://www.t57.ai/markets/india/getting-started): Start trading on T57 in India in four steps.
+- [Malaysia: Market Overview](https://www.t57.ai/markets/malaysia/overview): Take Malaysian halal food to verified buyers across the Gulf, India and ASEAN.
+- [Malaysia: Features Available](https://www.t57.ai/markets/malaysia/features): Everything you need to trade food in Malaysia, in one place.
+- [Malaysia: Regulatory Guide](https://www.t57.ai/markets/malaysia/compliance): Know the rules for food trade in Malaysia before you ship.
+- [Malaysia: Getting Started](https://www.t57.ai/markets/malaysia/getting-started): Start trading on T57 in Malaysia in four steps.
+- [Türkiye: Market Overview](https://www.t57.ai/markets/turkiye/overview): Sell Türkiye's fruit, nuts and food products to verified buyers across the Gulf and Asia.
+- [Türkiye: Features Available](https://www.t57.ai/markets/turkiye/features): Everything you need to trade food in Türkiye, in one place.
+- [Türkiye: Regulatory Guide](https://www.t57.ai/markets/turkiye/compliance): Know the rules for food trade in Türkiye before you ship.
+- [Türkiye: Getting Started](https://www.t57.ai/markets/turkiye/getting-started): Start trading on T57 in Türkiye in four steps.
+
+## Pricing
+
+- [Pricing Overview](https://www.t57.ai/pricing): Clear prices for verified trade, and fees only when you trade.
+- [Membership Plans & Pricing](https://www.t57.ai/pricing/plans): Choose the plan that fits how much you trade.
+- [Enterprise & Custom Pricing](https://www.t57.ai/pricing/enterprise): Run your group's food trade on T57, on terms built for you.
+- [Government & Institutional Pricing](https://www.t57.ai/pricing/government): Programs that strengthen your country's food security, designed with you.
+- [ROI Calculator](https://www.t57.ai/pricing/roi-calculator): See what T57 could be worth to your business, and which plan pays off.
+
+## Resources
+
+- [Resources Overview](https://www.t57.ai/resources): Insight, research, news, videos, events and plain-language guides on digital food trade, food security, trade finance and AI.
+- [Blog & Insights](https://www.t57.ai/resources/blog): Practical insight on food trade, markets and technology.
+- [Reports & Whitepapers](https://www.t57.ai/resources/reports): In-depth research on food trade, finance and food security.
+- [Newsroom](https://www.t57.ai/resources/newsroom): News, announcements and media resources from T57.
+- [Explainer Videos](https://www.t57.ai/resources/videos): Short videos on verification, the trade record, escrow, letters of credit and responsible AI.
+- [Webinars & Events](https://www.t57.ai/resources/events): Live webinars, market briefings and trade events where you can meet T57's teams.
+- [FAQ & Glossary](https://www.t57.ai/resources/faq-glossary): Plain-language answers about T57, and the trade, finance and technology terms behind it, from escrow to HS codes.
+- [Marketing a System, Not a Product: Designing Trade Infrastructure for Multi-Party Value](https://www.t57.ai/resources/blog/systems-marketing-ai-global-food-trade): Why verification and trust, not vendor promises, are what a trade platform really sells.
+- [The Day Our MoUs and LoIs Turned Into a Learning Machine](https://www.t57.ai/resources/blog/t57-gulfood-2026-mous-learning-sales-engine): How early MoU and LoI partners became co-designers, with pilots tied to measurable outcomes.
+- [Why 150+ MoUs and LoIs Change T57’s Growth Math](https://www.t57.ai/resources/blog/future-of-ai-food-trade-t57): What 150+ signed MoUs and letters of intent, 120 of them at Gulfood 2026, mean as pre-qualified demand.
+- [When a Nation Becomes Your Customer: Inside the Race to Sell AI to India’s Farms](https://www.t57.ai/resources/blog/marketing-11-crore-farmers-digital-agriculture-mission-t57): India’s Digital Agriculture Mission and the push for traceable public investment in farming.
+- [When Food Trade Deals Happen Before the Handshake](https://www.t57.ai/resources/blog/food-trade-deals-before-handshake-virtual-trade-infrastructure): Why discovery and contracting are moving from trade-show floors to AI-native trade platforms.
+- [The Missing Middle of Food Systems: Why Model Support Centers Will Rewrite the Future of Agriculture](https://www.t57.ai/resources/blog/model-support-centers-missing-middle-food-systems): Modular hubs that bring digital tools and services within reach of farmers.
+- [From 90 Days to 5 Years: How the Gulf Can Turn a Food Crisis into a Strategic Advantage](https://www.t57.ai/resources/blog/gcc-food-security-strategy-hormuz-crisis): A long-term response to the Gulf’s dependence on the Strait of Hormuz for food.
+- [Hormuz Shock: How the Gulf’s Food-Security Model Could Fail Its First Real Test](https://www.t57.ai/resources/blog/hormuz-shock-gcc-food-security-risk): The stress a Hormuz disruption puts on GCC food supply.
+- [Date Farming in Saudi Arabia: How One Platform Can Rewrite a Centuries-Old Struggle](https://www.t57.ai/resources/blog/saudi-date-industry-challenges-t57-supply-chain): How date farmers could list harvests, receive buyer offers and be paid faster.
+- [Building Trust at Scale: Why a Club Membership Model Can Transform Agriculture Markets](https://www.t57.ai/resources/blog/t57-club-membership-agriculture-trust-model): Why a curated membership with trade history and ratings reduces disputes.
+- [Bridging the Gap: How T57 Can Transform India’s Emerging Avocado Industry](https://www.t57.ai/resources/blog/india-avocado-market-growth-farmer-challenge): India’s fast-growing avocado imports, and the gaps growers face.
+- [Structural Shifts That Will Redefine Turkish Agriculture in 2026](https://www.t57.ai/resources/blog/structural-shifts-reshaping-turkish-agriculture-2026): The pressures on Türkiye’s farm sector, and where market intelligence helps.
+- [Can Blockchain Finally Close the $1 Trillion Annual Global Cost of Food Waste?](https://www.t57.ai/resources/blog/blockchain-food-supply-chain): How a shared, tamper-evident record can make long food supply chains trustworthy.
+- [Five Forces Reshaping Malaysian Agriculture: A 2026 Outlook for Policymakers](https://www.t57.ai/resources/blog/five-forces-reshaping-malaysian-agriculture-2026): Self-sufficiency, climate risk and EUDR compliance in Malaysia.
+- [Five Forces Reshaping Middle East Agriculture: A Strategic Outlook for 2026](https://www.t57.ai/resources/blog/five-forces-reshaping-middle-east-agriculture-2026): Import dependence, climate-smart technology and traceability across the region.
+- [The Quiet Upload of Agriculture into the AI Stack](https://www.t57.ai/resources/blog/agriculture-ai-stack): Agriculture is becoming an AI-native, automation-first industry.
+- [India-US Trade Deal After the Supreme Court Shock: Tactical Truce, Hidden Traps, or Trump’s Next Tariff Gambit?](https://www.t57.ai/resources/blog/india-us-trade-deal-2026-agriculture-impact): What the interim India-US deal means for agriculture.
+- [How Smart Contracts Can Repair Trust in Global Agri Trade](https://www.t57.ai/resources/blog/smart-contracts-in-global-agri-trade): Late payments and disputes, and how agreed terms that execute themselves can fix them.
+- [From Farm to Fork at Gulfood: How AI, Blockchain, and Human Talent Will Rewire Trust in the Global Food Chain](https://www.t57.ai/resources/blog/gulfood-2026-farm-to-fork): Takeaways from a Gulfood 2026 panel on trust in the food chain.
+- [From Data to Dinner: The AI-driven Food Decisions That Must Scale](https://www.t57.ai/resources/blog/gulfood-2026-ai-powered-food-decisions): Scale the high-stakes decisions first, then the AI.
+- [Navigating the New Agricultural Paradigm: 5 Strategic Shifts for India’s Farm Sector in 2026](https://www.t57.ai/resources/blog/india-farm-sector-2026-strategic-outlook): Five developments shaping India’s agricultural trade and food security.
+- [How a Digital Agri-Finance Alliance Can Drive Global Food System Transformation](https://www.t57.ai/resources/blog/digital-agri-finance-alliance-global-food-system-transformation): What the T57–MAIB MoU means for farmers and agri-entrepreneurs.
+- [Trust in Clicks, Not Weeks: How Escrow, Crypto, and AI Agents Will Replace Endless Paperwork in the Agricultural Sector](https://www.t57.ai/resources/blog/escrow-crypto-ai-agents-agriculture): Why slow payments hurt farmers, and what can make them faster.
+- [How T57 Is Rewriting Trade Finance for Global Agriculture](https://www.t57.ai/resources/blog/rewriting-trade-finance-for-global-agriculture): The trade finance gap that leaves agricultural businesses underfunded.
+- [Busting the Middlemen Cartel: How Data Can Save Farmers’ Lives](https://www.t57.ai/resources/blog/how-data-can-save-farmers-lives): How data and direct access can lift farmer incomes.
+
+## Help Center
+
+- [Help Center](https://www.t57.ai/help): Get help with T57, whenever you need it.
+- [Getting Started Guides](https://www.t57.ai/help/getting-started): Step-by-step guides for new members: account, plan, verification, Passport, team, listings and your first request for quote.
+- [Platform How-Tos](https://www.t57.ai/help/how-to): Guides for quotes, contracts, documents, escrow, letters of credit, finance, logistics, team settings and market intelligence.
+- [FAQs](https://www.t57.ai/help/faq): Answers to common questions.
+- [Contact Support](https://www.t57.ai/help/contact): Reach T57 support by chat, email or your local team in Saudi Arabia, the UAE, India, Malaysia or Türkiye.
+
+## Partnerships
+
+- [Partnerships Overview](https://www.t57.ai/partnerships): Partner with the network that food trade runs on.
+
+## Partner programs
+
+- [Technology Partners](https://www.t57.ai/partners/technology): Partner with T57 in cloud, identity, data, integration and AI to serve verified food businesses.
+- [Financial Services Partners](https://www.t57.ai/partners/financial-services): Reach verified food businesses with better data and less risk.
+- [Logistics Partners](https://www.t57.ai/partners/logistics): Freight, cold chain, warehouse, inspection and customs partners serve verified traders from inside the T57 trade record.
+- [Research & University Partners](https://www.t57.ai/partners/research): T57 works with agricultural universities and research institutes to bring their research to farmers and food SMEs, and to turn it into income for the scientists behind it.
+- [Country Partners](https://www.t57.ai/partners/country-partner): Run T57 in your country or city as a licensed country partner, like a franchise. You build the local network of verified food businesses; T57 provides the platform, the brand and the support.
+- [Become a Partner](https://www.t57.ai/partners/apply): Partner with T57 in finance, insurance, logistics, inspection or technology. Tell us about your business to start.
+
+## About T57
+
+- [About T57](https://www.t57.ai/about): We are here so that food that exists reaches the people and markets that need it.
+- [Our Journey](https://www.t57.ai/about/journey): Since 2023, T57 and its founding company, AlMukarramah, have signed agreements with governments, development institutions and food companies, and taken the case for connected food trade to stages from Cape Town to Yinchuan.
+- [Leadership & Advisors](https://www.t57.ai/about/leadership): The founders, leadership team, board and advisors behind T57, with experience in food trade, food security, technology, finance and governance.
+- [Innovation & Impact](https://www.t57.ai/about/impact): How T57 uses small, local AI responsibly, and the impact it works toward: market access, finance, less food loss and inclusion.
+- [T57 for Food Security](https://www.t57.ai/about/food-security): Verified supply across borders, supply status by origin, AI early warning and a government module, in one system.
+- [T57 for SDG Delivery](https://www.t57.ai/about/sdg-delivery): Turn verified trade into measurable progress on the Sustainable Development Goals.
+- [Careers](https://www.t57.ai/about/careers): Join T57's teams in technology, AI, product, country operations and partnerships across five founding markets.
+- [Media & Press Kit](https://www.t57.ai/about/media): Company facts, logos and press contacts for journalists and partners.
+- [Investor Relations](https://www.t57.ai/about/investors): T57 is raising its launch round to open five founding markets from Riyadh. Qualified investors can request the investor pack today.
+
+## Contact
+
+- [Contact](https://www.t57.ai/contact): Talk to T57.
+- [Request a Demo](https://www.t57.ai/contact/demo): Book a 30-minute demo on your own products and markets, then start your free trial.
+- [Where We Work](https://www.t57.ai/contact/offices): T57 is a global SaaS platform. The pilot starts in five countries, and any food business, anywhere in the world, can apply online and join.
+
+## Common questions
+
+- [What is T57?](https://www.t57.ai/): T57 is AI-native digital trade infrastructure for the food industry. It brings verification, quotes, contracts, finance access, insurance, inspection and logistics onto one trade record for verified members.
+- [Who can join T57?](https://www.t57.ai/): Any business in the food chain can apply, including farmers, fishers, processors, manufacturers, brands, traders, importers, wholesalers, supermarkets and HoReCa buyers. Every member is verified before trading.
+- [Why does T57 verify every member?](https://www.t57.ai/who-we-serve): Verification lets every member trade with confidence. It also gives lenders and insurers the trusted information they need to support a trade.
+- [How is T57 different from other food trade platforms?](https://www.t57.ai/why-t57): T57 is an AI-native ecosystem, working with IOFS and ASEAN, that brings trade, finance, logistics and policy-grade data together on one verified platform.
+- [Why do the IOFS and ASEAN partnerships matter to me as a trader?](https://www.t57.ai/why-t57): They translate into faster onboarding, clearer rules of origin and better access to tenders and sovereign buyers, because T57 aligns with the institutions that set food security and trade priorities.
+- [How does the T57 trust score help farmers and producers, cooperatives, and FPOs reduce risk?](https://www.t57.ai/why-t57/club-membership): The trust score helps these groups assess whether prospective buyers, aggregators, processors, or service partners have the legitimacy, financial stability, trade history, and relationship strength needed to support dependable transactions. This reduces the risk of engaging with weak or opaque counterparties.
+- [Why is the T57 ID useful for financiers and investors, partners, collaborators, governments, and regulators?](https://www.t57.ai/why-t57/club-membership): The T57 ID provides these stakeholders with a structured view of whether an organization has been verified across key trust factors, including compliance, field validation, references, and ecosystem reputation. That makes it easier to evaluate risk and engage with businesses whose credentials are supported by a more advanced process than standard marketplace profiles or basic business identifiers.
+- [Who can respond to an RFQ on T57?](https://www.t57.ai/why-t57/rfq-bidding): Only verified members whose products, capacity and markets match the request. Buyers can also invite specific suppliers.
+- [Can sellers see each other's bids?](https://www.t57.ai/why-t57/rfq-bidding): No. Each bid is visible only to the buyer, which keeps pricing fair and confidential.
+- [Is the Virtual Trade Desk a person or software?](https://www.t57.ai/why-t57/virtual-trade-desk): Both. The Trade Desk is software that matches, prices, drafts and screens, supported by T57's trade desk team for cases that need human review.
+- [Does the Trade Desk negotiate for me?](https://www.t57.ai/why-t57/virtual-trade-desk): No. It gives you matches, price data and checks. You negotiate and decide.
+- [Where does T57's price data come from?](https://www.t57.ai/why-t57/market-intelligence): From public market sources and anonymized, aggregated trade data on T57. No individual member's prices are shared.
+- [Can I use the data without trading on T57?](https://www.t57.ai/why-t57/market-intelligence): Market intelligence is part of T57 membership and is built to support trading on the platform.
+- [Does T57 provide the finance?](https://www.t57.ai/why-t57/trade-finance): No. T57 does not lend or hold client funds. It sends your verified deal file to licensed lenders, who decide whether to fund the trade and on what terms.
+- [What kinds of finance can I request?](https://www.t57.ai/why-t57/trade-finance): Pre-shipment and post-shipment finance, receivables finance and letters of credit, through participating banks and finance companies, including Shariah-compliant options.
+- [Is this cryptocurrency?](https://www.t57.ai/why-t57/nft-funding): No. A tokenized trade document is a digital record of a real asset, such as an invoice or warehouse receipt. It is not a currency.
+- [Which documents can be tokenized?](https://www.t57.ai/why-t57/nft-funding): Trade documents on a verified T57 trade record, such as invoices, warehouse receipts and bills of lading, where local law recognizes electronic trade documents.
+- [What does "15 minutes" mean?](https://www.t57.ai/why-t57/elc-15-minutes): It is the target time for a partner bank to issue the electronic LC after your application has been approved. Approval itself follows the bank's own credit process.
+- [Does T57 issue letters of credit?](https://www.t57.ai/why-t57/elc-15-minutes): No. Letters of credit are issued by licensed partner banks. T57 prepares the application from your trade record and connects you to them.
+- [Who holds the money in escrow?](https://www.t57.ai/why-t57/escrow-payments): A licensed escrow partner. T57 does not hold client funds.
+- [What happens if there is a dispute?](https://www.t57.ai/why-t57/escrow-payments): Release pauses automatically, and the dispute is handled under the contract and the partner's rules. Release resumes once it is resolved.
+- [Are alternative payments available in every country?](https://www.t57.ai/why-t57/alternative-payments): No. They are offered only where local law allows, through regulated partners. Members in other countries settle through banks, escrow or letters of credit.
+- [Does T57 hold my crypto or gold?](https://www.t57.ai/why-t57/alternative-payments): No. Custody, conversion and settlement are handled by licensed partners. T57 records the payment on the trade record.
+- [Is T57 a bank?](https://www.t57.ai/why-t57/digital-bank): No. Digital banking services on T57 are provided by licensed partners. T57 connects them to your verified profile and trade record.
+- [Which currencies can I hold?](https://www.t57.ai/why-t57/digital-bank): Any currency your trade needs. T57's banking partners hold, convert and settle across currencies, so you can pay suppliers and get paid by buyers in their own currency.
+- [Who can see my trade documents?](https://www.t57.ai/why-t57/document-audit-trail): Only the parties you authorize for that trade, such as your counterparty, lender, insurer or inspector. Access is recorded in the audit trail.
+- [Are documents stored on the blockchain?](https://www.t57.ai/why-t57/document-audit-trail): No. Documents are stored securely, and a digital fingerprint of each key record is anchored on the ledger. This proves the document has not changed without exposing its contents.
+- [Do I have to use every capability on every trade?](https://www.t57.ai/capabilities): No. Members choose the capabilities each trade needs. Because they share one record, adding a service later does not mean starting again.
+- [Who provides finance, payments and insurance?](https://www.t57.ai/capabilities): Licensed partners. T57 does not lend, hold client funds, own goods or provide transport. It provides the verification, workflow and trade record that connect these services.
+- [Can I use Trade Execution without finance or logistics?](https://www.t57.ai/capabilities/trade): Yes. You can use RFQs, contracts and traceability on their own, and add finance, insurance or logistics to any trade later.
+- [Does T57 sell or buy the goods?](https://www.t57.ai/capabilities/trade): No. T57 does not own goods. Members trade directly with each other on T57.
+- [How long does an RFQ stay open?](https://www.t57.ai/capabilities/trade/rfq): The buyer sets the deadline. Bids received after it closes are not shown unless the buyer reopens the RFQ.
+- [Can I negotiate after receiving bids?](https://www.t57.ai/capabilities/trade/rfq): Yes. You can ask clarifying questions or request a revised bid from any supplier before you award the contract.
+- [Is the Trade Desk included in membership?](https://www.t57.ai/capabilities/trade/virtual-trade-desk): Yes. Every verified member can use the Trade Desk. Higher membership tiers include deeper data and higher usage.
+- [Does the Trade Desk make decisions for me?](https://www.t57.ai/capabilities/trade/virtual-trade-desk): No. It provides suggestions, drafts and checks. You make every commercial decision.
+- [Can individual smallholders use contract farming on T57?](https://www.t57.ai/capabilities/trade/contract-farming): Yes, usually through a cooperative or producer organization that holds the T57 membership and signs on behalf of its members.
+- [What happens if prices change during the season?](https://www.t57.ai/capabilities/trade/contract-farming): It depends on the contract. Fixed-price, minimum-price and formula-based agreements each handle price movements differently, and the terms are agreed upfront.
+- [Does T57 submit bids on my behalf?](https://www.t57.ai/capabilities/trade/government-tenders): No. T57 helps you find, understand and prepare a response. You submit it through the issuing authority's official channel.
+- [Can government buyers use T57 to run tenders?](https://www.t57.ai/capabilities/trade/government-tenders): Government buyers can invite verified T57 members to bid and track delivery on T57, alongside their own procurement rules and systems.
+- [Who adds information to a lot's record?](https://www.t57.ai/capabilities/trade/traceability): The parties who handle it, such as the producer, processor, inspector and logistics partner, each add the events they are responsible for.
+- [Can consumers see traceability information?](https://www.t57.ai/capabilities/trade/traceability): Yes, if the brand or seller chooses to share it through a link or QR code. Commercial details stay private.
+- [Do I need to install anything?](https://www.t57.ai/capabilities/trade/whatsapp-orders): No. Verified members can order through WhatsApp or T57 chat once their account is linked.
+- [What if the AI gets my order wrong?](https://www.t57.ai/capabilities/trade/whatsapp-orders): You always see a summary before confirming, so you can correct it. Nothing is sent to the supplier until you confirm.
+- [Which payment option should I choose?](https://www.t57.ai/capabilities/finance/trust-payments): Escrow suits most new relationships and domestic wholesale. eLCs suit larger cross-border trades where a bank guarantee is expected. Wallet payments suit trusted, repeat relationships.
+- [Can I combine payment options?](https://www.t57.ai/capabilities/finance/trust-payments): Yes. For example, a deposit can be paid into escrow and the balance under an LC, all on the same trade record.
+- [Who holds the money?](https://www.t57.ai/capabilities/finance/escrow): A licensed escrow partner, in an account separate from T57 and from both trading parties.
+- [What does escrow cost?](https://www.t57.ai/capabilities/finance/escrow): Escrow fees are set by the partner and shown before you agree the contract.
+- [Is the T57 wallet a bank account?](https://www.t57.ai/capabilities/finance/digital-wallet): It is an e-money or payment account provided by a licensed partner. For full banking services, see Digital Banking.
+- [Can I pay people who are not on T57?](https://www.t57.ai/capabilities/finance/digital-wallet): Yes. You can pay external suppliers and service providers by bank transfer from your wallet, subject to the partner's checks.
+- [What does "about 15 minutes" mean?](https://www.t57.ai/capabilities/finance/elc): It is the target time for issuance after the bank has approved your application. Approval follows the bank's normal credit process.
+- [Can my own bank issue the LC on T57?](https://www.t57.ai/capabilities/finance/elc): If your bank is a T57 partner, yes. If not, T57 can connect you to participating banks.
+- [Can I keep my existing bank?](https://www.t57.ai/capabilities/finance/banking): Yes. You can keep using your own bank and connect it to T57, or use T57's partners alongside it.
+- [Who provides the bank account?](https://www.t57.ai/capabilities/finance/digital-bank): A licensed banking partner in your market, under its own terms and regulation.
+- [Do I have to move my existing banking?](https://www.t57.ai/capabilities/finance/digital-bank): No. You can use T57's banking partners alongside your current bank.
+- [Which currencies can I hold and send?](https://www.t57.ai/capabilities/finance/multi-currency): Any currency your trade needs, through T57's banking and payment partners.
+- [How long do transfers take?](https://www.t57.ai/capabilities/finance/multi-currency): Payments between T57 members settle in near real time. External transfers depend on the destination and partner network, and the expected time is shown before you confirm.
+- [Is digital-asset settlement legal in my country?](https://www.t57.ai/capabilities/finance/crypto-banking): T57 shows digital-asset options only where they are permitted for both parties under local rules, through licensed partners.
+- [What about price volatility?](https://www.t57.ai/capabilities/finance/crypto-banking): Stablecoins and gold-backed tokens are designed to reduce volatility, and partners can convert to local currency at the point of payment.
+- [Who provides the finance?](https://www.t57.ai/capabilities/finance/financing): Licensed banks, finance companies, Islamic finance providers and, where permitted, institutional investors. T57 does not lend.
+- [What do lenders see?](https://www.t57.ai/capabilities/finance/financing): Only the deal file you choose to share: your T57 Passport, the contract, counterparties, documents and trade history.
+- [How quickly can I receive offers?](https://www.t57.ai/capabilities/finance/supply-chain-finance): That depends on each lender's process. Because the deal file is already verified, lenders can respond faster than to a standard application.
+- [Do I need collateral?](https://www.t57.ai/capabilities/finance/supply-chain-finance): Many structures rely on the trade itself, through confirmed orders, invoices and escrow repayment, rather than on property or other collateral. Each lender sets its own requirements.
+- [Is this the same as crypto?](https://www.t57.ai/capabilities/finance/crowdfunding): No. A tokenized asset is a digital record of a real asset, such as an invoice or a cold store. It is not a currency.
+- [Who can invest?](https://www.t57.ai/capabilities/finance/crowdfunding): Licensed lenders, and investors eligible under the rules of the licensed fundraising platform and their own country.
+- [Does T57 sell insurance?](https://www.t57.ai/capabilities/finance/risk-protection): T57 connects members to licensed insurers, takaful operators and brokers. Policies are issued by them, under their own regulation.
+- [Can I use my existing insurer?](https://www.t57.ai/capabilities/finance/risk-protection): Yes. You can upload existing policies to the trade record so they can be used with LCs, lenders and claims.
+- [Can I use my own freight forwarder?](https://www.t57.ai/capabilities/logistics): Yes. You can invite your forwarder to the trade record or upload its documents and tracking data.
+- [Does T57 support cold-chain shipments?](https://www.t57.ai/capabilities/logistics): Yes. Cold-chain partners and temperature tracking are available for chilled and frozen goods.
+- [How are logistics partners vetted?](https://www.t57.ai/capabilities/logistics/network): Partners go through business verification, license and insurance checks, and their performance is rated on recorded shipments.
+- [Can I invite my own forwarder?](https://www.t57.ai/capabilities/logistics/network): Yes. Your existing forwarder can join the trade record and quote alongside network partners.
+- [Do I need special tracking devices?](https://www.t57.ai/capabilities/logistics/tracking): No. T57 uses carrier and port data for all shipments. IoT devices add live temperature and location for sensitive cargo.
+- [Who can see my shipment?](https://www.t57.ai/capabilities/logistics/tracking): Only the parties to the trade and the partners you authorize, such as your lender or insurer.
+- [Does T57 file customs declarations?](https://www.t57.ai/capabilities/logistics/customs): No. Licensed customs brokers file declarations, using the documents prepared on T57.
+- [Is pre-clearance available in every country?](https://www.t57.ai/capabilities/logistics/customs): Pre-clearance depends on each customs authority's procedures. Where it is not available, T57 still sends complete, checked documents to the broker before arrival.
+- [Where does T57's data come from?](https://www.t57.ai/capabilities/intelligence): Public market and trade sources, licensed data partners, and anonymized, aggregated data from trades on T57.
+- [Is my trade data shared with other members?](https://www.t57.ai/capabilities/intelligence): No. Individual trades are never shown. They contribute only to anonymized, aggregated statistics.
+- [How is the T57 index calculated?](https://www.t57.ai/capabilities/intelligence/price-index): It combines public market data, licensed data partners and anonymized, aggregated prices from verified T57 trades, with methods that prevent any single member's price from being identified.
+- [How often is it updated?](https://www.t57.ai/capabilities/intelligence/price-index): It updates as new market data arrives and as verified trades close on T57. Some lines update daily, others weekly, depending on trade volume.
+- [Does the AI negotiate on my behalf?](https://www.t57.ai/capabilities/intelligence/ai-negotiations): No. It prepares and suggests. You decide what to offer, counter or accept, and nothing is sent without your confirmation.
+- [Can the other side see the engine's suggestions to me?](https://www.t57.ai/capabilities/intelligence/ai-negotiations): No. Your briefs and suggestions are private to you.
+- [Can I list my equipment or drone for rent?](https://www.t57.ai/capabilities/agritech/equipment-rental): Yes. Verified members list equipment and services with prices, areas served and availability.
+- [Do I need to know how to operate it?](https://www.t57.ai/capabilities/agritech/equipment-rental): No. Book it with a trained operator, or book the job alone, such as spraying 10 hectares.
+- [How are experts checked?](https://www.t57.ai/capabilities/hire-an-expert): Identity, qualifications and references are verified before an expert can take jobs.
+- [What if the advice is wrong or the job is not done?](https://www.t57.ai/capabilities/hire-an-expert): You can raise a dispute before payment is released. Upheld complaints count against the expert, and repeated ones lead to removal.
+- [What does "AI-native" mean at T57?](https://www.t57.ai/ai-native): AI is built into every step of the trade, from matching and pricing to compliance and documents, rather than added as a separate tool.
+- [Does AI make decisions about my business?](https://www.t57.ai/ai-native): AI makes suggestions and flags issues. People make decisions, and every adverse decision is reviewed by a person.
+- [Can suppliers pay to rank higher?](https://www.t57.ai/ai-native/trade-matchmaking): No. Ranking is based on fit, verification and track record, never on payment.
+- [Why was a particular partner suggested?](https://www.t57.ai/ai-native/trade-matchmaking): Every suggestion shows its main reasons, such as product match, capacity, corridor experience and on-time performance.
+- [Can both parties use the engine in the same deal?](https://www.t57.ai/ai-native/negotiations): Yes. Each party gets its own private brief based on the same public market data.
+- [Which languages are supported?](https://www.t57.ai/ai-native/llm-orders): Arabic, English, Hindi, Malay and Turkish, with more added as T57 grows into new markets.
+- [What happens if the AI is unsure?](https://www.t57.ai/ai-native/llm-orders): It asks a short question instead of guessing, and the order is not sent until you confirm.
+- [How accurate are the AI estimates?](https://www.t57.ai/ai-native/price-index): Each price shows a confidence level. Accuracy is measured by comparing estimates with later verified trades, and results are published by product group.
+- [Can the index be manipulated by fake trades?](https://www.t57.ai/ai-native/price-index): Only trades between verified members count, outliers are detected and down-weighted, and no single trade can move the index alone.
+- [How far ahead do forecasts look?](https://www.t57.ai/ai-native/supply-demand-forecasting): From a few weeks to a season, depending on the product and the data available. Every forecast shows its range.
+- [Can governments use the forecasts?](https://www.t57.ai/ai-native/supply-demand-forecasting): Yes. Governments and institutions can access aggregated supply status and forecasts through T57's food security view.
+- [Can I see my own risk score?](https://www.t57.ai/ai-native/risk-intelligence): Yes. Members can see the scores that relate to them and the main reasons, and can ask for a review.
+- [Who else can see risk heatmaps?](https://www.t57.ai/ai-native/risk-intelligence): Lenders and insurers see risk only for the trades you share with them. Governments see aggregated, anonymized views.
+- [Do farmers need special equipment?](https://www.t57.ai/ai-native/crop-yield-forecasting): No. Forecasts use satellite and weather data. Farmers can add observations by voice or photo from a basic smartphone, or through their cooperative.
+- [Who can see a farm's forecast?](https://www.t57.ai/ai-native/crop-yield-forecasting): The farmer or cooperative, and anyone they choose to share it with, such as a buyer or lender.
+- [Is the prediction a guarantee?](https://www.t57.ai/ai-native/profit-loss-prediction): No. It shows the most likely outcome and a range, based on current data. Actual results depend on weather, markets and execution.
+- [Can I add my own costs?](https://www.t57.ai/ai-native/profit-loss-prediction): Yes. Adding your own costs makes predictions more accurate, and your data stays private.
+- [Does the AI tell me exactly what to plant?](https://www.t57.ai/ai-native/crop-planning): It recommends options with expected yields and margins. You decide, and you can adjust the plan at any time.
+- [Can cooperatives plan for all their members?](https://www.t57.ai/ai-native/crop-planning): Yes. Cooperatives can build plans across members' farms to balance supply and meet buyer demand.
+- [Which languages does the agronomy AI speak?](https://www.t57.ai/ai-native/agronomy-ai): Local languages in T57's markets, starting with Arabic, Hindi, Malay, Turkish and English and expanding to regional languages, including by voice.
+- [Who are the agronomists?](https://www.t57.ai/ai-native/agronomy-ai): Verified agronomists and agricultural experts who join T57 as service providers. Their qualifications are checked before they can advise.
+- [Can AI reject my application?](https://www.t57.ai/ai-native/ai-compliance): No. AI can flag issues, but only a person can make an adverse decision, and you can ask for a review.
+- [How is my data protected?](https://www.t57.ai/ai-native/ai-compliance): Your data is used for verification and shared with partners only with your consent, under T57's privacy policy and applicable data protection laws.
+- [Do I need to upload my own data?](https://www.t57.ai/ai-native/predictive-analytics): No. The dashboard is built from your activity on T57. You can add other data, such as costs, for better forecasts.
+- [Can I share the dashboard with my lender?](https://www.t57.ai/ai-native/predictive-analytics): Yes. You can share selected views with lenders or investors, with your consent.
+- [Are AI-generated contracts legally binding?](https://www.t57.ai/ai-native/ai-documentation): Contracts become binding when the parties sign them. T57 uses standard trade terms, and members can have their own lawyers review any document.
+- [Which documents can be generated?](https://www.t57.ai/ai-native/ai-documentation): Contracts, pro forma and commercial invoices, packing lists, LC applications and supporting documents, and data for certificates and customs declarations.
+- [Is T57 a marketplace or a platform?](https://www.t57.ai/platform): T57 is a platform: a members-only verified trade club with the infrastructure to run trades end to end. Members trade directly with each other on it.
+- [Can T57 connect to my existing systems?](https://www.t57.ai/platform): Yes. T57 offers APIs for ERP, accounting and procurement systems, and connects to partner banks, insurers and logistics providers.
+- [Does T57 charge listing fees or rebates?](https://www.t57.ai/platform/domestic-trade): No. There are no listing fees, slotting rebates or forced promotions. Sellers set their own prices. T57 membership options are on the Pricing page.
+- [Who delivers the orders?](https://www.t57.ai/platform/domestic-trade): Licensed local logistics partners, booked from the order. Sellers can also invite the delivery company they already use.
+- [Which cloud does T57 use?](https://www.t57.ai/platform/architecture): Microsoft Azure, across regions, designed to meet each market's data-residency requirements.
+- [Does T57 offer APIs?](https://www.t57.ai/platform/architecture): Yes. Members and partners can integrate through REST APIs and webhooks. Documentation is available to approved members and partners.
+- [Can I join T57 now?](https://www.t57.ai/platform/roadmap): Yes. Membership applications are open, starting in the founding markets.
+- [How do I find out when new capabilities reach my market?](https://www.t57.ai/platform/roadmap): Members are notified in the platform, and partners receive integration updates directly.
+- [Does T57 use my data to train AI?](https://www.t57.ai/platform/intelligence-layer): T57 uses verified trade data in anonymized, aggregated form to improve its models. Your individual data is never shown to other members, and farmer knowledge is used only with consent.
+- [Why not just use a large general AI model?](https://www.t57.ai/platform/intelligence-layer): Large models are useful for language and documents, and T57 uses them where they fit. For crops, markets and local conditions, small models trained on local data are more accurate, cheaper to run and easier to test and explain.
+- [Is my trade data public on the blockchain?](https://www.t57.ai/platform/blockchain): No. Only digital fingerprints of key records are anchored. Document contents stay in secure storage, visible only to authorized parties.
+- [Do I need cryptocurrency to use the blockchain layer?](https://www.t57.ai/platform/blockchain): No. The blockchain layer works in the background. Members pay and get paid in normal currencies through licensed partners, unless they choose alternative payments where lawful.
+- [Where is my data stored?](https://www.t57.ai/platform/security): T57 is hosted on Microsoft Azure in multiple regions. Where local rules require it, data is stored in-region.
+- [Can other members see my prices or suppliers?](https://www.t57.ai/platform/security): No. Your commercial data is visible only to you and the parties in your trades, according to the permissions you set.
+- [Is T57 an open marketplace?](https://www.t57.ai/trust): No. T57 is a members-only trade club. Every buyer and seller is verified before trading, and verification is renewed.
+- [Does T57 hold my money?](https://www.t57.ai/trust): No. Payments, escrow and letters of credit are handled by licensed partners. T57 organizes the trade and records each step.
+- [How long does verification take?](https://www.t57.ai/trust/verification): It depends on the business and whether a site visit is needed. T57 tells you what is outstanding at each stage.
+- [Why does T57 visit my farm or factory?](https://www.t57.ai/trust/verification): To confirm that businesses claiming to produce really do. This is what lets buyers trust the owner-producer label.
+- [What documents do I need for KYB?](https://www.t57.ai/trust/verification/kyb): Company registration, licenses, details of directors and owners, and bank information. The exact list depends on your country and role.
+- [Who sees my KYB documents?](https://www.t57.ai/trust/verification/kyb): T57's verification team. Others see only your verified Passport, and only what you choose to share.
+- [Who needs to complete KYC?](https://www.t57.ai/trust/verification/kyc): Owners, directors and anyone who will act for the company on T57.
+- [Is my ID shared with other members?](https://www.t57.ai/trust/verification/kyc): No. Other members see that you are verified, not your documents.
+- [What affects my trust rating?](https://www.t57.ai/trust/verification/membership-scoring): Your verification, completed trades, on-time delivery, document accuracy, payment performance and feedback from your trading partners.
+- [Can I see my own rating?](https://www.t57.ai/trust/verification/membership-scoring): Yes, with the main factors behind it.
+- [Can anyone edit the audit trail?](https://www.t57.ai/trust/audit-trail): No. Entries are tamper-evident: any change can be detected, and nothing is deleted. Corrections are added as new entries.
+- [Who can see my trade's audit trail?](https://www.t57.ai/trust/audit-trail): The parties to the trade, and anyone they choose to share it with, such as a lender or auditor.
+- [Which documents can T57 generate?](https://www.t57.ai/trust/document-management): Commercial documents such as invoices, packing lists and contract-based forms. Official certificates are issued by the relevant authority or partner and uploaded to the record.
+- [Does T57 check my documents?](https://www.t57.ai/trust/document-management): AI checks for gaps and mismatches and flags them. Your team and your partners make the final decisions.
+- [Does T57 sell my data?](https://www.t57.ai/trust/security): No. T57 does not sell members' individual data. Market insights use aggregated, anonymized data.
+- [Can T57 staff see my data?](https://www.t57.ai/trust/security): Only staff who need it for verification, support or compliance, under strict access controls, and access is logged.
+- [How do I access or correct my data?](https://www.t57.ai/trust/security/data-protection): Through your account settings, or by contacting our data protection team.
+- [What disputes does T57 cover?](https://www.t57.ai/trust/trade-assurance/disputes): Disputes over trades made on T57, such as quality, quantity, delivery, documents and payment.
+- [Does T57 decide who is right?](https://www.t57.ai/trust/trade-assurance/disputes): T57 helps the parties reach an agreement based on the record and their contract. Where they cannot agree, the dispute follows the route set in the contract.
+- [Which countries does T57 operate in?](https://www.t57.ai/markets): Saudi Arabia, the UAE, India, Malaysia and Türkiye. More markets will follow.
+- [Can I trade with a country that is not a T57 market?](https://www.t57.ai/markets): Members in founding markets can buy from or sell to verified members in other founding markets.
+- [Is T57 only for the five founding markets?](https://www.t57.ai/markets/global-rollout): No. The five founding markets have country teams on the ground, but T57 is open online to verified businesses in 195 countries, and new markets open phase by phase.
+- [Can I join if my country is not a T57 market yet?](https://www.t57.ai/markets/global-rollout): Yes. Apply online and complete digital KYB and KYC checks and compliance screening. Some local services, such as delivery or pay-later terms, depend on partner coverage in your country.
+- [Does T57 issue halal certificates?](https://www.t57.ai/markets/oic-halal): No. Halal certificates are issued by accredited halal bodies. T57 records them, tracks expiry and shows them to buyers.
+- [Which OIC countries can use T57?](https://www.t57.ai/markets/oic-halal): T57's founding markets include Saudi Arabia, the UAE, Malaysia and Türkiye, all OIC members, and India, a major supplier to OIC markets. More OIC countries will follow.
+- [Which ASEAN countries can use T57?](https://www.t57.ai/markets/asean): Malaysia is a founding market. Other ASEAN countries will follow.
+- [Can ASEAN producers sell within ASEAN?](https://www.t57.ai/markets/asean): Yes. Domestic wholesale is available in Malaysia, and cross-border trade grows as more ASEAN markets join.
+- [Who can join T57 in Saudi Arabia?](https://www.t57.ai/markets/saudi-arabia/overview): Registered food and agriculture businesses, from producers and cooperatives to traders, wholesalers, retailers, hotels, restaurants and institutions.
+- [Do I need to export to use T57?](https://www.t57.ai/markets/saudi-arabia/overview): No. Many members use T57 for domestic wholesale only.
+- [Are all features available in every market?](https://www.t57.ai/markets/saudi-arabia/features): Yes. The partners that deliver regulated services differ by country.
+- [Can I pay in SAR?](https://www.t57.ai/markets/saudi-arabia/features): Yes, through licensed payment and escrow partners.
+- [Is this guide legal advice?](https://www.t57.ai/markets/saudi-arabia/compliance): No. It is a summary to help you prepare. Always confirm requirements with the relevant authority or your customs broker.
+- [How often is the guide updated?](https://www.t57.ai/markets/saudi-arabia/compliance): T57 reviews it regularly.
+- [How long until I can trade?](https://www.t57.ai/markets/saudi-arabia/getting-started): Once verification is complete.
+- [Is there a cost to join?](https://www.t57.ai/markets/saudi-arabia/getting-started): See Pricing for membership options.
+- [Can free zone companies join?](https://www.t57.ai/markets/uae/overview): Yes. Mainland and free zone companies can apply, subject to verification.
+- [Can I pay in AED?](https://www.t57.ai/markets/uae/features): Yes, through licensed payment and escrow partners.
+- [Can a farmer producer organization join?](https://www.t57.ai/markets/india/overview): Yes. FPOs and cooperatives can join as members and onboard their member farmers.
+- [Is T57 only for exporters?](https://www.t57.ai/markets/india/overview): No. Many members use T57 to sell to domestic business buyers.
+- [Can I pay in INR?](https://www.t57.ai/markets/india/features): Yes, through licensed payment and escrow partners.
+- [Does T57 recognize JAKIM certification?](https://www.t57.ai/markets/malaysia/overview): T57 records halal certificates from JAKIM and other bodies, and shows buyers whether a certificate is recognized in their market.
+- [Is Islamic trade finance available?](https://www.t57.ai/markets/malaysia/overview): Through licensed partners, where available.
+- [Can I pay in MYR?](https://www.t57.ai/markets/malaysia/features): Yes, through licensed payment and escrow partners.
+- [Can Turkish companies trade in USD or EUR?](https://www.t57.ai/markets/turkiye/overview): Yes, through licensed payment and escrow partners, in any currency they support.
+- [Is halal certification needed for Gulf exports?](https://www.t57.ai/markets/turkiye/overview): For some products, yes. T57 shows the requirements for each product and destination.
+- [Can I pay in TRY?](https://www.t57.ai/markets/turkiye/features): Yes, through licensed payment and escrow partners.
+- [Do I pay to list products or send quotes?](https://www.t57.ai/pricing): No. Listing, quoting and negotiating are included in your membership. The trade fee applies only when a trade is completed.
+- [Does T57 earn anything from finance or insurance?](https://www.t57.ai/pricing): Yes. T57 earns a small commission from some finance and insurance partners. It is disclosed before you accept a partner's offer.
+- [Which plan should I choose?](https://www.t57.ai/pricing/plans): If you trade occasionally, start with Explore. As a rough guide, the trade fee savings on a higher plan pay for its higher membership once your monthly trade volume is large enough. The ROI calculator shows the break-even for your business.
+- [What does the free trial include?](https://www.t57.ai/pricing/plans): You can build your profile, explore verified members and market intelligence, use AI tools and send requests for quote. Verification, contracts, escrow and finance start when you subscribe, because verification involves real checks by our team and partners. Founding members get 90 days free at launch.
+- [Can T57 integrate with our ERP?](https://www.t57.ai/pricing/enterprise): Yes, through APIs. Our team scopes the integration with you.
+- [Can we keep our existing suppliers?](https://www.t57.ai/pricing/enterprise): Yes. Invite them to T57, and they are verified like every other member.
+- [How is government pricing set?](https://www.t57.ai/pricing/government): By program, based on scope, number of members, markets and modules. Contact our institutional team for a proposal.
+- [Can a ministry pay for its farmers' memberships?](https://www.t57.ai/pricing/government): Yes. Governments and development partners can fund memberships and onboarding for farmers, cooperatives and SMEs.
+- [Is the result a quote?](https://www.t57.ai/pricing/roi-calculator): No. It is an estimate based on your inputs and standard prices. Local prices may be lower in your market.
+- [Do you keep my data?](https://www.t57.ai/pricing/roi-calculator): Only if you choose to save or share your result.
+- [Are T57 resources free?](https://www.t57.ai/resources): Most are free. Some in-depth reports may ask for your email.
+- [Can I suggest a topic?](https://www.t57.ai/resources): Yes. Contact our team with the topic you would like us to cover.
+- [How often do you publish?](https://www.t57.ai/resources/blog): Several times a month. T57 Insights has published 25 articles since December 2025.
+- [Who writes T57 Insights?](https://www.t57.ai/resources/blog): T57’s founders and leadership team: Afzal Hussain Mohammed Nakheeb, Abdul Bari Kareem, Umme Habeeba Khanum, Mohammed Umair and Dr. Moaz Abdullah Mohammed Mojaddidi.
+- [Are reports free?](https://www.t57.ai/resources/reports): Yes. Some may ask for your email.
+- [Can institutions commission research?](https://www.t57.ai/resources/reports): Yes, contact our team.
+- [Are webinars recorded?](https://www.t57.ai/resources/events): Yes, recordings are posted here.
+- [Can I book a meeting at an event?](https://www.t57.ai/resources/events): Yes, through the event page.
+- [Is T57 a marketplace?](https://www.t57.ai/resources/faq-glossary): No. On an open marketplace, anyone can list. On T57, every member is verified before they trade, and their role is checked and shown.
+- [Is support included in my plan?](https://www.t57.ai/help): Yes. Every plan includes the help center and email support, and higher plans add live chat, priority support and a dedicated account manager.
+- [What languages is support available in?](https://www.t57.ai/help): English, Arabic and the main languages of our founding markets.
+- [How long does the free trial last?](https://www.t57.ai/help/faq): Founding members get 90 days free at launch. After the launch period, the trial is 14 days.
+- [Can I trade during the free trial?](https://www.t57.ai/help/faq): You can explore members, intelligence and AI tools, and send requests for quote. Contracts, escrow and finance start once you subscribe and are verified.
+- [Does T57 compete with partners?](https://www.t57.ai/partnerships): No. T57 does not lend, insure, ship or inspect. It brings partners verified customers and better data.
+- [How do partners get paid?](https://www.t57.ai/partnerships): Members pay partners for their services directly. T57 may earn a small commission from some partners, as agreed in each partnership.
+- [Do you offer APIs?](https://www.t57.ai/partners/technology): Yes, for approved partners.
+- [Can a SaaS company offer T57 to its customers?](https://www.t57.ai/partners/technology): Yes, through partner and white-label options.
+- [Does T57 take credit risk?](https://www.t57.ai/partners/financial-services): No. Partners make their own credit decisions.
+- [Can Islamic banks and takaful operators join?](https://www.t57.ai/partners/financial-services): Yes.
+- [Do members choose their own logistics partner?](https://www.t57.ai/partners/logistics): Yes. They can choose from T57's partners or bring their own.
+- [Can inspection results trigger payment?](https://www.t57.ai/partners/logistics): Yes, when the parties agree it in their contract.
+- [Who owns the research and data?](https://www.t57.ai/partners/research): The partner institution. T57 uses research and data only under the terms agreed with each partner, and credits the source.
+- [How are scientists paid?](https://www.t57.ai/partners/research): Through license fees and royalties agreed up front, and through paid advice on Hire an Expert.
+- [Is this a franchise?](https://www.t57.ai/partners/country-partner): It works like one. You run T57 in an agreed territory under licence, with the T57 brand, platform and support, and share in the revenue from the members you bring.
+- [Which countries are open to partners?](https://www.t57.ai/partners/country-partner): Countries and cities where T57 has no country team yet. See the Global Rollout page for the phases.
+- [Where is T57 based?](https://www.t57.ai/about): T57 is a global SaaS platform, so any food business, anywhere in the world, can apply online, get verified and trade. The pilot starts in five countries: Saudi Arabia, the UAE, India, Malaysia and Türkiye.
+- [What does the name T57 mean?](https://www.t57.ai/about): T stands for trade, built on trust, transparency and traceability. The 5 stands for the five industries T57 connects: agriculture and food production, trade, logistics, finance and technology. The 7 stands for the seven outcomes we work toward: food security, less food lost, integration, access to finance, higher incomes, inclusion and resilience.
+- [Who has T57 signed agreements with?](https://www.t57.ai/about/journey): T57 and its founding company, AlMukarramah, have agreements with the Islamic Organization for Food Security (IOFS), the Government of the Chechen Republic, the Development Bank of Maldives, Food Contract Corporation of Kazakhstan, the International Assembly of Islamic Business, Dar Al Halal Nigeria and the Aquaculture Centre of Excellence in Singapore, and signed 120 MoUs and letters of intent at Gulfood 2026.
+- [When did T57 start?](https://www.t57.ai/about/journey): T57 was introduced at the Food Security Conference in Cape Town in August 2023 and pre-launched at the 2nd IOFS Food Security Forum in Doha in October 2023. It grew out of Trade57, built by AlMukarramah.
+- [Who leads T57?](https://www.t57.ai/about/leadership): T57 is led by its Founder and Chairman, Afzal Hussain Mohammed Nakheeb, with four co-founders who lead technology, product, communication and governance.
+- [How does T57 work with IOFS?](https://www.t57.ai/about/leadership): T57 has a 10-year MoU with IOFS. Its Director General, Strategic Relations, Prof. Yerlan Baidaulet, is the former Director-General of IOFS.
+- [Is T57 a government system?](https://www.t57.ai/about/food-security): No. T57 is an independent platform that governments and institutions can use, with permissioned data.
+- [What data does a government see?](https://www.t57.ai/about/food-security): Aggregated, permissioned data on supply, prices and trade, never individual members' data without consent.
+- [Can T57 report impact for our program?](https://www.t57.ai/about/sdg-delivery): Yes. Partners agree the indicators, and T57 reports aggregated, permissioned data.
+- [Does T57 claim to deliver the SDGs on its own?](https://www.t57.ai/about/sdg-delivery): No. T57 contributes to specific targets alongside governments, development partners and the private sector.
+- [Can I apply if no role fits?](https://www.t57.ai/about/careers): Yes. Send your CV to hr@t57.ai and tell us which team you want to join.
+- [Do you hire remotely?](https://www.t57.ai/about/careers): Some technology roles can be remote, and country teams work in each market.
+- [How quickly will you reply?](https://www.t57.ai/contact): Within two working days.
+- [Can I contact you in Arabic?](https://www.t57.ai/contact): Yes.
+- [Is the demo free?](https://www.t57.ai/contact/demo): Yes.
+- [Can my team join?](https://www.t57.ai/contact/demo): Yes, invite as many colleagues as you like.
+- [Do I need to visit an office?](https://www.t57.ai/contact/offices): No. T57 is a global SaaS platform, so you apply, get verified and trade online. To meet the team, email hello@t57.ai.
+- [Who supports my country?](https://www.t57.ai/contact/offices): In the five pilot markets, the local team. Anywhere else, our global team, by chat or at hello@t57.ai.
+- [How does T57 support national and regional food-security strategies in practice?](https://www.t57.ai/who-we-serve/governments): Many countries are now expanding strategic reserves and silo capacity to hold months’ worth of essential commodities. T57 complements such physical infrastructure by tracking self-sufficiency, stock levels, and import exposure in real time. This combination of physical reserves and digital intelligence helps governments move from reactive to anticipatory food-security management.
+- [Why is it important to channel private and impact capital into agriculture and food systems, beyond public budgets?](https://www.t57.ai/who-we-serve/governments): Despite agriculture’s historical role in employment and food security, global investors are only now seeking credible, measurable pathways to support food systems as part of their climate and SDG commitments. T57 helps governments present investable, data-backed opportunities, from model support centers to special agri zones and CSR programs, with transparent performance and impact tracking that meets both regulatory and investor expectations.
+- [How does T57 handle disputes and reduce risks for financiers and investors?](https://www.t57.ai/who-we-serve/financiers): T57 reduces risk through its curated club membership model, which ensures vetted, credible counterparties in a high-trust environment. Its virtual trade desk supports execution, manages disputes, oversees documentation, and ensures consistent transaction follow-through for greater investor confidence.
+- [Why is food and agri finance an important opportunity for investors now?](https://www.t57.ai/who-we-serve/financiers): Global food import demand remains enormous: FAO puts the global food import bill at $2.22 trillion in 2025, which underlines the scale and persistence of trade-linked financing needs in food markets.
+- [How does T57's virtual trade desk help in disputes and risk management?](https://www.t57.ai/who-we-serve/sellers): The virtual trade desk helps manage risk. In a dispute, it mediates under the agreed terms and T57's dispute process. If a buyer defaults, T57 can help find another verified buyer for the goods, and any recovery runs through licensed partners.
+- [How does a platform help with the financing gap?](https://www.t57.ai/who-we-serve/sellers): Dedicated trade platforms that provide rich transaction and compliance data can lower perceived risk for financiers, improving access to credit and reducing the cost of capital. T57 is designed to expose this data in an auditable way so that funders can underwrite your deals with greater confidence.
+- [Can intermediaries join T57?](https://www.t57.ai/who-we-serve/traders): Yes. Traders and intermediaries are welcome. They are labeled by role so every counterparty knows how the trade is structured.
+- [Does T57 lend to traders?](https://www.t57.ai/who-we-serve/traders): No. T57 does not lend. It sends your deal file to licensed lenders, who decide whether to fund the trade and on what terms.
+- [How does T57 verify suppliers?](https://www.t57.ai/who-we-serve/buyers): T57 runs business and identity checks, compliance screening and, where needed, a physical check of the supplier's premises. Each verified supplier receives a T57 Passport and a role label.
+- [Can I buy only from producers?](https://www.t57.ai/who-we-serve/buyers): Yes. Role labels show whether a supplier is an owner-producer, processor, trader or intermediary, so you can filter for producers.
+- [Why do manufacturers and enterprises need a digital trade workflow now?](https://www.t57.ai/who-we-serve/enterprises): Digital trade workflow is important for countering high losses, volatility, and operational friction in the industry. FAO reports 13.3% food loss before retail, while the World Bank points to ongoing food inflation and uneven commodity movement across markets.
+- [How does T57 help reduce procurement risk?](https://www.t57.ai/who-we-serve/enterprises): T57 helps structure RFQs, centralize bid visibility, and support trade in a more verified counterparty environment. In volatile markets, faster sourcing decisions and improved documentation can help protect supply continuity and margins.
+- [Why is digitizing trade especially important for food processors?](https://www.t57.ai/who-we-serve/food-processors): Processors depend on timely and predictable raw material supplies and operate on tight margins. Supply assurance and trade execution platforms make inputs more predictable, optimize capacity utilization, and protect margins in volatile markets.
+- [Does T57 help with working capital and financing challenges?](https://www.t57.ai/who-we-serve/food-processors): Partner banks, escrow structures, faster eLC workflows, and tokenized-trade capabilities are designed to shorten settlement cycles and connect real trade to innovative finance solutions. For processors, that can mean less cash stuck in transit and more capacity to invest in inventory, maintenance, or growth.
+- [Why do cooperatives & FPOs need digital platforms like T57?](https://www.t57.ai/who-we-serve/cooperatives): Scale alone is not enough. Cooperatives and FPOs need systems that professionalize operations, improve market access, and strengthen bargaining power. When properly supported and organized by platforms like T57, agricultural cooperatives play a critical role in sustainable agrifood systems and food security.
+- [How do members gain when their cooperative or FPO wins government tenders or a contract farming agreement?](https://www.t57.ai/who-we-serve/cooperatives): Government tenders and contract farming agreements lock in demand and timelines, so members know what to produce, when it will be picked up, and at what terms, which leads to more consistent prices and lower post-harvest losses. T57 helps members plan volumes and crop mix, match supply to tender requirements, coordinate logistics and documentation, and track fulfillment and payments in one place, turning tender wins and contracts into a distributed benefit for individual farmers.
+- [How do T57 partners help me reach better markets?](https://www.t57.ai/who-we-serve/collaborators): T57's vetted partners help you meet standards, reliably move produce, and access premium capabilities to help you grow, without having to build these relationships yourself.
+- [What kind of partners can I access on T57?](https://www.t57.ai/who-we-serve/collaborators): You can connect with a diverse range of partners who help you meet complex compliance requirements, reduce logistics losses, unlock financing and insurance, accelerate innovation, and turn more of your effort into predictable, higher-value trade outcomes.
+- [How is T57 different from a simple marketplace?](https://www.t57.ai/who-we-serve/service-providers): T57 is built on verified participants, trade-linked workflows, and governed execution, not just listings and introductions.
+- [Can I offer services across borders without a local office?](https://www.t57.ai/who-we-serve/service-providers): Yes. T57 is designed to help providers engage digitally across regions while reducing friction in discovery, contracting, and payment processes.
+- [Why should a farmer or producer use a digital trade platform like T57?](https://www.t57.ai/who-we-serve/farmers): T57 provides access to verified buyers and transparent payment processes. This reduces uncertainty and improves income realization.
+- [What should farmers watch out for in contract farming?](https://www.t57.ai/who-we-serve/farmers): Contract farming deals are often between stronger buyers and weaker farmers. This could result in unfair terms, over-dependence on a single buyer, or disputes over quality and deductions. Farmers can access T57's expertise to negotiate the best terms.

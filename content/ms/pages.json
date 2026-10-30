@@ -27,8 +27,8 @@
     "a": "AI membantu dalam padanan, semakan risiko, penyediaan dokumen dan ramalan. Keputusan muktamad dibuat oleh manusia, dan setiap keputusan negatif disemak oleh seorang pegawai."
    }
   ],
-  "title": "T57 | Infrastruktur Perdagangan Digital Berteraskan AI untuk Makanan",
-  "description": "Perdagangan makanan yang disahkan dalam satu rekod: RFQ, kontrak, pembiayaan perdagangan, insurans, pemeriksaan dan logistik untuk petani, pemproses, pedagang dan pembeli."
+  "title": "T57 | Platform Perdagangan Makanan Digital Berteraskan AI",
+  "description": "Perdagangan makanan yang disahkan dalam satu rekod: RFQ, kontrak, pembiayaan, insurans, pemeriksaan dan logistik untuk petani, pemproses, pedagang dan pembeli."
  },
  "who-we-serve": {
   "route": "/ms/who-we-serve",
@@ -74,7 +74,7 @@
    }
   ],
   "title": "Mengapa T57 | Sistem Operasi Makanan Global Berteraskan AI",
-  "description": "T57 ialah ekosistem perdagangan makanan berteraskan AI yang bekerjasama dengan IOFS dan ASEAN, menyatukan dasar, kewangan dan logistik dalam aliran makanan global yang dipercayai."
+  "description": "T57 ialah ekosistem perdagangan makanan berteraskan AI, bekerjasama dengan IOFS dan ASEAN, yang menyatukan dasar, kewangan dan logistik."
  },
  "club-membership": {
   "route": "/ms/why-t57/club-membership",
@@ -92,7 +92,7 @@
     "a": "ID T57 memberi pihak berkepentingan ini gambaran berstruktur tentang sama ada sesebuah organisasi telah disahkan merentas faktor amanah utama, termasuk pematuhan, pengesahan lapangan, rujukan dan reputasi dalam ekosistem. Ini memudahkan penilaian risiko dan urusan dengan perniagaan yang kelayakannya disokong oleh proses yang lebih maju daripada profil pasaran biasa atau pengecam perniagaan asas."
    }
   ],
-  "title": "Keahlian Kelab T57 | Kelab Perdagangan Makanan Global yang Disahkan",
+  "title": "Keahlian Kelab T57 | Kelab Dagangan Makanan Disahkan",
   "description": "T57 ialah kelab perdagangan makanan dan agro yang dikurasi, bukan pasaran terbuka: ID yang disahkan, skor amanah dan lencana membantu ahli berdagang dengan yakin.",
   "parent": "why-t57"
  },
@@ -139,7 +139,7 @@
  "market-intelligence": {
   "route": "/ms/why-t57/market-intelligence",
   "section": "why-t57",
-  "name": "Risikan Pasaran & Harga",
+  "name": "Analisis Pasaran & Harga",
   "h1": "Lihat pasaran sebelum anda bertindak.",
   "answer": "Lihat harga, bekalan dan risiko mengikut asal usul sebelum anda memberi sebut harga, membeli atau merancang.",
   "faqs": [
@@ -149,10 +149,10 @@
    },
    {
     "q": "Bolehkah saya menggunakan data tanpa berdagang di T57?",
-    "a": "Risikan pasaran adalah sebahagian daripada keahlian T57 dan dibina untuk menyokong dagangan di platform."
+    "a": "Analisis pasaran adalah sebahagian daripada keahlian T57 dan dibina untuk menyokong dagangan di platform."
    }
   ],
-  "title": "Risikan Pasaran & Harga Makanan | T57",
+  "title": "Analisis Pasaran & Harga Makanan | T57",
   "description": "Harga makanan, status bekalan mengikut asal usul dan ramalan AI dalam aliran kerja dagangan anda. Beri sebut harga, beli dan rancang dengan gambaran penuh di T57.",
   "parent": "why-t57"
  },
@@ -172,8 +172,8 @@
     "a": "Pembiayaan pra-penghantaran dan pasca-penghantaran, pembiayaan belum terima dan surat kredit, melalui bank dan syarikat pembiayaan yang mengambil bahagian, termasuk pilihan patuh Syariah."
    }
   ],
-  "title": "Pembiayaan Perdagangan untuk PKS Makanan | Pemberi Pinjaman Bersaing | T57",
-  "description": "Hantar satu fail urus niaga yang disahkan kepada beberapa pemberi pinjaman berlesen dan bandingkan tawaran. Pembiayaan perdagangan makanan yang membayar balik sendiri melalui eskrow di T57.",
+  "title": "Pembiayaan Perdagangan untuk PKS Makanan | T57",
+  "description": "Hantar satu fail urus niaga disahkan kepada beberapa pemberi pinjaman berlesen dan bandingkan tawaran. Bayaran balik melalui eskrow.",
   "parent": "why-t57"
  },
  "nft-funding": {
@@ -213,7 +213,7 @@
    }
   ],
   "title": "Surat Kredit Elektronik dalam Kira-kira 15 Minit | T57",
-  "description": "LC elektronik yang disediakan daripada kontrak anda yang disahkan dan dikeluarkan oleh bank rakan kongsi dalam kira-kira 15 minit selepas kelulusan. Dokumen digital, kurang percanggahan.",
+  "description": "LC elektronik disediakan daripada kontrak anda yang disahkan dan dikeluarkan oleh bank rakan kongsi selepas kelulusan. Dokumen digital.",
   "parent": "why-t57"
  },
  "escrow-payments": {
@@ -221,7 +221,7 @@
   "section": "why-t57",
   "name": "Pembayaran Eskrow",
   "h1": "Wang anda bergerak hanya apabila barang bergerak.",
-  "answer": "Wang anda bergerak hanya apabila barang bergerak, dengan eskrow dilepaskan pada pencapaian yang dipersetujui.",
+  "answer": "Wang anda bergerak hanya apabila barang bergerak, dengan eskrow dilepaskan pada peringkat yang dipersetujui.",
   "faqs": [
    {
     "q": "Siapa yang memegang wang dalam eskrow?",
@@ -232,8 +232,8 @@
     "a": "Pelepasan ditangguhkan secara automatik, dan pertikaian dikendalikan mengikut kontrak dan peraturan rakan kongsi. Pelepasan disambung semula setelah ia diselesaikan."
    }
   ],
-  "title": "Pembayaran Eskrow untuk Perdagangan Makanan | Bayar Ikut Pencapaian | T57",
-  "description": "Pembeli membayar ke dalam eskrow pada rakan kongsi berlesen, dan dana dilepaskan hanya apabila pencapaian pemeriksaan, penghantaran atau penerimaan dipenuhi di T57.",
+  "title": "Bayaran Eskrow untuk Dagangan Makanan | T57",
+  "description": "Pembeli membayar ke dalam eskrow pada rakan kongsi berlesen, dan dana dilepaskan hanya apabila peringkat pemeriksaan, penghantaran atau penerimaan dipenuhi di T57.",
   "parent": "why-t57"
  },
  "alternative-payments": {
@@ -253,7 +253,7 @@
    }
   ],
   "title": "Bayaran Stablecoin, Kripto & Emas untuk Perdagangan Makanan | T57",
-  "description": "Selesaikan dagangan makanan rentas sempadan dengan stablecoin, aset digital atau bayaran bersandarkan emas melalui rakan kongsi terkawal, jika sah di sisi undang-undang, di T57.",
+  "description": "Selesaikan dagangan makanan rentas sempadan dengan stablecoin atau bayaran bersandarkan emas melalui rakan kongsi berlesen, jika dibenarkan.",
   "parent": "why-t57"
  },
  "digital-bank": {
@@ -273,7 +273,7 @@
    }
   ],
   "title": "Bank Digital untuk Perdagangan Makanan | Apa Jua Mata Wang | T57",
-  "description": "Simpan, bayar dan selesaikan dalam apa jua mata wang dengan penyelesaian hampir serta-merta daripada rakan kongsi berlesen, dikaitkan dengan setiap kontrak dan invois dalam rekod dagangan T57 anda.",
+  "description": "Simpan, bayar dan selesaikan dalam pelbagai mata wang melalui rakan kongsi berlesen, dikaitkan dengan setiap kontrak dan invois T57 anda.",
   "parent": "why-t57"
  },
  "document-audit-trail": {
@@ -281,7 +281,7 @@
   "section": "why-t57",
   "name": "Pengurusan Dokumen & Jejak Audit",
   "h1": "Setiap dokumen dagangan, dalam satu rekod.",
-  "answer": "Setiap dokumen, kelulusan dan pencapaian sesuatu dagangan, dalam satu rekod yang kalis usik.",
+  "answer": "Setiap dokumen, kelulusan dan peringkat sesuatu dagangan, dalam satu rekod yang menunjukkan sebarang usikan.",
   "faqs": [
    {
     "q": "Siapa yang boleh melihat dokumen dagangan saya?",
@@ -293,13 +293,13 @@
    }
   ],
   "title": "Pengurusan Dokumen Dagangan & Jejak Audit | T57",
-  "description": "Kontrak, invois, sijil dan laporan pemeriksaan dalam satu rekod dagangan kalis usik, dengan jejak audit lengkap bagi setiap dagangan makanan.",
+  "description": "Kontrak, invois, sijil dan laporan pemeriksaan dalam satu rekod dagangan yang menunjukkan sebarang usikan, dengan jejak audit lengkap bagi setiap dagangan makanan.",
   "parent": "why-t57"
  },
  "capabilities": {
   "route": "/ms/capabilities",
   "section": "capabilities",
-  "name": "Penyelesaian",
+  "name": "Keupayaan",
   "h1": "Setiap langkah dagangan makanan. Satu rekod.",
   "answer": "Jalankan setiap bahagian dagangan makanan, dari sebut harga pertama hingga bayaran akhir, dalam satu rekod.",
   "faqs": [
@@ -316,8 +316,8 @@
     "a": "Boleh. T57 menyokong borong domestik kepada pasar raya, HoReCa dan institusi, serta perdagangan rentas sempadan. Lihat dagangan B2B domestik ."
    }
   ],
-  "title": "Penyelesaian T57 | Setiap Langkah Dagangan Makanan dalam Satu Rekod",
-  "description": "RFQ, kontrak, pembiayaan perdagangan, eskrow, eLC, insurans, logistik, kastam dan risikan harga untuk perdagangan makanan, disambungkan dalam satu rekod dagangan T57."
+  "title": "Penyelesaian T57 | Setiap Langkah Dagangan, Satu Rekod",
+  "description": "RFQ, kontrak, pembiayaan perdagangan, eskrow, eLC, insurans, logistik, kastam dan analisis harga untuk perdagangan makanan, disambungkan dalam satu rekod dagangan T57."
  },
  "cap-trade": {
   "route": "/ms/capabilities/trade",
@@ -339,7 +339,7 @@
     "a": "Makanan merentas seluruh rantaian: hasil tanaman, ternakan dan tangkapan, serta barangan diproses, dikilang dan berjenama."
    }
   ],
-  "title": "Pelaksanaan Dagangan Makanan | RFQ, Kontrak & Kebolehkesanan | T57",
+  "title": "Pelaksanaan Dagangan Makanan: RFQ dan Kontrak | T57",
   "description": "RFQ, pertanian kontrak, tender kerajaan, kebolehkesanan dan pesanan melalui sembang, dari pertanyaan pertama hingga penghantaran dalam satu rekod dagangan T57.",
   "parent": "capabilities"
  },
@@ -364,7 +364,7 @@
    }
   ],
   "title": "RFQ & Pelaksanaan Dagangan untuk Makanan | T57",
-  "description": "RFQ berstruktur, pembida yang disahkan, perbandingan setara dan kontrak daripada sebut harga yang diterima. Dapatkan bekalan dan laksanakan dagangan makanan dalam satu rekod T57.",
+  "description": "RFQ berstruktur, pembida disahkan, perbandingan setara dan kontrak daripada sebut harga yang diterima, semuanya dalam satu rekod T57.",
   "parent": "cap-trade"
  },
  "cap-trade-desk": {
@@ -387,7 +387,7 @@
     "a": "Anda akan melihat isu itu bersama cadangan penyelesaian. Jika isu itu berkaitan pematuhan atau pengesahan, ia dirujuk kepada pasukan T57 untuk semakan manusia."
    }
   ],
-  "title": "Meja Dagangan Maya untuk Perdagangan Makanan | AI + Semakan Manusia | T57",
+  "title": "Meja Dagangan Maya | AI dan Semakan Manusia | T57",
   "description": "Padanan rakan dagang AI, data harga, perangkaan kontrak, saringan sekatan dan semakan dokumen untuk PKS makanan, dengan manusia membuat setiap keputusan.",
   "parent": "cap-trade"
  },
@@ -395,8 +395,8 @@
   "route": "/ms/capabilities/trade/contract-farming",
   "section": "capabilities",
   "name": "Pertanian Kontrak",
-  "h1": "Persetujui tanaman musim depan, hari ini.",
-  "answer": "Persetujui tanaman musim depan hari ini, dengan pembeli, penanam dan pembiayaan dalam satu rekod.",
+  "h1": "Meterai kontrak tuaian musim depan, hari ini.",
+  "answer": "Meterai kontrak tuaian musim depan hari ini, dengan pembeli, penanam dan pembiayaan dalam satu rekod.",
   "faqs": [
    {
     "q": "Bolehkah pekebun kecil secara individu menggunakan pertanian kontrak di T57?",
@@ -412,7 +412,7 @@
    }
   ],
   "title": "Platform Pertanian Kontrak | Kontrak Hadapan untuk Makanan | T57",
-  "description": "Perjanjian hadapan, piawaian kualiti, pembiayaan input dan bayaran berasaskan pencapaian antara pembeli, petani dan koperasi dalam satu rekod T57.",
+  "description": "Perjanjian hadapan, piawaian kualiti, pembiayaan input dan bayaran berperingkat antara pembeli, petani dan koperasi dalam satu rekod T57.",
   "parent": "cap-trade"
  },
  "cap-tenders": {
@@ -460,7 +460,7 @@
    }
   ],
   "title": "Kebolehkesanan Makanan dari Sumber ke Pembeli | T57",
-  "description": "Kebolehkesanan makanan peringkat lot dengan asal usul yang disahkan, sijil yang dipautkan dan rekod kalis usik. Buktikan asal usul dan percepat penarikan balik di T57.",
+  "description": "Kebolehkesanan makanan peringkat lot dengan asal usul yang disahkan, sijil yang dipautkan dan rekod yang menunjukkan sebarang usikan. Buktikan asal usul dan percepat penarikan balik di T57.",
   "parent": "cap-trade"
  },
  "cap-chat-orders": {
@@ -483,7 +483,7 @@
     "a": "Hanya butiran pesanan yang anda sahkan direkodkan dalam rekod dagangan, di bawah dasar privasi T57."
    }
   ],
-  "title": "Pesanan Melalui WhatsApp & Sembang AI untuk Perniagaan Makanan | T57",
+  "title": "Pesanan Makanan melalui WhatsApp dan Sembang AI | T57",
   "description": "Pesan makanan melalui mesej WhatsApp atau nota suara. AI menukar bahasa biasa kepada pesanan berstruktur yang disahkan dalam rekod dagangan T57 anda.",
   "parent": "cap-trade"
  },
@@ -507,8 +507,8 @@
     "a": "Pertikaian dikendalikan mengikut kontrak dan peraturan rakan kongsi berlesen. Pelepasan ditangguhkan secara automatik sehingga ia diselesaikan."
    }
   ],
-  "title": "Kepercayaan & Pembayaran untuk Perdagangan Makanan | Eskrow, Dompet, eLC | T57",
-  "description": "Eskrow, dompet dalam apa jua mata wang dan surat kredit elektronik daripada rakan kongsi berlesen, diikat pada pencapaian dalam satu rekod dagangan T57 yang disahkan.",
+  "title": "Kepercayaan & Pembayaran: Eskrow, Dompet, eLC | T57",
+  "description": "Eskrow, dompet dalam apa jua mata wang dan surat kredit elektronik daripada rakan kongsi berlesen, diikat pada peringkat dalam satu rekod dagangan T57 yang disahkan.",
   "parent": "capabilities"
  },
  "cap-escrow": {
@@ -532,7 +532,7 @@
    }
   ],
   "title": "Eskrow & Jaminan Dagangan untuk Perdagangan Makanan | T57",
-  "description": "Dana pembeli dipegang oleh rakan kongsi eskrow berlesen dan dilepaskan secara berperingkat semasa pemeriksaan, penghantaran atau penerimaan, dengan pencetus pertikaian, di T57.",
+  "description": "Dana pembeli dipegang oleh rakan kongsi eskrow berlesen dan dilepaskan berperingkat semasa pemeriksaan, penghantaran atau penerimaan.",
   "parent": "cap-trust-payments"
  },
  "cap-wallet": {
@@ -555,7 +555,7 @@
     "a": "Yuran dan kadar tukaran ditetapkan oleh rakan kongsi pembayaran dan dipaparkan sebelum anda mengesahkan setiap bayaran."
    }
   ],
-  "title": "Dompet Digital untuk Bayaran Perdagangan Makanan | Apa Jua Mata Wang | T57",
+  "title": "Dompet Digital untuk Bayaran Dagangan Makanan | T57",
   "description": "Bayar pembekal dan rakan kongsi serta dibayar oleh pembeli dalam apa jua mata wang, dengan bayaran ahli hampir serta-merta dan padanan automatik di T57.",
   "parent": "cap-trust-payments"
  },
@@ -580,14 +580,14 @@
    }
   ],
   "title": "Surat Kredit Elektronik (eLC) untuk Perdagangan Makanan | T57",
-  "description": "LC yang disediakan daripada kontrak anda, dikeluarkan oleh bank rakan kongsi dalam kira-kira 15 minit selepas kelulusan, dengan semakan percanggahan AI dan pengemukaan digital di T57.",
+  "description": "LC disediakan daripada kontrak anda dan dikeluarkan oleh bank rakan kongsi selepas kelulusan, dengan semakan percanggahan AI di T57.",
   "parent": "cap-trust-payments"
  },
  "cap-banking": {
   "route": "/ms/capabilities/finance/banking",
   "section": "capabilities",
   "name": "Perbankan & Pergerakan Wang",
-  "h1": "Berbank dan gerakkan wang di tempat anda berdagang.",
+  "h1": "Urus perbankan dan pindahkan wang di tempat anda berdagang.",
   "answer": "Berbank, tukar dan gerakkan wang merentas sempadan, dalam apa jua mata wang, di tempat anda berdagang.",
   "faqs": [
    {
@@ -628,7 +628,7 @@
    }
   ],
   "title": "Perbankan Perniagaan Digital untuk Perniagaan Makanan | T57",
-  "description": "Akaun perniagaan dalam apa jua mata wang, kad dan penyelesaian hampir serta-merta daripada rakan kongsi berlesen, dibuka dengan Pasport T57 anda dan dikaitkan dengan setiap dagangan.",
+  "description": "Akaun perniagaan pelbagai mata wang dan kad daripada rakan kongsi berlesen, dibuka dengan Pasport T57 anda dan dikaitkan dengan setiap dagangan.",
   "parent": "cap-banking"
  },
  "cap-any-currency": {
@@ -675,8 +675,8 @@
     "a": "Pandangan ulama berbeza-beza. Ahli yang memerlukan penyelesaian patuh Syariah wajar mendapatkan nasihat dan boleh memilih token bersandarkan emas atau pilihan konvensional."
    }
   ],
-  "title": "Penyelesaian Dagangan dengan Kripto, Stablecoin & Token Emas | T57",
-  "description": "Selesaikan dagangan makanan dengan stablecoin, aset digital atau token bersandarkan emas melalui rakan kongsi berlesen, jika sah di sisi undang-undang, dikaitkan dengan rekod dagangan T57 anda.",
+  "title": "Penyelesaian Dagangan dengan Stablecoin dan Token Emas | T57",
+  "description": "Selesaikan dagangan makanan dengan stablecoin atau token bersandarkan emas melalui rakan kongsi berlesen, jika dibenarkan undang-undang.",
   "parent": "cap-banking"
  },
  "cap-financing": {
@@ -699,8 +699,8 @@
     "a": "Dalam kebanyakan struktur, bayaran pembeli akhir masuk ke eskrow dan membayar balik pemberi pinjaman semasa penyelesaian, sebelum baki dilepaskan kepada anda."
    }
   ],
-  "title": "Pembiayaan & Modal Perdagangan Makanan | Pemberi Pinjaman Bersaing | T57",
-  "description": "Pembiayaan perdagangan dan rantaian bekalan, pembiayaan patuh Syariah dan pembiayaan bertoken untuk dagangan makanan yang disahkan, daripada pemberi pinjaman berlesen yang bersaing di T57.",
+  "title": "Pembiayaan & Modal Dagangan Makanan | T57",
+  "description": "Pembiayaan perdagangan, rantaian bekalan dan patuh Syariah untuk dagangan makanan disahkan, daripada pemberi pinjaman berlesen yang bersaing.",
   "parent": "capabilities"
  },
  "cap-supply-chain-finance": {
@@ -724,7 +724,7 @@
    }
   ],
   "title": "Pembiayaan Perdagangan & Rantaian Bekalan untuk PKS Makanan | T57",
-  "description": "Pembiayaan pra-penghantaran, pasca-penghantaran, belum terima, belum bayar dan inventori untuk dagangan makanan yang disahkan, dengan pemberi pinjaman bersaing dan bayaran balik melalui eskrow di T57.",
+  "description": "Pembiayaan pra dan pasca penghantaran, akaun belum terima dan inventori untuk dagangan makanan disahkan, dengan bayaran balik melalui eskrow.",
   "parent": "cap-financing"
  },
  "cap-fundraising": {
@@ -772,7 +772,7 @@
    }
   ],
   "title": "Risiko & Perlindungan Dagangan | Kargo, Kredit & Takaful | T57",
-  "description": "Insurans kargo, perlindungan kredit dagangan, takaful, perlindungan tanaman dan saringan pematuhan untuk perdagangan makanan, daripada rakan kongsi berlesen, dikaitkan dengan setiap dagangan T57.",
+  "description": "Insurans kargo, perlindungan kredit dagangan, takaful dan perlindungan tanaman daripada rakan kongsi berlesen, dikaitkan dengan setiap dagangan.",
   "parent": "capabilities"
  },
  "cap-logistics": {
@@ -795,8 +795,8 @@
     "a": "Pengangkutan laut, udara dan darat, serta pergudangan dan simpanan sejuk, melalui rakan kongsi yang disaring."
    }
   ],
-  "title": "Logistik & Pemenuhan Pesanan Makanan: Pengangkutan dan Kastam | T57",
-  "description": "Tempah rakan kongsi pengangkutan, rantaian sejuk, pemeriksaan dan kastam yang disaring, jejak penghantaran dalam masa nyata dan lepasi sempadan lebih pantas, dalam satu rekod dagangan T57.",
+  "title": "Logistik Makanan: Pengangkutan dan Kastam | T57",
+  "description": "Tempah rakan kongsi pengangkutan, rantaian sejuk, pemeriksaan dan kastam yang disaring, dan jejak setiap penghantaran dalam satu rekod T57.",
   "parent": "capabilities"
  },
  "cap-logistics-network": {
@@ -820,7 +820,7 @@
    }
   ],
   "title": "Rangkaian Logistik Makanan | Pengangkutan & Rantaian Sejuk | T57",
-  "description": "Banding dan tempah ejen penghantaran, syarikat pengangkutan, rakan kongsi rantaian sejuk dan pergudangan yang disaring, dipadankan dengan setiap dagangan makanan, dengan amaran risiko laluan di T57.",
+  "description": "Banding dan tempah ejen penghantaran, syarikat pengangkutan dan gudang sejuk yang disaring untuk setiap dagangan makanan, dengan amaran risiko laluan.",
   "parent": "cap-logistics"
  },
  "cap-tracking": {
@@ -840,10 +840,10 @@
    },
    {
     "q": "Bolehkah penjejakan mencetuskan bayaran?",
-    "a": "Boleh. Pencapaian yang dipersetujui, seperti ketibaan atau pengesahan penerimaan, boleh melepaskan bayaran eskrow secara automatik."
+    "a": "Boleh. Peringkat yang dipersetujui, seperti ketibaan atau pengesahan penerimaan, boleh melepaskan bayaran eskrow secara automatik."
    }
   ],
-  "title": "Penjejakan Penghantaran & Rantaian Sejuk Masa Nyata untuk Makanan | T57",
+  "title": "Penjejakan Penghantaran & Rantaian Sejuk | T57",
   "description": "Jejak penghantaran makanan merentas laut, udara dan darat, dengan pemantauan suhu langsung, ramalan ketibaan dan amaran, semuanya dalam satu rekod dagangan T57.",
   "parent": "cap-logistics"
  },
@@ -868,13 +868,13 @@
    }
   ],
   "title": "Hab Kastam & Dokumentasi Perdagangan untuk Makanan | T57",
-  "description": "Jana dokumen eksport dan import daripada kontrak anda, dapatkan panduan kod HS dan semakan ketekalan, dan pra-lepaskan penghantaran makanan dengan ejen yang disaring di T57.",
+  "description": "Jana dokumen eksport dan import daripada kontrak anda, dapatkan panduan kod HS dan semakan ketekalan, dan buat pra-pelepasan kastam bersama ejen yang disaring di T57.",
   "parent": "cap-logistics"
  },
  "cap-intelligence": {
   "route": "/ms/capabilities/intelligence",
   "section": "capabilities",
-  "name": "Risikan & Data",
+  "name": "Analisis & Data",
   "h1": "Berdagang dengan gambaran penuh.",
   "answer": "Berdagang dengan gambaran penuh: harga, bekalan, rakan dagang dan pasaran, dalam setiap urus niaga.",
   "faqs": [
@@ -887,11 +887,11 @@
     "a": "Tidak. Dagangan individu tidak pernah dipaparkan. Ia hanya menyumbang kepada statistik yang dianonimkan dan diagregat."
    },
    {
-    "q": "Adakah risikan termasuk dalam keahlian?",
-    "a": "Risikan teras disertakan. Peringkat keahlian yang lebih tinggi menawarkan data lebih mendalam, laporan kredit dan ramalan."
+    "q": "Adakah analisis termasuk dalam keahlian?",
+    "a": "Analisis teras disertakan. Peringkat keahlian yang lebih tinggi menawarkan data lebih mendalam, laporan kredit dan ramalan."
    }
   ],
-  "title": "Risikan Perdagangan Makanan | Harga, Ramalan, Kredit | T57",
+  "title": "Analisis Perdagangan Makanan | Harga, Ramalan, Kredit | T57",
   "description": "Indeks harga makanan, ramalan bekalan dan permintaan, sokongan rundingan AI, laporan kredit dan data dagangan pelabuhan, terbina dalam perdagangan makanan di T57.",
   "parent": "capabilities"
  },
@@ -1023,7 +1023,7 @@
     "a": "Makanan bersifat global tetapi sangat tempatan. Model kecil yang dilatih untuk sesuatu rantau, tanaman dan rantaian nilai lebih memahami keadaan dan bahasa tempatan, lebih murah untuk dijalankan dan lebih mudah diuji serta diterangkan."
    }
   ],
-  "title": "Platform Perdagangan Makanan Berteraskan AI | Cara T57 Menggunakan AI",
+  "title": "Platform Perdagangan Makanan Berteraskan AI | T57",
   "description": "Model AI kecil dan tempatan untuk padanan, harga, ramalan, pematuhan dan dokumen merentas perdagangan makanan. AI menasihati, manusia membuat keputusan, di T57."
  },
  "ai-matchmaking": {
@@ -1062,7 +1062,7 @@
     "a": "Boleh. Setiap pihak mendapat taklimat sulitnya sendiri berdasarkan data pasaran awam yang sama."
    }
   ],
-  "title": "Sokongan Rundingan AI untuk Perdagangan Makanan | T57 Berteraskan AI",
+  "title": "Sokongan Rundingan AI untuk Dagangan Makanan | T57",
   "description": "Cara AI rundingan T57 menanda aras tawaran, menilai terma bayaran dan penghantaran serta mencadangkan tawaran balas, sementara manusia membuat setiap keputusan.",
   "parent": "ai-native"
  },
@@ -1082,7 +1082,7 @@
     "a": "Ia bertanya soalan pendek dan bukan meneka, dan pesanan tidak dihantar sehingga anda mengesahkannya."
    }
   ],
-  "title": "Pesanan Dagangan Berasaskan LLM melalui WhatsApp & Suara | T57 Berteraskan AI",
+  "title": "Pesanan Dagangan melalui WhatsApp dan Suara | T57",
   "description": "Cara model bahasa T57 menukar mesej WhatsApp dan nota suara kepada pesanan dagangan makanan berstruktur yang disahkan, dalam bahasa Arab dan bahasa tempatan.",
   "parent": "ai-native"
  },
@@ -1129,7 +1129,7 @@
  "ai-risk": {
   "route": "/ms/ai-native/risk-intelligence",
   "section": "ai-native",
-  "name": "Risikan Risiko & Peta Haba",
+  "name": "Analisis Risiko & Peta Haba",
   "h1": "Setiap risiko kepada dagangan anda, dalam satu peta.",
   "answer": "Lihat setiap risiko kepada dagangan anda dalam satu peta: rakan dagang, laluan, pasaran dan cuaca.",
   "faqs": [
@@ -1142,7 +1142,7 @@
     "a": "Pemberi pinjaman dan syarikat insurans hanya melihat risiko bagi dagangan yang anda kongsi dengan mereka. Kerajaan melihat paparan yang diagregat dan dianonimkan."
    }
   ],
-  "title": "Risikan Risiko AI untuk Perdagangan Makanan | T57 Berteraskan AI",
+  "title": "Analisis Risiko AI untuk Perdagangan Makanan | T57",
   "description": "Skor risiko dan peta haba AI bagi rakan dagang, laluan, pasaran dan iklim dalam perdagangan makanan, dengan faktor yang boleh diterangkan dan amaran awal, di T57.",
   "parent": "ai-native"
  },
@@ -1163,7 +1163,7 @@
    }
   ],
   "title": "Ramalan Tanaman & Hasil AI | T57 Berteraskan AI",
-  "description": "Ramalan hasil dan musim menuai peringkat ladang daripada model AI tempatan, data satelit dan cuaca, serta pengetahuan petani, untuk petani, koperasi, pembeli dan pemberi pinjaman.",
+  "description": "Ramalan hasil dan musim menuai peringkat ladang daripada AI tempatan, data satelit dan cuaca, untuk petani, koperasi, pembeli dan pembiaya.",
   "parent": "ai-native"
  },
  "ai-profit-loss": {
@@ -1307,7 +1307,7 @@
    }
   ],
   "title": "Platform T57 | Sistem Operasi Makanan",
-  "description": "Identiti yang disahkan, satu rekod dagangan, rakan kongsi pembiayaan dan logistik yang bersambung, AI dan blockchain dalam satu platform selamat yang dibina untuk perdagangan makanan."
+  "description": "Identiti disahkan, satu rekod dagangan, rakan kongsi pembiayaan dan logistik yang bersambung, serta AI, dalam satu platform untuk dagangan makanan."
  },
  "platform-trade-cycle": {
   "route": "/ms/platform/trade-cycle",
@@ -1316,8 +1316,8 @@
   "h1": "Satu dagangan. Setiap langkah. Satu rekod.",
   "answer": "Setuju harga, hantar, insuranskan, biayai, bayar dan lepaskan kastam dalam satu platform, dengan setiap pihak disahkan dan setiap langkah dalam satu rekod.",
   "faqs": [],
-  "title": "Satu Dagangan, Setiap Langkah: Perdagangan Makanan dalam Satu Rekod | T57",
-  "description": "Setuju harga, hantar, insuranskan, biayai, bayar dan lepaskan kastam bagi apa jua makanan dalam satu platform, dengan pihak yang disahkan, pemberi pinjaman yang bersaing dan pembiayaan berasaskan pencapaian.",
+  "title": "Satu Dagangan, Setiap Langkah, Satu Rekod | T57",
+  "description": "Setuju harga, hantar, insuranskan, biayai, bayar dan lepaskan kastam bagi apa jua makanan dalam satu platform, dengan pihak yang disahkan.",
   "parent": "platform"
  },
  "platform-domestic": {
@@ -1352,8 +1352,8 @@
     "a": "Perdagangan B2B domestik dibina untuk setiap pasaran pengasas T57: Arab Saudi, UAE, India, Malaysia dan Türkiye."
    }
   ],
-  "title": "Perdagangan Makanan B2B Domestik | Dari Kilang ke Kedai, Secara Terus | T57",
-  "description": "Kilang dan ladang tempatan menjual terus kepada pasar raya, restoran dan pejabat pada harga kilang, mengikut karton, dengan rakan kongsi penghantaran tempatan dan bayar kemudian.",
+  "title": "Perdagangan Makanan B2B Domestik: Kilang ke Kedai | T57",
+  "description": "Kilang dan ladang tempatan menjual terus kepada pasar raya, restoran dan pejabat pada harga kilang, dengan penghantaran tempatan dan bayar kemudian.",
   "parent": "platform"
  },
  "platform-architecture": {
@@ -1401,7 +1401,7 @@
    }
   ],
   "title": "Hala Tuju Platform T57 | Dagangan, Pembiayaan, Ekosistem",
-  "description": "Bagaimana platform T57 berkembang secara berperingkat, daripada perdagangan makanan yang disahkan kepada pembiayaan bersambung dan ekosistem makanan yang lengkap, merentas pasaran pengasas dan pasaran baharu.",
+  "description": "Bagaimana platform T57 berkembang secara berperingkat: daripada dagangan makanan disahkan, kepada pembiayaan bersambung dan ekosistem makanan lengkap.",
   "parent": "platform"
  },
  "platform-intelligence": {
@@ -1424,16 +1424,16 @@
     "a": "Boleh. Setiap keputusan negatif disertakan sebab dan saluran untuk membantahnya, dan manusia akan menyemaknya."
    }
   ],
-  "title": "Lapisan Risikan T57 | AI Kecil dan Tempatan untuk Perdagangan Makanan",
-  "description": "Model AI tempatan yang kecil, dilatih dengan data dagangan yang disahkan dan pengetahuan petani yang dikongsi dengan persetujuan, ditadbir supaya manusia menyemak setiap keputusan negatif.",
+  "title": "Lapisan Kecerdasan T57 | AI Tempatan untuk Dagangan Makanan",
+  "description": "Model AI tempatan yang kecil, dilatih dengan data dagangan disahkan dan pengetahuan petani dengan persetujuan, dan setiap keputusan negatif disemak manusia.",
   "parent": "platform"
  },
  "platform-blockchain": {
   "route": "/ms/platform/blockchain",
   "section": "platform",
   "name": "Lapisan Blockchain & Kontrak Pintar",
-  "h1": "Rekod yang tiada siapa boleh ubah secara senyap. Bayaran yang mengikut bukti.",
-  "answer": "Rekod kalis usik, dokumen bertoken dan bayaran mengikut pencapaian yang boleh dipercayai setiap pihak.",
+  "h1": "Rekod yang menunjukkan sebarang perubahan. Bayaran yang mengikut bukti.",
+  "answer": "Rekod yang menunjukkan sebarang usikan, dokumen bertoken dan bayaran mengikut peringkat yang boleh dipercayai setiap pihak.",
   "faqs": [
    {
     "q": "Adakah data dagangan saya terbuka kepada umum di blockchain?",
@@ -1444,12 +1444,12 @@
     "a": "Tidak. Lapisan blockchain berfungsi di latar belakang. Ahli membayar dan dibayar dalam mata wang biasa melalui rakan kongsi berlesen, melainkan mereka memilih pembayaran alternatif jika dibenarkan undang-undang."
    },
    {
-    "q": "Apakah yang berlaku jika sesuatu pencapaian dipertikaikan?",
+    "q": "Apakah yang berlaku jika sesuatu peringkat dipertikaikan?",
     "a": "Kontrak pintar menangguhkan pelepasan, dan pertikaian dikendalikan mengikut kontrak serta peraturan rakan kongsi."
    }
   ],
   "title": "Blockchain & Kontrak Pintar untuk Perdagangan Makanan | T57",
-  "description": "Pengikatan rekod kalis usik, dokumen dagangan bertoken dan bayaran pencapaian kontrak pintar, dengan privasi dan rakan kongsi berlesen, di T57.",
+  "description": "Pengikatan rekod yang menunjukkan sebarang usikan, dokumen dagangan bertoken dan bayaran peringkat kontrak pintar, dengan privasi dan rakan kongsi berlesen, di T57.",
   "parent": "platform"
  },
  "platform-security": {
@@ -1501,7 +1501,7 @@
    }
   ],
   "title": "Kepercayaan & Pematuhan | Perdagangan Makanan Disahkan di T57",
-  "description": "Ahli yang disahkan, satu rekod dagangan, jejak audit dan rakan kongsi berlesen untuk pembayaran. Lihat bagaimana T57 menjadikan kepercayaan titik permulaan perdagangan makanan."
+  "description": "Ahli disahkan, satu rekod dagangan, jejak audit dan rakan kongsi berlesen untuk pembayaran: bagaimana T57 menjadikan kepercayaan titik permulaan."
  },
  "trust-verification": {
   "route": "/ms/trust/verification",
@@ -1624,7 +1624,7 @@
   "faqs": [
    {
     "q": "Bolehkah sesiapa menyunting jejak audit?",
-    "a": "Tidak. Entri tidak boleh diubah atau dipadam. Pembetulan ditambah sebagai entri baharu."
+    "a": "Tidak. Entri menunjukkan sebarang usikan: setiap perubahan dapat dikesan, dan tiada apa-apa yang dipadam. Pembetulan ditambah sebagai entri baharu."
    },
    {
     "q": "Siapa yang boleh melihat jejak audit dagangan saya?",
@@ -1639,8 +1639,8 @@
     "a": "Ya. Cadangan AI dan keputusan manusia yang dibuat berdasarkannya dilog."
    }
   ],
-  "title": "Jejak Audit untuk Perdagangan Makanan | Kepercayaan & Pematuhan T57",
-  "description": "Setiap tindakan dalam setiap dagangan, dikaitkan kepada individu yang disahkan, bercap masa dan kalis usik. Bukti sedia audit di T57.",
+  "title": "Jejak Audit untuk Perdagangan Makanan | T57",
+  "description": "Setiap tindakan dalam setiap dagangan, dikaitkan kepada individu yang disahkan, bercap masa dan menunjukkan sebarang usikan. Bukti sedia audit di T57.",
   "parent": "trust"
  },
  "trust-documents": {
@@ -1776,7 +1776,7 @@
    }
   ],
   "title": "Pasaran | Arab Saudi, UAE, India, Malaysia, Türkiye | T57",
-  "description": "Satu rangkaian perdagangan makanan yang disahkan merentas lima pasaran pengasas, untuk borong domestik dan perdagangan rentas sempadan, dengan pasukan dan rakan kongsi tempatan."
+  "description": "Satu rangkaian perdagangan makanan disahkan merentas lima pasaran pengasas, untuk borong domestik dan rentas sempadan, dengan pasukan tempatan."
  },
  "markets-global": {
   "route": "/ms/markets/global-rollout",
@@ -1810,7 +1810,7 @@
     "a": "Perniagaan tempatan berlesen yang mengendalikan T57 di negara atau bandarnya, seperti francais. Lihat halaman Rakan Kongsi Negara untuk memohon."
    }
   ],
-  "title": "Pelancaran Global | Daripada 5 Pasaran kepada 101, Terbuka ke Seluruh Dunia | T57",
+  "title": "Pelancaran Global | Lima Pasaran, Terbuka kepada Dunia | T57",
   "description": "T57 bermula dengan pasukan di lima pasaran pengasas, terbuka dalam talian di 195 negara, dan membuka pasaran baharu secara berfasa, bersama rakan kongsi negara.",
   "parent": "markets"
  },
@@ -1834,7 +1834,7 @@
     "a": "T57 menghubungkan ahli dengan rakan kongsi berlesen, termasuk yang menawarkan pembiayaan patuh Syariah di mana tersedia."
    }
   ],
-  "title": "Perdagangan Makanan OIC & Halal | Pembekal Halal yang Disahkan | T57",
+  "title": "Perdagangan Makanan Halal | Pembekal Disahkan | T57",
   "description": "Temui pembekal dan pembeli makanan halal yang disahkan merentas negara OIC, dengan sijil direkodkan, dokumen dalam satu rekod dan pembiayaan melalui rakan kongsi berlesen.",
   "parent": "markets"
  },
@@ -1858,8 +1858,8 @@
     "a": "T57 ialah platform bebas. Rekod digital dan perkongsian data berasaskan persetujuannya direka untuk selaras dengan peraturan perdagangan digital serantau seperti DEFA, sebaik ia berkuat kuasa."
    }
   ],
-  "title": "Perdagangan Makanan ASEAN | Pengeksport dan Pembeli yang Disahkan | T57",
-  "description": "Hubungkan pengeluar makanan ASEAN dengan pembeli yang disahkan di Teluk, India dan Türkiye, dengan dokumen digital, rekod halal dan pembiayaan perdagangan melalui rakan kongsi.",
+  "title": "Perdagangan Makanan ASEAN | Pembeli Disahkan | T57",
+  "description": "Hubungkan pengeluar makanan ASEAN dengan pembeli disahkan di Teluk, India dan Türkiye, dengan dokumen digital, rekod halal dan pembiayaan.",
   "parent": "markets"
  },
  "mkt-sa-overview": {
@@ -1907,7 +1907,7 @@
    }
   ],
   "title": "Ciri T57 di Arab Saudi | Dagangan, Pembiayaan, Logistik",
-  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di Arab Saudi.",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan analisis AI untuk perniagaan makanan di Arab Saudi.",
   "parent": "mkt-sa-overview"
  },
  "mkt-sa-compliance": {
@@ -1978,7 +1978,7 @@
     "a": "Ya, dalam bahasa Arab dan Inggeris."
    }
   ],
-  "title": "T57 di UAE | Rangkaian Perdagangan dan Eksport Semula Makanan yang Disahkan",
+  "title": "T57 di UAE | Perdagangan dan Eksport Semula Makanan",
   "description": "Import makanan, borong domestik dan eksport semula yang disahkan di UAE, dengan pasukan tempatan dan rakan kongsi berlesen untuk pembiayaan dan pembayaran.",
   "parent": "markets"
  },
@@ -2003,7 +2003,7 @@
    }
   ],
   "title": "Ciri T57 di UAE | Dagangan, Pembiayaan, Logistik",
-  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di UAE.",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan analisis AI untuk perniagaan makanan di UAE.",
   "parent": "mkt-uae-overview"
  },
  "mkt-uae-compliance": {
@@ -2050,7 +2050,7 @@
     "a": "Boleh. Pasukan kami di UAE menyokong ahli dalam bahasa Arab dan Inggeris."
    }
   ],
-  "title": "Mula Bersama T57 di UAE",
+  "title": "Mula Berdagang di UAE Bersama T57: Empat Langkah",
   "description": "Sertai T57 di UAE dalam empat langkah: mohon, dapatkan pengesahan, sediakan akaun dan berdagang, dengan bantuan pasukan tempatan kami.",
   "parent": "mkt-uae-overview"
  },
@@ -2074,7 +2074,7 @@
     "a": "Bahasa Inggeris dan Hindi, dengan lebih banyak bahasa India dirancang."
    }
   ],
-  "title": "T57 di India | Perdagangan Makanan yang Disahkan untuk FPO dan Pengeksport",
+  "title": "T57 di India | Dagangan Makanan untuk FPO dan Pengeksport",
   "description": "Jual kepada pembeli perniagaan domestik dan pengimport yang disahkan di Teluk dan Asia Tenggara, dengan pembiayaan, pemeriksaan dan logistik melalui rakan kongsi berlesen.",
   "parent": "markets"
  },
@@ -2099,7 +2099,7 @@
    }
   ],
   "title": "Ciri T57 di India | Dagangan, Pembiayaan, Logistik",
-  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di India.",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan analisis AI untuk perniagaan makanan di India.",
   "parent": "mkt-in-overview"
  },
  "mkt-in-compliance": {
@@ -2170,7 +2170,7 @@
     "a": "Ya. Laman ini tersedia dalam Bahasa Melayu, dan pasukan kami menyokong anda dalam Bahasa Melayu dan Bahasa Inggeris."
    }
   ],
-  "title": "T57 di Malaysia | Rangkaian Perdagangan Makanan Halal yang Disahkan",
+  "title": "T57 di Malaysia | Platform Perdagangan Makanan Halal B2B",
   "description": "Bawa makanan halal Malaysia kepada pembeli yang disahkan di Teluk, India dan ASEAN, dengan sijil halal direkodkan dan pembiayaan melalui rakan kongsi berlesen.",
   "parent": "markets"
  },
@@ -2195,7 +2195,7 @@
    }
   ],
   "title": "Ciri T57 di Malaysia | Dagangan, Pembiayaan, Logistik",
-  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di Malaysia.",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan analisis AI untuk perniagaan makanan di Malaysia.",
   "parent": "mkt-my-overview"
  },
  "mkt-my-compliance": {
@@ -2267,7 +2267,7 @@
    }
   ],
   "title": "T57 di Türkiye | Rangkaian Eksport Makanan yang Disahkan",
-  "description": "Jual buah-buahan, kekacang dan produk makanan Türkiye kepada pembeli yang disahkan di Teluk dan Asia, dengan dokumen dalam satu rekod dan pembayaran melalui rakan kongsi berlesen.",
+  "description": "Jual buah-buahan, kekacang dan produk makanan Türkiye kepada pembeli disahkan di Teluk dan Asia, dengan bayaran melalui rakan kongsi berlesen.",
   "parent": "markets"
  },
  "mkt-tr-features": {
@@ -2291,7 +2291,7 @@
    }
   ],
   "title": "Ciri T57 di Türkiye | Dagangan, Pembiayaan, Logistik",
-  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di Türkiye.",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan analisis AI untuk perniagaan makanan di Türkiye.",
   "parent": "mkt-tr-overview"
  },
  "mkt-tr-compliance": {
@@ -2367,7 +2367,7 @@
    }
   ],
   "title": "Harga | Pelan dari $199 Sebulan | T57",
-  "description": "Harga terbuka untuk perdagangan makanan yang disahkan: pelan Teroka, Teras, Pertumbuhan dan Perusahaan, dua bulan percuma bagi bil tahunan, dan yuran kecil hanya untuk dagangan yang diselesaikan."
+  "description": "Harga terbuka untuk dagangan makanan disahkan: pelan Teroka, Teras, Pertumbuhan dan Perusahaan, dua bulan percuma untuk bil tahunan."
  },
  "pricing-plans": {
   "route": "/ms/pricing/plans",
@@ -2382,7 +2382,7 @@
    },
    {
     "q": "Apakah yang termasuk dalam percubaan percuma?",
-    "a": "Anda boleh membina profil, meneroka ahli yang disahkan dan risikan pasaran, menggunakan alat AI dan menghantar permintaan sebut harga. Pengesahan, kontrak, eskrow dan pembiayaan bermula apabila anda melanggan, kerana pengesahan melibatkan semakan sebenar oleh pasukan dan rakan kongsi kami. Ahli pengasas menikmati 90 hari percuma semasa pelancaran."
+    "a": "Anda boleh membina profil, meneroka ahli yang disahkan dan analisis pasaran, menggunakan alat AI dan menghantar permintaan sebut harga. Pengesahan, kontrak, eskrow dan pembiayaan bermula apabila anda melanggan, kerana pengesahan melibatkan semakan sebenar oleh pasukan dan rakan kongsi kami. Ahli pengasas menikmati 90 hari percuma semasa pelancaran."
    },
    {
     "q": "Bolehkah saya menukar pelan?",
@@ -2453,7 +2453,7 @@
     "a": "Hanya jika anda memilih untuk menyimpan atau berkongsi hasil anda."
    }
   ],
-  "title": "Kalkulator ROI | Penjimatan dan Pelan Terbaik bagi Jumlah Dagangan Anda | T57",
+  "title": "Kalkulator ROI | Penjimatan dan Pelan Terbaik | T57",
   "description": "Anggarkan masa dan wang yang boleh dijimatkan T57 bagi perniagaan makanan anda, selepas ditolak yuran, dan cari pelan dengan jumlah kos terendah bagi jumlah dagangan anda.",
   "parent": "pricing"
  },
@@ -2562,7 +2562,7 @@
     "a": "Boleh, melalui halaman acara tersebut."
    }
   ],
-  "title": "Webinar & Acara | T57",
+  "title": "Webinar & Acara Perdagangan Makanan | T57",
   "description": "Webinar langsung, taklimat pasaran dan acara perdagangan di mana anda boleh bertemu pasukan T57.",
   "parent": "resources"
  },
@@ -2590,7 +2590,7 @@
     "a": "Arab Saudi, UAE, India, Malaysia dan Türkiye, dengan lebih banyak pasaran akan menyusul."
    }
   ],
-  "title": "Soalan Lazim & Glosari | Istilah Perdagangan Makanan Diterangkan | T57",
+  "title": "Soalan Lazim & Glosari Perdagangan Makanan | T57",
   "description": "Jawapan mudah tentang T57, serta definisi istilah perdagangan makanan, pembiayaan perdagangan dan teknologi, daripada eskrow dan surat kredit hingga KYB dan kod HS.",
   "parent": "resources"
  },
@@ -2629,10 +2629,10 @@
   "section": "help",
   "name": "Panduan Penggunaan Platform",
   "h1": "Cara melakukan segala-galanya di T57.",
-  "answer": "Panduan untuk sebut harga, kontrak, dokumen, eskrow, surat kredit, pembiayaan, logistik, tetapan pasukan dan risikan pasaran.",
+  "answer": "Panduan untuk sebut harga, kontrak, dokumen, eskrow, surat kredit, pembiayaan, logistik, tetapan pasukan dan analisis pasaran.",
   "faqs": [],
   "title": "Cara-cara Platform | Pusat Bantuan T57",
-  "description": "Cara berdagang di T57: sebut harga, kontrak, dokumen, eskrow, surat kredit, pembiayaan, logistik, tetapan pasukan dan risikan pasaran.",
+  "description": "Cara berdagang di T57: sebut harga, kontrak, dokumen, eskrow, surat kredit, pembiayaan, logistik, tetapan pasukan dan analisis pasaran.",
   "parent": "help"
  },
  "help-faq": {
@@ -2648,7 +2648,7 @@
    },
    {
     "q": "Bolehkah saya berdagang semasa percubaan percuma?",
-    "a": "Anda boleh meneroka ahli, risikan dan alat AI, serta menghantar permintaan sebut harga. Kontrak, eskrow dan pembiayaan bermula sebaik sahaja anda melanggan dan disahkan."
+    "a": "Anda boleh meneroka ahli, analisis dan alat AI, serta menghantar permintaan sebut harga. Kontrak, eskrow dan pembiayaan bermula sebaik sahaja anda melanggan dan disahkan."
    },
    {
     "q": "Bagaimana saya membatalkan atau menukar pelan?",
@@ -2699,7 +2699,7 @@
    }
   ],
   "title": "Perkongsian | Kewangan, Logistik & Teknologi | T57",
-  "description": "Bekerjasama dengan T57 untuk melayani perniagaan makanan yang disahkan dengan pembiayaan, insurans, logistik, pemeriksaan dan teknologi, yang disambungkan kepada satu rekod dagangan."
+  "description": "Bekerjasama dengan T57 untuk melayani perniagaan makanan disahkan dengan pembiayaan, insurans, logistik, pemeriksaan dan teknologi."
  },
  "partners-technology": {
   "route": "/ms/partners/technology",
@@ -2738,7 +2738,7 @@
    }
   ],
   "title": "Rakan Kongsi Perkhidmatan Kewangan | Pembiayaan & Insurans | T57",
-  "description": "Bank, syarikat pembiayaan, penyedia eskrow, syarikat insurans dan pengendali takaful sampai kepada perniagaan makanan yang disahkan, dengan rekod dagangan di sebalik setiap permintaan.",
+  "description": "Bank, syarikat pembiayaan, penyedia eskrow, syarikat insurans dan pengendali takaful sampai kepada perniagaan makanan yang disahkan di T57.",
   "parent": "partnerships"
  },
  "partners-logistics": {
@@ -2757,7 +2757,7 @@
     "a": "Boleh, jika pihak-pihak mempersetujuinya dalam kontrak mereka."
    }
   ],
-  "title": "Rakan Kongsi Logistik | Pengangkutan, Rantaian Sejuk, Pemeriksaan | T57",
+  "title": "Rakan Kongsi Logistik: Pengangkutan dan Rantaian Sejuk | T57",
   "description": "Rakan kongsi pengangkutan, rantaian sejuk, gudang, pemeriksaan dan kastam melayani pedagang makanan yang disahkan terus dari dalam rekod dagangan T57.",
   "parent": "partnerships"
  },
@@ -2786,7 +2786,7 @@
    }
   ],
   "title": "Rakan Kongsi Penyelidikan & Universiti | T57",
-  "description": "T57 bekerjasama dengan universiti pertanian dan institut penyelidikan untuk membawa penyelidikan kepada petani, melatih AI tempatan, merintis teknologi baharu dan memberi ganjaran kepada saintis.",
+  "description": "T57 bekerjasama dengan universiti pertanian dan institut penyelidikan untuk membawa penyelidikan kepada petani dan melatih AI tempatan.",
   "parent": "partnerships"
  },
  "partners-country": {
@@ -2828,7 +2828,7 @@
   "h1": "Mohon untuk menjadi rakan kongsi T57.",
   "answer": "Bekerjasama dengan T57 dalam pembiayaan, insurans, logistik, pemeriksaan atau teknologi. Ceritakan tentang perniagaan anda untuk bermula.",
   "faqs": [],
-  "title": "Jadi Rakan Kongsi | T57",
+  "title": "Jadi Rakan Kongsi T57 | Kewangan, Logistik, Teknologi",
   "description": "Mohon untuk bekerjasama dengan T57 dalam pembiayaan, insurans, logistik, pemeriksaan atau teknologi.",
   "parent": "partnerships"
  },
@@ -2837,7 +2837,7 @@
   "section": "about",
   "name": "Tentang T57",
   "h1": "Makanan yang ada sepatutnya sampai kepada mereka yang memerlukannya.",
-  "answer": "Kami wujud supaya makanan yang ada sampai kepada masyarakat dan pasaran yang memerlukannya.",
+  "answer": "Kami di sini supaya makanan yang ada sampai kepada masyarakat dan pasaran yang memerlukannya.",
   "faqs": [
    {
     "q": "Di manakah T57 berpangkalan?",
@@ -2852,19 +2852,19 @@
     "a": "T57 diterajui oleh pengasasnya."
    }
   ],
-  "title": "Tentang T57 | Infrastruktur Dagangan Digital Berteraskan AI untuk Makanan",
+  "title": "Tentang T57 | Infrastruktur Dagangan Makanan Berteraskan AI",
   "description": "Mengapa T57 wujud: akses kepada pasaran, teknologi dan pembiayaan untuk ekosistem makanan, dibina daripada kerja sekuriti makanan di lebih 60 negara."
  },
  "about-journey": {
   "route": "/ms/about/journey",
   "section": "about",
   "name": "Perjalanan Kami",
-  "h1": "Daripada satu soalan kepada 150 perjanjian yang dimeterai.",
+  "h1": "Daripada satu soalan kepada lebih 150 perjanjian yang dimeterai.",
   "answer": "Sejak 2023, T57 dan syarikat pengasasnya, AlMukarramah, telah memeterai perjanjian dengan kerajaan, institusi pembangunan dan syarikat makanan, serta membawa hujah perdagangan makanan yang bersambung ke pentas dari Cape Town hingga Yinchuan.",
   "faqs": [
    {
     "q": "Dengan siapakah T57 telah memeterai perjanjian?",
-    "a": "T57 dan syarikat pengasasnya, AlMukarramah, mempunyai perjanjian dengan Pertubuhan Islam bagi Sekuriti Makanan (IOFS), Kerajaan Republik Chechen, Development Bank of Maldives, Food Contract Corporation of Kazakhstan, International Assembly of Islamic Business, Dar Al Halal Nigeria dan Aquaculture Centre of Excellence di Singapura, serta memeterai 150 MoU dan surat hasrat di Gulfood 2026."
+    "a": "T57 dan syarikat pengasasnya, AlMukarramah, mempunyai perjanjian dengan Pertubuhan Islam bagi Sekuriti Makanan (IOFS), Kerajaan Republik Chechen, Development Bank of Maldives, Food Contract Corporation of Kazakhstan, International Assembly of Islamic Business, Dar Al Halal Nigeria dan Aquaculture Centre of Excellence di Singapura, serta memeterai 120 MoU dan surat hasrat di Gulfood 2026."
    },
    {
     "q": "Bilakah T57 bermula?",
@@ -2876,7 +2876,7 @@
    }
   ],
   "title": "Perjalanan Kami: Perjanjian, Perkongsian dan Ucaptama | T57",
-  "description": "Garis masa T57 sejak 2023: perjanjian IOFS, MoU dengan kerajaan dan bank pembangunan, 150 MoU di Gulfood 2026 dan ucaptama dari Cape Town hingga Yinchuan.",
+  "description": "Garis masa T57 sejak 2023: perjanjian IOFS, MoU dengan kerajaan dan bank pembangunan, 120 MoU di Gulfood 2026 dan ucaptama di seluruh dunia.",
   "parent": "about"
  },
  "about-leadership": {
@@ -2896,7 +2896,7 @@
    }
   ],
   "title": "Kepimpinan & Penasihat | T57",
-  "description": "Kenali pengasas, pasukan kepimpinan, lembaga dan tiga belas penasihat yang membina T57, dengan pengalaman dalam perdagangan makanan, sekuriti makanan, teknologi, kewangan dan tadbir urus.",
+  "description": "Kenali pengasas, pasukan kepimpinan, lembaga dan penasihat T57, dengan pengalaman dalam perdagangan makanan, sekuriti makanan, teknologi dan kewangan.",
   "parent": "about"
  },
  "about-impact": {
@@ -2906,7 +2906,7 @@
   "h1": "Teknologi yang berkhidmat kepada mereka yang memberi makan dunia.",
   "answer": "Bagaimana T57 menggunakan AI kecil dan tempatan secara bertanggungjawab, dan impak yang diusahakannya: akses pasaran, pembiayaan, kurang kehilangan makanan dan keterangkuman.",
   "faqs": [],
-  "title": "Inovasi & Impak | AI Bertanggungjawab untuk Perdagangan Makanan | T57",
+  "title": "Inovasi & Impak | AI Bertanggungjawab | T57",
   "description": "Bagaimana T57 menggunakan AI kecil dan tempatan secara bertanggungjawab, dan impak yang diusahakannya: akses pasaran, pembiayaan, kurang kehilangan makanan dan keterangkuman.",
   "parent": "about"
  },
@@ -2950,7 +2950,7 @@
     "a": "Tidak. T57 menyumbang kepada sasaran khusus bersama kerajaan, rakan pembangunan dan sektor swasta."
    }
   ],
-  "title": "T57 untuk Pencapaian SDG | Impak Disahkan dalam Perdagangan Makanan",
+  "title": "T57 untuk SDG | Impak Disahkan dalam Dagangan Makanan",
   "description": "Bagaimana T57 menyumbang kepada SDG 1, 2, 5, 8, 9, 10, 12 dan 13 dengan membawa pengeluar kecil ke dalam dagangan dan pembiayaan yang disahkan, dengan impak yang boleh diukur.",
   "parent": "about"
  },
@@ -2970,7 +2970,7 @@
     "a": "Sesetengah jawatan teknologi boleh dilakukan dari jauh, dan pasukan negara bekerja di setiap pasaran."
    }
   ],
-  "title": "Kerjaya di T57 | Bina Infrastruktur Perdagangan Makanan Berteraskan AI",
+  "title": "Kerjaya di T57 | Bina Masa Depan Perdagangan Makanan",
   "description": "Sertai pasukan T57 dalam teknologi, AI, produk, operasi negara dan perkongsian di lima pasaran pengasas.",
   "parent": "about"
  },
@@ -2981,7 +2981,7 @@
   "h1": "Sumber untuk wartawan dan rakan kongsi.",
   "answer": "Fakta syarikat, logo dan maklumat hubungan media untuk wartawan dan rakan kongsi.",
   "faqs": [],
-  "title": "Kit Media & Akhbar | T57",
+  "title": "Kit Media & Akhbar | Fakta T57 dan Hubungan Media",
   "description": "Fakta syarikat, logo, foto kepimpinan dan maklumat hubungan media T57 untuk wartawan.",
   "parent": "about"
  },
@@ -3005,7 +3005,7 @@
     "a": "Dalam talian, di mana-mana sahaja. T57 ialah platform SaaS global yang boleh disertai mana-mana perniagaan makanan dari mana-mana negara. Projek perintis bermula di Arab Saudi, UAE, India, Malaysia dan Türkiye."
    }
   ],
-  "title": "Hubungi T57",
+  "title": "Hubungi T57 | Mohon, Jadi Rakan Kongsi atau Tempah Demo",
   "description": "Hubungi T57 untuk menyertai, melihat demo, bekerjasama, bekerja bersama kami dalam sekuriti makanan, atau untuk pertanyaan media."
  },
  "contact-demo": {
@@ -3024,7 +3024,7 @@
     "a": "Boleh, jemput seberapa ramai rakan sekerja yang anda mahu."
    }
   ],
-  "title": "Tempah Demo | T57",
+  "title": "Tempah Demo T57 | Platform Dagangan Makanan Disahkan",
   "description": "Tempah demo T57 selama 30 minit berdasarkan produk dan pasaran anda sendiri, kemudian mulakan percubaan percuma anda.",
   "parent": "contact"
  },
@@ -3045,7 +3045,7 @@
    }
   ],
   "title": "Di Mana T57 Beroperasi | SaaS Global, Lima Pasaran Perintis",
-  "description": "T57 ialah platform SaaS global untuk perdagangan makanan. Projek perintis bermula di Arab Saudi, UAE, India, Malaysia dan Türkiye, dan mana-mana perniagaan boleh menyertai dalam talian dari mana-mana sahaja.",
+  "description": "T57 ialah platform SaaS global untuk perdagangan makanan. Perintis bermula di Arab Saudi, UAE, India, Malaysia dan Türkiye; sesiapa boleh memohon.",
   "parent": "contact"
  },
  "governments": {
@@ -3057,15 +3057,15 @@
   "faqs": [
    {
     "q": "Bagaimanakah T57 menyokong strategi sekuriti makanan nasional dan serantau secara praktikal?",
-    "a": "Banyak negara kini memperluas rizab strategik dan kapasiti silo untuk menyimpan bekalan komoditi penting bagi tempoh beberapa bulan. T57 melengkapi infrastruktur fizikal ini dengan menjejaki tahap sara diri, paras stok dan pendedahan import secara masa nyata. Gabungan rizab fizikal dan risikan digital ini membantu kerajaan beralih daripada pengurusan sekuriti makanan yang reaktif kepada yang bersifat jangkaan."
+    "a": "Banyak negara kini memperluas rizab strategik dan kapasiti silo untuk menyimpan bekalan komoditi penting bagi tempoh beberapa bulan. T57 melengkapi infrastruktur fizikal ini dengan menjejaki tahap sara diri, paras stok dan pendedahan import secara masa nyata. Gabungan rizab fizikal dan analisis digital ini membantu kerajaan beralih daripada pengurusan sekuriti makanan yang reaktif kepada yang bersifat jangkaan."
    },
    {
     "q": "Mengapa penting untuk menyalurkan modal swasta dan modal impak ke dalam sektor pertanian dan sistem makanan, selain bajet awam?",
     "a": "Walaupun pertanian sejak sekian lama penting bagi peluang pekerjaan dan sekuriti makanan, pelabur global baru kini mencari laluan yang kukuh dan boleh diukur untuk menyokong sistem makanan sebagai sebahagian daripada komitmen iklim dan SDG mereka. T57 membantu kerajaan menampilkan peluang yang berdaya laburan dan berasaskan data, daripada pusat sokongan model hingga zon pertanian khas dan program CSR, dengan penjejakan prestasi dan impak yang telus untuk memenuhi jangkaan pengawal selia dan pelabur."
    }
   ],
-  "title": "T57 untuk Kerajaan | Sekuriti Makanan & Perolehan Bersih",
-  "description": "T57 memberi kerajaan dan pengawal selia risikan sekuriti makanan masa nyata dan perolehan yang telus dalam satu platform, untuk mengurangkan pembaziran dan menstabilkan harga.",
+  "title": "T57 untuk Kerajaan | Sekuriti Makanan & Perolehan Telus",
+  "description": "T57 memberi kerajaan data sekuriti makanan masa nyata dan perolehan yang telus dalam satu platform, untuk mengurangkan pembaziran dan menstabilkan harga.",
   "parent": "who-we-serve"
  },
  "financiers": {
@@ -3093,7 +3093,7 @@
    }
   ],
   "title": "T57 untuk Pembiaya | Peluang Makanan & Pertanian yang Ditapis",
-  "description": "Salurkan modal ke dalam dagangan makanan dan pertanian yang dikurasi dan bersandarkan kontrak, dengan usaha wajar yang lebih pantas, keterlihatan transaksi penuh dan risiko pihak berurus niaga yang lebih terkawal.",
+  "description": "Salurkan modal ke dalam dagangan makanan bersandarkan kontrak, dengan usaha wajar lebih pantas, keterlihatan penuh dan risiko pihak lawan lebih rendah.",
   "parent": "who-we-serve"
  },
  "sellers": {
@@ -3116,12 +3116,12 @@
     "a": "Eksport makanan tertakluk kepada rejim pemeriksaan dan pensijilan yang ketat di negara pengimport. Pensijilan yang tidak lengkap atau salah boleh menyebabkan penolakan atau ketidakpatuhan di sempadan. Sistem yang memusatkan dokumen, memautkannya kepada lot dan penghantaran, serta mengesahkan pensijilan dapat mengurangkan risiko penolakan dan kelewatan yang mahal."
    },
    {
-    "q": "Bolehkah risikan yang lebih baik benar-benar membantu dalam pasaran eksport yang tidak menentu?",
-    "a": "Harga pertanian kekal terdedah kepada cuaca ekstrem, perubahan dasar biobahan api dan halangan perdagangan yang semakin meningkat. Pengeksport yang menggunakan risikan pasaran, tanaman dan harga yang berstruktur lebih mampu menyesuaikan sumber bekalan dan harga untuk melindungi margin."
+    "q": "Bolehkah analisis yang lebih baik benar-benar membantu dalam pasaran eksport yang tidak menentu?",
+    "a": "Harga pertanian kekal terdedah kepada cuaca ekstrem, perubahan dasar biobahan api dan halangan perdagangan yang semakin meningkat. Pengeksport yang menggunakan analisis pasaran, tanaman dan harga yang berstruktur lebih mampu menyesuaikan sumber bekalan dan harga untuk melindungi margin."
    }
   ],
-  "title": "T57 untuk Penjual & Pengeksport | Platform Eksport Pertanian yang Dipercayai",
-  "description": "T57 membantu pengeksport makanan dan pertanian mencari pembeli yang disahkan, mengurus dokumen, menerima bayaran dengan selamat dan berkembang dengan risikan pasaran masa nyata.",
+  "title": "T57 untuk Penjual & Pengeksport Makanan",
+  "description": "T57 membantu pengeksport makanan dan pertanian mencari pembeli disahkan, mengurus dokumen dan menerima bayaran dengan selamat.",
   "parent": "who-we-serve"
  },
  "traders": {
@@ -3148,7 +3148,7 @@
     "a": "Dagangan anda yang telah selesai, status pengesahan dan peranan, supaya pihak berurus niaga dan pemberi pinjaman baharu dapat melihat sejarah anda sebelum berurusan."
    }
   ],
-  "title": "T57 untuk Pedagang & Pengagregat | Biayai dan Laksanakan Urus Niaga",
+  "title": "T57 untuk Pedagang & Pengagregat | Biayai Setiap Urus Niaga",
   "description": "Pembekal dan pembeli yang disahkan, kontrak sandar-menyandar dan pembiayaan daripada pemberi pinjaman yang bersaing, semuanya dalam satu rekod dagangan makanan.",
   "parent": "who-we-serve"
  },
@@ -3176,7 +3176,7 @@
     "a": "Boleh. T57 menyokong urusan borong domestik untuk pasar raya, HoReCa dan institusi selain perdagangan rentas sempadan. Lihat dagangan B2B domestik ."
    }
   ],
-  "title": "T57 untuk Pembeli & Pengimport | Dapatkan Bekalan daripada Pembekal Disahkan",
+  "title": "T57 untuk Pembeli & Pengimport | Pembekal Disahkan",
   "description": "Dapatkan bekalan makanan daripada pengeluar dan pemproses yang disahkan. RFQ, kontrak, eskrow, surat kredit, pemeriksaan dan logistik dalam satu rekod dagangan.",
   "parent": "who-we-serve"
  },
@@ -3204,8 +3204,8 @@
     "a": "Boleh. T57 direka untuk menghubungkan dokumen, peringkat, pihak berurus niaga dan rekod pembayaran dalam satu aliran kerja yang boleh dijejaki. Ini memudahkan pasukan perusahaan menyokong kawalan dalaman, semakan dan keperluan audit merentas operasi dagangan yang kompleks."
    }
   ],
-  "title": "T57 untuk Pengilang & Perusahaan | Perdagangan Makanan Lebih Pantas",
-  "description": "T57 membantu pengilang dan perusahaan makanan mendigitalkan sumber bekalan, RFQ, pembayaran, pembiayaan perdagangan dan jejak audit dalam satu platform yang selamat.",
+  "title": "T57 untuk Pengilang & Perusahaan Makanan",
+  "description": "T57 membantu pengilang dan perusahaan makanan mendigitalkan sumber bekalan, RFQ, bayaran, pembiayaan perdagangan dan jejak audit dalam satu platform selamat.",
   "parent": "who-we-serve"
  },
  "food-processors": {
@@ -3232,8 +3232,8 @@
     "a": "Boleh. T57 memastikan data dagangan, pembayaran dan dokumentasi kekal terhubung dalam satu jejak audit, menyokong kawalan dalaman dan audit luaran. Ini membantu pemproses memenuhi keperluan dokumentasi pengawal selia dan rangka kerja pematuhan kewangan."
    }
   ],
-  "title": "T57 untuk Pemproses Makanan | Jaminan Bekalan & Pelaksanaan Dagangan",
-  "description": "T57 membantu pemproses makanan mendigitalkan sumber bekalan, RFQ, pembayaran, pembiayaan dan dokumen dalam satu platform, untuk input yang lebih stabil dan kitaran tunai yang lebih pantas.",
+  "title": "T57 untuk Pemproses Makanan | Bekalan Terjamin",
+  "description": "T57 membantu pemproses makanan mendigitalkan sumber bekalan, RFQ, bayaran, pembiayaan dan dokumen dalam satu platform, untuk bekalan lebih stabil.",
   "parent": "who-we-serve"
  },
  "cooperatives": {
@@ -3252,8 +3252,8 @@
     "a": "Tender kerajaan dan perjanjian pertanian kontrak mengunci permintaan dan garis masa, jadi ahli tahu apa yang perlu dihasilkan, bila hasil akan diambil dan atas terma apa, sekali gus membawa harga yang lebih konsisten dan kehilangan lepas tuai yang lebih rendah. T57 membantu ahli merancang jumlah dan campuran tanaman, memadankan bekalan dengan keperluan tender, menyelaraskan logistik dan dokumentasi, serta menjejaki pemenuhan dan pembayaran di satu tempat, menjadikan kemenangan tender dan kontrak manfaat yang dikongsi oleh setiap petani."
    }
   ],
-  "title": "T57 untuk Koperasi & Pertubuhan Peladang | Akses Pasaran dan Pembiayaan",
-  "description": "T57 membantu koperasi dan pertubuhan peladang berdagang secara terus, melihat harga semasa, mendapatkan pembiayaan, mengurus logistik dan menjalankan operasi yang boleh diaudit untuk ahli.",
+  "title": "T57 untuk Koperasi & Pertubuhan Peladang",
+  "description": "T57 membantu koperasi dan pertubuhan peladang berdagang terus, melihat harga semasa, mendapatkan pembiayaan dan mengurus logistik untuk ahli.",
   "parent": "who-we-serve"
  },
  "collaborators": {
@@ -3280,8 +3280,8 @@
     "a": "Dengan menyediakan akses kepada rakan kongsi yang dipercayai di sepanjang rantaian nilai, T57 membantu pengguna menyelaraskan matlamat mereka dengan sempadan dasar dan peraturan yang ditetapkan kerajaan."
    }
   ],
-  "title": "Rangkaian Rakan Kongsi & Rakan Kerjasama T57 | Ekosistem Makanan & Pertanian",
-  "description": "T57 menghimpunkan ahli agronomi, pembiaya, syarikat logistik, badan pensijilan dan universiti dalam satu platform yang disahkan untuk perdagangan makanan yang lebih pintar dan impak yang lebih besar.",
+  "title": "Rakan Kerjasama T57 | Ekosistem Makanan & Pertanian",
+  "description": "T57 menghimpunkan ahli agronomi, pembiaya, syarikat logistik, badan pensijilan dan universiti dalam satu platform perdagangan makanan disahkan.",
   "parent": "who-we-serve"
  },
  "service-providers": {
@@ -3308,8 +3308,8 @@
     "a": "Pembeli dan pengawal selia semakin mengharapkan kebolehkesanan, keselamatan makanan, dokumentasi yang boleh diharap dan penyelesaian isu yang lebih pantas di sepanjang rantaian bekalan. Ini menjadikan penyedia perkhidmatan bahagian penting dalam rantaian bekalan."
    }
   ],
-  "title": "T57 untuk Penyedia Perkhidmatan | Berkembang dalam Makanan dan Pertanian",
-  "description": "Sertai T57 sebagai penyedia perkhidmatan makanan dan pertanian. Capai permintaan yang disahkan, sampaikan kepakaran yang dipercayai dan berkembang melalui aliran kerja berstruktur yang berisiko lebih rendah.",
+  "title": "T57 untuk Penyedia Perkhidmatan Makanan & Pertanian",
+  "description": "Sertai T57 sebagai penyedia perkhidmatan makanan dan pertanian: capai permintaan yang disahkan dan berkembang melalui aliran kerja berstruktur.",
   "parent": "who-we-serve"
  },
  "farmers": {
@@ -3336,19 +3336,19 @@
     "a": "Bank Dunia menyatakan bahawa pembiayaan pertanian masih sangat terhad di banyak pasaran membangun disebabkan risiko, kos transaksi dan kesukaran melayani peminjam luar bandar yang berselerak. Oleh itu, model pembiayaan yang berkait dengan dagangan dan didayakan secara digital amat penting bagi pengeluar yang memerlukan modal kerja berasaskan pesanan sebenar."
    },
    {
-    "q": "Adakah risikan harga benar-benar penting di peringkat ladang?",
-    "a": "Ya. Apabila pengeluar tidak dapat melihat permintaan dan harga, mereka berunding dari kedudukan yang lebih lemah dan sering terlalu bergantung pada orang tengah. Model teras T57 menangani perkara ini secara langsung dengan meningkatkan akses kepada risikan pasaran dan harga."
+    "q": "Adakah analisis harga benar-benar penting di peringkat ladang?",
+    "a": "Ya. Apabila pengeluar tidak dapat melihat permintaan dan harga, mereka berunding dari kedudukan yang lebih lemah dan sering terlalu bergantung pada orang tengah. Model teras T57 menangani perkara ini secara langsung dengan meningkatkan akses kepada analisis pasaran dan harga."
    }
   ],
   "title": "T57 untuk Petani & Pengeluar | Akses Pasaran dan Alat AI",
-  "description": "T57 membantu petani dan pengeluar sampai kepada pembeli yang disahkan, melihat harga pasaran, memeterai kontrak yang selamat, menerima bayaran lebih cepat dan mengakses pembiayaan perdagangan.",
+  "description": "T57 membantu petani sampai kepada pembeli disahkan, melihat harga pasaran, memeterai kontrak selamat dan menerima bayaran lebih cepat.",
   "parent": "who-we-serve"
  },
  "about-investors": {
   "route": "/ms/about/investors",
   "section": "about",
   "name": "Perhubungan Pelabur",
-  "h1": "Labur dalam landasannya yang menjadi tunjang perdagangan makanan.",
+  "h1": "Labur dalam infrastruktur yang menjadi tunjang perdagangan makanan.",
   "answer": "T57 sedang mengumpul dana pusingan pelancarannya untuk membuka lima pasaran pengasas dari Riyadh. Pelabur yang layak boleh meminta pek pelabur hari ini.",
   "faqs": [],
   "title": "Perhubungan Pelabur | Melabur dalam T57",
@@ -3363,7 +3363,7 @@
   "answer": "Mengapa pengesahan dan kepercayaan, bukan janji vendor, yang sebenarnya dijual oleh platform dagangan.",
   "faqs": [],
   "title": "Memasarkan Infrastruktur Perdagangan, Bukan Produk | T57",
-  "description": "Ketahui mengapa T57 memasarkan kepercayaan dan bukan teknologi, menggunakan AI, blockchain, kontrak pintar dan kewangan digital untuk mentransformasi perdagangan makanan global.",
+  "description": "Mengapa T57 memasarkan kepercayaan, bukan teknologi, sambil menggunakan AI, kontrak pintar dan kewangan digital untuk perdagangan makanan global.",
   "post": {
    "author": "Umme Habeeba Khanum",
    "role": "Chief Marketing Officer",
@@ -3382,7 +3382,7 @@
   "answer": "Bagaimana rakan kongsi MoU dan LoI awal menjadi pereka bersama, dengan projek perintis yang terikat kepada hasil yang boleh diukur.",
   "faqs": [],
   "title": "Bagaimana MoU Gulfood Menjadi Mesin Pembelajaran | T57",
-  "description": "Bagaimana T57 menggunakan MoU dan LoI yang ditandatangani di Gulfood 2026 sebagai isyarat pasaran langsung untuk mencari pembeli berhasrat tinggi dan mempertajam strategi jualannya.",
+  "description": "Bagaimana T57 menggunakan MoU dan LoI yang ditandatangani di Gulfood 2026 sebagai isyarat pasaran untuk mencari pembeli dan mempertajam strategi jualan.",
   "post": {
    "author": "Mohammed Umair",
    "role": "Chief Sales Officer",
@@ -3396,12 +3396,12 @@
  "blog-future-of-ai-food-trade-t57": {
   "route": "/ms/resources/blog/future-of-ai-food-trade-t57",
   "section": "resources",
-  "name": "Mengapa 150 MoU + LoI di Gulfood 2026 Mengubah Matematik Pertumbuhan T57",
-  "h1": "Mengapa 150 MoU + LoI di Gulfood 2026 Mengubah Matematik Pertumbuhan T57",
-  "answer": "Apa makna 150 MoU dan surat hasrat yang dimeterai sebagai permintaan yang sudah layak.",
+  "name": "Mengapa Lebih 150 MoU dan LoI Mengubah Matematik Pertumbuhan T57",
+  "h1": "Mengapa Lebih 150 MoU dan LoI Mengubah Matematik Pertumbuhan T57",
+  "answer": "Apa makna lebih 150 MoU dan surat hasrat yang dimeterai, 120 daripadanya di Gulfood 2026, sebagai permintaan yang sudah layak.",
   "faqs": [],
   "title": "Mengapa 150 MoU Gulfood Mengubah Matematik Pertumbuhan T57 | T57",
-  "description": "T57 memperoleh 150 MoU dan LoI di Gulfood 2026, membuktikan permintaan global yang kukuh terhadap infrastruktur perdagangan makanan berkuasa AI sebelum pelancaran.",
+  "description": "T57 memeterai 120 MoU dan surat hasrat tidak mengikat di Gulfood 2026, sebahagian daripada lebih 150 di 67 negara: bukti permintaan awal.",
   "post": {
    "author": "Mohammed Umair",
    "role": "Chief Sales Officer",
@@ -3439,7 +3439,7 @@
   "answer": "Mengapa penemuan dan kontrak beralih daripada lantai pameran perdagangan ke platform dagangan berteraskan AI.",
   "faqs": [],
   "title": "Urus Niaga Makanan Sebelum Berjabat Tangan | T57 Insights",
-  "description": "Ketahui bagaimana AI, KYC/KYB dan pembiayaan terbenam mengubah perdagangan makanan dengan memungkinkan urus niaga yang lebih pantas dan dipercayai, sebelum acara dagangan fizikal bermula.",
+  "description": "Bagaimana AI, KYC/KYB dan pembiayaan terbenam membolehkan urus niaga makanan yang lebih pantas dan dipercayai, sebelum pameran dagangan bermula.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3534,7 +3534,7 @@
   "answer": "Mengapa keahlian terpilih dengan sejarah dagangan dan penarafan mengurangkan pertikaian.",
   "faqs": [],
   "title": "Mengapa Model Keahlian Kelab Membina Kepercayaan | T57",
-  "description": "Bagaimana keahlian kelab T57 yang disahkan membina kepercayaan, mengurangkan pertikaian dan mengubah dagangan pertanian melalui ahli yang disahkan, AI dan rekod yang kalis usik.",
+  "description": "Bagaimana keahlian kelab T57 yang disahkan membina kepercayaan dan mengurangkan pertikaian melalui ahli disahkan, AI dan rekod yang menunjukkan sebarang usikan.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3553,7 +3553,7 @@
   "answer": "Import avokado India yang berkembang pesat, dan jurang yang dihadapi penanam.",
   "faqs": [],
   "title": "Industri Avokado India yang Sedang Berkembang | T57 Insights",
-  "description": "Sektor avokado India sedang berkembang pesat, namun risiko seperti lebihan bekalan dan pasaran yang tidak selaras masih wujud. Ketahui bagaimana T57 memacu pertanian yang lebih bijak dan berasaskan data.",
+  "description": "Sektor avokado India berkembang pesat, tetapi risiko lebihan bekalan kekal. Bagaimana T57 membantu pertanian yang lebih bijak dan berasaskan data.",
   "post": {
    "author": "Abdul Bari Kareem",
    "role": "Co-founder & CTO",
@@ -3569,7 +3569,7 @@
   "section": "resources",
   "name": "Perubahan Struktur yang Akan Mentakrif Semula Pertanian Turki pada 2026",
   "h1": "Perubahan Struktur yang Akan Mentakrif Semula Pertanian Turki pada 2026",
-  "answer": "Tekanan terhadap sektor pertanian Türkiye, dan di mana risikan pasaran membantu.",
+  "answer": "Tekanan terhadap sektor pertanian Türkiye, dan di mana analisis pasaran membantu.",
   "faqs": [],
   "title": "Peralihan yang Mentakrif Semula Pertanian Turki 2026 | T57",
   "description": "Lima Peralihan Struktur yang Akan Mentakrif Semula Pertanian Turki pada 2026",
@@ -3588,9 +3588,9 @@
   "section": "resources",
   "name": "Bolehkah Blockchain Akhirnya Menutup Kos Global Pembaziran Makanan $1 Trilion Setahun?",
   "h1": "Bolehkah Blockchain Akhirnya Menutup Kos Global Pembaziran Makanan $1 Trilion Setahun?*",
-  "answer": "Bagaimana rekod dikongsi yang kalis usik boleh menjadikan rantaian bekalan makanan yang panjang boleh dipercayai.",
+  "answer": "Bagaimana rekod dikongsi yang menunjukkan sebarang usikan boleh menjadikan rantaian bekalan makanan yang panjang boleh dipercayai.",
   "faqs": [],
-  "title": "Bolehkah Blockchain Mengurangkan Kos Pembaziran Makanan $1T? | T57",
+  "title": "Bolehkah Blockchain Kurangkan Kos Pembaziran Makanan?",
   "description": "Ketahui bagaimana blockchain boleh membawa ketelusan kepada rantaian bekalan makanan, mengurangkan pembaziran dan membantu petani menerima nilai yang adil di pasaran global.",
   "post": {
    "author": "Abdul Bari Kareem",
@@ -3610,7 +3610,7 @@
   "answer": "Sara diri, risiko iklim dan pematuhan EUDR di Malaysia.",
   "faqs": [],
   "title": "Lima Kuasa yang Mencorak Semula Pertanian Malaysia | T57",
-  "description": "Lima peralihan yang mengubah pertanian Malaysia pada 2026, ke arah rantaian bekalan yang bernilai lebih tinggi, berdaya tahan dan boleh dikesan bagi menyokong sekuriti makanan dan pendapatan luar bandar.",
+  "description": "Lima peralihan yang mengubah pertanian Malaysia pada 2026, ke arah rantaian bekalan bernilai tinggi, berdaya tahan dan boleh dikesan.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3686,7 +3686,7 @@
   "answer": "Bayaran lewat dan pertikaian, dan bagaimana terma dipersetujui yang dilaksanakan sendiri boleh menyelesaikannya.",
   "faqs": [],
   "title": "Bagaimana Kontrak Pintar Memulihkan Kepercayaan | T57",
-  "description": "Kontrak pintar membina kepercayaan melalui kod yang berjalan sebaik syarat dipersetujui dipenuhi, mengautomasikan pengesahan penghantaran, semakan kualiti dan pelepasan bayaran.",
+  "description": "Kontrak pintar membina kepercayaan dengan mengautomasikan pengesahan penghantaran, semakan kualiti dan pelepasan bayaran apabila syarat dipenuhi.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3743,7 +3743,7 @@
   "answer": "Lima perkembangan yang mencorak perdagangan pertanian dan sekuriti makanan India.",
   "faqs": [],
   "title": "5 Peralihan Strategik bagi Ladang India pada 2026 | T57",
-  "description": "Terokai lima peralihan strategik yang membentuk semula pertanian India pada 2026, daripada daya tahan iklim dan agri-stack hingga bahan api bio, logistik dan permintaan makanan global.",
+  "description": "Lima peralihan strategik pertanian India pada 2026: daya tahan iklim, agri-stack, bahan api bio, logistik dan permintaan makanan global.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3762,7 +3762,7 @@
   "answer": "Apa makna MoU T57–MAIB bagi petani dan usahawan tani.",
   "faqs": [],
   "title": "Bagaimana Pakatan Kewangan Agri Digital Membantu | T57",
-  "description": "Ketahui bagaimana pembiayaan perdagangan dipacu AI sedang mengubah pertanian global dengan meningkatkan kecairan, ketelusan dan akses kepada modal bagi petani dan pedagang.",
+  "description": "Apa makna MoU T57–MAIB bagi petani dan usahawan tani, dan bagaimana pakatan kewangan agri digital meluaskan akses kepada modal.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3800,7 +3800,7 @@
   "answer": "Jurang pembiayaan perdagangan yang menyebabkan perniagaan pertanian kekurangan dana.",
   "faqs": [],
   "title": "Mencorak Semula Pembiayaan Perdagangan bagi Pertanian | T57",
-  "description": "Ketahui bagaimana pembiayaan perdagangan dipacu AI sedang mengubah pertanian global dengan meningkatkan kecairan, ketelusan dan akses kepada modal bagi petani dan pedagang.",
+  "description": "Mengapa PKS pertanian kekurangan dana akibat jurang pembiayaan perdagangan, dan bagaimana rekod dagangan disahkan membantu pemberi pinjaman berlesen.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",

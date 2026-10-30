@@ -25,7 +25,7 @@ def articles():
         <div class="actions"><a class="btn btn-world" href="#cta-about-investors" data-form="invest">Request the investor pack</a><a class="btn btn-ghost" href="#inv-why">Why T57, why now</a></div>
       </div>
       <div class="glance hcard" role="group" aria-label="T57 at a glance for investors"><p class="gl-h">T57 at a glance</p><dl class="hc-rows">
-        <div><dt>Built in</dt><dd>Saudi Arabia: started in Madinah, headquartered in Riyadh</dd></div>
+        <div><dt>Built in</dt><dd>Saudi Arabia: started in Madinah, headquarters moving to Riyadh</dd></div>
         <div><dt>Traction</dt><dd>34 pilot shipments on the live beta, about $1M of trade</dd></div>
         <div><dt>Pipeline</dt><dd>150+ MoUs and letters of intent from 67 countries</dd></div>
         <div><dt>Model</dt><dd>Subscriptions plus a small fee on completed trades</dd></div>

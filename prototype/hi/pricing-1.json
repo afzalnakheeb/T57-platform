@@ -226,7 +226,7 @@
 "Advanced": "एडवांस्ड",
 "Market intelligence": "बाज़ार इंटेलिजेंस",
 "Price index": "मूल्य सूचकांक",
-"Price index and supply status by origin": "मूल के हिसाब से मूल्य सूचकांक और आपूर्ति की स्थिति",
+"Price index and supply status by origin": "मूल देश के हिसाब से मूल्य सूचकांक और आपूर्ति की स्थिति",
 "Plus forecasting and route analysis": "साथ में पूर्वानुमान और मार्ग विश्लेषण",
 "Plus custom models and reports": "साथ में कस्टम मॉडल और रिपोर्ट",
 "Data services (credit reports, verified trade history, HS codes)": "डेटा सेवाएँ (क्रेडिट रिपोर्ट, सत्यापित व्यापार इतिहास, HS कोड)",
@@ -278,5 +278,6 @@
 "Talk to sales": "सेल्स टीम से बात करें",
 "Membership Plans & Pricing": "सदस्यता प्लान और प्राइसिंग",
 "Billing": "बिलिंग",
-"Plan comparison": "प्लान की तुलना"
+"Plan comparison": "प्लान की तुलना",
+"Fees for listings and leads that never become trades.": "उन लिस्टिंग और लीड की फ़ीस जो कभी सौदे में नहीं बदलतीं।"
 }

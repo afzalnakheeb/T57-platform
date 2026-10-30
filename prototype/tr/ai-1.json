@@ -73,7 +73,7 @@
 "Generic, global": "Genel, küresel",
 "Small, local, food-trained": "Küçük, yerel, gıda için eğitilmiş",
 "Explained, reviewed by people": "Açıklanabilir, insanlarca incelenir",
-"AI-Native Food Trade Platform | How T57 Uses AI": "Yapay Zekâ Temelli Gıda Ticareti Platformu | T57 Yapay Zekâyı Nasıl Kullanıyor",
+"AI-Native Food Trade Platform | How T57 Uses AI": "Yapay Zekâ Temelli Gıda Ticaret Platformu | T57",
 "Small, local AI models for matching, pricing, forecasting, compliance and documents across food trade. AI advises, people decide, on T57.": "Gıda ticareti genelinde eşleştirme, fiyatlama, tahmin, uyum ve belgeler için küçük, yerel yapay zekâ modelleri. T57'de yapay zekâ önerir, insanlar karar verir.",
 "Farming advice in your language,": "Kendi dilinizde tarım tavsiyesi,",
 "in minutes.": "dakikalar içinde.",
@@ -134,7 +134,7 @@
 "Small local language and vision models": "Küçük, yerel dil ve görüntü modelleri",
 "A plain-language answer, with confidence": "Güven düzeyiyle birlikte sade bir yanıt",
 "Uncertain cases go to an agronomist": "Belirsiz vakalar ziraat mühendisine gider",
-"AI Agronomy Advice for Farmers | T57 AI Native": "Çiftçiler İçin Yapay Zekâ Tarım Danışmanlığı | T57 Yapay Zekâ Temelli",
+"AI Agronomy Advice for Farmers | T57 AI Native": "Çiftçiler İçin Yapay Zekâ Tarım Danışmanlığı | T57",
 "Instant crop advice in local languages from AI, with verified agronomists for complex cases. Photo and voice diagnosis for farmers on T57.": "T57'de çiftçiler için yerel dillerde yapay zekâdan anında ürün tavsiyesi, karmaşık vakalar için doğrulanmış ziraat mühendisleri. Fotoğrafla ve sesle teşhis.",
 "See where your business": "İşletmenizin nereye",
 "is heading.": "gittiğini görün.",
@@ -209,7 +209,7 @@
 "People make the decisions": "Kararları insanlar verir",
 "AI prepares and recommends, analysts decide, and every adverse decision is reviewed by a person and can be appealed.": "Yapay zekâ hazırlar ve önerir, analistler karar verir; her olumsuz karar bir insan tarafından incelenir ve itiraz edilebilir.",
 "Built for regulators": "Düzenleyici kurumlar için tasarlandı",
-"Every check is recorded with its evidence on a tamper-evident trail, which supports audits by partners and authorities.": "Her kontrol kanıtıyla birlikte değişikliğe karşı korumalı bir kayıt izine işlenir; bu da iş ortaklarının ve idarelerin denetimlerini destekler.",
+"Every check is recorded with its evidence on a tamper-evident trail, which supports audits by partners and authorities.": "Her kontrol kanıtıyla birlikte her değişikliğin izlendiği bir kayıt izine işlenir; bu da iş ortaklarının ve idarelerin denetimlerini destekler.",
 "Responsible AI": "Sorumlu yapay zekâ",
 "Screening models are tested for false matches and bias across names and languages.": "Tarama modelleri isimler ve diller genelinde hatalı eşleşmelere ve yanlılığa karşı test edilir.",
 "Can AI reject my application?": "Yapay zekâ başvurumu reddedebilir mi?",
@@ -226,6 +226,8 @@
 "Document, entity-matching and risk models": "Belge, kimlik eşleştirme ve risk modelleri",
 "Cross-checked data and a recommendation": "Çapraz kontrol edilmiş veriler ve bir öneri",
 "An analyst makes the decision": "Kararı bir analist verir",
-"AI-Powered KYC, KYB & Compliance Screening | T57 AI Native": "Yapay Zekâ Destekli KYC, KYB ve Uyum Taraması | T57 Yapay Zekâ Temelli",
-"AI document checks, ownership matching and sanctions screening for food businesses, with people reviewing every adverse decision, on T57.": "T57'de gıda işletmeleri için yapay zekâ ile belge kontrolü, ortaklık eşleştirme ve yaptırım taraması; her olumsuz kararı insanlar inceler."
+"AI-Powered KYC, KYB & Compliance Screening | T57 AI Native": "Yapay Zekâ ile KYC, KYB ve Uyum Taraması | T57",
+"AI document checks, ownership matching and sanctions screening for food businesses, with people reviewing every adverse decision, on T57.": "T57'de gıda işletmeleri için yapay zekâ ile belge kontrolü, ortaklık eşleştirme ve yaptırım taraması; her olumsuz kararı insanlar inceler.",
+"Jeddah food trader spots a cash crunch early": "Ciddeli bir gıda tüccarı nakit sıkışıklığını erkenden fark ediyor",
+"A Jeddah food trader discovered a cash shortfall only when it could not pay a supplier, after two buyers paid late in the same month.": "Ciddeli bir gıda tüccarı, iki alıcının aynı ay geç ödemesinin ardından bir tedarikçiye ödeme yapamayınca nakit açığını ancak o zaman fark etti."
 }

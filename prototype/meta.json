@@ -457,19 +457,19 @@
  },
  "res-reports": {
   "title": "Reports & Whitepapers | Food Trade Research | T57",
-  "description": "In-depth research on food trade corridors, SME trade finance, responsible AI and food security."
+  "description": "In-depth T57 research on food trade corridors, SME trade finance, responsible AI and food security, for policymakers, banks and food businesses."
  },
  "res-newsroom": {
   "title": "Newsroom | T57 News and Media Resources",
-  "description": "T57 announcements, partnerships, events and media resources for journalists."
+  "description": "T57 news, announcements and partnerships, with press releases, media resources and contacts for journalists covering digital food trade."
  },
  "res-videos": {
   "title": "Explainer Videos | How T57 Works",
   "description": "Short videos on T57 and digital food trade: verification, the trade record, escrow, letters of credit and responsible AI."
  },
  "res-events": {
-  "title": "Webinars & Events | T57",
-  "description": "Live webinars, market briefings and trade events where you can meet T57's teams."
+  "title": "Food Trade Webinars & Events | T57",
+  "description": "Live T57 webinars, market briefings and trade shows on digital food trade, trade finance and food security, where you can meet our market teams."
  },
  "res-glossary": {
   "title": "FAQ & Glossary | Food Trade Terms Explained | T57",
@@ -484,7 +484,7 @@
   "description": "How to trade on T57: quotes, contracts, documents, escrow, letters of credit, finance, logistics, team settings and market intelligence."
  },
  "help-faq": {
-  "title": "FAQs | T57 Help Center",
+  "title": "Help Center FAQs: Joining, Trading & Payments | T57",
   "description": "Answers about T57 accounts, free trial, plans and billing, verification, trading, payments, documents and security."
  },
  "help-contact": {
@@ -501,7 +501,7 @@
  },
  "partners-technology": {
   "title": "Technology Partners | T57",
-  "description": "Partner with T57 in cloud, identity, data, integration and AI to serve verified food businesses."
+  "description": "Partner with T57 in cloud, identity, data, integration and AI, and help verified food businesses trade, finance and ship on one trade record."
  },
  "partners-finance": {
   "title": "Financial Services Partners | Finance & Insurance | T57",
@@ -512,8 +512,8 @@
   "description": "Freight, cold chain, warehouse, inspection and customs partners serve verified food traders from inside the T57 trade record."
  },
  "partners-apply": {
-  "title": "Become a Partner | T57",
-  "description": "Apply to partner with T57 in finance, insurance, logistics, inspection or technology."
+  "title": "Become a T57 Partner | Finance, Logistics & Technology",
+  "description": "Apply to partner with T57 in trade finance, insurance, logistics, inspection or technology, and serve verified food businesses on one trade record."
  },
  "about": {
   "title": "About T57 | AI-Native Digital Trade Infrastructure for Food",
@@ -540,16 +540,16 @@
   "description": "Join T57's teams in technology, AI, product, country operations and partnerships across five founding markets."
  },
  "about-media": {
-  "title": "Media & Press Kit | T57",
-  "description": "T57 company facts, logos, leadership photos and press contacts for journalists."
+  "title": "Media & Press Kit | T57 Fact Sheet and Press Contacts",
+  "description": "The T57 fact sheet, logos, leadership photos, press coverage and media contacts for journalists covering digital food trade and food security."
  },
  "contact": {
-  "title": "Contact T57",
-  "description": "Contact T57 to join, see a demo, partner, work with us on food security, or for media enquiries."
+  "title": "Contact T57 | Apply, Partner or Request a Demo",
+  "description": "Contact T57 to apply for membership, book a demo, become a partner, work with us on food security, or reach the press team."
  },
  "contact-demo": {
-  "title": "Request a Demo | T57",
-  "description": "Book a 30-minute T57 demo on your own products and markets, then start your free trial."
+  "title": "Request a T57 Demo | Verified Food Trade Platform",
+  "description": "Book a 30-minute T57 demo on your own products and markets: verified suppliers, RFQs, contracts, trade finance and logistics on one trade record."
  },
  "contact-offices": {
   "title": "Where T57 Works | Global SaaS, Five Pilot Markets",
@@ -577,6 +577,6 @@
  },
  "about-journey": {
   "title": "Our Journey: Agreements, Partnerships and Keynotes | T57",
-  "description": "The T57 timeline since 2023: the IOFS agreements, MoUs with governments and development banks, 150 MoUs at Gulfood 2026 and keynotes from Cape Town to Yinchuan."
+  "description": "The T57 timeline since 2023: the IOFS agreement, MoUs with governments and development banks, 120 MoUs at Gulfood 2026 and keynotes worldwide."
  }
 }

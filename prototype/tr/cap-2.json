@@ -60,7 +60,7 @@
 "Confirmed before commitment": "Taahhütten önce onaylanır",
 "None": "Yok",
 "Linked to the trade record": "Ticaret kaydına bağlı",
-"WhatsApp & AI Chat Ordering for Food Businesses | T57": "Gıda İşletmeleri İçin WhatsApp ve Yapay Zekâ ile Sohbetten Sipariş | T57",
+"WhatsApp & AI Chat Ordering for Food Businesses | T57": "WhatsApp ve Yapay Zekâ ile Gıda Siparişi | T57",
 "Order food by WhatsApp message or voice note. AI turns plain language into confirmed, structured orders on your T57 trade record.": "Gıdayı WhatsApp mesajı ya da sesli mesajla sipariş edin. Yapay zekâ gündelik dili T57 ticaret kaydınızda onaylı, yapılandırılmış siparişlere dönüştürür.",
 "with confidence.": "güvenle.",
 "Pay and get paid with confidence, on terms both sides can see and trust.": "İki tarafın da görüp güvenebileceği şartlarla, güvenle ödeyin ve ödemenizi alın.",
@@ -114,7 +114,7 @@
 "Escrow or eLC from the contract": "Sözleşmeden emanet hesabı ya da e-akreditif",
 "Cut off from the trade": "İşlemden kopuk",
 "Linked to milestones": "Aşamalara bağlı",
-"Trust & Payments for Food Trade | Escrow, Wallets, eLC | T57": "Gıda Ticareti İçin Güven ve Ödemeler | Emanet Hesabı, Cüzdan, E-akreditif | T57",
+"Trust & Payments for Food Trade | Escrow, Wallets, eLC | T57": "Güven ve Ödemeler: Emanet, Cüzdan, E-akreditif | T57",
 "Escrow, wallets in any currency and electronic letters of credit from licensed partners, tied to milestones on one verified T57 trade record.": "Lisanslı iş ortaklarından emanet hesabı, her para biriminde cüzdanlar ve elektronik akreditifler; tek bir doğrulanmış T57 ticaret kaydındaki aşamalara bağlı.",
 "Payment held safely": "Mal doğru olana kadar",
 "until the goods are right.": "ödeme güvende tutulur.",
@@ -246,7 +246,7 @@
 "Days": "Günler",
 "Near-instant between members": "Üyeler arasında neredeyse anında",
 "Matched to invoices": "Faturalarla eşleşmiş",
-"Digital Wallet for Food Trade Payments | Any Currency | T57": "Gıda Ticareti Ödemeleri İçin Dijital Cüzdan | Her Para Birimi | T57",
+"Digital Wallet for Food Trade Payments | Any Currency | T57": "Gıda Ticareti Ödemeleri İçin Dijital Cüzdan | T57",
 "Pay suppliers and partners and get paid by buyers in any currency, with near-instant member payments and automatic reconciliation on T57.": "T57'de tedarikçilere ve iş ortaklarına ödeme yapın, alıcılardan her para biriminde tahsilat alın; üyeler arasında neredeyse anında ödeme ve otomatik mutabakat.",
 "Letters of credit built from your contract, issued digitally and presented without paper.": "Sözleşmenizden oluşturulan, dijital olarak açılan ve kâğıtsız ibraz edilen akreditifler.",
 "Animation in three steps. Today: paper lcs: slow and error-prone. With T57: apply from contract, bank issues, present and pay. The result: fewer discrepancies and no couriers.": "Üç adımlık animasyon. Bugün: kâğıt akreditifler yavaş ve hataya açık. T57 ile: sözleşmeden başvurun, banka açsın, ibraz edin ve ödeme alın. Sonuç: daha az uyumsuzluk ve kurye yok.",
@@ -303,5 +303,8 @@
 "Checked before presentation": "İbrazdan önce kontrol edilir",
 "Presented digitally": "Dijital olarak ibraz edilir",
 "Electronic Letter of Credit (eLC) for Food Trade | T57": "Gıda Ticareti İçin Elektronik Akreditif (e-akreditif) | T57",
-"LCs built from your contract, issued by partner banks in about 15 minutes after approval, with AI discrepancy checks and digital presentation on T57.": "Sözleşmenizden oluşturulan, onaydan sonra iş ortağı bankalarca yaklaşık 15 dakikada açılan akreditifler; T57'de yapay zekâ ile uyumsuzluk kontrolü ve dijital ibraz."
+"LCs built from your contract, issued by partner banks in about 15 minutes after approval, with AI discrepancy checks and digital presentation on T57.": "Sözleşmenizden oluşturulan, onaydan sonra iş ortağı bankalarca yaklaşık 15 dakikada açılan akreditifler; T57'de yapay zekâ ile uyumsuzluk kontrolü ve dijital ibraz.",
+"Riyadh restaurant group reorders produce by voice note": "Riyadlı bir restoran grubu sebzeyi sesli mesajla yeniden sipariş ediyor",
+"The head chef of a Riyadh restaurant group sends a voice note in Arabic: \"Same vegetables as Monday, but double the tomatoes, deliver tomorrow morning.\" T57's AI matches the request to Monday's order with a verified local supplier, doubles the tomatoes and shows a summary. The chef confirms with one tap, the supplier receives a structured order, and the delivery and invoice are recorded automatically.": "Riyadlı bir restoran grubunun şefi Arapça bir sesli mesaj gönderiyor: \"Pazartesi gelen sebzelerin aynısı, ama domates iki katı olsun, yarın sabah teslim.\" T57'nin yapay zekâsı talebi doğrulanmış yerel bir tedarikçiye verilen pazartesi siparişiyle eşleştiriyor, domatesi iki katına çıkarıyor ve bir özet gösteriyor. Şef tek dokunuşla onaylıyor, tedarikçi yapılandırılmış bir sipariş alıyor; teslimat ve fatura otomatik olarak kaydediliyor.",
+"Funds are held by regulated escrow providers, never by T57. For both sides, this means money is held separately by a regulated provider.": "Fonlar asla T57'de değil, düzenlemeye tabi emanet hesabı sağlayıcılarında tutulur. İki taraf için de bu, paranın düzenlemeye tabi bir sağlayıcıda ayrı tutulması demektir."
 }

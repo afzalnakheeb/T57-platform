@@ -15,7 +15,7 @@
 "Offer accepted": "قُبل العرض",
 "Paid on delivery": "دُفع عند التسليم",
 "Your share": "نصيبك",
-"Improve revenue with direct market access, better price visibility, trusted AI tools and faster finance": "زِد دخلك: سوق مفتوحة أمامك مباشرة، وأسعار واضحة، وأدوات ذكية موثوقة، وتمويل أسرع",
+"Improve revenue with direct market access, better price visibility, trusted AI tools and faster finance": "زِد دخلك: وصول مباشر إلى الأسواق، وأسعار واضحة، وأدوات ذكية موثوقة، وتمويل أسرع",
 "Farmers and producers do the hardest work in the food system, yet too often capture the least value. T57 is built to help you reach verified buyers and trade with more confidence, from crop planning to payment.": "المزارعون والمنتجون يبذلون الجهد الأكبر في منظومة الغذاء، وكثيرًا ما ينالون النصيب الأصغر. وT57 وُجدت لتصلك بمشترين موثَّقين، فتبيع بثقة أكبر، من التخطيط للموسم حتى قبض الثمن.",
 "A fragmented trade system leaves producers with the least value": "تجارة متشعبة تترك للمنتج أقل القليل",
 "T57 exists to solve a fragmented trade system that leaves farmers and producers with limited market access, weak price discovery, delayed payments, and poor access to practical finance and advanced technology. Sell at home too: <a href=\"/platform/domestic-trade\" data-go=\"platform-domestic\">list your products for local supermarkets, restaurants and offices</a>.": "وُجدت T57 لتعالج تجارة متشعبة تترك المزارع والمنتج بأسواق محدودة، وأسعار لا يعرفها، ومستحقات تتأخر، وتمويل وتقنيات حديثة بعيدة المنال. وبِع في سوقك المحلي أيضًا: <a href=\"/platform/domestic-trade\" data-go=\"platform-domestic\">اعرض منتجاتك للمتاجر الكبرى والمطاعم والشركات في بلدك</a>.",
@@ -34,7 +34,7 @@
 "Club-based curation, smart contracts and just-in-time finance connect you with verified buyers.": "نادٍ منتقى الأعضاء، وعقود ذكية، وتمويل في وقته، تصلك بمشترين موثَّقين.",
 "Complete deals securely": "أتمّ صفقتك بأمان",
 "Trade finance, escrow, document management and faster settlement, all traceable.": "تمويل للتجارة، وحساب ضمان، وتنظيم للمستندات، وسداد أسرع، وكل ذلك قابل للتتبع.",
-"Trust by design": "الثقة جزء من التصميم",
+"Trust by design": "الثقة في أساس المنصة",
 "Every step of your trade, on one shared record": "كل خطوة في صفقتك، في سجل مشترك واحد",
 "T57 moves you from finding a buyer to offer, contract, logistics and payment, while AI reads price, demand and risk along the way.": "ترافقك T57 من إيجاد المشتري إلى العرض والعقد والشحن والسداد، والذكاء الاصطناعي يقرأ السعر والطلب والمخاطر في كل مرحلة.",
 "Buyer match": "مطابقة مع المشتري",
@@ -75,6 +75,8 @@
 "Late, little finance": "تمويل قليل ومتأخر",
 "Paid faster, finance when needed": "سداد أسرع، وتمويل عند الحاجة",
 "Live scene: the field grows as AI reads each row": "مشهد حي: الحقل ينمو والذكاء الاصطناعي يقرأ كل صف",
-"T57 for Farmers & Producers | Market Access and AI Tools": "T57 للمزارعين والمنتجين | سوق مفتوحة وأدوات ذكية",
-"T57 helps farmers and producers reach verified buyers, see market prices, sign secure contracts, get paid faster and access trade finance.": "تساعد T57 المزارعين والمنتجين على الوصول إلى مشترين موثَّقين، ومعرفة أسعار السوق، وتوقيع عقود مضمونة، وقبض مستحقاتهم أسرع، والحصول على تمويل لتجارتهم."
+"T57 for Farmers & Producers | Market Access and AI Tools": "T57 للمزارعين والمنتجين | وصول مباشر إلى الأسواق وأدوات ذكية",
+"T57 helps farmers and producers reach verified buyers, see market prices, sign secure contracts, get paid faster and access trade finance.": "تساعد T57 المزارعين والمنتجين على الوصول إلى مشترين موثَّقين، ومعرفة أسعار السوق، وتوقيع عقود مضمونة، وقبض مستحقاتهم أسرع، والحصول على تمويل لتجارتهم.",
+"Through partners": "عبر الشركاء",
+"Through specialist partners, farmers earn from the carbon their land captures. It is measured, verified and sold to companies that must offset their emissions.": "عبر شركاء متخصصين، يحقق المزارع دخلًا من الكربون الذي تختزنه أرضه، إذ يُقاس ويُوثَّق ويُباع للشركات الملزمة بتعويض انبعاثاتها."
 }

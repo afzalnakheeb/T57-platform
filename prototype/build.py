@@ -109,7 +109,8 @@ def one_hero(i, art):
         out.append(p); out.extend(ins.get(n, []))
     return ''.join(parts[:h + 1] + out)
 
-text = lambda s: re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
+# plain text for metadata and structured data (the Arabic right-to-left marks belong only in the visible page)
+text = lambda s: re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s))).replace('\u200f', '').strip()
 pages, ARTS = {}, {}
 for m in re.finditer(r'(<article class="world" id="([a-z0-9-]+)".*?</article>)', worlds, re.S):
     art, i = m.group(1), m.group(2)
@@ -262,18 +263,40 @@ os.makedirs(f'{R}/public/proto', exist_ok=True)
 names = {i: html.unescape(re.search(r'aria-label="([^"]+)"', a).group(1)) for i, a in arts}
 open(f'{R}/public/proto/worlds.js', 'w').write(f'window.T57_PAGES = {json.dumps({"petal": PETAL, "name": names, "parent": {k: v for k, v in PARENT.items() if v}, "site": {i: (i if p['route'].startswith('/who-we-serve/') else {'partners': 'partnerships', '': 'home'}.get(p['section'], p['section'])) for i, p in pages.items()}}, ensure_ascii=False)};\n' + open(f'{D}/script.js').read())
 
-# llms.txt: a plain summary that AI assistants can read and cite (llmstxt.org format)
+# llms.txt (llmstxt.org): a short index that AI assistants can read and cite: what T57 is, the facts, and the main pages.
+# llms-full.txt carries every page and the common questions.
 SITE = 'https://www.t57.ai'
-L = ['# T57.ai', '', '> T57 is an AI-native digital trade platform for food. It connects verified farmers, processors, traders, buyers, financiers, service providers and regulators on one trade record, from quote to payment. T57 does not lend or hold funds; finance, escrow and insurance come from licensed partners.', '',
-     'T57 works with the Islamic Organization for Food Security (IOFS), an OIC institution, under a 10-year memorandum of understanding, and has signed more than 150 memoranda and letters of intent across 67 countries. Founding markets: Saudi Arabia, UAE, India, Malaysia and Türkiye.']
-for sec, head in [('who-we-serve', 'Who we serve'), ('why-t57', 'Why T57'), ('capabilities', 'Capabilities'), ('ai-native', 'AI Native'), ('platform', 'Platform'), ('trust', 'Trust and compliance'), ('markets', 'Markets'), ('pricing', 'Pricing'), ('resources', 'Resources'), ('help', 'Help Center'), ('partnerships', 'Partnerships'), ('partners', 'Partner programs'), ('about', 'About T57'), ('contact', 'Contact')]:
+HEAD = ['# T57', '', '> T57 is an AI-native digital trade platform for food. Started in Madinah, Saudi Arabia, it puts verified farmers, processors, traders, buyers, banks and logistics firms on one trade record, from quote to payment. T57 does not lend, hold funds or own goods; finance, escrow and insurance come through licensed partners.', '',
+        '## Facts', '',
+        '- A Saudi initiative: started in Madinah, headquarters moving to Riyadh. A global SaaS platform, piloting in five founding markets: Saudi Arabia, UAE, India, Malaysia and Türkiye.',
+        '- Founder and Chairman: Afzal Hussain Mohammed Nakheeb.',
+        '- A members-only verified trade club: every member passes KYC/KYB and is labeled by role; every trade runs on one tamper-evident trade record.',
+        '- Works with the Islamic Organization for Food Security (IOFS), an OIC institution, under a 10-year memorandum of understanding signed in June 2023.',
+        '- More than 150 non-binding MoUs and letters of intent from companies in 67 countries, 120 of them signed at Gulfood 2026.',
+        '- Five industries on one trade record: agriculture and food production, trade, logistics, finance and technology.',
+        '- Contact: hello@t57.ai, +966 56 971 22 22.']
+SECS = [('who-we-serve', 'Who we serve'), ('why-t57', 'Why T57'), ('capabilities', 'Capabilities'), ('ai-native', 'AI Native'), ('platform', 'Platform'), ('trust', 'Trust and compliance'), ('markets', 'Markets'), ('pricing', 'Pricing'), ('resources', 'Resources'), ('help', 'Help Center'), ('partnerships', 'Partnerships'), ('partners', 'Partner programs'), ('about', 'About T57'), ('contact', 'Contact')]
+line = lambda p: f'- [{html.unescape(p["name"])}]({SITE}{p["route"]}): {p["answer"]}'
+L = HEAD + ['', '## Main pages', '']
+for i, p in pages.items():
+    if i == 'home' or p['route'].count('/') == 1 and i not in POSTS: L.append(line(p))
+L += ['', '## Who T57 serves', ''] + [line(pages[k]) for k in KIDS.get('who-we-serve', [])]
+L += ['', '## Founding markets', ''] + [line(p) for i, p in pages.items() if re.fullmatch(r'/markets/[a-z-]+/overview', p['route'])]
+L += ['', '## Languages', '', f'- العربية: {SITE}/ar', f'- Bahasa Malaysia: {SITE}/ms', f'- Türkçe: {SITE}/tr', f'- हिन्दी: {SITE}/hi',
+      '', '## More', '', f'- [Every page and common questions]({SITE}/llms-full.txt)']
+open(f'{R}/public/llms.txt', 'w').write('\n'.join(L) + '\n')
+L = HEAD[:]
+for sec, head in SECS:
     L += ['', f'## {head}', '']
     for i, p in pages.items():
-        if p['section'] == sec: L.append(f'- [{p["name"]}]({SITE}{p["route"]}): {p["answer"]}')
+        if p['section'] == sec: L.append(line(p))
 L += ['', '## Common questions', '']
+seen = set()
 for i, p in pages.items():
-    for f in p['faqs'][:2]: L.append(f'- [{f["q"]}]({SITE}{p["route"]}): {f["a"]}')
-open(f'{R}/public/llms.txt', 'w').write('\n'.join(L) + '\n')
+    for f in p['faqs'][:2]:
+        if f['q'] in seen: continue
+        seen.add(f['q']); L.append(f'- [{f["q"]}]({SITE}{p["route"]}): {f["a"]}')
+open(f'{R}/public/llms-full.txt', 'w').write('\n'.join(L) + '\n')
 print('built', len(pages), 'pages,', n[0], 'ledgers')
 
 # Other languages: a page is built under /<lang> once every text unit on it, and its title and description,
@@ -309,13 +332,18 @@ for lang in LANGS:
     for i, art in done.items():
         if lang == 'ar':  # redone films have their own Arabic cut and captions
             art = re.sub(r'/video/([a-z0-9-]+)\.en\.', r'/video/\1.ar.', art).replace('srclang="en" label="English"', 'srclang="ar" label="العربية"')
+        else:  # the English cut, with captions in this language wherever they exist
+            CAP = {'ms': 'Bahasa Malaysia', 'tr': 'Türkçe', 'hi': 'हिन्दी'}
+            art = re.sub(r'<track kind="captions" srclang="en" label="English" src="/video/([a-z0-9-]+)\.en\.vtt" default>',
+                         lambda m: f'<track kind="captions" srclang="{lang}" label="{CAP[lang]}" src="/video/{m.group(1)}.{lang}.vtt" default>'
+                         if os.path.exists(f'{R}/public/video/{m.group(1)}.{lang}.vtt') else m.group(0), art)
         open(f'{R}/content/{lang}/pages/{i}.html', 'w').write(relang(art))
         h1 = text(re.search(r'<h1[^>]*>(.*?)</h1>', art, re.S).group(1))
         std = text(re.search(r'<p class="std">(.*?)</p>', art, re.S).group(1))
         faqs = [{'q': text(q), 'a': text(x)} for q, x in re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p></details>', art, re.S)]
         name = html.unescape(re.search(r'aria-label="([^"]+)"', art).group(1))
         lp[i] = dict(pages[i], route=pre(pages[i]['route']), name=tr.get('Home', 'Home') if i == 'home' else name, h1=h1, answer=std, faqs=faqs,
-                     title=tr[pages[i]['title']], description=tr[pages[i]['description']])
+                     title=tr[pages[i]['title']].replace('\u200f', ''), description=tr[pages[i]['description']].replace('\u200f', ''))
     json.dump(lp, open(f'{R}/content/{lang}/pages.json', 'w'), indent=1, ensure_ascii=False)
     # the site search index for this language: translated pages only, in the same shape as search.json
     sec_l = lambda i: re.sub(r' Overview$', '', lp[sec_of(i)]['name']) if sec_of(i) != i and sec_of(i) in lp else ''

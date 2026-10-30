@@ -28,7 +28,7 @@
    }
   ],
   "title": "T57 | Gıda İçin Yapay Zekâ Temelli Dijital Ticaret Altyapısı",
-  "description": "Tek kayıtta doğrulanmış gıda ticareti: çiftçiler, işleyiciler, tüccarlar ve alıcılar için teklif talepleri, sözleşmeler, ticaret finansmanı, sigorta, gözetim ve lojistik."
+  "description": "Tek kayıtta doğrulanmış gıda ticareti: çiftçi, işleyici, tüccar ve alıcılar için teklif talebi, sözleşme, ticaret finansmanı, sigorta, gözetim ve lojistik."
  },
  "who-we-serve": {
   "route": "/tr/who-we-serve",
@@ -113,7 +113,7 @@
    }
   ],
   "title": "Gıda Ticareti İçin Teklif Talebi Süreci | T57",
-  "description": "T57'de doğrulanmış gıda tedarikçilerine tek bir yapılandırılmış teklif talebi gönderin, birebir kıyaslanabilir teklifleri karşılaştırın ve en iyi teklifi sözleşmeye dönüştürün.",
+  "description": "Doğrulanmış gıda tedarikçilerine tek bir teklif talebi gönderin, teklifleri birebir karşılaştırın ve en iyisini T57'de sözleşmeye dönüştürün.",
   "parent": "why-t57"
  },
  "virtual-trade-desk": {
@@ -139,7 +139,7 @@
  "market-intelligence": {
   "route": "/tr/why-t57/market-intelligence",
   "section": "why-t57",
-  "name": "Piyasa ve Fiyat İstihbaratı",
+  "name": "Piyasa ve Fiyat Analizi",
   "h1": "Harekete geçmeden önce piyasayı görün.",
   "answer": "Teklif vermeden, satın almadan ya da plan yapmadan önce menşeye göre fiyatları, arzı ve riski görün.",
   "faqs": [
@@ -149,10 +149,10 @@
    },
    {
     "q": "Verileri T57'de ticaret yapmadan kullanabilir miyim?",
-    "a": "Piyasa istihbaratı T57 üyeliğinin bir parçasıdır ve platformdaki ticareti desteklemek için tasarlanmıştır."
+    "a": "Piyasa analizi T57 üyeliğinin bir parçasıdır ve platformdaki ticareti desteklemek için tasarlanmıştır."
    }
   ],
-  "title": "Gıda Piyasası ve Fiyat İstihbaratı | T57",
+  "title": "Gıda Piyasası ve Fiyat Analizi | T57",
   "description": "Gıda fiyatları, menşeye göre arz durumu ve yapay zekâ tahminleri ticaret iş akışınızın içinde. T57'de teklif verin, satın alın ve tüm tabloyu görerek plan yapın.",
   "parent": "why-t57"
  },
@@ -172,8 +172,8 @@
     "a": "Katılımcı bankalar ve finansman şirketleri aracılığıyla, faizsiz seçenekler dahil sevk öncesi ve sevk sonrası finansman, alacak finansmanı ve akreditif."
    }
   ],
-  "title": "Gıda KOBİ'leri İçin Ticaret Finansmanı | Kredi Verenler Yarışıyor | T57",
-  "description": "Tek bir doğrulanmış işlem dosyasını birkaç lisanslı kredi verene gönderin ve teklifleri karşılaştırın. T57'de emanet hesabıyla kendi kendini tasfiye eden gıda ticareti finansmanı.",
+  "title": "Gıda KOBİ'leri İçin Ticaret Finansmanı | T57",
+  "description": "Tek bir doğrulanmış işlem dosyasını birden çok lisanslı kredi verene gönderin, teklifleri karşılaştırın; geri ödeme emanet hesabıyla yapılır.",
   "parent": "why-t57"
  },
  "nft-funding": {
@@ -192,14 +192,14 @@
     "a": "Yerel yasaların elektronik ticaret belgelerini tanıdığı yerlerde, doğrulanmış bir T57 ticaret kaydındaki fatura, ürün senedi ve konşimento gibi ticaret belgeleri."
    }
   ],
-  "title": "Dijital Varlıkla Ticaret Finansmanı | Tokenleştirilmiş Belgeler | T57",
+  "title": "Tokenleştirilmiş Belgelerle Ticaret Finansmanı | T57",
   "description": "T57'de doğrulanmış faturaları, ürün senetlerini ve konşimentoları kredi verenlerin güvenip finanse edebileceği benzersiz dijital varlıklara dönüştürün.",
   "parent": "why-t57"
  },
  "elc-15-minutes": {
   "route": "/tr/why-t57/elc-15-minutes",
   "section": "why-t57",
-  "name": "15 Dakikada eAkreditif",
+  "name": "15 Dakikada e-Akreditif",
   "h1": "Akreditifler, sözleşmenizden oluşturulur.",
   "answer": "Başvurunuz onaylandıktan sonra yaklaşık 15 dakikada açılan elektronik akreditifler.",
   "faqs": [
@@ -232,7 +232,7 @@
     "a": "Serbest bırakma otomatik olarak durur ve uyuşmazlık sözleşmeye ve iş ortağının kurallarına göre ele alınır. Çözüldüğünde serbest bırakma devam eder."
    }
   ],
-  "title": "Gıda Ticareti İçin Emanet Hesabıyla Ödeme | Aşamalara Göre Ödeyin | T57",
+  "title": "Gıda Ticaretinde Emanet Hesabıyla Ödeme | T57",
   "description": "Alıcılar lisanslı bir iş ortağındaki emanet hesabına ödeme yapar; fonlar T57'de yalnızca gözetim, sevkiyat ya da teslimat aşamaları tamamlandığında serbest bırakılır.",
   "parent": "why-t57"
  },
@@ -241,7 +241,7 @@
   "section": "why-t57",
   "name": "Alternatif Ödemeler",
   "h1": "Ödeme için daha fazla yol, yasalar çerçevesinde.",
-  "answer": "Gıda işlemlerini, yasaların izin verdiği yerlerde stabil kripto paralar, dijital varlıklar ya da külçeye dayalı ödemelerle kapatın.",
+  "answer": "Gıda işlemlerini, yasaların izin verdiği yerlerde stablecoin'ler, dijital varlıklar ya da külçeye dayalı ödemelerle kapatın.",
   "faqs": [
    {
     "q": "Alternatif ödemeler her ülkede kullanılabiliyor mu?",
@@ -252,8 +252,8 @@
     "a": "Hayır. Saklama, dönüşüm ve ödeme işlemleri lisanslı iş ortakları tarafından yürütülür. T57 ödemeyi ticaret kaydına işler."
    }
   ],
-  "title": "Gıda Ticareti İçin Stabil Kripto Para, Kripto ve Külçe Ödemeleri | T57",
-  "description": "T57'de sınır ötesi gıda işlemlerini, yasal olduğu yerlerde, düzenlemeye tabi iş ortakları aracılığıyla stabil kripto paralar, dijital varlıklar ya da külçeye dayalı ödemelerle kapatın.",
+  "title": "Gıda Ticaretinde Stablecoin ve Altın Destekli Ödeme | T57",
+  "description": "Sınır ötesi gıda işlemlerini, yasaların izin verdiği yerlerde, lisanslı iş ortaklarıyla stablecoin veya altına dayalı ödemelerle kapatın.",
   "parent": "why-t57"
  },
  "digital-bank": {
@@ -317,7 +317,7 @@
    }
   ],
   "title": "T57 Çözümleri | Gıda Ticaretinin Her Adımı Tek Kayıtta",
-  "description": "Gıda ticareti için teklif talepleri, sözleşmeler, ticaret finansmanı, emanet hesabı, e-akreditifler, sigorta, lojistik, gümrük ve fiyat istihbaratı; hepsi tek bir T57 ticaret kaydında bağlantılı."
+  "description": "Teklif talepleri, sözleşmeler, ticaret finansmanı, emanet, e-akreditif, sigorta, lojistik ve gümrük; hepsi tek bir T57 ticaret kaydında."
  },
  "cap-trade": {
   "route": "/tr/capabilities/trade",
@@ -339,7 +339,7 @@
     "a": "Zincirin tamamındaki gıdalar: yetiştirilen, beslenen ve avlanan ürünler ile işlenmiş, imal edilmiş ve markalı ürünler."
    }
   ],
-  "title": "Gıda Ticaretinin Yürütülmesi | Teklif Talepleri, Sözleşmeler ve İzlenebilirlik | T57",
+  "title": "Gıda Ticaretinin Yürütülmesi: Teklif ve Sözleşme | T57",
   "description": "Teklif talepleri, sözleşmeli tarım, kamu ihaleleri, izlenebilirlik ve mesajla siparişler; ilk talepten teslimata kadar tek bir T57 ticaret kaydında.",
   "parent": "capabilities"
  },
@@ -364,7 +364,7 @@
    }
   ],
   "title": "Gıda İçin Teklif Talebi ve Ticaretin Yürütülmesi | T57",
-  "description": "Yapılandırılmış teklif talepleri, doğrulanmış teklif verenler, birebir karşılaştırma ve kabul edilen tekliften sözleşme. Gıda işlemlerini tek bir T57 kaydında tedarik edin ve yürütün.",
+  "description": "Yapılandırılmış teklif talepleri, doğrulanmış teklif verenler, birebir karşılaştırma ve kabul edilen tekliften sözleşme; hepsi tek T57 kaydında.",
   "parent": "cap-trade"
  },
  "cap-trade-desk": {
@@ -387,7 +387,7 @@
     "a": "Sorunu ve önerilen çözümü görürsünüz. Sorun uyum ya da doğrulamayla ilgiliyse insan incelemesi için T57'nin ekibine gider."
    }
   ],
-  "title": "Gıda Ticareti İçin Sanal Ticaret Masası | Yapay Zekâ ve İnsan İncelemesi | T57",
+  "title": "Sanal Ticaret Masası | Yapay Zekâ ve İnsan İncelemesi | T57",
   "description": "Gıda KOBİ'leri için yapay zekâ ile karşı taraf eşleştirme, fiyat verileri, sözleşme taslağı, yaptırım taraması ve belge kontrolleri; her kararı insanlar verir.",
   "parent": "cap-trade"
  },
@@ -460,7 +460,7 @@
    }
   ],
   "title": "Kaynaktan Alıcıya Gıda İzlenebilirliği | T57",
-  "description": "Doğrulanmış menşeler, bağlı sertifikalar ve her değişikliğin izlendiği bir kayıtla parti düzeyinde gıda izlenebilirliği. T57'de menşeyi kanıtlayın, geri çağırmaları hızlandırın.",
+  "description": "Doğrulanmış menşe, bağlı sertifikalar ve her değişikliği gösteren kayıtla parti düzeyinde gıda izlenebilirliği. Geri çağırmaları hızlandırın.",
   "parent": "cap-trade"
  },
  "cap-chat-orders": {
@@ -483,7 +483,7 @@
     "a": "Yalnızca onayladığınız sipariş bilgileri, T57'nin gizlilik politikası çerçevesinde ticaret kaydına işlenir."
    }
   ],
-  "title": "Gıda İşletmeleri İçin WhatsApp ve Yapay Zekâ ile Sohbetten Sipariş | T57",
+  "title": "WhatsApp ve Yapay Zekâ ile Gıda Siparişi | T57",
   "description": "Gıdayı WhatsApp mesajı ya da sesli mesajla sipariş edin. Yapay zekâ gündelik dili T57 ticaret kaydınızda onaylı, yapılandırılmış siparişlere dönüştürür.",
   "parent": "cap-trade"
  },
@@ -507,7 +507,7 @@
     "a": "Uyuşmazlıklar sözleşmeye ve lisanslı iş ortağının kurallarına göre ele alınır. Çözülene kadar serbest bırakma otomatik olarak durur."
    }
   ],
-  "title": "Gıda Ticareti İçin Güven ve Ödemeler | Emanet Hesabı, Cüzdan, E-akreditif | T57",
+  "title": "Güven ve Ödemeler: Emanet, Cüzdan, E-akreditif | T57",
   "description": "Lisanslı iş ortaklarından emanet hesabı, her para biriminde cüzdanlar ve elektronik akreditifler; tek bir doğrulanmış T57 ticaret kaydındaki aşamalara bağlı.",
   "parent": "capabilities"
  },
@@ -555,7 +555,7 @@
     "a": "Ücretleri ve döviz kurlarını ödeme iş ortağı belirler; her ödemeyi onaylamadan önce gösterilir."
    }
   ],
-  "title": "Gıda Ticareti Ödemeleri İçin Dijital Cüzdan | Her Para Birimi | T57",
+  "title": "Gıda Ticareti Ödemeleri İçin Dijital Cüzdan | T57",
   "description": "T57'de tedarikçilere ve iş ortaklarına ödeme yapın, alıcılardan her para biriminde tahsilat alın; üyeler arasında neredeyse anında ödeme ve otomatik mutabakat.",
   "parent": "cap-trust-payments"
  },
@@ -659,8 +659,8 @@
   "route": "/tr/capabilities/finance/crypto-banking",
   "section": "capabilities",
   "name": "Kripto ve Dijital Varlıklar",
-  "h1": "Stabil kripto paralarla ya da altına dayalı tokenlerle ödeyin.",
-  "answer": "İşlemlerinizi düzenlemeye tabi iş ortakları aracılığıyla stabil kripto paralar, dijital varlıklar ya da altına dayalı tokenlerle kapatın.",
+  "h1": "Stablecoin'lerle ya da altına dayalı tokenlerle ödeyin.",
+  "answer": "İşlemlerinizi düzenlemeye tabi iş ortakları aracılığıyla stablecoin'ler, dijital varlıklar ya da altına dayalı tokenlerle kapatın.",
   "faqs": [
    {
     "q": "Dijital varlıkla ödeme ülkemde yasal mı?",
@@ -668,15 +668,15 @@
    },
    {
     "q": "Fiyat oynaklığı ne olacak?",
-    "a": "Stabil kripto paralar ve altına dayalı tokenler oynaklığı azaltmak için tasarlanmıştır; iş ortakları ödeme anında yerel para birimine dönüşüm yapabilir."
+    "a": "Stablecoin'ler ve altına dayalı tokenler oynaklığı azaltmak için tasarlanmıştır; iş ortakları ödeme anında yerel para birimine dönüşüm yapabilir."
    },
    {
     "q": "Dijital varlıkla ödemeler faizsiz finansman ilkelerine uygun mu?",
     "a": "Âlimlerin görüşleri farklıdır. İslami esaslara uygun ödemeye ihtiyaç duyan üyeler bir uzmana danışmalı; bunun yerine altına dayalı tokenleri ya da geleneksel seçenekleri tercih edebilir."
    }
   ],
-  "title": "Kripto, Stabil Kripto Para ve Altın Tokeniyle Ticari Ödeme | T57",
-  "description": "Gıda işlemlerini yasal olduğu yerlerde lisanslı iş ortakları aracılığıyla stabil kripto paralar, dijital varlıklar ya da altına dayalı tokenlerle kapatın; her şey T57 ticaret kaydınıza bağlı.",
+  "title": "Kripto, Stablecoin ve Altın Tokeniyle Ticari Ödeme | T57",
+  "description": "Gıda işlemlerini, yasal olduğu yerlerde, lisanslı iş ortaklarıyla stablecoin veya altına dayalı tokenlerle kapatın; T57 kaydınıza bağlı.",
   "parent": "cap-banking"
  },
  "cap-financing": {
@@ -699,7 +699,7 @@
     "a": "Çoğu yapıda nihai alıcının ödemesi emanet hesabına girer ve kalan tutar size serbest bırakılmadan önce ödeme aşamasında kredi verene geri ödeme yapılır."
    }
   ],
-  "title": "Gıda Ticareti Finansmanı ve Sermaye | Kredi Verenler Yarışıyor | T57",
+  "title": "Gıda Ticareti Finansmanı ve Sermaye | T57",
   "description": "T57'de yarışan lisanslı kredi verenlerden doğrulanmış gıda işlemleri için ticaret ve tedarik zinciri finansmanı, faizsiz finansman ve tokenleştirilmiş fonlama.",
   "parent": "capabilities"
  },
@@ -796,7 +796,7 @@
    }
   ],
   "title": "Gıda Lojistiği ve Sipariş Karşılama: Navlun ve Gümrük | T57",
-  "description": "Onaylı navlun, soğuk zincir, gözetim ve gümrük iş ortaklarıyla rezervasyon yapın, sevkiyatları anlık takip edin ve sınırları daha hızlı geçin; hepsi tek bir T57 ticaret kaydında.",
+  "description": "Onaylı navlun, soğuk zincir, gözetim ve gümrük iş ortaklarıyla rezervasyon yapın ve sevkiyatları anlık izleyin; hepsi tek T57 kaydında.",
   "parent": "capabilities"
  },
  "cap-logistics-network": {
@@ -820,7 +820,7 @@
    }
   ],
   "title": "Gıda Lojistiği Ağı | Navlun ve Soğuk Zincir | T57",
-  "description": "T57'de her gıda işlemiyle eşleşen onaylı nakliye komisyoncularını, taşıyıcıları, soğuk zincir ve depolama iş ortaklarını karşılaştırın ve rezervasyon yapın; rota riski uyarılarıyla.",
+  "description": "Her gıda işlemi için onaylı nakliye komisyoncularını, taşıyıcıları, soğuk zincir ve depo ortaklarını karşılaştırın; rota riski uyarılarıyla.",
   "parent": "cap-logistics"
  },
  "cap-tracking": {
@@ -868,7 +868,7 @@
    }
   ],
   "title": "Gıda İçin Gümrük ve Ticaret Belgeleri Merkezi | T57",
-  "description": "İhracat ve ithalat belgelerini sözleşmenizden oluşturun, GTİP kodu rehberliği ve tutarlılık kontrolleri alın, gıda sevkiyatlarını T57'de onaylı müşavirlerle ön gümrüklemeden geçirin.",
+  "description": "İhracat ve ithalat belgelerini sözleşmenizden oluşturun, GTİP rehberliği ve tutarlılık kontrolleri alın, onaylı müşavirlerle ön gümrükleme yapın.",
   "parent": "cap-logistics"
  },
  "cap-intelligence": {
@@ -996,7 +996,7 @@
    }
   ],
   "title": "Gıda ve Tarım Uzmanı Bulun | T57",
-  "description": "T57'de doğrulanmış ziraat mühendisleri, gözetim uzmanları, gıda bilimciler ve ambalaj uzmanlarıyla iş bazında, önceden kararlaştırılan fiyat, emanet hesabıyla ödeme ve puanlamayla çalışın.",
+  "description": "Doğrulanmış ziraat mühendisleri, gözetim uzmanları ve gıda bilimcilerle iş bazında çalışın: önceden belli fiyat, emanetle ödeme ve puanlama.",
   "parent": "capabilities"
  },
  "ai-native": {
@@ -1023,7 +1023,7 @@
     "a": "Gıda küreseldir ama son derece yereldir. Bir bölge, ürün ve değer zinciri için eğitilen küçük modeller yerel koşulları ve dilleri daha iyi anlar, daha düşük maliyetle çalışır, test edilmesi ve açıklanması da daha kolaydır."
    }
   ],
-  "title": "Yapay Zekâ Temelli Gıda Ticareti Platformu | T57 Yapay Zekâyı Nasıl Kullanıyor",
+  "title": "Yapay Zekâ Temelli Gıda Ticaret Platformu | T57",
   "description": "Gıda ticareti genelinde eşleştirme, fiyatlama, tahmin, uyum ve belgeler için küçük, yerel yapay zekâ modelleri. T57'de yapay zekâ önerir, insanlar karar verir."
  },
  "ai-matchmaking": {
@@ -1042,7 +1042,7 @@
     "a": "Her öneri ürün eşleşmesi, kapasite, koridor deneyimi ve zamanında teslim performansı gibi temel gerekçelerini gösterir."
    }
   ],
-  "title": "Gıda Alıcıları ve Tedarikçileri İçin Yapay Zekâ ile Ticari Eşleştirme | T57",
+  "title": "Yapay Zekâ ile Alıcı ve Tedarikçi Eşleştirme | T57",
   "description": "T57'de yapay zekâ doğrulanmış gıda alıcılarını ve tedarikçilerini özellik, kapasite, koridor ve geçmiş performansa göre sıralar ve her eşleşmeyi açıklar.",
   "parent": "ai-native"
  },
@@ -1062,7 +1062,7 @@
     "a": "Evet. Her taraf aynı kamuya açık piyasa verilerine dayanan kendi gizli özetini alır."
    }
   ],
-  "title": "Gıda Ticareti İçin Yapay Zekâ Müzakere Desteği | T57 Yapay Zekâ Temelli",
+  "title": "Gıda Ticaretinde Yapay Zekâ Müzakere Desteği | T57",
   "description": "T57'nin müzakere yapay zekâsı teklifleri nasıl karşılaştırır, ödeme ve teslim şartlarının değerini nasıl hesaplar ve karşı teklifleri nasıl önerir; her kararı insanlar verir.",
   "parent": "ai-native"
  },
@@ -1082,7 +1082,7 @@
     "a": "Tahmin etmek yerine kısa bir soru sorar; siz teyit edene kadar sipariş gönderilmez."
    }
   ],
-  "title": "WhatsApp ve Sesle Yapay Zekâ Destekli Ticaret Siparişleri | T57 Yapay Zekâ Temelli",
+  "title": "WhatsApp ve Sesle Yapay Zekâ Destekli Sipariş | T57",
   "description": "T57'nin dil modelleri WhatsApp mesajlarını ve sesli notları Arapça ve yerel dillerde nasıl teyit edilmiş, yapılandırılmış gıda ticareti siparişlerine dönüştürüyor.",
   "parent": "ai-native"
  },
@@ -1122,7 +1122,7 @@
     "a": "Evet. Hükümetler ve kurumlar toplulaştırılmış arz durumuna ve tahminlere T57'nin gıda güvenliği görünümü üzerinden erişebilir."
    }
   ],
-  "title": "Gıda İçin Yapay Zekâ ile Arz ve Talep Tahmini | T57 Yapay Zekâ Temelli",
+  "title": "Yapay Zekâ ile Gıda Arz ve Talep Tahmini | T57",
   "description": "Alıcılar, satıcılar ve hükümetler için ürün ve menşeye göre gıda arzı, talebi ve fiyatlarının yapay zekâ tahminleri; arz durumu sinyalleri ve uyarılarla.",
   "parent": "ai-native"
  },
@@ -1142,7 +1142,7 @@
     "a": "Kredi verenler ve sigortacılar yalnızca onlarla paylaştığınız işlemlerin riskini görür. Hükümetler toplulaştırılmış, anonimleştirilmiş görünümleri görür."
    }
   ],
-  "title": "Gıda Ticareti İçin Yapay Zekâ Risk Analizi | T57 Yapay Zekâ Temelli",
+  "title": "Gıda Ticaretinde Yapay Zekâ Risk Analizi | T57",
   "description": "T57'de gıda ticaretinde karşı taraflar, rotalar, pazarlar ve iklim için açıklanabilir etkenler ve erken uyarılarla yapay zekâ risk puanları ve ısı haritaları.",
   "parent": "ai-native"
  },
@@ -1202,7 +1202,7 @@
     "a": "Evet. Kooperatifler arzı dengelemek ve alıcı talebini karşılamak için üyelerin çiftliklerini kapsayan planlar oluşturabilir."
    }
   ],
-  "title": "Yapay Zekâ ile Ekim Planlama ve Çiftlik Analizi | T57 Yapay Zekâ Temelli",
+  "title": "Yapay Zekâ ile Ekim Planlama ve Çiftlik Analizi | T57",
   "description": "Çiftçiler ve kooperatifler için piyasa talebine, toprağa, suya ve iklime dayalı; beklenen verim, kâr marjı ve sezon analizleri sunan yapay zekâ ekim planları.",
   "parent": "ai-native"
  },
@@ -1222,7 +1222,7 @@
     "a": "T57'ye hizmet sağlayıcı olarak katılan doğrulanmış ziraat mühendisleri ve tarım uzmanları. Tavsiye vermeden önce nitelikleri kontrol edilir."
    }
   ],
-  "title": "Çiftçiler İçin Yapay Zekâ Tarım Danışmanlığı | T57 Yapay Zekâ Temelli",
+  "title": "Çiftçiler İçin Yapay Zekâ Tarım Danışmanlığı | T57",
   "description": "T57'de çiftçiler için yerel dillerde yapay zekâdan anında ürün tavsiyesi, karmaşık vakalar için doğrulanmış ziraat mühendisleri. Fotoğrafla ve sesle teşhis.",
   "parent": "ai-native"
  },
@@ -1242,7 +1242,7 @@
     "a": "Verileriniz T57'nin gizlilik politikası ve geçerli veri koruma mevzuatı çerçevesinde doğrulama için kullanılır ve iş ortaklarıyla yalnızca onayınızla paylaşılır."
    }
   ],
-  "title": "Yapay Zekâ Destekli KYC, KYB ve Uyum Taraması | T57 Yapay Zekâ Temelli",
+  "title": "Yapay Zekâ ile KYC, KYB ve Uyum Taraması | T57",
   "description": "T57'de gıda işletmeleri için yapay zekâ ile belge kontrolü, ortaklık eşleştirme ve yaptırım taraması; her olumsuz kararı insanlar inceler.",
   "parent": "ai-native"
  },
@@ -1282,7 +1282,7 @@
     "a": "Sözleşmeler, proforma ve ticari faturalar, çeki listeleri, akreditif başvuruları ve destekleyici belgeler, ayrıca sertifikalar ve gümrük beyannameleri için veriler."
    }
   ],
-  "title": "Yapay Zekâ ile Ticaret Belgesi Üretimi ve Kontrolü | T57 Yapay Zekâ Temelli",
+  "title": "Yapay Zekâ ile Ticaret Belgesi Üretimi | T57",
   "description": "T57'de sözleşmeleri, faturaları ve çeki listelerini kabul edilmiş tekliften oluşturun; akreditif ve gümrük uyumsuzluklarını yapay zekâ kontrolleriyle yakalayın.",
   "parent": "ai-native"
  },
@@ -1317,7 +1317,7 @@
   "answer": "Fiyatta anlaşın, sevk edin, sigortalayın, finanse edin, ödeyin ve gümrükten geçirin; hepsi tek platformda, her taraf doğrulanmış ve her adım tek kayıtta.",
   "faqs": [],
   "title": "Tek İşlem, Her Adım: Tek Kayıtta Gıda Ticareti | T57",
-  "description": "Her gıda için fiyatta anlaşın, sevk edin, sigortalayın, finanse edin, ödeyin ve gümrükten geçirin; tek platformda, doğrulanmış taraflar, yarışan kredi verenler ve aşamaya bağlı finansmanla.",
+  "description": "Her gıda için fiyatta anlaşın, sevk edin, sigortalayın, finanse edin, ödeyin ve gümrükten geçirin; tek platformda, doğrulanmış taraflarla.",
   "parent": "platform"
  },
  "platform-domestic": {
@@ -1377,7 +1377,7 @@
    }
   ],
   "title": "T57 Mimarisi | Bulut Tabanlı, API Öncelikli Platform",
-  "description": "Sınır ötesi, doğrulanmış ve düzenlemeye tabi gıda ticareti için inşa edilmiş; Microsoft Azure üzerinde bölgeye duyarlı bulut, modüler hizmetler, iş ortağı bağlayıcıları ve üye API'leri.",
+  "description": "Sınır ötesi ve düzenlemeye tabi gıda ticareti için inşa edildi: Microsoft Azure'da bölgeye duyarlı bulut, modüler hizmetler ve üye API'leri.",
   "parent": "platform"
  },
  "platform-roadmap": {
@@ -1407,7 +1407,7 @@
  "platform-intelligence": {
   "route": "/tr/platform/intelligence-layer",
   "section": "platform",
-  "name": "İstihbarat Katmanı",
+  "name": "Analiz Katmanı",
   "h1": "Doğrulanmış ticaretle eğitilmiş küçük, yerel yapay zekâ.",
   "answer": "Doğrulanmış ticaretten öğrenen ve T57'deki her kararı destekleyen yapay zekâ katmanı.",
   "faqs": [
@@ -1432,8 +1432,8 @@
   "route": "/tr/platform/blockchain",
   "section": "platform",
   "name": "Blokzincir ve Akıllı Sözleşme Katmanı",
-  "h1": "Kimsenin sessizce değiştiremeyeceği kayıtlar. Kanıtı izleyen ödemeler.",
-  "answer": "Her tarafın güvenebileceği, değişikliğe karşı korumalı kayıtlar, tokenleştirilmiş belgeler ve aşamaya bağlı ödemeler.",
+  "h1": "Her değişikliği gösteren kayıtlar. Kanıtı izleyen ödemeler.",
+  "answer": "Her tarafın güvenebileceği, her değişikliğin izlendiği kayıtlar, tokenleştirilmiş belgeler ve aşamaya bağlı ödemeler.",
   "faqs": [
    {
     "q": "Ticaret verilerim blokzincirde herkese açık mı?",
@@ -1449,7 +1449,7 @@
    }
   ],
   "title": "Gıda Ticareti İçin Blokzincir ve Akıllı Sözleşmeler | T57",
-  "description": "T57'de gizlilik ve lisanslı iş ortaklarıyla; değişikliğe karşı korumalı kayıt, tokenleştirilmiş ticaret belgeleri ve akıllı sözleşmeyle aşamaya bağlı ödemeler.",
+  "description": "T57'de gizlilik ve lisanslı iş ortaklarıyla; her değişikliğin izlendiği kayıt, tokenleştirilmiş ticaret belgeleri ve akıllı sözleşmeyle aşamaya bağlı ödemeler.",
   "parent": "platform"
  },
  "platform-security": {
@@ -1624,7 +1624,7 @@
   "faqs": [
    {
     "q": "Denetim izini herhangi biri düzenleyebilir mi?",
-    "a": "Hayır. Kayıtlar değiştirilemez ya da silinemez. Düzeltmeler yeni kayıtlar olarak eklenir."
+    "a": "Hayır. Kayıtlarda her değişiklik izlenir ve tespit edilebilir; hiçbir kayıt silinmez. Düzeltmeler yeni kayıtlar olarak eklenir."
    },
    {
     "q": "İşlemimin denetim izini kimler görebilir?",
@@ -1640,7 +1640,7 @@
    }
   ],
   "title": "Gıda Ticareti İçin Denetim İzi | T57 Güven ve Uyum",
-  "description": "Her işlemdeki her eylem doğrulanmış bir kişiye bağlı, zaman damgalı ve değişikliğe karşı korumalı. T57'de denetime hazır kanıt.",
+  "description": "Her işlemdeki her eylem doğrulanmış bir kişiye bağlı, zaman damgalı ve her değişikliği izlenebilir. T57'de denetime hazır kanıt.",
   "parent": "trust"
  },
  "trust-documents": {
@@ -1724,7 +1724,7 @@
    }
   ],
   "title": "Veri Koruma | PDPL, DPDP, PDPA ve KVKK Uyumu | T57",
-  "description": "T57, Suudi Arabistan ve BAE PDPL'si, Hindistan'ın DPDP Kanunu, Malezya'nın PDPA'sı ve Türkiye'nin 6698 sayılı KVKK'sı kapsamında verileri onay ve veri yerelleştirmeyle nasıl işliyor.",
+  "description": "T57, Suudi Arabistan ve BAE PDPL'si, Hindistan DPDP, Malezya PDPA ve Türkiye KVKK kapsamında verileri onay ve yerelleştirmeyle işler.",
   "parent": "trust-security"
  },
  "trust-disputes": {
@@ -1775,7 +1775,7 @@
     "a": "İkisini de. Yurt içi B2B ticaret ve sınır ötesi ticaret aynı platformda yürür."
    }
   ],
-  "title": "Pazarlar | Suudi Arabistan, BAE, Hindistan, Malezya, Türkiye | T57",
+  "title": "Pazarlar: Suudi Arabistan, BAE, Hindistan, Malezya | T57",
   "description": "Beş kurucu pazarda yurt içi toptan satış ve sınır ötesi ticaret için yerel ekipler ve iş ortaklarıyla tek bir doğrulanmış gıda ticaret ağı."
  },
  "markets-global": {
@@ -1859,7 +1859,7 @@
    }
   ],
   "title": "ASEAN Gıda Ticareti | Doğrulanmış İhracatçılar ve Alıcılar | T57",
-  "description": "ASEAN gıda üreticilerini Körfez, Hindistan ve Türkiye'deki doğrulanmış alıcılarla buluşturun; dijital belgeler, helal kayıtları ve iş ortakları aracılığıyla ticaret finansmanı.",
+  "description": "ASEAN gıda üreticilerini Körfez, Hindistan ve Türkiye'deki doğrulanmış alıcılarla buluşturun; dijital belgeler, helal kayıtları ve finansman.",
   "parent": "markets"
  },
  "mkt-sa-overview": {
@@ -1907,7 +1907,7 @@
    }
   ],
   "title": "Suudi Arabistan'da T57 Özellikleri | Ticaret, Finansman, Lojistik",
-  "description": "Suudi Arabistan'daki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ istihbaratı.",
+  "description": "Suudi Arabistan'daki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ analizi.",
   "parent": "mkt-sa-overview"
  },
  "mkt-sa-compliance": {
@@ -2003,7 +2003,7 @@
    }
   ],
   "title": "BAE'de T57 Özellikleri | Ticaret, Finansman, Lojistik",
-  "description": "BAE'deki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ istihbaratı.",
+  "description": "BAE'deki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ analizi.",
   "parent": "mkt-uae-overview"
  },
  "mkt-uae-compliance": {
@@ -2050,7 +2050,7 @@
     "a": "Evet. BAE ekibimiz üyelere Arapça ve İngilizce destek verir."
    }
   ],
-  "title": "BAE'de T57 ile Başlayın",
+  "title": "BAE'de T57 ile Ticarete Başlayın: Dört Adım",
   "description": "BAE'de dört adımda T57'ye katılın: başvurun, doğrulanın, kurulumu yapın ve ticarete başlayın; yerel ekibimiz her adımda yanınızda.",
   "parent": "mkt-uae-overview"
  },
@@ -2074,7 +2074,7 @@
     "a": "İngilizce ve Hintçe; başka Hint dilleri de planlanıyor."
    }
   ],
-  "title": "Hindistan'da T57 | Üretici Örgütleri ve İhracatçılar İçin Doğrulanmış Gıda Ticareti",
+  "title": "Hindistan'da T57 | Doğrulanmış Gıda Ticareti",
   "description": "Yurt içindeki doğrulanmış kurumsal alıcılara ve Körfez ile Güneydoğu Asya'daki ithalatçılara satış yapın; finansman, gözetim ve lojistik lisanslı iş ortaklarından.",
   "parent": "markets"
  },
@@ -2099,7 +2099,7 @@
    }
   ],
   "title": "Hindistan'da T57 Özellikleri | Ticaret, Finansman, Lojistik",
-  "description": "Hindistan'daki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ istihbaratı.",
+  "description": "Hindistan'daki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ analizi.",
   "parent": "mkt-in-overview"
  },
  "mkt-in-compliance": {
@@ -2195,7 +2195,7 @@
    }
   ],
   "title": "Malezya'da T57 Özellikleri | Ticaret, Finansman, Lojistik",
-  "description": "Malezya'daki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ istihbaratı.",
+  "description": "Malezya'daki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ analizi.",
   "parent": "mkt-my-overview"
  },
  "mkt-my-compliance": {
@@ -2291,7 +2291,7 @@
    }
   ],
   "title": "Türkiye'de T57 Özellikleri | Ticaret, Finansman, Lojistik",
-  "description": "Türkiye'deki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ istihbaratı.",
+  "description": "Türkiye'deki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ analizi.",
   "parent": "mkt-tr-overview"
  },
  "mkt-tr-compliance": {
@@ -2367,7 +2367,7 @@
    }
   ],
   "title": "Fiyatlandırma | Aylık 199 Dolardan Başlayan Paketler | T57",
-  "description": "Doğrulanmış gıda ticareti için açık fiyatlar: Keşif, Temel, Büyüme ve Kurumsal paketler, yıllık ödemede iki ay ücretsiz ve yalnızca tamamlanan işlemlerde küçük bir ücret."
+  "description": "Açık fiyatlar: Keşif, Temel, Büyüme ve Kurumsal paketler; yıllık ödemede iki ay ücretsiz, küçük işlem ücreti yalnızca tamamlanan işlemlerde."
  },
  "pricing-plans": {
   "route": "/tr/pricing/plans",
@@ -2390,7 +2390,7 @@
    }
   ],
   "title": "Paketler ve Fiyatlar | Keşif, Temel, Büyüme, Kurumsal | T57",
-  "description": "Doğrulamanın dahil olduğu, yıllık ödemede iki ayın ücretsiz olduğu ve taraf başına işlem ücretlerinin %0,75'ten %0,20'ye indiği, aylık 199 dolardan başlayan T57 paketlerini karşılaştırın.",
+  "description": "Doğrulamanın dahil olduğu T57 paketlerini karşılaştırın: aylık 199 dolardan başlayan fiyatlar, yıllık ödemede iki ay ücretsiz.",
   "parent": "pricing"
  },
  "pricing-enterprise": {
@@ -2453,7 +2453,7 @@
     "a": "Yalnızca sonucunuzu kaydetmeyi ya da paylaşmayı seçerseniz."
    }
   ],
-  "title": "Yatırım Getirisi Hesaplayıcı | Hacminize Göre Tasarruf ve En İyi Paket | T57",
+  "title": "Yatırım Getirisi Hesaplayıcı | En Uygun Paket | T57",
   "description": "T57'nin gıda işletmenize ücretler düşüldükten sonra ne kadar zaman ve para kazandırabileceğini tahmin edin; ticaret hacminiz için en düşük toplam maliyetli paketi bulun.",
   "parent": "pricing"
  },
@@ -2507,7 +2507,7 @@
  "res-reports": {
   "route": "/tr/resources/reports",
   "section": "resources",
-  "name": "Raporlar ve Teknik Raporlar",
+  "name": "Raporlar ve Teknik Dokümanlar",
   "h1": "Kaynak gösterebileceğiniz, doğrulanmış kaynaklara dayanan araştırmalar.",
   "answer": "Gıda ticareti, finansman ve gıda güvenliği üzerine derinlemesine araştırmalar.",
   "faqs": [
@@ -2520,14 +2520,14 @@
     "a": "Evet, ekibimizle iletişime geçin."
    }
   ],
-  "title": "Raporlar ve Teknik Raporlar | Gıda Ticareti Araştırmaları | T57",
+  "title": "Raporlar ve Teknik Dokümanlar | Gıda Ticareti Araştırması",
   "description": "Gıda ticareti koridorları, KOBİ ticaret finansmanı, sorumlu yapay zekâ ve gıda güvenliği üzerine derinlemesine araştırmalar.",
   "parent": "resources"
  },
  "res-newsroom": {
   "route": "/tr/resources/newsroom",
   "section": "resources",
-  "name": "Haber Merkezi",
+  "name": "Basın Odası",
   "h1": "T57'den haberler, kayda geçmiş haliyle.",
   "answer": "T57'den haberler, duyurular ve medya kaynakları.",
   "faqs": [],
@@ -2663,7 +2663,7 @@
     "a": "Hayır. Fiyatlarınızı yalnızca teklif verdiğiniz taraflar görebilir."
    }
   ],
-  "title": "SSS | T57 Yardım Merkezi",
+  "title": "Sıkça Sorulan Sorular: Üyelik, Ticaret, Ödeme | T57",
   "description": "T57 hesapları, ücretsiz deneme, paketler ve faturalama, doğrulama, ticaret, ödemeler, belgeler ve güvenlik hakkında yanıtlar.",
   "parent": "help"
  },
@@ -2738,7 +2738,7 @@
    }
   ],
   "title": "Finansal Hizmet İş Ortakları | Finans ve Sigorta | T57",
-  "description": "Bankalar, finansman şirketleri, emanet hesabı sağlayıcıları, sigortacılar ve tekâfül şirketleri, her talebin arkasındaki ticaret kaydıyla doğrulanmış gıda işletmelerine ulaşır.",
+  "description": "Bankalar, finansman şirketleri, emanet sağlayıcıları, sigortacılar ve tekâfül şirketleri, doğrulanmış gıda işletmelerine T57'de ulaşır.",
   "parent": "partnerships"
  },
  "partners-logistics": {
@@ -2786,7 +2786,7 @@
    }
   ],
   "title": "Araştırma ve Üniversite İş Ortakları | T57",
-  "description": "T57; araştırmaları çiftçilere ulaştırmak, yerel yapay zekâyı eğitmek, yeni teknolojileri denemek ve bilim insanlarını ödüllendirmek için ziraat üniversiteleri ve araştırma enstitüleriyle çalışır.",
+  "description": "T57, araştırmaları çiftçilere ulaştırmak ve yerel yapay zekâyı eğitmek için ziraat üniversiteleri ve araştırma enstitüleriyle çalışır.",
   "parent": "partnerships"
  },
  "partners-country": {
@@ -2828,7 +2828,7 @@
   "h1": "T57 iş ortağı olmak için başvurun.",
   "answer": "Finans, sigorta, lojistik, gözetim ya da teknoloji alanında T57 ile iş ortaklığı yapın. Başlamak için işletmenizi bize anlatın.",
   "faqs": [],
-  "title": "İş Ortağı Olun | T57",
+  "title": "T57 İş Ortağı Olun | Finans, Lojistik ve Teknoloji",
   "description": "Finans, sigorta, lojistik, gözetim ya da teknoloji alanında T57 ile iş ortaklığı için başvurun.",
   "parent": "partnerships"
  },
@@ -2837,7 +2837,7 @@
   "section": "about",
   "name": "T57 Hakkında",
   "h1": "Var olan gıda, ona ihtiyaç duyan insanlara ulaşmalı.",
-  "answer": "Var olan gıdanın ona ihtiyaç duyan insanlara ve pazarlara ulaşması için varız.",
+  "answer": "Var olan gıda ona ihtiyaç duyan insanlara ve pazarlara ulaşsın diye buradayız.",
   "faqs": [
    {
     "q": "T57 nerede yerleşik?",
@@ -2852,19 +2852,19 @@
     "a": "T57 kurucuları tarafından yönetilen bir şirkettir."
    }
   ],
-  "title": "T57 Hakkında | Gıda İçin Yapay Zekâ Temelli Dijital Ticaret Altyapısı",
+  "title": "T57 Hakkında | Yapay Zekâ Temelli Gıda Ticareti Altyapısı",
   "description": "T57 neden var: 60'tan fazla ülkedeki gıda güvenliği çalışmalarından doğan, gıda ekosistemi için pazarlara, teknolojiye ve finansmana erişim."
  },
  "about-journey": {
   "route": "/tr/about/journey",
   "section": "about",
   "name": "Yolculuğumuz",
-  "h1": "Tek bir sorudan 150 imzalı anlaşmaya.",
+  "h1": "Tek bir sorudan 150'yi aşkın imzalı anlaşmaya.",
   "answer": "T57 ve kurucu şirketi AlMukarramah, 2023'ten bu yana hükümetler, kalkınma kurumları ve gıda şirketleriyle anlaşmalar imzaladı ve bağlantılı gıda ticaretinin gerekçesini Cape Town'dan Yinchuan'a uzanan sahnelere taşıdı.",
   "faqs": [
    {
     "q": "T57 kimlerle anlaşma imzaladı?",
-    "a": "T57 ve kurucu şirketi AlMukarramah'nın İslam Gıda Güvenliği Teşkilatı (IOFS), Çeçen Cumhuriyeti Hükümeti, Maldivler Kalkınma Bankası, Kazakistan Gıda Sözleşme Kurumu, Uluslararası İslami İş Dünyası Asamblesi, Dar Al Halal Nijerya ve Singapur'daki Su Ürünleri Mükemmeliyet Merkezi ile anlaşmaları var; ayrıca Gulfood 2026'da 150 mutabakat zaptı ve niyet mektubu imzalandı."
+    "a": "T57 ve kurucu şirketi AlMukarramah'nın İslam Gıda Güvenliği Teşkilatı (IOFS), Çeçen Cumhuriyeti Hükümeti, Maldivler Kalkınma Bankası, Kazakistan Gıda Sözleşme Kurumu, Uluslararası İslami İş Dünyası Asamblesi, Dar Al Halal Nijerya ve Singapur'daki Su Ürünleri Mükemmeliyet Merkezi ile anlaşmaları var; ayrıca Gulfood 2026'da 120 mutabakat zaptı ve niyet mektubu imzalandı."
    },
    {
     "q": "T57 ne zaman başladı?",
@@ -2876,7 +2876,7 @@
    }
   ],
   "title": "Yolculuğumuz: Anlaşmalar, Ortaklıklar ve Açılış Konuşmaları | T57",
-  "description": "2023'ten bu yana T57 zaman çizelgesi: IOFS anlaşmaları, hükümetler ve kalkınma bankalarıyla mutabakat zaptları, Gulfood 2026'da 150 mutabakat zaptı ve Cape Town'dan Yinchuan'a açılış konuşmaları.",
+  "description": "2023'ten bu yana T57: IOFS anlaşması, hükümetler ve kalkınma bankalarıyla mutabakatlar, Gulfood 2026'da 120 mutabakat ve dünya çapında konuşmalar.",
   "parent": "about"
  },
  "about-leadership": {
@@ -2970,7 +2970,7 @@
     "a": "Bazı teknoloji pozisyonları uzaktan olabilir; ülke ekipleri ise her pazarda çalışır."
    }
   ],
-  "title": "T57'de Kariyer | Yapay Zekâ Temelli Gıda Ticareti Altyapısını İnşa Edin",
+  "title": "T57'de Kariyer | Gıda Ticaretinin Geleceğini Kurun",
   "description": "Beş kurucu pazarda teknoloji, yapay zekâ, ürün, ülke operasyonları ve iş ortaklıkları alanlarında T57 ekiplerine katılın.",
   "parent": "about"
  },
@@ -3005,7 +3005,7 @@
     "a": "Çevrim içi, her yerde. T57, her gıda işletmesinin her ülkeden katılabildiği küresel bir SaaS platformudur. Pilot uygulama Suudi Arabistan, BAE, Hindistan, Malezya ve Türkiye'de başlıyor."
    }
   ],
-  "title": "T57 ile iletişime geçin",
+  "title": "T57 ile İletişim | Başvuru, İş Ortaklığı ve Demo",
   "description": "Katılmak, demo izlemek, iş ortaklığı yapmak, gıda güvenliği alanında bizimle çalışmak ya da medya talepleri için T57 ile iletişime geçin."
  },
  "contact-demo": {
@@ -3024,7 +3024,7 @@
     "a": "Evet, istediğiniz kadar meslektaşınızı davet edin."
    }
   ],
-  "title": "Demo Talep Edin | T57",
+  "title": "T57 Demosu Talep Edin | Doğrulanmış Gıda Ticareti",
   "description": "Kendi ürünleriniz ve pazarlarınız üzerinde 30 dakikalık bir T57 demosu ayarlayın, ardından ücretsiz denemenizi başlatın.",
   "parent": "contact"
  },
@@ -3045,7 +3045,7 @@
    }
   ],
   "title": "T57 Nerede Çalışıyor | Küresel SaaS, Beş Pilot Pazar",
-  "description": "T57 gıda ticareti için küresel bir SaaS platformudur. Pilot uygulama Suudi Arabistan, BAE, Hindistan, Malezya ve Türkiye'de başlıyor; her işletme her yerden çevrim içi katılabilir.",
+  "description": "T57, gıda ticareti için küresel bir SaaS platformudur. Pilot Suudi Arabistan, BAE, Hindistan, Malezya ve Türkiye'de; her işletme başvurabilir.",
   "parent": "contact"
  },
  "governments": {
@@ -3057,15 +3057,15 @@
   "faqs": [
    {
     "q": "T57 ulusal ve bölgesel gıda güvenliği stratejilerini pratikte nasıl destekler?",
-    "a": "Pek çok ülke temel ürünlerde aylarca yetecek stok tutmak için stratejik rezervlerini ve silo kapasitelerini genişletiyor. T57 kendine yeterliliği, stok düzeylerini ve ithalata bağımlılığı anlık takip ederek bu fiziksel altyapıyı tamamlar. Fiziksel rezervler ile dijital istihbaratın bu birleşimi, hükümetlerin gıda güvenliği yönetiminde tepkisel yaklaşımdan öngörülü yaklaşıma geçmesine yardımcı olur."
+    "a": "Pek çok ülke temel ürünlerde aylarca yetecek stok tutmak için stratejik rezervlerini ve silo kapasitelerini genişletiyor. T57 kendine yeterliliği, stok düzeylerini ve ithalata bağımlılığı anlık takip ederek bu fiziksel altyapıyı tamamlar. Fiziksel rezervler ile dijital analizin bu birleşimi, hükümetlerin gıda güvenliği yönetiminde tepkisel yaklaşımdan öngörülü yaklaşıma geçmesine yardımcı olur."
    },
    {
     "q": "Kamu bütçelerinin ötesinde özel sermayeyi ve etki sermayesini tarıma ve gıda sistemlerine yönlendirmek neden önemli?",
-    "a": "Tarımın istihdam ve gıda güvenliğindeki tarihsel rolüne rağmen küresel yatırımcılar, iklim ve SKH taahhütlerinin bir parçası olarak gıda sistemlerini desteklemenin güvenilir ve ölçülebilir yollarını ancak şimdi arıyor. T57, hükümetlerin model destek merkezlerinden özel tarım bölgelerine ve kurumsal sosyal sorumluluk programlarına kadar yatırım yapılabilir, veriye dayalı fırsatlar sunmasına yardımcı olur; şeffaf performans ve etki takibi hem düzenleyici hem yatırımcı beklentilerini karşılar."
+    "a": "Tarımın istihdam ve gıda güvenliğindeki tarihsel rolüne rağmen küresel yatırımcılar, iklim ve SKA taahhütlerinin bir parçası olarak gıda sistemlerini desteklemenin güvenilir ve ölçülebilir yollarını ancak şimdi arıyor. T57, hükümetlerin model destek merkezlerinden özel tarım bölgelerine ve kurumsal sosyal sorumluluk programlarına kadar yatırım yapılabilir, veriye dayalı fırsatlar sunmasına yardımcı olur; şeffaf performans ve etki takibi hem düzenleyici hem yatırımcı beklentilerini karşılar."
    }
   ],
-  "title": "Hükümetler İçin T57 | Gıda Güvenliği ve Temiz Kamu Alımı",
-  "description": "T57, hükümetlere ve düzenleyici kurumlara israfı azaltmak ve fiyatları istikrara kavuşturmak için tek platformda anlık gıda güvenliği istihbaratı ve şeffaf kamu alımı sunar.",
+  "title": "Hükümetler İçin T57 | Gıda Güvenliği ve Şeffaf Kamu Alımı",
+  "description": "T57, hükümetlere tek platformda anlık gıda güvenliği verisi ve şeffaf kamu alımı sunar; israf azalır, fiyatlar istikrar kazanır.",
   "parent": "who-we-serve"
  },
  "financiers": {
@@ -3093,7 +3093,7 @@
    }
   ],
   "title": "Finansörler İçin T57 | İncelenmiş Gıda ve Tarım Fırsatları",
-  "description": "Daha hızlı durum tespiti, tam işlem görünürlüğü ve daha sıkı karşı taraf riski yönetimiyle sermayenizi seçilmiş, sözleşmeye dayalı gıda ve tarım işlemlerine yönlendirin.",
+  "description": "Sermayenizi sözleşmeye dayalı, seçilmiş gıda ve tarım işlemlerine yönlendirin: daha hızlı durum tespiti, tam görünürlük, daha düşük karşı taraf riski.",
   "parent": "who-we-serve"
  },
  "sellers": {
@@ -3116,12 +3116,12 @@
     "a": "Gıda ihracatı, ithalatçı ülkenin sıkı gözetim ve belgelendirme rejimlerine tabidir. Eksik ya da hatalı sertifika, sınırda ret veya mevzuata aykırılıkla sonuçlanabilir. Belgeleri tek yerde toplayan, parti ve sevkiyatlara bağlayan ve sertifikaları doğrulayan bir sistem, maliyetli ret ve gecikme riskini azaltır."
    },
    {
-    "q": "Daha iyi istihbarat dalgalı ihracat pazarlarında gerçekten işe yarar mı?",
-    "a": "Tarım fiyatları aşırı hava olaylarına, değişen biyoyakıt politikalarına ve artan ticaret engellerine açık olmayı sürdürüyor. Yapılandırılmış piyasa, ürün ve fiyat istihbaratı kullanan ihracatçılar, marjlarını korumak için tedarik ve fiyatlamalarını daha iyi ayarlayabiliyor."
+    "q": "Daha iyi analiz dalgalı ihracat pazarlarında gerçekten işe yarar mı?",
+    "a": "Tarım fiyatları aşırı hava olaylarına, değişen biyoyakıt politikalarına ve artan ticaret engellerine açık olmayı sürdürüyor. Yapılandırılmış piyasa, ürün ve fiyat analizi kullanan ihracatçılar, marjlarını korumak için tedarik ve fiyatlamalarını daha iyi ayarlayabiliyor."
    }
   ],
-  "title": "Satıcılar ve İhracatçılar İçin T57 | Güvenilir Tarım İhracatı Platformu",
-  "description": "T57, gıda ve tarım ihracatçılarının doğrulanmış alıcılar bulmasına, belgelerini yönetmesine, ödemesini güvenle almasına ve anlık piyasa istihbaratıyla büyümesine yardımcı olur.",
+  "title": "Satıcılar ve İhracatçılar İçin T57 | Tarım İhracatı",
+  "description": "T57, gıda ve tarım ihracatçılarının doğrulanmış alıcılar bulmasına, belgelerini yönetmesine ve ödemesini güvenle almasına yardımcı olur.",
   "parent": "who-we-serve"
  },
  "traders": {
@@ -3148,7 +3148,7 @@
     "a": "Tamamlanan işlemlerinizi, doğrulama durumunuzu ve rolünüzü; böylece yeni karşı taraflar ve kredi verenler sizinle çalışmadan önce geçmişinizi görebilir."
    }
   ],
-  "title": "Tüccarlar ve Toplayıcılar İçin T57 | İşlemlerinizi Finanse Edin ve Yürütün",
+  "title": "Tüccarlar ve Toplayıcılar İçin T57 | İşlem Finansmanı",
   "description": "Doğrulanmış tedarikçiler ve alıcılar, karşılıklı sözleşmeler ve yarışan kredi verenlerden finansman; hepsi tek bir gıda ticaret kaydında.",
   "parent": "who-we-serve"
  },
@@ -3176,7 +3176,7 @@
     "a": "Evet. T57 sınır ötesi ticaretin yanı sıra süpermarketler, otel-restoran işletmeleri ve kurumlar için yurt içi toptan satışı da destekler. Yurt içi B2B ticareti görün ."
    }
   ],
-  "title": "Alıcılar ve İthalatçılar İçin T57 | Doğrulanmış Tedarikçilerden Alın",
+  "title": "Alıcılar ve İthalatçılar İçin T57 | Doğrulanmış Tedarik",
   "description": "Doğrulanmış üretici ve işleyicilerden gıda tedarik edin. Teklif talepleri, sözleşmeler, emanet hesabı, akreditif, gözetim ve lojistik tek ticaret kaydında.",
   "parent": "who-we-serve"
  },
@@ -3204,14 +3204,14 @@
     "a": "Evet. T57 belgeleri, aşamaları, karşı tarafları ve ödeme kayıtlarını izlenebilir tek bir iş akışında birbirine bağlayacak şekilde tasarlandı. Bu da kurumsal ekiplerin karmaşık ticaret operasyonlarında iç kontrolleri, incelemeleri ve denetim gerekliliklerini desteklemesini kolaylaştırır."
    }
   ],
-  "title": "İmalatçılar ve Kurumsal Şirketler İçin T57 | Daha Hızlı Gıda Ticareti",
-  "description": "T57, gıda imalatçılarının ve kurumsal şirketlerin tedariki, teklif taleplerini, ödemeleri, ticaret finansmanını ve denetim izlerini tek bir güvenli platformda dijitalleştirmesine yardımcı olur.",
+  "title": "İmalatçılar ve Kurumsal Alıcılar İçin T57",
+  "description": "T57, gıda imalatçılarının ve kurumsal alıcıların tedariki, teklif taleplerini, ödemeleri ve finansmanı tek platformda yönetmesini sağlar.",
   "parent": "who-we-serve"
  },
  "food-processors": {
   "route": "/tr/who-we-serve/food-processors",
   "section": "who-we-serve",
-  "name": "Gıda İşleyiciler",
+  "name": "Gıda İşleyicileri",
   "h1": "Tesisinizi tam kapasiteyle çalıştırın.",
   "answer": "Doğrulanmış çiftliklerden istikrarlı hammadde; kalite kontrolü ve finansman işin içinde.",
   "faqs": [
@@ -3232,8 +3232,8 @@
     "a": "Evet. T57 ticaret, ödeme ve belge verilerini tek bir denetim izinde birbirine bağlı tutarak iç kontrolleri ve dış denetimleri destekler. Bu da işleyicilerin düzenleyici kurumların ve finansal uyum çerçevelerinin belge taleplerini karşılamasına yardımcı olur."
    }
   ],
-  "title": "Gıda İşleyicileri İçin T57 | Arz Güvencesi ve Ticaretin Yürütülmesi",
-  "description": "T57, gıda işleyicilerinin tedariki, teklif taleplerini, ödemeleri, finansmanı ve belgeleri tek platformda dijitalleştirmesine yardımcı olur; girdiler istikrar kazanır, nakit döngüleri hızlanır.",
+  "title": "Gıda İşleyicileri İçin T57 | Güvenli Hammadde Tedariki",
+  "description": "T57 ile tedarik, teklif talepleri, ödemeler, finansman ve belgeler tek platformda: girdiler istikrar kazanır, nakit döngüsü hızlanır.",
   "parent": "who-we-serve"
  },
  "cooperatives": {
@@ -3252,8 +3252,8 @@
     "a": "Kamu ihaleleri ve sözleşmeli tarım anlaşmaları talebi ve zaman çizelgesini kesinleştirir; üyeler ne üreteceklerini, ürünün ne zaman alınacağını ve hangi şartlarla alınacağını bilir. Bu da daha tutarlı fiyatlar ve daha düşük hasat sonrası kayıplar demektir. T57 üyelerin hacim ve ürün desenini planlamasına, arzı ihale gerekliliklerine uydurmasına, lojistik ve belgeleri koordine etmesine ve teslimat ile ödemeleri tek yerden takip etmesine yardımcı olur; böylece kazanılan ihaleler ve sözleşmeler tek tek çiftçilere yayılan bir faydaya dönüşür."
    }
   ],
-  "title": "Kooperatifler ve Üretici Örgütleri İçin T57 | Pazar Erişimi ve Finansman",
-  "description": "T57, kooperatiflerin ve üretici örgütlerinin doğrudan ticaret yapmasına, anlık fiyatları görmesine, finansman sağlamasına, lojistiği yönetmesine ve üyeleri için denetlenebilir operasyonlar yürütmesine yardımcı olur.",
+  "title": "Kooperatifler ve Üretici Birlikleri İçin T57",
+  "description": "T57, kooperatiflerin ve üretici birliklerinin doğrudan ticaret yapmasına, güncel fiyatları görmesine ve finansmana erişmesine yardımcı olur.",
   "parent": "who-we-serve"
  },
  "collaborators": {
@@ -3281,7 +3281,7 @@
    }
   ],
   "title": "T57 İş Ortağı ve İş Birliği Ağı | Gıda ve Tarım Ekosistemi",
-  "description": "T57; agronomları, finansörleri, lojistik firmalarını, belgelendirme kuruluşlarını ve üniversiteleri daha akıllı gıda ticareti ve daha fazla etki için tek bir doğrulanmış platformda buluşturur.",
+  "description": "T57; agronomları, finansörleri, lojistik firmalarını, belgelendirme kuruluşlarını ve üniversiteleri tek bir doğrulanmış platformda buluşturur.",
   "parent": "who-we-serve"
  },
  "service-providers": {
@@ -3309,7 +3309,7 @@
    }
   ],
   "title": "Hizmet Sağlayıcılar İçin T57 | Gıda ve Tarımda Büyüyün",
-  "description": "T57'ye gıda ve tarım hizmet sağlayıcısı olarak katılın. Doğrulanmış talebe ulaşın, güvenilir uzmanlık sunun ve yapılandırılmış, daha düşük riskli iş akışlarıyla büyüyün.",
+  "description": "T57'ye gıda ve tarım hizmet sağlayıcısı olarak katılın: doğrulanmış talebe ulaşın, uzmanlığınızı sunun, güvenli ödeme ve daha düşük riskle büyüyün.",
   "parent": "who-we-serve"
  },
  "farmers": {
@@ -3336,19 +3336,19 @@
     "a": "Dünya Bankası'na göre pek çok gelişmekte olan pazarda tarım finansmanı; risk, işlem maliyetleri ve dağınık kırsal borçlulara hizmet vermenin güçlüğü nedeniyle orantısız biçimde kısıtlı kalıyor. Gerçek siparişlere bağlı işletme sermayesine ihtiyaç duyan üreticiler için ticarete bağlı ve dijital finansman modellerinin önemi de buradan geliyor."
    },
    {
-    "q": "Fiyat istihbaratı çiftlik düzeyinde gerçekten önemli mi?",
-    "a": "Evet. Üreticiler talebi ve fiyatları göremediklerinde daha zayıf bir konumdan pazarlık yapar ve çoğu zaman aracılara fazlasıyla bağımlı kalır. T57'nin temel modeli, pazar ve fiyat istihbaratına erişimi iyileştirerek doğrudan bu soruna çözüm getirir."
+    "q": "Fiyat analizi çiftlik düzeyinde gerçekten önemli mi?",
+    "a": "Evet. Üreticiler talebi ve fiyatları göremediklerinde daha zayıf bir konumdan pazarlık yapar ve çoğu zaman aracılara fazlasıyla bağımlı kalır. T57'nin temel modeli, pazar ve fiyat analizine erişimi iyileştirerek doğrudan bu soruna çözüm getirir."
    }
   ],
-  "title": "Çiftçiler ve Üreticiler İçin T57 | Pazar Erişimi ve Yapay Zekâ Araçları",
-  "description": "T57, çiftçilerin ve üreticilerin doğrulanmış alıcılara ulaşmasına, piyasa fiyatlarını görmesine, güvenli sözleşmeler imzalamasına, ödemesini daha hızlı almasına ve ticaret finansmanına erişmesine yardımcı olur.",
+  "title": "Çiftçiler ve Üreticiler İçin T57 | Pazar ve Finansman",
+  "description": "T57, çiftçilerin doğrulanmış alıcılara ulaşmasına, piyasa fiyatlarını görmesine, güvenli sözleşme yapmasına ve ödemesini hızlı almasına yardım eder.",
   "parent": "who-we-serve"
  },
  "about-investors": {
   "route": "/tr/about/investors",
   "section": "about",
   "name": "Yatırımcı İlişkileri",
-  "h1": "Altyapıya yatırım yapın altyapıyı birlikte inşa edin.",
+  "h1": "Yatırım yapın, altyapıyı birlikte inşa edin.",
   "answer": "T57, beş kurucu pazarı Riyad'dan açmak için lansman yatırım turunu topluyor. Nitelikli yatırımcılar yatırımcı dosyasını bugün talep edebilir.",
   "faqs": [],
   "title": "Yatırımcı İlişkileri | T57'ye Yatırım Yapın",
@@ -3363,7 +3363,7 @@
   "answer": "Bir ticaret platformunun gerçekte neden tedarikçi vaatlerini değil, doğrulama ve güveni sattığı.",
   "faqs": [],
   "title": "Ürün Değil, Ticaret Altyapısı Pazarlamak | T57",
-  "description": "T57'nin küresel gıda ticaretini dönüştürmek için yapay zekâ, blokzincir, akıllı sözleşmeler ve dijital finansmanı kullanırken neden teknolojiyi değil güveni pazarladığını keşfedin.",
+  "description": "T57 neden teknolojiyi değil güveni pazarlıyor? Yapay zekâ, akıllı sözleşmeler ve dijital finansmanla küresel gıda ticaretini dönüştürmek.",
   "post": {
    "author": "Umme Habeeba Khanum",
    "role": "Chief Marketing Officer",
@@ -3382,7 +3382,7 @@
   "answer": "Ölçülebilir sonuçlara bağlı pilotlarla ilk mutabakat zaptı ve niyet mektubu iş ortaklarımız nasıl ortak tasarımcıya dönüştü.",
   "faqs": [],
   "title": "Gulfood Mutabakatları Nasıl Bir Öğrenme Makinesine Dönüştü? | T57",
-  "description": "T57'nin Gulfood 2026'da imzalanan mutabakat zaptlarını ve niyet mektuplarını, niyeti yüksek alıcıları bulmak ve satış stratejisini keskinleştirmek için canlı piyasa sinyalleri olarak nasıl kullandığı.",
+  "description": "T57, Gulfood 2026'da imzalanan mutabakat zaptlarını ve niyet mektuplarını alıcı bulmak ve satış stratejisini keskinleştirmek için nasıl kullanıyor?",
   "post": {
    "author": "Mohammed Umair",
    "role": "Chief Sales Officer",
@@ -3396,12 +3396,12 @@
  "blog-future-of-ai-food-trade-t57": {
   "route": "/tr/resources/blog/future-of-ai-food-trade-t57",
   "section": "resources",
-  "name": "Gulfood 2026'daki 150 Mutabakat Zaptı ve Niyet Mektubu T57'nin Büyüme Hesabını Neden Değiştiriyor",
-  "h1": "Gulfood 2026'daki 150 Mutabakat Zaptı ve Niyet Mektubu T57'nin Büyüme Hesabını Neden Değiştiriyor",
-  "answer": "İmzalanan 150 mutabakat zaptı ve niyet mektubunun ön nitelendirilmiş talep olarak anlamı.",
+  "name": "150'yi Aşkın Mutabakat Zaptı ve Niyet Mektubu T57'nin Büyüme Hesabını Neden Değiştiriyor",
+  "h1": "150'yi Aşkın Mutabakat Zaptı ve Niyet Mektubu T57'nin Büyüme Hesabını Neden Değiştiriyor",
+  "answer": "Gulfood 2026'daki 120'si dahil, imzalanan 150'yi aşkın mutabakat zaptı ve niyet mektubunun ön nitelendirilmiş talep olarak anlamı.",
   "faqs": [],
-  "title": "150 Gulfood Mutabakatı T57'nin Büyüme Hesabını Neden Değiştiriyor? | T57",
-  "description": "T57, Gulfood 2026'da 150 mutabakat zaptı ve niyet mektubu imzalayarak yapay zekâ destekli gıda ticareti altyapısına lansmandan önce bile güçlü bir küresel talep olduğunu gösterdi.",
+  "title": "150 Gulfood Mutabakatı Büyüme Hesabını Nasıl Değiştirir? | T57",
+  "description": "T57, Gulfood 2026'da bağlayıcı olmayan 120 mutabakat zaptı ve niyet mektubu imzaladı; 67 ülkede toplam 150'yi aşan erken talebin parçası.",
   "post": {
    "author": "Mohammed Umair",
    "role": "Chief Sales Officer",
@@ -3420,7 +3420,7 @@
   "answer": "Hindistan'ın Dijital Tarım Misyonu ve tarıma yönelik izlenebilir kamu yatırımı hamlesi.",
   "faqs": [],
   "title": "Hindistan Çiftliklerine Yapay Zekâ Satmak | T57 Insights",
-  "description": "T57'nin AgriStack, yapay zekâ ve dijital çiftçi kimlikleriyle Hindistan'ın Dijital Tarım Misyonu'na nasıl uyum sağladığı ve 110 milyon çiftçiye geniş ölçekte nasıl ulaşabileceği.",
+  "description": "T57'nin AgriStack, yapay zekâ ve dijital çiftçi kimlikleriyle Hindistan'ın Dijital Tarım Misyonu'na uyumu ve 110 milyon çiftçiye ulaşma yolu.",
   "post": {
    "author": "Umme Habeeba Khanum",
    "role": "Chief Marketing Officer",
@@ -3438,8 +3438,8 @@
   "h1": "Gıda Ticareti Anlaşmaları El Sıkışmadan Önce Gerçekleştiğinde",
   "answer": "Keşif ve sözleşme süreçleri neden fuar alanlarından yapay zekâ temelli ticaret platformlarına taşınıyor.",
   "faqs": [],
-  "title": "El Sıkışmadan Önce Yapılan Gıda Ticareti Anlaşmaları | T57 Insights",
-  "description": "Yapay zekâ, KYC/KYB ve gömülü finansmanın, fiziksel ticaret etkinlikleri başlamadan önce daha hızlı ve güvenilir anlaşmalar yapılmasını sağlayarak gıda ticaretini nasıl dönüştürdüğünü keşfedin.",
+  "title": "El Sıkışmadan Önce Yapılan Gıda Ticareti Anlaşmaları | T57",
+  "description": "Yapay zekâ, KYC/KYB ve gömülü finansman, fuarlar başlamadan önce daha hızlı ve güvenilir gıda ticareti anlaşmalarını nasıl mümkün kılıyor?",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3458,7 +3458,7 @@
   "answer": "Dijital araçları ve hizmetleri çiftçilerin erişimine sunan modüler merkezler.",
   "faqs": [],
   "title": "Gıda Sistemlerinin Eksik Halkası | T57 Insights",
-  "description": "Model Destek Merkezlerinin çiftçiler, pazarlar ve teknoloji arasındaki boşluğu kapatarak tarımı nasıl dönüştürdüğünü, israfı nasıl azalttığını ve nasıl değer yarattığını keşfedin.",
+  "description": "Model Destek Merkezleri çiftçiler, pazarlar ve teknoloji arasındaki boşluğu kapatarak israfı nasıl azaltıyor ve tarımda nasıl değer yaratıyor?",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3515,7 +3515,7 @@
   "answer": "Hurma çiftçileri hasatlarını nasıl listeleyebilir, alıcı teklifleri alabilir ve ödemelerini daha hızlı tahsil edebilir.",
   "faqs": [],
   "title": "Suudi Hurma Yetiştiriciliği ve Daha İyi Bir Tedarik Zinciri | T57",
-  "description": "Suudi Arabistan küresel hurma ihracatında lider; ancak çiftçiler israf, fiyat dalgalanmaları ve sınırlı pazar erişimiyle karşı karşıya. T57'nin hurma tedarik zincirini nasıl değiştirdiğini görün.",
+  "description": "Suudi Arabistan hurma ihracatında lider, ancak üreticiler israf ve fiyat dalgalanmasıyla boğuşuyor. T57 hurma tedarik zincirini nasıl değiştiriyor?",
   "post": {
    "author": "Dr. Moaz Abdullah Mohammed Mojaddidi",
    "role": "Geo Head, Saudi Arabia",
@@ -3534,7 +3534,7 @@
   "answer": "Ticaret geçmişi ve puanlarla seçilmiş üyelerden oluşan bir yapının anlaşmazlıkları neden azalttığı.",
   "faqs": [],
   "title": "Kulüp Üyeliği Modeli Neden Güven İnşa Eder? | T57",
-  "description": "T57'nin doğrulanmış kulüp üyeliğinin; doğrulanmış üyeler, yapay zekâ ve değiştirildiğinde iz bırakan kayıtlarla güveni nasıl inşa ettiği, anlaşmazlıkları nasıl azalttığı ve tarım ticaretini nasıl değiştirdiği.",
+  "description": "T57'nin doğrulanmış kulüp üyeliği, yapay zekâ ve değişiklikleri iz bırakan kayıtlarla güveni nasıl inşa ediyor ve anlaşmazlıkları nasıl azaltıyor?",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3553,7 +3553,7 @@
   "answer": "Hindistan'ın hızla büyüyen avokado ithalatı ve üreticilerin karşılaştığı boşluklar.",
   "faqs": [],
   "title": "Hindistan'ın Yükselen Avokado Sektörü | T57 Insights",
-  "description": "Hindistan'ın avokado sektörü hızla büyüyor; ancak arz fazlası ve piyasayla zayıf uyum gibi riskler sürüyor. T57'nin daha akıllı, veriye dayalı tarımı nasıl mümkün kıldığını keşfedin.",
+  "description": "Hindistan'ın avokado sektörü hızla büyüyor, ancak arz fazlası riski sürüyor. T57 daha akıllı, veriye dayalı tarımı nasıl mümkün kılıyor?",
   "post": {
    "author": "Abdul Bari Kareem",
    "role": "Co-founder & CTO",
@@ -3572,7 +3572,7 @@
   "answer": "Türkiye'nin tarım sektörü üzerindeki baskılar ve piyasa analizinin nerede yardımcı olduğu.",
   "faqs": [],
   "title": "Türk Tarımını 2026'da Yeniden Tanımlayan Dönüşümler | T57",
-  "description": "Türk Tarımını 2026'da Yeniden Tanımlayacak Beş Yapısal Dönüşüm",
+  "description": "2026'da Türkiye tarımını yeniden şekillendiren yapısal baskılar ve doğrulanmış piyasa verisinin üreticilere, ihracatçılara ve alıcılara katkısı.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3588,10 +3588,10 @@
   "section": "resources",
   "name": "Blokzincir, Gıda İsrafının Yıllık 1 Trilyon Dolarlık Küresel Maliyetini Sonunda Kapatabilir mi?",
   "h1": "Blokzincir, Gıda İsrafının Dünyaya Yıllık 1 Trilyon Dolarlık Maliyetini Nihayet Kapatabilir mi?*",
-  "answer": "Ortak ve değişikliğe karşı korumalı bir kayıt, uzun gıda tedarik zincirlerini nasıl güvenilir kılabilir.",
+  "answer": "Ortak ve her değişikliğin izlendiği bir kayıt, uzun gıda tedarik zincirlerini nasıl güvenilir kılabilir.",
   "faqs": [],
-  "title": "Blokzincir Gıda İsrafının 1 Trilyon Dolarlık Maliyetini Azaltabilir mi? | T57",
-  "description": "Blokzincirin gıda tedarik zincirlerine nasıl şeffaflık getirdiğini, israfı nasıl azalttığını ve çiftçilerin küresel pazarlarda hak ettikleri değeri almasına nasıl yardımcı olduğunu keşfedin.",
+  "title": "Blokzincir Gıda İsrafının Maliyetini Azaltabilir mi? | T57",
+  "description": "Blokzincir gıda tedarik zincirlerine nasıl şeffaflık getiriyor, israfı nasıl azaltıyor ve çiftçilerin hak ettiği değeri almasına nasıl yardım ediyor?",
   "post": {
    "author": "Abdul Bari Kareem",
    "role": "Co-founder & CTO",
@@ -3686,7 +3686,7 @@
   "answer": "Geç ödemeler ve anlaşmazlıklar ile kendi kendini uygulayan kararlaştırılmış şartların bunları nasıl çözebileceği.",
   "faqs": [],
   "title": "Akıllı Sözleşmeler Tarım Ticaretinde Güveni Nasıl Onarır? | T57",
-  "description": "Akıllı sözleşmeler, üzerinde anlaşılan koşullar yerine geldiğinde çalışan kodla güven inşa ediyor; teslimat onayını, kalite kontrollerini ve ödemenin serbest bırakılmasını otomatikleştiriyor.",
+  "description": "Akıllı sözleşmeler, koşullar yerine geldiğinde teslimat onayını, kalite kontrollerini ve ödemenin serbest bırakılmasını otomatikleştirir.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3704,7 +3704,7 @@
   "h1": "Gulfood'da Tarladan Sofraya: Yapay Zekâ, Blokzincir ve İnsan Yeteneği Küresel Gıda Zincirinde Güveni Nasıl Yeniden Kuracak",
   "answer": "Gulfood 2026'da gıda zincirinde güven üzerine düzenlenen bir panelden çıkarımlar.",
   "faqs": [],
-  "title": "Gulfood'da Tarladan Sofraya: Yapay Zekâ, Blokzincir, Yetenek | T57",
+  "title": "Gulfood 2026'da Tarladan Sofraya: Yapay Zekâ ve Yetenek",
   "description": "Gulfood'da Tarladan Sofraya: Yapay Zekâ, Blokzincir ve İnsan Yeteneği Küresel Gıda Zincirinde Güveni Nasıl Yeniden Kuracak? Gulfood 2026'dan izlenimler",
   "post": {
    "author": "Abdul Bari Kareem",
@@ -3762,7 +3762,7 @@
   "answer": "T57–MAIB mutabakat zaptının çiftçiler ve tarım girişimcileri için anlamı.",
   "faqs": [],
   "title": "Dijital Tarım Finansmanı İttifakının Katkısı | T57",
-  "description": "Yapay zekâ destekli ticaret finansmanının, çiftçiler ve tüccarlar için likiditeyi, şeffaflığı ve sermayeye erişimi iyileştirerek küresel tarımı nasıl yeniden şekillendirdiğini öğrenin.",
+  "description": "T57–MAIB mutabakat zaptının çiftçiler ve tarım girişimcileri için anlamı ve dijital tarım finansmanı ittifakının sermayeye erişimi nasıl genişlettiği.",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3781,7 +3781,7 @@
   "answer": "Yavaş ödemeler çiftçilere neden zarar veriyor ve onları ne hızlandırabilir.",
   "faqs": [],
   "title": "Tarımda Emanet Hesabı, Kripto ve Yapay Zekâ Ajanları | T57",
-  "description": "Emanet hesabı, kripto çözümleri ve yapay zekâ ajanlarının küresel tedarik zincirlerinde ödemeleri nasıl güvence altına aldığını, riski nasıl azalttığını ve tarım ticaretini nasıl modernleştirdiğini keşfedin.",
+  "description": "Emanet hesabı, dijital varlıklar ve yapay zekâ ajanları tarım ticaretinde ödemeleri nasıl güvenceye alıyor ve riski nasıl azaltıyor?",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3800,7 +3800,7 @@
   "answer": "Tarım işletmelerini yetersiz finansmanla bırakan ticaret finansmanı açığı.",
   "faqs": [],
   "title": "Tarımda Ticaret Finansmanını Yeniden Yazmak | T57",
-  "description": "Yapay zekâ destekli ticaret finansmanının, çiftçiler ve tüccarlar için likiditeyi, şeffaflığı ve sermayeye erişimi iyileştirerek küresel tarımı nasıl yeniden şekillendirdiğini öğrenin.",
+  "description": "Tarım KOBİ'leri ticaret finansmanı açığı yüzünden neden yetersiz fonlanıyor ve doğrulanmış ticaret kayıtları lisanslı kredi verenlere nasıl yardım ediyor?",
   "post": {
    "author": "Afzal Hussain Mohammed Nakheeb",
    "role": "Founder, Chairman & Head of Strategy",
@@ -3844,7 +3844,7 @@
   "route": "/tr/legal/privacy",
   "section": "legal",
   "name": "Gizlilik Bildirimi",
-  "h1": "Neleri topluyoruz, ve neden.",
+  "h1": "Neleri topluyoruz ve neden?",
   "answer": "T57'nin bu web sitesi aracılığıyla iletilen kişisel verileri nasıl işlediği ve bu veriler üzerindeki haklarınız.",
   "faqs": [],
   "title": "Gizlilik Bildirimi | T57",

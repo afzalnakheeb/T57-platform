@@ -18,7 +18,7 @@
 "Generate → Collect and check → Record": "الإنشاء ← الجمع والتدقيق ← التسجيل",
 "Core documents such as the contract and invoice are generated from the accepted quote, so the data is entered once.": "تُنشأ المستندات الأساسية، كالعقد والفاتورة، من العرض المقبول، فتُدخل البيانات مرة واحدة.",
 "Partner documents, such as inspection reports and certificates, are added to the trade record and checked for completeness and consistency.": "تُضاف مستندات الشركاء، كتقارير الفحص والشهادات، إلى سجلّ الصفقة وتُدقَّق في اكتمالها واتساقها.",
-"Every document, approval and milestone is time-stamped and anchored on a tamper-evident ledger, creating a full audit trail.": "يُختم كل مستند وموافقة ومرحلة بالوقت، ويُثبَّت على سجلّ يكشف أي تلاعب، فيتكوّن سجلّ تدقيق كامل.",
+"Every document, approval and milestone is time-stamped and anchored on a tamper-evident ledger, creating a full audit trail.": "يُختم كل مستند وموافقة ومرحلة بالوقت، ويُثبَّت على سجلّ يكشف أي تلاعب، فيتكوّن مسار تدقيق كامل.",
 "Data entered once": "بيانات تُدخل مرة واحدة",
 "Documents generated from the quote carry the same product, price, quantity and terms, which cuts errors and discrepancies.": "المستندات المنشأة من العرض تحمل المنتج والسعر والكمية والشروط ذاتها، فتقل الأخطاء والتعارضات.",
 "One version of the truth": "نسخة واحدة معتمدة",
@@ -32,11 +32,11 @@
 "A complete, time-stamped trail supports lenders, insurers, auditors and customs authorities, and makes paperless pre-clearance possible where authorities support it.": "يخدم السجلّ الكامل المختوم بالوقت جهات التمويل وشركات التأمين والمدققين والجمارك، ويتيح التخليص المسبق بلا أوراق حيث تدعمه الجهات المختصة.",
 "AI reads and checks documents for missing fields and mismatches. People approve, and every adverse decision is reviewed by a person.": "يقرأ الذكاء الاصطناعي المستندات ويرصد الحقول الناقصة والتعارضات، والاعتماد للإنسان، وكل قرار في غير صالح العضو يراجعه موظف مختص.",
 "Who can see my trade documents?": "من يستطيع رؤية مستندات صفقتي؟",
-"Only the parties you authorize for that trade, such as your counterparty, lender, insurer or inspector. Access is recorded in the audit trail.": "الأطراف التي تخوّلها في تلك الصفقة فقط، كالطرف المقابل وجهة التمويل وشركة التأمين وجهة الفحص، ويُسجَّل كل اطلاع في سجلّ التدقيق.",
+"Only the parties you authorize for that trade, such as your counterparty, lender, insurer or inspector. Access is recorded in the audit trail.": "الأطراف التي تخوّلها في تلك الصفقة فقط، كالطرف المقابل وجهة التمويل وشركة التأمين وجهة الفحص، ويُسجَّل كل اطلاع في مسار التدقيق.",
 "Are documents stored on the blockchain?": "هل تُحفظ المستندات على البلوك تشين؟",
 "No. Documents are stored securely, and a digital fingerprint of each key record is anchored on the ledger. This proves the document has not changed without exposing its contents.": "لا، تُحفظ المستندات في بيئة آمنة، وتُثبَّت بصمة رقمية لكل سجلّ رئيسي على السجلّ الموزّع، فيثبت أن المستند لم يتغير دون كشف محتواه.",
 "See the trade record in a demo": "شاهد سجلّ الصفقة في عرض تجريبي",
-"Document Management & Audit Trail": "إدارة المستندات وسجلّ التدقيق",
+"Document Management & Audit Trail": "إدارة المستندات ومسار التدقيق",
 "Container ships being loaded by gantry cranes at a port, seen from above.": "سفن حاويات تُحمَّل بالرافعات في ميناء، من الأعلى.",
 "Retyped, many versions": "يُعاد إدخالها، ونسخ متعددة",
 "Entered once": "تُدخل مرة واحدة",
@@ -45,6 +45,6 @@
 "On one record": "في سجلّ واحد",
 "Audit": "التدقيق",
 "Tamper-evident trail": "سجلّ يكشف أي تلاعب",
-"Trade Document Management & Audit Trail | T57": "إدارة مستندات التجارة وسجلّ التدقيق | T57",
-"Contracts, invoices, certificates and inspection reports on one tamper-evident trade record, with a full audit trail for every food trade.": "العقود والفواتير والشهادات وتقارير الفحص في سجلّ صفقة واحد يكشف أي تلاعب، مع سجلّ تدقيق كامل لكل صفقة غذائية."
+"Trade Document Management & Audit Trail | T57": "إدارة مستندات التجارة ومسار التدقيق | T57",
+"Contracts, invoices, certificates and inspection reports on one tamper-evident trade record, with a full audit trail for every food trade.": "العقود والفواتير والشهادات وتقارير الفحص في سجلّ صفقة واحد يكشف أي تلاعب، مع مسار تدقيق كامل لكل صفقة غذائية."
 }
