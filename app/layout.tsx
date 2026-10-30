@@ -1,5 +1,7 @@
 import React from 'react';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 import { SITE, assetVersion, assistantVersion } from '../lib/site';
 
@@ -37,6 +39,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script src={`/proto/worlds.js?v=${assetVersion}`} strategy="afterInteractive" />
         {/* T57 AI, the site assistant (public/assistant, app/api/assistant): loads once the page is idle. */}
         <Script src={`/assistant/assistant.js?v=${assistantVersion}`} strategy="lazyOnload" />
+        {/* Vercel Web Analytics (cookie-free visits) and Speed Insights (real-visitor Core Web Vitals); both stay idle until switched on in the Vercel project. */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
