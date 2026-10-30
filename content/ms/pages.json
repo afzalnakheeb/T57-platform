@@ -655,6 +655,222 @@
   "description": "Simpan, tukar dan hantar wang dalam apa jua mata wang dengan kadar di awal dan pindahan rentas sempadan yang pantas, dikaitkan dengan setiap dagangan di T57.",
   "parent": "cap-banking"
  },
+ "cap-digital-assets": {
+  "route": "/ms/capabilities/finance/crypto-banking",
+  "section": "capabilities",
+  "name": "Kripto & Aset Digital",
+  "h1": "Selesaikan bayaran dengan stablecoin atau token bersandarkan emas.",
+  "answer": "Selesaikan dagangan dengan stablecoin, aset digital atau token bersandarkan emas, melalui rakan kongsi terkawal.",
+  "faqs": [
+   {
+    "q": "Adakah penyelesaian aset digital sah di negara saya?",
+    "a": "T57 hanya memaparkan pilihan aset digital jika ia dibenarkan bagi kedua-dua pihak di bawah peraturan tempatan, melalui rakan kongsi berlesen."
+   },
+   {
+    "q": "Bagaimana dengan turun naik harga?",
+    "a": "Stablecoin dan token bersandarkan emas direka untuk mengurangkan turun naik, dan rakan kongsi boleh menukar kepada mata wang tempatan semasa bayaran dibuat."
+   },
+   {
+    "q": "Adakah bayaran aset digital patuh Syariah?",
+    "a": "Pandangan ulama berbeza-beza. Ahli yang memerlukan penyelesaian patuh Syariah wajar mendapatkan nasihat dan boleh memilih token bersandarkan emas atau pilihan konvensional."
+   }
+  ],
+  "title": "Penyelesaian Dagangan dengan Kripto, Stablecoin & Token Emas | T57",
+  "description": "Selesaikan dagangan makanan dengan stablecoin, aset digital atau token bersandarkan emas melalui rakan kongsi berlesen, jika sah di sisi undang-undang, dikaitkan dengan rekod dagangan T57 anda.",
+  "parent": "cap-banking"
+ },
+ "cap-financing": {
+  "route": "/ms/capabilities/finance/financing",
+  "section": "capabilities",
+  "name": "Pembiayaan & Modal",
+  "h1": "Biayai setiap peringkat dagangan makanan anda.",
+  "answer": "Biayai setiap peringkat dagangan makanan anda, daripada penanaman dan pengeluaran hingga penghantaran dan jualan.",
+  "faqs": [
+   {
+    "q": "Siapa yang menyediakan pembiayaan?",
+    "a": "Bank, syarikat pembiayaan, penyedia kewangan Islam dan, jika dibenarkan, pelabur institusi yang berlesen. T57 tidak memberi pinjaman."
+   },
+   {
+    "q": "Apa yang dilihat oleh pemberi pinjaman?",
+    "a": "Hanya fail urus niaga yang anda pilih untuk dikongsi: Pasport T57, kontrak, rakan dagang, dokumen dan sejarah dagangan anda."
+   },
+   {
+    "q": "Bagaimana bayaran balik berfungsi?",
+    "a": "Dalam kebanyakan struktur, bayaran pembeli akhir masuk ke eskrow dan membayar balik pemberi pinjaman semasa penyelesaian, sebelum baki dilepaskan kepada anda."
+   }
+  ],
+  "title": "Pembiayaan & Modal Perdagangan Makanan | Pemberi Pinjaman Bersaing | T57",
+  "description": "Pembiayaan perdagangan dan rantaian bekalan, pembiayaan patuh Syariah dan pembiayaan bertoken untuk dagangan makanan yang disahkan, daripada pemberi pinjaman berlesen yang bersaing di T57.",
+  "parent": "capabilities"
+ },
+ "cap-supply-chain-finance": {
+  "route": "/ms/capabilities/finance/supply-chain-finance",
+  "section": "capabilities",
+  "name": "Pembiayaan Perdagangan & Rantaian Bekalan",
+  "h1": "Modal kerja di setiap langkah.",
+  "answer": "Dapatkan modal kerja di setiap langkah rantaian makanan, daripada pemberi pinjaman yang bersaing untuk dagangan anda.",
+  "faqs": [
+   {
+    "q": "Berapa cepat saya boleh menerima tawaran?",
+    "a": "Ia bergantung pada proses setiap pemberi pinjaman. Oleh kerana fail urus niaga sudah disahkan, pemberi pinjaman boleh menjawab lebih pantas berbanding permohonan biasa."
+   },
+   {
+    "q": "Adakah saya memerlukan cagaran?",
+    "a": "Banyak struktur bergantung pada dagangan itu sendiri, melalui pesanan yang disahkan, invois dan bayaran balik eskrow, bukan pada hartanah atau cagaran lain. Setiap pemberi pinjaman menetapkan keperluannya sendiri."
+   },
+   {
+    "q": "Bolehkah pembeli besar menawarkan pembiayaan kepada pembekal mereka?",
+    "a": "Boleh. Melalui pembiayaan belum bayar, pembeli utama boleh membolehkan pembekal yang disahkan dibayar awal oleh pemberi pinjaman rakan kongsi."
+   }
+  ],
+  "title": "Pembiayaan Perdagangan & Rantaian Bekalan untuk PKS Makanan | T57",
+  "description": "Pembiayaan pra-penghantaran, pasca-penghantaran, belum terima, belum bayar dan inventori untuk dagangan makanan yang disahkan, dengan pemberi pinjaman bersaing dan bayaran balik melalui eskrow di T57.",
+  "parent": "cap-financing"
+ },
+ "cap-fundraising": {
+  "route": "/ms/capabilities/finance/crowdfunding",
+  "section": "capabilities",
+  "name": "Pengumpulan Dana Berasaskan Aset & Tokenisasi",
+  "h1": "Kumpul modal berasaskan aset makanan sebenar.",
+  "answer": "Kumpul modal berasaskan aset makanan sebenar, daripada dagangan yang disahkan hingga stok gudang dan peralatan ladang.",
+  "faqs": [
+   {
+    "q": "Adakah ini sama dengan kripto?",
+    "a": "Tidak. Aset bertoken ialah rekod digital bagi aset sebenar, seperti invois atau stor sejuk. Ia bukan mata wang."
+   },
+   {
+    "q": "Siapa yang boleh melabur?",
+    "a": "Pemberi pinjaman berlesen, dan pelabur yang layak di bawah peraturan platform pengumpulan dana berlesen dan negara mereka sendiri."
+   },
+   {
+    "q": "Apa yang berlaku jika dagangan gagal?",
+    "a": "Hasilnya bergantung pada struktur. Pembiaya mungkin mempunyai hak ke atas aset asas, insurans atau jaminan, yang dinyatakan sebelum mereka membuat komitmen."
+   }
+  ],
+  "title": "Pengumpulan Dana Berasaskan Aset & Tokenisasi untuk Makanan | T57",
+  "description": "Tokenkan invois, resit gudang dan aset makanan yang disahkan supaya pemberi pinjaman dan pelabur berlesen boleh membiayainya, jika dibenarkan undang-undang, di T57.",
+  "parent": "cap-financing"
+ },
+ "cap-risk": {
+  "route": "/ms/capabilities/finance/risk-protection",
+  "section": "capabilities",
+  "name": "Risiko & Perlindungan",
+  "h1": "Lindungi setiap dagangan daripada kerugian dan kemungkiran.",
+  "answer": "Lindungi setiap dagangan daripada kerugian, kemungkiran dan gangguan, dengan perlindungan yang dibina daripada rekod dagangan.",
+  "faqs": [
+   {
+    "q": "Adakah T57 menjual insurans?",
+    "a": "T57 menghubungkan ahli dengan syarikat insurans, pengendali takaful dan broker berlesen. Polisi dikeluarkan oleh mereka, di bawah peraturan mereka sendiri."
+   },
+   {
+    "q": "Bolehkah saya menggunakan syarikat insurans sedia ada?",
+    "a": "Boleh. Anda boleh memuat naik polisi sedia ada ke rekod dagangan supaya ia boleh digunakan bersama LC, pemberi pinjaman dan tuntutan."
+   },
+   {
+    "q": "Apa yang disemak oleh saringan pematuhan?",
+    "a": "Senarai sekatan, senarai pantauan, berita negatif dan pemilikan benefisial bagi setiap rakan dagang, sebelum urus niaga diteruskan."
+   }
+  ],
+  "title": "Risiko & Perlindungan Dagangan | Kargo, Kredit & Takaful | T57",
+  "description": "Insurans kargo, perlindungan kredit dagangan, takaful, perlindungan tanaman dan saringan pematuhan untuk perdagangan makanan, daripada rakan kongsi berlesen, dikaitkan dengan setiap dagangan T57.",
+  "parent": "capabilities"
+ },
+ "cap-logistics": {
+  "route": "/ms/capabilities/logistics",
+  "section": "capabilities",
+  "name": "Logistik & Pemenuhan Pesanan",
+  "h1": "Dari ladang atau kilang ke pembeli, dalam satu rekod.",
+  "answer": "Gerakkan makanan dari ladang atau kilang ke pembeli, dengan pengangkutan, penjejakan dan kastam dalam satu rekod.",
+  "faqs": [
+   {
+    "q": "Bolehkah saya menggunakan ejen penghantaran saya sendiri?",
+    "a": "Boleh. Anda boleh menjemput ejen anda ke rekod dagangan atau memuat naik dokumen dan data penjejakannya."
+   },
+   {
+    "q": "Adakah T57 menyokong penghantaran rantaian sejuk?",
+    "a": "Ya. Rakan kongsi rantaian sejuk dan penjejakan suhu tersedia bagi barang dingin dan sejuk beku."
+   },
+   {
+    "q": "Mod pengangkutan apakah yang diliputi?",
+    "a": "Pengangkutan laut, udara dan darat, serta pergudangan dan simpanan sejuk, melalui rakan kongsi yang disaring."
+   }
+  ],
+  "title": "Logistik & Pemenuhan Pesanan Makanan: Pengangkutan dan Kastam | T57",
+  "description": "Tempah rakan kongsi pengangkutan, rantaian sejuk, pemeriksaan dan kastam yang disaring, jejak penghantaran dalam masa nyata dan lepasi sempadan lebih pantas, dalam satu rekod dagangan T57.",
+  "parent": "capabilities"
+ },
+ "cap-logistics-network": {
+  "route": "/ms/capabilities/logistics/network",
+  "section": "capabilities",
+  "name": "Rangkaian Logistik Pintar",
+  "h1": "Pengangkutan dan rantaian sejuk yang disaring, dipadankan dengan setiap dagangan.",
+  "answer": "Banding dan tempah rakan kongsi pengangkutan, rantaian sejuk dan pergudangan yang disaring, dipadankan dengan setiap dagangan.",
+  "faqs": [
+   {
+    "q": "Bagaimana rakan kongsi logistik disaring?",
+    "a": "Rakan kongsi melalui pengesahan perniagaan, semakan lesen dan insurans, dan prestasi mereka dinilai berdasarkan penghantaran yang direkodkan."
+   },
+   {
+    "q": "Bolehkah saya menjemput ejen saya sendiri?",
+    "a": "Boleh. Ejen sedia ada anda boleh menyertai rekod dagangan dan memberi sebut harga bersama rakan kongsi rangkaian."
+   },
+   {
+    "q": "Adakah T57 merundingkan kadar pengangkutan?",
+    "a": "T57 menghimpunkan permintaan dan memaparkan sebut harga yang setanding, membantu ahli mendapat kadar yang kompetitif. Ahli yang memilih dan menempah."
+   }
+  ],
+  "title": "Rangkaian Logistik Makanan | Pengangkutan & Rantaian Sejuk | T57",
+  "description": "Banding dan tempah ejen penghantaran, syarikat pengangkutan, rakan kongsi rantaian sejuk dan pergudangan yang disaring, dipadankan dengan setiap dagangan makanan, dengan amaran risiko laluan di T57.",
+  "parent": "cap-logistics"
+ },
+ "cap-tracking": {
+  "route": "/ms/capabilities/logistics/tracking",
+  "section": "capabilities",
+  "name": "Penjejakan Penghantaran Masa Nyata",
+  "h1": "Di mana makanan anda. Bagaimana keadaannya.",
+  "answer": "Ketahui di mana makanan anda, bagaimana keadaannya dan bila ia akan tiba.",
+  "faqs": [
+   {
+    "q": "Adakah saya memerlukan peranti penjejakan khas?",
+    "a": "Tidak. T57 menggunakan data syarikat pengangkutan dan pelabuhan bagi semua penghantaran. Peranti IoT menambah data suhu dan lokasi langsung untuk kargo sensitif."
+   },
+   {
+    "q": "Siapa yang boleh melihat penghantaran saya?",
+    "a": "Hanya pihak dalam dagangan dan rakan kongsi yang anda benarkan, seperti pemberi pinjaman atau syarikat insurans anda."
+   },
+   {
+    "q": "Bolehkah penjejakan mencetuskan bayaran?",
+    "a": "Boleh. Pencapaian yang dipersetujui, seperti ketibaan atau pengesahan penerimaan, boleh melepaskan bayaran eskrow secara automatik."
+   }
+  ],
+  "title": "Penjejakan Penghantaran & Rantaian Sejuk Masa Nyata untuk Makanan | T57",
+  "description": "Jejak penghantaran makanan merentas laut, udara dan darat, dengan pemantauan suhu langsung, ramalan ketibaan dan amaran, semuanya dalam satu rekod dagangan T57.",
+  "parent": "cap-logistics"
+ },
+ "cap-customs": {
+  "route": "/ms/capabilities/logistics/customs",
+  "section": "capabilities",
+  "name": "Hab Kastam & Dokumentasi",
+  "h1": "Dokumen disediakan sekali. Pelepasan lebih pantas.",
+  "answer": "Sediakan dokumen eksport dan import sekali sahaja, dan lepaskan makanan di kastam dengan lebih pantas.",
+  "faqs": [
+   {
+    "q": "Adakah T57 memfailkan pengisytiharan kastam?",
+    "a": "Tidak. Ejen kastam berlesen memfailkan pengisytiharan, menggunakan dokumen yang disediakan di T57."
+   },
+   {
+    "q": "Adakah pra-pelepasan tersedia di setiap negara?",
+    "a": "Pra-pelepasan bergantung pada prosedur setiap pihak berkuasa kastam. Jika tidak tersedia, T57 tetap menghantar dokumen yang lengkap dan disemak kepada ejen sebelum ketibaan."
+   },
+   {
+    "q": "Adakah kod HS yang dicadangkan AI muktamad?",
+    "a": "Tidak. Ia cadangan untuk disahkan oleh ejen atau ahli. Pengelasan muktamad ialah tanggungjawab pengisytihar."
+   }
+  ],
+  "title": "Hab Kastam & Dokumentasi Perdagangan untuk Makanan | T57",
+  "description": "Jana dokumen eksport dan import daripada kontrak anda, dapatkan panduan kod HS dan semakan ketekalan, dan pra-lepaskan penghantaran makanan dengan ejen yang disaring di T57.",
+  "parent": "cap-logistics"
+ },
  "markets": {
   "route": "/ms/markets",
   "section": "markets",
