@@ -60,8 +60,16 @@
   const MS = document.documentElement.lang === 'ms';
   // Turkish labels (pages under /tr set <html lang="tr">). Turkish writes decimals with a comma and thousands with a point.
   const TR = document.documentElement.lang === 'tr';
+  // Hindi labels (pages under /hi set <html lang="hi">). Figures stay in international digits, as in Indian business writing.
+  const HI = document.documentElement.lang === 'hi';
   const num = s => TR ? String(s).replace(/[.,]/g, c => c === '.' ? ',' : '.') : String(s);
-  const TX = TR ? { 'Food Price Index': 'Gıda Fiyat Endeksi', Cereals: 'Tahıllar', 'Vegetable oils': 'Bitkisel yağlar', Dairy: 'Süt ürünleri', Meat: 'Et', Sugar: 'Şeker',
+  const TX = HI ? { 'Food Price Index': 'खाद्य मूल्य सूचकांक', Cereals: 'अनाज', 'Vegetable oils': 'वनस्पति तेल', Dairy: 'डेयरी', Meat: 'मांस', Sugar: 'चीनी',
+    'Wheat, US HRW': 'गेहूँ, अमेरिका HRW', 'Wheat, US SRW': 'गेहूँ, अमेरिका SRW', Maize: 'मक्का', 'Rice, Thai 5%': 'चावल, थाई 5%', 'Rice, Viet Nam 5%': 'चावल, वियतनाम 5%',
+    Soybeans: 'सोयाबीन', 'Soybean oil': 'सोयाबीन तेल', 'Palm oil': 'पाम तेल', 'Coffee, Arabica': 'कॉफ़ी, अरेबिका', Cocoa: 'कोको', Tea: 'चाय', Beef: 'बीफ़', Chicken: 'चिकन',
+    Oranges: 'संतरा', Bananas: 'केला', Urea: 'यूरिया', 'DAP fertilizer': 'DAP खाद', 'Brent crude': 'ब्रेंट कच्चा तेल', Grains: 'अनाज', 'Oils and oilseeds': 'तेल और तिलहन',
+    'Sugar and softs': 'चीनी और बागानी फ़सलें', 'Proteins and produce': 'प्रोटीन और ताज़ी उपज', 'Inputs and energy': 'कृषि इनपुट और ऊर्जा',
+    Explore: 'एक्सप्लोर', Core: 'कोर', Growth: 'ग्रोथ', Enterprise: 'एंटरप्राइज़', ' (from)': ' (शुरुआती)',
+    'on the month': 'मासिक', 'on the year': 'सालाना', 'on a year earlier': 'एक साल पहले की तुलना में', trillion: 'ट्रिलियन', Replay: 'फिर से चलाएँ', Play: 'चलाएँ', Pause: 'रोकें' } : TR ? { 'Food Price Index': 'Gıda Fiyat Endeksi', Cereals: 'Tahıllar', 'Vegetable oils': 'Bitkisel yağlar', Dairy: 'Süt ürünleri', Meat: 'Et', Sugar: 'Şeker',
     'Wheat, US HRW': 'Buğday, ABD HRW', 'Wheat, US SRW': 'Buğday, ABD SRW', Maize: 'Mısır', 'Rice, Thai 5%': 'Pirinç, Tayland %5', 'Rice, Viet Nam 5%': 'Pirinç, Vietnam %5',
     Soybeans: 'Soya fasulyesi', 'Soybean oil': 'Soya yağı', 'Palm oil': 'Palm yağı', 'Coffee, Arabica': 'Kahve, Arabica', Cocoa: 'Kakao', Tea: 'Çay', Beef: 'Sığır eti', Chicken: 'Tavuk',
     Oranges: 'Portakal', Bananas: 'Muz', Urea: 'Üre', 'DAP fertilizer': 'DAP gübresi', 'Brent crude': 'Brent ham petrol', Grains: 'Tahıllar', 'Oils and oilseeds': 'Yağlar ve yağlı tohumlar',
@@ -81,7 +89,7 @@
     Explore: 'استكشاف', Core: 'الأساسية', Growth: 'النمو', Enterprise: 'الشركات', ' (from)': ' (ابتداءً من)',
     'on the month': 'على أساس شهري', 'on the year': 'على أساس سنوي', 'on a year earlier': 'عن العام السابق', trillion: 'تريليون', Replay: 'إعادة', Play: 'تشغيل', Pause: 'إيقاف مؤقت' } : {};
   const tx = s => TX[s] || s;
-  const DATE_LOCALE = AR ? 'ar-u-ca-gregory-nu-latn' : MS ? 'ms-MY' : TR ? 'tr-TR' : 'en-US';
+  const DATE_LOCALE = AR ? 'ar-u-ca-gregory-nu-latn' : MS ? 'ms-MY' : TR ? 'tr-TR' : HI ? 'hi-IN' : 'en-US';
   const IMPORT_BILL_PER_YEAR = 2.22e12; // FAO Food Outlook, Nov 2025 (2025 forecast)
 
   /* ---------- Living scenes ---------- */
@@ -400,7 +408,7 @@
     // import bill counter, paced from the annual figure
     const ib = document.querySelector('[data-importbill]');
     if (ib) { const y0 = Date.UTC(new Date().getUTCFullYear(), 0, 1), perMs = IMPORT_BILL_PER_YEAR / (365 * 864e5);
-      const tick = () => { const v = (Date.now() - y0) * perMs; ib.textContent = AR ? (v / 1e12).toFixed(4) + ' ' + tx('trillion') + ' دولار' : MS ? 'US$' + (v / 1e12).toFixed(4) + ' trilion' : TR ? num((v / 1e12).toFixed(4)) + ' trilyon $' : '$' + (v / 1e12).toFixed(4) + ' trillion'; if (!reduce) requestAnimationFrame(tick); }; tick(); }
+      const tick = () => { const v = (Date.now() - y0) * perMs; ib.textContent = AR ? (v / 1e12).toFixed(4) + ' ' + tx('trillion') + ' دولار' : MS ? 'US$' + (v / 1e12).toFixed(4) + ' trilion' : TR ? num((v / 1e12).toFixed(4)) + ' trilyon $' : HI ? '$' + (v / 1e12).toFixed(4) + ' ट्रिलियन' : '$' + (v / 1e12).toFixed(4) + ' trillion'; if (!reduce) requestAnimationFrame(tick); }; tick(); }
   })();
 
   /* ---------- Scroll storytelling ---------- */
@@ -662,7 +670,7 @@
       out('gross').textContent = usd(gross);
       out('plan').textContent = tx(best[0]);
       out('fees').textContent = usd(best[1]) + (best[0] === 'Enterprise' ? tx(' (from)') : '');
-      out('ctx').textContent = AR ? `${v('role')} في ${v('market')}، بحجم تجارة شهري قدره ${usd(vol / 12)}.` : MS ? `Bagi ${v('role').toLowerCase()} di ${v('market')}, dengan dagangan ${usd(vol / 12)} sebulan.` : TR ? `${v('market')} pazarındaki bir ${v('role').toLocaleLowerCase('tr-TR')} için, aylık ${usd(vol / 12)} ticaret hacmiyle.` : `For a ${v('role').toLowerCase()} in ${v('market')}, on ${usd(vol / 12)} of trade a month.`;
+      out('ctx').textContent = AR ? `${v('role')} في ${v('market')}، بحجم تجارة شهري قدره ${usd(vol / 12)}.` : MS ? `Bagi ${v('role').toLowerCase()} di ${v('market')}, dengan dagangan ${usd(vol / 12)} sebulan.` : HI ? `${v('market')} में एक ${v('role')} के लिए, हर महीने ${usd(vol / 12)} के व्यापार पर।` : TR ? `${v('market')} pazarındaki bir ${v('role').toLocaleLowerCase('tr-TR')} için, aylık ${usd(vol / 12)} ticaret hacmiyle.` : `For a ${v('role').toLowerCase()} in ${v('market')}, on ${usd(vol / 12)} of trade a month.`;
       out('rows').innerHTML = costs.map(([n, t]) => `<tr${n === best[0] ? ' class="on"' : ''}><th scope="row">${tx(n)}</th><td>${usd(t)}${n === 'Enterprise' ? tx(' (from)') : ''}</td></tr>`).join('');
     }
     f.addEventListener('input', run); run();
@@ -704,17 +712,17 @@
     // Arabic: drop short vowels and tatweel, and fold alef, yaa and taa marbuta forms, so spelling variants still match.
     const norm = t => String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f\u064b-\u0652\u0670\u0640]/g, '').replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه');
     let IDX = null, sel = -1;
-    const load = () => IDX ? Promise.resolve(IDX) : fetch(AR ? '/proto/search-ar.json' : MS ? '/proto/search-ms.json' : TR ? '/proto/search-tr.json' : '/proto/search.json').then(r => r.json()).then(d => (IDX = d.map(([id, route, name, sec, h1, ans, hd, faq]) => ({ id, route, name, sec, ans, f: [norm(name), norm(h1), norm(hd + ' ' + faq), norm(ans + ' ' + sec)] }))));
+    const load = () => IDX ? Promise.resolve(IDX) : fetch(AR ? '/proto/search-ar.json' : MS ? '/proto/search-ms.json' : TR ? '/proto/search-tr.json' : HI ? '/proto/search-hi.json' : '/proto/search.json').then(r => r.json()).then(d => (IDX = d.map(([id, route, name, sec, h1, ans, hd, faq]) => ({ id, route, name, sec, ans, f: [norm(name), norm(h1), norm(hd + ' ' + faq), norm(ans + ' ' + sec)] }))));
     const mark = (t, words) => { let h = esc(t); words.forEach(w => { h = h.replace(new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>'); }); return h; };
     const row = (p, words) => `<li role="option" aria-selected="false"><a href="${p.route}" data-go="${p.id}">${p.sec ? `<small>${esc(p.sec)}</small>` : ''}<b>${mark(p.name, words)}</b><span>${mark(p.ans, words)}</span></a></li>`;
     const pick = n => { const it = [...list.children]; if (!it.length) return; sel = (n + it.length) % it.length; it.forEach((li, k) => li.setAttribute('aria-selected', k === sel ? 'true' : 'false')); it[sel].scrollIntoView({ block: 'nearest' }); };
     const run = () => {
       const words = norm(q.value).trim().split(/\s+/).filter(w => w.length > 1); sel = -1;
-      if (!words.length) { kick.textContent = AR ? 'الأكثر زيارة' : MS ? 'Paling dilawati' : TR ? 'En çok ziyaret edilenler' : 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
+      if (!words.length) { kick.textContent = AR ? 'الأكثر زيارة' : MS ? 'Paling dilawati' : TR ? 'En çok ziyaret edilenler' : HI ? 'सबसे ज़्यादा देखे गए' : 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
       const W = [8, 5, 2, 1], hits = [];
       IDX.forEach(p => { let s = 0; for (const w of words) { let m = 0; p.f.forEach((f, k) => { if (f.includes(w)) m += W[k] * (new RegExp('\\b' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(f) ? 2 : 1); }); if (!m) return; s += m; } hits.push([s, p]); });
       hits.sort((a, b) => b[0] - a[0]);
-      kick.textContent = !hits.length ? '' : AR ? (hits.length === 1 ? 'صفحة واحدة' : hits.length === 2 ? 'صفحتان' : `${hits.length} ${hits.length <= 10 ? 'صفحات' : 'صفحة'}`) : MS ? `${hits.length} halaman` : TR ? `${hits.length} sayfa` : `${hits.length} page${hits.length === 1 ? '' : 's'}`; kick.hidden = !hits.length; none.hidden = !!hits.length;
+      kick.textContent = !hits.length ? '' : AR ? (hits.length === 1 ? 'صفحة واحدة' : hits.length === 2 ? 'صفحتان' : `${hits.length} ${hits.length <= 10 ? 'صفحات' : 'صفحة'}`) : MS ? `${hits.length} halaman` : TR ? `${hits.length} sayfa` : HI ? `${hits.length} पेज` : `${hits.length} page${hits.length === 1 ? '' : 's'}`; kick.hidden = !hits.length; none.hidden = !!hits.length;
       list.innerHTML = hits.slice(0, 12).map(([, p]) => row(p, words)).join('');
     };
     const open = () => { if (srch.open) return; srch.showModal(); q.value = ''; q.focus(); load().then(run).catch(() => { none.hidden = false; }); };
@@ -761,6 +769,20 @@
       contact: 'Terima kasih. Kami akan membalas dalam tempoh dua hari bekerja.', support: 'Terima kasih. Permintaan anda telah sampai kepada pasukan sokongan kami.', subscribe: 'Terima kasih. Anda kini melanggan T57 Insights.',
       invest: 'Terima kasih. Pasukan perhubungan pelabur kami akan menghantar pek dan menghubungi anda dalam tempoh dua hari bekerja.' });
   }
+  if (HI) {
+    Object.assign(FORM, {
+      join: ['शुरुआत करें', 'T57 से जुड़ें', 'संस्थापक सदस्यों को लॉन्च पर 90 दिन का मुफ़्त ट्रायल मिलता है। अपने व्यवसाय के बारे में बताइए, आपके देश की टीम आपसे संपर्क करेगी।', 'सदस्यता के लिए आवेदन करें', FORM.join[4]],
+      demo: ['डेमो बुक करें', 'अपने ही उत्पादों पर T57 को काम करते देखें', 'आपके देश की टीम के विशेषज्ञ के साथ 30 मिनट का डेमो।', 'मेरा डेमो बुक करें', FORM.demo[4]],
+      partner: ['साझेदारी', 'T57 के पार्टनर बनें', 'अपनी सेवाओं, लाइसेंस और बाज़ारों के बारे में बताइए।', 'आवेदन भेजें', FORM.partner[4]],
+      contact: ['संपर्क', 'T57 से बात करें', 'हम आपको सही टीम से जोड़ेंगे।', 'भेजें', FORM.contact[4]],
+      support: ['हेल्प सेंटर', 'सपोर्ट टीम से संपर्क करें', 'अपनी कंपनी का नाम और ट्रेड रेफ़रेंस तैयार रखें, ताकि हम जल्दी मदद कर सकें।', 'सपोर्ट को भेजें', FORM.support[4]],
+      invest: ['निवेशक', 'निवेशक पैक मँगाएँ', 'योग्य निवेशकों के लिए। हम टीज़र और प्रेज़ेंटेशन भेजते हैं, फिर संस्थापक के साथ कॉल और NDA के तहत मेमोरेंडम व डेटा रूम की पहुँच की व्यवस्था करते हैं।', 'पैक मँगाएँ', FORM.invest[4]],
+      subscribe: ['T57 Insights', 'T57 Insights सब्सक्राइब करें', 'खाद्य व्यापार, फ़ाइनेंस और AI पर बाज़ार की समझ। जब चाहें सब्सक्रिप्शन बंद करें।', 'सब्सक्राइब करें', FORM.subscribe[4]],
+    });
+    Object.assign(DONE, { join: 'धन्यवाद। आपके देश की टीम दो कार्यदिवसों के भीतर आपसे संपर्क करेगी।', demo: 'धन्यवाद। समय तय करने के लिए हमारे विशेषज्ञ आपसे संपर्क करेंगे।', partner: 'धन्यवाद। हमारी साझेदारी टीम जल्द ही आपसे संपर्क करेगी।',
+      contact: 'धन्यवाद। हम दो कार्यदिवसों के भीतर जवाब देंगे।', support: 'धन्यवाद। आपका अनुरोध हमारी सपोर्ट टीम तक पहुँच गया है।', subscribe: 'धन्यवाद। आपने T57 Insights सब्सक्राइब कर लिया है।',
+      invest: 'धन्यवाद। हमारी निवेशक संबंध टीम पैक भेजेगी और दो कार्यदिवसों के भीतर आपसे संपर्क करेगी।' });
+  }
   if (TR) {
     Object.assign(FORM, {
       join: ['Başlayın', "T57'ye katılın", 'Kurucu üyeler lansmanda 90 günlük ücretsiz deneme süresinden yararlanır. İşletmenizi tanıtın, ülke ekibimiz sizinle iletişime geçsin.', 'Üyelik başvurusu yap', FORM.join[4]],
@@ -789,7 +811,9 @@
       contact: 'شكرًا لك. سنرد خلال يومي عمل.', support: 'شكرًا لك. وصل طلبك إلى فريق الدعم.', subscribe: 'شكرًا لك. تم اشتراكك في رؤى T57.',
       invest: 'شكرًا لك. سيرسل فريق علاقات المستثمرين الملف ويتواصل معك خلال يومي عمل.' });
   }
-  const MSG = TR ? { fields: 'Lütfen işaretli alanları doldurun.', consent: 'Bilgilerinizin nasıl kullanılacağını kabul etmek için lütfen kutuyu işaretleyin.', sending: 'Gönderiliyor…', check: 'Lütfen işaretli alanları kontrol edin.',
+  const MSG = HI ? { fields: 'कृपया चिह्नित फ़ील्ड भरें।', consent: 'हम आपकी जानकारी का उपयोग कैसे करते हैं, इस पर सहमति के लिए कृपया बॉक्स पर टिक करें।', sending: 'भेजा जा रहा है…', check: 'कृपया चिह्नित फ़ील्ड जाँच लें।',
+      busy: 'इस कनेक्शन से बहुत ज़्यादा अनुरोध आए हैं। कृपया कुछ मिनट बाद फिर कोशिश करें।', fail: m => `अभी इसे ऑनलाइन नहीं भेजा जा सका। <a href="${m}">इसके बजाय ईमेल से भेजें</a>, आपके जवाब पहले से भरे होंगे।` }
+    : TR ? { fields: 'Lütfen işaretli alanları doldurun.', consent: 'Bilgilerinizin nasıl kullanılacağını kabul etmek için lütfen kutuyu işaretleyin.', sending: 'Gönderiliyor…', check: 'Lütfen işaretli alanları kontrol edin.',
       busy: 'Bu bağlantıdan çok fazla istek geldi. Lütfen birkaç dakika sonra tekrar deneyin.', fail: m => `Şu anda çevrimiçi gönderemedik. Yanıtlarınız doldurulmuş olarak <a href="${m}">e-postayla gönderin</a>.` }
     : MS ? { fields: 'Sila lengkapkan ruangan yang ditandakan.', consent: 'Sila tandakan kotak untuk bersetuju dengan cara kami menggunakan maklumat anda.', sending: 'Sedang dihantar…', check: 'Sila semak ruangan yang ditandakan.',
       busy: 'Terlalu banyak permintaan daripada sambungan ini. Sila cuba lagi dalam beberapa minit.', fail: m => `Kami tidak dapat menghantarnya dalam talian buat masa ini. <a href="${m}">Hantar melalui e-mel</a>, dengan jawapan anda sudah diisi.` }
@@ -797,7 +821,8 @@
       busy: 'طلبات كثيرة من هذا الاتصال. يرجى المحاولة بعد بضع دقائق.', fail: m => `تعذّر الإرسال عبر الإنترنت الآن. <a href="${m}">أرسله بالبريد الإلكتروني بدلًا من ذلك</a>، مع إجاباتك معبأة.` }
     : { fields: 'Please complete the highlighted fields.', consent: 'Please tick the box to agree to how we use your details.', sending: 'Sending…', check: 'Please check the highlighted fields.',
       busy: 'Too many requests from this connection. Please try again in a few minutes.', fail: m => `We could not send this online just now. <a href="${m}">Send it by email instead</a>, with your answers filled in.` };
-  const kindOf = t => TR ? (/yatırım/i.test(t) ? 'invest' : /abone/i.test(t) ? 'subscribe' : /destek/i.test(t) ? 'support' : /iş ortağı|İş ortağı|ortaklık/i.test(t) ? 'partner'
+  const kindOf = t => HI ? (/निवेश/.test(t) ? 'invest' : /सब्सक्राइब/.test(t) ? 'subscribe' : /सपोर्ट|सहायता/.test(t) ? 'support' : /पार्टनर|साझेदार/.test(t) ? 'partner'
+    : /डेमो|देखें/.test(t) ? 'demo' : /जुड़ें|आवेदन|सदस्य|शुरू|ट्रायल|मुफ़्त|रजिस्टर/.test(t) ? 'join' : 'contact') : TR ? (/yatırım/i.test(t) ? 'invest' : /abone/i.test(t) ? 'subscribe' : /destek/i.test(t) ? 'support' : /iş ortağı|İş ortağı|ortaklık/i.test(t) ? 'partner'
     : /demo|izleyin|nasıl çalış/i.test(t) ? 'demo' : /katıl|başvur|kaydol|üyelik|başla|dene|ücretsiz/i.test(t) ? 'join' : 'contact') : MS ? (/pelabur/i.test(t) ? 'invest' : /langgan/i.test(t) ? 'subscribe' : /sokongan|bantuan/i.test(t) ? 'support' : /rakan kongsi|perkongsian/i.test(t) ? 'partner'
     : /demo|tonton|lihat cara/i.test(t) ? 'demo' : /sertai|mohon|daftar|keahlian|mula|cuba|percuma/i.test(t) ? 'join' : 'contact') : AR ? (/مستثمر/.test(t) ? 'invest' : /اشترك/.test(t) ? 'subscribe' : /الدعم/.test(t) ? 'support' : /شريك|الشراك/.test(t) ? 'partner'
     : /عرض توضيحي|عرضًا توضيحيًا|شاهد/.test(t) ? 'demo' : /انضم|قدّم طلب|العضوية|ابدأ|سجّل|جرّب/.test(t) ? 'join' : 'contact') : /invest/i.test(t) ? 'invest' : /subscri/i.test(t) ? 'subscribe' : /support|security team/i.test(t) ? 'support' : /partner/i.test(t) ? 'partner'
@@ -888,6 +913,14 @@
     });
   });
 
+  // Phones: the language list opens from the globe button and closes on a choice, a tap elsewhere or Escape.
+  const hdr = document.querySelector('.hdr'), langBtn = document.querySelector('.lang-btn');
+  if (hdr && langBtn) {
+    const setLangs = on => { hdr.classList.toggle('langs-open', on); langBtn.setAttribute('aria-expanded', on); };
+    langBtn.addEventListener('click', e => { e.stopPropagation(); setLangs(!hdr.classList.contains('langs-open')); });
+    document.addEventListener('click', e => { if (!e.target.closest('.langs')) setLangs(false); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && hdr.classList.contains('langs-open')) { setLangs(false); langBtn.focus(); } });
+  }
   const menu = document.getElementById('menu'), menuBtn = document.getElementById('menu-btn');
   menu.querySelectorAll('.sub-t').forEach(b => b.addEventListener('click', () => setSub(b.parentElement, b.getAttribute('aria-expanded') !== 'true')));
   const setMenu = open => { menu.hidden = !open; menuBtn.setAttribute('aria-expanded', open); };

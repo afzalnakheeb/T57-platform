@@ -2,16 +2,18 @@ import en from '../content/assistant/en.json';
 import ar from '../content/assistant/ar.json';
 import ms from '../content/assistant/ms.json';
 import tr from '../content/assistant/tr.json';
+import hi from '../content/assistant/hi.json';
 
-// The T57 AI assistant's knowledge: the site's own pages in English, Arabic, Malay and Turkish (scripts/assistant_index.py).
+// The T57 AI assistant's knowledge: the site's own pages in English, Arabic, Malay, Turkish and Hindi (scripts/assistant_index.py).
 // Each question is matched against the passages with BM25, and the best few are given to Claude with the site map,
 // so every answer comes from what t57.ai already says, with links to the pages it came from.
 type Index = { pages: [string, string, string, string][]; chunks: [number, string, string][] };
-export type AssistantLang = 'en' | 'ar' | 'ms' | 'tr';
+export type AssistantLang = 'en' | 'ar' | 'ms' | 'tr' | 'hi';
 
 const STOP = new Set(('a an and are as at be by can do does for from has have how i if in is it its me my of on or our so that the their this to us was we what when where which who why will with you your about into than then them they there these those would could should also any all more most other some such only own same just very am been being did doing had having here hers him his her she he out over under again further once both each few nor not no off up down too s t ' +
   'yang dan di ke dari untuk dengan ini itu ialah adalah apa apakah bagaimana berapa bila mana siapa mengapa kenapa adakah boleh saya kami kita anda awak dia mereka atau juga tidak tak ada akan sudah telah pada oleh bagi sahaja lagi ' +
   've ile bir bu şu o da de mi mı mu mü ne nasıl neden nerede hangi kim için gibi daha çok en ama veya ya ki var yok olan olarak sonra önce her tüm bana beni siz sizin biz bizim ' +
+  'का के की को में से पर है हैं था थे और या कि यह ये वह वे क्या कैसे क्यों कहाँ कब कौन कितना कितनी मैं मुझे हम आप आपके आपकी अपने अपनी भी तो ही एक लिए साथ बारे होता होती होते करता करती करते कर ' +
   'في من على إلى الى عن مع هل ما ماذا كيف لماذا أين متى هذا هذه ذلك تلك التي الذي الذين هو هي هم نحن انا أنا انت أنت كان تكون يكون او أو ثم قد لا لم لن ان أن إن كل بعض عند لدى كم').split(' '));
 
 // Arabic letters vary in writing (hamza forms, final yaa, taa marbuta, short vowels), so they are folded to one form.
@@ -26,7 +28,8 @@ function fold(word: string) {
   return w;
 }
 // (built with the constructor: the Unicode flag needs a newer compile target than this project sets)
-const NOT_WORD = new RegExp('[^\\p{L}\\p{N}]+', 'u');
+// Vowel signs (\p{M}) belong to the word: Devanagari writes most vowels as marks.
+const NOT_WORD = new RegExp('[^\\p{L}\\p{M}\\p{N}]+', 'u');
 export const tokens = (s: string) =>
   s.toLowerCase().normalize('NFKC').split(NOT_WORD).filter((w) => w && !STOP.has(w)).map(fold).filter((w) => w.length > 1 || /\d/.test(w));
 
@@ -44,7 +47,7 @@ function prepare(idx: Index): Search {
   const avg = len.reduce((a, b) => a + b, 0) / Math.max(1, len.length);
   return { idx, tf, len, df, avg, byRoute: new Map(idx.pages.map((p, i) => [p[1], i])) };
 }
-const SEARCH: Record<AssistantLang, Search> = { en: prepare(en as unknown as Index), ar: prepare(ar as unknown as Index), ms: prepare(ms as unknown as Index), tr: prepare(tr as unknown as Index) };
+const SEARCH: Record<AssistantLang, Search> = { en: prepare(en as unknown as Index), ar: prepare(ar as unknown as Index), ms: prepare(ms as unknown as Index), tr: prepare(tr as unknown as Index), hi: prepare(hi as unknown as Index) };
 
 export type Passage = { route: string; page: string; heading: string; text: string };
 export function search(lang: AssistantLang, query: string, route?: string, limit = 10, budget = 9000): Passage[] {
