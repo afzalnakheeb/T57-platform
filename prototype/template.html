@@ -261,6 +261,9 @@ body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-
 @media (max-width: 640px) { .lang-sw { padding:0 10px; } .langs { gap:4px; } .hdr-in { column-gap:8px; } }
 /* Small phones: the menu button shows its icon only, so the header stays on one row with three languages */
 @media (max-width: 440px) { .hdr .hdr-in { column-gap:8px; } .lang-sw { padding:0 8px; } .menu-btn .mb-l { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; } .menu-btn { padding:0 12px; } }
+/* four languages: keep logo, switch, search and menu on one row down to 360px */
+@media (max-width: 440px) { .hdr .hdr-in { column-gap:6px; } .langs { gap:2px; } .lang-sw { padding:0 6px; } .menu-btn { padding:0 10px; } }
+@media (max-width: 380px) { .hdr .logo { height:22px; } }
 .srch-btn { display:inline-grid; place-items:center; width:44px; height:44px; flex:none; border-radius:8px; border:1.5px solid var(--line); background:#fff; color:var(--ink-strong); cursor:pointer; }
 .srch-btn svg { width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; }
 .srch-btn:hover, .srch-btn:focus-visible { border-color:var(--persian-blue); }

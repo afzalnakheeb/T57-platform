@@ -501,7 +501,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     try { sessionStorage.setItem('t57-go', name); } catch (e) {}
     const petal = WORLD_PETAL[name];
     const target = (petal && petal !== 'all' && mark.querySelector('.p-' + petal)) || mark;
-    dest.textContent = label || WORLD_NAME[name];
+    dest.removeAttribute('lang'); dest.textContent = label || WORLD_NAME[name];
     clearAll(veilPetals);
     veil.classList.add('go');
     anim(main, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.5, transform: 'scale(0.985)' }], { duration: 380 });
@@ -519,7 +519,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   // The hole is sized frame by frame so it runs the same in every browser.
   async function arrive(name) {
     busy = true;
-    dest.textContent = WORLD_NAME[name] || '';
+    dest.removeAttribute('lang'); dest.textContent = WORLD_NAME[name] || '';
     veil.classList.add('go');
     document.documentElement.classList.remove('arriving');
     const hold = (el, k) => el.animate([k, k], { duration: 10, fill: 'forwards' });
@@ -583,7 +583,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
         { opacity: 1, transform: 'translate(0,0) scale(1)' }
       ], { duration: 900, delay: 200 + i * 170, easing: 'cubic-bezier(.2,.9,.25,1.15)', fill: 'both' }).finished;
     });
-    dest.textContent = 'T57.ai';
+    dest.lang = 'en'; dest.textContent = 'T57.ai';
     await Promise.all(ps);
     if (!introOn) return;
     ring.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, fill: 'forwards' });
