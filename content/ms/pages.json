@@ -2342,6 +2342,121 @@
   "description": "Sertai T57 di Türkiye dalam empat langkah: mohon, dapatkan pengesahan, sediakan akaun dan berdagang, dengan bantuan pasukan tempatan kami.",
   "parent": "mkt-tr-overview"
  },
+ "pricing": {
+  "route": "/ms/pricing",
+  "section": "pricing",
+  "name": "Gambaran Keseluruhan Harga",
+  "h1": "Bayar untuk dagangan yang benar-benar berlaku, bukan janjinya.",
+  "answer": "Harga yang jelas untuk dagangan yang disahkan, dan yuran hanya apabila anda berdagang.",
+  "faqs": [
+   {
+    "q": "Adakah saya perlu membayar untuk menyenaraikan produk atau menghantar sebut harga?",
+    "a": "Tidak. Penyenaraian, sebut harga dan rundingan termasuk dalam keahlian anda. Yuran dagangan hanya dikenakan apabila dagangan diselesaikan."
+   },
+   {
+    "q": "Adakah T57 memperoleh apa-apa daripada pembiayaan atau insurans?",
+    "a": "Ya. T57 memperoleh komisen kecil daripada sesetengah rakan kongsi pembiayaan dan insurans. Ia didedahkan sebelum anda menerima tawaran rakan kongsi."
+   },
+   {
+    "q": "Adakah harga sama di setiap negara?",
+    "a": "Harga yang ditunjukkan ialah harga senarai standard dalam dolar AS. Harga tempatan mungkin lebih rendah di pasaran yang kuasa belinya lebih rendah. Hubungi kami untuk harga di negara anda."
+   },
+   {
+    "q": "Adakah percubaan percuma disediakan?",
+    "a": "Ya. Ahli pengasas menikmati 90 hari percuma semasa pelancaran. Percubaan ini membolehkan anda meneroka rangkaian dan alatan. Dagangan bermula sebaik sahaja anda melanggan dan disahkan."
+   }
+  ],
+  "title": "Harga | Pelan dari $199 Sebulan | T57",
+  "description": "Harga terbuka untuk perdagangan makanan yang disahkan: pelan Teroka, Teras, Pertumbuhan dan Perusahaan, dua bulan percuma bagi bil tahunan, dan yuran kecil hanya untuk dagangan yang diselesaikan."
+ },
+ "pricing-plans": {
+  "route": "/ms/pricing/plans",
+  "section": "pricing",
+  "name": "Pelan Keahlian & Harga",
+  "h1": "Semakin banyak anda berdagang, semakin kurang bayaran bagi setiap dagangan.",
+  "answer": "Pilih pelan yang sesuai dengan kekerapan anda berdagang.",
+  "faqs": [
+   {
+    "q": "Pelan manakah yang patut saya pilih?",
+    "a": "Jika anda berdagang sekali-sekala, mulakan dengan Teroka. Sebagai panduan kasar, penjimatan yuran dagangan pada pelan yang lebih tinggi akan menampung kos keahliannya sebaik sahaja jumlah dagangan bulanan anda cukup besar. Kalkulator ROI menunjukkan titik pulang modal bagi perniagaan anda."
+   },
+   {
+    "q": "Apakah yang termasuk dalam percubaan percuma?",
+    "a": "Anda boleh membina profil, meneroka ahli yang disahkan dan risikan pasaran, menggunakan alat AI dan menghantar permintaan sebut harga. Pengesahan, kontrak, eskrow dan pembiayaan bermula apabila anda melanggan, kerana pengesahan melibatkan semakan sebenar oleh pasukan dan rakan kongsi kami. Ahli pengasas menikmati 90 hari percuma semasa pelancaran."
+   },
+   {
+    "q": "Bolehkah saya menukar pelan?",
+    "a": "Boleh. Anda boleh menaik taraf pada bila-bila masa, dan menurunkan taraf semasa pembaharuan."
+   }
+  ],
+  "title": "Pelan dan Harga | Teroka, Teras, Pertumbuhan, Perusahaan | T57",
+  "description": "Bandingkan pelan T57 dari $199 sebulan, termasuk pengesahan, dua bulan percuma bagi bil tahunan dan yuran dagangan daripada 0.75% hingga 0.20% bagi setiap pihak.",
+  "parent": "pricing"
+ },
+ "pricing-enterprise": {
+  "route": "/ms/pricing/enterprise",
+  "section": "pricing",
+  "name": "Harga Perusahaan & Tersuai",
+  "h1": "Satu perjanjian untuk kumpulan anda, yuran terendah bagi setiap dagangan.",
+  "answer": "Jalankan perdagangan makanan kumpulan anda di T57, dengan terma yang dibina untuk anda.",
+  "faqs": [
+   {
+    "q": "Bolehkah T57 berintegrasi dengan ERP kami?",
+    "a": "Boleh, melalui API. Pasukan kami menentukan skop integrasi bersama anda."
+   },
+   {
+    "q": "Bolehkah kami mengekalkan pembekal sedia ada?",
+    "a": "Boleh. Jemput mereka ke T57, dan mereka akan disahkan seperti ahli lain."
+   }
+  ],
+  "title": "Harga Perusahaan | Terma Tersuai untuk Kumpulan Makanan | T57",
+  "description": "Terma tersuai, yuran dagangan terendah, integrasi ERP dan sokongan khusus untuk kumpulan makanan besar, peruncit dan pedagang berbilang negara.",
+  "parent": "pricing"
+ },
+ "pricing-government": {
+  "route": "/ms/pricing/government",
+  "section": "pricing",
+  "name": "Harga Kerajaan & Institusi",
+  "h1": "Program sekuriti makanan, direka bersama anda.",
+  "answer": "Program yang mengukuhkan sekuriti makanan negara anda, direka bersama anda.",
+  "faqs": [
+   {
+    "q": "Bagaimana harga kerajaan ditetapkan?",
+    "a": "Mengikut program, berdasarkan skop, bilangan ahli, pasaran dan modul. Hubungi pasukan institusi kami untuk mendapatkan cadangan."
+   },
+   {
+    "q": "Bolehkah kementerian membayar keahlian petaninya?",
+    "a": "Boleh. Kerajaan dan rakan pembangunan boleh membiayai keahlian dan penyertaan bagi petani, koperasi dan PKS."
+   },
+   {
+    "q": "Bolehkah pembekal luar negara menyertai tender kami?",
+    "a": "Boleh, jika anda membuka tender kepada mereka. Setiap pembekal disahkan sebelum boleh membida."
+   }
+  ],
+  "title": "Program Kerajaan & Institusi | Harga T57",
+  "description": "Program untuk kementerian dan rakan pembangunan: keahlian bersubsidi, tender makanan tempatan dan global, serta modul kerajaan dipacu AI untuk sekuriti makanan.",
+  "parent": "pricing"
+ },
+ "pricing-roi": {
+  "route": "/ms/pricing/roi-calculator",
+  "section": "pricing",
+  "name": "Kalkulator ROI",
+  "h1": "Angka anda. Andaian anda.",
+  "answer": "Lihat nilai T57 kepada perniagaan anda, dan pelan mana yang paling berbaloi.",
+  "faqs": [
+   {
+    "q": "Adakah hasilnya satu sebut harga?",
+    "a": "Tidak. Ia anggaran berdasarkan input anda dan harga standard. Harga tempatan mungkin lebih rendah di pasaran anda."
+   },
+   {
+    "q": "Adakah anda menyimpan data saya?",
+    "a": "Hanya jika anda memilih untuk menyimpan atau berkongsi hasil anda."
+   }
+  ],
+  "title": "Kalkulator ROI | Penjimatan dan Pelan Terbaik bagi Jumlah Dagangan Anda | T57",
+  "description": "Anggarkan masa dan wang yang boleh dijimatkan T57 bagi perniagaan makanan anda, selepas ditolak yuran, dan cari pelan dengan jumlah kos terendah bagi jumlah dagangan anda.",
+  "parent": "pricing"
+ },
  "governments": {
   "route": "/ms/who-we-serve/governments",
   "section": "who-we-serve",
