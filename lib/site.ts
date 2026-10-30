@@ -17,27 +17,29 @@ const OG = { url: `${SITE}/og.png`, width: 1200, height: 630, alt: 'T57: trade f
 const dir = path.join(process.cwd(), 'content');
 // English is the default at the root; each other language lives under /<lang> with its own built pages
 // (prototype/build.py writes content/<lang>/ for every page that is fully translated).
-export type Lang = 'en' | 'ar';
-export const LANGS: Lang[] = ['en', 'ar'];
+export type Lang = 'en' | 'ar' | 'ms';
+export const LANGS: Lang[] = ['en', 'ar', 'ms'];
 const base = (lang: Lang) => (lang === 'en' ? dir : path.join(dir, lang));
 const load = (lang: Lang): Record<string, PageInfo> => JSON.parse(fs.readFileSync(path.join(base(lang), 'pages.json'), 'utf8'));
-export const pagesIn: Record<Lang, Record<string, PageInfo>> = { en: load('en'), ar: load('ar') };
+export const pagesIn: Record<Lang, Record<string, PageInfo>> = { en: load('en'), ar: load('ar'), ms: load('ms') };
 export const pages = pagesIn.en;
 const routes = (lang: Lang) => Object.fromEntries(Object.entries(pagesIn[lang]).map(([id, p]) => [p.route, id]));
-export const byRouteIn: Record<Lang, Record<string, string>> = { en: routes('en'), ar: routes('ar') };
+export const byRouteIn: Record<Lang, Record<string, string>> = { en: routes('en'), ar: routes('ar'), ms: routes('ms') };
 export const byRoute = byRouteIn.en;
 export const markup = (id: string, lang: Lang = 'en') => fs.readFileSync(path.join(base(lang), 'pages', `${id}.html`), 'utf8');
 // Changes whenever the site script changes, so browsers never run an old copy.
 export const assetVersion = crypto.createHash('sha1').update(fs.readFileSync(path.join(process.cwd(), 'public', 'proto', 'worlds.js'))).digest('hex').slice(0, 10);
 // The same for the T57 AI assistant's script and its stylesheet.
 export const assistantVersion = crypto.createHash('sha1').update(['assistant.js', 'assistant.css'].map((f) => fs.readFileSync(path.join(process.cwd(), 'public', 'assistant', f), 'utf8')).join('')).digest('hex').slice(0, 10);
-// The header and footer. The language switch points at this page in the other language when it exists.
+// The header and footer. Each link in the language switch points at this page in that language when it exists,
+// otherwise at that language's home page.
 export function chrome(part: 'top' | 'bottom', lang: Lang = 'en', id?: string) {
   const html = fs.readFileSync(path.join(base(lang), `chrome-${part}.html`), 'utf8');
   if (part !== 'top' || !id) return html;
-  const other: Lang = lang === 'en' ? 'ar' : 'en';
-  const alt = pagesIn[other][id];
-  return alt ? html.replace(/(<a class="lang-sw" href=")[^"]*"/, `$1${alt.route}"`) : html;
+  return html.replace(/(<a class="lang-sw" href=")[^"]*(" hreflang="([a-z]+)")/g, (m, a, b, l: Lang) => {
+    const alt = pagesIn[l]?.[id];
+    return alt ? `${a}${alt.route}${b}` : m;
+  });
 }
 export const dirOf = (lang: Lang) => (lang === 'ar' ? 'rtl' : 'ltr');
 
@@ -55,7 +57,7 @@ export function metadataFor(id: string, lang: Lang = 'en') {
     alternates: { canonical: url, ...(languages['x-default'] ? { languages } : {}) },
     openGraph: a
       ? { title: p.title, description: p.description, url, siteName: 'T57.ai', type: 'article' as const, publishedTime: a.date, authors: [a.author], section: a.topic, images: [og] }
-      : { title: p.title, description: p.description, url, siteName: 'T57.ai', type: 'website' as const, images: [og], locale: lang === 'ar' ? 'ar_SA' : 'en_US' },
+      : { title: p.title, description: p.description, url, siteName: 'T57.ai', type: 'website' as const, images: [og], locale: lang === 'ar' ? 'ar_SA' : lang === 'ms' ? 'ms_MY' : 'en_US' },
     twitter: { card: 'summary_large_image', title: p.title, description: p.description, images: [og.url] },
   };
 }

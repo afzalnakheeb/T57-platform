@@ -1,0 +1,33 @@
+{
+ "home": {
+  "route": "/ms",
+  "section": "",
+  "name": "Laman Utama",
+  "h1": "Berdagang makanan dengan yakin, dari ladang hingga ke pembeli.",
+  "answer": "T57 menghimpunkan pengeluar, pembeli, bank dan syarikat logistik yang disahkan dalam satu platform dagangan berteraskan AI.",
+  "faqs": [
+   {
+    "q": "Apakah T57?",
+    "a": "T57 ialah infrastruktur perdagangan digital berteraskan AI untuk industri makanan. Ia menghimpunkan pengesahan, sebut harga, kontrak, akses pembiayaan, insurans, pemeriksaan dan logistik dalam satu rekod dagangan bagi ahli yang disahkan."
+   },
+   {
+    "q": "Siapa yang boleh menyertai T57?",
+    "a": "Mana-mana perniagaan dalam rantaian makanan boleh memohon, termasuk petani, nelayan, pemproses, pengilang, jenama, pedagang, pengimport, pemborong, pasar raya dan pembeli HoReCa. Setiap ahli disahkan sebelum boleh berdagang."
+   },
+   {
+    "q": "Adakah T57 memberi pinjaman atau memegang dana saya?",
+    "a": "Tidak. T57 tidak memberi pinjaman, tidak memegang dana pelanggan, tidak memiliki barangan dan tidak menyediakan pengangkutan. Pembiayaan, eskrow, insurans dan logistik disediakan oleh rakan kongsi berlesen melalui platform."
+   },
+   {
+    "q": "Negara mana yang diliputi T57?",
+    "a": "Pasaran pengasas T57 ialah Arab Saudi, UAE, India, Malaysia dan Türkiye. Perniagaan di negara lain boleh memohon keahlian secara dalam talian."
+   },
+   {
+    "q": "Bagaimana T57 menggunakan AI?",
+    "a": "AI membantu dalam padanan, semakan risiko, penyediaan dokumen dan ramalan. Keputusan muktamad dibuat oleh manusia, dan setiap keputusan negatif disemak oleh seorang pegawai."
+   }
+  ],
+  "title": "T57 | Infrastruktur Perdagangan Digital Berteraskan AI untuk Makanan",
+  "description": "Perdagangan makanan yang disahkan dalam satu rekod: RFQ, kontrak, pembiayaan perdagangan, insurans, pemeriksaan dan logistik untuk petani, pemproses, pedagang dan pembeli."
+ }
+}

@@ -254,8 +254,13 @@ body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-
 /* Site search: a small icon in the header opens a panel that searches every page */
 .lang-sw { display:inline-flex; align-items:center; min-height:44px; padding:0 12px; flex:none; border-radius:8px; border:1.5px solid var(--line); background:#fff; color:var(--ink-strong); text-decoration:none; font:500 15px/20px var(--font-text); }
 .lang-sw:hover, .lang-sw:focus-visible { border-color:var(--persian-blue); }
-.lang-sw .ls-s { display:none; }
-@media (max-width: 640px) { .lang-sw { padding:0 10px; } .lang-sw .ls-l { display:none; } .lang-sw .ls-s { display:inline; } .hdr-in { column-gap:8px; } }
+.lang-sw { position:relative; } .lang-sw .ls-s { display:none; }
+.langs { display:flex; gap:6px; flex:none; }
+/* Narrow headers show each language by its short name; the full name stays readable to screen readers */
+@media (max-width: 1500px) { .lang-sw .ls-l { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; } .lang-sw .ls-s { display:inline; } }
+@media (max-width: 640px) { .lang-sw { padding:0 10px; } .langs { gap:4px; } .hdr-in { column-gap:8px; } }
+/* Small phones: the menu button shows its icon only, so the header stays on one row with three languages */
+@media (max-width: 440px) { .hdr .hdr-in { column-gap:8px; } .lang-sw { padding:0 8px; } .menu-btn .mb-l { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; } .menu-btn { padding:0 12px; } }
 .srch-btn { display:inline-grid; place-items:center; width:44px; height:44px; flex:none; border-radius:8px; border:1.5px solid var(--line); background:#fff; color:var(--ink-strong); cursor:pointer; }
 .srch-btn svg { width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; }
 .srch-btn:hover, .srch-btn:focus-visible { border-color:var(--persian-blue); }
@@ -278,7 +283,7 @@ body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-
 .srch-res a mark { background:color-mix(in srgb, var(--strong-cyan) 28%, transparent); color:inherit; border-radius:3px; }
 .srch-res [aria-selected="true"] a, .srch-res a:hover { background:var(--surface-alt); }
 .srch-none { margin:8px 20px 20px; font-size:15px; }
-@media (max-width: 900px) { .hdr-in .lang-sw { margin-inline-start:auto; } .hdr-in .lang-sw ~ .srch-btn { margin-inline-start:0; } .hdr-in .srch-btn { margin-inline-start:auto; } .hdr-in .srch-btn ~ .menu-btn { margin-inline-start:0; } }
+@media (max-width: 900px) { .hdr-in .langs { margin-inline-start:auto; } .hdr-in .langs ~ .srch-btn { margin-inline-start:0; } .hdr-in .srch-btn { margin-inline-start:auto; } .hdr-in .srch-btn ~ .menu-btn { margin-inline-start:0; } }
 @media (max-width: 640px) { .srch { margin-top:16px; max-height:calc(100vh - 32px); } .srch-f input { font-size:17px; } .srch-x { padding:6px 8px; } .srch-x kbd { display:none; } }
 @media (prefers-reduced-motion: reduce) { .srch[open] { animation:none; } }
 
@@ -1404,10 +1409,10 @@ html[lang=ar], .lang-ar { --font-display:"Noto Kufi Arabic", Gilroy, Roboto, sys
       <a href="#farmers" data-go="farmers" data-petal="agri"><i style="background:var(--electric-green)"></i><span>Farmers</span><span class="long">&nbsp;&amp; Producers</span></a>
       <a href="#who-we-serve" data-go="who-we-serve" data-petal="all" class="w-all"><span>All 11</span><span class="long">&nbsp;audiences</span></a>
     </nav>
-    <a class="lang-sw" href="/ar" hreflang="ar" lang="ar"><span class="ls-l">العربية</span><span class="ls-s" aria-hidden="true">عربي</span></a>
+    <div class="langs"><a class="lang-sw" href="/ar" hreflang="ar" lang="ar"><span class="ls-l">العربية</span><span class="ls-s" aria-hidden="true">عربي</span></a><a class="lang-sw" href="/ms" hreflang="ms" lang="ms"><span class="ls-l">Bahasa Malaysia</span><span class="ls-s" aria-hidden="true">BM</span></a></div>
     <button class="srch-btn" type="button" id="srch-btn" aria-haspopup="dialog" aria-controls="srch" title="Search (press /)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span class="sr">Search the site</span></button>
     <a class="demo" href="#cta-home">Request a demo</a>
-    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</button>
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="mb-l">Menu</span></button>
   </div>
 </header>
 
