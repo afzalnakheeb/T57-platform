@@ -544,6 +544,102 @@
   "description": "Sertai T57 di Malaysia dalam empat langkah: mohon, dapatkan pengesahan, sediakan akaun dan berdagang, dengan bantuan pasukan tempatan kami.",
   "parent": "mkt-my-overview"
  },
+ "mkt-tr-overview": {
+  "route": "/ms/markets/turkiye/overview",
+  "section": "markets",
+  "name": "Türkiye: Gambaran Keseluruhan Pasaran",
+  "h1": "Buah-buahan, kekacang dan makanan Türkiye, ke Teluk dan Asia.",
+  "answer": "Jual buah-buahan, kekacang dan produk makanan Türkiye kepada pembeli yang disahkan di seluruh Teluk dan Asia.",
+  "faqs": [
+   {
+    "q": "Bolehkah syarikat Türkiye berdagang dalam USD atau EUR?",
+    "a": "Boleh, melalui rakan kongsi pembayaran dan eskrow berlesen, dalam sebarang mata wang yang mereka sokong."
+   },
+   {
+    "q": "Adakah pensijilan halal diperlukan untuk eksport ke Teluk?",
+    "a": "Bagi sesetengah produk, ya. T57 menunjukkan keperluan bagi setiap produk dan destinasi."
+   },
+   {
+    "q": "Adakah T57 tersedia dalam bahasa Turki?",
+    "a": "Bahasa Inggeris dan Turki."
+   }
+  ],
+  "title": "T57 di Türkiye | Rangkaian Eksport Makanan yang Disahkan",
+  "description": "Jual buah-buahan, kekacang dan produk makanan Türkiye kepada pembeli yang disahkan di Teluk dan Asia, dengan dokumen dalam satu rekod dan pembayaran melalui rakan kongsi berlesen.",
+  "parent": "markets"
+ },
+ "mkt-tr-features": {
+  "route": "/ms/markets/turkiye/features",
+  "section": "markets",
+  "name": "Türkiye: Ciri Yang Tersedia",
+  "h1": "Setiap keupayaan T57, di Türkiye.",
+  "answer": "Segala yang anda perlukan untuk berdagang makanan di Türkiye, di satu tempat.",
+  "faqs": [
+   {
+    "q": "Adakah semua ciri tersedia di setiap pasaran?",
+    "a": "Ya. Rakan kongsi yang menyampaikan perkhidmatan terkawal berbeza mengikut negara."
+   },
+   {
+    "q": "Bolehkah saya membayar dalam TRY?",
+    "a": "Boleh, melalui rakan kongsi pembayaran dan eskrow berlesen."
+   },
+   {
+    "q": "Siapa yang menyediakan pembiayaan di Türkiye?",
+    "a": "Bank berlesen di Türkiye, termasuk bank penyertaan. T57 tidak memberi pinjaman."
+   }
+  ],
+  "title": "Ciri T57 di Türkiye | Dagangan, Pembiayaan, Logistik",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di Türkiye.",
+  "parent": "mkt-tr-overview"
+ },
+ "mkt-tr-compliance": {
+  "route": "/ms/markets/turkiye/compliance",
+  "section": "markets",
+  "name": "Türkiye: Panduan Peraturan",
+  "h1": "Fahami peraturan makanan Türkiye sebelum anda menghantar.",
+  "answer": "Fahami peraturan perdagangan makanan di Türkiye sebelum anda menghantar.",
+  "faqs": [
+   {
+    "q": "Adakah panduan ini nasihat undang-undang?",
+    "a": "Tidak. Ia ringkasan untuk membantu anda bersedia. Sentiasa sahkan keperluan dengan pihak berkuasa berkaitan atau ejen kastam anda."
+   },
+   {
+    "q": "Berapa kerap panduan ini dikemas kini?",
+    "a": "T57 menyemaknya secara berkala."
+   },
+   {
+    "q": "Bolehkah T57 menguruskan pelepasan kastam untuk saya?",
+    "a": "T57 menghubungkan anda dengan ejen kastam berlesen, yang menguruskan pelepasan dalam rekod dagangan dikongsi."
+   }
+  ],
+  "title": "Peraturan Perdagangan Makanan di Türkiye | Panduan Peraturan T57",
+  "description": "Badan, dokumen dan peraturan utama bagi perdagangan makanan di Türkiye: Kementerian Pertanian dan Perhutanan, kastam Kementerian Perdagangan, halal HAK, e-Fatura dan KVKK.",
+  "parent": "mkt-tr-overview"
+ },
+ "mkt-tr-start": {
+  "route": "/ms/markets/turkiye/getting-started",
+  "section": "markets",
+  "name": "Türkiye: Langkah Permulaan",
+  "h1": "Dagangan pertama anda di Türkiye, dalam empat langkah.",
+  "answer": "Mula berdagang di T57 di Türkiye dalam empat langkah.",
+  "faqs": [
+   {
+    "q": "Berapa lama sebelum saya boleh berdagang?",
+    "a": "Sebaik sahaja pengesahan selesai."
+   },
+   {
+    "q": "Adakah sebarang kos untuk menyertai?",
+    "a": "Lihat halaman Harga untuk pilihan keahlian."
+   },
+   {
+    "q": "Bolehkah seseorang membantu saya dalam bahasa Turki?",
+    "a": "Boleh. Pasukan kami di Türkiye menyokong ahli dalam bahasa Inggeris dan Turki."
+   }
+  ],
+  "title": "Mula Bersama T57 di Türkiye",
+  "description": "Sertai T57 di Türkiye dalam empat langkah: mohon, dapatkan pengesahan, sediakan akaun dan berdagang, dengan bantuan pasukan tempatan kami.",
+  "parent": "mkt-tr-overview"
+ },
  "governments": {
   "route": "/ms/who-we-serve/governments",
   "section": "who-we-serve",
