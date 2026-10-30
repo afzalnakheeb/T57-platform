@@ -89,7 +89,7 @@ t.textContent='Copied. Paste it anywhere';setTimeout(()=>t.textContent='Copy lin
 }
 
 const card = (f: Film) => `<article class="film">
-<video controls playsinline preload="none" poster="${f.poster}" aria-label="${esc(f.title)}"><source src="${f.src}" type="video/mp4"></video>
+<video controls playsinline preload="none" poster="${f.poster}" aria-label="${esc(f.title)}"><source src="${f.src}" type="video/mp4">${f.captions ? `<track kind="captions" src="${f.captions}" srclang="en" label="English" default>` : ''}</video>
 <div class="meta"><h3>${esc(f.title)}</h3><span class="len">${f.length}</span></div>
 <p>${esc(f.summary)}</p>
 </article>`;
@@ -101,7 +101,7 @@ function library() {
 <main class="lib">
 <p class="eyebrow">Investor videos</p>
 <h1>T57, in our own words</h1>
-<p class="lede">${pitch ? 'Start with the investor pitch. The shorter films below go deeper on the platform, the markets and how trades are financed.' : 'Short films on the platform, the markets and how trades are financed. The investor pitch will be added here soon.'}</p>
+<p class="lede">${pitch ? 'Start with the investor pitch. The short films below show the platform, the markets and how a trade runs, is paid and is financed.' : 'Short films on the platform, the markets and how a trade runs, is paid and is financed. The investor pitch will be added here soon.'}</p>
 ${pitch ? `<section class="featured" aria-labelledby="pitch">
 <video controls playsinline preload="metadata" poster="${f.poster}" controlslist="nodownload" oncontextmenu="return false"><source src="${f.src}" type="video/mp4"></video>
 <div class="about">
