@@ -193,7 +193,7 @@
 "Electronic LCs built from your verified contract and issued by partner banks in about 15 minutes after approval. Digital documents, fewer discrepancies.": "Doğrulanmış sözleşmenizden oluşturulan ve onaydan sonra iş ortağı bankalarca yaklaşık 15 dakikada açılan elektronik akreditifler. Dijital belgeler, daha az uyumsuzluk.",
 "Every document of a trade,": "Bir işlemin tüm belgeleri,",
 "on one record.": "tek kayıtta.",
-"Every document, approval and milestone of a trade, on one tamper-evident record.": "Bir işlemin her belgesi, onayı ve aşaması tek bir değiştirilemez kayıtta.",
+"Every document, approval and milestone of a trade, on one tamper-evident record.": "Bir işlemin her belgesi, onayı ve aşaması her değişikliğin izlendiği tek bir kayıtta.",
 "Customs documents and port milestones are tracked on one shared record.": "Gümrük belgeleri ve liman aşamaları tek bir ortak kayıtta takip edilir.",
 "Every document of a trade, on one record.": "Bir işlemin tüm belgeleri, tek kayıtta.",
 "Animation in three steps. Today: which version is the real one?. With T57: generate, collect and check, record. The result: one version of the truth and audit-ready.": "Üç adımlık animasyon. Bugün: hangi sürüm gerçek? T57 ile: oluşturun, toplayın ve kontrol edin, kaydedin. Sonuç: tek doğru sürüm ve denetime hazır.",
@@ -211,7 +211,7 @@
 "Generate → Collect and check → Record": "Oluşturun → Toplayın ve kontrol edin → Kaydedin",
 "Core documents such as the contract and invoice are generated from the accepted quote, so the data is entered once.": "Sözleşme ve fatura gibi temel belgeler kabul edilen tekliften oluşturulur; veri bir kez girilir.",
 "Partner documents, such as inspection reports and certificates, are added to the trade record and checked for completeness and consistency.": "Gözetim raporları ve sertifikalar gibi iş ortağı belgeleri ticaret kaydına eklenir, eksiksizlik ve tutarlılık açısından kontrol edilir.",
-"Every document, approval and milestone is time-stamped and anchored on a tamper-evident ledger, creating a full audit trail.": "Her belge, onay ve aşama zaman damgasıyla değiştirilemez bir kayıt defterine bağlanır; eksiksiz bir denetim izi oluşur.",
+"Every document, approval and milestone is time-stamped and anchored on a tamper-evident ledger, creating a full audit trail.": "Her belge, onay ve aşama zaman damgasıyla her değişikliğin izlendiği bir kayıt defterine bağlanır; eksiksiz bir denetim izi oluşur.",
 "Data entered once": "Veri bir kez girilir",
 "Documents generated from the quote carry the same product, price, quantity and terms, which cuts errors and discrepancies.": "Tekliften oluşturulan belgeler aynı ürün, fiyat, miktar ve şartları taşır; bu da hataları ve uyumsuzlukları azaltır.",
 "One version of the truth": "Tek doğru sürüm",
@@ -239,5 +239,5 @@
 "Audit": "Denetim",
 "Tamper-evident trail": "Değiştirilemez iz",
 "Trade Document Management & Audit Trail | T57": "Ticaret Belgesi Yönetimi ve Denetim İzi | T57",
-"Contracts, invoices, certificates and inspection reports on one tamper-evident trade record, with a full audit trail for every food trade.": "Sözleşmeler, faturalar, sertifikalar ve gözetim raporları tek bir değiştirilemez ticaret kaydında; her gıda işlemi için eksiksiz denetim izi."
+"Contracts, invoices, certificates and inspection reports on one tamper-evident trade record, with a full audit trail for every food trade.": "Sözleşmeler, faturalar, sertifikalar ve gözetim raporları her değişikliğin izlendiği tek bir ticaret kaydında; her gıda işlemi için eksiksiz denetim izi."
 }

@@ -865,6 +865,7 @@
   });
 
   // The get-started dialog: every "talk to us", "book a demo" or "apply" button opens it with the right form
+  const ROLE_OF = { farmers: 1, cooperatives: 2, 'food-processors': 3, enterprises: 3, traders: 4, buyers: 5, financiers: 6, 'service-providers': 7, governments: 8, collaborators: 9 };
   const dlg = document.getElementById('get-started');
   if (dlg && dlg.showModal) {
     const df = dlg.querySelector('form');
@@ -878,10 +879,13 @@
       dlg.showModal(); const first = df.querySelector('[data-k]:not([hidden]) input, [data-k]:not([hidden]) select'); first && first.focus();
     };
     document.addEventListener('click', e => {
-      const a = e.target.closest('a[href$="#cta-home"], section.cta a[href^="#cta-"], [data-form]');
+      const a = e.target.closest('a[href$="#cta-home"], a[href^="#cta-"], [data-form]');
       if (!a || a.closest('#get-started') || e.metaKey || e.ctrlKey || e.shiftKey) return;
       e.preventDefault(); e.stopPropagation();
-      const t = a.textContent.trim(); open(a.dataset.form || kindOf(t), t);
+      const t = a.textContent.trim(), kind = a.dataset.form || kindOf(t); open(kind, t);
+      // Audience pages pre-select the visitor's role, so "Register now" is one click to the right form
+      const who = ((a.getAttribute('href') || '').match(/#cta-(.+)/) || [])[1], ri = ROLE_OF[who], rs = df.querySelector('select[name="role"]');
+      if (kind === 'join' && ri && rs) rs.selectedIndex = ri;
     }, true);
     dlg.querySelector('[data-fdlg-close]').addEventListener('click', () => dlg.close());
     dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });

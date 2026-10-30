@@ -89,7 +89,7 @@
 "<b>T57 Passport</b> A verified profile that travels with your business.": "<b>T57 Pasaportu</b> İşletmenizle birlikte her yere taşınan doğrulanmış profil.",
 "<b>Role labels</b> Owner-producer, processor, trader or intermediary.": "<b>Rol etiketleri</b> Üretici-sahip, işleyici, tüccar ya da aracı.",
 "<b>Compliance screening</b> Sanctions and watchlist checks before a deal moves.": "<b>Uyum taraması</b> İşlem ilerlemeden önce yaptırım ve izleme listesi kontrolü.",
-"<b>Blockchain records</b> Key documents anchored on a tamper-evident ledger.": "<b>Blokzincir kayıtları</b> Temel belgeler, değiştirilemez bir defterde sabitlenir.",
+"<b>Blockchain records</b> Key documents anchored on a tamper-evident ledger.": "<b>Blokzincir kayıtları</b> Temel belgeler, her değişikliğin izlendiği bir defterde sabitlenir.",
 "Trade": "Ticaret",
 "<b>RFQ and quotes</b> Structured requests and comparable quotes in one place.": "<b>Teklif talebi ve teklifler</b> Yapılandırılmış talepler ve karşılaştırılabilir teklifler tek yerde.",
 "<b>Contract from quote</b> The accepted quote becomes the contract.": "<b>Tekliften sözleşme</b> Kabul edilen teklif sözleşmeye dönüşür.",
@@ -243,5 +243,7 @@
 "Club membership and AI": "Kulüp üyeliği ve yapay zekâ",
 "Signed at Gulfood 2026": "Gulfood 2026'da imzalandı",
 "See all partners": "Tüm iş ortaklarını görün",
-"Investors: request the investor pack": "Yatırımcılar: yatırımcı dosyasını talep edin"
+"Investors: request the investor pack": "Yatırımcılar: yatırımcı dosyasını talep edin",
+"Gulfood 2026": "Gulfood 2026",
+"Headquarters": "Genel merkez"
 }
