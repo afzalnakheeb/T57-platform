@@ -254,7 +254,7 @@
 "People make the decisions": "Manusia membuat keputusan",
 "AI prepares and recommends, analysts decide, and every adverse decision is reviewed by a person and can be appealed.": "AI menyediakan dan mencadangkan, penganalisis memutuskan, dan setiap keputusan negatif disemak oleh manusia serta boleh dirayu.",
 "Built for regulators": "Dibina untuk pengawal selia",
-"Every check is recorded with its evidence on a tamper-evident trail, which supports audits by partners and authorities.": "Setiap semakan direkodkan bersama buktinya dalam jejak kalis usik, menyokong audit oleh rakan kongsi dan pihak berkuasa.",
+"Every check is recorded with its evidence on a tamper-evident trail, which supports audits by partners and authorities.": "Setiap semakan direkodkan bersama buktinya dalam jejak yang menunjukkan sebarang usikan, menyokong audit oleh rakan kongsi dan pihak berkuasa.",
 "Responsible AI": "AI yang bertanggungjawab",
 "Screening models are tested for false matches and bias across names and languages.": "Model saringan diuji untuk padanan palsu dan bias merentas nama dan bahasa.",
 "Can AI reject my application?": "Bolehkah AI menolak permohonan saya?",
@@ -394,7 +394,7 @@
 "Who else can see risk heatmaps?": "Siapa lagi yang boleh melihat peta haba risiko?",
 "Lenders and insurers see risk only for the trades you share with them. Governments see aggregated, anonymized views.": "Pemberi pinjaman dan syarikat insurans hanya melihat risiko bagi dagangan yang anda kongsi dengan mereka. Kerajaan melihat paparan yang diagregat dan dianonimkan.",
 "Page 7 of 14": "Halaman 7 daripada 14",
-"Risk Intelligence & Heatmaps": "Risikan Risiko & Peta Haba",
+"Risk Intelligence & Heatmaps": "Analisis Risiko & Peta Haba",
 "Scattered across sources": "Berselerak di pelbagai sumber",
 "One heatmap": "Satu peta haba",
 "Warning": "Amaran",
@@ -406,7 +406,7 @@
 "Risk-scoring and event-detection models": "Model pemarkahan risiko dan pengesanan peristiwa",
 "Scores with reasons, heatmaps, alerts": "Skor dengan sebab, peta haba, amaran",
 "You decide how to protect the trade": "Anda memutuskan cara melindungi dagangan",
-"AI Risk Intelligence for Food Trade | T57 AI Native": "Risikan Risiko AI untuk Perdagangan Makanan | T57 Berteraskan AI",
+"AI Risk Intelligence for Food Trade | T57 AI Native": "Analisis Risiko AI untuk Perdagangan Makanan | T57",
 "AI risk scores and heatmaps for counterparties, routes, markets and climate in food trade, with explainable factors and early-warning alerts, on T57.": "Skor risiko dan peta haba AI bagi rakan dagang, laluan, pasaran dan iklim dalam perdagangan makanan, dengan faktor yang boleh diterangkan dan amaran awal, di T57.",
 "See shortages and surpluses": "Lihat kekurangan dan lebihan",
 "coming, weeks ahead.": "lebih awal, beberapa minggu sebelumnya.",
@@ -685,5 +685,7 @@
 "Expected profit, range and break-even": "Anggaran keuntungan, julat dan pulang modal",
 "You choose the crop, contract or buyer": "Anda memilih tanaman, kontrak atau pembeli",
 "AI Profit & Loss Prediction for Food Trades | T57": "Ramalan Untung & Rugi AI untuk Dagangan Makanan | T57",
-"Predict the likely margin of a crop, contract or trade from yields, prices and costs, with break-even prices and scenario comparisons, on T57.": "Ramalkan margin sesuatu tanaman, kontrak atau dagangan daripada hasil, harga dan kos, dengan harga pulang modal dan perbandingan senario, di T57."
+"Predict the likely margin of a crop, contract or trade from yields, prices and costs, with break-even prices and scenario comparisons, on T57.": "Ramalkan margin sesuatu tanaman, kontrak atau dagangan daripada hasil, harga dan kos, dengan harga pulang modal dan perbandingan senario, di T57.",
+"Jeddah food trader spots a cash crunch early": "Pedagang makanan di Jeddah mengesan kesempitan tunai lebih awal",
+"A Jeddah food trader discovered a cash shortfall only when it could not pay a supplier, after two buyers paid late in the same month.": "Seorang pedagang makanan di Jeddah hanya menyedari kekurangan tunai apabila tidak dapat membayar pembekal, selepas dua pembeli membayar lewat pada bulan yang sama."
 }

@@ -16,7 +16,7 @@
 "Every buyer and seller passes KYC and KYB checks, sanctions screening and, where they claim to produce, physical verification.": "Setiap pembeli dan penjual melepasi semakan KYC dan KYB, saringan sekatan dan, bagi yang mendakwa sebagai pengeluar, pengesahan fizikal.",
 "Label": "Labelkan",
 "Each member is labeled as owner-producer, processor, trader or intermediary, so you always know who you deal with.": "Setiap ahli dilabel sebagai pemilik-pengeluar, pemproses, pedagang atau orang tengah, supaya anda sentiasa tahu dengan siapa anda berurusan.",
-"Quotes, contracts, documents and milestones sit on one shared trade record, with an audit trail and tamper-evident anchoring.": "Sebut harga, kontrak, dokumen dan pencapaian berada dalam satu rekod dagangan dikongsi, dengan jejak audit dan pengikatan kalis usik.",
+"Quotes, contracts, documents and milestones sit on one shared trade record, with an audit trail and tamper-evident anchoring.": "Sebut harga, kontrak, dokumen dan pencapaian berada dalam satu rekod dagangan dikongsi, dengan jejak audit dan pengikatan yang menunjukkan sebarang usikan.",
 "Assure": "Jamin",
 "Escrow, letters of credit and insurance come through licensed partners, and a structured dispute process applies if a party does not perform.": "Eskrow, surat kredit dan insurans disediakan melalui rakan kongsi berlesen, dan proses pertikaian berstruktur terpakai jika sesuatu pihak gagal melaksanakan tanggungjawab.",
 "VERIFIED MEMBER": "AHLI DISAHKAN",
@@ -192,7 +192,7 @@
 "Start business verification": "Mulakan pengesahan perniagaan",
 "T57's Know Your Business (KYB) checks confirm that every member company is real, properly registered, licensed and owned by the people it names.": "Semakan Kenali Perniagaan Anda (KYB) T57 mengesahkan bahawa setiap syarikat ahli adalah tulen, didaftarkan dengan betul, berlesen dan dimiliki oleh individu yang dinamakannya.",
 "A company name and a website prove very little.": "Nama syarikat dan laman web membuktikan sangat sedikit.",
-"Shell companies, borrowed licenses and hidden owners are common routes to fraud and sanctions breaches in cross-border trade. The key challenges T57 addresses include:": "Syarikat cangkerang, lesen pinjaman dan pemilik tersembunyi ialah laluan biasa kepada penipuan dan pelanggaran sekatan dalam perdagangan rentas sempadan. Antara cabaran utama yang ditangani T57:",
+"Shell companies, borrowed licenses and hidden owners are common routes to fraud and sanctions breaches in cross-border trade. The key challenges T57 addresses include:": "Syarikat cangkerang, lesen yang dipinjam dan pemilik tersembunyi ialah laluan biasa kepada penipuan dan pelanggaran sekatan dalam perdagangan rentas sempadan. Antara cabaran utama yang ditangani T57:",
 "Shell and fake companies": "Syarikat cangkerang dan palsu",
 "Businesses that exist only on paper.": "Perniagaan yang hanya wujud di atas kertas.",
 "Hidden ownership": "Pemilikan tersembunyi",
@@ -328,7 +328,7 @@
 "From quote to settlement on one record. For managers, this means one place to check.": "Daripada sebut harga hingga penyelesaian dalam satu rekod. Bagi pengurus, ini bermakna satu tempat untuk menyemak.",
 "Verified attribution": "Pengaitan yang disahkan",
 "Every action linked to a KYC-verified user. For compliance teams, this means clear accountability.": "Setiap tindakan dipautkan kepada pengguna yang disahkan melalui KYC. Bagi pasukan pematuhan, ini bermakna akauntabiliti yang jelas.",
-"Tamper evidence": "Bukti kalis usik",
+"Tamper evidence": "Bukti yang menunjukkan sebarang usikan",
 "Ledger anchoring of key records. For lenders and auditors, this means proof records have not changed.": "Pengikatan rekod utama pada lejar. Bagi pemberi pinjaman dan juruaudit, ini bermakna bukti bahawa rekod tidak berubah.",
 "Document versions": "Versi dokumen",
 "Every version kept, with who changed what. For both sides, this ends version disputes.": "Setiap versi disimpan, berserta siapa yang mengubah apa. Bagi kedua-dua pihak, ini menamatkan pertikaian versi.",
@@ -361,7 +361,7 @@
 "Changes": "Perubahan",
 "Silent": "Senyap",
 "Audit Trail for Food Trade | T57 Trust & Compliance": "Jejak Audit untuk Perdagangan Makanan | T57",
-"Every action on every trade, attributed to a verified person, time-stamped and tamper-evident. Audit-ready evidence on T57.": "Setiap tindakan dalam setiap dagangan, dikaitkan kepada individu yang disahkan, bercap masa dan kalis usik. Bukti sedia audit di T57.",
+"Every action on every trade, attributed to a verified person, time-stamped and tamper-evident. Audit-ready evidence on T57.": "Setiap tindakan dalam setiap dagangan, dikaitkan kepada individu yang disahkan, bercap masa dan menunjukkan sebarang usikan. Bukti sedia audit di T57.",
 "Every trade document,": "Setiap dokumen dagangan,",
 "one version of the truth.": "satu versi kebenaran.",
 "Keep every trade document correct, current and in one place.": "Pastikan setiap dokumen dagangan tepat, terkini dan di satu tempat.",
@@ -596,5 +596,6 @@
 "Months of argument": "Berbulan-bulan bertelagah",
 "A clear, recorded process": "Proses yang jelas dan direkodkan",
 "Trade Dispute Resolution | T57 Trade Assurance": "Penyelesaian Pertikaian Dagangan | Jaminan Dagangan T57",
-"Resolve food trade disputes from one shared record, with escrow paused through licensed partners and independent inspection.": "Selesaikan pertikaian perdagangan makanan daripada satu rekod dikongsi, dengan eskrow ditangguhkan melalui rakan kongsi berlesen dan pemeriksaan bebas."
+"Resolve food trade disputes from one shared record, with escrow paused through licensed partners and independent inspection.": "Selesaikan pertikaian perdagangan makanan daripada satu rekod dikongsi, dengan eskrow ditangguhkan melalui rakan kongsi berlesen dan pemeriksaan bebas.",
+"No. Entries are tamper-evident: any change can be detected, and nothing is deleted. Corrections are added as new entries.": "Tidak. Entri menunjukkan sebarang usikan: setiap perubahan dapat dikesan, dan tiada apa-apa yang dipadam. Pembetulan ditambah sebagai entri baharu."
 }

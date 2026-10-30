@@ -332,6 +332,11 @@ for lang in LANGS:
     for i, art in done.items():
         if lang == 'ar':  # redone films have their own Arabic cut and captions
             art = re.sub(r'/video/([a-z0-9-]+)\.en\.', r'/video/\1.ar.', art).replace('srclang="en" label="English"', 'srclang="ar" label="العربية"')
+        else:  # the English cut, with captions in this language wherever they exist
+            CAP = {'ms': 'Bahasa Malaysia', 'tr': 'Türkçe', 'hi': 'हिन्दी'}
+            art = re.sub(r'<track kind="captions" srclang="en" label="English" src="/video/([a-z0-9-]+)\.en\.vtt" default>',
+                         lambda m: f'<track kind="captions" srclang="{lang}" label="{CAP[lang]}" src="/video/{m.group(1)}.{lang}.vtt" default>'
+                         if os.path.exists(f'{R}/public/video/{m.group(1)}.{lang}.vtt') else m.group(0), art)
         open(f'{R}/content/{lang}/pages/{i}.html', 'w').write(relang(art))
         h1 = text(re.search(r'<h1[^>]*>(.*?)</h1>', art, re.S).group(1))
         std = text(re.search(r'<p class="std">(.*?)</p>', art, re.S).group(1))

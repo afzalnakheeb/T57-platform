@@ -200,7 +200,7 @@
 "Hire an expert": "Uzman desteği alın",
 "Agronomists, inspectors and food specialists, by video call at an agreed price.": "Ziraat mühendisleri, denetçiler ve gıda uzmanları, anlaşılan ücretle görüntülü görüşmede.",
 "Rent equipment and technology": "Ekipman ve teknoloji kiralayın",
-"Drones, machinery and small processing units, booked by the job.": "Drone'lar, makineler ve küçük işleme üniteleri, iş başına kiralanır.",
+"Drones, machinery and small processing units, booked by the job.": "Dronlar, makineler ve küçük işleme üniteleri, iş başına kiralanır.",
 "The 5 in T57": "T57'deki 5",
 "Five industries, one trade": "Beş sektör, tek ticaret",
 "Agriculture, trade, logistics, finance and technology, connected on one record.": "Tarım, ticaret, lojistik, finans ve teknoloji, tek kayıtta birbirine bağlı.",
@@ -215,9 +215,9 @@
 "Verified suppliers with role labels, inspection and finance in one flow.": "Rol etiketli doğrulanmış tedarikçiler; gözetim ve finansman tek akışta.",
 "Traders &amp; Aggregators": "Tüccarlar ve Toplayıcılar",
 "Both sides of the deal on one record, with finance requests to competing lenders.": "İşlemin iki tarafı tek kayıtta; finansman talepleri rekabet eden finansörlere.",
-"Manufacturers &amp; Enterprises": "Üreticiler ve Kurumsal Şirketler",
+"Manufacturers &amp; Enterprises": "İmalatçılar ve Kurumsal Şirketler",
 "Steady sourcing, supplier verification and forecasting.": "İstikrarlı tedarik, tedarikçi doğrulama ve tahminleme.",
-"Food Processors": "Gıda İşleyiciler",
+"Food Processors": "Gıda İşleyicileri",
 "Reliable raw material supply and access to domestic wholesale and export buyers.": "Güvenilir hammadde tedariki ve yurt içi toptan alıcılar ile ihracat alıcılarına erişim.",
 "Direct access to verified buyers and a trade history that supports finance.": "Doğrulanmış alıcılara doğrudan erişim ve finansmanı destekleyen bir ticaret geçmişi.",
 "Cooperatives &amp; FPOs": "Kooperatifler ve Üretici Örgütleri",
@@ -235,7 +235,7 @@
 "T57 platform pulse": "T57 platform nabzı",
 "At launch": "Lansmanda",
 "T57 | AI-Native Digital Trade Infrastructure for Food": "T57 | Gıda İçin Yapay Zekâ Temelli Dijital Ticaret Altyapısı",
-"Verified food trade on one record: RFQs, contracts, trade finance, insurance, inspection and logistics for farmers, processors, traders and buyers.": "Tek kayıtta doğrulanmış gıda ticareti: çiftçiler, işleyiciler, tüccarlar ve alıcılar için teklif talepleri, sözleşmeler, ticaret finansmanı, sigorta, gözetim ve lojistik.",
+"Verified food trade on one record: RFQs, contracts, trade finance, insurance, inspection and logistics for farmers, processors, traders and buyers.": "Tek kayıtta doğrulanmış gıda ticareti: çiftçi, işleyici, tüccar ve alıcılar için teklif talebi, sözleşme, ticaret finansmanı, sigorta, gözetim ve lojistik.",
 "<b>5</b> founding markets": "<b>5</b> kurucu pazar",
 "<b>5</b> industries on one trade record": "Tek ticaret kaydında <b>5</b> sektör",
 "<b>Verified</b> members only": "Yalnızca <b>doğrulanmış</b> üyeler",
@@ -245,5 +245,6 @@
 "See all partners": "Tüm iş ortaklarını görün",
 "Investors: request the investor pack": "Yatırımcılar: yatırımcı dosyasını talep edin",
 "Gulfood 2026": "Gulfood 2026",
-"Headquarters": "Genel merkez"
+"Headquarters": "Genel merkez",
+"The world spends about <b class=\"stat\">$<span data-count-on-view=\"2.22\" data-dec=\"2\">2.22</span> trillion</b> a year importing food (FAO Food Outlook, November 2025). Yet finding a buyer, checking them, agreeing terms, arranging finance, insurance, inspection, shipping and customs each come with their own paperwork, delays and risk. Banks rejected <b class=\"stat\"><span data-count-on-view=\"41\">41</span>%</b> of SME trade finance applications in 2025, part of a <b class=\"stat\">$<span data-count-on-view=\"2.5\" data-dec=\"1\">2.5</span> trillion</b> global gap (ADB, 2026).": "Dünya, gıda ithalatına yılda yaklaşık <b class=\"stat\"><span data-count-on-view=\"2.22\" data-dec=\"2\">2,22</span> trilyon dolar</b> harcıyor (FAO Food Outlook, Kasım 2025). Oysa alıcı bulmak, alıcıyı doğrulamak, şartlarda anlaşmak, finansman, sigorta, gözetim, nakliye ve gümrük işlemlerinin her biri kendi evrakı, gecikmesi ve riskiyle geliyor. Bankalar 2025'te KOBİ'lerin ticaret finansmanı başvurularının <b class=\"stat\">%<span data-count-on-view=\"41\">41</span></b>'ini reddetti; bu, küresel ölçekte <b class=\"stat\"><span data-count-on-view=\"2.5\" data-dec=\"1\">2,5</span> trilyon dolarlık</b> bir açığın parçası (ADB, 2026)."
 }

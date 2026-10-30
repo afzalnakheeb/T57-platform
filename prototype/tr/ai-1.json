@@ -209,7 +209,7 @@
 "People make the decisions": "Kararları insanlar verir",
 "AI prepares and recommends, analysts decide, and every adverse decision is reviewed by a person and can be appealed.": "Yapay zekâ hazırlar ve önerir, analistler karar verir; her olumsuz karar bir insan tarafından incelenir ve itiraz edilebilir.",
 "Built for regulators": "Düzenleyici kurumlar için tasarlandı",
-"Every check is recorded with its evidence on a tamper-evident trail, which supports audits by partners and authorities.": "Her kontrol kanıtıyla birlikte değişikliğe karşı korumalı bir kayıt izine işlenir; bu da iş ortaklarının ve idarelerin denetimlerini destekler.",
+"Every check is recorded with its evidence on a tamper-evident trail, which supports audits by partners and authorities.": "Her kontrol kanıtıyla birlikte her değişikliğin izlendiği bir kayıt izine işlenir; bu da iş ortaklarının ve idarelerin denetimlerini destekler.",
 "Responsible AI": "Sorumlu yapay zekâ",
 "Screening models are tested for false matches and bias across names and languages.": "Tarama modelleri isimler ve diller genelinde hatalı eşleşmelere ve yanlılığa karşı test edilir.",
 "Can AI reject my application?": "Yapay zekâ başvurumu reddedebilir mi?",
@@ -227,5 +227,7 @@
 "Cross-checked data and a recommendation": "Çapraz kontrol edilmiş veriler ve bir öneri",
 "An analyst makes the decision": "Kararı bir analist verir",
 "AI-Powered KYC, KYB & Compliance Screening | T57 AI Native": "Yapay Zekâ ile KYC, KYB ve Uyum Taraması | T57",
-"AI document checks, ownership matching and sanctions screening for food businesses, with people reviewing every adverse decision, on T57.": "T57'de gıda işletmeleri için yapay zekâ ile belge kontrolü, ortaklık eşleştirme ve yaptırım taraması; her olumsuz kararı insanlar inceler."
+"AI document checks, ownership matching and sanctions screening for food businesses, with people reviewing every adverse decision, on T57.": "T57'de gıda işletmeleri için yapay zekâ ile belge kontrolü, ortaklık eşleştirme ve yaptırım taraması; her olumsuz kararı insanlar inceler.",
+"Jeddah food trader spots a cash crunch early": "Ciddeli bir gıda tüccarı nakit sıkışıklığını erkenden fark ediyor",
+"A Jeddah food trader discovered a cash shortfall only when it could not pay a supplier, after two buyers paid late in the same month.": "Ciddeli bir gıda tüccarı, iki alıcının aynı ay geç ödemesinin ardından bir tedarikçiye ödeme yapamayınca nakit açığını ancak o zaman fark etti."
 }

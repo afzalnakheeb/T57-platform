@@ -189,7 +189,7 @@
 "Pay before you see it": "Görmeden ödeyin",
 "90 days free at launch": "Lansmanda 90 gün ücretsiz",
 "Pricing | Plans from $199 a Month | T57": "Fiyatlandırma | Aylık 199 Dolardan Başlayan Paketler | T57",
-"Public prices for verified food trade: Explore, Core, Growth and Enterprise plans, two months free on annual billing, and a small fee only on completed trades.": "Doğrulanmış gıda ticareti için açık fiyatlar: Keşif, Temel, Büyüme ve Kurumsal paketler, yıllık ödemede iki ay ücretsiz ve yalnızca tamamlanan işlemlerde küçük bir ücret.",
+"Public prices for verified food trade: Explore, Core, Growth and Enterprise plans, two months free on annual billing, and a small fee only on completed trades.": "Açık fiyatlar: Keşif, Temel, Büyüme ve Kurumsal paketler; yıllık ödemede iki ay ücretsiz, küçük işlem ücreti yalnızca tamamlanan işlemlerde.",
 "The more you trade,": "Ne kadar çok ticaret yaparsanız,",
 "the less you pay per trade.": "işlem başına o kadar az ödersiniz.",
 "Choose the plan that fits how much you trade.": "Ne kadar ticaret yaptığınıza uyan paketi seçin.",
@@ -278,5 +278,6 @@
 "Billing": "Faturalama",
 "Plan comparison": "Paket karşılaştırması",
 "Plans and Pricing | Explore, Core, Growth, Enterprise | T57": "Paketler ve Fiyatlar | Keşif, Temel, Büyüme, Kurumsal | T57",
-"Compare T57 plans from $199 a month, with verification included, two months free on annual billing and trade fees from 0.75% down to 0.20% per side.": "Doğrulamanın dahil olduğu T57 paketlerini karşılaştırın: aylık 199 dolardan başlayan fiyatlar, yıllık ödemede iki ay ücretsiz."
+"Compare T57 plans from $199 a month, with verification included, two months free on annual billing and trade fees from 0.75% down to 0.20% per side.": "Doğrulamanın dahil olduğu T57 paketlerini karşılaştırın: aylık 199 dolardan başlayan fiyatlar, yıllık ödemede iki ay ücretsiz.",
+"Fees for listings and leads that never become trades.": "Hiçbir zaman işleme dönüşmeyen ilanlar ve müşteri adayları için ücretler."
 }
