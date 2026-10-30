@@ -53,12 +53,12 @@ function gate(state: '' | 'wrong' | 'locked' | 'off', minutes = 0) {
 <img class="logo" src="/img/t57-logo-light.png" alt="T57" width="150" height="37">
 <p class="eyebrow">Investor videos · Private</p>
 <h1>Watch T57 in under three minutes</h1>
-<p>These films are shared privately with investors. Enter the access code you received from T57 to watch them.</p>
+<p>This film is shared privately with investors. Enter the access code you received from T57 to watch it.</p>
 <form method="post" action="/videos">
 <label for="code"><span class="lock">${lock}</span>Access code</label>
 <input id="code" name="code" type="password" inputmode="numeric" autocomplete="one-time-code" required autofocus maxlength="64"${off}>
 ${msg ? `<div class="msg" role="alert">${esc(msg)}</div>` : ''}
-<button type="submit"${off}>Watch the videos</button>
+<button type="submit"${off}>Watch the pitch</button>
 </form>
 <p class="help">No code? Write to <a href="mailto:afzal@t57.ai">afzal@t57.ai</a></p>
 </main>
@@ -67,7 +67,7 @@ ${msg ? `<div class="msg" role="alert">${esc(msg)}</div>` : ''}
 
 // The message T57 sends with the link. The access code is left out on purpose: it goes separately,
 // so a forwarded message alone does not open the page.
-const SHARE_TEXT = (pitch: boolean) => `T57 is building the AI-native trade system for food: one verified record from farm to buyer, with licensed finance partners, starting in five markets.\n\n${pitch ? 'Our three-minute investor pitch and short films are here.' : 'Our short investor films are here.'} The page is private; I will send you the access code separately.`;
+const SHARE_TEXT = (pitch: boolean) => `T57 is building the AI-native trade system for food: one verified record from farm to buyer, with licensed finance partners, starting in five markets.\n\n${pitch ? 'Our three-minute investor pitch is here.' : 'Our investor videos are here.'} The page is private; I will send you the access code separately.`;
 const SHARE_URL = `${SITE}/videos`;
 const SHARE_SUBJECT = 'T57 investor pitch: private videos';
 
@@ -101,7 +101,7 @@ function library() {
 <main class="lib">
 <p class="eyebrow">Investor videos</p>
 <h1>T57, in our own words</h1>
-<p class="lede">${pitch ? 'Start with the investor pitch. The short films below show the platform, the markets and how a trade runs, is paid and is financed.' : 'Short films on the platform, the markets and how a trade runs, is paid and is financed. The investor pitch will be added here soon.'}</p>
+<p class="lede">${pitch ? 'Three minutes on the problem T57 solves, how the platform works, where we start and the investment opportunity.' : 'The investor pitch will be added here soon.'}</p>
 ${pitch ? `<section class="featured" aria-labelledby="pitch">
 <video controls playsinline preload="metadata" poster="${f.poster}" controlslist="nodownload" oncontextmenu="return false"><source src="${f.src}" type="video/mp4"></video>
 <div class="about">
@@ -113,8 +113,8 @@ ${pitch ? `<section class="featured" aria-labelledby="pitch">
 </div>
 </section>` : ''}
 ${share(pitch)}
-<h2 class="more">More films</h2>
-<div class="grid">${FILMS.map(card).join('\n')}</div>
+${FILMS.length ? `<h2 class="more">More films</h2>
+<div class="grid">${FILMS.map(card).join('\n')}</div>` : ''}
 <p class="foot">Questions? Write to <a href="mailto:afzal@t57.ai">afzal@t57.ai</a> or call <a href="tel:+966569712222">+966 56 971 22 22</a>.</p>
 </main>
 <p class="conf">T57 · STRICTLY PRIVATE AND CONFIDENTIAL · Please do not share this page or its code.</p>
@@ -130,11 +130,11 @@ function page(body: string) {
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0b1340">
 <title>T57 · Investor videos</title>
-<meta name="description" content="T57's three-minute investor pitch and short films. Private: access code required.">
+<meta name="description" content="T57's three-minute investor pitch. Private: access code required.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="${SHARE_URL}">
 <meta property="og:title" content="T57 · Investor videos">
-<meta property="og:description" content="Our three-minute investor pitch and short films. Private: access code required.">
+<meta property="og:description" content="Our three-minute investor pitch. Private: access code required.">
 <meta property="og:image" content="${SITE}/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
