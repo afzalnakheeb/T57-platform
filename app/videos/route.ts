@@ -1,7 +1,7 @@
 import { cookies, headers } from 'next/headers';
 import { cleared, failed, lockedFor } from '../../lib/decks';
 import { SITE } from '../../lib/site';
-import { COOKIE, FEATURED, FILMS, codeMatches, configured, hasAccess, pitchReady, token, type Film } from '../../lib/videos';
+import { COOKIE, FEATURED, FILMS, codeMatches, configured, hasAccess, pitchKey, pitchReady, token, type Film } from '../../lib/videos';
 
 // Investor videos: the film library for a visitor who has entered the access code, else the access-code page.
 // Not linked from the site and kept out of search; the private files are served by ./file/[name]/route.ts.
@@ -94,6 +94,25 @@ const card = (f: Film) => `<article class="film">
 <p>${esc(f.summary)}</p>
 </article>`;
 
+// The pitch arrives encrypted (AES-256-CTR, the first 16 bytes are the counter); the browser decrypts it
+// with the key on this page and plays it from memory, which also makes the Download button possible.
+function pitchScript(src: string, key: string) {
+  return `<script>(async()=>{
+const v=document.getElementById('pitch-video'),box=document.getElementById('pitch-loading'),st=document.getElementById('pitch-status'),dl=document.getElementById('pitch-download');
+try{
+const r=await fetch(${JSON.stringify(src)});if(!r.ok)throw new Error(r.status);
+const total=+r.headers.get('content-length')||0,rd=r.body.getReader(),parts=[];let got=0;
+for(;;){const {done,value}=await rd.read();if(done)break;parts.push(value);got+=value.length;if(total)st.textContent='Loading the pitch… '+Math.round(got*100/total)+'%'}
+const buf=await new Blob(parts).arrayBuffer();
+const k=await crypto.subtle.importKey('raw',Uint8Array.from(atob(${JSON.stringify(key)}),c=>c.charCodeAt(0)),'AES-CTR',false,['decrypt']);
+const mp4=await crypto.subtle.decrypt({name:'AES-CTR',counter:new Uint8Array(buf,0,16),length:128},k,new Uint8Array(buf,16));
+const url=URL.createObjectURL(new Blob([mp4],{type:'video/mp4'}));
+v.src=url;v.preload='auto';box.hidden=true;dl.href=url;dl.removeAttribute('aria-disabled');
+}catch(e){st.textContent='The video could not load. Please refresh the page, or write to afzal@t57.ai.';box.classList.add('err')}
+dl.addEventListener('click',e=>{if(dl.hasAttribute('aria-disabled'))e.preventDefault()});
+})()</script>`;
+}
+
 function library() {
   const f = FEATURED;
   const pitch = pitchReady();
@@ -103,15 +122,22 @@ function library() {
 <h1>T57, in our own words</h1>
 <p class="lede">${pitch ? 'Three minutes on the problem T57 solves, how the platform works, where we start and the investment opportunity.' : 'The investor pitch will be added here soon.'}</p>
 ${pitch ? `<section class="featured" aria-labelledby="pitch">
-<video controls playsinline preload="metadata" poster="${f.poster}" controlslist="nodownload" oncontextmenu="return false"><source src="${f.src}" type="video/mp4"></video>
+<div class="player">
+<video id="pitch-video" controls playsinline preload="none" poster="${f.poster}"></video>
+<div class="loading" id="pitch-loading" role="status"><span class="spin" aria-hidden="true"></span><span id="pitch-status">Loading the pitch…</span></div>
+</div>
 <div class="about">
 <span class="badge">Investor pitch · ${f.length}</span>
 <h2 id="pitch">${esc(f.title)}</h2>
 <p>${esc(f.summary)}</p>
 <p class="note">${esc(f.note!)}</p>
-<a class="cta" href="mailto:afzal@t57.ai?subject=T57%20investor%20pitch">Talk to the founder</a>
+<div class="actions">
+<a class="cta dl" id="pitch-download" href="#" download="T57-Investor-Pitch.mp4" aria-disabled="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>Download the video</a>
+<a class="cta ghost" href="mailto:afzal@t57.ai?subject=T57%20investor%20pitch">Talk to the founder</a>
 </div>
-</section>` : ''}
+</div>
+</section>
+${pitchScript(f.src, pitchKey())}` : ''}
 ${share(pitch)}
 ${FILMS.length ? `<h2 class="more">More films</h2>
 <div class="grid">${FILMS.map(card).join('\n')}</div>` : ''}
@@ -181,7 +207,17 @@ video{display:block;width:100%;aspect-ratio:16/9;border-radius:12px;background:#
 .badge{display:inline-flex;padding:4px 12px;border-radius:999px;background:var(--amber);color:var(--indigo);font-size:13px;font-weight:700;letter-spacing:.04em}
 .about h2{margin:14px 0 10px;font-size:clamp(24px,2.6vw,32px);line-height:1.2}
 .about .note{margin-top:14px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.6)}
-.cta{display:inline-flex;align-items:center;padding:0 22px;margin-top:20px}
+.cta{display:inline-flex;align-items:center;gap:8px;padding:0 22px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.cta.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+.cta.ghost:hover{background:rgba(255,255,255,.1)}
+.cta[aria-disabled]{opacity:.5;cursor:progress}
+.player{position:relative}
+.loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:12px;border-radius:12px;background:rgba(11,19,64,.72);font-size:15px;color:#fff;text-align:center;padding:16px}
+.loading[hidden]{display:none}
+.loading.err .spin{display:none}
+.spin{width:22px;height:22px;border-radius:50%;border:3px solid rgba(255,255,255,.25);border-top-color:var(--amber);animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
 .more{margin:clamp(48px,7vw,80px) 0 20px;font-size:24px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:24px}
 .film{padding:14px 14px 20px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);transition:border-color .2s}
