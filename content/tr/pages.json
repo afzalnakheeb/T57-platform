@@ -1286,6 +1286,196 @@
   "description": "T57'de sözleşmeleri, faturaları ve çeki listelerini kabul edilmiş tekliften oluşturun; akreditif ve gümrük uyumsuzluklarını yapay zekâ kontrolleriyle yakalayın.",
   "parent": "ai-native"
  },
+ "platform": {
+  "route": "/tr/platform",
+  "section": "platform",
+  "name": "Platform",
+  "h1": "Gıdanın işletim sistemi. Tek platform, tek kayıt.",
+  "answer": "Gıdanın işletim sistemi: gıda ticaretindeki her tarafı, hizmeti ve kaydı birbirine bağlayan tek platform.",
+  "faqs": [
+   {
+    "q": "T57 bir pazar yeri mi, platform mu?",
+    "a": "T57 bir platformdur: işlemleri uçtan uca yürütecek altyapıya sahip, yalnızca üyelere açık, doğrulanmış bir ticaret kulübü. Üyeler bu platformda birbirleriyle doğrudan ticaret yapar."
+   },
+   {
+    "q": "T57 mevcut sistemlerime bağlanabilir mi?",
+    "a": "Evet. T57 ERP, muhasebe ve satın alma sistemleri için API'ler sunar; iş ortağı bankalara, sigortacılara ve lojistik sağlayıcılarına da bağlanır."
+   },
+   {
+    "q": "Verilerim nerede saklanıyor?",
+    "a": "Her pazarın veri yerelleştirme gerekliliklerini karşılamak üzere tasarlanmış, bölgelere yayılmış Microsoft Azure bulut altyapısında."
+   }
+  ],
+  "title": "T57 Platformu | Gıdanın İşletim Sistemi",
+  "description": "Gıda ticareti için inşa edilmiş tek güvenli platformda doğrulanmış kimlik, tek ticaret kaydı, bağlı finans ve lojistik iş ortakları, yapay zekâ ve blokzincir."
+ },
+ "platform-trade-cycle": {
+  "route": "/tr/platform/trade-cycle",
+  "section": "platform",
+  "name": "Tek Ticaret, Her Adım",
+  "h1": "Tek işlem. Her adım. Tek kayıt.",
+  "answer": "Fiyatta anlaşın, sevk edin, sigortalayın, finanse edin, ödeyin ve gümrükten geçirin; hepsi tek platformda, her taraf doğrulanmış ve her adım tek kayıtta.",
+  "faqs": [],
+  "title": "Tek İşlem, Her Adım: Tek Kayıtta Gıda Ticareti | T57",
+  "description": "Her gıda için fiyatta anlaşın, sevk edin, sigortalayın, finanse edin, ödeyin ve gümrükten geçirin; tek platformda, doğrulanmış taraflar, yarışan kredi verenler ve aşamaya bağlı finansmanla.",
+  "parent": "platform"
+ },
+ "platform-domestic": {
+  "route": "/tr/platform/domestic-trade",
+  "section": "platform",
+  "name": "Yurt İçi B2B Ticaret",
+  "h1": "Fabrikadan şehirdeki her dükkâna.",
+  "answer": "Yerel fabrikalar ve çiftlikler süpermarketlere, restoranlara ve ofislere fabrika fiyatıyla, koli koli ve kapıya teslim doğrudan satış yapar.",
+  "faqs": [
+   {
+    "q": "T57 raf bedeli ya da ciro primi alıyor mu?",
+    "a": "Hayır. Raf bedeli, yerleştirme primi ya da zorunlu promosyon yok. Satıcılar kendi fiyatlarını belirler. T57 üyelik seçenekleri Fiyatlandırma sayfasında yer alır."
+   },
+   {
+    "q": "Siparişleri kim teslim ediyor?",
+    "a": "Siparişten ayarlanan lisanslı yerel lojistik iş ortakları. Satıcılar zaten çalıştıkları teslimat şirketini de davet edebilir."
+   },
+   {
+    "q": "Alıcılar sonra ödeyebilir mi?",
+    "a": "Evet, lisanslı bir B2B kredi ya da sonra öde iş ortağının alıcıyı onayladığı durumlarda. T57 kredi vermez."
+   },
+   {
+    "q": "En az sipariş miktarı nedir?",
+    "a": "Her satıcı kendisi belirler; örneğin 2, 5 ya da 20 koli ve büyük siparişlere daha düşük fiyatlar."
+   },
+   {
+    "q": "Çiftlikler ve kooperatifler bu şekilde satış yapabilir mi?",
+    "a": "Evet. Çiftlikler, kooperatifler ve gıda işleyicileri yerel kurumsal alıcılar için taze ve paketli ürünlerini listeleyebilir."
+   },
+   {
+    "q": "Bu hangi ülkeler için?",
+    "a": "Yurt içi B2B ticaret T57'nin kurucu pazarlarının her biri için tasarlandı: Suudi Arabistan, BAE, Hindistan, Malezya ve Türkiye."
+   }
+  ],
+  "title": "Yurt İçi B2B Gıda Ticareti | Fabrikadan Dükkâna, Doğrudan | T57",
+  "description": "Yerel fabrikalar ve çiftlikler süpermarketlere, restoranlara ve ofislere fabrika fiyatıyla, koli koli, yerel teslimat ve sonra öde iş ortaklarıyla doğrudan satış yapar.",
+  "parent": "platform"
+ },
+ "platform-architecture": {
+  "route": "/tr/platform/architecture",
+  "section": "platform",
+  "name": "Sistem Mimarisi",
+  "h1": "Bulut tabanlı. API öncelikli. Düzenlemeye tabi ticaret için inşa edildi.",
+  "answer": "Doğrulanmış, düzenlemeye tabi, sınır ötesi gıda ticareti için inşa edilmiş bulut tabanlı, API öncelikli bir mimari.",
+  "faqs": [
+   {
+    "q": "T57 hangi bulutu kullanıyor?",
+    "a": "Her pazarın veri yerelleştirme gerekliliklerini karşılamak üzere tasarlanmış, bölgelere yayılmış Microsoft Azure."
+   },
+   {
+    "q": "T57 API sunuyor mu?",
+    "a": "Evet. Üyeler ve iş ortakları REST API'ler ve webhook'larla entegre olabilir. Dokümantasyon onaylı üyeler ve iş ortaklarına sunulur."
+   },
+   {
+    "q": "İş ortakları verilerini kendi sistemlerinde tutabilir mi?",
+    "a": "Evet. İş ortakları yalnızca her işlemin ihtiyaç duyduğu verileri sözleşme çerçevesinde ve onayla paylaşır, kendi kayıt sistemlerini korur."
+   }
+  ],
+  "title": "T57 Mimarisi | Bulut Tabanlı, API Öncelikli Platform",
+  "description": "Sınır ötesi, doğrulanmış ve düzenlemeye tabi gıda ticareti için inşa edilmiş; Microsoft Azure üzerinde bölgeye duyarlı bulut, modüler hizmetler, iş ortağı bağlayıcıları ve üye API'leri.",
+  "parent": "platform"
+ },
+ "platform-roadmap": {
+  "route": "/tr/platform/roadmap",
+  "section": "platform",
+  "name": "Platform Yol Haritası",
+  "h1": "Platform nasıl büyüyor: her seferinde güçlü bir katman.",
+  "answer": "T57 platformu nasıl büyüyor: doğrulanmış ticaretten bağlı finansmana, oradan da bir gıda ekosistemine.",
+  "faqs": [
+   {
+    "q": "T57'ye şimdi katılabilir miyim?",
+    "a": "Evet. Kurucu pazarlardan başlayarak üyelik başvuruları açık."
+   },
+   {
+    "q": "Yeni çözümlerin pazarıma ne zaman geldiğini nasıl öğrenirim?",
+    "a": "Üyeler platform içinde bilgilendirilir, iş ortakları da entegrasyon güncellemelerini doğrudan alır."
+   },
+   {
+    "q": "Kuruluşum yol haritasının şekillenmesine katkı sağlayabilir mi?",
+    "a": "Evet. İş ortakları ve kurumsal üyeler pilot programlara ve danışma gruplarına katılabilir."
+   }
+  ],
+  "title": "T57 Platform Yol Haritası | Ticaret, Finansman, Ekosistem",
+  "description": "T57 platformu kurucu ve genişleyen pazarlarda doğrulanmış gıda ticaretinden bağlı finansmana ve eksiksiz bir gıda ekosistemine aşama aşama nasıl büyüyor.",
+  "parent": "platform"
+ },
+ "platform-intelligence": {
+  "route": "/tr/platform/intelligence-layer",
+  "section": "platform",
+  "name": "İstihbarat Katmanı",
+  "h1": "Doğrulanmış ticaretle eğitilmiş küçük, yerel yapay zekâ.",
+  "answer": "Doğrulanmış ticaretten öğrenen ve T57'deki her kararı destekleyen yapay zekâ katmanı.",
+  "faqs": [
+   {
+    "q": "T57 verilerimi yapay zekâyı eğitmek için kullanıyor mu?",
+    "a": "T57 modellerini geliştirmek için doğrulanmış ticaret verilerini anonimleştirilmiş, toplulaştırılmış biçimde kullanır. Bireysel verileriniz asla diğer üyelere gösterilmez; çiftçi bilgisi de yalnızca onayla kullanılır."
+   },
+   {
+    "q": "Neden yalnızca büyük, genel bir yapay zekâ modeli kullanılmıyor?",
+    "a": "Büyük modeller dil ve belgeler için yararlıdır ve T57 onları uygun olduğu yerlerde kullanır. Ürünler, pazarlar ve yerel koşullar için ise yerel verilerle eğitilen küçük modeller daha doğru, daha ucuz çalışır ve test edilmesi ve açıklanması daha kolaydır."
+   },
+   {
+    "q": "Bir yapay zekâ kararına itiraz edebilir miyim?",
+    "a": "Evet. Her olumsuz karar bir gerekçe ve itiraz yoluyla birlikte gelir ve bir insan tarafından incelenir."
+   }
+  ],
+  "title": "T57 Analiz Katmanı | Gıda Ticareti İçin Küçük, Yerel Yapay Zekâ",
+  "description": "Doğrulanmış ticaret verileri ve onayla paylaşılan çiftçi bilgisiyle eğitilen, her olumsuz kararı insanların incelediği şekilde yönetilen küçük, yerel yapay zekâ modelleri.",
+  "parent": "platform"
+ },
+ "platform-blockchain": {
+  "route": "/tr/platform/blockchain",
+  "section": "platform",
+  "name": "Blokzincir ve Akıllı Sözleşme Katmanı",
+  "h1": "Kimsenin sessizce değiştiremeyeceği kayıtlar. Kanıtı izleyen ödemeler.",
+  "answer": "Her tarafın güvenebileceği, değişikliğe karşı korumalı kayıtlar, tokenleştirilmiş belgeler ve aşamaya bağlı ödemeler.",
+  "faqs": [
+   {
+    "q": "Ticaret verilerim blokzincirde herkese açık mı?",
+    "a": "Hayır. Yalnızca önemli kayıtların dijital parmak izleri deftere işlenir. Belge içerikleri yalnızca yetkili tarafların görebildiği güvenli depolamada kalır."
+   },
+   {
+    "q": "Blokzincir katmanını kullanmak için kripto paraya ihtiyacım var mı?",
+    "a": "Hayır. Blokzincir katmanı arka planda çalışır. Üyeler, yasal olduğu yerlerde alternatif ödemeleri seçmedikçe lisanslı iş ortakları aracılığıyla normal para birimleriyle öder ve ödeme alır."
+   },
+   {
+    "q": "Bir aşamaya itiraz edilirse ne olur?",
+    "a": "Akıllı sözleşme serbest bırakmayı durdurur; anlaşmazlık sözleşmeye ve iş ortağının kurallarına göre çözülür."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Blokzincir ve Akıllı Sözleşmeler | T57",
+  "description": "T57'de gizlilik ve lisanslı iş ortaklarıyla; değişikliğe karşı korumalı kayıt, tokenleştirilmiş ticaret belgeleri ve akıllı sözleşmeyle aşamaya bağlı ödemeler.",
+  "parent": "platform"
+ },
+ "platform-security": {
+  "route": "/tr/platform/security",
+  "section": "platform",
+  "name": "Güvenlik Mimarisi",
+  "h1": "Sonradan eklenmemiş, en baştan yerleşik güvenlik.",
+  "answer": "Her işlemi, belgeyi ve üyeyi platformun içine yerleşik güvenlikle koruyun.",
+  "faqs": [
+   {
+    "q": "Verilerim nerede saklanıyor?",
+    "a": "T57 birden çok bölgede Microsoft Azure üzerinde barındırılır. Yerel kuralların gerektirdiği yerlerde veriler bölge içinde saklanır."
+   },
+   {
+    "q": "Diğer üyeler fiyatlarımı ya da tedarikçilerimi görebilir mi?",
+    "a": "Hayır. Ticari verileriniz belirlediğiniz yetkilere göre yalnızca size ve işlemlerinizin taraflarına görünür."
+   },
+   {
+    "q": "Bir güvenlik olayı yaşanırsa ne olur?",
+    "a": "T57 tanımlı bir olay müdahale sürecini izler; etkilenen üyeler ve idareler yasanın gerektirdiği şekilde bilgilendirilir."
+   }
+  ],
+  "title": "Güvenlik Mimarisi | T57 Ticaret Verilerini Nasıl Koruyor",
+  "description": "T57'de doğrulanmış kimlik, çok faktörlü giriş, role dayalı erişim, şifreleme, Azure üzerinde bölgesel veri yerelleştirme ve eksiksiz bir denetim izi.",
+  "parent": "platform"
+ },
  "markets": {
   "route": "/tr/markets",
   "section": "markets",
