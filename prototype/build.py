@@ -307,8 +307,8 @@ for lang in LANGS:
     for f in glob.glob(f'{R}/content/{lang}/pages/*.html'): os.remove(f)
     lp = {}
     for i, art in done.items():
-        if lang == 'ar':  # the What is T57 film has its own Arabic cut and captions
-            art = art.replace('/video/what-is-t57.en.', '/video/what-is-t57.ar.').replace('srclang="en" label="English" src="/video/what-is-t57.ar.vtt"', 'srclang="ar" label="العربية" src="/video/what-is-t57.ar.vtt"')
+        if lang == 'ar':  # redone films have their own Arabic cut and captions
+            art = re.sub(r'/video/([a-z-]+)\.en\.', r'/video/\1.ar.', art).replace('srclang="en" label="English"', 'srclang="ar" label="العربية"')
         open(f'{R}/content/{lang}/pages/{i}.html', 'w').write(relang(art))
         h1 = text(re.search(r'<h1[^>]*>(.*?)</h1>', art, re.S).group(1))
         std = text(re.search(r'<p class="std">(.*?)</p>', art, re.S).group(1))
