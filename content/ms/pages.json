@@ -160,6 +160,294 @@
   "description": "Hubungkan pengeluar makanan ASEAN dengan pembeli yang disahkan di Teluk, India dan Türkiye, dengan dokumen digital, rekod halal dan pembiayaan perdagangan melalui rakan kongsi.",
   "parent": "markets"
  },
+ "mkt-sa-overview": {
+  "route": "/ms/markets/saudi-arabia/overview",
+  "section": "markets",
+  "name": "Arab Saudi: Gambaran Keseluruhan Pasaran",
+  "h1": "Berdagang makanan di Arab Saudi, di dalam dan luar negara.",
+  "answer": "Berdagang makanan di Arab Saudi bersama rakan kongsi yang disahkan, di dalam dan luar negara.",
+  "faqs": [
+   {
+    "q": "Siapa yang boleh menyertai T57 di Arab Saudi?",
+    "a": "Perniagaan makanan dan pertanian berdaftar, daripada pengeluar dan koperasi hingga pedagang, pemborong, peruncit, hotel, restoran dan institusi."
+   },
+   {
+    "q": "Adakah saya perlu mengeksport untuk menggunakan T57?",
+    "a": "Tidak. Ramai ahli menggunakan T57 untuk borong domestik sahaja."
+   },
+   {
+    "q": "Adakah T57 tersedia dalam bahasa Arab?",
+    "a": "Ya."
+   }
+  ],
+  "title": "T57 di Arab Saudi | Rangkaian Perdagangan Makanan yang Disahkan",
+  "description": "Borong domestik dan perdagangan makanan rentas sempadan yang disahkan di Arab Saudi, dengan pasukan tempatan dan rakan kongsi berlesen.",
+  "parent": "markets"
+ },
+ "mkt-sa-features": {
+  "route": "/ms/markets/saudi-arabia/features",
+  "section": "markets",
+  "name": "Arab Saudi: Ciri Yang Tersedia",
+  "h1": "Setiap keupayaan T57, di Arab Saudi.",
+  "answer": "Segala yang anda perlukan untuk berdagang makanan di Arab Saudi, di satu tempat.",
+  "faqs": [
+   {
+    "q": "Adakah semua ciri tersedia di setiap pasaran?",
+    "a": "Ya. Rakan kongsi yang menyampaikan perkhidmatan terkawal berbeza mengikut negara."
+   },
+   {
+    "q": "Bolehkah saya membayar dalam SAR?",
+    "a": "Boleh, melalui rakan kongsi pembayaran dan eskrow berlesen."
+   },
+   {
+    "q": "Siapa yang menyediakan pembiayaan di Arab Saudi?",
+    "a": "Bank dan syarikat pembiayaan berlesen di Arab Saudi. T57 tidak memberi pinjaman."
+   }
+  ],
+  "title": "Ciri T57 di Arab Saudi | Dagangan, Pembiayaan, Logistik",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di Arab Saudi.",
+  "parent": "mkt-sa-overview"
+ },
+ "mkt-sa-compliance": {
+  "route": "/ms/markets/saudi-arabia/compliance",
+  "section": "markets",
+  "name": "Arab Saudi: Panduan Peraturan",
+  "h1": "Fahami peraturan makanan Arab Saudi sebelum anda menghantar.",
+  "answer": "Fahami peraturan perdagangan makanan di Arab Saudi sebelum anda menghantar.",
+  "faqs": [
+   {
+    "q": "Adakah panduan ini nasihat undang-undang?",
+    "a": "Tidak. Ia ringkasan untuk membantu anda bersedia. Sentiasa sahkan keperluan dengan pihak berkuasa berkaitan atau ejen kastam anda."
+   },
+   {
+    "q": "Berapa kerap panduan ini dikemas kini?",
+    "a": "T57 menyemaknya secara berkala."
+   },
+   {
+    "q": "Bolehkah T57 menguruskan pelepasan kastam untuk saya?",
+    "a": "T57 menghubungkan anda dengan ejen kastam berlesen, yang menguruskan pelepasan dalam rekod dagangan dikongsi."
+   }
+  ],
+  "title": "Peraturan Import Makanan di Arab Saudi | Panduan Peraturan T57",
+  "description": "Badan, dokumen dan peraturan utama bagi perdagangan makanan di Arab Saudi: SFDA, halal, ZATCA, FASAH dan PDPL, serta cara T57 membantu anda mematuhinya.",
+  "parent": "mkt-sa-overview"
+ },
+ "mkt-sa-start": {
+  "route": "/ms/markets/saudi-arabia/getting-started",
+  "section": "markets",
+  "name": "Arab Saudi: Langkah Permulaan",
+  "h1": "Dagangan pertama anda di Arab Saudi, dalam empat langkah.",
+  "answer": "Mula berdagang di T57 di Arab Saudi dalam empat langkah.",
+  "faqs": [
+   {
+    "q": "Berapa lama sebelum saya boleh berdagang?",
+    "a": "Sebaik sahaja pengesahan selesai."
+   },
+   {
+    "q": "Adakah sebarang kos untuk menyertai?",
+    "a": "Lihat halaman Harga untuk pilihan keahlian."
+   },
+   {
+    "q": "Bolehkah seseorang membantu saya dalam bahasa Arab?",
+    "a": "Boleh. Pasukan kami di Riyadh menyokong ahli dalam bahasa Arab dan Inggeris."
+   }
+  ],
+  "title": "Mula Bersama T57 di Arab Saudi",
+  "description": "Sertai T57 di Arab Saudi dalam empat langkah: mohon, dapatkan pengesahan, sediakan akaun dan berdagang, dengan bantuan pasukan tempatan kami.",
+  "parent": "mkt-sa-overview"
+ },
+ "mkt-uae-overview": {
+  "route": "/ms/markets/uae/overview",
+  "section": "markets",
+  "name": "UAE: Gambaran Keseluruhan Pasaran",
+  "h1": "Berdagang melalui hab UAE, bersama rakan kongsi yang disahkan.",
+  "answer": "Berdagang makanan melalui UAE bersama rakan kongsi yang disahkan di seluruh rantau.",
+  "faqs": [
+   {
+    "q": "Bolehkah syarikat zon bebas menyertai?",
+    "a": "Boleh. Syarikat tanah besar dan zon bebas boleh memohon, tertakluk kepada pengesahan."
+   },
+   {
+    "q": "Adakah saya perlu mengeksport untuk menggunakan T57?",
+    "a": "Tidak. Ramai ahli menggunakan T57 untuk borong domestik sahaja."
+   },
+   {
+    "q": "Adakah T57 tersedia dalam bahasa Arab?",
+    "a": "Ya, dalam bahasa Arab dan Inggeris."
+   }
+  ],
+  "title": "T57 di UAE | Rangkaian Perdagangan dan Eksport Semula Makanan yang Disahkan",
+  "description": "Import makanan, borong domestik dan eksport semula yang disahkan di UAE, dengan pasukan tempatan dan rakan kongsi berlesen untuk pembiayaan dan pembayaran.",
+  "parent": "markets"
+ },
+ "mkt-uae-features": {
+  "route": "/ms/markets/uae/features",
+  "section": "markets",
+  "name": "UAE: Ciri Yang Tersedia",
+  "h1": "Setiap keupayaan T57, di UAE.",
+  "answer": "Segala yang anda perlukan untuk berdagang makanan di UAE, di satu tempat.",
+  "faqs": [
+   {
+    "q": "Adakah semua ciri tersedia di setiap pasaran?",
+    "a": "Ya. Rakan kongsi yang menyampaikan perkhidmatan terkawal berbeza mengikut negara."
+   },
+   {
+    "q": "Bolehkah saya membayar dalam AED?",
+    "a": "Boleh, melalui rakan kongsi pembayaran dan eskrow berlesen."
+   },
+   {
+    "q": "Siapa yang menyediakan pembiayaan di UAE?",
+    "a": "Bank dan syarikat pembiayaan berlesen di UAE. T57 tidak memberi pinjaman."
+   }
+  ],
+  "title": "Ciri T57 di UAE | Dagangan, Pembiayaan, Logistik",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di UAE.",
+  "parent": "mkt-uae-overview"
+ },
+ "mkt-uae-compliance": {
+  "route": "/ms/markets/uae/compliance",
+  "section": "markets",
+  "name": "UAE: Panduan Peraturan",
+  "h1": "Fahami peraturan makanan UAE sebelum anda menghantar.",
+  "answer": "Fahami peraturan perdagangan makanan di UAE sebelum anda menghantar.",
+  "faqs": [
+   {
+    "q": "Adakah panduan ini nasihat undang-undang?",
+    "a": "Tidak. Ia ringkasan untuk membantu anda bersedia. Sentiasa sahkan keperluan dengan pihak berkuasa berkaitan atau ejen kastam anda."
+   },
+   {
+    "q": "Berapa kerap panduan ini dikemas kini?",
+    "a": "T57 menyemaknya secara berkala."
+   },
+   {
+    "q": "Bolehkah T57 menguruskan pelepasan kastam untuk saya?",
+    "a": "T57 menghubungkan anda dengan ejen kastam berlesen, yang menguruskan pelepasan dalam rekod dagangan dikongsi."
+   }
+  ],
+  "title": "Peraturan Import Makanan di UAE | Panduan Peraturan T57",
+  "description": "Badan, dokumen dan peraturan utama bagi perdagangan makanan di UAE: MOCCAE, halal MoIAT, pihak berkuasa makanan emiriah, kastam dan PDPL.",
+  "parent": "mkt-uae-overview"
+ },
+ "mkt-uae-start": {
+  "route": "/ms/markets/uae/getting-started",
+  "section": "markets",
+  "name": "UAE: Langkah Permulaan",
+  "h1": "Dagangan pertama anda di UAE, dalam empat langkah.",
+  "answer": "Mula berdagang di T57 di UAE dalam empat langkah.",
+  "faqs": [
+   {
+    "q": "Berapa lama sebelum saya boleh berdagang?",
+    "a": "Sebaik sahaja pengesahan selesai."
+   },
+   {
+    "q": "Adakah sebarang kos untuk menyertai?",
+    "a": "Lihat halaman Harga untuk pilihan keahlian."
+   },
+   {
+    "q": "Bolehkah seseorang membantu saya dalam bahasa Arab?",
+    "a": "Boleh. Pasukan kami di UAE menyokong ahli dalam bahasa Arab dan Inggeris."
+   }
+  ],
+  "title": "Mula Bersama T57 di UAE",
+  "description": "Sertai T57 di UAE dalam empat langkah: mohon, dapatkan pengesahan, sediakan akaun dan berdagang, dengan bantuan pasukan tempatan kami.",
+  "parent": "mkt-uae-overview"
+ },
+ "mkt-in-overview": {
+  "route": "/ms/markets/india/overview",
+  "section": "markets",
+  "name": "India: Gambaran Keseluruhan Pasaran",
+  "h1": "Ladang dan pengeluar makanan India, kepada pembeli di dalam dan luar negara.",
+  "answer": "Hubungkan peladang dan pengeluar makanan India dengan pembeli yang disahkan di dalam dan luar negara.",
+  "faqs": [
+   {
+    "q": "Bolehkah pertubuhan peladang menyertai?",
+    "a": "Boleh. FPO dan koperasi boleh menyertai sebagai ahli dan mendaftarkan peladang ahli mereka."
+   },
+   {
+    "q": "Adakah T57 hanya untuk pengeksport?",
+    "a": "Tidak. Ramai ahli menggunakan T57 untuk menjual kepada pembeli perniagaan domestik."
+   },
+   {
+    "q": "Bahasa apakah yang disokong?",
+    "a": "Bahasa Inggeris dan Hindi, dengan lebih banyak bahasa India dirancang."
+   }
+  ],
+  "title": "T57 di India | Perdagangan Makanan yang Disahkan untuk FPO dan Pengeksport",
+  "description": "Jual kepada pembeli perniagaan domestik dan pengimport yang disahkan di Teluk dan Asia Tenggara, dengan pembiayaan, pemeriksaan dan logistik melalui rakan kongsi berlesen.",
+  "parent": "markets"
+ },
+ "mkt-in-features": {
+  "route": "/ms/markets/india/features",
+  "section": "markets",
+  "name": "India: Ciri Yang Tersedia",
+  "h1": "Setiap keupayaan T57, di India.",
+  "answer": "Segala yang anda perlukan untuk berdagang makanan di India, di satu tempat.",
+  "faqs": [
+   {
+    "q": "Adakah semua ciri tersedia di setiap pasaran?",
+    "a": "Ya. Rakan kongsi yang menyampaikan perkhidmatan terkawal berbeza mengikut negara."
+   },
+   {
+    "q": "Bolehkah saya membayar dalam INR?",
+    "a": "Boleh, melalui rakan kongsi pembayaran dan eskrow berlesen."
+   },
+   {
+    "q": "Siapa yang menyediakan pembiayaan di India?",
+    "a": "Bank dan NBFC berlesen di India. T57 tidak memberi pinjaman."
+   }
+  ],
+  "title": "Ciri T57 di India | Dagangan, Pembiayaan, Logistik",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di India.",
+  "parent": "mkt-in-overview"
+ },
+ "mkt-in-compliance": {
+  "route": "/ms/markets/india/compliance",
+  "section": "markets",
+  "name": "India: Panduan Peraturan",
+  "h1": "Fahami peraturan makanan India sebelum anda menghantar.",
+  "answer": "Fahami peraturan perdagangan makanan di India sebelum anda menghantar.",
+  "faqs": [
+   {
+    "q": "Adakah panduan ini nasihat undang-undang?",
+    "a": "Tidak. Ia ringkasan untuk membantu anda bersedia. Sentiasa sahkan keperluan dengan pihak berkuasa berkaitan atau ejen kastam anda."
+   },
+   {
+    "q": "Berapa kerap panduan ini dikemas kini?",
+    "a": "T57 menyemaknya secara berkala."
+   },
+   {
+    "q": "Bolehkah T57 menguruskan pelepasan kastam untuk saya?",
+    "a": "T57 menghubungkan anda dengan ejen kastam berlesen, yang menguruskan pelepasan dalam rekod dagangan dikongsi."
+   }
+  ],
+  "title": "Peraturan Eksport Makanan di India | Panduan Peraturan T57",
+  "description": "Badan, dokumen dan peraturan utama bagi perdagangan makanan di India: IEC DGFT, APEDA, FSSAI, kuarantin tumbuhan, kastam dan Akta DPDP.",
+  "parent": "mkt-in-overview"
+ },
+ "mkt-in-start": {
+  "route": "/ms/markets/india/getting-started",
+  "section": "markets",
+  "name": "India: Langkah Permulaan",
+  "h1": "Dagangan pertama anda di India, dalam empat langkah.",
+  "answer": "Mula berdagang di T57 di India dalam empat langkah.",
+  "faqs": [
+   {
+    "q": "Berapa lama sebelum saya boleh berdagang?",
+    "a": "Sebaik sahaja pengesahan selesai."
+   },
+   {
+    "q": "Adakah sebarang kos untuk menyertai?",
+    "a": "Lihat halaman Harga untuk pilihan keahlian."
+   },
+   {
+    "q": "Bolehkah seseorang membantu saya dalam bahasa Hindi?",
+    "a": "Boleh. Pasukan kami di India menyokong ahli dalam bahasa Inggeris dan Hindi."
+   }
+  ],
+  "title": "Mula Bersama T57 di India",
+  "description": "Sertai T57 di India dalam empat langkah: mohon, dapatkan pengesahan, sediakan akaun dan berdagang, dengan bantuan pasukan tempatan kami.",
+  "parent": "mkt-in-overview"
+ },
  "mkt-my-overview": {
   "route": "/ms/markets/malaysia/overview",
   "section": "markets",
