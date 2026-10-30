@@ -2457,6 +2457,173 @@
   "description": "T57'nin gıda işletmenize ücretler düşüldükten sonra ne kadar zaman ve para kazandırabileceğini tahmin edin; ticaret hacminiz için en düşük toplam maliyetli paketi bulun.",
   "parent": "pricing"
  },
+ "resources": {
+  "route": "/tr/resources",
+  "section": "resources",
+  "name": "Kaynaklara Genel Bakış",
+  "h1": "Gıda ticaretinin nasıl değiştiğini ve nasıl daha iyi ticaret yapılacağını öğrenin.",
+  "answer": "Dijital gıda ticareti, gıda güvenliği, ticaret finansmanı ve yapay zekâ üzerine analizler, araştırmalar, haberler, videolar, etkinlikler ve sade dilde rehberler.",
+  "faqs": [
+   {
+    "q": "T57 kaynakları ücretsiz mi?",
+    "a": "Çoğu ücretsizdir. Bazı kapsamlı raporlar e-posta adresinizi isteyebilir."
+   },
+   {
+    "q": "Bir konu önerebilir miyim?",
+    "a": "Evet. Ele almamızı istediğiniz konuyla ekibimize ulaşın."
+   },
+   {
+    "q": "Kaynaklar başka dillerde de mevcut mu?",
+    "a": "Temel kaynaklar Arapça ve kurucu pazarlarımızın diğer dillerinde sunulacak."
+   }
+  ],
+  "title": "Kaynaklar | Gıda Ticareti Analizleri, Raporlar ve Rehberler | T57",
+  "description": "Dijital gıda ticareti, gıda güvenliği, ticaret finansmanı ve yapay zekâ üzerine analizler, araştırmalar, haberler, videolar, etkinlikler ve sade dilde rehberler."
+ },
+ "res-blog": {
+  "route": "/tr/resources/blog",
+  "section": "resources",
+  "name": "Blog ve Analizler",
+  "h1": "Gıda ticareti yapanlar için pratik analizler.",
+  "answer": "Gıda ticareti, pazarlar ve teknoloji üzerine pratik analizler.",
+  "faqs": [
+   {
+    "q": "Ne sıklıkla yayın yapıyorsunuz?",
+    "a": "Ayda birkaç kez. T57 Insights Aralık 2025'ten bu yana 25 yazı yayımladı."
+   },
+   {
+    "q": "T57 Insights'ta kimler yazıyor?",
+    "a": "T57'nin kurucuları ve yönetim ekibi: Afzal Hussain Mohammed Nakheeb, Abdul Bari Kareem, Umme Habeeba Khanum, Mohammed Umair ve Dr. Moaz Abdullah Mohammed Mojaddidi."
+   },
+   {
+    "q": "T57 için yazabilir miyim?",
+    "a": "İş ortakları ve uzmanlar bir öneriyle ekibimize ulaşabilir."
+   }
+  ],
+  "title": "Blog ve Analizler | Gıda Ticareti, Pazarlar ve Yapay Zekâ | T57",
+  "description": "Gıda ticareti pazarları, koridorlar, ticaret finansmanı, uyum, yapay zekâ ve gıda güvenliği üzerine pratik yazılar.",
+  "parent": "resources"
+ },
+ "res-reports": {
+  "route": "/tr/resources/reports",
+  "section": "resources",
+  "name": "Raporlar ve Teknik Raporlar",
+  "h1": "Kaynak gösterebileceğiniz, doğrulanmış kaynaklara dayanan araştırmalar.",
+  "answer": "Gıda ticareti, finansman ve gıda güvenliği üzerine derinlemesine araştırmalar.",
+  "faqs": [
+   {
+    "q": "Raporlar ücretsiz mi?",
+    "a": "Evet. Bazıları e-posta adresinizi isteyebilir."
+   },
+   {
+    "q": "Kurumlar araştırma yaptırabilir mi?",
+    "a": "Evet, ekibimizle iletişime geçin."
+   }
+  ],
+  "title": "Raporlar ve Teknik Raporlar | Gıda Ticareti Araştırmaları | T57",
+  "description": "Gıda ticareti koridorları, KOBİ ticaret finansmanı, sorumlu yapay zekâ ve gıda güvenliği üzerine derinlemesine araştırmalar.",
+  "parent": "resources"
+ },
+ "res-newsroom": {
+  "route": "/tr/resources/newsroom",
+  "section": "resources",
+  "name": "Haber Merkezi",
+  "h1": "T57'den haberler, kayda geçmiş haliyle.",
+  "answer": "T57'den haberler, duyurular ve medya kaynakları.",
+  "faqs": [],
+  "title": "Basın Odası | T57 Haberleri ve Medya Kaynakları",
+  "description": "Gazeteciler için T57 duyuruları, iş ortaklıkları, etkinlikler ve medya kaynakları.",
+  "parent": "resources"
+ },
+ "res-videos": {
+  "route": "/tr/resources/videos",
+  "section": "resources",
+  "name": "Tanıtım Videoları",
+  "h1": "T57'nin nasıl çalıştığını birkaç dakikada görün.",
+  "answer": "Doğrulama, ticaret kaydı, emanet hesabı, akreditif ve sorumlu yapay zekâ üzerine kısa videolar.",
+  "faqs": [],
+  "title": "Tanıtım Videoları | T57 Nasıl Çalışır",
+  "description": "T57 ve dijital gıda ticareti üzerine kısa videolar: doğrulama, ticaret kaydı, emanet hesabı, akreditif ve sorumlu yapay zekâ.",
+  "parent": "resources"
+ },
+ "res-events": {
+  "route": "/tr/resources/events",
+  "section": "resources",
+  "name": "Web Seminerleri ve Etkinlikler",
+  "h1": "T57 ile tanışın, çevrim içi ve yüz yüze.",
+  "answer": "T57 ekipleriyle tanışabileceğiniz canlı web seminerleri, pazar brifingleri ve ticaret etkinlikleri.",
+  "faqs": [
+   {
+    "q": "Web seminerleri kaydediliyor mu?",
+    "a": "Evet, kayıtlar burada yayımlanır."
+   },
+   {
+    "q": "Bir etkinlikte görüşme ayarlayabilir miyim?",
+    "a": "Evet, etkinlik sayfası üzerinden."
+   }
+  ],
+  "title": "Web Seminerleri ve Etkinlikler | T57",
+  "description": "T57 ekipleriyle tanışabileceğiniz canlı web seminerleri, pazar brifingleri ve ticaret etkinlikleri.",
+  "parent": "resources"
+ },
+ "res-glossary": {
+  "route": "/tr/resources/faq-glossary",
+  "section": "resources",
+  "name": "SSS ve Sözlük",
+  "h1": "Gıda ticareti terimleri, sade dille açıklandı.",
+  "answer": "T57 hakkında ve emanet hesabından GTİP kodlarına kadar arkasındaki ticaret, finans ve teknoloji terimleri hakkında sade dilde yanıtlar.",
+  "faqs": [
+   {
+    "q": "T57 nedir?",
+    "a": "T57, gıda ekosisteminin tamamı için yapay zekâ temelli dijital ticaret altyapısıdır. Doğrulanmış üreticilerin, işleyicilerin, tüccarların ve alıcıların tek bir ortak kayıtta ticaret yaptığı, finansman, sigorta, lojistik ve gözetimin lisanslı iş ortaklarından sağlandığı, yalnızca üyelere açık bir ticaret kulübüdür."
+   },
+   {
+    "q": "T57 bir pazar yeri mi?",
+    "a": "Hayır. Açık bir pazar yerinde herkes ilan verebilir. T57'de ise her üye ticaret yapmadan önce doğrulanır, rolü kontrol edilir ve gösterilir."
+   },
+   {
+    "q": "T57 gıda alıp satıyor mu?",
+    "a": "Hayır. T57 mal sahibi olmaz, kredi vermez, müşteri fonu tutmaz ya da taşımacılık yapmaz. Üyeler birbirleriyle ticaret yapar, düzenlemeye tabi hizmetleri lisanslı iş ortakları sağlar."
+   },
+   {
+    "q": "T57 hangi ülkelerde faaliyet gösteriyor?",
+    "a": "Suudi Arabistan, BAE, Hindistan, Malezya ve Türkiye; ardından yeni pazarlar gelecek."
+   }
+  ],
+  "title": "SSS ve Sözlük | Gıda Ticareti Terimleri Açıklandı | T57",
+  "description": "T57 hakkında sade dilde yanıtlar ve emanet hesabı ile akreditiften KYB ve GTİP kodlarına kadar gıda ticareti, ticaret finansmanı ve teknoloji terimlerinin tanımları.",
+  "parent": "resources"
+ },
+ "help": {
+  "route": "/tr/help",
+  "section": "help",
+  "name": "Yardım Merkezi",
+  "h1": "İhtiyaç duyduğunuzda yardım, önemli olduğunda bir insan.",
+  "answer": "T57 ile ilgili yardımı ihtiyaç duyduğunuz her an alın.",
+  "faqs": [
+   {
+    "q": "Destek paketime dahil mi?",
+    "a": "Evet. Her paket yardım merkezini ve e-posta desteğini içerir; üst paketlere canlı sohbet, öncelikli destek ve özel müşteri temsilcisi eklenir."
+   },
+   {
+    "q": "Destek hangi dillerde sunuluyor?",
+    "a": "İngilizce, Arapça ve kurucu pazarlarımızın başlıca dilleri."
+   }
+  ],
+  "title": "Yardım Merkezi | T57 Destek, Rehberler ve SSS",
+  "description": "Kayıt ve doğrulamadan ödemelere ve sevkiyatlara kadar T57'de ticaret için rehberler, nasıl yapılır kılavuzları, SSS ve destek."
+ },
+ "help-contact": {
+  "route": "/tr/help/contact",
+  "section": "help",
+  "name": "Destekle İletişim",
+  "h1": "İhtiyaç duyduğunuzda bir insanla konuşun.",
+  "answer": "T57 desteğine sohbet, e-posta ya da Suudi Arabistan, BAE, Hindistan, Malezya veya Türkiye'deki yerel ekibiniz aracılığıyla ulaşın.",
+  "faqs": [],
+  "title": "Destekle İletişim | T57 Yardım Merkezi",
+  "description": "T57 desteğine sohbet, e-posta ya da Suudi Arabistan, BAE, Hindistan, Malezya veya Türkiye'deki yerel ülke ekibiniz aracılığıyla ulaşın.",
+  "parent": "help"
+ },
  "governments": {
   "route": "/tr/who-we-serve/governments",
   "section": "who-we-serve",
