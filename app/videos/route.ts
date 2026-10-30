@@ -1,6 +1,7 @@
 import { cookies, headers } from 'next/headers';
 import { cleared, failed, lockedFor } from '../../lib/decks';
-import { COOKIE, FEATURED, FILMS, codeMatches, configured, hasAccess, token, type Film } from '../../lib/videos';
+import { SITE } from '../../lib/site';
+import { COOKIE, FEATURED, FILMS, codeMatches, configured, hasAccess, pitchReady, token, type Film } from '../../lib/videos';
 
 // Investor videos: the film library for a visitor who has entered the access code, else the access-code page.
 // Not linked from the site and kept out of search; the private files are served by ./file/[name]/route.ts.
@@ -64,6 +65,29 @@ ${msg ? `<div class="msg" role="alert">${esc(msg)}</div>` : ''}
 <p class="conf">T57 · STRICTLY PRIVATE AND CONFIDENTIAL</p>`;
 }
 
+// The message T57 sends with the link. The access code is left out on purpose: it goes separately,
+// so a forwarded message alone does not open the page.
+const SHARE_TEXT = (pitch: boolean) => `T57 is building the AI-native trade system for food: one verified record from farm to buyer, with licensed finance partners, starting in five markets.\n\n${pitch ? 'Our three-minute investor pitch and short films are here.' : 'Our short investor films are here.'} The page is private; I will send you the access code separately.`;
+const SHARE_URL = `${SITE}/videos`;
+const SHARE_SUBJECT = 'T57 investor pitch: private videos';
+
+function share(pitch: boolean) {
+  const msg = `${SHARE_TEXT(pitch)}\n\n${SHARE_URL}`;
+  const wa = `https://wa.me/?text=${encodeURIComponent(msg)}`;
+  const mail = `mailto:?subject=${encodeURIComponent(SHARE_SUBJECT)}&body=${encodeURIComponent(msg)}`;
+  return `<section class="share" aria-labelledby="share-h">
+<div><h2 id="share-h">Share with an investor</h2><p>Sends the link with a short introduction. Send the access code separately.</p></div>
+<div class="share-btns">
+<a class="sb wa" href="${wa}" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>WhatsApp</a>
+<a class="sb" href="${mail}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
+<button class="sb" type="button" id="copy"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy link and message</span></button>
+</div>
+<script>(()=>{const b=document.getElementById('copy'),t=b.querySelector('span'),m=${JSON.stringify(msg).replace(/</g, '\\u003c')};
+b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(m)}catch(e){const a=document.createElement('textarea');a.value=m;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}
+t.textContent='Copied. Paste it anywhere';setTimeout(()=>t.textContent='Copy link and message',2500)})})()</script>
+</section>`;
+}
+
 const card = (f: Film) => `<article class="film">
 <video controls playsinline preload="none" poster="${f.poster}" aria-label="${esc(f.title)}"><source src="${f.src}" type="video/mp4"></video>
 <div class="meta"><h3>${esc(f.title)}</h3><span class="len">${f.length}</span></div>
@@ -72,12 +96,13 @@ const card = (f: Film) => `<article class="film">
 
 function library() {
   const f = FEATURED;
+  const pitch = pitchReady();
   return `<header class="top"><a href="/" aria-label="T57 home"><img src="/img/t57-logo-light.png" alt="T57" width="120" height="30"></a><span class="tag">${lock} Private · Investors only</span></header>
 <main class="lib">
 <p class="eyebrow">Investor videos</p>
 <h1>T57, in our own words</h1>
-<p class="lede">Start with the investor pitch. The shorter films below go deeper on the platform, the markets and how trades are financed.</p>
-<section class="featured" aria-labelledby="pitch">
+<p class="lede">${pitch ? 'Start with the investor pitch. The shorter films below go deeper on the platform, the markets and how trades are financed.' : 'Short films on the platform, the markets and how trades are financed. The investor pitch will be added here soon.'}</p>
+${pitch ? `<section class="featured" aria-labelledby="pitch">
 <video controls playsinline preload="metadata" poster="${f.poster}" controlslist="nodownload" oncontextmenu="return false"><source src="${f.src}" type="video/mp4"></video>
 <div class="about">
 <span class="badge">Investor pitch · ${f.length}</span>
@@ -86,7 +111,8 @@ function library() {
 <p class="note">${esc(f.note!)}</p>
 <a class="cta" href="mailto:afzal@t57.ai?subject=T57%20investor%20pitch">Talk to the founder</a>
 </div>
-</section>
+</section>` : ''}
+${share(pitch)}
 <h2 class="more">More films</h2>
 <div class="grid">${FILMS.map(card).join('\n')}</div>
 <p class="foot">Questions? Write to <a href="mailto:afzal@t57.ai">afzal@t57.ai</a> or call <a href="tel:+966569712222">+966 56 971 22 22</a>.</p>
@@ -104,6 +130,13 @@ function page(body: string) {
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0b1340">
 <title>T57 · Investor videos</title>
+<meta name="description" content="T57's three-minute investor pitch and short films. Private: access code required.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="${SHARE_URL}">
+<meta property="og:title" content="T57 · Investor videos">
+<meta property="og:description" content="Our three-minute investor pitch and short films. Private: access code required.">
+<meta property="og:image" content="${SITE}/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
 <style>
@@ -157,6 +190,14 @@ video{display:block;width:100%;aspect-ratio:16/9;border-radius:12px;background:#
 .film h3{margin:0;font-size:18px;line-height:1.3}
 .film .len{flex:none;font-size:13px;color:var(--cyan)}
 .film p{margin:0 4px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.75)}
+.share{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;margin-top:24px;padding:22px 24px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16)}
+.share h2{margin:0 0 4px;font-size:20px}
+.share p{font-size:14px;color:rgba(255,255,255,.7)}
+.share-btns{display:flex;flex-wrap:wrap;gap:10px}
+.sb{display:inline-flex;align-items:center;gap:8px;height:44px;margin:0;padding:0 18px;border-radius:10px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font:500 15px/1 Roboto,system-ui,sans-serif;cursor:pointer;text-decoration:none}
+.sb:hover{background:rgba(255,255,255,.16);border-color:#fff;text-decoration:none}
+.sb.wa{background:#25d366;border-color:#25d366;color:#0b1340}
+.sb.wa:hover{background:#3be37a}
 .foot{margin-top:48px;font-size:14px;color:rgba(255,255,255,.65)}
 @media (max-width:820px){.featured{grid-template-columns:1fr}.tag{font-size:12px}}
 </style>

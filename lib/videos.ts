@@ -39,10 +39,14 @@ const key = () => {
   const k = Buffer.from(process.env.VIDEO_KEY || '', 'base64');
   return k.length === 32 ? k : null;
 };
-export const configured = () => Boolean(key() && process.env.VIDEO_ACCESS_CODE);
+// The page opens with the code alone; the private pitch also needs VIDEO_KEY, and is left off the page until it is set.
+export const configured = () => Boolean(process.env.VIDEO_ACCESS_CODE);
+export const pitchReady = () => Boolean(key());
 
 // The cookie proves the visitor entered the current code, without holding the code itself.
-export const token = () => crypto.createHmac('sha256', key()!).update(`videos:${process.env.VIDEO_ACCESS_CODE}`).digest('base64url');
+// Without VIDEO_KEY it is signed with a hash of the code, which only guards the public films.
+const signer = () => key() || crypto.createHash('sha256').update(`t57-videos:${process.env.VIDEO_ACCESS_CODE}`).digest();
+export const token = () => crypto.createHmac('sha256', signer()).update(`videos:${process.env.VIDEO_ACCESS_CODE}`).digest('base64url');
 
 const same = (a: string, b: string) => {
   const x = Buffer.from(a), y = Buffer.from(b);

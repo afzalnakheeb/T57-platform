@@ -1,5 +1,5 @@
 import { cookies } from 'next/headers';
-import { COOKIE, PRIVATE_FILES, fileSize, hasAccess, readRange } from '../../../../lib/videos';
+import { COOKIE, PRIVATE_FILES, fileSize, hasAccess, pitchReady, readRange } from '../../../../lib/videos';
 
 // One private video file, decrypted for a visitor who has entered the access code at /videos.
 // Answers byte ranges so the player can stream and seek; each answer is capped to stay under the
@@ -12,7 +12,7 @@ const CHUNK = 3 * 1024 * 1024;
 
 export function GET(req: Request, { params }: Ctx) {
   const type = PRIVATE_FILES[params.name];
-  if (!type || !hasAccess(cookies().get(COOKIE)?.value)) return new Response('Not found', { status: 404, headers: PRIVATE });
+  if (!type || !pitchReady() || !hasAccess(cookies().get(COOKIE)?.value)) return new Response('Not found', { status: 404, headers: PRIVATE });
   const size = fileSize(params.name);
   const m = /^bytes=(\d*)-(\d*)$/.exec(req.headers.get('range') || '');
   if (!m && size <= CHUNK) {
