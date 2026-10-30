@@ -139,7 +139,7 @@
  "market-intelligence": {
   "route": "/ms/why-t57/market-intelligence",
   "section": "why-t57",
-  "name": "Risikan Pasaran & Harga",
+  "name": "Analisis Pasaran & Harga",
   "h1": "Lihat pasaran sebelum anda bertindak.",
   "answer": "Lihat harga, bekalan dan risiko mengikut asal usul sebelum anda memberi sebut harga, membeli atau merancang.",
   "faqs": [
@@ -149,10 +149,10 @@
    },
    {
     "q": "Bolehkah saya menggunakan data tanpa berdagang di T57?",
-    "a": "Risikan pasaran adalah sebahagian daripada keahlian T57 dan dibina untuk menyokong dagangan di platform."
+    "a": "Analisis pasaran adalah sebahagian daripada keahlian T57 dan dibina untuk menyokong dagangan di platform."
    }
   ],
-  "title": "Risikan Pasaran & Harga Makanan | T57",
+  "title": "Analisis Pasaran & Harga Makanan | T57",
   "description": "Harga makanan, status bekalan mengikut asal usul dan ramalan AI dalam aliran kerja dagangan anda. Beri sebut harga, beli dan rancang dengan gambaran penuh di T57.",
   "parent": "why-t57"
  },
@@ -221,7 +221,7 @@
   "section": "why-t57",
   "name": "Pembayaran Eskrow",
   "h1": "Wang anda bergerak hanya apabila barang bergerak.",
-  "answer": "Wang anda bergerak hanya apabila barang bergerak, dengan eskrow dilepaskan pada pencapaian yang dipersetujui.",
+  "answer": "Wang anda bergerak hanya apabila barang bergerak, dengan eskrow dilepaskan pada peringkat yang dipersetujui.",
   "faqs": [
    {
     "q": "Siapa yang memegang wang dalam eskrow?",
@@ -233,7 +233,7 @@
    }
   ],
   "title": "Bayaran Eskrow untuk Dagangan Makanan | T57",
-  "description": "Pembeli membayar ke dalam eskrow pada rakan kongsi berlesen, dan dana dilepaskan hanya apabila pencapaian pemeriksaan, penghantaran atau penerimaan dipenuhi di T57.",
+  "description": "Pembeli membayar ke dalam eskrow pada rakan kongsi berlesen, dan dana dilepaskan hanya apabila peringkat pemeriksaan, penghantaran atau penerimaan dipenuhi di T57.",
   "parent": "why-t57"
  },
  "alternative-payments": {
@@ -281,7 +281,7 @@
   "section": "why-t57",
   "name": "Pengurusan Dokumen & Jejak Audit",
   "h1": "Setiap dokumen dagangan, dalam satu rekod.",
-  "answer": "Setiap dokumen, kelulusan dan pencapaian sesuatu dagangan, dalam satu rekod yang menunjukkan sebarang usikan.",
+  "answer": "Setiap dokumen, kelulusan dan peringkat sesuatu dagangan, dalam satu rekod yang menunjukkan sebarang usikan.",
   "faqs": [
    {
     "q": "Siapa yang boleh melihat dokumen dagangan saya?",
@@ -317,7 +317,7 @@
    }
   ],
   "title": "Penyelesaian T57 | Setiap Langkah Dagangan, Satu Rekod",
-  "description": "RFQ, kontrak, pembiayaan perdagangan, eskrow, eLC, insurans, logistik, kastam dan risikan harga untuk perdagangan makanan, disambungkan dalam satu rekod dagangan T57."
+  "description": "RFQ, kontrak, pembiayaan perdagangan, eskrow, eLC, insurans, logistik, kastam dan analisis harga untuk perdagangan makanan, disambungkan dalam satu rekod dagangan T57."
  },
  "cap-trade": {
   "route": "/ms/capabilities/trade",
@@ -412,7 +412,7 @@
    }
   ],
   "title": "Platform Pertanian Kontrak | Kontrak Hadapan untuk Makanan | T57",
-  "description": "Perjanjian hadapan, piawaian kualiti, pembiayaan input dan bayaran berasaskan pencapaian antara pembeli, petani dan koperasi dalam satu rekod T57.",
+  "description": "Perjanjian hadapan, piawaian kualiti, pembiayaan input dan bayaran berperingkat antara pembeli, petani dan koperasi dalam satu rekod T57.",
   "parent": "cap-trade"
  },
  "cap-tenders": {
@@ -508,7 +508,7 @@
    }
   ],
   "title": "Kepercayaan & Pembayaran: Eskrow, Dompet, eLC | T57",
-  "description": "Eskrow, dompet dalam apa jua mata wang dan surat kredit elektronik daripada rakan kongsi berlesen, diikat pada pencapaian dalam satu rekod dagangan T57 yang disahkan.",
+  "description": "Eskrow, dompet dalam apa jua mata wang dan surat kredit elektronik daripada rakan kongsi berlesen, diikat pada peringkat dalam satu rekod dagangan T57 yang disahkan.",
   "parent": "capabilities"
  },
  "cap-escrow": {
@@ -840,7 +840,7 @@
    },
    {
     "q": "Bolehkah penjejakan mencetuskan bayaran?",
-    "a": "Boleh. Pencapaian yang dipersetujui, seperti ketibaan atau pengesahan penerimaan, boleh melepaskan bayaran eskrow secara automatik."
+    "a": "Boleh. Peringkat yang dipersetujui, seperti ketibaan atau pengesahan penerimaan, boleh melepaskan bayaran eskrow secara automatik."
    }
   ],
   "title": "Penjejakan Penghantaran & Rantaian Sejuk | T57",
@@ -874,7 +874,7 @@
  "cap-intelligence": {
   "route": "/ms/capabilities/intelligence",
   "section": "capabilities",
-  "name": "Risikan & Data",
+  "name": "Analisis & Data",
   "h1": "Berdagang dengan gambaran penuh.",
   "answer": "Berdagang dengan gambaran penuh: harga, bekalan, rakan dagang dan pasaran, dalam setiap urus niaga.",
   "faqs": [
@@ -887,11 +887,11 @@
     "a": "Tidak. Dagangan individu tidak pernah dipaparkan. Ia hanya menyumbang kepada statistik yang dianonimkan dan diagregat."
    },
    {
-    "q": "Adakah risikan termasuk dalam keahlian?",
-    "a": "Risikan teras disertakan. Peringkat keahlian yang lebih tinggi menawarkan data lebih mendalam, laporan kredit dan ramalan."
+    "q": "Adakah analisis termasuk dalam keahlian?",
+    "a": "Analisis teras disertakan. Peringkat keahlian yang lebih tinggi menawarkan data lebih mendalam, laporan kredit dan ramalan."
    }
   ],
-  "title": "Risikan Perdagangan Makanan | Harga, Ramalan, Kredit | T57",
+  "title": "Analisis Perdagangan Makanan | Harga, Ramalan, Kredit | T57",
   "description": "Indeks harga makanan, ramalan bekalan dan permintaan, sokongan rundingan AI, laporan kredit dan data dagangan pelabuhan, terbina dalam perdagangan makanan di T57.",
   "parent": "capabilities"
  },
@@ -1424,7 +1424,7 @@
     "a": "Boleh. Setiap keputusan negatif disertakan sebab dan saluran untuk membantahnya, dan manusia akan menyemaknya."
    }
   ],
-  "title": "Lapisan Risikan T57 | AI Tempatan untuk Dagangan Makanan",
+  "title": "Lapisan Kecerdasan T57 | AI Tempatan untuk Dagangan Makanan",
   "description": "Model AI tempatan yang kecil, dilatih dengan data dagangan disahkan dan pengetahuan petani dengan persetujuan, dan setiap keputusan negatif disemak manusia.",
   "parent": "platform"
  },
@@ -1433,7 +1433,7 @@
   "section": "platform",
   "name": "Lapisan Blockchain & Kontrak Pintar",
   "h1": "Rekod yang menunjukkan sebarang perubahan. Bayaran yang mengikut bukti.",
-  "answer": "Rekod yang menunjukkan sebarang usikan, dokumen bertoken dan bayaran mengikut pencapaian yang boleh dipercayai setiap pihak.",
+  "answer": "Rekod yang menunjukkan sebarang usikan, dokumen bertoken dan bayaran mengikut peringkat yang boleh dipercayai setiap pihak.",
   "faqs": [
    {
     "q": "Adakah data dagangan saya terbuka kepada umum di blockchain?",
@@ -1444,12 +1444,12 @@
     "a": "Tidak. Lapisan blockchain berfungsi di latar belakang. Ahli membayar dan dibayar dalam mata wang biasa melalui rakan kongsi berlesen, melainkan mereka memilih pembayaran alternatif jika dibenarkan undang-undang."
    },
    {
-    "q": "Apakah yang berlaku jika sesuatu pencapaian dipertikaikan?",
+    "q": "Apakah yang berlaku jika sesuatu peringkat dipertikaikan?",
     "a": "Kontrak pintar menangguhkan pelepasan, dan pertikaian dikendalikan mengikut kontrak serta peraturan rakan kongsi."
    }
   ],
   "title": "Blockchain & Kontrak Pintar untuk Perdagangan Makanan | T57",
-  "description": "Pengikatan rekod yang menunjukkan sebarang usikan, dokumen dagangan bertoken dan bayaran pencapaian kontrak pintar, dengan privasi dan rakan kongsi berlesen, di T57.",
+  "description": "Pengikatan rekod yang menunjukkan sebarang usikan, dokumen dagangan bertoken dan bayaran peringkat kontrak pintar, dengan privasi dan rakan kongsi berlesen, di T57.",
   "parent": "platform"
  },
  "platform-security": {
@@ -1907,7 +1907,7 @@
    }
   ],
   "title": "Ciri T57 di Arab Saudi | Dagangan, Pembiayaan, Logistik",
-  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di Arab Saudi.",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan analisis AI untuk perniagaan makanan di Arab Saudi.",
   "parent": "mkt-sa-overview"
  },
  "mkt-sa-compliance": {
@@ -2003,7 +2003,7 @@
    }
   ],
   "title": "Ciri T57 di UAE | Dagangan, Pembiayaan, Logistik",
-  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di UAE.",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan analisis AI untuk perniagaan makanan di UAE.",
   "parent": "mkt-uae-overview"
  },
  "mkt-uae-compliance": {
@@ -2099,7 +2099,7 @@
    }
   ],
   "title": "Ciri T57 di India | Dagangan, Pembiayaan, Logistik",
-  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di India.",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan analisis AI untuk perniagaan makanan di India.",
   "parent": "mkt-in-overview"
  },
  "mkt-in-compliance": {
@@ -2195,7 +2195,7 @@
    }
   ],
   "title": "Ciri T57 di Malaysia | Dagangan, Pembiayaan, Logistik",
-  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di Malaysia.",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan analisis AI untuk perniagaan makanan di Malaysia.",
   "parent": "mkt-my-overview"
  },
  "mkt-my-compliance": {
@@ -2291,7 +2291,7 @@
    }
   ],
   "title": "Ciri T57 di Türkiye | Dagangan, Pembiayaan, Logistik",
-  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di Türkiye.",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan analisis AI untuk perniagaan makanan di Türkiye.",
   "parent": "mkt-tr-overview"
  },
  "mkt-tr-compliance": {
@@ -2382,7 +2382,7 @@
    },
    {
     "q": "Apakah yang termasuk dalam percubaan percuma?",
-    "a": "Anda boleh membina profil, meneroka ahli yang disahkan dan risikan pasaran, menggunakan alat AI dan menghantar permintaan sebut harga. Pengesahan, kontrak, eskrow dan pembiayaan bermula apabila anda melanggan, kerana pengesahan melibatkan semakan sebenar oleh pasukan dan rakan kongsi kami. Ahli pengasas menikmati 90 hari percuma semasa pelancaran."
+    "a": "Anda boleh membina profil, meneroka ahli yang disahkan dan analisis pasaran, menggunakan alat AI dan menghantar permintaan sebut harga. Pengesahan, kontrak, eskrow dan pembiayaan bermula apabila anda melanggan, kerana pengesahan melibatkan semakan sebenar oleh pasukan dan rakan kongsi kami. Ahli pengasas menikmati 90 hari percuma semasa pelancaran."
    },
    {
     "q": "Bolehkah saya menukar pelan?",
@@ -2629,10 +2629,10 @@
   "section": "help",
   "name": "Panduan Penggunaan Platform",
   "h1": "Cara melakukan segala-galanya di T57.",
-  "answer": "Panduan untuk sebut harga, kontrak, dokumen, eskrow, surat kredit, pembiayaan, logistik, tetapan pasukan dan risikan pasaran.",
+  "answer": "Panduan untuk sebut harga, kontrak, dokumen, eskrow, surat kredit, pembiayaan, logistik, tetapan pasukan dan analisis pasaran.",
   "faqs": [],
   "title": "Cara-cara Platform | Pusat Bantuan T57",
-  "description": "Cara berdagang di T57: sebut harga, kontrak, dokumen, eskrow, surat kredit, pembiayaan, logistik, tetapan pasukan dan risikan pasaran.",
+  "description": "Cara berdagang di T57: sebut harga, kontrak, dokumen, eskrow, surat kredit, pembiayaan, logistik, tetapan pasukan dan analisis pasaran.",
   "parent": "help"
  },
  "help-faq": {
@@ -2648,7 +2648,7 @@
    },
    {
     "q": "Bolehkah saya berdagang semasa percubaan percuma?",
-    "a": "Anda boleh meneroka ahli, risikan dan alat AI, serta menghantar permintaan sebut harga. Kontrak, eskrow dan pembiayaan bermula sebaik sahaja anda melanggan dan disahkan."
+    "a": "Anda boleh meneroka ahli, analisis dan alat AI, serta menghantar permintaan sebut harga. Kontrak, eskrow dan pembiayaan bermula sebaik sahaja anda melanggan dan disahkan."
    },
    {
     "q": "Bagaimana saya membatalkan atau menukar pelan?",
@@ -3057,7 +3057,7 @@
   "faqs": [
    {
     "q": "Bagaimanakah T57 menyokong strategi sekuriti makanan nasional dan serantau secara praktikal?",
-    "a": "Banyak negara kini memperluas rizab strategik dan kapasiti silo untuk menyimpan bekalan komoditi penting bagi tempoh beberapa bulan. T57 melengkapi infrastruktur fizikal ini dengan menjejaki tahap sara diri, paras stok dan pendedahan import secara masa nyata. Gabungan rizab fizikal dan risikan digital ini membantu kerajaan beralih daripada pengurusan sekuriti makanan yang reaktif kepada yang bersifat jangkaan."
+    "a": "Banyak negara kini memperluas rizab strategik dan kapasiti silo untuk menyimpan bekalan komoditi penting bagi tempoh beberapa bulan. T57 melengkapi infrastruktur fizikal ini dengan menjejaki tahap sara diri, paras stok dan pendedahan import secara masa nyata. Gabungan rizab fizikal dan analisis digital ini membantu kerajaan beralih daripada pengurusan sekuriti makanan yang reaktif kepada yang bersifat jangkaan."
    },
    {
     "q": "Mengapa penting untuk menyalurkan modal swasta dan modal impak ke dalam sektor pertanian dan sistem makanan, selain bajet awam?",
@@ -3116,8 +3116,8 @@
     "a": "Eksport makanan tertakluk kepada rejim pemeriksaan dan pensijilan yang ketat di negara pengimport. Pensijilan yang tidak lengkap atau salah boleh menyebabkan penolakan atau ketidakpatuhan di sempadan. Sistem yang memusatkan dokumen, memautkannya kepada lot dan penghantaran, serta mengesahkan pensijilan dapat mengurangkan risiko penolakan dan kelewatan yang mahal."
    },
    {
-    "q": "Bolehkah risikan yang lebih baik benar-benar membantu dalam pasaran eksport yang tidak menentu?",
-    "a": "Harga pertanian kekal terdedah kepada cuaca ekstrem, perubahan dasar biobahan api dan halangan perdagangan yang semakin meningkat. Pengeksport yang menggunakan risikan pasaran, tanaman dan harga yang berstruktur lebih mampu menyesuaikan sumber bekalan dan harga untuk melindungi margin."
+    "q": "Bolehkah analisis yang lebih baik benar-benar membantu dalam pasaran eksport yang tidak menentu?",
+    "a": "Harga pertanian kekal terdedah kepada cuaca ekstrem, perubahan dasar biobahan api dan halangan perdagangan yang semakin meningkat. Pengeksport yang menggunakan analisis pasaran, tanaman dan harga yang berstruktur lebih mampu menyesuaikan sumber bekalan dan harga untuk melindungi margin."
    }
   ],
   "title": "T57 untuk Penjual & Pengeksport Makanan",
@@ -3336,8 +3336,8 @@
     "a": "Bank Dunia menyatakan bahawa pembiayaan pertanian masih sangat terhad di banyak pasaran membangun disebabkan risiko, kos transaksi dan kesukaran melayani peminjam luar bandar yang berselerak. Oleh itu, model pembiayaan yang berkait dengan dagangan dan didayakan secara digital amat penting bagi pengeluar yang memerlukan modal kerja berasaskan pesanan sebenar."
    },
    {
-    "q": "Adakah risikan harga benar-benar penting di peringkat ladang?",
-    "a": "Ya. Apabila pengeluar tidak dapat melihat permintaan dan harga, mereka berunding dari kedudukan yang lebih lemah dan sering terlalu bergantung pada orang tengah. Model teras T57 menangani perkara ini secara langsung dengan meningkatkan akses kepada risikan pasaran dan harga."
+    "q": "Adakah analisis harga benar-benar penting di peringkat ladang?",
+    "a": "Ya. Apabila pengeluar tidak dapat melihat permintaan dan harga, mereka berunding dari kedudukan yang lebih lemah dan sering terlalu bergantung pada orang tengah. Model teras T57 menangani perkara ini secara langsung dengan meningkatkan akses kepada analisis pasaran dan harga."
    }
   ],
   "title": "T57 untuk Petani & Pengeluar | Akses Pasaran dan Alat AI",
@@ -3569,7 +3569,7 @@
   "section": "resources",
   "name": "Perubahan Struktur yang Akan Mentakrif Semula Pertanian Turki pada 2026",
   "h1": "Perubahan Struktur yang Akan Mentakrif Semula Pertanian Turki pada 2026",
-  "answer": "Tekanan terhadap sektor pertanian Türkiye, dan di mana risikan pasaran membantu.",
+  "answer": "Tekanan terhadap sektor pertanian Türkiye, dan di mana analisis pasaran membantu.",
   "faqs": [],
   "title": "Peralihan yang Mentakrif Semula Pertanian Turki 2026 | T57",
   "description": "Lima Peralihan Struktur yang Akan Mentakrif Semula Pertanian Turki pada 2026",
