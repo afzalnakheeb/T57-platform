@@ -4,6 +4,10 @@
 @font-face { font-family:Roboto; font-style:normal; font-weight:700; font-display:swap; src:url(/fonts/roboto-700.woff2) format('woff2'); }
 @font-face { font-family:"Noto Kufi Arabic"; font-style:normal; font-weight:500 700; font-display:swap; src:url(/fonts/noto-kufi-arabic.woff2) format('woff2'); unicode-range:U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
 @font-face { font-family:Rubik; font-style:normal; font-weight:300 700; font-display:swap; src:url(/fonts/rubik-arabic.woff2) format('woff2'); unicode-range:U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family:"Poppins Devanagari"; font-style:normal; font-weight:500; font-display:swap; src:url(/fonts/poppins-devanagari-500.woff2) format('woff2'); unicode-range:U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+@font-face { font-family:"Poppins Devanagari"; font-style:normal; font-weight:600; font-display:swap; src:url(/fonts/poppins-devanagari-600.woff2) format('woff2'); unicode-range:U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+@font-face { font-family:"Poppins Devanagari"; font-style:normal; font-weight:700; font-display:swap; src:url(/fonts/poppins-devanagari-700.woff2) format('woff2'); unicode-range:U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+@font-face { font-family:"Noto Sans Devanagari"; font-style:normal; font-weight:300 700; font-display:swap; src:url(/fonts/noto-sans-devanagari.woff2) format('woff2'); unicode-range:U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF; }
 /* Layout: white header, a full-bleed living scene per world, then calm light chapters. One look, committed (light chrome, night heroes). */
 :root {
   --electric-green:#008b8c; --persian-indigo:#2f2e7d; --imperial-blue:#02246c; --electric-sapphire:#5b5fef;
@@ -253,8 +257,29 @@ body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-
 /* Site search: a small icon in the header opens a panel that searches every page */
 .lang-sw { display:inline-flex; align-items:center; min-height:44px; padding:0 12px; flex:none; border-radius:8px; border:1.5px solid var(--line); background:#fff; color:var(--ink-strong); text-decoration:none; font:500 15px/20px var(--font-text); }
 .lang-sw:hover, .lang-sw:focus-visible { border-color:var(--persian-blue); }
-.lang-sw .ls-s { display:none; }
-@media (max-width: 640px) { .lang-sw { padding:0 10px; } .lang-sw .ls-l { display:none; } .lang-sw .ls-s { display:inline; } .hdr-in { column-gap:8px; } }
+.lang-sw { position:relative; } .lang-sw .ls-s { display:none; }
+.langs { display:flex; gap:6px; flex:none; }
+/* Narrow headers show each language by its short name; the full name stays readable to screen readers */
+@media (max-width: 1500px) { .lang-sw .ls-l { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; } .lang-sw .ls-s { display:inline; } }
+@media (max-width: 640px) { .lang-sw { padding:0 10px; } .langs { gap:4px; } .hdr-in { column-gap:8px; } }
+/* Small phones: the menu button shows its icon only, so the header stays on one row with three languages */
+@media (max-width: 440px) { .hdr .hdr-in { column-gap:8px; } .lang-sw { padding:0 8px; } .menu-btn .mb-l { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; } .menu-btn { padding:0 12px; } }
+/* four languages: keep logo, switch, search and menu on one row down to 360px */
+@media (max-width: 440px) { .hdr .hdr-in { column-gap:6px; } .langs { gap:2px; } .lang-sw { padding:0 6px; } .menu-btn { padding:0 10px; } }
+@media (max-width: 380px) { .hdr .logo { height:22px; } }
+/* Five languages: on phones the switch folds into one globe button with the current language, opening a short list. */
+.lang-btn { display:none; align-items:center; gap:6px; min-height:44px; padding:0 10px; flex:none; border-radius:8px; border:1.5px solid var(--line); background:#fff; color:var(--ink-strong); font:500 15px/20px var(--font-text); cursor:pointer; }
+.lang-btn svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.8; }
+.lang-btn::after { content:"EN"; } html[lang=ar] .lang-btn::after { content:"عربي"; } html[lang=ms] .lang-btn::after { content:"BM"; } html[lang=tr] .lang-btn::after { content:"TR"; } html[lang=hi] .lang-btn::after { content:"हिं"; }
+.lang-btn:hover, .lang-btn:focus-visible, .lang-btn[aria-expanded=true] { border-color:var(--persian-blue); }
+@media (max-width: 640px) {
+  .hdr-in .lang-btn { display:inline-flex; margin-inline-start:auto; } .hdr-in .lang-btn ~ .srch-btn { margin-inline-start:0; }
+  .hdr-in .langs { display:none; position:absolute; top:calc(100% - 4px); inset-inline-end:16px; z-index:35; flex-direction:column; gap:4px; min-width:200px; padding:8px; margin:0; background:#fff; border:1px solid var(--line); border-radius:12px; box-shadow:0 12px 32px #0b134026; }
+  .hdr.langs-open .langs { display:flex; }
+  .hdr-in .langs .lang-sw { border-color:transparent; padding:0 12px; }
+  .hdr-in .langs .lang-sw:hover, .hdr-in .langs .lang-sw:focus-visible { border-color:var(--persian-blue); }
+  .hdr-in .langs .lang-sw .ls-l { position:static; width:auto; height:auto; overflow:visible; clip:auto; } .hdr-in .langs .lang-sw .ls-s { display:none; }
+}
 .srch-btn { display:inline-grid; place-items:center; width:44px; height:44px; flex:none; border-radius:8px; border:1.5px solid var(--line); background:#fff; color:var(--ink-strong); cursor:pointer; }
 .srch-btn svg { width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; }
 .srch-btn:hover, .srch-btn:focus-visible { border-color:var(--persian-blue); }
@@ -277,7 +302,7 @@ body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-
 .srch-res a mark { background:color-mix(in srgb, var(--strong-cyan) 28%, transparent); color:inherit; border-radius:3px; }
 .srch-res [aria-selected="true"] a, .srch-res a:hover { background:var(--surface-alt); }
 .srch-none { margin:8px 20px 20px; font-size:15px; }
-@media (max-width: 900px) { .hdr-in .lang-sw { margin-inline-start:auto; } .hdr-in .lang-sw ~ .srch-btn { margin-inline-start:0; } .hdr-in .srch-btn { margin-inline-start:auto; } .hdr-in .srch-btn ~ .menu-btn { margin-inline-start:0; } }
+@media (max-width: 900px) { .hdr-in .langs { margin-inline-start:auto; } .hdr-in .langs ~ .srch-btn { margin-inline-start:0; } .hdr-in .srch-btn { margin-inline-start:auto; } .hdr-in .srch-btn ~ .menu-btn { margin-inline-start:0; } }
 @media (max-width: 640px) { .srch { margin-top:16px; max-height:calc(100vh - 32px); } .srch-f input { font-size:17px; } .srch-x { padding:6px 8px; } .srch-x kbd { display:none; } }
 @media (prefers-reduced-motion: reduce) { .srch[open] { animation:none; } }
 
@@ -1393,6 +1418,13 @@ a.jr-art b { color:var(--ink-strong); }
 @media (max-width:1020px) { .post-in { grid-template-columns:minmax(0, 720px); } .post-side { position:static; grid-template-columns:1fr; } }
 @media (max-width:640px) { .post-body { font-size:17px; } .post-body > p:first-child { font-size:19px; } .post-cover img { border-radius:12px; } .post-facts { flex-wrap:wrap; } }
 
+/* Hindi: Devanagari companions to the brand typefaces (Poppins Devanagari, geometric like Gilroy, for headings;
+   Noto Sans Devanagari, drawn to sit with Roboto, for text). Latin letters and figures keep the brand fonts.
+   Devanagari needs room above and below the line for its vowel signs, and letter-spacing breaks its conjuncts. */
+html[lang=hi], .lang-hi { --font-display:Gilroy, "Poppins Devanagari", Roboto, system-ui, sans-serif; --font-text:Gilroy, "Noto Sans Devanagari", Roboto, system-ui, sans-serif; }
+.lang-hi * { letter-spacing:0 !important; }
+.lang-hi h1, .lang-hi h2, .lang-hi h3, .lang-hi .hero h1, .lang-hi .arr-h { line-height:1.32; }
+.lang-hi .h2, .lang-hi .lede, .lang-hi p, .lang-hi li { line-height:1.7; }
 /* Arabic: brand Arabic typefaces (Noto Kufi Arabic for headings, Rubik for text), no letter-spacing or
    capitals (they break joined Arabic script), and mirrored layout where physical sides are used. */
 html[lang=ar], .lang-ar { --font-display:"Noto Kufi Arabic", Gilroy, Roboto, system-ui, sans-serif; --font-text:Rubik, Gilroy, Roboto, system-ui, sans-serif; }

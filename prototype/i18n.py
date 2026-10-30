@@ -88,7 +88,7 @@ def extract(src):
 def apply(src, tr, missing=None, loose_pass=True):
     spans = [(a, b, t, False) for a, b, t in units(src)] + [(a, b, t, True) for a, b, t in attr_units(src)]
     spans.sort(key=lambda x: x[0])
-    out, pos = [], 0
+    out, pos, done = [], 0, []
     for a, b, t, is_attr in spans:
         if a < pos: continue
         k = norm(t); v = tr.get(k)
@@ -97,8 +97,11 @@ def apply(src, tr, missing=None, loose_pass=True):
             continue
         if is_attr: v = v.replace('"', '&quot;')
         lead = t[:len(t) - len(t.lstrip())]; trail = t[len(t.rstrip()):]
-        out.append(src[pos:a]); out.append(lead + v + trail); pos = b
+        out.append(src[pos:a]); done.append(v); out.append(f'{lead}\x01{len(done) - 1}\x02{trail}'); pos = b
     out.append(src[pos:])
+    # translated units are held as placeholders during the loose pass, so text in a Latin-script language
+    # is never mistaken for English left untranslated
+    put = lambda s: re.sub(r'\x01(\d+)\x02', lambda m: done[int(m.group(1))], s)
     if loose_pass:
         res, out, pos = ''.join(out), [], 0
         for a, b, t in loose(res):
@@ -108,4 +111,4 @@ def apply(src, tr, missing=None, loose_pass=True):
                 continue
             out.append(res[pos:a]); out.append(t[:len(t) - len(t.lstrip())] + v + t[len(t.rstrip()):]); pos = b
         out.append(res[pos:])
-    return ''.join(out)
+    return put(''.join(out))

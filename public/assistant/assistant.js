@@ -3,13 +3,32 @@
 (() => {
   if (window.__t57ai || location.pathname.startsWith('/decks')) return;
   window.__t57ai = true;
-  const ar = document.documentElement.lang === 'ar' || location.pathname === '/ar' || location.pathname.startsWith('/ar/');
+  const at = l => document.documentElement.lang === l || location.pathname === '/' + l || location.pathname.startsWith('/' + l + '/');
+  const ar = at('ar'), ms = !ar && at('ms'), trk = !ar && !ms && at('tr'), hi = !ar && !ms && !trk && at('hi'), lang = ar ? 'ar' : ms ? 'ms' : trk ? 'tr' : hi ? 'hi' : 'en';
   const L = ar ? {
     open: 'اسأل T57 AI', title: 'T57 AI', sub: 'إجابات من صفحات t57.ai', close: 'إغلاق', reset: 'محادثة جديدة',
     hello: 'مرحبًا بك. اسألني عن T57: العضوية والأسعار، والتمويل والضمان عبر الشركاء، والأسواق، وكيف يعمل سجل التجارة الموحّد.',
     ph: 'اكتب سؤالك…', send: 'إرسال', note: 'قد يخطئ الذكاء الاصطناعي. للتفاصيل المهمة راسلنا على hello@t57.ai',
     err: 'تعذّر الاتصال الآن. حاول مرة أخرى أو راسلنا على hello@t57.ai.', thinking: 'يكتب…',
     ask: ['ما هي T57؟', 'كيف أنضم وكم التكلفة؟', 'كيف يتم التمويل والضمان؟', 'ما الأسواق التي تغطيها T57؟'],
+  } : hi ? {
+    open: 'T57 AI से पूछें', title: 'T57 AI', sub: 't57.ai के पेजों से जवाब', close: 'बंद करें', reset: 'नई बातचीत',
+    hello: 'नमस्ते। T57 के बारे में कुछ भी पूछिए: सदस्यता और कीमतें, पार्टनरों के ज़रिए फ़ाइनेंस और एस्क्रो, हमारे बाज़ार, या एक ट्रेड रिकॉर्ड कैसे काम करता है।',
+    ph: 'अपना सवाल लिखें…', send: 'भेजें', note: 'AI से गलती हो सकती है। ज़रूरी बातों के लिए hello@t57.ai पर लिखें।',
+    err: 'T57 AI अभी जवाब नहीं दे पा रहा है। कृपया फिर कोशिश करें या hello@t57.ai पर लिखें।', thinking: 'लिख रहा है…',
+    ask: ['T57 क्या है?', 'मैं कैसे जुड़ूँ और इसकी लागत क्या है?', 'फ़ाइनेंस और एस्क्रो कैसे काम करते हैं?', 'T57 किन बाज़ारों में है?'],
+  } : trk ? {
+    open: "T57 AI'ya sorun", title: 'T57 AI', sub: 't57.ai sayfalarından yanıtlar', close: 'Kapat', reset: 'Yeni sohbet',
+    hello: 'Hoş geldiniz. T57 hakkında her şeyi sorabilirsiniz: üyelik ve fiyatlar, iş ortakları aracılığıyla finansman ve emanet hesabı, pazarlarımız veya tek ticaret kaydının nasıl çalıştığı.',
+    ph: 'Sorunuzu yazın…', send: 'Gönder', note: 'Yapay zekâ hata yapabilir. Önemli konular için hello@t57.ai adresine yazın.',
+    err: 'T57 AI şu anda yanıt veremiyor. Lütfen tekrar deneyin ya da hello@t57.ai adresine yazın.', thinking: 'Yazıyor…',
+    ask: ['T57 nedir?', 'Nasıl katılabilirim ve maliyeti nedir?', 'Finansman ve emanet hesabı nasıl işliyor?', 'T57 hangi pazarlarda?'],
+  } : ms ? {
+    open: 'Tanya T57 AI', title: 'T57 AI', sub: 'Jawapan daripada halaman t57.ai', close: 'Tutup', reset: 'Sembang baharu',
+    hello: 'Selamat datang. Tanyakan apa sahaja tentang T57: keahlian dan harga, pembiayaan dan eskrow melalui rakan kongsi, pasaran kami, atau cara satu rekod dagangan berfungsi.',
+    ph: 'Tulis soalan anda…', send: 'Hantar', note: 'AI boleh tersilap. Bagi perkara penting, e-mel hello@t57.ai',
+    err: 'T57 AI tidak dapat dihubungi. Sila cuba lagi, atau e-mel hello@t57.ai.', thinking: 'Sedang menulis…',
+    ask: ['Apakah T57?', 'Bagaimana saya boleh menyertai, dan berapa kosnya?', 'Bagaimana pembiayaan dan eskrow berfungsi?', 'Pasaran mana yang diliputi T57?'],
   } : {
     open: 'Ask T57 AI', title: 'T57 AI', sub: 'Answers from the pages of t57.ai', close: 'Close', reset: 'New chat',
     hello: 'Welcome. Ask me anything about T57: membership and pricing, finance and escrow through partners, our markets, or how one trade record works.',
@@ -33,7 +52,7 @@
   document.head.appendChild(css);
 
   const root = document.createElement('div');
-  root.className = 't57ai'; root.dir = ar ? 'rtl' : 'ltr'; root.lang = ar ? 'ar' : 'en';
+  root.className = 't57ai'; root.dir = ar ? 'rtl' : 'ltr'; root.lang = lang;
   root.innerHTML = `
     <button class="ai-launch" type="button" aria-haspopup="dialog" aria-expanded="false">${badge}<span class="ai-launch-t">${L.open}</span></button>
     <section class="ai-panel" role="dialog" aria-modal="false" aria-label="${L.title}" hidden>
@@ -107,7 +126,7 @@
     try {
       const res = await fetch('/api/assistant', {
         method: 'POST', headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ messages: state.msgs, lang: ar ? 'ar' : 'en', path: location.pathname }),
+        body: JSON.stringify({ messages: state.msgs, lang, path: location.pathname }),
       });
       if (!res.ok || !res.body) { const j = await res.json().catch(() => ({})); throw new Error(j.text || L.err); }
       const rd = res.body.getReader(), dec = new TextDecoder(); let buf = '';
