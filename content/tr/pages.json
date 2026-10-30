@@ -281,7 +281,7 @@
   "section": "why-t57",
   "name": "Belge Yönetimi ve Denetim İzi",
   "h1": "Bir işlemin tüm belgeleri, tek kayıtta.",
-  "answer": "Bir işlemin her belgesi, onayı ve aşaması tek bir değiştirilemez kayıtta.",
+  "answer": "Bir işlemin her belgesi, onayı ve aşaması her değişikliğin izlendiği tek bir kayıtta.",
   "faqs": [
    {
     "q": "Ticaret belgelerimi kimler görebilir?",
@@ -293,7 +293,7 @@
    }
   ],
   "title": "Ticaret Belgesi Yönetimi ve Denetim İzi | T57",
-  "description": "Sözleşmeler, faturalar, sertifikalar ve gözetim raporları tek bir değiştirilemez ticaret kaydında; her gıda işlemi için eksiksiz denetim izi.",
+  "description": "Sözleşmeler, faturalar, sertifikalar ve gözetim raporları her değişikliğin izlendiği tek bir ticaret kaydında; her gıda işlemi için eksiksiz denetim izi.",
   "parent": "why-t57"
  },
  "capabilities": {
@@ -460,7 +460,7 @@
    }
   ],
   "title": "Kaynaktan Alıcıya Gıda İzlenebilirliği | T57",
-  "description": "Doğrulanmış menşeler, bağlı sertifikalar ve değiştirilemez bir kayıtla parti düzeyinde gıda izlenebilirliği. T57'de menşeyi kanıtlayın, geri çağırmaları hızlandırın.",
+  "description": "Doğrulanmış menşeler, bağlı sertifikalar ve her değişikliğin izlendiği bir kayıtla parti düzeyinde gıda izlenebilirliği. T57'de menşeyi kanıtlayın, geri çağırmaları hızlandırın.",
   "parent": "cap-trade"
  },
  "cap-chat-orders": {
@@ -1760,7 +1760,7 @@
   "section": "markets",
   "name": "Pazarlar",
   "h1": "Beş kurucu pazar. Tek doğrulanmış ağ.",
-  "answer": "Beş kurucu pazarda, tek bir doğrulanmış ağ üzerinden ticaret yapın.",
+  "answer": "Suudi Arabistan, BAE, Hindistan, Malezya ve Türkiye. Beşinde de tek bir ticaret kaydıyla alın ve satın.",
   "faqs": [
    {
     "q": "T57 hangi ülkelerde faaliyet gösteriyor?",
@@ -1867,7 +1867,7 @@
   "section": "markets",
   "name": "Suudi Arabistan: Pazara Genel Bakış",
   "h1": "Suudi Arabistan'da gıda ticareti, yurt içinde ve yurt dışında.",
-  "answer": "Suudi Arabistan'da doğrulanmış iş ortaklarıyla, yurt içinde ve yurt dışında gıda ticareti yapın.",
+  "answer": "Doğrulanmış Suudi ithalatçılara, perakendecilere ve otellere ulaşın, Suudi gıdasını ihraç edin; ödeme ve gümrük için yerel ortaklarla.",
   "faqs": [
    {
     "q": "Suudi Arabistan'da T57'ye kimler katılabilir?",
@@ -3105,7 +3105,7 @@
   "faqs": [
    {
     "q": "T57'nin sanal ticaret masası uyuşmazlıklarda ve risk yönetiminde nasıl yardımcı olur?",
-    "a": "Sanal ticaret masası bir risk yöneticisi gibi çalışır. Uyuşmazlık durumunda masa devreye girerek arabuluculuk yapar, kararlaştırılan şartların uygulanmasını sağlar ve satıcının çıkarlarını korur. Bir alıcı iflas eder ya da temerrüde düşerse T57 komisyona dayalı tahsilat ve yeniden satış yaklaşımına geçer; malı yeniden yönlendirmeye ya da değeri geri kazanmaya yardım eder."
+    "a": "Sanal ticaret masası riskin yönetilmesine yardımcı olur. Uyuşmazlıkta, kararlaştırılan şartlar ve T57'nin uyuşmazlık süreci çerçevesinde arabuluculuk yapar. Alıcı temerrüde düşerse T57 mal için doğrulanmış başka bir alıcı bulunmasına yardım eder; her türlü tahsilat lisanslı ortaklar üzerinden yürür."
    },
    {
     "q": "Bir platform finansman açığına nasıl çözüm olur?",

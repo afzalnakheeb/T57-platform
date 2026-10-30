@@ -811,6 +811,7 @@ a.feat:not(.twelve) { text-decoration:none; color:inherit; } a.feat:not(.twelve)
 @media (max-width: 1480px) { .label-proto { display:none; } }
 @media (max-width: 1600px) { .worlds a span.long { display:none; } .worlds a { padding:0 12px; gap:6px; } }
 /* the audience strip must show all six links, "All 11 audiences" included, at every desktop and tablet width */
+@media (min-width: 901px) { .worlds { flex-wrap:wrap; height:48px; overflow:hidden; } .worlds a.w-all { order:-1; position:static; box-shadow:none !important; } }
 @media (min-width: 901px) and (max-width: 1120px) { .worlds { gap:2px; } .worlds a { padding:0 10px; font-size:13px; } }
 @media (max-width: 1180px) { .hdr .demo { display:none; } }
 @media (max-width: 900px) {
