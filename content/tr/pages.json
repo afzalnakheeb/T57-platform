@@ -999,6 +999,293 @@
   "description": "T57'de doğrulanmış ziraat mühendisleri, gözetim uzmanları, gıda bilimciler ve ambalaj uzmanlarıyla iş bazında, önceden kararlaştırılan fiyat, emanet hesabıyla ödeme ve puanlamayla çalışın.",
   "parent": "capabilities"
  },
+ "ai-native": {
+  "route": "/tr/ai-native",
+  "section": "ai-native",
+  "name": "Yapay Zekâ Temelli",
+  "h1": "Ticaretin her adımında yapay zekâ. Her kararı insanlar verir.",
+  "answer": "T57 yapay zekâ temellidir. Bunun işletmeniz için ne anlama geldiği aşağıda.",
+  "faqs": [
+   {
+    "q": "T57'de \"yapay zekâ temelli\" ne anlama geliyor?",
+    "a": "Yapay zekâ ayrı bir araç olarak eklenmek yerine eşleştirme ve fiyatlamadan uyum ve belgelere kadar ticaretin her adımına yerleştirilmiştir."
+   },
+   {
+    "q": "Yapay zekâ işletmem hakkında karar veriyor mu?",
+    "a": "Yapay zekâ önerilerde bulunur ve sorunları işaretler. Kararları insanlar verir ve her olumsuz karar bir insan tarafından incelenir."
+   },
+   {
+    "q": "T57'nin yapay zekâsı hangi verileri kullanıyor?",
+    "a": "Doğrulanmış ticaret kayıtları, kamuya açık piyasa, ticaret ve iklim verileri, iş ortaklarından lisanslı veriler ve onayla kaydedilen çiftçi bilgisi. Tek tek üyelerin verileri asla diğer üyelerle paylaşılmaz."
+   },
+   {
+    "q": "Neden küçük, yerel modeller?",
+    "a": "Gıda küreseldir ama son derece yereldir. Bir bölge, ürün ve değer zinciri için eğitilen küçük modeller yerel koşulları ve dilleri daha iyi anlar, daha düşük maliyetle çalışır, test edilmesi ve açıklanması da daha kolaydır."
+   }
+  ],
+  "title": "Yapay Zekâ Temelli Gıda Ticareti Platformu | T57 Yapay Zekâyı Nasıl Kullanıyor",
+  "description": "Gıda ticareti genelinde eşleştirme, fiyatlama, tahmin, uyum ve belgeler için küçük, yerel yapay zekâ modelleri. T57'de yapay zekâ önerir, insanlar karar verir."
+ },
+ "ai-matchmaking": {
+  "route": "/tr/ai-native/trade-matchmaking",
+  "section": "ai-native",
+  "name": "Yapay Zekâ ile Ticari Eşleştirme",
+  "h1": "Doğru iş ortağı, haftalar değil dakikalar içinde.",
+  "answer": "Doğru ve doğrulanmış alıcıyı ya da tedarikçiyi, uygunluk ve geçmiş performansa göre sıralanmış olarak dakikalar içinde bulun.",
+  "faqs": [
+   {
+    "q": "Tedarikçiler üst sıralara çıkmak için ödeme yapabilir mi?",
+    "a": "Hayır. Sıralama asla ödemeye değil; uygunluğa, doğrulamaya ve geçmiş performansa dayanır."
+   },
+   {
+    "q": "Belirli bir iş ortağı neden önerildi?",
+    "a": "Her öneri ürün eşleşmesi, kapasite, koridor deneyimi ve zamanında teslim performansı gibi temel gerekçelerini gösterir."
+   }
+  ],
+  "title": "Gıda Alıcıları ve Tedarikçileri İçin Yapay Zekâ ile Ticari Eşleştirme | T57",
+  "description": "T57'de yapay zekâ doğrulanmış gıda alıcılarını ve tedarikçilerini özellik, kapasite, koridor ve geçmiş performansa göre sıralar ve her eşleşmeyi açıklar.",
+  "parent": "ai-native"
+ },
+ "ai-negotiations": {
+  "route": "/tr/ai-native/negotiations",
+  "section": "ai-native",
+  "name": "Yapay Zekâ Müzakere Motoru",
+  "h1": "Her müzakereye piyasayı bilerek girin.",
+  "answer": "Her müzakereyi piyasa verileriyle hazırlayan ve her kararı size bırakan yapay zekâ.",
+  "faqs": [
+   {
+    "q": "Yapay zekâ benim adıma pazarlık mı ediyor?",
+    "a": "Hayır. Hazırlar ve önerir. Her teklife ve kabule siz karar verirsiniz."
+   },
+   {
+    "q": "Aynı işlemde iki taraf da motoru kullanabilir mi?",
+    "a": "Evet. Her taraf aynı kamuya açık piyasa verilerine dayanan kendi gizli özetini alır."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Yapay Zekâ Müzakere Desteği | T57 Yapay Zekâ Temelli",
+  "description": "T57'nin müzakere yapay zekâsı teklifleri nasıl karşılaştırır, ödeme ve teslim şartlarının değerini nasıl hesaplar ve karşı teklifleri nasıl önerir; her kararı insanlar verir.",
+  "parent": "ai-native"
+ },
+ "ai-orders": {
+  "route": "/tr/ai-native/llm-orders",
+  "section": "ai-native",
+  "name": "Büyük Dil Modeliyle Ticari Sipariş",
+  "h1": "Bir sesli not girer, teyitli bir sipariş çıkar.",
+  "answer": "Bir WhatsApp mesajını ya da sesli notu teyit edilmiş, yapılandırılmış bir ticaret siparişine dönüştürün.",
+  "faqs": [
+   {
+    "q": "Hangi diller destekleniyor?",
+    "a": "Arapça, İngilizce, Hintçe, Malayca ve Türkçe; T57 yeni pazarlara açıldıkça yenileri ekleniyor."
+   },
+   {
+    "q": "Yapay zekâ emin değilse ne olur?",
+    "a": "Tahmin etmek yerine kısa bir soru sorar; siz teyit edene kadar sipariş gönderilmez."
+   }
+  ],
+  "title": "WhatsApp ve Sesle Yapay Zekâ Destekli Ticaret Siparişleri | T57 Yapay Zekâ Temelli",
+  "description": "T57'nin dil modelleri WhatsApp mesajlarını ve sesli notları Arapça ve yerel dillerde nasıl teyit edilmiş, yapılandırılmış gıda ticareti siparişlerine dönüştürüyor.",
+  "parent": "ai-native"
+ },
+ "ai-price-index": {
+  "route": "/tr/ai-native/price-index",
+  "section": "ai-native",
+  "name": "Yapay Zekâ Destekli Canlı Gıda Fiyat Endeksi",
+  "h1": "Her kalite sınıfı ve menşe için açıklamalı bir fiyat.",
+  "answer": "Her ürün, kalite sınıfı ve menşe için yapay zekânın oluşturduğu, sade dille açıklanan bir fiyat.",
+  "faqs": [
+   {
+    "q": "Yapay zekâ tahminleri ne kadar doğru?",
+    "a": "Her fiyat bir güven düzeyi gösterir. Doğruluk, tahminlerin sonraki doğrulanmış işlemlerle karşılaştırılmasıyla ölçülür ve sonuçlar ürün grubuna göre yayımlanır."
+   },
+   {
+    "q": "Endeks sahte işlemlerle manipüle edilebilir mi?",
+    "a": "Yalnızca doğrulanmış üyeler arasındaki işlemler sayılır, aykırı değerler tespit edilip ağırlıkları düşürülür ve hiçbir işlem endeksi tek başına hareket ettiremez."
+   }
+  ],
+  "title": "Yapay Zekâ Destekli Gıda Fiyat Endeksi | T57 Yapay Zekâ Temelli",
+  "description": "T57'nin yapay zekâsı her gıda ürünü, kalite sınıfı ve menşe için piyasa verileri ve doğrulanmış işlemlerden güven düzeyleri ve açıklamalarla nasıl fiyat tahmin ediyor.",
+  "parent": "ai-native"
+ },
+ "ai-forecasting": {
+  "route": "/tr/ai-native/supply-demand-forecasting",
+  "section": "ai-native",
+  "name": "Arz ve Talep Tahmini",
+  "h1": "Kıtlıkları ve arz fazlalarını haftalar önceden görün.",
+  "answer": "Kıtlıkları, arz fazlalarını ve fiyat dönüşlerini size ulaşmadan haftalar önce görün.",
+  "faqs": [
+   {
+    "q": "Tahminler ne kadar ileriye bakıyor?",
+    "a": "Ürüne ve mevcut verilere göre birkaç haftadan bir sezona kadar. Her tahmin kendi aralığını gösterir."
+   },
+   {
+    "q": "Hükümetler tahminleri kullanabilir mi?",
+    "a": "Evet. Hükümetler ve kurumlar toplulaştırılmış arz durumuna ve tahminlere T57'nin gıda güvenliği görünümü üzerinden erişebilir."
+   }
+  ],
+  "title": "Gıda İçin Yapay Zekâ ile Arz ve Talep Tahmini | T57 Yapay Zekâ Temelli",
+  "description": "Alıcılar, satıcılar ve hükümetler için ürün ve menşeye göre gıda arzı, talebi ve fiyatlarının yapay zekâ tahminleri; arz durumu sinyalleri ve uyarılarla.",
+  "parent": "ai-native"
+ },
+ "ai-risk": {
+  "route": "/tr/ai-native/risk-intelligence",
+  "section": "ai-native",
+  "name": "Risk Analizi ve Isı Haritaları",
+  "h1": "İşleminize yönelik her risk, tek haritada.",
+  "answer": "İşleminize yönelik her riski tek haritada görün: karşı taraflar, rotalar, pazarlar ve hava koşulları.",
+  "faqs": [
+   {
+    "q": "Kendi risk puanımı görebilir miyim?",
+    "a": "Evet. Üyeler kendileriyle ilgili puanları ve ana gerekçeleri görebilir, inceleme talep edebilir."
+   },
+   {
+    "q": "Risk ısı haritalarını başka kimler görebilir?",
+    "a": "Kredi verenler ve sigortacılar yalnızca onlarla paylaştığınız işlemlerin riskini görür. Hükümetler toplulaştırılmış, anonimleştirilmiş görünümleri görür."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Yapay Zekâ Risk Analizi | T57 Yapay Zekâ Temelli",
+  "description": "T57'de gıda ticaretinde karşı taraflar, rotalar, pazarlar ve iklim için açıklanabilir etkenler ve erken uyarılarla yapay zekâ risk puanları ve ısı haritaları.",
+  "parent": "ai-native"
+ },
+ "ai-crop-yield": {
+  "route": "/tr/ai-native/crop-yield-forecasting",
+  "section": "ai-native",
+  "name": "Ürün ve Verim Tahmini",
+  "h1": "Hasadınızı gerçekleşmeden bilin.",
+  "answer": "Tarlalarınızın ne kadar ve ne zaman ürün vereceğini hasattan önce bilin.",
+  "faqs": [
+   {
+    "q": "Çiftçilerin özel ekipmana ihtiyacı var mı?",
+    "a": "Hayır. Tahminler uydu ve hava verilerini kullanır. Çiftçiler basit bir akıllı telefondan ya da kooperatifleri aracılığıyla sesli ya da fotoğraflı gözlem ekleyebilir."
+   },
+   {
+    "q": "Bir çiftliğin tahminini kimler görebilir?",
+    "a": "Çiftçi ya da kooperatif ve onların paylaşmayı seçtiği, alıcı ya da kredi veren gibi kişiler."
+   }
+  ],
+  "title": "Yapay Zekâ ile Ürün ve Verim Tahmini | T57 Yapay Zekâ Temelli",
+  "description": "Çiftçiler, kooperatifler, alıcılar ve kredi verenler için yerel yapay zekâ modelleri, uydu ve hava verileri ve çiftçi bilgisiyle tarla düzeyinde verim ve hasat tahminleri.",
+  "parent": "ai-native"
+ },
+ "ai-profit-loss": {
+  "route": "/tr/ai-native/profit-loss-prediction",
+  "section": "ai-native",
+  "name": "Kâr ve Zarar Tahmini",
+  "h1": "Taahhüt vermeden önce kazandırıp kazandırmayacağını bilin.",
+  "answer": "Bir ürünün, işlemin ya da sezonun para kazandırıp kazandırmayacağını taahhüt vermeden önce bilin.",
+  "faqs": [
+   {
+    "q": "Tahmin bir garanti mi?",
+    "a": "Hayır. Güncel verilere dayanarak en olası sonucu ve bir aralığı gösterir. Gerçek sonuçlar hava koşullarına, piyasalara ve uygulamaya bağlıdır."
+   },
+   {
+    "q": "Kendi maliyetlerimi ekleyebilir miyim?",
+    "a": "Evet. Kendi maliyetlerinizi eklemek tahminleri daha doğru kılar ve verileriniz gizli kalır."
+   }
+  ],
+  "title": "Gıda İşlemleri İçin Yapay Zekâ ile Kâr ve Zarar Tahmini | T57",
+  "description": "T57'de bir ürünün, sözleşmenin ya da işlemin olası kâr marjını verim, fiyat ve maliyetlerden; başa baş fiyatları ve senaryo karşılaştırmalarıyla öngörün.",
+  "parent": "ai-native"
+ },
+ "ai-crop-planning": {
+  "route": "/tr/ai-native/crop-planning",
+  "section": "ai-native",
+  "name": "Yapay Zekâ ile Ekim Planlama ve Analiz",
+  "h1": "Piyasanın isteyeceğini ekin.",
+  "answer": "Neyi, ne zaman ve ne kadar ekeceğinizi piyasanın isteyeceğine göre planlayın.",
+  "faqs": [
+   {
+    "q": "Yapay zekâ bana tam olarak ne ekeceğimi mi söylüyor?",
+    "a": "Beklenen verim ve kâr marjlarıyla seçenekler önerir. Karar sizindir ve planı istediğiniz zaman değiştirebilirsiniz."
+   },
+   {
+    "q": "Kooperatifler tüm üyeleri için plan yapabilir mi?",
+    "a": "Evet. Kooperatifler arzı dengelemek ve alıcı talebini karşılamak için üyelerin çiftliklerini kapsayan planlar oluşturabilir."
+   }
+  ],
+  "title": "Yapay Zekâ ile Ekim Planlama ve Çiftlik Analizi | T57 Yapay Zekâ Temelli",
+  "description": "Çiftçiler ve kooperatifler için piyasa talebine, toprağa, suya ve iklime dayalı; beklenen verim, kâr marjı ve sezon analizleri sunan yapay zekâ ekim planları.",
+  "parent": "ai-native"
+ },
+ "ai-agronomy": {
+  "route": "/tr/ai-native/agronomy-ai",
+  "section": "ai-native",
+  "name": "Yapay Zekâ Destekli Ziraat Uzmanları Ağı",
+  "h1": "Kendi dilinizde tarım tavsiyesi, dakikalar içinde.",
+  "answer": "Kendi dilinizde uzman tarım tavsiyesi: önce yapay zekâdan, gerektiğinde ziraat mühendislerinden.",
+  "faqs": [
+   {
+    "q": "Tarım yapay zekâsı hangi dilleri konuşuyor?",
+    "a": "T57 pazarlarındaki yerel diller: Arapça, Hintçe, Malayca, Türkçe ve İngilizceyle başlıyor, sesli kullanım dahil bölgesel dillere genişliyor."
+   },
+   {
+    "q": "Ziraat mühendisleri kimler?",
+    "a": "T57'ye hizmet sağlayıcı olarak katılan doğrulanmış ziraat mühendisleri ve tarım uzmanları. Tavsiye vermeden önce nitelikleri kontrol edilir."
+   }
+  ],
+  "title": "Çiftçiler İçin Yapay Zekâ Tarım Danışmanlığı | T57 Yapay Zekâ Temelli",
+  "description": "T57'de çiftçiler için yerel dillerde yapay zekâdan anında ürün tavsiyesi, karmaşık vakalar için doğrulanmış ziraat mühendisleri. Fotoğrafla ve sesle teşhis.",
+  "parent": "ai-native"
+ },
+ "ai-compliance": {
+  "route": "/tr/ai-native/ai-compliance",
+  "section": "ai-native",
+  "name": "Yapay Zekâ Destekli Uyum ve KYC",
+  "h1": "Daha hızlı doğrulama. İnsanlarca incelenir.",
+  "answer": "İşletmeleri daha hızlı doğrulayın ve her işlemi daha hızlı tarayın; her olumsuz kararı insanlar incelesin.",
+  "faqs": [
+   {
+    "q": "Yapay zekâ başvurumu reddedebilir mi?",
+    "a": "Hayır. Yapay zekâ sorunları işaretleyebilir, ancak olumsuz kararı yalnızca bir insan verebilir; siz de inceleme talep edebilirsiniz."
+   },
+   {
+    "q": "Verilerim nasıl korunuyor?",
+    "a": "Verileriniz T57'nin gizlilik politikası ve geçerli veri koruma mevzuatı çerçevesinde doğrulama için kullanılır ve iş ortaklarıyla yalnızca onayınızla paylaşılır."
+   }
+  ],
+  "title": "Yapay Zekâ Destekli KYC, KYB ve Uyum Taraması | T57 Yapay Zekâ Temelli",
+  "description": "T57'de gıda işletmeleri için yapay zekâ ile belge kontrolü, ortaklık eşleştirme ve yaptırım taraması; her olumsuz kararı insanlar inceler.",
+  "parent": "ai-native"
+ },
+ "ai-analytics": {
+  "route": "/tr/ai-native/predictive-analytics",
+  "section": "ai-native",
+  "name": "Öngörücü Ticaret Analitiği Paneli",
+  "h1": "İşletmenizin nereye gittiğini görün.",
+  "answer": "Ticaret işletmenizin yalnızca nerede olduğunu değil, nereye gittiğini görün.",
+  "faqs": [
+   {
+    "q": "Kendi verilerimi yüklemem gerekiyor mu?",
+    "a": "Hayır. Pano T57'deki faaliyetlerinizden oluşturulur. Daha iyi tahminler için maliyetler gibi başka veriler ekleyebilirsiniz."
+   },
+   {
+    "q": "Panoyu kredi verenimle paylaşabilir miyim?",
+    "a": "Evet. Seçtiğiniz görünümleri onayınızla kredi verenler ya da yatırımcılarla paylaşabilirsiniz."
+   }
+  ],
+  "title": "Öngörücü Ticaret Analitiği Panosu | T57 Yapay Zekâ Temelli",
+  "description": "T57'de gıda ticareti işletmeleri için hacim, kâr marjı ve nakit tahminleri; geç ödeyenler ve tedarikçi riski uyarıları ile önerilen aksiyonlar sunan yapay zekâ.",
+  "parent": "ai-native"
+ },
+ "ai-documents": {
+  "route": "/tr/ai-native/ai-documentation",
+  "section": "ai-native",
+  "name": "Yapay Zekâ ile Ticari Belge Hazırlama",
+  "h1": "Tek bir kabul edilmiş teklif. Her belge kontrol edilmiş.",
+  "answer": "Sözleşmeleri, faturaları ve ticaret belgelerini tek bir kabul edilmiş tekliften oluşturun; yapay zekâ kontrol etsin.",
+  "faqs": [
+   {
+    "q": "Yapay zekânın oluşturduğu sözleşmeler hukuken bağlayıcı mı?",
+    "a": "Sözleşmeler taraflar imzaladığında bağlayıcı hâle gelir. T57 standart ticaret şartlarını kullanır; üyeler her belgeyi kendi avukatlarına inceletebilir."
+   },
+   {
+    "q": "Hangi belgeler oluşturulabilir?",
+    "a": "Sözleşmeler, proforma ve ticari faturalar, çeki listeleri, akreditif başvuruları ve destekleyici belgeler, ayrıca sertifikalar ve gümrük beyannameleri için veriler."
+   }
+  ],
+  "title": "Yapay Zekâ ile Ticaret Belgesi Üretimi ve Kontrolü | T57 Yapay Zekâ Temelli",
+  "description": "T57'de sözleşmeleri, faturaları ve çeki listelerini kabul edilmiş tekliften oluşturun; akreditif ve gümrük uyumsuzluklarını yapay zekâ kontrolleriyle yakalayın.",
+  "parent": "ai-native"
+ },
  "markets": {
   "route": "/tr/markets",
   "section": "markets",
