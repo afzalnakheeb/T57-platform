@@ -25,6 +25,15 @@ def ledger(m):
     return '<figure class="ledger">\n' + s + '</figure>'
 worlds = re.sub(r'\{\{LEDGER:([^}#]*)(?:#([^}]*))?\}\}', ledger, open(f'{D}/worlds.html').read()) + investors.articles() + blog.articles() + legal.articles()
 worlds = photos.apply(worlds)
+# The homepage partner strip scrolls through every partner on the /partnerships wall, so a logo added there shows here too.
+def partner_strip():
+    items = re.findall(r'<li(?: class="([^"]*)")?>(.*?)</li>', re.search(r'<ul class="pwall"[^>]*>(.*?)</ul>', worlds, re.S).group(1))
+    li = lambda c, x: f'<li class="lm-tx">{x}</li>' if 'pw-tx' in c else f'<li>{x}</li>'
+    run = ''.join(li(c, x) for c, x in items)
+    copy = re.sub(r' alt="[^"]*"', ' alt=""', run)
+    return (f'<div class="logo-marquee" role="region" aria-label="Partners" dir="ltr"><div class="lm-track">'
+            f'<ul class="lm-run">{run}</ul><ul class="lm-run" aria-hidden="true">{copy}</ul></div></div>')
+worlds = worlds.replace('{{PARTNER_STRIP}}', partner_strip())
 # Leadership cards: a LinkedIn link for each person whose profile is confirmed, and a personal website where there is one.
 LINKS = json.load(open(f'{D}/people-links.json'))
 def plinks(m):
@@ -67,11 +76,45 @@ os.makedirs(f'{R}/content/pages', exist_ok=True)
 open(f'{R}/content/chrome-top.html', 'w').write(relink(top))
 open(f'{R}/content/chrome-bottom.html', 'w').write(relink(bottom))
 
+# One hero per page: nothing hero-sized is stacked under the hero. The explainer, an arrival photo and the "Watch"
+# films move below the opening challenge, and the photo band becomes a breather further down (or is dropped when the
+# page already opens with a photo). Media and resource pages, whose films are the content, keep their order.
+def one_hero(i, art):
+    if i == 'home' or i.startswith(('res-', 'help')): return art
+    parts = re.split(r'(?=\n  <(?:section|div|figure|nav)\b)', art)
+    h = next((k for k, p in enumerate(parts) if p.lstrip().startswith('<section class="hero')), None)
+    if h is None: return art
+    kind = lambda p: ('band' if p.lstrip().startswith('<div class="pband') else 'cover' if p.lstrip().startswith('<div class="cover') else
+                      'watch' if 'class="chapter gutter watch"' in p[:200] else 'arrival' if p.lstrip().startswith('<section class="arrival') else
+                      'chapter' if p.lstrip().startswith('<section class="chapter') else 'other')
+    lead, k = {}, h + 1
+    while k < len(parts) and kind(parts[k]) in ('band', 'cover', 'watch', 'arrival'):
+        lead.setdefault(kind(parts[k]), parts[k]); k += 1
+    if not lead: return art
+    rest = parts[k:]
+    ch = [n for n, p in enumerate(rest) if kind(p) == 'chapter']
+    if not ch: return art
+    if '<img' in parts[h] or 'arrival' in lead: lead.pop('band', None)
+    if 'cover' in lead:
+        # the explainer's own caption repeats the H1: the H1 already says it
+        h1 = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', re.search(r'<h1[^>]*>(.*?)</h1>', parts[h], re.S).group(1))).strip()
+        lead['cover'] = re.sub(r'\s*<text class="fx-cap"[^>]*>(.*?)</text>', lambda m: '' if m.group(1).strip() == h1 else m.group(0), lead['cover'])
+    ins = {}
+    first = [lead[x] for x in ('arrival', 'cover') if x in lead]
+    if first: ins.setdefault(ch[0], []).extend(first)
+    if 'watch' in lead: ins.setdefault(ch[1] if len(ch) > 2 else ch[0], []).append(lead['watch'])
+    if 'band' in lead: ins.setdefault(ch[3] if len(ch) > 4 else ch[-1] if len(ch) > 1 else ch[0], []).append(lead['band'])
+    out = []
+    for n, p in enumerate(rest):
+        out.append(p); out.extend(ins.get(n, []))
+    return ''.join(parts[:h + 1] + out)
+
 text = lambda s: re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
 pages, ARTS = {}, {}
 for m in re.finditer(r'(<article class="world" id="([a-z0-9-]+)".*?</article>)', worlds, re.S):
     art, i = m.group(1), m.group(2)
     art = art.replace(' hidden>', '>', 1)
+    art = one_hero(i, art)
     ARTS[i] = art
     h1 = text(re.search(r'<h1[^>]*>(.*?)</h1>', art, re.S).group(1))
     std = text(re.search(r'<p class="std">(.*?)</p>', art, re.S).group(1))

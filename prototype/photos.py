@@ -41,7 +41,7 @@ MARKET = {
 }
 
 PAGES = {
-    'home': '1426834146', 'who-we-serve': '1306317420', 'why-t57': '1435253289',
+    'who-we-serve': '1306317420', 'why-t57': '1435253289',
     'sellers': '2240360614', 'buyers': '1185373316', 'enterprises': '2252966040', 'food-processors': '1197644844',
     'cooperatives': '178173788', 'collaborators': '843053834', 'service-providers': '1364834632',
     'club-membership': '1306317420', 'rfq-bidding': '2157284640', 'virtual-trade-desk': '1185373316',
