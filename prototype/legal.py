@@ -94,7 +94,7 @@ ACCESS = '''<p>T57 wants t57.ai to be usable by everyone, including people who u
 <h2>Known limitations</h2>
 <ul><li>Some animated charts announce their final values only, not each step of the animation.</li>
 <li>Older downloadable documents may not be fully tagged for screen readers. Ask us and we will send an accessible version.</li>
-<li>The site is in English and Arabic. Malay and Turkish versions are in preparation.</li></ul>
+<li>The site is in English, Arabic and Malay. A Turkish version is in preparation.</li></ul>
 <h2>How we test</h2>
 <p>We test every release with automated checks (axe-core and Lighthouse) across all pages, and check key journeys by keyboard and with a screen reader. This statement was last reviewed on 28 October 2026.</p>
 <h2>Tell us about a problem</h2>
