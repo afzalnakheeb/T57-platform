@@ -2,7 +2,7 @@
  "home": {
   "route": "/tr",
   "section": "",
-  "name": "Home",
+  "name": "Ana sayfa",
   "h1": "Gıda ticaretinde güven, tarladan alıcıya.",
   "answer": "T57, doğrulanmış üreticileri, alıcıları, bankaları ve lojistik firmalarını yapay zekâ temelli tek bir ticaret platformunda buluşturur.",
   "faqs": [
@@ -29,5 +29,1681 @@
   ],
   "title": "T57 | Gıda İçin Yapay Zekâ Temelli Dijital Ticaret Altyapısı",
   "description": "Tek kayıtta doğrulanmış gıda ticareti: çiftçiler, işleyiciler, tüccarlar ve alıcılar için teklif talepleri, sözleşmeler, ticaret finansmanı, sigorta, gözetim ve lojistik."
+ },
+ "who-we-serve": {
+  "route": "/tr/who-we-serve",
+  "section": "who-we-serve",
+  "name": "Kimlere Hizmet Veriyoruz",
+  "h1": "Gıda zincirinin her halkasını tek bir doğrulanmış ticaret kulübünde buluşturun.",
+  "answer": "T57, gıdayı yetiştiren, üreten, satın alan, finanse eden ve düzenleyen herkesi tek bir güvenilir kayıtta buluşturmak için var.",
+  "faqs": [
+   {
+    "q": "T57'ye kimler katılabilir?",
+    "a": "Çiftçi ve balıkçılardan işleyicilere, markalara, tüccarlara, ithalatçılara, süpermarketlere, otel-restoran-catering alıcılarına, kredi verenlere, sigortacılara, hizmet sağlayıcılara ve kamu kurumlarına kadar gıda zincirindeki her işletme ve kurum başvurabilir."
+   },
+   {
+    "q": "T57 neden her üyeyi doğruluyor?",
+    "a": "Doğrulama, her üyenin güvenle ticaret yapmasını sağlar. Ayrıca kredi verenlere ve sigortacılara bir işlemi desteklemek için ihtiyaç duydukları güvenilir bilgiyi verir."
+   },
+   {
+    "q": "Bireyler T57'ye katılabilir mi?",
+    "a": "T57, kayıtlı işletmeler ve kurumlar için tasarlanmıştır. Bireysel çiftçiler bir kooperatif ya da üretici örgütü aracılığıyla katılabilir."
+   }
+  ],
+  "title": "Kimlere Hizmet Veriyoruz | T57 Doğrulanmış Gıda Ticaret Kulübü",
+  "description": "T57; çiftçileri, işleyicileri, tüccarları, alıcıları, finansörleri, hizmet sağlayıcıları ve düzenleyici kurumları tek bir doğrulanmış gıda ticaret kaydında buluşturur."
+ },
+ "why-t57": {
+  "route": "/tr/why-t57",
+  "section": "why-t57",
+  "name": "Neden T57",
+  "h1": "Gıda ticaretinin tamamı, tek bir güvenilir kayıtta.",
+  "answer": "Katılım, keşif, finansman, ödeme ve kapanış; her işlem tek bir yapay zekâ temelli platformda. Böylece tarladan sofraya her aktör her işlemi görebilir, ona güvenebilir ve onu finanse edebilir.",
+  "faqs": [
+   {
+    "q": "T57'nin diğer gıda ticareti platformlarından farkı nedir?",
+    "a": "T57; IOFS ve ASEAN ile çalışan, ticareti, finansmanı, lojistiği ve politika düzeyinde veriyi tek bir doğrulanmış platformda buluşturan yapay zekâ temelli bir ekosistemdir."
+   },
+   {
+    "q": "IOFS ve ASEAN ortaklıkları bir tüccar olarak benim için neden önemli?",
+    "a": "T57 gıda güvenliği ve ticaret önceliklerini belirleyen kurumlarla uyumlu olduğu için bu ortaklıklar daha hızlı katılım, daha net menşe kuralları ve ihalelere ve devlet alıcılarına daha iyi erişim anlamına gelir."
+   },
+   {
+    "q": "T57 yalnızca hükümetlere ve kurumlara mı hizmet veriyor?",
+    "a": "Hayır. Bakanlıklara ve çok taraflı kuruluşlara hizmet veren aynı altyapı çiftçilere, kooperatiflere, KOBİ'lere ve şirketlere de hizmet verir; büyük küçük her oyuncu doğrulanmış pazarlara ve güvenilir karşı taraflara erişir."
+   }
+  ],
+  "title": "Neden T57 | Yapay Zekâ Temelli Küresel Gıda İşletim Sistemi",
+  "description": "T57; IOFS ve ASEAN ile çalışan, politikayı, finansmanı ve lojistiği güvenilir küresel gıda akışlarında birleştiren yapay zekâ temelli gıda ticareti ekosistemidir."
+ },
+ "club-membership": {
+  "route": "/tr/why-t57/club-membership",
+  "section": "why-t57",
+  "name": "Kulüp Üyeliği",
+  "h1": "Yalnızca doğrulanmış üyelerle ticaret yapın.",
+  "answer": "İncelenmiş karşı tarafları eşleştiren, her küresel tarım işleminde dolandırıcılık ve temerrüdü azaltan doğrulanmış bir gıda ticareti kulübü.",
+  "faqs": [
+   {
+    "q": "T57 güven puanı çiftçilerin ve üreticilerin, kooperatiflerin ve üretici örgütlerinin riski azaltmasına nasıl yardımcı olur?",
+    "a": "Güven puanı, bu grupların olası alıcıların, toplayıcıların, işleyicilerin ya da hizmet ortaklarının güvenilir işlemler için gereken meşruiyete, finansal istikrara, ticaret geçmişine ve ilişki gücüne sahip olup olmadığını değerlendirmesine yardımcı olur. Bu da zayıf ya da şeffaf olmayan karşı taraflarla çalışma riskini azaltır."
+   },
+   {
+    "q": "T57 Kimliği finansörler ve yatırımcılar, iş ortakları, iş birlikçiler, hükümetler ve düzenleyici kurumlar için neden yararlı?",
+    "a": "T57 Kimliği bu paydaşlara bir kuruluşun uyum, saha doğrulaması, referanslar ve ekosistem itibarı dahil temel güven faktörlerinde doğrulanıp doğrulanmadığına dair yapılandırılmış bir görünüm sunar. Bu da riski değerlendirmeyi ve nitelikleri standart pazar yeri profillerinden ya da basit işletme kimliklerinden daha gelişmiş bir süreçle desteklenen işletmelerle çalışmayı kolaylaştırır."
+   }
+  ],
+  "title": "T57 Kulüp Üyeliği | Doğrulanmış Küresel Gıda Ticareti Kulübü",
+  "description": "T57 açık bir pazar yeri değil, seçkin bir gıda ve tarım ticareti kulübüdür: doğrulanmış kimlikler, güven puanları ve rozetler üyelerin güvenle ticaret yapmasını sağlar.",
+  "parent": "why-t57"
+ },
+ "rfq-bidding": {
+  "route": "/tr/why-t57/rfq-bidding",
+  "section": "why-t57",
+  "name": "Teklif Talebi (RFQ) ve İhale",
+  "h1": "Tek talep. Karşılaştırılabilir teklifler. Tek sözleşme.",
+  "answer": "Doğrulanmış tedarikçilerden karşılaştırılabilir teklifler alın, en iyisini sözleşmeye dönüştürün.",
+  "faqs": [
+   {
+    "q": "T57'de bir teklif talebine kimler yanıt verebilir?",
+    "a": "Yalnızca ürünleri, kapasitesi ve pazarları taleple örtüşen doğrulanmış üyeler. Alıcılar belirli tedarikçileri de davet edebilir."
+   },
+   {
+    "q": "Satıcılar birbirlerinin tekliflerini görebilir mi?",
+    "a": "Hayır. Her teklifi yalnızca alıcı görür; bu da fiyatlamanın adil ve gizli kalmasını sağlar."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Teklif Talebi Süreci | T57",
+  "description": "T57'de doğrulanmış gıda tedarikçilerine tek bir yapılandırılmış teklif talebi gönderin, birebir kıyaslanabilir teklifleri karşılaştırın ve en iyi teklifi sözleşmeye dönüştürün.",
+  "parent": "why-t57"
+ },
+ "virtual-trade-desk": {
+  "route": "/tr/why-t57/virtual-trade-desk",
+  "section": "why-t57",
+  "name": "Sanal Ticaret Masası",
+  "h1": "Her gıda işletmesine bir ticaret masası.",
+  "answer": "Her üyeye tam donanımlı bir ticaret masası: ön hazırlığı yapay zekâ yapar, kararı insanlar verir.",
+  "faqs": [
+   {
+    "q": "Sanal Ticaret Masası bir insan mı, yazılım mı?",
+    "a": "İkisi de. Ticaret Masası eşleştiren, fiyatlayan, taslak hazırlayan ve tarayan bir yazılımdır; insan incelemesi gereken durumlarda T57'nin ticaret masası ekibi destek verir."
+   },
+   {
+    "q": "Ticaret Masası benim yerime pazarlık yapar mı?",
+    "a": "Hayır. Size eşleşmeler, fiyat verileri ve kontroller sunar. Pazarlığı siz yapar, kararı siz verirsiniz."
+   }
+  ],
+  "title": "Gıda KOBİ'leri İçin Sanal Ticaret Masası | T57",
+  "description": "Gıda KOBİ'leri için tek bir ticaret masasında yapay zekâ eşleştirmesi, fiyat verileri, tekliften sözleşme ve uyum taraması. Yapay zekâ önerir, insanlar karar verir.",
+  "parent": "why-t57"
+ },
+ "market-intelligence": {
+  "route": "/tr/why-t57/market-intelligence",
+  "section": "why-t57",
+  "name": "Piyasa ve Fiyat İstihbaratı",
+  "h1": "Harekete geçmeden önce piyasayı görün.",
+  "answer": "Teklif vermeden, satın almadan ya da plan yapmadan önce menşeye göre fiyatları, arzı ve riski görün.",
+  "faqs": [
+   {
+    "q": "T57'nin fiyat verileri nereden geliyor?",
+    "a": "Kamuya açık piyasa kaynaklarından ve T57'deki anonimleştirilmiş, toplulaştırılmış işlem verilerinden. Hiçbir üyenin kendi fiyatları paylaşılmaz."
+   },
+   {
+    "q": "Verileri T57'de ticaret yapmadan kullanabilir miyim?",
+    "a": "Piyasa istihbaratı T57 üyeliğinin bir parçasıdır ve platformdaki ticareti desteklemek için tasarlanmıştır."
+   }
+  ],
+  "title": "Gıda Piyasası ve Fiyat İstihbaratı | T57",
+  "description": "Gıda fiyatları, menşeye göre arz durumu ve yapay zekâ tahminleri ticaret iş akışınızın içinde. T57'de teklif verin, satın alın ve tüm tabloyu görerek plan yapın.",
+  "parent": "why-t57"
+ },
+ "trade-finance": {
+  "route": "/tr/why-t57/trade-finance",
+  "section": "why-t57",
+  "name": "Ticaret Finansmanı",
+  "h1": "Tek işlem dosyası. Birkaç kredi veren yarışır.",
+  "answer": "Tek bir doğrulanmış işlem dosyası; gıda ticaretinizi finanse etmek için yarışan birkaç kredi veren.",
+  "faqs": [
+   {
+    "q": "Finansmanı T57 mi sağlıyor?",
+    "a": "Hayır. T57 kredi vermez ve müşteri fonu tutmaz. Doğrulanmış işlem dosyanızı, işlemi finanse edip etmeyeceğine ve hangi şartlarla finanse edeceğine karar veren lisanslı kredi verenlere gönderir."
+   },
+   {
+    "q": "Ne tür finansman talep edebilirim?",
+    "a": "Katılımcı bankalar ve finansman şirketleri aracılığıyla, faizsiz seçenekler dahil sevk öncesi ve sevk sonrası finansman, alacak finansmanı ve akreditif."
+   }
+  ],
+  "title": "Gıda KOBİ'leri İçin Ticaret Finansmanı | Kredi Verenler Yarışıyor | T57",
+  "description": "Tek bir doğrulanmış işlem dosyasını birkaç lisanslı kredi verene gönderin ve teklifleri karşılaştırın. T57'de emanet hesabıyla kendi kendini tasfiye eden gıda ticareti finansmanı.",
+  "parent": "why-t57"
+ },
+ "nft-funding": {
+  "route": "/tr/why-t57/nft-funding",
+  "section": "why-t57",
+  "name": "Dijital Varlık Tabanlı Finansman",
+  "h1": "Ticaret belgelerini finanse edilebilir varlıklara dönüştürün.",
+  "answer": "Doğrulanmış ticaret belgelerini finansörlerin güvenip finanse edebileceği dijital varlıklara dönüştürün.",
+  "faqs": [
+   {
+    "q": "Bu kripto para mı?",
+    "a": "Hayır. Tokenleştirilmiş bir ticaret belgesi, fatura ya da ürün senedi gibi gerçek bir varlığın dijital kaydıdır. Bir para birimi değildir."
+   },
+   {
+    "q": "Hangi belgeler tokenleştirilebilir?",
+    "a": "Yerel yasaların elektronik ticaret belgelerini tanıdığı yerlerde, doğrulanmış bir T57 ticaret kaydındaki fatura, ürün senedi ve konşimento gibi ticaret belgeleri."
+   }
+  ],
+  "title": "Dijital Varlıkla Ticaret Finansmanı | Tokenleştirilmiş Belgeler | T57",
+  "description": "T57'de doğrulanmış faturaları, ürün senetlerini ve konşimentoları kredi verenlerin güvenip finanse edebileceği benzersiz dijital varlıklara dönüştürün.",
+  "parent": "why-t57"
+ },
+ "elc-15-minutes": {
+  "route": "/tr/why-t57/elc-15-minutes",
+  "section": "why-t57",
+  "name": "15 Dakikada eAkreditif",
+  "h1": "Akreditifler, sözleşmenizden oluşturulur.",
+  "answer": "Başvurunuz onaylandıktan sonra yaklaşık 15 dakikada açılan elektronik akreditifler.",
+  "faqs": [
+   {
+    "q": "\"15 dakika\" ne anlama geliyor?",
+    "a": "Başvurunuz onaylandıktan sonra iş ortağı bankanın elektronik akreditifi açması için hedeflenen süredir. Onayın kendisi bankanın kendi kredi sürecine bağlıdır."
+   },
+   {
+    "q": "T57 akreditif açıyor mu?",
+    "a": "Hayır. Akreditifleri lisanslı iş ortağı bankalar açar. T57 başvuruyu ticaret kaydınızdan hazırlar ve sizi onlarla buluşturur."
+   }
+  ],
+  "title": "Yaklaşık 15 Dakikada Elektronik Akreditif | T57",
+  "description": "Doğrulanmış sözleşmenizden oluşturulan ve onaydan sonra iş ortağı bankalarca yaklaşık 15 dakikada açılan elektronik akreditifler. Dijital belgeler, daha az uyumsuzluk.",
+  "parent": "why-t57"
+ },
+ "escrow-payments": {
+  "route": "/tr/why-t57/escrow-payments",
+  "section": "why-t57",
+  "name": "Emanet Hesabıyla Ödeme",
+  "h1": "Paranız yalnızca mal hareket ettiğinde hareket eder.",
+  "answer": "Paranız yalnızca mal hareket ettiğinde hareket eder; emanet hesabı kararlaştırılan aşamalarda serbest bırakılır.",
+  "faqs": [
+   {
+    "q": "Emanet hesabındaki parayı kim tutuyor?",
+    "a": "Lisanslı bir emanet hesabı iş ortağı. T57 müşteri fonu tutmaz."
+   },
+   {
+    "q": "Uyuşmazlık olursa ne olur?",
+    "a": "Serbest bırakma otomatik olarak durur ve uyuşmazlık sözleşmeye ve iş ortağının kurallarına göre ele alınır. Çözüldüğünde serbest bırakma devam eder."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Emanet Hesabıyla Ödeme | Aşamalara Göre Ödeyin | T57",
+  "description": "Alıcılar lisanslı bir iş ortağındaki emanet hesabına ödeme yapar; fonlar T57'de yalnızca gözetim, sevkiyat ya da teslimat aşamaları tamamlandığında serbest bırakılır.",
+  "parent": "why-t57"
+ },
+ "alternative-payments": {
+  "route": "/tr/why-t57/alternative-payments",
+  "section": "why-t57",
+  "name": "Alternatif Ödemeler",
+  "h1": "Ödeme için daha fazla yol, yasalar çerçevesinde.",
+  "answer": "Gıda işlemlerini, yasaların izin verdiği yerlerde stabil kripto paralar, dijital varlıklar ya da külçeye dayalı ödemelerle kapatın.",
+  "faqs": [
+   {
+    "q": "Alternatif ödemeler her ülkede kullanılabiliyor mu?",
+    "a": "Hayır. Yalnızca yerel yasaların izin verdiği yerlerde, düzenlemeye tabi iş ortakları aracılığıyla sunulur. Diğer ülkelerdeki üyeler bankalar, emanet hesabı ya da akreditifle ödeme yapar."
+   },
+   {
+    "q": "T57 kripto paramı ya da altınımı tutuyor mu?",
+    "a": "Hayır. Saklama, dönüşüm ve ödeme işlemleri lisanslı iş ortakları tarafından yürütülür. T57 ödemeyi ticaret kaydına işler."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Stabil Kripto Para, Kripto ve Külçe Ödemeleri | T57",
+  "description": "T57'de sınır ötesi gıda işlemlerini, yasal olduğu yerlerde, düzenlemeye tabi iş ortakları aracılığıyla stabil kripto paralar, dijital varlıklar ya da külçeye dayalı ödemelerle kapatın.",
+  "parent": "why-t57"
+ },
+ "digital-bank": {
+  "route": "/tr/why-t57/digital-bank",
+  "section": "why-t57",
+  "name": "Dijital Banka",
+  "h1": "Ödeyin ve ödemenizi alın, her para biriminde.",
+  "answer": "Gıda ticaretinizin içinde, her para biriminde neredeyse anında tutun, ödeyin ve tahsil edin.",
+  "faqs": [
+   {
+    "q": "T57 bir banka mı?",
+    "a": "Hayır. T57'deki dijital bankacılık hizmetleri lisanslı iş ortakları tarafından sağlanır. T57 onları doğrulanmış profilinize ve ticaret kaydınıza bağlar."
+   },
+   {
+    "q": "Hangi para birimlerini tutabilirim?",
+    "a": "Ticaretinizin ihtiyaç duyduğu her para birimini. T57'nin bankacılık iş ortakları para birimleri arasında tutma, dönüştürme ve ödeme işlemlerini yürütür; tedarikçilere kendi para birimlerinde ödeme yapabilir, alıcılardan kendi para birimlerinde tahsilat yapabilirsiniz."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Dijital Banka | Her Para Birimi | T57",
+  "description": "Lisanslı iş ortaklarıyla her para biriminde tutun, ödeyin ve neredeyse anında tahsil edin; her şey T57 ticaret kaydınızdaki sözleşme ve faturalara bağlı.",
+  "parent": "why-t57"
+ },
+ "document-audit-trail": {
+  "route": "/tr/why-t57/document-audit-trail",
+  "section": "why-t57",
+  "name": "Belge Yönetimi ve Denetim İzi",
+  "h1": "Bir işlemin tüm belgeleri, tek kayıtta.",
+  "answer": "Bir işlemin her belgesi, onayı ve aşaması tek bir değiştirilemez kayıtta.",
+  "faqs": [
+   {
+    "q": "Ticaret belgelerimi kimler görebilir?",
+    "a": "Yalnızca o işlem için yetkilendirdiğiniz taraflar; örneğin karşı tarafınız, kredi vereniniz, sigortacınız ya da gözetim firmanız. Erişim denetim izine kaydedilir."
+   },
+   {
+    "q": "Belgeler blokzincirde mi saklanıyor?",
+    "a": "Hayır. Belgeler güvenli biçimde saklanır; her temel kaydın dijital parmak izi kayıt defterine bağlanır. Bu, içeriği açığa çıkarmadan belgenin değişmediğini kanıtlar."
+   }
+  ],
+  "title": "Ticaret Belgesi Yönetimi ve Denetim İzi | T57",
+  "description": "Sözleşmeler, faturalar, sertifikalar ve gözetim raporları tek bir değiştirilemez ticaret kaydında; her gıda işlemi için eksiksiz denetim izi.",
+  "parent": "why-t57"
+ },
+ "capabilities": {
+  "route": "/tr/capabilities",
+  "section": "capabilities",
+  "name": "Çözümler",
+  "h1": "Bir gıda ticaretinin her adımı. Tek kayıt.",
+  "answer": "Bir gıda ticaretinin her parçasını, ilk tekliften son ödemeye kadar tek kayıtta yürütün.",
+  "faqs": [
+   {
+    "q": "Her işlemde tüm çözümleri kullanmak zorunda mıyım?",
+    "a": "Hayır. Üyeler her işlemin ihtiyaç duyduğu çözümleri seçer. Hepsi aynı kaydı paylaştığı için sonradan bir hizmet eklemek baştan başlamak anlamına gelmez."
+   },
+   {
+    "q": "Finansman, ödeme ve sigorta hizmetlerini kim sağlıyor?",
+    "a": "Lisanslı iş ortakları. T57 kredi vermez, müşteri fonu tutmaz, mal sahibi olmaz ve taşımacılık yapmaz. Bu hizmetleri birbirine bağlayan doğrulamayı, iş akışını ve ticaret kaydını sağlar."
+   },
+   {
+    "q": "T57'yi ihracatın yanı sıra yurt içi ticaret için de kullanabilir miyim?",
+    "a": "Evet. T57 sınır ötesi ticaretin yanı sıra süpermarketlere, otel-restoran işletmelerine ve kurumlara yurt içi toptan satışı da destekler. Yurt içi B2B ticareti görün ."
+   }
+  ],
+  "title": "T57 Çözümleri | Gıda Ticaretinin Her Adımı Tek Kayıtta",
+  "description": "Gıda ticareti için teklif talepleri, sözleşmeler, ticaret finansmanı, emanet hesabı, e-akreditifler, sigorta, lojistik, gümrük ve fiyat istihbaratı; hepsi tek bir T57 ticaret kaydında bağlantılı."
+ },
+ "cap-trade": {
+  "route": "/tr/capabilities/trade",
+  "section": "capabilities",
+  "name": "Ticaretin Yürütülmesi",
+  "h1": "İlk talepten teslim edilmiş işleme.",
+  "answer": "Bir gıda ticareti fırsatını kararlaştırılmış, teslim edilmiş ve belgelenmiş bir işleme dönüştürün.",
+  "faqs": [
+   {
+    "q": "Ticaretin Yürütülmesi'ni finansman ya da lojistik olmadan kullanabilir miyim?",
+    "a": "Evet. Teklif taleplerini, sözleşmeleri ve izlenebilirliği tek başına kullanabilir, finansmanı, sigortayı ya da lojistiği istediğiniz işleme sonradan ekleyebilirsiniz."
+   },
+   {
+    "q": "T57 malları alıp satıyor mu?",
+    "a": "Hayır. T57 mal sahibi olmaz. Üyeler T57'de doğrudan birbirleriyle ticaret yapar."
+   },
+   {
+    "q": "Hangi ürünlerin ticaretini yapabilirim?",
+    "a": "Zincirin tamamındaki gıdalar: yetiştirilen, beslenen ve avlanan ürünler ile işlenmiş, imal edilmiş ve markalı ürünler."
+   }
+  ],
+  "title": "Gıda Ticaretinin Yürütülmesi | Teklif Talepleri, Sözleşmeler ve İzlenebilirlik | T57",
+  "description": "Teklif talepleri, sözleşmeli tarım, kamu ihaleleri, izlenebilirlik ve mesajla siparişler; ilk talepten teslimata kadar tek bir T57 ticaret kaydında.",
+  "parent": "capabilities"
+ },
+ "cap-rfq": {
+  "route": "/tr/capabilities/trade/rfq",
+  "section": "capabilities",
+  "name": "Teklif Talebi ve Ticaretin Yürütülmesi",
+  "h1": "Tek talep. Birebir kıyaslanabilir teklifler.",
+  "answer": "Tek bir yapılandırılmış talep gönderin, doğrulanmış teklifleri karşılaştırın ve seçtiğiniz işlemi yürütün.",
+  "faqs": [
+   {
+    "q": "Bir teklif talebi ne kadar süre açık kalır?",
+    "a": "Son tarihi alıcı belirler. Talep kapandıktan sonra gelen teklifler, alıcı talebi yeniden açmadıkça gösterilmez."
+   },
+   {
+    "q": "Teklifleri aldıktan sonra pazarlık yapabilir miyim?",
+    "a": "Evet. Sözleşmeyi vermeden önce herhangi bir tedarikçiye açıklayıcı sorular sorabilir ya da revize teklif isteyebilirsiniz."
+   },
+   {
+    "q": "Satıcılar teklif talebi olmadan teklif oluşturabilir mi?",
+    "a": "Evet. Doğrulanmış satıcılar, alıcıların doğrudan yanıt verebileceği ürün ilanları ve toptan şartlar yayımlayabilir."
+   }
+  ],
+  "title": "Gıda İçin Teklif Talebi ve Ticaretin Yürütülmesi | T57",
+  "description": "Yapılandırılmış teklif talepleri, doğrulanmış teklif verenler, birebir karşılaştırma ve kabul edilen tekliften sözleşme. Gıda işlemlerini tek bir T57 kaydında tedarik edin ve yürütün.",
+  "parent": "cap-trade"
+ },
+ "cap-trade-desk": {
+  "route": "/tr/capabilities/trade/virtual-trade-desk",
+  "section": "capabilities",
+  "name": "Sanal Ticaret Masası",
+  "h1": "Bir ticaret şirketinin masası, kadro kurmadan.",
+  "answer": "İşletmenize, kimseyi işe almadan küresel bir ticaret şirketinin ticaret masasını kazandırın.",
+  "faqs": [
+   {
+    "q": "Ticaret Masası üyeliğe dahil mi?",
+    "a": "Evet. Doğrulanmış her üye Ticaret Masası'nı kullanabilir. Üst üyelik kademeleri daha derin veri ve daha yüksek kullanım içerir."
+   },
+   {
+    "q": "Ticaret Masası benim yerime karar verir mi?",
+    "a": "Hayır. Öneriler, taslaklar ve kontroller sunar. Her ticari kararı siz verirsiniz."
+   },
+   {
+    "q": "Ticaret Masası bir sorunu işaretlediğinde ne olur?",
+    "a": "Sorunu ve önerilen çözümü görürsünüz. Sorun uyum ya da doğrulamayla ilgiliyse insan incelemesi için T57'nin ekibine gider."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Sanal Ticaret Masası | Yapay Zekâ ve İnsan İncelemesi | T57",
+  "description": "Gıda KOBİ'leri için yapay zekâ ile karşı taraf eşleştirme, fiyat verileri, sözleşme taslağı, yaptırım taraması ve belge kontrolleri; her kararı insanlar verir.",
+  "parent": "cap-trade"
+ },
+ "cap-contract-farming": {
+  "route": "/tr/capabilities/trade/contract-farming",
+  "section": "capabilities",
+  "name": "Sözleşmeli Tarım",
+  "h1": "Gelecek sezonun ürününü bugünden kararlaştırın.",
+  "answer": "Gelecek sezonun ürününü bugünden kararlaştırın; alıcılar, yetiştiriciler ve finansman tek kayıtta.",
+  "faqs": [
+   {
+    "q": "Bireysel küçük üreticiler T57'de sözleşmeli tarımı kullanabilir mi?",
+    "a": "Evet; genellikle T57 üyeliğini taşıyan ve üyeleri adına imza atan bir kooperatif ya da üretici örgütü aracılığıyla."
+   },
+   {
+    "q": "Sezon içinde fiyatlar değişirse ne olur?",
+    "a": "Sözleşmeye bağlıdır. Sabit fiyatlı, taban fiyatlı ve formüle dayalı anlaşmalar fiyat hareketlerini farklı biçimlerde ele alır; şartlar baştan kararlaştırılır."
+   },
+   {
+    "q": "Girdileri ya da finansmanı T57 mi sağlıyor?",
+    "a": "Hayır. Girdiler alıcılardan ya da iş ortaklarından, finansman lisanslı kredi verenlerden gelir. T57 sözleşmeyi, kayıtları ve iş akışını sağlar."
+   }
+  ],
+  "title": "Sözleşmeli Tarım Platformu | Gıda İçin Vadeli Sözleşmeler | T57",
+  "description": "Alıcılar, çiftçiler ve kooperatifler arasında vadeli anlaşmalar, kalite standartları, girdi finansmanı ve aşamalı ödemeler; hepsi tek bir T57 kaydında.",
+  "parent": "cap-trade"
+ },
+ "cap-tenders": {
+  "route": "/tr/capabilities/trade/government-tenders",
+  "section": "capabilities",
+  "name": "Kamu İhaleleri",
+  "h1": "Kamu gıda ihalelerini doğrulanmış tedarikçi olarak kazanın.",
+  "answer": "Kamu gıda ihalelerini doğrulanmış bir tedarikçi olarak bulun, yanıtlayın ve teslim edin.",
+  "faqs": [
+   {
+    "q": "T57 benim adıma teklif veriyor mu?",
+    "a": "Hayır. T57 bir yanıtı bulmanıza, anlamanıza ve hazırlamanıza yardım eder. Yanıtı ihaleyi açan idarenin resmî kanalından siz sunarsınız."
+   },
+   {
+    "q": "Kamu alıcıları ihale yürütmek için T57'yi kullanabilir mi?",
+    "a": "Kamu alıcıları kendi satın alma kuralları ve sistemlerinin yanında, doğrulanmış T57 üyelerini teklif vermeye davet edebilir ve teslimatı T57'de takip edebilir."
+   },
+   {
+    "q": "Hangi ülkelerin ihaleleri kapsanıyor?",
+    "a": "Önce T57'nin kurucu pazarlarının (Suudi Arabistan, BAE, Hindistan, Malezya ve Türkiye) ihaleleri; zamanla yeni pazarlar ekleniyor."
+   }
+  ],
+  "title": "Kamu Gıda İhaleleri | Kamu Sözleşmelerini Bulun ve Kazanın | T57",
+  "description": "Kamu gıda ihalelerini keşfedin, yapay zekâ özetleri ve katılım kontrolleri alın, mevzuata uygun yanıtlar hazırlayın ve tek bir T57 ticaret kaydında teslim edin.",
+  "parent": "cap-trade"
+ },
+ "cap-traceability": {
+  "route": "/tr/capabilities/trade/traceability",
+  "section": "capabilities",
+  "name": "İzlenebilirlik",
+  "h1": "Gıdanızın nereden geldiğini kanıtlayın.",
+  "answer": "Gıdanızın nereden geldiğini, nasıl elleçlendiğini ve kimlerin elinden geçtiğini kanıtlayın.",
+  "faqs": [
+   {
+    "q": "Bir partinin kaydına kimler bilgi ekler?",
+    "a": "Partiyi elleçleyen taraflar; üretici, işleyici, gözetim firması ve lojistik ortağı gibi her biri sorumlu olduğu olayları ekler."
+   },
+   {
+    "q": "Tüketiciler izlenebilirlik bilgilerini görebilir mi?",
+    "a": "Evet, marka ya da satıcı bunu bir bağlantı veya karekodla paylaşmayı seçerse. Ticari ayrıntılar gizli kalır."
+   },
+   {
+    "q": "T57'deki izlenebilirlik belgelendirmenin yerini alır mı?",
+    "a": "Hayır. Sertifikaları yine akredite kuruluşlar verir. T57 onları kapsadıkları partilere bağlar ve kontrol edilmelerini kolaylaştırır."
+   }
+  ],
+  "title": "Kaynaktan Alıcıya Gıda İzlenebilirliği | T57",
+  "description": "Doğrulanmış menşeler, bağlı sertifikalar ve değiştirilemez bir kayıtla parti düzeyinde gıda izlenebilirliği. T57'de menşeyi kanıtlayın, geri çağırmaları hızlandırın.",
+  "parent": "cap-trade"
+ },
+ "cap-chat-orders": {
+  "route": "/tr/capabilities/trade/whatsapp-orders",
+  "section": "capabilities",
+  "name": "Yapay Zekâ ile Sipariş",
+  "h1": "WhatsApp'tan sipariş verin. Gerçek bir sipariş alın.",
+  "answer": "Gıdayı tedarikçilerinizle zaten konuştuğunuz şekilde, WhatsApp, sesli mesaj ya da sohbetle sipariş edin.",
+  "faqs": [
+   {
+    "q": "Bir şey yüklemem gerekiyor mu?",
+    "a": "Hayır. Doğrulanmış üyeler hesapları bağlandıktan sonra WhatsApp ya da T57 sohbeti üzerinden sipariş verebilir."
+   },
+   {
+    "q": "Yapay zekâ siparişimi yanlış anlarsa ne olur?",
+    "a": "Onaylamadan önce her zaman bir özet görürsünüz, böylece düzeltebilirsiniz. Siz onaylamadan tedarikçiye hiçbir şey gönderilmez."
+   },
+   {
+    "q": "WhatsApp yazışmam saklanıyor mu?",
+    "a": "Yalnızca onayladığınız sipariş bilgileri, T57'nin gizlilik politikası çerçevesinde ticaret kaydına işlenir."
+   }
+  ],
+  "title": "Gıda İşletmeleri İçin WhatsApp ve Yapay Zekâ ile Sohbetten Sipariş | T57",
+  "description": "Gıdayı WhatsApp mesajı ya da sesli mesajla sipariş edin. Yapay zekâ gündelik dili T57 ticaret kaydınızda onaylı, yapılandırılmış siparişlere dönüştürür.",
+  "parent": "cap-trade"
+ },
+ "cap-trust-payments": {
+  "route": "/tr/capabilities/finance/trust-payments",
+  "section": "capabilities",
+  "name": "Güven ve Ödemeler",
+  "h1": "Ödeyin ve ödemenizi alın, güvenle.",
+  "answer": "İki tarafın da görüp güvenebileceği şartlarla, güvenle ödeyin ve ödemenizi alın.",
+  "faqs": [
+   {
+    "q": "Hangi ödeme seçeneğini seçmeliyim?",
+    "a": "Emanet hesabı yeni ilişkilerin çoğuna ve yurt içi toptan satışa uyar. E-akreditif, banka garantisi beklenen büyük sınır ötesi işlemlere uyar. Cüzdan ödemeleri güvenilir, tekrarlanan ilişkilere uyar."
+   },
+   {
+    "q": "Ödeme seçeneklerini birleştirebilir miyim?",
+    "a": "Evet. Örneğin bir ön ödeme emanet hesabına, kalan tutar akreditifle ödenebilir; hepsi aynı ticaret kaydında."
+   },
+   {
+    "q": "Ödeme uyuşmazlıklarını kim çözer?",
+    "a": "Uyuşmazlıklar sözleşmeye ve lisanslı iş ortağının kurallarına göre ele alınır. Çözülene kadar serbest bırakma otomatik olarak durur."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Güven ve Ödemeler | Emanet Hesabı, Cüzdan, E-akreditif | T57",
+  "description": "Lisanslı iş ortaklarından emanet hesabı, her para biriminde cüzdanlar ve elektronik akreditifler; tek bir doğrulanmış T57 ticaret kaydındaki aşamalara bağlı.",
+  "parent": "capabilities"
+ },
+ "cap-escrow": {
+  "route": "/tr/capabilities/finance/escrow",
+  "section": "capabilities",
+  "name": "Emanet Hesabı ve Ticari Güvence",
+  "h1": "Mal doğru olana kadar ödeme güvende tutulur.",
+  "answer": "Mal, kalite ve belgeler doğru olana kadar ödemeyi güvende tutun.",
+  "faqs": [
+   {
+    "q": "Parayı kim tutuyor?",
+    "a": "T57'den de, işlem yapan iki taraftan da ayrı bir hesapta, lisanslı bir emanet hesabı iş ortağı."
+   },
+   {
+    "q": "Emanet hesabının maliyeti nedir?",
+    "a": "Emanet hesabı ücretlerini iş ortağı belirler; sözleşmeyi kararlaştırmadan önce gösterilir."
+   },
+   {
+    "q": "Emanet hesabı akreditif ya da ticaret finansmanıyla birlikte kullanılabilir mi?",
+    "a": "Evet. Emanet hesabı aynı ticaret kaydında bir akreditifle birlikte kullanılabilir ya da ödeme aşamasında ticaret finansmanı veren kuruma geri ödeme yapabilir."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Emanet Hesabı ve Ticari Güvence | T57",
+  "description": "Alıcının fonları lisanslı emanet hesabı iş ortaklarında tutulur ve T57'de gözetim, sevkiyat ya da teslimatta, uyuşmazlık tetikleyicileriyle kademeli olarak serbest bırakılır.",
+  "parent": "cap-trust-payments"
+ },
+ "cap-wallet": {
+  "route": "/tr/capabilities/finance/digital-wallet",
+  "section": "capabilities",
+  "name": "Dijital Cüzdan ve Ödemeler",
+  "h1": "Her ticari ödeme için tek cüzdan.",
+  "answer": "Her para biriminde, her faturaya bağlı, her ticari ödeme için tek cüzdan.",
+  "faqs": [
+   {
+    "q": "T57 cüzdanı bir banka hesabı mı?",
+    "a": "Lisanslı bir iş ortağının sağladığı bir elektronik para ya da ödeme hesabıdır. Tam bankacılık hizmetleri için Dijital Bankacılık'a bakın."
+   },
+   {
+    "q": "T57'de olmayan kişilere ödeme yapabilir miyim?",
+    "a": "Evet. İş ortağının kontrollerine tabi olarak, cüzdanınızdan dış tedarikçilere ve hizmet sağlayıcılara banka havalesiyle ödeme yapabilirsiniz."
+   },
+   {
+    "q": "Ücretler nedir?",
+    "a": "Ücretleri ve döviz kurlarını ödeme iş ortağı belirler; her ödemeyi onaylamadan önce gösterilir."
+   }
+  ],
+  "title": "Gıda Ticareti Ödemeleri İçin Dijital Cüzdan | Her Para Birimi | T57",
+  "description": "T57'de tedarikçilere ve iş ortaklarına ödeme yapın, alıcılardan her para biriminde tahsilat alın; üyeler arasında neredeyse anında ödeme ve otomatik mutabakat.",
+  "parent": "cap-trust-payments"
+ },
+ "cap-elc": {
+  "route": "/tr/capabilities/finance/elc",
+  "section": "capabilities",
+  "name": "Elektronik Akreditif",
+  "h1": "Akreditifler, sözleşmenizden oluşturulur.",
+  "answer": "Sözleşmenizden oluşturulan, dijital olarak açılan ve kâğıtsız ibraz edilen akreditifler.",
+  "faqs": [
+   {
+    "q": "\"Yaklaşık 15 dakika\" ne anlama geliyor?",
+    "a": "Banka başvurunuzu onayladıktan sonra açılış için hedeflenen süredir. Onay, bankanın olağan kredi sürecine bağlıdır."
+   },
+   {
+    "q": "Kendi bankam akreditifi T57'de açabilir mi?",
+    "a": "Bankanız bir T57 iş ortağıysa evet. Değilse T57 sizi katılımcı bankalarla buluşturabilir."
+   },
+   {
+    "q": "Elektronik akreditifler hukuken geçerli mi?",
+    "a": "Akreditifler bankalar arasında yaygın olarak elektronik ortamda açılır ve ihbar edilir. Ticaret belgelerinin elektronik ibrazı yerel hukuka bağlıdır; hâlâ gerekli olduğu yerlerde T57 kâğıt ibrazı da destekler."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Elektronik Akreditif (e-akreditif) | T57",
+  "description": "Sözleşmenizden oluşturulan, onaydan sonra iş ortağı bankalarca yaklaşık 15 dakikada açılan akreditifler; T57'de yapay zekâ ile uyumsuzluk kontrolü ve dijital ibraz.",
+  "parent": "cap-trust-payments"
+ },
+ "cap-banking": {
+  "route": "/tr/capabilities/finance/banking",
+  "section": "capabilities",
+  "name": "Bankacılık ve Para Transferi",
+  "h1": "Ticaret yaptığınız yerde bankacılık ve para transferi.",
+  "answer": "Ticaret yaptığınız yerde, her para biriminde bankacılık işlemlerinizi yapın, döviz çevirin ve sınırlar ötesine para gönderin.",
+  "faqs": [
+   {
+    "q": "T57 bir banka mı?",
+    "a": "Hayır. T57 doğrulanmış üyeleri lisanslı bankacılık ve ödeme iş ortaklarına bağlar ve onların hizmetlerini ticaret kaydına bağlar."
+   },
+   {
+    "q": "Mevcut bankamla çalışmaya devam edebilir miyim?",
+    "a": "Evet. Kendi bankanızı kullanmaya devam edip T57'ye bağlayabilir ya da T57'nin iş ortaklarını onunla birlikte kullanabilirsiniz."
+   },
+   {
+    "q": "Dijital varlık hizmetleri her yerde mevcut mu?",
+    "a": "Hayır. Yalnızca yasaların izin verdiği yerlerde, düzenlemeye tabi iş ortakları aracılığıyla sunulur."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Bankacılık ve Para Transferi | T57",
+  "description": "T57'de doğrulanmış gıda işletmeleri için dijital bankacılık, her para biriminde hesap, sınır ötesi transferler ve düzenlemeye tabi dijital varlıkla ödeme.",
+  "parent": "capabilities"
+ },
+ "cap-digital-bank": {
+  "route": "/tr/capabilities/finance/digital-bank",
+  "section": "capabilities",
+  "name": "Dijital Bankacılık",
+  "h1": "Ticari bankacılık, Pasaportunuzla açılır.",
+  "answer": "Gıda ticaretinize göre kurgulanmış, T57 Pasaportunuzla açılan ticari bankacılık.",
+  "faqs": [
+   {
+    "q": "Banka hesabını kim sağlıyor?",
+    "a": "Pazarınızdaki lisanslı bir bankacılık iş ortağı, kendi şartları ve düzenlemesi çerçevesinde."
+   },
+   {
+    "q": "Mevcut bankacılığımı taşımam gerekiyor mu?",
+    "a": "Hayır. T57'nin bankacılık iş ortaklarını mevcut bankanızla birlikte kullanabilirsiniz."
+   },
+   {
+    "q": "Hangi ülkeler kapsanıyor?",
+    "a": "Önce T57'nin kurucu pazarları (Suudi Arabistan, BAE, Hindistan, Malezya ve Türkiye); iş ortakları katıldıkça yenileri ekleniyor."
+   }
+  ],
+  "title": "Gıda İşletmeleri İçin Dijital Ticari Bankacılık | T57",
+  "description": "T57 Pasaportunuzla açılan ve her işleme bağlı, lisanslı iş ortaklarından her para biriminde ticari hesaplar, kartlar ve neredeyse anında ödeme.",
+  "parent": "cap-banking"
+ },
+ "cap-any-currency": {
+  "route": "/tr/capabilities/finance/multi-currency",
+  "section": "capabilities",
+  "name": "Her Para Biriminde Hesap ve Havale",
+  "h1": "Her para birimi. Kuru önce siz görürsünüz.",
+  "answer": "Her para biriminde para tutun, çevirin ve gönderin; kuru ödemeden önce görün.",
+  "faqs": [
+   {
+    "q": "Hangi para birimlerini tutup gönderebilirim?",
+    "a": "T57'nin bankacılık ve ödeme iş ortakları aracılığıyla, işleminizin ihtiyaç duyduğu her para birimini."
+   },
+   {
+    "q": "Transferler ne kadar sürüyor?",
+    "a": "T57 üyeleri arasındaki ödemeler neredeyse anında gerçekleşir. Dış transferler varış yerine ve iş ortağı ağına bağlıdır; beklenen süre onaylamadan önce gösterilir."
+   },
+   {
+    "q": "Bireysel havale gönderebilir miyim?",
+    "a": "İş ortaklarının sunduğu yerlerde doğrulanmış kurumsal üyeler çalışanları için havale gönderebilir. T57 bireysel hesaplar için değil, ticari ödemeler için tasarlanmıştır."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Her Para Biriminde Hesap | T57",
+  "description": "T57'de baştan gösterilen kurlar ve hızlı sınır ötesi transferlerle her para biriminde para tutun, çevirin ve gönderin; her şey işlemlerinize bağlı.",
+  "parent": "cap-banking"
+ },
+ "cap-digital-assets": {
+  "route": "/tr/capabilities/finance/crypto-banking",
+  "section": "capabilities",
+  "name": "Kripto ve Dijital Varlıklar",
+  "h1": "Stabil kripto paralarla ya da altına dayalı tokenlerle ödeyin.",
+  "answer": "İşlemlerinizi düzenlemeye tabi iş ortakları aracılığıyla stabil kripto paralar, dijital varlıklar ya da altına dayalı tokenlerle kapatın.",
+  "faqs": [
+   {
+    "q": "Dijital varlıkla ödeme ülkemde yasal mı?",
+    "a": "T57 dijital varlık seçeneklerini yalnızca yerel kurallara göre iki taraf için de izin verilen yerlerde, lisanslı iş ortakları aracılığıyla gösterir."
+   },
+   {
+    "q": "Fiyat oynaklığı ne olacak?",
+    "a": "Stabil kripto paralar ve altına dayalı tokenler oynaklığı azaltmak için tasarlanmıştır; iş ortakları ödeme anında yerel para birimine dönüşüm yapabilir."
+   },
+   {
+    "q": "Dijital varlıkla ödemeler faizsiz finansman ilkelerine uygun mu?",
+    "a": "Âlimlerin görüşleri farklıdır. İslami esaslara uygun ödemeye ihtiyaç duyan üyeler bir uzmana danışmalı; bunun yerine altına dayalı tokenleri ya da geleneksel seçenekleri tercih edebilir."
+   }
+  ],
+  "title": "Kripto, Stabil Kripto Para ve Altın Tokeniyle Ticari Ödeme | T57",
+  "description": "Gıda işlemlerini yasal olduğu yerlerde lisanslı iş ortakları aracılığıyla stabil kripto paralar, dijital varlıklar ya da altına dayalı tokenlerle kapatın; her şey T57 ticaret kaydınıza bağlı.",
+  "parent": "cap-banking"
+ },
+ "cap-financing": {
+  "route": "/tr/capabilities/finance/financing",
+  "section": "capabilities",
+  "name": "Finansman ve Sermaye",
+  "h1": "Gıda ticaretinizin her aşamasını finanse edin.",
+  "answer": "Gıda ticaretinizin ekim ve üretimden sevkiyat ve satışa kadar her aşamasını finanse edin.",
+  "faqs": [
+   {
+    "q": "Finansmanı kim sağlıyor?",
+    "a": "Lisanslı bankalar, finansman şirketleri, katılım finansmanı sağlayıcıları ve izin verilen yerlerde kurumsal yatırımcılar. T57 kredi vermez."
+   },
+   {
+    "q": "Kredi verenler neyi görür?",
+    "a": "Yalnızca paylaşmayı seçtiğiniz işlem dosyasını: T57 Pasaportunuz, sözleşme, karşı taraflar, belgeler ve ticaret geçmişi."
+   },
+   {
+    "q": "Geri ödeme nasıl işliyor?",
+    "a": "Çoğu yapıda nihai alıcının ödemesi emanet hesabına girer ve kalan tutar size serbest bırakılmadan önce ödeme aşamasında kredi verene geri ödeme yapılır."
+   }
+  ],
+  "title": "Gıda Ticareti Finansmanı ve Sermaye | Kredi Verenler Yarışıyor | T57",
+  "description": "T57'de yarışan lisanslı kredi verenlerden doğrulanmış gıda işlemleri için ticaret ve tedarik zinciri finansmanı, faizsiz finansman ve tokenleştirilmiş fonlama.",
+  "parent": "capabilities"
+ },
+ "cap-supply-chain-finance": {
+  "route": "/tr/capabilities/finance/supply-chain-finance",
+  "section": "capabilities",
+  "name": "Ticaret ve Tedarik Zinciri Finansmanı",
+  "h1": "İşletme sermayesi her adımda.",
+  "answer": "Gıda zincirinin her adımında, işleminiz için yarışan kredi verenlerden işletme sermayesi alın.",
+  "faqs": [
+   {
+    "q": "Teklifleri ne kadar hızlı alabilirim?",
+    "a": "Bu her kredi verenin sürecine bağlıdır. İşlem dosyası zaten doğrulanmış olduğu için kredi verenler standart bir başvuruya göre daha hızlı yanıt verebilir."
+   },
+   {
+    "q": "Teminat gerekir mi?",
+    "a": "Pek çok yapı mülk ya da başka teminatlar yerine kesinleşmiş siparişler, faturalar ve emanet hesabından geri ödeme yoluyla işlemin kendisine dayanır. Her kredi veren kendi gerekliliklerini belirler."
+   },
+   {
+    "q": "Büyük alıcılar tedarikçilerine finansman sunabilir mi?",
+    "a": "Evet. Borç finansmanı yoluyla bir çapa alıcı, doğrulanmış tedarikçilerinin iş ortağı kredi verenlerden erken ödeme almasını sağlayabilir."
+   }
+  ],
+  "title": "Gıda KOBİ'leri İçin Ticaret ve Tedarik Zinciri Finansmanı | T57",
+  "description": "T57'de doğrulanmış gıda işlemleri için kredi verenlerin yarıştığı, emanet hesabından geri ödemeli sevk öncesi, sevk sonrası, alacak, borç ve stok finansmanı.",
+  "parent": "cap-financing"
+ },
+ "cap-fundraising": {
+  "route": "/tr/capabilities/finance/crowdfunding",
+  "section": "capabilities",
+  "name": "Varlığa Dayalı Fon Toplama ve Tokenleştirme",
+  "h1": "Gerçek gıda varlıklarına dayanarak sermaye toplayın.",
+  "answer": "Doğrulanmış işlemlerden depo stokuna ve tarım ekipmanına kadar gerçek gıda varlıklarına dayanarak sermaye toplayın.",
+  "faqs": [
+   {
+    "q": "Bu kripto parayla aynı şey mi?",
+    "a": "Hayır. Tokenleştirilmiş bir varlık, fatura ya da soğuk hava deposu gibi gerçek bir varlığın dijital kaydıdır. Bir para birimi değildir."
+   },
+   {
+    "q": "Kimler yatırım yapabilir?",
+    "a": "Lisanslı kredi verenler ve lisanslı fon toplama platformunun kurallarına ve kendi ülkelerinin mevzuatına göre uygun olan yatırımcılar."
+   },
+   {
+    "q": "İşlem başarısız olursa ne olur?",
+    "a": "Sonuç yapıya bağlıdır. Finansörlerin dayanak varlık, sigorta ya da garantiler üzerinde hakları olabilir; bunlar taahhüt vermeden önce belirlenir."
+   }
+  ],
+  "title": "Gıda İçin Varlığa Dayalı Fon Toplama ve Tokenleştirme | T57",
+  "description": "T57'de doğrulanmış faturaları, ürün senetlerini ve gıda varlıklarını tokenleştirin; yasaların izin verdiği yerlerde lisanslı kredi verenler ve yatırımcılar finanse edebilsin.",
+  "parent": "cap-financing"
+ },
+ "cap-risk": {
+  "route": "/tr/capabilities/finance/risk-protection",
+  "section": "capabilities",
+  "name": "Risk ve Koruma",
+  "h1": "Her işlemi kayba ve temerrüde karşı koruyun.",
+  "answer": "Her işlemi ticaret kaydından oluşturulan teminatlarla kayba, temerrüde ve aksaklığa karşı koruyun.",
+  "faqs": [
+   {
+    "q": "T57 sigorta satıyor mu?",
+    "a": "T57 üyeleri lisanslı sigortacılar, tekâfül şirketleri ve brokerlerle buluşturur. Poliçeleri onlar kendi düzenlemeleri çerçevesinde düzenler."
+   },
+   {
+    "q": "Mevcut sigortacımı kullanabilir miyim?",
+    "a": "Evet. Mevcut poliçelerinizi ticaret kaydına yükleyerek akreditiflerde, kredi verenlerle ve hasar taleplerinde kullanabilirsiniz."
+   },
+   {
+    "q": "Uyum taraması neleri kontrol ediyor?",
+    "a": "Bir işlem ilerlemeden önce her karşı taraf için yaptırım listeleri, izleme listeleri, olumsuz basın haberleri ve gerçek faydalanıcılar."
+   }
+  ],
+  "title": "Ticari Risk ve Koruma | Emtia, Alacak ve Tekâfül | T57",
+  "description": "Gıda ticareti için lisanslı iş ortaklarından emtia sigortası, ticari alacak teminatı, tekâfül, ürün teminatı ve uyum taraması; her T57 işlemine bağlı.",
+  "parent": "capabilities"
+ },
+ "cap-logistics": {
+  "route": "/tr/capabilities/logistics",
+  "section": "capabilities",
+  "name": "Lojistik ve Sipariş Karşılama",
+  "h1": "Tarladan ya da fabrikadan alıcıya, tek kayıtta.",
+  "answer": "Gıdayı tarladan ya da fabrikadan alıcıya taşıyın; navlun, takip ve gümrük tek kayıtta.",
+  "faqs": [
+   {
+    "q": "Kendi nakliye komisyoncumu kullanabilir miyim?",
+    "a": "Evet. Komisyoncunuzu ticaret kaydına davet edebilir ya da onun belgelerini ve takip verilerini yükleyebilirsiniz."
+   },
+   {
+    "q": "T57 soğuk zincir sevkiyatlarını destekliyor mu?",
+    "a": "Evet. Soğutulmuş ve dondurulmuş mallar için soğuk zincir iş ortakları ve sıcaklık takibi mevcuttur."
+   },
+   {
+    "q": "Hangi taşıma türleri kapsanıyor?",
+    "a": "Onaylı iş ortakları aracılığıyla deniz, hava ve kara taşımacılığı ile depolama ve soğuk depolama."
+   }
+  ],
+  "title": "Gıda Lojistiği ve Sipariş Karşılama: Navlun ve Gümrük | T57",
+  "description": "Onaylı navlun, soğuk zincir, gözetim ve gümrük iş ortaklarıyla rezervasyon yapın, sevkiyatları anlık takip edin ve sınırları daha hızlı geçin; hepsi tek bir T57 ticaret kaydında.",
+  "parent": "capabilities"
+ },
+ "cap-logistics-network": {
+  "route": "/tr/capabilities/logistics/network",
+  "section": "capabilities",
+  "name": "Akıllı Lojistik Ağı",
+  "h1": "Onaylı navlun ve soğuk zincir, her işleme göre eşleşir.",
+  "answer": "Her işlemle eşleşen onaylı navlun, soğuk zincir ve depolama iş ortaklarını karşılaştırın ve rezervasyon yapın.",
+  "faqs": [
+   {
+    "q": "Lojistik iş ortakları nasıl onaylanıyor?",
+    "a": "İş ortakları işletme doğrulamasından, lisans ve sigorta kontrollerinden geçer; performansları kayıtlı sevkiyatlara göre puanlanır."
+   },
+   {
+    "q": "Kendi komisyoncumu davet edebilir miyim?",
+    "a": "Evet. Mevcut komisyoncunuz ticaret kaydına katılabilir ve ağdaki iş ortaklarıyla birlikte teklif verebilir."
+   },
+   {
+    "q": "T57 navlun ücretlerini pazarlık ediyor mu?",
+    "a": "T57 talebi bir araya getirir ve karşılaştırılabilir teklifler gösterir; bu da üyelerin rekabetçi fiyatlar almasına yardımcı olur. Seçimi ve rezervasyonu üyeler yapar."
+   }
+  ],
+  "title": "Gıda Lojistiği Ağı | Navlun ve Soğuk Zincir | T57",
+  "description": "T57'de her gıda işlemiyle eşleşen onaylı nakliye komisyoncularını, taşıyıcıları, soğuk zincir ve depolama iş ortaklarını karşılaştırın ve rezervasyon yapın; rota riski uyarılarıyla.",
+  "parent": "cap-logistics"
+ },
+ "markets": {
+  "route": "/tr/markets",
+  "section": "markets",
+  "name": "Pazarlar",
+  "h1": "Beş kurucu pazar. Tek doğrulanmış ağ.",
+  "answer": "Beş kurucu pazarda, tek bir doğrulanmış ağ üzerinden ticaret yapın.",
+  "faqs": [
+   {
+    "q": "T57 hangi ülkelerde faaliyet gösteriyor?",
+    "a": "Suudi Arabistan, BAE, Hindistan, Malezya ve Türkiye. Yeni pazarlar ardından gelecek."
+   },
+   {
+    "q": "T57 pazarı olmayan bir ülkeyle ticaret yapabilir miyim?",
+    "a": "Kurucu pazarlardaki üyeler, diğer kurucu pazarlardaki doğrulanmış üyelerle alım satım yapabilir."
+   },
+   {
+    "q": "T57 yurt içi ticareti de destekliyor mu, yoksa yalnızca ihracatı mı?",
+    "a": "İkisini de. Yurt içi B2B ticaret ve sınır ötesi ticaret aynı platformda yürür."
+   }
+  ],
+  "title": "Pazarlar | Suudi Arabistan, BAE, Hindistan, Malezya, Türkiye | T57",
+  "description": "Beş kurucu pazarda yurt içi toptan satış ve sınır ötesi ticaret için yerel ekipler ve iş ortaklarıyla tek bir doğrulanmış gıda ticaret ağı."
+ },
+ "markets-global": {
+  "route": "/tr/markets/global-rollout",
+  "section": "markets",
+  "name": "Küresel Yayılım",
+  "h1": "Önce beş pazar. Ardından tüm dünya.",
+  "answer": "T57, beş kurucu pazarda sahadaki ekiplerle başlar; 195 ülkedeki doğrulanmış işletmelere çevrimiçi açıktır ve yeni pazarları aşama aşama, henüz ofisi olmayan yerlerde ülke iş ortaklarıyla açar.",
+  "faqs": [
+   {
+    "q": "T57 yalnızca beş kurucu pazar için mi?",
+    "a": "Hayır. Beş kurucu pazarda sahada ülke ekipleri var, ancak T57 195 ülkedeki doğrulanmış işletmelere çevrimiçi açıktır ve yeni pazarlar aşama aşama açılır."
+   },
+   {
+    "q": "Ülkem henüz T57 pazarı değilse katılabilir miyim?",
+    "a": "Evet. Çevrimiçi başvurun; dijital KYB ve KYC kontrollerini ve uyum taramasını tamamlayın. Teslimat ya da vadeli ödeme gibi bazı yerel hizmetler, ülkenizdeki iş ortağı kapsamına bağlıdır."
+   },
+   {
+    "q": "T57 bir pazarı açtığında neler değişir?",
+    "a": "Bir yerel ekip ya da ülke iş ortağı, yerel dilde destek, yerel lojistik, gözetim ve finansman iş ortakları ve o ülkenin gıda kurallarına dair bir rehber."
+   },
+   {
+    "q": "T57 sıradaki pazarları nasıl seçiyor?",
+    "a": "Gerçek arz ve talebin olduğu ticaret koridorlarına, yerel iş ortaklarının hazırlığına, hukuki görüşlere ve üye talebine bakarak. Bir aşama ancak bunlar hazır olduğunda açılır."
+   },
+   {
+    "q": "Tarihler kesin mi?",
+    "a": "Hayır. Bunlar T57'nin yayılım planındaki hedeflerdir; her aşama hazır olduğunda açılır."
+   },
+   {
+    "q": "T57 ülke iş ortağı nedir?",
+    "a": "T57'yi kendi ülkesinde ya da şehrinde franchise gibi yürüten lisanslı yerel bir işletme. Başvuru için Ülke İş Ortağı sayfasına bakın."
+   }
+  ],
+  "title": "Küresel Yayılım | 5 Pazardan 101'e, Dünyaya Açık | T57",
+  "description": "T57 beş kurucu pazardaki ekiplerle başlar, 195 ülkede çevrimiçi açıktır ve yeni pazarları ülke iş ortaklarıyla aşama aşama açar.",
+  "parent": "markets"
+ },
+ "markets-oic": {
+  "route": "/tr/markets/oic-halal",
+  "section": "markets",
+  "name": "İİT Ülkeleri ve Helal Ticaret",
+  "h1": "İİT genelinde helal ticaret, baştan sona doğrulanmış.",
+  "answer": "İİT genelindeki helal gıda üreticilerini ve alıcılarını tek bir güvenilir ağda buluşturun.",
+  "faqs": [
+   {
+    "q": "T57 helal sertifikası veriyor mu?",
+    "a": "Hayır. Helal sertifikalarını akredite helal kuruluşları verir. T57 bunları kaydeder, geçerlilik süresini takip eder ve alıcılara gösterir."
+   },
+   {
+    "q": "Hangi İİT ülkeleri T57'yi kullanabilir?",
+    "a": "T57'nin kurucu pazarları arasında İİT üyesi Suudi Arabistan, BAE, Malezya ve Türkiye ile İİT pazarlarının büyük tedarikçisi Hindistan yer alıyor. Başka İİT ülkeleri de ardından gelecek."
+   },
+   {
+    "q": "Katılım esaslı ticaret finansmanı var mı?",
+    "a": "T57, üyeleri mümkün olan yerlerde faizsiz finansman sunanlar dahil lisanslı iş ortaklarıyla buluşturur."
+   }
+  ],
+  "title": "İİT ve Helal Gıda Ticareti | Doğrulanmış Helal Tedarikçiler | T57",
+  "description": "İİT ülkelerindeki doğrulanmış helal gıda tedarikçilerini ve alıcılarını bulun; sertifikalar kayıtlı, belgeler tek kayıtta, finansman lisanslı iş ortaklarından.",
+  "parent": "markets"
+ },
+ "markets-asean": {
+  "route": "/tr/markets/asean",
+  "section": "markets",
+  "name": "ASEAN Pazarları",
+  "h1": "Güneydoğu Asya'nın gıdası, Körfez'e ve Hindistan'a.",
+  "answer": "Güneydoğu Asya'daki gıda üreticilerini Asya ve Körfez genelindeki alıcılarla buluşturun.",
+  "faqs": [
+   {
+    "q": "Hangi ASEAN ülkeleri T57'yi kullanabilir?",
+    "a": "Malezya bir kurucu pazardır. Diğer ASEAN ülkeleri ardından gelecek."
+   },
+   {
+    "q": "ASEAN üreticileri ASEAN içinde satış yapabilir mi?",
+    "a": "Evet. Malezya'da yurt içi toptan satış mümkün; daha fazla ASEAN pazarı katıldıkça sınır ötesi ticaret de büyüyor."
+   },
+   {
+    "q": "T57'nin DEFA ile ilişkisi nedir?",
+    "a": "T57 bağımsız bir platformdur. Dijital kayıtları ve onaya dayalı veri paylaşımı, yürürlüğe girdiğinde DEFA gibi bölgesel dijital ticaret kurallarına uyacak şekilde tasarlanmıştır."
+   }
+  ],
+  "title": "ASEAN Gıda Ticareti | Doğrulanmış İhracatçılar ve Alıcılar | T57",
+  "description": "ASEAN gıda üreticilerini Körfez, Hindistan ve Türkiye'deki doğrulanmış alıcılarla buluşturun; dijital belgeler, helal kayıtları ve iş ortakları aracılığıyla ticaret finansmanı.",
+  "parent": "markets"
+ },
+ "mkt-sa-overview": {
+  "route": "/tr/markets/saudi-arabia/overview",
+  "section": "markets",
+  "name": "Suudi Arabistan: Pazara Genel Bakış",
+  "h1": "Suudi Arabistan'da gıda ticareti, yurt içinde ve yurt dışında.",
+  "answer": "Suudi Arabistan'da doğrulanmış iş ortaklarıyla, yurt içinde ve yurt dışında gıda ticareti yapın.",
+  "faqs": [
+   {
+    "q": "Suudi Arabistan'da T57'ye kimler katılabilir?",
+    "a": "Üreticiler ve kooperatiflerden tüccarlara, toptancılara, perakendecilere, otellere, restoranlara ve kurumlara kadar kayıtlı tüm gıda ve tarım işletmeleri."
+   },
+   {
+    "q": "T57'yi kullanmak için ihracat yapmam gerekir mi?",
+    "a": "Hayır. Pek çok üye T57'yi yalnızca yurt içi toptan satış için kullanıyor."
+   },
+   {
+    "q": "T57 Arapça kullanılabiliyor mu?",
+    "a": "Evet."
+   }
+  ],
+  "title": "Suudi Arabistan'da T57 | Doğrulanmış Gıda Ticaret Ağı",
+  "description": "Suudi Arabistan'da yerel ekip ve lisanslı iş ortaklarıyla doğrulanmış yurt içi toptan satış ve sınır ötesi gıda ticareti.",
+  "parent": "markets"
+ },
+ "mkt-sa-features": {
+  "route": "/tr/markets/saudi-arabia/features",
+  "section": "markets",
+  "name": "Suudi Arabistan: Sunulan Özellikler",
+  "h1": "T57'nin tüm çözümleri, Suudi Arabistan'da.",
+  "answer": "Suudi Arabistan'da gıda ticareti için ihtiyacınız olan her şey, tek yerde.",
+  "faqs": [
+   {
+    "q": "Tüm özellikler her pazarda sunuluyor mu?",
+    "a": "Evet. Düzenlemeye tabi hizmetleri sunan iş ortakları ülkeye göre değişir."
+   },
+   {
+    "q": "SAR ile ödeme yapabilir miyim?",
+    "a": "Evet, lisanslı ödeme ve emanet hesabı iş ortakları aracılığıyla."
+   },
+   {
+    "q": "Suudi Arabistan'da finansmanı kim sağlıyor?",
+    "a": "Lisanslı Suudi bankaları ve finansman şirketleri. T57 kredi vermez."
+   }
+  ],
+  "title": "Suudi Arabistan'da T57 Özellikleri | Ticaret, Finansman, Lojistik",
+  "description": "Suudi Arabistan'daki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ istihbaratı.",
+  "parent": "mkt-sa-overview"
+ },
+ "mkt-sa-compliance": {
+  "route": "/tr/markets/saudi-arabia/compliance",
+  "section": "markets",
+  "name": "Suudi Arabistan: Mevzuat Rehberi",
+  "h1": "Suudi Arabistan'ın gıda kurallarını sevkiyattan önce bilin.",
+  "answer": "Sevkiyattan önce Suudi Arabistan'daki gıda ticareti kurallarını öğrenin.",
+  "faqs": [
+   {
+    "q": "Bu rehber hukuki danışmanlık mıdır?",
+    "a": "Hayır. Hazırlanmanıza yardımcı olacak bir özettir. Gereklilikleri her zaman ilgili kurumla ya da gümrük müşavirinizle teyit edin."
+   },
+   {
+    "q": "Rehber ne sıklıkla güncelleniyor?",
+    "a": "T57 rehberi düzenli olarak gözden geçirir."
+   },
+   {
+    "q": "T57 gümrük işlemlerimi yürütebilir mi?",
+    "a": "T57 sizi lisanslı gümrük müşavirleriyle buluşturur; gümrükleme, ortak ticaret kaydı üzerinden onlar tarafından yürütülür."
+   }
+  ],
+  "title": "Suudi Arabistan'da Gıda İthalatı Kuralları | T57 Mevzuat Rehberi",
+  "description": "Suudi Arabistan'da gıda ticaretinin başlıca kurumları, belgeleri ve kuralları: SFDA, helal, ZATCA, FASAH ve PDPL; T57 uyumu nasıl kolaylaştırır.",
+  "parent": "mkt-sa-overview"
+ },
+ "mkt-sa-start": {
+  "route": "/tr/markets/saudi-arabia/getting-started",
+  "section": "markets",
+  "name": "Suudi Arabistan: Başlarken",
+  "h1": "İlk ticaretiniz, Suudi Arabistan'da dört adımda.",
+  "answer": "T57'de Suudi Arabistan'da dört adımda ticarete başlayın.",
+  "faqs": [
+   {
+    "q": "Ne zaman ticarete başlayabilirim?",
+    "a": "Doğrulama tamamlandığında."
+   },
+   {
+    "q": "Katılım ücretli mi?",
+    "a": "Üyelik seçenekleri için Fiyatlandırma sayfasına bakın."
+   },
+   {
+    "q": "Arapça destek alabilir miyim?",
+    "a": "Evet. Riyad ekibimiz üyelere Arapça ve İngilizce destek verir."
+   }
+  ],
+  "title": "Suudi Arabistan'da T57 ile Başlayın",
+  "description": "Suudi Arabistan'da dört adımda T57'ye katılın: başvurun, doğrulanın, kurulumu yapın ve ticarete başlayın; yerel ekibimiz her adımda yanınızda.",
+  "parent": "mkt-sa-overview"
+ },
+ "mkt-uae-overview": {
+  "route": "/tr/markets/uae/overview",
+  "section": "markets",
+  "name": "BAE: Pazara Genel Bakış",
+  "h1": "BAE merkezi üzerinden ticaret, doğrulanmış iş ortaklarıyla.",
+  "answer": "BAE üzerinden, bölgenin dört bir yanındaki doğrulanmış iş ortaklarıyla gıda ticareti yapın.",
+  "faqs": [
+   {
+    "q": "Serbest bölge şirketleri katılabilir mi?",
+    "a": "Evet. Ana karadaki ve serbest bölgelerdeki şirketler, doğrulamaya tabi olarak başvurabilir."
+   },
+   {
+    "q": "T57'yi kullanmak için ihracat yapmam gerekir mi?",
+    "a": "Hayır. Pek çok üye T57'yi yalnızca yurt içi toptan satış için kullanıyor."
+   },
+   {
+    "q": "T57 Arapça kullanılabiliyor mu?",
+    "a": "Evet, Arapça ve İngilizce."
+   }
+  ],
+  "title": "BAE'de T57 | Doğrulanmış Gıda Ticareti ve Yeniden İhracat Ağı",
+  "description": "BAE'de yerel ekip ve finansman ile ödemeler için lisanslı iş ortaklarıyla doğrulanmış gıda ithalatı, yurt içi toptan satış ve yeniden ihracat.",
+  "parent": "markets"
+ },
+ "mkt-uae-features": {
+  "route": "/tr/markets/uae/features",
+  "section": "markets",
+  "name": "BAE: Sunulan Özellikler",
+  "h1": "T57'nin tüm çözümleri, BAE'de.",
+  "answer": "BAE'de gıda ticareti için ihtiyacınız olan her şey, tek yerde.",
+  "faqs": [
+   {
+    "q": "Tüm özellikler her pazarda sunuluyor mu?",
+    "a": "Evet. Düzenlemeye tabi hizmetleri sunan iş ortakları ülkeye göre değişir."
+   },
+   {
+    "q": "AED ile ödeme yapabilir miyim?",
+    "a": "Evet, lisanslı ödeme ve emanet hesabı iş ortakları aracılığıyla."
+   },
+   {
+    "q": "BAE'de finansmanı kim sağlıyor?",
+    "a": "Lisanslı BAE bankaları ve finansman şirketleri. T57 kredi vermez."
+   }
+  ],
+  "title": "BAE'de T57 Özellikleri | Ticaret, Finansman, Lojistik",
+  "description": "BAE'deki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ istihbaratı.",
+  "parent": "mkt-uae-overview"
+ },
+ "mkt-uae-compliance": {
+  "route": "/tr/markets/uae/compliance",
+  "section": "markets",
+  "name": "BAE: Mevzuat Rehberi",
+  "h1": "BAE'nin gıda kurallarını sevkiyattan önce bilin.",
+  "answer": "Sevkiyattan önce BAE'deki gıda ticareti kurallarını öğrenin.",
+  "faqs": [
+   {
+    "q": "Bu rehber hukuki danışmanlık mıdır?",
+    "a": "Hayır. Hazırlanmanıza yardımcı olacak bir özettir. Gereklilikleri her zaman ilgili kurumla ya da gümrük müşavirinizle teyit edin."
+   },
+   {
+    "q": "Rehber ne sıklıkla güncelleniyor?",
+    "a": "T57 rehberi düzenli olarak gözden geçirir."
+   },
+   {
+    "q": "T57 gümrük işlemlerimi yürütebilir mi?",
+    "a": "T57 sizi lisanslı gümrük müşavirleriyle buluşturur; gümrükleme, ortak ticaret kaydı üzerinden onlar tarafından yürütülür."
+   }
+  ],
+  "title": "BAE'de Gıda İthalatı Kuralları | T57 Mevzuat Rehberi",
+  "description": "BAE'de gıda ticaretinin başlıca kurumları, belgeleri ve kuralları: MOCCAE, MoIAT helal, emirlik gıda kurumları, gümrük ve PDPL.",
+  "parent": "mkt-uae-overview"
+ },
+ "mkt-uae-start": {
+  "route": "/tr/markets/uae/getting-started",
+  "section": "markets",
+  "name": "BAE: Başlarken",
+  "h1": "İlk ticaretiniz, BAE'de dört adımda.",
+  "answer": "T57'de BAE'de dört adımda ticarete başlayın.",
+  "faqs": [
+   {
+    "q": "Ne zaman ticarete başlayabilirim?",
+    "a": "Doğrulama tamamlandığında."
+   },
+   {
+    "q": "Katılım ücretli mi?",
+    "a": "Üyelik seçenekleri için Fiyatlandırma sayfasına bakın."
+   },
+   {
+    "q": "Arapça destek alabilir miyim?",
+    "a": "Evet. BAE ekibimiz üyelere Arapça ve İngilizce destek verir."
+   }
+  ],
+  "title": "BAE'de T57 ile Başlayın",
+  "description": "BAE'de dört adımda T57'ye katılın: başvurun, doğrulanın, kurulumu yapın ve ticarete başlayın; yerel ekibimiz her adımda yanınızda.",
+  "parent": "mkt-uae-overview"
+ },
+ "mkt-in-overview": {
+  "route": "/tr/markets/india/overview",
+  "section": "markets",
+  "name": "Hindistan: Pazara Genel Bakış",
+  "h1": "Hindistan'ın çiftlikleri ve gıda üreticileri, yurt içi ve yurt dışındaki alıcılara.",
+  "answer": "Hindistan'ın çiftçilerini ve gıda üreticilerini yurt içi ve yurt dışındaki doğrulanmış alıcılarla buluşturun.",
+  "faqs": [
+   {
+    "q": "Bir üretici örgütü katılabilir mi?",
+    "a": "Evet. Üretici örgütleri ve kooperatifler üye olarak katılabilir ve üye çiftçilerini sisteme dahil edebilir."
+   },
+   {
+    "q": "T57 yalnızca ihracatçılar için mi?",
+    "a": "Hayır. Pek çok üye T57'yi yurt içindeki kurumsal alıcılara satış için kullanıyor."
+   },
+   {
+    "q": "Hangi diller destekleniyor?",
+    "a": "İngilizce ve Hintçe; başka Hint dilleri de planlanıyor."
+   }
+  ],
+  "title": "Hindistan'da T57 | Üretici Örgütleri ve İhracatçılar İçin Doğrulanmış Gıda Ticareti",
+  "description": "Yurt içindeki doğrulanmış kurumsal alıcılara ve Körfez ile Güneydoğu Asya'daki ithalatçılara satış yapın; finansman, gözetim ve lojistik lisanslı iş ortaklarından.",
+  "parent": "markets"
+ },
+ "mkt-in-features": {
+  "route": "/tr/markets/india/features",
+  "section": "markets",
+  "name": "Hindistan: Sunulan Özellikler",
+  "h1": "T57'nin tüm çözümleri, Hindistan'da.",
+  "answer": "Hindistan'da gıda ticareti için ihtiyacınız olan her şey, tek yerde.",
+  "faqs": [
+   {
+    "q": "Tüm özellikler her pazarda sunuluyor mu?",
+    "a": "Evet. Düzenlemeye tabi hizmetleri sunan iş ortakları ülkeye göre değişir."
+   },
+   {
+    "q": "INR ile ödeme yapabilir miyim?",
+    "a": "Evet, lisanslı ödeme ve emanet hesabı iş ortakları aracılığıyla."
+   },
+   {
+    "q": "Hindistan'da finansmanı kim sağlıyor?",
+    "a": "Lisanslı Hint bankaları ve NBFC'ler. T57 kredi vermez."
+   }
+  ],
+  "title": "Hindistan'da T57 Özellikleri | Ticaret, Finansman, Lojistik",
+  "description": "Hindistan'daki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ istihbaratı.",
+  "parent": "mkt-in-overview"
+ },
+ "mkt-in-compliance": {
+  "route": "/tr/markets/india/compliance",
+  "section": "markets",
+  "name": "Hindistan: Mevzuat Rehberi",
+  "h1": "Hindistan'ın gıda kurallarını sevkiyattan önce bilin.",
+  "answer": "Sevkiyattan önce Hindistan'daki gıda ticareti kurallarını öğrenin.",
+  "faqs": [
+   {
+    "q": "Bu rehber hukuki danışmanlık mıdır?",
+    "a": "Hayır. Hazırlanmanıza yardımcı olacak bir özettir. Gereklilikleri her zaman ilgili kurumla ya da gümrük müşavirinizle teyit edin."
+   },
+   {
+    "q": "Rehber ne sıklıkla güncelleniyor?",
+    "a": "T57 rehberi düzenli olarak gözden geçirir."
+   },
+   {
+    "q": "T57 gümrük işlemlerimi yürütebilir mi?",
+    "a": "T57 sizi lisanslı gümrük müşavirleriyle buluşturur; gümrükleme, ortak ticaret kaydı üzerinden onlar tarafından yürütülür."
+   }
+  ],
+  "title": "Hindistan'da Gıda İhracatı Kuralları | T57 Mevzuat Rehberi",
+  "description": "Hindistan'da gıda ticaretinin başlıca kurumları, belgeleri ve kuralları: DGFT IEC, APEDA, FSSAI, bitki karantinası, gümrük ve DPDP Kanunu.",
+  "parent": "mkt-in-overview"
+ },
+ "mkt-in-start": {
+  "route": "/tr/markets/india/getting-started",
+  "section": "markets",
+  "name": "Hindistan: Başlarken",
+  "h1": "İlk ticaretiniz, Hindistan'da dört adımda.",
+  "answer": "T57'de Hindistan'da dört adımda ticarete başlayın.",
+  "faqs": [
+   {
+    "q": "Ne zaman ticarete başlayabilirim?",
+    "a": "Doğrulama tamamlandığında."
+   },
+   {
+    "q": "Katılım ücretli mi?",
+    "a": "Üyelik seçenekleri için Fiyatlandırma sayfasına bakın."
+   },
+   {
+    "q": "Hintçe destek alabilir miyim?",
+    "a": "Evet. Hindistan ekibimiz üyelere İngilizce ve Hintçe destek verir."
+   }
+  ],
+  "title": "Hindistan'da T57 ile Başlayın",
+  "description": "Hindistan'da dört adımda T57'ye katılın: başvurun, doğrulanın, kurulumu yapın ve ticarete başlayın; yerel ekibimiz her adımda yanınızda.",
+  "parent": "mkt-in-overview"
+ },
+ "mkt-my-overview": {
+  "route": "/tr/markets/malaysia/overview",
+  "section": "markets",
+  "name": "Malezya: Pazara Genel Bakış",
+  "h1": "Malezya'nın helal gıdası, üç bölgedeki alıcılara.",
+  "answer": "Malezya'nın helal gıdasını Körfez, Hindistan ve ASEAN'daki doğrulanmış alıcılara ulaştırın.",
+  "faqs": [
+   {
+    "q": "T57, JAKIM belgelendirmesini tanıyor mu?",
+    "a": "T57, JAKIM ve diğer kuruluşların helal sertifikalarını kaydeder ve alıcılara sertifikanın kendi pazarlarında tanınıp tanınmadığını gösterir."
+   },
+   {
+    "q": "Katılım esaslı ticaret finansmanı var mı?",
+    "a": "Mevcut olduğu yerlerde, lisanslı iş ortakları aracılığıyla."
+   },
+   {
+    "q": "T57 Malayca kullanılabiliyor mu?",
+    "a": "İngilizce ve Malayca."
+   }
+  ],
+  "title": "Malezya'da T57 | Doğrulanmış Helal Gıda Ticaret Ağı",
+  "description": "Malezya'nın helal gıdasını Körfez, Hindistan ve ASEAN'daki doğrulanmış alıcılara ulaştırın; helal sertifikaları kayıt altında, finansman lisanslı iş ortaklarından.",
+  "parent": "markets"
+ },
+ "mkt-my-features": {
+  "route": "/tr/markets/malaysia/features",
+  "section": "markets",
+  "name": "Malezya: Sunulan Özellikler",
+  "h1": "T57'nin tüm çözümleri, Malezya'da.",
+  "answer": "Malezya'da gıda ticareti için ihtiyacınız olan her şey, tek yerde.",
+  "faqs": [
+   {
+    "q": "Tüm özellikler her pazarda sunuluyor mu?",
+    "a": "Evet. Düzenlemeye tabi hizmetleri sunan iş ortakları ülkeye göre değişir."
+   },
+   {
+    "q": "MYR ile ödeme yapabilir miyim?",
+    "a": "Evet, lisanslı ödeme ve emanet hesabı iş ortakları aracılığıyla."
+   },
+   {
+    "q": "Malezya'da finansmanı kim sağlıyor?",
+    "a": "İslami bankalar dahil lisanslı Malezya bankaları. T57 kredi vermez."
+   }
+  ],
+  "title": "Malezya'da T57 Özellikleri | Ticaret, Finansman, Lojistik",
+  "description": "Malezya'daki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ istihbaratı.",
+  "parent": "mkt-my-overview"
+ },
+ "mkt-my-compliance": {
+  "route": "/tr/markets/malaysia/compliance",
+  "section": "markets",
+  "name": "Malezya: Mevzuat Rehberi",
+  "h1": "Malezya'nın gıda kurallarını sevkiyattan önce bilin.",
+  "answer": "Sevkiyattan önce Malezya'daki gıda ticareti kurallarını öğrenin.",
+  "faqs": [
+   {
+    "q": "Bu rehber hukuki danışmanlık mıdır?",
+    "a": "Hayır. Hazırlanmanıza yardımcı olacak bir özettir. Gereklilikleri her zaman ilgili kurumla ya da gümrük müşavirinizle teyit edin."
+   },
+   {
+    "q": "Rehber ne sıklıkla güncelleniyor?",
+    "a": "T57 rehberi düzenli olarak gözden geçirir."
+   },
+   {
+    "q": "T57 gümrük işlemlerimi yürütebilir mi?",
+    "a": "T57 sizi lisanslı gümrük müşavirleriyle buluşturur; gümrükleme, ortak ticaret kaydı üzerinden onlar tarafından yürütülür."
+   }
+  ],
+  "title": "Malezya'da Gıda Ticareti Kuralları | T57 Mevzuat Rehberi",
+  "description": "Malezya'da gıda ticaretinin başlıca kurumları, belgeleri ve kuralları: Sağlık Bakanlığı gıda güvenilirliği, MAQIS, JAKIM helal, gümrük, e-fatura ve PDPA.",
+  "parent": "mkt-my-overview"
+ },
+ "mkt-my-start": {
+  "route": "/tr/markets/malaysia/getting-started",
+  "section": "markets",
+  "name": "Malezya: Başlarken",
+  "h1": "İlk ticaretiniz, Malezya'da dört adımda.",
+  "answer": "T57'de Malezya'da dört adımda ticarete başlayın.",
+  "faqs": [
+   {
+    "q": "Ne zaman ticarete başlayabilirim?",
+    "a": "Doğrulama tamamlandığında."
+   },
+   {
+    "q": "Katılım ücretli mi?",
+    "a": "Üyelik seçenekleri için Fiyatlandırma sayfasına bakın."
+   },
+   {
+    "q": "Malayca destek alabilir miyim?",
+    "a": "Evet. Malezya ekibimiz üyelere İngilizce ve Malayca destek verir."
+   }
+  ],
+  "title": "Malezya'da T57 ile Başlayın",
+  "description": "Malezya'da dört adımda T57'ye katılın: başvurun, doğrulanın, kurulumu yapın ve ticarete başlayın; yerel ekibimiz her adımda yanınızda.",
+  "parent": "mkt-my-overview"
+ },
+ "mkt-tr-overview": {
+  "route": "/tr/markets/turkiye/overview",
+  "section": "markets",
+  "name": "Türkiye: Pazara Genel Bakış",
+  "h1": "Türkiye'nin meyvesi, kuruyemişi ve gıdası Körfez'e ve Asya'ya.",
+  "answer": "Türkiye'nin meyve, kuruyemiş ve gıda ürünlerini Körfez ve Asya'daki doğrulanmış alıcılara satın.",
+  "faqs": [
+   {
+    "q": "Türk şirketleri USD veya EUR ile ticaret yapabilir mi?",
+    "a": "Evet. Lisanslı ödeme ve emanet hesabı iş ortaklarının desteklediği her para birimiyle."
+   },
+   {
+    "q": "Körfez'e ihracatta helal sertifikası gerekir mi?",
+    "a": "Bazı ürünlerde evet. T57 her ürün ve varış ülkesi için gereklilikleri gösterir."
+   },
+   {
+    "q": "T57 Türkçe kullanılabiliyor mu?",
+    "a": "Evet, Türkçe ve İngilizce."
+   }
+  ],
+  "title": "Türkiye'de T57 | Doğrulanmış Gıda İhracat Ağı",
+  "description": "Türk meyve, kuruyemiş ve gıda ürünlerini Körfez ve Asya'daki doğrulanmış alıcılara satın; belgeler tek kayıtta, ödemeler lisanslı iş ortakları üzerinden.",
+  "parent": "markets"
+ },
+ "mkt-tr-features": {
+  "route": "/tr/markets/turkiye/features",
+  "section": "markets",
+  "name": "Türkiye: Sunulan Özellikler",
+  "h1": "T57'nin tüm çözümleri, Türkiye'de.",
+  "answer": "Türkiye'de gıda ticareti için ihtiyacınız olan her şey, tek yerde.",
+  "faqs": [
+   {
+    "q": "Tüm özellikler her pazarda sunuluyor mu?",
+    "a": "Evet. Düzenlemeye tabi hizmetleri sunan iş ortakları ülkeye göre değişir."
+   },
+   {
+    "q": "TRY ile ödeme yapabilir miyim?",
+    "a": "Evet, lisanslı ödeme ve emanet hesabı iş ortakları aracılığıyla."
+   },
+   {
+    "q": "Türkiye'de finansmanı kim sağlıyor?",
+    "a": "Katılım bankaları dahil lisanslı Türk bankaları. T57 kredi vermez."
+   }
+  ],
+  "title": "Türkiye'de T57 Özellikleri | Ticaret, Finansman, Lojistik",
+  "description": "Türkiye'deki gıda işletmeleri için doğrulanmış üyelik, ticaretin yürütülmesi, finansman, emanet hesabı, sigorta, lojistik ve yapay zekâ istihbaratı.",
+  "parent": "mkt-tr-overview"
+ },
+ "mkt-tr-compliance": {
+  "route": "/tr/markets/turkiye/compliance",
+  "section": "markets",
+  "name": "Türkiye: Mevzuat Rehberi",
+  "h1": "Türkiye'nin gıda kurallarını sevkiyattan önce bilin.",
+  "answer": "Sevkiyattan önce Türkiye'deki gıda ticareti kurallarını öğrenin.",
+  "faqs": [
+   {
+    "q": "Bu rehber hukuki danışmanlık mıdır?",
+    "a": "Hayır. Hazırlanmanıza yardımcı olacak bir özettir. Gereklilikleri her zaman ilgili kurumla ya da gümrük müşavirinizle teyit edin."
+   },
+   {
+    "q": "Rehber ne sıklıkla güncelleniyor?",
+    "a": "T57 rehberi düzenli olarak gözden geçirir."
+   },
+   {
+    "q": "T57 gümrük işlemlerimi yürütebilir mi?",
+    "a": "T57 sizi lisanslı gümrük müşavirleriyle buluşturur; gümrükleme, ortak ticaret kaydı üzerinden onlar tarafından yürütülür."
+   }
+  ],
+  "title": "Türkiye'de Gıda Ticareti Kuralları | T57 Mevzuat Rehberi",
+  "description": "Türkiye'de gıda ticaretinin başlıca kurumları, belgeleri ve kuralları: Tarım ve Orman Bakanlığı, Ticaret Bakanlığı gümrük işlemleri, HAK helal akreditasyonu, e-Fatura ve KVKK.",
+  "parent": "mkt-tr-overview"
+ },
+ "mkt-tr-start": {
+  "route": "/tr/markets/turkiye/getting-started",
+  "section": "markets",
+  "name": "Türkiye: Başlarken",
+  "h1": "İlk ticaretiniz, Türkiye'de dört adımda.",
+  "answer": "T57'de Türkiye'de dört adımda ticarete başlayın.",
+  "faqs": [
+   {
+    "q": "Ne zaman ticarete başlayabilirim?",
+    "a": "Doğrulama tamamlandığında."
+   },
+   {
+    "q": "Katılım ücretli mi?",
+    "a": "Üyelik seçenekleri için Fiyatlandırma sayfasına bakın."
+   },
+   {
+    "q": "Türkçe destek alabilir miyim?",
+    "a": "Evet. Türkiye ekibimiz üyelere Türkçe ve İngilizce destek verir."
+   }
+  ],
+  "title": "Türkiye'de T57 ile Başlayın",
+  "description": "Türkiye'de dört adımda T57'ye katılın: başvurun, doğrulanın, kurulumu yapın ve ticarete başlayın; yerel ekibimiz her adımda yanınızda.",
+  "parent": "mkt-tr-overview"
+ },
+ "governments": {
+  "route": "/tr/who-we-serve/governments",
+  "section": "who-we-serve",
+  "name": "Hükümetler ve Düzenleyici Kurumlar",
+  "h1": "Gıda arzınızı görün. Kıtlıktan önce harekete geçin.",
+  "answer": "Bakanlıklar ve kurumlar için anlık ticaret verileri, gıda güvenliği uyarıları ve şeffaf ihaleler tek ekranda.",
+  "faqs": [
+   {
+    "q": "T57 ulusal ve bölgesel gıda güvenliği stratejilerini pratikte nasıl destekler?",
+    "a": "Pek çok ülke temel ürünlerde aylarca yetecek stok tutmak için stratejik rezervlerini ve silo kapasitelerini genişletiyor. T57 kendine yeterliliği, stok düzeylerini ve ithalata bağımlılığı anlık takip ederek bu fiziksel altyapıyı tamamlar. Fiziksel rezervler ile dijital istihbaratın bu birleşimi, hükümetlerin gıda güvenliği yönetiminde tepkisel yaklaşımdan öngörülü yaklaşıma geçmesine yardımcı olur."
+   },
+   {
+    "q": "Kamu bütçelerinin ötesinde özel sermayeyi ve etki sermayesini tarıma ve gıda sistemlerine yönlendirmek neden önemli?",
+    "a": "Tarımın istihdam ve gıda güvenliğindeki tarihsel rolüne rağmen küresel yatırımcılar, iklim ve SKH taahhütlerinin bir parçası olarak gıda sistemlerini desteklemenin güvenilir ve ölçülebilir yollarını ancak şimdi arıyor. T57, hükümetlerin model destek merkezlerinden özel tarım bölgelerine ve kurumsal sosyal sorumluluk programlarına kadar yatırım yapılabilir, veriye dayalı fırsatlar sunmasına yardımcı olur; şeffaf performans ve etki takibi hem düzenleyici hem yatırımcı beklentilerini karşılar."
+   }
+  ],
+  "title": "Hükümetler İçin T57 | Gıda Güvenliği ve Temiz Kamu Alımı",
+  "description": "T57, hükümetlere ve düzenleyici kurumlara israfı azaltmak ve fiyatları istikrara kavuşturmak için tek platformda anlık gıda güvenliği istihbaratı ve şeffaf kamu alımı sunar.",
+  "parent": "who-we-serve"
+ },
+ "financiers": {
+  "route": "/tr/who-we-serve/financiers",
+  "section": "who-we-serve",
+  "name": "Finansörler ve Yatırımcılar",
+  "h1": "Doğrulanmış gıda ticaretini finanse edin, üstelik daha az riskle.",
+  "answer": "Her işlem; doğrulanmış taraflar, belgeler ve sevkiyat verileriyle, işlemden ödemeye kadar gelir.",
+  "faqs": [
+   {
+    "q": "T57 uyuşmazlıkları nasıl ele alır ve finansörler ile yatırımcılar için riski nasıl azaltır?",
+    "a": "T57 riski, yüksek güven ortamında incelenmiş ve güvenilir karşı taraflar sağlayan seçkin kulüp üyeliği modeliyle azaltır. Sanal ticaret masası yürütmeyi destekler, uyuşmazlıkları yönetir, belgeleri denetler ve işlemlerin tutarlı biçimde sonuçlandırılmasını sağlayarak yatırımcı güvenini artırır."
+   },
+   {
+    "q": "Gıda ve tarım finansmanı neden şimdi yatırımcılar için önemli bir fırsat?",
+    "a": "Küresel gıda ithalatı talebi muazzam olmayı sürdürüyor: FAO küresel gıda ithalatı faturasını 2025 için 2,22 trilyon dolar olarak öngörüyor; bu da gıda piyasalarında ticarete bağlı finansman ihtiyacının ölçeğini ve kalıcılığını gösteriyor."
+   },
+   {
+    "q": "Ticaret finansmanı genellikle diğer kredi türlerinden daha düşük riskli mi kabul edilir?",
+    "a": "Evet. ICC Trade Register, ticaret, tedarik zinciri ve ihracat finansmanı ürünlerinin zorlu piyasa koşullarında bile düşük risk profili ve dayanıklı temerrüt performansı göstermeye devam ettiğini vurguluyor."
+   },
+   {
+    "q": "Finansörler tarım piyasalarında neden daha güçlü durum tespiti ve izleme araçlarına ihtiyaç duyar?",
+    "a": "Gıda ve tarım işlemleri çoğu zaman parçalı tedarik zincirleri, sınır ötesi karşı taraflar ve iklim ya da lojistik dalgalanması içerir; bu da görünürlüğü ve doğrulamayı özellikle değerli kılar. Uluslararası Tarımsal Kalkınma Fonu (IFAD), küçük ölçekli üreticilerin finansmana yeterince erişemediğini ve risk boşlukları sermayeyi caydırdığı için büyük finansman ihtiyaçlarının karşılanmadığını belirtiyor."
+   }
+  ],
+  "title": "Finansörler İçin T57 | İncelenmiş Gıda ve Tarım Fırsatları",
+  "description": "Daha hızlı durum tespiti, tam işlem görünürlüğü ve daha sıkı karşı taraf riski yönetimiyle sermayenizi seçilmiş, sözleşmeye dayalı gıda ve tarım işlemlerine yönlendirin.",
+  "parent": "who-we-serve"
+ },
+ "sellers": {
+  "route": "/tr/who-we-serve/sellers",
+  "section": "who-we-serve",
+  "name": "Satıcılar ve İhracatçılar",
+  "h1": "Doğrulanmış alıcılara satın, ödemenizi güvenle alın.",
+  "answer": "Alıcı bulun, şartları kararlaştırın ve ödemenizi alın; finansman ve lojistik aynı platformda.",
+  "faqs": [
+   {
+    "q": "T57'nin sanal ticaret masası uyuşmazlıklarda ve risk yönetiminde nasıl yardımcı olur?",
+    "a": "Sanal ticaret masası bir risk yöneticisi gibi çalışır. Uyuşmazlık durumunda masa devreye girerek arabuluculuk yapar, kararlaştırılan şartların uygulanmasını sağlar ve satıcının çıkarlarını korur. Bir alıcı iflas eder ya da temerrüde düşerse T57 komisyona dayalı tahsilat ve yeniden satış yaklaşımına geçer; malı yeniden yönlendirmeye ya da değeri geri kazanmaya yardım eder."
+   },
+   {
+    "q": "Bir platform finansman açığına nasıl çözüm olur?",
+    "a": "Zengin işlem ve uyum verisi sunan ticaret platformları, finansörlerin algıladığı riski düşürerek krediye erişimi kolaylaştırabilir ve sermaye maliyetini azaltabilir. T57, finansörlerin işlemlerinizi daha güvenle değerlendirebilmesi için bu veriyi denetlenebilir biçimde sunacak şekilde tasarlandı."
+   },
+   {
+    "q": "Gıda ihracatında belge ve sertifika neden bu kadar büyük bir sorun?",
+    "a": "Gıda ihracatı, ithalatçı ülkenin sıkı gözetim ve belgelendirme rejimlerine tabidir. Eksik ya da hatalı sertifika, sınırda ret veya mevzuata aykırılıkla sonuçlanabilir. Belgeleri tek yerde toplayan, parti ve sevkiyatlara bağlayan ve sertifikaları doğrulayan bir sistem, maliyetli ret ve gecikme riskini azaltır."
+   },
+   {
+    "q": "Daha iyi istihbarat dalgalı ihracat pazarlarında gerçekten işe yarar mı?",
+    "a": "Tarım fiyatları aşırı hava olaylarına, değişen biyoyakıt politikalarına ve artan ticaret engellerine açık olmayı sürdürüyor. Yapılandırılmış piyasa, ürün ve fiyat istihbaratı kullanan ihracatçılar, marjlarını korumak için tedarik ve fiyatlamalarını daha iyi ayarlayabiliyor."
+   }
+  ],
+  "title": "Satıcılar ve İhracatçılar İçin T57 | Güvenilir Tarım İhracatı Platformu",
+  "description": "T57, gıda ve tarım ihracatçılarının doğrulanmış alıcılar bulmasına, belgelerini yönetmesine, ödemesini güvenle almasına ve anlık piyasa istihbaratıyla büyümesine yardımcı olur.",
+  "parent": "who-we-serve"
+ },
+ "traders": {
+  "route": "/tr/who-we-serve/traders",
+  "section": "who-we-serve",
+  "name": "Tüccarlar ve Toplayıcılar",
+  "h1": "Daha fazla hacimle ticaret yapın, üstelik daha az riskle.",
+  "answer": "Doğrulanmış iş ortakları, anlık fiyatlar ve her işleme özel finansmanla arz ve talebi daha hızlı eşleştirin.",
+  "faqs": [
+   {
+    "q": "Aracılar T57'ye katılabilir mi?",
+    "a": "Evet. Tüccarlar ve aracılar memnuniyetle karşılanır. Rollerine göre etiketlenirler; böylece her karşı taraf işlemin nasıl yapılandırıldığını bilir."
+   },
+   {
+    "q": "T57 tüccarlara kredi veriyor mu?",
+    "a": "Hayır. T57 kredi vermez. İşlem dosyanızı, işlemi finanse edip etmeyeceğine ve hangi şartlarla finanse edeceğine karar veren lisanslı kredi verenlere gönderir."
+   },
+   {
+    "q": "T57'de karşılıklı sözleşmeler nasıl işler?",
+    "a": "Tedarikçinin kabul edilen teklifi ve alıcının kabul edilen siparişi ayrı ayrı birer sözleşme oluşturur; ikisi de aynı ticaret kaydında durduğu için şartlar tutarlı kalır."
+   },
+   {
+    "q": "Geçmiş performans neyi gösterir?",
+    "a": "Tamamlanan işlemlerinizi, doğrulama durumunuzu ve rolünüzü; böylece yeni karşı taraflar ve kredi verenler sizinle çalışmadan önce geçmişinizi görebilir."
+   }
+  ],
+  "title": "Tüccarlar ve Toplayıcılar İçin T57 | İşlemlerinizi Finanse Edin ve Yürütün",
+  "description": "Doğrulanmış tedarikçiler ve alıcılar, karşılıklı sözleşmeler ve yarışan kredi verenlerden finansman; hepsi tek bir gıda ticaret kaydında.",
+  "parent": "who-we-serve"
+ },
+ "buyers": {
+  "route": "/tr/who-we-serve/buyers",
+  "section": "who-we-serve",
+  "name": "Alıcılar ve İthalatçılar",
+  "h1": "Gıdanızı güvenebileceğiniz tedarikçilerden alın.",
+  "answer": "Doğrulanmış tedarikçileri karşılaştırın, her sevkiyatı takip edin ve yalnızca şartlar yerine geldiğinde ödeyin.",
+  "faqs": [
+   {
+    "q": "T57 tedarikçileri nasıl doğruluyor?",
+    "a": "T57 işletme ve kimlik kontrolleri, uyum taraması ve gerektiğinde tedarikçinin tesisinde fiziksel kontrol yapar. Doğrulanan her tedarikçi bir T57 Pasaportu ve rol etiketi alır."
+   },
+   {
+    "q": "Yalnızca üreticilerden alım yapabilir miyim?",
+    "a": "Evet. Rol etiketleri tedarikçinin üretici-sahip, işleyici, tüccar ya da aracı olduğunu gösterir; böylece üreticileri filtreleyebilirsiniz."
+   },
+   {
+    "q": "T57 ödememi tutuyor mu?",
+    "a": "Hayır. T57 müşteri fonu tutmaz. Emanet hesabı ve akreditif lisanslı iş ortakları tarafından sağlanır."
+   },
+   {
+    "q": "İthalatın yanı sıra yurt içinden de alım yapabilir miyim?",
+    "a": "Evet. T57 sınır ötesi ticaretin yanı sıra süpermarketler, otel-restoran işletmeleri ve kurumlar için yurt içi toptan satışı da destekler. Yurt içi B2B ticareti görün ."
+   }
+  ],
+  "title": "Alıcılar ve İthalatçılar İçin T57 | Doğrulanmış Tedarikçilerden Alın",
+  "description": "Doğrulanmış üretici ve işleyicilerden gıda tedarik edin. Teklif talepleri, sözleşmeler, emanet hesabı, akreditif, gözetim ve lojistik tek ticaret kaydında.",
+  "parent": "who-we-serve"
+ },
+ "enterprises": {
+  "route": "/tr/who-we-serve/enterprises",
+  "section": "who-we-serve",
+  "name": "İmalatçılar ve Kurumsal Şirketler",
+  "h1": "Arzınızı güvenceye alın. Marjlarınızı koruyun.",
+  "answer": "Doğrulanmış üreticilerden tedarik edin, fiyat hareketlerini erken görün ve her sözleşmeyi tek yerden yürütün.",
+  "faqs": [
+   {
+    "q": "İmalatçılar ve kurumsal şirketler neden şimdi dijital bir ticaret iş akışına ihtiyaç duyuyor?",
+    "a": "Dijital ticaret iş akışı, sektördeki yüksek kayıplara, dalgalanmaya ve operasyonel sürtünmeye karşı koymak için önemlidir. FAO perakende öncesinde %13,3 gıda kaybı bildiriyor; Dünya Bankası da süren gıda enflasyonuna ve pazarlar arasında eşit olmayan emtia hareketlerine dikkat çekiyor."
+   },
+   {
+    "q": "T57 satın alma riskini azaltmaya nasıl yardımcı olur?",
+    "a": "T57 teklif taleplerini yapılandırır, teklif görünürlüğünü tek yerde toplar ve ticareti daha doğrulanmış bir karşı taraf ortamında destekler. Dalgalı piyasalarda daha hızlı tedarik kararları ve daha iyi belgelendirme, arz sürekliliğini ve marjları korumaya yardımcı olabilir."
+   },
+   {
+    "q": "Gıda ve tarım ticaretinde ödeme hızı neden bu kadar önemli?",
+    "a": "Geciken ödeme sevkiyatları yavaşlatabilir, işletme sermayesini bağlayabilir ve ticari ilişkideki güveni zedeleyebilir. Ödemeyi hızlandıran dijital platformlar pazar erişimini ve iş verimliliğini artırır."
+   },
+   {
+    "q": "T57 yönetişimi, denetime hazırlığı ve uyumu destekleyebilir mi?",
+    "a": "Evet. T57 belgeleri, aşamaları, karşı tarafları ve ödeme kayıtlarını izlenebilir tek bir iş akışında birbirine bağlayacak şekilde tasarlandı. Bu da kurumsal ekiplerin karmaşık ticaret operasyonlarında iç kontrolleri, incelemeleri ve denetim gerekliliklerini desteklemesini kolaylaştırır."
+   }
+  ],
+  "title": "İmalatçılar ve Kurumsal Şirketler İçin T57 | Daha Hızlı Gıda Ticareti",
+  "description": "T57, gıda imalatçılarının ve kurumsal şirketlerin tedariki, teklif taleplerini, ödemeleri, ticaret finansmanını ve denetim izlerini tek bir güvenli platformda dijitalleştirmesine yardımcı olur.",
+  "parent": "who-we-serve"
+ },
+ "food-processors": {
+  "route": "/tr/who-we-serve/food-processors",
+  "section": "who-we-serve",
+  "name": "Gıda İşleyiciler",
+  "h1": "Tesisinizi tam kapasiteyle çalıştırın.",
+  "answer": "Doğrulanmış çiftliklerden istikrarlı hammadde; kalite kontrolü ve finansman işin içinde.",
+  "faqs": [
+   {
+    "q": "Ticaretin dijitalleşmesi gıda işleyicileri için neden özellikle önemli?",
+    "a": "İşleyiciler zamanında ve öngörülebilir hammadde arzına bağımlıdır ve dar marjlarla çalışır. Arz güvencesi ve ticaret yürütme platformları girdileri daha öngörülebilir kılar, kapasite kullanımını optimize eder ve dalgalı piyasalarda marjları korur."
+   },
+   {
+    "q": "T57 işletme sermayesi ve finansman sorunlarına yardımcı oluyor mu?",
+    "a": "İş ortağı bankalar, emanet hesabı yapıları, daha hızlı e-akreditif iş akışları ve tokenleştirilmiş ticaret yetenekleri, ödeme döngülerini kısaltmak ve gerçek ticareti yenilikçi finansman çözümlerine bağlamak için tasarlandı. İşleyiciler için bu, yolda bekleyen daha az nakit ve stoka, bakıma ya da büyümeye yatırım için daha fazla imkân demek olabilir."
+   },
+   {
+    "q": "T57 arz ve kayıpla ilgili riskleri azaltmaya nasıl yardımcı olur?",
+    "a": "T57 teklif taleplerini yapılandırarak, incelenmiş karşı taraflarla çalışarak ve işlemler genelinde daha iyi görünürlük sağlayarak daha güvenilir tedariki destekler."
+   },
+   {
+    "q": "T57 işleme tesislerinin uyum ve denetim gerekliliklerini destekleyebilir mi?",
+    "a": "Evet. T57 ticaret, ödeme ve belge verilerini tek bir denetim izinde birbirine bağlı tutarak iç kontrolleri ve dış denetimleri destekler. Bu da işleyicilerin düzenleyici kurumların ve finansal uyum çerçevelerinin belge taleplerini karşılamasına yardımcı olur."
+   }
+  ],
+  "title": "Gıda İşleyicileri İçin T57 | Arz Güvencesi ve Ticaretin Yürütülmesi",
+  "description": "T57, gıda işleyicilerinin tedariki, teklif taleplerini, ödemeleri, finansmanı ve belgeleri tek platformda dijitalleştirmesine yardımcı olur; girdiler istikrar kazanır, nakit döngüleri hızlanır.",
+  "parent": "who-we-serve"
+ },
+ "cooperatives": {
+  "route": "/tr/who-we-serve/cooperatives",
+  "section": "who-we-serve",
+  "name": "Kooperatifler ve Üretici Örgütleri",
+  "h1": "Üyelerinizin hasadını pazar gücüne dönüştürün.",
+  "answer": "Ürünleri birleştirin, daha büyük alıcılara ulaşın ve üyelere daha hızlı ödeme yapın; her işlem kayıtta.",
+  "faqs": [
+   {
+    "q": "Kooperatifler ve üretici örgütleri neden T57 gibi dijital platformlara ihtiyaç duyar?",
+    "a": "Ölçek tek başına yeterli değil. Kooperatifler ve üretici örgütleri, operasyonlarını profesyonelleştiren, pazar erişimini iyileştiren ve pazarlık gücünü artıran sistemlere ihtiyaç duyar. T57 gibi platformlarla doğru desteklenip örgütlendiklerinde tarım kooperatifleri, sürdürülebilir tarım-gıda sistemlerinde ve gıda güvenliğinde kritik bir rol oynar."
+   },
+   {
+    "q": "Kooperatifleri ya da üretici örgütleri bir kamu ihalesi veya sözleşmeli tarım anlaşması kazandığında üyeler ne kazanır?",
+    "a": "Kamu ihaleleri ve sözleşmeli tarım anlaşmaları talebi ve zaman çizelgesini kesinleştirir; üyeler ne üreteceklerini, ürünün ne zaman alınacağını ve hangi şartlarla alınacağını bilir. Bu da daha tutarlı fiyatlar ve daha düşük hasat sonrası kayıplar demektir. T57 üyelerin hacim ve ürün desenini planlamasına, arzı ihale gerekliliklerine uydurmasına, lojistik ve belgeleri koordine etmesine ve teslimat ile ödemeleri tek yerden takip etmesine yardımcı olur; böylece kazanılan ihaleler ve sözleşmeler tek tek çiftçilere yayılan bir faydaya dönüşür."
+   }
+  ],
+  "title": "Kooperatifler ve Üretici Örgütleri İçin T57 | Pazar Erişimi ve Finansman",
+  "description": "T57, kooperatiflerin ve üretici örgütlerinin doğrudan ticaret yapmasına, anlık fiyatları görmesine, finansman sağlamasına, lojistiği yönetmesine ve üyeleri için denetlenebilir operasyonlar yürütmesine yardımcı olur.",
+  "parent": "who-we-serve"
+ },
+ "collaborators": {
+  "route": "/tr/who-we-serve/collaborators",
+  "section": "who-we-serve",
+  "name": "İş Ortakları ve İş Birlikçiler",
+  "h1": "Daha güçlü bir gıda sistemini birlikte kuralım.",
+  "answer": "Kalkınma ortakları, birlikler ve kurumlar tek bir platformla tüm gıda zincirine ulaşır.",
+  "faqs": [
+   {
+    "q": "T57 iş ortakları daha iyi pazarlara ulaşmama nasıl yardımcı olur?",
+    "a": "T57'nin incelenmiş iş ortakları; bu ilişkileri kendiniz kurmak zorunda kalmadan standartları karşılamanıza, ürünü güvenilir biçimde taşımanıza ve büyümeniz için üst düzey yetkinliklere erişmenize yardımcı olur."
+   },
+   {
+    "q": "T57'de ne tür iş ortaklarına erişebilirim?",
+    "a": "Karmaşık uyum gerekliliklerini karşılamanıza, lojistik kayıplarını azaltmanıza, finansman ve sigortanın önünü açmanıza, inovasyonu hızlandırmanıza ve emeğinizi öngörülebilir, daha yüksek değerli ticari sonuçlara dönüştürmenize yardımcı olan çok çeşitli iş ortaklarıyla bağlantı kurabilirsiniz."
+   },
+   {
+    "q": "T57 iş birliği ortaklarının güvenilir olmasını nasıl sağlıyor?",
+    "a": "T57; durum tespiti, geçmiş performans kontrolleri ve sürekli performans verilerini içeren kulüp tarzı bir model kullanır; böylece ekosistem katılımcıları yalnızca doğrulanmış iş ortaklarıyla çalışır."
+   },
+   {
+    "q": "Hükümetler ve düzenleyici kurumlar T57 iş ortağı ağını neden önemsemeli?",
+    "a": "T57, değer zinciri boyunca güvenilir iş ortaklarına erişim sağlayarak kullanıcıların hedeflerini hükümetlerin belirlediği politika ve mevzuat sınırlarıyla uyumlu hâle getirmelerine yardımcı olur."
+   }
+  ],
+  "title": "T57 İş Ortağı ve İş Birliği Ağı | Gıda ve Tarım Ekosistemi",
+  "description": "T57; agronomları, finansörleri, lojistik firmalarını, belgelendirme kuruluşlarını ve üniversiteleri daha akıllı gıda ticareti ve daha fazla etki için tek bir doğrulanmış platformda buluşturur.",
+  "parent": "who-we-serve"
+ },
+ "service-providers": {
+  "route": "/tr/who-we-serve/service-providers",
+  "section": "who-we-serve",
+  "name": "Hizmet Sağlayıcılar",
+  "h1": "Uzmanlığınızı düzenli işe dönüştürün.",
+  "answer": "Gözetim, lojistik, hukuk ve danışmanlık firmaları, onlara ihtiyaç duyan canlı işlemlerle eşleşir.",
+  "faqs": [
+   {
+    "q": "T57'nin sıradan bir pazar yerinden farkı nedir?",
+    "a": "T57 yalnızca ilanlar ve tanıştırmalar üzerine değil; doğrulanmış katılımcılar, ticarete bağlı iş akışları ve kurallı yürütme üzerine kuruludur."
+   },
+   {
+    "q": "Yerel ofisim olmadan sınır ötesinde hizmet verebilir miyim?",
+    "a": "Evet. T57, sağlayıcıların bölgeler arasında dijital olarak çalışmasına yardımcı olurken keşif, sözleşme ve ödeme süreçlerindeki sürtünmeyi azaltacak şekilde tasarlandı."
+   },
+   {
+    "q": "T57 müşterilerimle güven kurmama nasıl yardımcı olur?",
+    "a": "Doğrulanmış profiller, hizmet geçmişleri, puanlar ve performans kayıtları, alıcıların birlikte çalışmadan önce güvenilirliğinizi değerlendirmesine yardımcı olur."
+   },
+   {
+    "q": "Hizmet sağlayıcılar gıda ticaretinde neden daha önemli hâle geliyor?",
+    "a": "Alıcılar ve düzenleyici kurumlar tedarik zincirleri boyunca giderek daha fazla izlenebilirlik, gıda güvenilirliği, güvenilir belgeler ve sorunların daha hızlı çözülmesini bekliyor. Bu da hizmet sağlayıcıları tedarik zincirinin önemli bir parçası yapıyor."
+   }
+  ],
+  "title": "Hizmet Sağlayıcılar İçin T57 | Gıda ve Tarımda Büyüyün",
+  "description": "T57'ye gıda ve tarım hizmet sağlayıcısı olarak katılın. Doğrulanmış talebe ulaşın, güvenilir uzmanlık sunun ve yapılandırılmış, daha düşük riskli iş akışlarıyla büyüyün.",
+  "parent": "who-we-serve"
+ },
+ "farmers": {
+  "route": "/tr/who-we-serve/farmers",
+  "section": "who-we-serve",
+  "name": "Çiftçiler ve Üreticiler",
+  "h1": "Hasadınızı adil fiyata satın.",
+  "answer": "Doğrulanmış alıcılara doğrudan ulaşın, piyasa fiyatlarını görün ve ödemenizi daha hızlı alın.",
+  "faqs": [
+   {
+    "q": "Bir çiftçi ya da üretici neden T57 gibi dijital bir ticaret platformu kullanmalı?",
+    "a": "T57 doğrulanmış alıcılara ve şeffaf ödeme süreçlerine erişim sağlar. Bu da belirsizliği azaltır ve gelirin gerçekten ele geçmesini kolaylaştırır."
+   },
+   {
+    "q": "Sözleşmeli tarımda çiftçiler nelere dikkat etmeli?",
+    "a": "Sözleşmeli tarım anlaşmaları çoğu zaman güçlü alıcılarla daha zayıf çiftçiler arasında yapılır. Bu durum adil olmayan şartlara, tek bir alıcıya aşırı bağımlılığa ya da kalite ve kesintiler konusunda uyuşmazlıklara yol açabilir. Çiftçiler en iyi şartları müzakere etmek için T57'nin uzmanlığından yararlanabilir."
+   },
+   {
+    "q": "Daha iyi pazar erişimi israfı gerçekten azaltır mı?",
+    "a": "Evet. Arz ile talebin daha iyi eşleşmesi ve ticaretin daha koordineli yürütülmesi, hasat ile pazar arasındaki kayıpları azaltabilir."
+   },
+   {
+    "q": "Finansman üreticiler için neden bu kadar büyük bir sorun?",
+    "a": "Dünya Bankası'na göre pek çok gelişmekte olan pazarda tarım finansmanı; risk, işlem maliyetleri ve dağınık kırsal borçlulara hizmet vermenin güçlüğü nedeniyle orantısız biçimde kısıtlı kalıyor. Gerçek siparişlere bağlı işletme sermayesine ihtiyaç duyan üreticiler için ticarete bağlı ve dijital finansman modellerinin önemi de buradan geliyor."
+   },
+   {
+    "q": "Fiyat istihbaratı çiftlik düzeyinde gerçekten önemli mi?",
+    "a": "Evet. Üreticiler talebi ve fiyatları göremediklerinde daha zayıf bir konumdan pazarlık yapar ve çoğu zaman aracılara fazlasıyla bağımlı kalır. T57'nin temel modeli, pazar ve fiyat istihbaratına erişimi iyileştirerek doğrudan bu soruna çözüm getirir."
+   }
+  ],
+  "title": "Çiftçiler ve Üreticiler İçin T57 | Pazar Erişimi ve Yapay Zekâ Araçları",
+  "description": "T57, çiftçilerin ve üreticilerin doğrulanmış alıcılara ulaşmasına, piyasa fiyatlarını görmesine, güvenli sözleşmeler imzalamasına, ödemesini daha hızlı almasına ve ticaret finansmanına erişmesine yardımcı olur.",
+  "parent": "who-we-serve"
  }
 }
