@@ -2594,6 +2594,244 @@
   "description": "Jawapan mudah tentang T57, serta definisi istilah perdagangan makanan, pembiayaan perdagangan dan teknologi, daripada eskrow dan surat kredit hingga KYB dan kod HS.",
   "parent": "resources"
  },
+ "help": {
+  "route": "/ms/help",
+  "section": "help",
+  "name": "Pusat Bantuan",
+  "h1": "Bantuan apabila anda memerlukannya, dan manusia apabila ia penting.",
+  "answer": "Dapatkan bantuan dengan T57, bila-bila masa anda perlukan.",
+  "faqs": [
+   {
+    "q": "Adakah sokongan termasuk dalam pelan saya?",
+    "a": "Ya. Setiap pelan merangkumi pusat bantuan dan sokongan e-mel, manakala pelan yang lebih tinggi menambah sembang langsung, sokongan keutamaan dan pengurus akaun khusus."
+   },
+   {
+    "q": "Dalam bahasa apakah sokongan tersedia?",
+    "a": "Bahasa Inggeris, bahasa Arab dan bahasa utama di pasaran pengasas kami."
+   }
+  ],
+  "title": "Pusat Bantuan | Sokongan, Panduan dan Soalan Lazim T57",
+  "description": "Panduan, cara-cara, Soalan Lazim dan sokongan untuk berdagang di T57, daripada pendaftaran dan pengesahan hingga pembayaran dan penghantaran."
+ },
+ "help-start": {
+  "route": "/ms/help/getting-started",
+  "section": "help",
+  "name": "Panduan Permulaan",
+  "h1": "Daripada pendaftaran hingga dagangan pertama anda.",
+  "answer": "Panduan langkah demi langkah untuk ahli baharu: akaun, pelan, pengesahan, Pasport, pasukan, penyenaraian dan permintaan sebut harga pertama anda.",
+  "faqs": [],
+  "title": "Bermula dengan T57 | Panduan Langkah demi Langkah",
+  "description": "Panduan langkah demi langkah untuk ahli baharu T57: akaun, pelan, pengesahan, Pasport, pasukan, penyenaraian dan permintaan sebut harga pertama anda.",
+  "parent": "help"
+ },
+ "help-howto": {
+  "route": "/ms/help/how-to",
+  "section": "help",
+  "name": "Panduan Penggunaan Platform",
+  "h1": "Cara melakukan segala-galanya di T57.",
+  "answer": "Panduan untuk sebut harga, kontrak, dokumen, eskrow, surat kredit, pembiayaan, logistik, tetapan pasukan dan risikan pasaran.",
+  "faqs": [],
+  "title": "Cara-cara Platform | Pusat Bantuan T57",
+  "description": "Cara berdagang di T57: sebut harga, kontrak, dokumen, eskrow, surat kredit, pembiayaan, logistik, tetapan pasukan dan risikan pasaran.",
+  "parent": "help"
+ },
+ "help-faq": {
+  "route": "/ms/help/faq",
+  "section": "help",
+  "name": "Soalan Lazim",
+  "h1": "Jawapan pantas kepada soalan biasa.",
+  "answer": "Jawapan kepada soalan biasa.",
+  "faqs": [
+   {
+    "q": "Berapa lama percubaan percuma?",
+    "a": "Ahli pengasas menikmati 90 hari percuma semasa pelancaran. Selepas tempoh pelancaran, percubaan ialah 14 hari."
+   },
+   {
+    "q": "Bolehkah saya berdagang semasa percubaan percuma?",
+    "a": "Anda boleh meneroka ahli, risikan dan alat AI, serta menghantar permintaan sebut harga. Kontrak, eskrow dan pembiayaan bermula sebaik sahaja anda melanggan dan disahkan."
+   },
+   {
+    "q": "Bagaimana saya membatalkan atau menukar pelan?",
+    "a": "Melalui tetapan akaun anda. Naik taraf berkuat kuasa serta-merta, dan turun taraf berkuat kuasa semasa pembaharuan."
+   },
+   {
+    "q": "Adakah T57 memegang wang saya?",
+    "a": "Tidak. Pembayaran, eskrow dan surat kredit dikendalikan oleh rakan kongsi berlesen."
+   },
+   {
+    "q": "Bolehkah ahli lain melihat harga saya?",
+    "a": "Tidak. Hanya pihak yang anda beri sebut harga dapat melihat harga anda."
+   }
+  ],
+  "title": "Soalan Lazim | Pusat Bantuan T57",
+  "description": "Jawapan tentang akaun T57, percubaan percuma, pelan dan pengebilan, pengesahan, dagangan, pembayaran, dokumen dan keselamatan.",
+  "parent": "help"
+ },
+ "help-contact": {
+  "route": "/ms/help/contact",
+  "section": "help",
+  "name": "Hubungi Sokongan",
+  "h1": "Bercakap dengan manusia apabila anda memerlukannya.",
+  "answer": "Hubungi sokongan T57 melalui sembang, e-mel atau pasukan tempatan anda di Arab Saudi, UAE, India, Malaysia atau Türkiye.",
+  "faqs": [],
+  "title": "Hubungi Sokongan | Pusat Bantuan T57",
+  "description": "Hubungi sokongan T57 melalui sembang, e-mel atau pasukan tempatan di Arab Saudi, UAE, India, Malaysia atau Türkiye.",
+  "parent": "help"
+ },
+ "partnerships": {
+  "route": "/ms/partnerships",
+  "section": "partnerships",
+  "name": "Gambaran Keseluruhan Perkongsian",
+  "h1": "Layani perniagaan makanan yang disahkan, terus di dalam dagangan.",
+  "answer": "Bekerjasama dengan rangkaian yang menjadi tunjang perdagangan makanan.",
+  "faqs": [
+   {
+    "q": "Adakah T57 bersaing dengan rakan kongsi?",
+    "a": "Tidak. T57 tidak memberi pinjaman, menginsuranskan, menghantar atau memeriksa. Ia membawa pelanggan yang disahkan dan data yang lebih baik kepada rakan kongsi."
+   },
+   {
+    "q": "Bagaimana rakan kongsi dibayar?",
+    "a": "Ahli membayar rakan kongsi secara terus bagi perkhidmatan mereka. T57 mungkin memperoleh komisen kecil daripada sesetengah rakan kongsi, sebagaimana dipersetujui dalam setiap perkongsian."
+   },
+   {
+    "q": "Bolehkah rakan kongsi dari mana-mana negara menyertai?",
+    "a": "Rakan kongsi yang berlesen di pasaran T57, atau yang melayani perdagangan dengan pasaran tersebut, boleh memohon."
+   }
+  ],
+  "title": "Perkongsian | Kewangan, Logistik & Teknologi | T57",
+  "description": "Bekerjasama dengan T57 untuk melayani perniagaan makanan yang disahkan dengan pembiayaan, insurans, logistik, pemeriksaan dan teknologi, yang disambungkan kepada satu rekod dagangan."
+ },
+ "partners-technology": {
+  "route": "/ms/partners/technology",
+  "section": "partners",
+  "name": "Rakan Kongsi Teknologi",
+  "h1": "Bina masa depan perdagangan makanan bersama kami.",
+  "answer": "Bekerjasama dengan T57 dalam awan, identiti, data, integrasi dan AI untuk melayani perniagaan makanan yang disahkan.",
+  "faqs": [
+   {
+    "q": "Adakah anda menawarkan API?",
+    "a": "Ya, untuk rakan kongsi yang diluluskan."
+   },
+   {
+    "q": "Bolehkah syarikat SaaS menawarkan T57 kepada pelanggannya?",
+    "a": "Boleh, melalui pilihan rakan kongsi dan label putih."
+   }
+  ],
+  "title": "Rakan Kongsi Teknologi | T57",
+  "description": "Bekerjasama dengan T57 dalam awan, identiti, data, integrasi dan AI untuk melayani perniagaan makanan yang disahkan.",
+  "parent": "partnerships"
+ },
+ "partners-finance": {
+  "route": "/ms/partners/financial-services",
+  "section": "partners",
+  "name": "Rakan Kongsi Perkhidmatan Kewangan",
+  "h1": "Data lebih baik. Risiko lebih rendah.",
+  "answer": "Capai perniagaan makanan yang disahkan dengan data yang lebih baik dan risiko yang lebih rendah.",
+  "faqs": [
+   {
+    "q": "Adakah T57 menanggung risiko kredit?",
+    "a": "Tidak. Rakan kongsi membuat keputusan kredit mereka sendiri."
+   },
+   {
+    "q": "Bolehkah bank Islam dan pengendali takaful menyertai?",
+    "a": "Ya."
+   }
+  ],
+  "title": "Rakan Kongsi Perkhidmatan Kewangan | Pembiayaan & Insurans | T57",
+  "description": "Bank, syarikat pembiayaan, penyedia eskrow, syarikat insurans dan pengendali takaful sampai kepada perniagaan makanan yang disahkan, dengan rekod dagangan di sebalik setiap permintaan.",
+  "parent": "partnerships"
+ },
+ "partners-logistics": {
+  "route": "/ms/partners/logistics",
+  "section": "partners",
+  "name": "Rakan Kongsi Logistik",
+  "h1": "Gerak dan periksa makanan untuk pedagang yang disahkan.",
+  "answer": "Rakan kongsi pengangkutan, rantaian sejuk, gudang, pemeriksaan dan kastam melayani pedagang yang disahkan terus dari dalam rekod dagangan T57.",
+  "faqs": [
+   {
+    "q": "Adakah ahli memilih rakan kongsi logistik mereka sendiri?",
+    "a": "Ya. Mereka boleh memilih daripada rakan kongsi T57 atau membawa rakan kongsi sendiri."
+   },
+   {
+    "q": "Bolehkah keputusan pemeriksaan mencetuskan bayaran?",
+    "a": "Boleh, jika pihak-pihak mempersetujuinya dalam kontrak mereka."
+   }
+  ],
+  "title": "Rakan Kongsi Logistik | Pengangkutan, Rantaian Sejuk, Pemeriksaan | T57",
+  "description": "Rakan kongsi pengangkutan, rantaian sejuk, gudang, pemeriksaan dan kastam melayani pedagang makanan yang disahkan terus dari dalam rekod dagangan T57.",
+  "parent": "partnerships"
+ },
+ "partners-research": {
+  "route": "/ms/partners/research",
+  "section": "partners",
+  "name": "Rakan Kongsi Penyelidikan & Universiti",
+  "h1": "Dari makmal ke ladang.",
+  "answer": "T57 bekerjasama dengan universiti pertanian dan institut penyelidikan untuk membawa hasil penyelidikan mereka kepada petani dan PKS makanan, dan menjadikannya sumber pendapatan bagi saintis di sebaliknya.",
+  "faqs": [
+   {
+    "q": "Siapa yang memiliki penyelidikan dan data?",
+    "a": "Institusi rakan kongsi. T57 hanya menggunakan penyelidikan dan data di bawah terma yang dipersetujui dengan setiap rakan kongsi, dan mengiktiraf sumbernya."
+   },
+   {
+    "q": "Bagaimana saintis dibayar?",
+    "a": "Melalui yuran lesen dan royalti yang dipersetujui di awal, serta melalui nasihat berbayar di Khidmat Pakar."
+   },
+   {
+    "q": "Bolehkah syarikat pemula universiti menyertai?",
+    "a": "Boleh. Syarikat pemula boleh menyenaraikan teknologi mereka untuk disewa atau dijual, dan menawarkan perkhidmatan kepada ahli T57."
+   },
+   {
+    "q": "Institusi manakah yang boleh memohon?",
+    "a": "Universiti pertanian, institut penyelidikan, akademi dan syarikat pemula mereka, dari mana-mana negara."
+   }
+  ],
+  "title": "Rakan Kongsi Penyelidikan & Universiti | T57",
+  "description": "T57 bekerjasama dengan universiti pertanian dan institut penyelidikan untuk membawa penyelidikan kepada petani, melatih AI tempatan, merintis teknologi baharu dan memberi ganjaran kepada saintis.",
+  "parent": "partnerships"
+ },
+ "partners-country": {
+  "route": "/ms/partners/country-partner",
+  "section": "partners",
+  "name": "Rakan Kongsi Negara",
+  "h1": "Bawa T57 ke negara anda.",
+  "answer": "Jalankan T57 di negara atau bandar anda sebagai rakan kongsi negara berlesen, seperti francais. Anda membina rangkaian tempatan perniagaan makanan yang disahkan; T57 menyediakan platform, jenama dan sokongan.",
+  "faqs": [
+   {
+    "q": "Adakah ini satu francais?",
+    "a": "Ia berfungsi seperti francais. Anda menjalankan T57 di wilayah yang dipersetujui di bawah lesen, dengan jenama, platform dan sokongan T57, serta berkongsi hasil daripada ahli yang anda bawa."
+   },
+   {
+    "q": "Negara manakah yang terbuka kepada rakan kongsi?",
+    "a": "Negara dan bandar yang belum mempunyai pasukan negara T57. Lihat halaman Pelancaran Global untuk fasa-fasanya."
+   },
+   {
+    "q": "Bolehkah saya meliputi satu bandar sahaja?",
+    "a": "Boleh. Wilayah boleh merangkumi seluruh negara, satu rantau atau sebuah bandar perdagangan."
+   },
+   {
+    "q": "Adakah rakan kongsi mengendalikan wang atau barang?",
+    "a": "Tidak. Ahli membayar melalui rakan kongsi pembayaran dan eskrow yang berlesen, dan barang digerakkan oleh rakan kongsi logistik. Rakan kongsi tidak memberi pinjaman."
+   },
+   {
+    "q": "Adakah yuran untuk menjadi rakan kongsi?",
+    "a": "Terma dipersetujui dengan setiap rakan kongsi dan dinyatakan dalam lesen rakan kongsi."
+   }
+  ],
+  "title": "Francais Rakan Kongsi Negara | Bawa T57 ke Negara Anda | T57",
+  "description": "Jalankan T57 di negara atau bandar anda sebagai rakan kongsi negara berlesen. Anda membina rangkaian tempatan; T57 menyediakan platform, jenama dan sokongan.",
+  "parent": "partnerships"
+ },
+ "partners-apply": {
+  "route": "/ms/partners/apply",
+  "section": "partners",
+  "name": "Jadi Rakan Kongsi",
+  "h1": "Mohon untuk menjadi rakan kongsi T57.",
+  "answer": "Bekerjasama dengan T57 dalam pembiayaan, insurans, logistik, pemeriksaan atau teknologi. Ceritakan tentang perniagaan anda untuk bermula.",
+  "faqs": [],
+  "title": "Jadi Rakan Kongsi | T57",
+  "description": "Mohon untuk bekerjasama dengan T57 dalam pembiayaan, insurans, logistik, pemeriksaan atau teknologi.",
+  "parent": "partnerships"
+ },
  "governments": {
   "route": "/ms/who-we-serve/governments",
   "section": "who-we-serve",
