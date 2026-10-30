@@ -2613,6 +2613,60 @@
   "title": "Yardım Merkezi | T57 Destek, Rehberler ve SSS",
   "description": "Kayıt ve doğrulamadan ödemelere ve sevkiyatlara kadar T57'de ticaret için rehberler, nasıl yapılır kılavuzları, SSS ve destek."
  },
+ "help-start": {
+  "route": "/tr/help/getting-started",
+  "section": "help",
+  "name": "Başlangıç Kılavuzları",
+  "h1": "Kayıttan ilk işleminize.",
+  "answer": "Yeni üyeler için adım adım rehberler: hesap, paket, doğrulama, Pasaport, ekip, ilanlar ve ilk teklif talebiniz.",
+  "faqs": [],
+  "title": "T57'ye Başlarken | Adım Adım Rehberler",
+  "description": "Yeni T57 üyeleri için adım adım rehberler: hesap, paket, doğrulama, Pasaport, ekip, ilanlar ve ilk teklif talebiniz.",
+  "parent": "help"
+ },
+ "help-howto": {
+  "route": "/tr/help/how-to",
+  "section": "help",
+  "name": "Platform Nasıl Kullanılır",
+  "h1": "T57'de her şeyi nasıl yaparsınız.",
+  "answer": "Teklifler, sözleşmeler, belgeler, emanet hesabı, akreditifler, finansman, lojistik, ekip ayarları ve piyasa analizleri için kılavuzlar.",
+  "faqs": [],
+  "title": "Platform Kılavuzları | T57 Yardım Merkezi",
+  "description": "T57'de nasıl ticaret yapılır: teklifler, sözleşmeler, belgeler, emanet hesabı, akreditifler, finansman, lojistik, ekip ayarları ve piyasa analizleri.",
+  "parent": "help"
+ },
+ "help-faq": {
+  "route": "/tr/help/faq",
+  "section": "help",
+  "name": "Sıkça Sorulan Sorular",
+  "h1": "Sık sorulan sorulara hızlı yanıtlar.",
+  "answer": "Sık sorulan soruların yanıtları.",
+  "faqs": [
+   {
+    "q": "Ücretsiz deneme ne kadar sürüyor?",
+    "a": "Kurucu üyeler lansmanda 90 gün ücretsiz kullanır. Lansman döneminden sonra deneme süresi 14 gündür."
+   },
+   {
+    "q": "Ücretsiz deneme süresince ticaret yapabilir miyim?",
+    "a": "Üyeleri, analizleri ve yapay zekâ araçlarını keşfedebilir, teklif talebi gönderebilirsiniz. Sözleşmeler, emanet hesabı ve finansman abone olup doğrulandığınızda başlar."
+   },
+   {
+    "q": "Paketimi nasıl iptal eder ya da değiştiririm?",
+    "a": "Hesap ayarlarınızdan. Üst pakete geçişler hemen, alt pakete geçişler yenilemede geçerli olur."
+   },
+   {
+    "q": "T57 paramı tutuyor mu?",
+    "a": "Hayır. Ödemeler, emanet hesabı ve akreditifler lisanslı iş ortakları tarafından yürütülür."
+   },
+   {
+    "q": "Diğer üyeler fiyatlarımı görebilir mi?",
+    "a": "Hayır. Fiyatlarınızı yalnızca teklif verdiğiniz taraflar görebilir."
+   }
+  ],
+  "title": "SSS | T57 Yardım Merkezi",
+  "description": "T57 hesapları, ücretsiz deneme, paketler ve faturalama, doğrulama, ticaret, ödemeler, belgeler ve güvenlik hakkında yanıtlar.",
+  "parent": "help"
+ },
  "help-contact": {
   "route": "/tr/help/contact",
   "section": "help",
@@ -2623,6 +2677,223 @@
   "title": "Destekle İletişim | T57 Yardım Merkezi",
   "description": "T57 desteğine sohbet, e-posta ya da Suudi Arabistan, BAE, Hindistan, Malezya veya Türkiye'deki yerel ülke ekibiniz aracılığıyla ulaşın.",
   "parent": "help"
+ },
+ "partnerships": {
+  "route": "/tr/partnerships",
+  "section": "partnerships",
+  "name": "İş Ortaklıklarına Genel Bakış",
+  "h1": "Doğrulanmış gıda işletmelerine işlemin tam içinden hizmet verin.",
+  "answer": "Gıda ticaretinin üzerinde yürüdüğü ağla iş ortaklığı yapın.",
+  "faqs": [
+   {
+    "q": "T57 iş ortaklarıyla rekabet ediyor mu?",
+    "a": "Hayır. T57 kredi vermez, sigorta yapmaz, taşımaz ya da gözetim yapmaz. İş ortaklarına doğrulanmış müşteriler ve daha iyi veriler getirir."
+   },
+   {
+    "q": "İş ortakları ödemelerini nasıl alıyor?",
+    "a": "Üyeler iş ortaklarına hizmetleri için doğrudan ödeme yapar. T57, her iş ortaklığında kararlaştırıldığı şekilde bazı iş ortaklarından küçük bir komisyon alabilir."
+   },
+   {
+    "q": "Her ülkeden iş ortakları katılabilir mi?",
+    "a": "T57 pazarlarında lisanslı olan ya da bu pazarlarla yapılan ticarete hizmet veren iş ortakları başvurabilir."
+   }
+  ],
+  "title": "İş Ortaklıkları | Finans, Lojistik ve Teknoloji | T57",
+  "description": "Doğrulanmış gıda işletmelerine tek bir ticaret kaydına bağlı finansman, sigorta, lojistik, gözetim ve teknoloji hizmetleri sunmak için T57 ile iş ortaklığı yapın."
+ },
+ "partners-technology": {
+  "route": "/tr/partners/technology",
+  "section": "partners",
+  "name": "Teknoloji Ortakları",
+  "h1": "Gıda ticaretinin geleceğini bizimle birlikte inşa edin.",
+  "answer": "Doğrulanmış gıda işletmelerine hizmet vermek için bulut, kimlik, veri, entegrasyon ve yapay zekâ alanlarında T57 ile iş ortaklığı yapın.",
+  "faqs": [
+   {
+    "q": "API sunuyor musunuz?",
+    "a": "Evet, onaylı iş ortakları için."
+   },
+   {
+    "q": "Bir SaaS şirketi T57'yi kendi müşterilerine sunabilir mi?",
+    "a": "Evet, iş ortaklığı ve beyaz etiket seçenekleriyle."
+   }
+  ],
+  "title": "Teknoloji İş Ortakları | T57",
+  "description": "Doğrulanmış gıda işletmelerine hizmet vermek için bulut, kimlik, veri, entegrasyon ve yapay zekâ alanlarında T57 ile iş ortaklığı yapın.",
+  "parent": "partnerships"
+ },
+ "partners-finance": {
+  "route": "/tr/partners/financial-services",
+  "section": "partners",
+  "name": "Finansal Hizmet Ortakları",
+  "h1": "Daha iyi veri. Daha az risk.",
+  "answer": "Doğrulanmış gıda işletmelerine daha iyi verilerle ve daha az riskle ulaşın.",
+  "faqs": [
+   {
+    "q": "T57 kredi riski alıyor mu?",
+    "a": "Hayır. İş ortakları kendi kredi kararlarını verir."
+   },
+   {
+    "q": "İslami bankalar ve tekâfül şirketleri katılabilir mi?",
+    "a": "Evet."
+   }
+  ],
+  "title": "Finansal Hizmet İş Ortakları | Finans ve Sigorta | T57",
+  "description": "Bankalar, finansman şirketleri, emanet hesabı sağlayıcıları, sigortacılar ve tekâfül şirketleri, her talebin arkasındaki ticaret kaydıyla doğrulanmış gıda işletmelerine ulaşır.",
+  "parent": "partnerships"
+ },
+ "partners-logistics": {
+  "route": "/tr/partners/logistics",
+  "section": "partners",
+  "name": "Lojistik Ortakları",
+  "h1": "Doğrulanmış tüccarlar için gıdayı taşıyın ve kontrol edin.",
+  "answer": "Navlun, soğuk zincir, depo, gözetim ve gümrük iş ortakları doğrulanmış tüccarlara T57 ticaret kaydının içinden hizmet verir.",
+  "faqs": [
+   {
+    "q": "Üyeler kendi lojistik iş ortaklarını seçebiliyor mu?",
+    "a": "Evet. T57'nin iş ortakları arasından seçebilir ya da kendi iş ortaklarını getirebilirler."
+   },
+   {
+    "q": "Gözetim sonuçları ödemeyi tetikleyebilir mi?",
+    "a": "Evet, taraflar bunu sözleşmelerinde kararlaştırdığında."
+   }
+  ],
+  "title": "Lojistik İş Ortakları | Navlun, Soğuk Zincir, Gözetim | T57",
+  "description": "Navlun, soğuk zincir, depo, gözetim ve gümrük iş ortakları doğrulanmış gıda tüccarlarına T57 ticaret kaydının içinden hizmet verir.",
+  "parent": "partnerships"
+ },
+ "partners-research": {
+  "route": "/tr/partners/research",
+  "section": "partners",
+  "name": "Araştırma ve Üniversite İş Ortakları",
+  "h1": "Laboratuvardan tarlaya.",
+  "answer": "T57, ziraat üniversiteleri ve araştırma enstitüleriyle çalışarak araştırmalarını çiftçilere ve gıda KOBİ'lerine ulaştırır ve bunları arkasındaki bilim insanları için gelire dönüştürür.",
+  "faqs": [
+   {
+    "q": "Araştırmanın ve verilerin sahibi kim?",
+    "a": "İş ortağı kurum. T57 araştırma ve verileri yalnızca her iş ortağıyla kararlaştırılan şartlarla kullanır ve kaynağı belirtir."
+   },
+   {
+    "q": "Bilim insanları nasıl ödeme alıyor?",
+    "a": "Önceden kararlaştırılan lisans bedelleri ve telif ücretleriyle ve Uzman Desteği'ndeki ücretli danışmanlıkla."
+   },
+   {
+    "q": "Bir üniversitenin girişimleri katılabilir mi?",
+    "a": "Evet. Girişimler teknolojilerini T57 üyelerine kiralamak ya da satmak için listeleyebilir ve hizmet sunabilir."
+   },
+   {
+    "q": "Hangi kurumlar başvurabilir?",
+    "a": "Her ülkeden ziraat üniversiteleri, araştırma enstitüleri, akademiler ve bunların girişimleri."
+   }
+  ],
+  "title": "Araştırma ve Üniversite İş Ortakları | T57",
+  "description": "T57; araştırmaları çiftçilere ulaştırmak, yerel yapay zekâyı eğitmek, yeni teknolojileri denemek ve bilim insanlarını ödüllendirmek için ziraat üniversiteleri ve araştırma enstitüleriyle çalışır.",
+  "parent": "partnerships"
+ },
+ "partners-country": {
+  "route": "/tr/partners/country-partner",
+  "section": "partners",
+  "name": "Ülke Ortakları",
+  "h1": "T57'yi ülkenize getirin.",
+  "answer": "T57'yi ülkenizde ya da şehrinizde, franchise benzeri lisanslı bir ülke iş ortağı olarak yürütün. Doğrulanmış gıda işletmelerinden oluşan yerel ağı siz kurarsınız; platformu, markayı ve desteği T57 sağlar.",
+  "faqs": [
+   {
+    "q": "Bu bir franchise mı?",
+    "a": "Bir franchise gibi işler. T57'yi kararlaştırılan bir bölgede, lisans altında, T57 markası, platformu ve desteğiyle yürütür ve getirdiğiniz üyelerden elde edilen gelirden pay alırsınız."
+   },
+   {
+    "q": "Hangi ülkeler iş ortaklarına açık?",
+    "a": "T57'nin henüz ülke ekibi bulunmayan ülkeler ve şehirler. Aşamalar için Küresel Yayılım sayfasına bakın."
+   },
+   {
+    "q": "Yalnızca bir şehri kapsayabilir miyim?",
+    "a": "Evet. Bölgeler bir ülkenin tamamı, bir bölge ya da bir ticaret şehri olabilir."
+   },
+   {
+    "q": "İş ortakları para ya da mal elleçliyor mu?",
+    "a": "Hayır. Üyeler lisanslı ödeme ve emanet hesabı iş ortakları aracılığıyla öder, mallar lojistik iş ortaklarıyla taşınır. İş ortakları kredi vermez."
+   },
+   {
+    "q": "İş ortağı olmanın bir ücreti var mı?",
+    "a": "Şartlar her iş ortağıyla ayrı ayrı kararlaştırılır ve iş ortağı lisansında belirlenir."
+   }
+  ],
+  "title": "Ülke İş Ortaklığı (Franchise) | T57'yi Ülkenize Getirin | T57",
+  "description": "T57'yi ülkenizde ya da şehrinizde lisanslı bir ülke iş ortağı olarak yürütün. Yerel ağı siz kurarsınız; platformu, markayı ve desteği T57 sağlar.",
+  "parent": "partnerships"
+ },
+ "partners-apply": {
+  "route": "/tr/partners/apply",
+  "section": "partners",
+  "name": "İş Ortağımız Olun",
+  "h1": "T57 iş ortağı olmak için başvurun.",
+  "answer": "Finans, sigorta, lojistik, gözetim ya da teknoloji alanında T57 ile iş ortaklığı yapın. Başlamak için işletmenizi bize anlatın.",
+  "faqs": [],
+  "title": "İş Ortağı Olun | T57",
+  "description": "Finans, sigorta, lojistik, gözetim ya da teknoloji alanında T57 ile iş ortaklığı için başvurun.",
+  "parent": "partnerships"
+ },
+ "contact": {
+  "route": "/tr/contact",
+  "section": "contact",
+  "name": "İletişim",
+  "h1": "T57 ile konuşun. Doğru ekibi biz buluruz.",
+  "answer": "T57 ile konuşun.",
+  "faqs": [
+   {
+    "q": "Ne kadar hızlı yanıt veriyorsunuz?",
+    "a": "İki iş günü içinde."
+   },
+   {
+    "q": "Sizinle Arapça iletişim kurabilir miyim?",
+    "a": "Evet."
+   },
+   {
+    "q": "Neredesiniz?",
+    "a": "Çevrim içi, her yerde. T57, her gıda işletmesinin her ülkeden katılabildiği küresel bir SaaS platformudur. Pilot uygulama Suudi Arabistan, BAE, Hindistan, Malezya ve Türkiye'de başlıyor."
+   }
+  ],
+  "title": "T57 ile iletişime geçin",
+  "description": "Katılmak, demo izlemek, iş ortaklığı yapmak, gıda güvenliği alanında bizimle çalışmak ya da medya talepleri için T57 ile iletişime geçin."
+ },
+ "contact-demo": {
+  "route": "/tr/contact/demo",
+  "section": "contact",
+  "name": "Demo Talep Edin",
+  "h1": "T57'yi kendi ürünleriniz üzerinde çalışırken görün.",
+  "answer": "Kendi ürünleriniz ve pazarlarınız üzerinde 30 dakikalık bir demo ayarlayın, ardından ücretsiz denemenizi başlatın.",
+  "faqs": [
+   {
+    "q": "Demo ücretsiz mi?",
+    "a": "Evet."
+   },
+   {
+    "q": "Ekibim de katılabilir mi?",
+    "a": "Evet, istediğiniz kadar meslektaşınızı davet edin."
+   }
+  ],
+  "title": "Demo Talep Edin | T57",
+  "description": "Kendi ürünleriniz ve pazarlarınız üzerinde 30 dakikalık bir T57 demosu ayarlayın, ardından ücretsiz denemenizi başlatın.",
+  "parent": "contact"
+ },
+ "contact-offices": {
+  "route": "/tr/contact/offices",
+  "section": "contact",
+  "name": "Faaliyet Gösterdiğimiz Yerler",
+  "h1": "T57'ye katılın nereden olursanız olun.",
+  "answer": "T57 küresel bir SaaS platformudur. Pilot uygulama beş ülkede başlıyor; dünyanın her yerindeki her gıda işletmesi çevrim içi başvurup katılabilir.",
+  "faqs": [
+   {
+    "q": "Bir ofisi ziyaret etmem gerekiyor mu?",
+    "a": "Hayır. T57 küresel bir SaaS platformudur; başvuru, doğrulama ve ticaret çevrim içi yapılır. Ekiple görüşmek için hello@t57.ai adresine e-posta gönderin."
+   },
+   {
+    "q": "Ülkeme kim destek veriyor?",
+    "a": "Beş pilot pazarda yerel ekip. Diğer her yerde, sohbet ya da hello@t57.ai üzerinden küresel ekibimiz."
+   }
+  ],
+  "title": "T57 Nerede Çalışıyor | Küresel SaaS, Beş Pilot Pazar",
+  "description": "T57 gıda ticareti için küresel bir SaaS platformudur. Pilot uygulama Suudi Arabistan, BAE, Hindistan, Malezya ve Türkiye'de başlıyor; her işletme her yerden çevrim içi katılabilir.",
+  "parent": "contact"
  },
  "governments": {
   "route": "/tr/who-we-serve/governments",
