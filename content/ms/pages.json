@@ -1286,6 +1286,196 @@
   "description": "Jana kontrak, invois dan senarai pembungkusan daripada sebut harga yang diterima, dan kesan percanggahan LC dan kastam dengan semakan AI, di T57.",
   "parent": "ai-native"
  },
+ "platform": {
+  "route": "/ms/platform",
+  "section": "platform",
+  "name": "Platform",
+  "h1": "Sistem operasi makanan. Satu platform, satu rekod.",
+  "answer": "Sistem operasi makanan: satu platform yang menghubungkan setiap pihak, perkhidmatan dan rekod dalam perdagangan makanan.",
+  "faqs": [
+   {
+    "q": "Adakah T57 sebuah pasaran atau platform?",
+    "a": "T57 ialah platform: kelab dagangan disahkan untuk ahli sahaja dengan infrastruktur untuk menjalankan dagangan dari hujung ke hujung. Ahli berdagang terus antara satu sama lain di dalamnya."
+   },
+   {
+    "q": "Bolehkah T57 disambungkan ke sistem sedia ada saya?",
+    "a": "Boleh. T57 menawarkan API untuk sistem ERP, perakaunan dan perolehan, serta disambungkan kepada bank, syarikat insurans dan penyedia logistik rakan kongsi."
+   },
+   {
+    "q": "Di manakah data saya disimpan?",
+    "a": "Di infrastruktur awan Microsoft Azure merentas pelbagai rantau, direka untuk memenuhi keperluan kediaman data setiap pasaran."
+   }
+  ],
+  "title": "Platform T57 | Sistem Operasi Makanan",
+  "description": "Identiti yang disahkan, satu rekod dagangan, rakan kongsi pembiayaan dan logistik yang bersambung, AI dan blockchain dalam satu platform selamat yang dibina untuk perdagangan makanan."
+ },
+ "platform-trade-cycle": {
+  "route": "/ms/platform/trade-cycle",
+  "section": "platform",
+  "name": "Satu Dagangan, Setiap Langkah",
+  "h1": "Satu dagangan. Setiap langkah. Satu rekod.",
+  "answer": "Setuju harga, hantar, insuranskan, biayai, bayar dan lepaskan kastam dalam satu platform, dengan setiap pihak disahkan dan setiap langkah dalam satu rekod.",
+  "faqs": [],
+  "title": "Satu Dagangan, Setiap Langkah: Perdagangan Makanan dalam Satu Rekod | T57",
+  "description": "Setuju harga, hantar, insuranskan, biayai, bayar dan lepaskan kastam bagi apa jua makanan dalam satu platform, dengan pihak yang disahkan, pemberi pinjaman yang bersaing dan pembiayaan berasaskan pencapaian.",
+  "parent": "platform"
+ },
+ "platform-domestic": {
+  "route": "/ms/platform/domestic-trade",
+  "section": "platform",
+  "name": "Dagangan B2B Domestik",
+  "h1": "Dari kilang ke setiap kedai di bandar.",
+  "answer": "Kilang dan ladang tempatan menjual terus kepada pasar raya, restoran dan pejabat pada harga kilang, mengikut karton, dihantar ke pintu.",
+  "faqs": [
+   {
+    "q": "Adakah T57 mengenakan yuran penyenaraian atau rebat?",
+    "a": "Tidak. Tiada yuran penyenaraian, rebat ruang rak atau promosi paksaan. Penjual menetapkan harga sendiri. Pilihan keahlian T57 terdapat di halaman Harga."
+   },
+   {
+    "q": "Siapa yang menghantar pesanan?",
+    "a": "Rakan kongsi logistik tempatan berlesen, ditempah daripada pesanan. Penjual juga boleh menjemput syarikat penghantaran yang sudah mereka gunakan."
+   },
+   {
+    "q": "Bolehkah pembeli membayar kemudian?",
+    "a": "Boleh, jika rakan kongsi kredit B2B atau bayar kemudian yang berlesen meluluskan pembeli itu. T57 tidak memberi pinjaman."
+   },
+   {
+    "q": "Berapakah pesanan minimum?",
+    "a": "Setiap penjual menetapkannya, contohnya 2, 5 atau 20 karton, dengan harga lebih rendah bagi pesanan yang lebih besar."
+   },
+   {
+    "q": "Bolehkah ladang dan koperasi menjual dengan cara ini?",
+    "a": "Boleh. Ladang, koperasi dan pemproses makanan boleh menyenaraikan produk segar dan berbungkus untuk pembeli perniagaan tempatan."
+   },
+   {
+    "q": "Untuk negara manakah ini?",
+    "a": "Perdagangan B2B domestik dibina untuk setiap pasaran pengasas T57: Arab Saudi, UAE, India, Malaysia dan Türkiye."
+   }
+  ],
+  "title": "Perdagangan Makanan B2B Domestik | Dari Kilang ke Kedai, Secara Terus | T57",
+  "description": "Kilang dan ladang tempatan menjual terus kepada pasar raya, restoran dan pejabat pada harga kilang, mengikut karton, dengan rakan kongsi penghantaran tempatan dan bayar kemudian.",
+  "parent": "platform"
+ },
+ "platform-architecture": {
+  "route": "/ms/platform/architecture",
+  "section": "platform",
+  "name": "Seni Bina Sistem",
+  "h1": "Berasaskan awan. Mengutamakan API. Dibina untuk perdagangan terkawal.",
+  "answer": "Seni bina berasaskan awan yang mengutamakan API, dibina untuk perdagangan makanan rentas sempadan yang disahkan dan terkawal.",
+  "faqs": [
+   {
+    "q": "Awan manakah yang digunakan T57?",
+    "a": "Microsoft Azure, merentas pelbagai rantau, direka untuk memenuhi keperluan kediaman data setiap pasaran."
+   },
+   {
+    "q": "Adakah T57 menawarkan API?",
+    "a": "Ya. Ahli dan rakan kongsi boleh berintegrasi melalui REST API dan webhook. Dokumentasi tersedia untuk ahli dan rakan kongsi yang diluluskan."
+   },
+   {
+    "q": "Bolehkah rakan kongsi menyimpan data dalam sistem mereka sendiri?",
+    "a": "Boleh. Rakan kongsi hanya bertukar data yang diperlukan bagi setiap dagangan, di bawah perjanjian dan dengan persetujuan, serta mengekalkan sistem rekod mereka sendiri."
+   }
+  ],
+  "title": "Seni Bina T57 | Platform Berasaskan Awan, Mengutamakan API",
+  "description": "Awan peka rantau di Microsoft Azure, perkhidmatan bermodul, penyambung rakan kongsi dan API ahli, dibina untuk perdagangan makanan rentas sempadan yang disahkan dan terkawal.",
+  "parent": "platform"
+ },
+ "platform-roadmap": {
+  "route": "/ms/platform/roadmap",
+  "section": "platform",
+  "name": "Hala Tuju Platform",
+  "h1": "Bagaimana platform berkembang, satu lapisan kukuh pada satu masa.",
+  "answer": "Bagaimana platform T57 berkembang: daripada dagangan yang disahkan, kepada pembiayaan bersambung, hingga ke ekosistem makanan.",
+  "faqs": [
+   {
+    "q": "Bolehkah saya menyertai T57 sekarang?",
+    "a": "Boleh. Permohonan keahlian sudah dibuka, bermula di pasaran pengasas."
+   },
+   {
+    "q": "Bagaimana saya tahu apabila keupayaan baharu sampai ke pasaran saya?",
+    "a": "Ahli dimaklumkan dalam platform, dan rakan kongsi menerima kemas kini integrasi secara terus."
+   },
+   {
+    "q": "Bolehkah organisasi saya membantu membentuk hala tuju?",
+    "a": "Boleh. Rakan kongsi dan ahli institusi boleh menyertai program perintis dan kumpulan penasihat."
+   }
+  ],
+  "title": "Hala Tuju Platform T57 | Dagangan, Pembiayaan, Ekosistem",
+  "description": "Bagaimana platform T57 berkembang secara berperingkat, daripada perdagangan makanan yang disahkan kepada pembiayaan bersambung dan ekosistem makanan yang lengkap, merentas pasaran pengasas dan pasaran baharu.",
+  "parent": "platform"
+ },
+ "platform-intelligence": {
+  "route": "/ms/platform/intelligence-layer",
+  "section": "platform",
+  "name": "Lapisan Kecerdasan",
+  "h1": "AI kecil dan tempatan, dilatih dengan dagangan yang disahkan.",
+  "answer": "Lapisan AI yang belajar daripada dagangan yang disahkan dan menyokong setiap keputusan di T57.",
+  "faqs": [
+   {
+    "q": "Adakah T57 menggunakan data saya untuk melatih AI?",
+    "a": "T57 menggunakan data dagangan yang disahkan dalam bentuk tanpa nama dan agregat untuk memperbaik modelnya. Data individu anda tidak pernah ditunjukkan kepada ahli lain, dan pengetahuan petani hanya digunakan dengan persetujuan."
+   },
+   {
+    "q": "Mengapa tidak gunakan sahaja model AI am yang besar?",
+    "a": "Model besar berguna untuk bahasa dan dokumen, dan T57 menggunakannya apabila sesuai. Untuk tanaman, pasaran dan keadaan tempatan, model kecil yang dilatih dengan data tempatan lebih tepat, lebih murah untuk dijalankan, serta lebih mudah diuji dan dijelaskan."
+   },
+   {
+    "q": "Bolehkah saya membantah keputusan AI?",
+    "a": "Boleh. Setiap keputusan negatif disertakan sebab dan saluran untuk membantahnya, dan manusia akan menyemaknya."
+   }
+  ],
+  "title": "Lapisan Risikan T57 | AI Kecil dan Tempatan untuk Perdagangan Makanan",
+  "description": "Model AI tempatan yang kecil, dilatih dengan data dagangan yang disahkan dan pengetahuan petani yang dikongsi dengan persetujuan, ditadbir supaya manusia menyemak setiap keputusan negatif.",
+  "parent": "platform"
+ },
+ "platform-blockchain": {
+  "route": "/ms/platform/blockchain",
+  "section": "platform",
+  "name": "Lapisan Blockchain & Kontrak Pintar",
+  "h1": "Rekod yang tiada siapa boleh ubah secara senyap. Bayaran yang mengikut bukti.",
+  "answer": "Rekod kalis usik, dokumen bertoken dan bayaran mengikut pencapaian yang boleh dipercayai setiap pihak.",
+  "faqs": [
+   {
+    "q": "Adakah data dagangan saya terbuka kepada umum di blockchain?",
+    "a": "Tidak. Hanya cap jari digital rekod utama yang diikat. Kandungan dokumen kekal dalam storan selamat, hanya dapat dilihat oleh pihak yang dibenarkan."
+   },
+   {
+    "q": "Adakah saya memerlukan mata wang kripto untuk menggunakan lapisan blockchain?",
+    "a": "Tidak. Lapisan blockchain berfungsi di latar belakang. Ahli membayar dan dibayar dalam mata wang biasa melalui rakan kongsi berlesen, melainkan mereka memilih pembayaran alternatif jika dibenarkan undang-undang."
+   },
+   {
+    "q": "Apakah yang berlaku jika sesuatu pencapaian dipertikaikan?",
+    "a": "Kontrak pintar menangguhkan pelepasan, dan pertikaian dikendalikan mengikut kontrak serta peraturan rakan kongsi."
+   }
+  ],
+  "title": "Blockchain & Kontrak Pintar untuk Perdagangan Makanan | T57",
+  "description": "Pengikatan rekod kalis usik, dokumen dagangan bertoken dan bayaran pencapaian kontrak pintar, dengan privasi dan rakan kongsi berlesen, di T57.",
+  "parent": "platform"
+ },
+ "platform-security": {
+  "route": "/ms/platform/security",
+  "section": "platform",
+  "name": "Seni Bina Keselamatan",
+  "h1": "Keselamatan terbina dalam, bukan ditampal kemudian.",
+  "answer": "Lindungi setiap dagangan, dokumen dan ahli dengan keselamatan yang terbina dalam platform.",
+  "faqs": [
+   {
+    "q": "Di manakah data saya disimpan?",
+    "a": "T57 dihoskan di Microsoft Azure di pelbagai rantau. Jika peraturan tempatan mewajibkannya, data disimpan dalam rantau."
+   },
+   {
+    "q": "Bolehkah ahli lain melihat harga atau pembekal saya?",
+    "a": "Tidak. Data komersial anda hanya dapat dilihat oleh anda dan pihak dalam dagangan anda, mengikut kebenaran yang anda tetapkan."
+   },
+   {
+    "q": "Apakah yang berlaku jika berlaku insiden keselamatan?",
+    "a": "T57 mengikut proses tindak balas insiden yang ditetapkan, dan ahli serta pihak berkuasa yang terjejas dimaklumkan sebagaimana dikehendaki undang-undang."
+   }
+  ],
+  "title": "Seni Bina Keselamatan | Bagaimana T57 Melindungi Data Dagangan",
+  "description": "Identiti disahkan, log masuk berbilang faktor, akses berasaskan peranan, penyulitan, kediaman data serantau di Azure dan jejak audit penuh di T57.",
+  "parent": "platform"
+ },
  "markets": {
   "route": "/ms/markets",
   "section": "markets",
