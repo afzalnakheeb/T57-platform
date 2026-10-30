@@ -2457,6 +2457,143 @@
   "description": "Anggarkan masa dan wang yang boleh dijimatkan T57 bagi perniagaan makanan anda, selepas ditolak yuran, dan cari pelan dengan jumlah kos terendah bagi jumlah dagangan anda.",
   "parent": "pricing"
  },
+ "resources": {
+  "route": "/ms/resources",
+  "section": "resources",
+  "name": "Gambaran Keseluruhan Sumber",
+  "h1": "Fahami bagaimana perdagangan makanan berubah, dan cara berdagang dengan lebih baik.",
+  "answer": "Analisis, penyelidikan, berita, video, acara dan panduan mudah difahami tentang perdagangan makanan digital, sekuriti makanan, pembiayaan perdagangan dan AI.",
+  "faqs": [
+   {
+    "q": "Adakah sumber T57 percuma?",
+    "a": "Kebanyakannya percuma. Sesetengah laporan mendalam mungkin meminta e-mel anda."
+   },
+   {
+    "q": "Bolehkah saya mencadangkan topik?",
+    "a": "Boleh. Hubungi pasukan kami dengan topik yang anda ingin kami ketengahkan."
+   },
+   {
+    "q": "Adakah sumber tersedia dalam bahasa lain?",
+    "a": "Sumber utama akan tersedia dalam bahasa Arab dan bahasa lain di pasaran pengasas kami."
+   }
+  ],
+  "title": "Sumber | Analisis, Laporan dan Panduan Perdagangan Makanan | T57",
+  "description": "Analisis, penyelidikan, berita, video, acara dan panduan mudah difahami tentang perdagangan makanan digital, sekuriti makanan, pembiayaan perdagangan dan AI."
+ },
+ "res-blog": {
+  "route": "/ms/resources/blog",
+  "section": "resources",
+  "name": "Blog & Analisis",
+  "h1": "Analisis praktikal, untuk mereka yang berdagang makanan.",
+  "answer": "Analisis praktikal tentang perdagangan makanan, pasaran dan teknologi.",
+  "faqs": [
+   {
+    "q": "Berapa kerap anda menerbitkan artikel?",
+    "a": "Beberapa kali sebulan. T57 Insights telah menerbitkan 25 artikel sejak Disember 2025."
+   },
+   {
+    "q": "Siapa yang menulis T57 Insights?",
+    "a": "Pengasas dan pasukan kepimpinan T57: Afzal Hussain Mohammed Nakheeb, Abdul Bari Kareem, Umme Habeeba Khanum, Mohammed Umair dan Dr. Moaz Abdullah Mohammed Mojaddidi."
+   },
+   {
+    "q": "Bolehkah saya menulis untuk T57?",
+    "a": "Rakan kongsi dan pakar boleh menghubungi pasukan kami dengan cadangan."
+   }
+  ],
+  "title": "Blog & Analisis | Perdagangan Makanan, Pasaran dan AI | T57",
+  "description": "Artikel praktikal tentang pasaran perdagangan makanan, koridor, pembiayaan perdagangan, pematuhan, AI dan sekuriti makanan.",
+  "parent": "resources"
+ },
+ "res-reports": {
+  "route": "/ms/resources/reports",
+  "section": "resources",
+  "name": "Laporan & Kertas Putih",
+  "h1": "Penyelidikan yang boleh dirujuk, dibina daripada sumber yang disahkan.",
+  "answer": "Penyelidikan mendalam tentang perdagangan makanan, pembiayaan dan sekuriti makanan.",
+  "faqs": [
+   {
+    "q": "Adakah laporan percuma?",
+    "a": "Ya. Sesetengahnya mungkin meminta e-mel anda."
+   },
+   {
+    "q": "Bolehkah institusi menugaskan penyelidikan?",
+    "a": "Boleh, hubungi pasukan kami."
+   }
+  ],
+  "title": "Laporan & Kertas Putih | Penyelidikan Perdagangan Makanan | T57",
+  "description": "Penyelidikan mendalam tentang koridor perdagangan makanan, pembiayaan perdagangan PKS, AI bertanggungjawab dan sekuriti makanan.",
+  "parent": "resources"
+ },
+ "res-newsroom": {
+  "route": "/ms/resources/newsroom",
+  "section": "resources",
+  "name": "Bilik Berita",
+  "h1": "Berita daripada T57, secara rasmi.",
+  "answer": "Berita, pengumuman dan sumber media daripada T57.",
+  "faqs": [],
+  "title": "Bilik Berita | Berita dan Sumber Media T57",
+  "description": "Pengumuman, perkongsian, acara dan sumber media T57 untuk wartawan.",
+  "parent": "resources"
+ },
+ "res-videos": {
+  "route": "/ms/resources/videos",
+  "section": "resources",
+  "name": "Video Penerangan",
+  "h1": "Lihat cara T57 berfungsi, dalam beberapa minit.",
+  "answer": "Video ringkas tentang pengesahan, rekod dagangan, eskrow, surat kredit dan AI bertanggungjawab.",
+  "faqs": [],
+  "title": "Video Penerangan | Cara T57 Berfungsi",
+  "description": "Video ringkas tentang T57 dan perdagangan makanan digital: pengesahan, rekod dagangan, eskrow, surat kredit dan AI bertanggungjawab.",
+  "parent": "resources"
+ },
+ "res-events": {
+  "route": "/ms/resources/events",
+  "section": "resources",
+  "name": "Webinar & Acara",
+  "h1": "Temui T57, dalam talian dan secara bersemuka.",
+  "answer": "Webinar langsung, taklimat pasaran dan acara perdagangan di mana anda boleh bertemu pasukan T57.",
+  "faqs": [
+   {
+    "q": "Adakah webinar dirakam?",
+    "a": "Ya, rakaman disiarkan di sini."
+   },
+   {
+    "q": "Bolehkah saya menempah mesyuarat di sesuatu acara?",
+    "a": "Boleh, melalui halaman acara tersebut."
+   }
+  ],
+  "title": "Webinar & Acara | T57",
+  "description": "Webinar langsung, taklimat pasaran dan acara perdagangan di mana anda boleh bertemu pasukan T57.",
+  "parent": "resources"
+ },
+ "res-glossary": {
+  "route": "/ms/resources/faq-glossary",
+  "section": "resources",
+  "name": "Soalan Lazim & Glosari",
+  "h1": "Istilah perdagangan makanan, diterangkan dengan bahasa mudah.",
+  "answer": "Jawapan mudah tentang T57, serta istilah perdagangan, pembiayaan dan teknologi di sebaliknya, daripada eskrow hingga kod HS.",
+  "faqs": [
+   {
+    "q": "Apakah T57?",
+    "a": "T57 ialah infrastruktur dagangan digital berteraskan AI untuk seluruh ekosistem makanan. Ia kelab dagangan untuk ahli sahaja di mana pengeluar, pemproses, pedagang dan pembeli yang disahkan berdagang dalam satu rekod dikongsi, dengan pembiayaan, insurans, logistik dan pemeriksaan daripada rakan kongsi berlesen."
+   },
+   {
+    "q": "Adakah T57 sebuah pasaran dalam talian?",
+    "a": "Tidak. Di pasaran terbuka, sesiapa sahaja boleh menyenaraikan produk. Di T57, setiap ahli disahkan sebelum berdagang, dan peranan mereka disemak serta dipaparkan."
+   },
+   {
+    "q": "Adakah T57 membeli atau menjual makanan?",
+    "a": "Tidak. T57 tidak memiliki barang, memberi pinjaman, memegang dana pelanggan atau menyediakan pengangkutan. Ahli berdagang sesama sendiri, dan rakan kongsi berlesen menyediakan perkhidmatan terkawal."
+   },
+   {
+    "q": "Di negara manakah T57 beroperasi?",
+    "a": "Arab Saudi, UAE, India, Malaysia dan Türkiye, dengan lebih banyak pasaran akan menyusul."
+   }
+  ],
+  "title": "Soalan Lazim & Glosari | Istilah Perdagangan Makanan Diterangkan | T57",
+  "description": "Jawapan mudah tentang T57, serta definisi istilah perdagangan makanan, pembiayaan perdagangan dan teknologi, daripada eskrow dan surat kredit hingga KYB dan kod HS.",
+  "parent": "resources"
+ },
  "governments": {
   "route": "/ms/who-we-serve/governments",
   "section": "who-we-serve",
