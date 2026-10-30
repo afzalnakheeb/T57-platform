@@ -823,6 +823,182 @@
   "description": "T57'de her gıda işlemiyle eşleşen onaylı nakliye komisyoncularını, taşıyıcıları, soğuk zincir ve depolama iş ortaklarını karşılaştırın ve rezervasyon yapın; rota riski uyarılarıyla.",
   "parent": "cap-logistics"
  },
+ "cap-tracking": {
+  "route": "/tr/capabilities/logistics/tracking",
+  "section": "capabilities",
+  "name": "Anlık Sevkiyat Takibi",
+  "h1": "Gıdanız nerede, ne durumda.",
+  "answer": "Gıdanızın nerede olduğunu, ne durumda olduğunu ve ne zaman varacağını bilin.",
+  "faqs": [
+   {
+    "q": "Özel takip cihazlarına ihtiyacım var mı?",
+    "a": "Hayır. T57 tüm sevkiyatlar için taşıyıcı ve liman verilerini kullanır. IoT cihazları hassas yükler için anlık sıcaklık ve konum ekler."
+   },
+   {
+    "q": "Sevkiyatımı kimler görebilir?",
+    "a": "Yalnızca işlemin tarafları ve kredi vereniniz ya da sigortacınız gibi yetki verdiğiniz iş ortakları."
+   },
+   {
+    "q": "Takip ödemeyi tetikleyebilir mi?",
+    "a": "Evet. Varış ya da teslim teyidi gibi kararlaştırılan aşamalar emanet hesabındaki ödemeleri otomatik olarak serbest bırakabilir."
+   }
+  ],
+  "title": "Gıda İçin Anlık Sevkiyat ve Soğuk Zincir Takibi | T57",
+  "description": "Gıda sevkiyatlarını deniz, hava ve kara yolunda anlık sıcaklık izleme, tahmini varış ve uyarılarla takip edin; hepsi tek bir T57 ticaret kaydında.",
+  "parent": "cap-logistics"
+ },
+ "cap-customs": {
+  "route": "/tr/capabilities/logistics/customs",
+  "section": "capabilities",
+  "name": "Gümrük ve Belge Merkezi",
+  "h1": "Belgeler bir kez hazırlanır, gümrük daha hızlı geçilir.",
+  "answer": "İhracat ve ithalat belgelerini bir kez hazırlayın, gıdayı gümrükten daha hızlı geçirin.",
+  "faqs": [
+   {
+    "q": "T57 gümrük beyannamesi veriyor mu?",
+    "a": "Hayır. Beyannameleri T57'de hazırlanan belgeleri kullanarak lisanslı gümrük müşavirleri verir."
+   },
+   {
+    "q": "Ön gümrükleme her ülkede var mı?",
+    "a": "Ön gümrükleme her gümrük idaresinin usullerine bağlıdır. Mevcut olmadığı yerlerde de T57 eksiksiz ve kontrol edilmiş belgeleri varıştan önce müşavire gönderir."
+   },
+   {
+    "q": "Yapay zekânın önerdiği GTİP kodları kesin mi?",
+    "a": "Hayır. Bunlar müşavirin ya da üyenin onaylaması gereken önerilerdir. Nihai sınıflandırma beyan sahibinin sorumluluğundadır."
+   }
+  ],
+  "title": "Gıda İçin Gümrük ve Ticaret Belgeleri Merkezi | T57",
+  "description": "İhracat ve ithalat belgelerini sözleşmenizden oluşturun, GTİP kodu rehberliği ve tutarlılık kontrolleri alın, gıda sevkiyatlarını T57'de onaylı müşavirlerle ön gümrüklemeden geçirin.",
+  "parent": "cap-logistics"
+ },
+ "cap-intelligence": {
+  "route": "/tr/capabilities/intelligence",
+  "section": "capabilities",
+  "name": "Analiz ve Veri",
+  "h1": "Tablonun tamamını görerek ticaret yapın.",
+  "answer": "Tablonun tamamını görerek ticaret yapın: fiyatlar, arz, karşı taraflar ve pazarlar, her işlemin içinde.",
+  "faqs": [
+   {
+    "q": "T57'nin verileri nereden geliyor?",
+    "a": "Kamuya açık piyasa ve ticaret kaynakları, lisanslı veri iş ortakları ve T57'deki işlemlerin anonimleştirilmiş, toplulaştırılmış verileri."
+   },
+   {
+    "q": "Ticaret verilerim diğer üyelerle paylaşılıyor mu?",
+    "a": "Hayır. Tek tek işlemler asla gösterilmez. Yalnızca anonimleştirilmiş, toplulaştırılmış istatistiklere katkı sağlar."
+   },
+   {
+    "q": "Analizler üyeliğe dahil mi?",
+    "a": "Temel analizler dahildir. Üst üyelik kademeleri daha derin veriler, kredi raporları ve tahminler içerir."
+   }
+  ],
+  "title": "Gıda Ticareti Analizleri | Fiyatlar, Tahminler, Kredi | T57",
+  "description": "T57'de gıda ticaretine yerleşik gıda fiyat endeksi, arz ve talep tahminleri, yapay zekâ müzakere desteği, kredi raporları ve liman ticaret verileri.",
+  "parent": "capabilities"
+ },
+ "cap-price-index": {
+  "route": "/tr/capabilities/intelligence/price-index",
+  "section": "capabilities",
+  "name": "Canlı Gıda Fiyat Endeksi",
+  "h1": "Bugünün gıda fiyatları, gerçek işlemlerden.",
+  "answer": "Gerçek işlemlerden oluşturulan, ürün, kalite sınıfı ve menşeye göre güncel gıda fiyatları.",
+  "faqs": [
+   {
+    "q": "T57 endeksi nasıl hesaplanıyor?",
+    "a": "Kamuya açık piyasa verilerini, lisanslı veri iş ortaklarını ve doğrulanmış T57 işlemlerinin anonimleştirilmiş, toplulaştırılmış fiyatlarını, hiçbir üyenin fiyatının tek başına tespit edilemeyeceği yöntemlerle birleştirir."
+   },
+   {
+    "q": "Ne sıklıkla güncelleniyor?",
+    "a": "Yeni piyasa verileri geldikçe ve T57'de doğrulanmış işlemler kapandıkça güncellenir. İşlem hacmine göre bazı satırlar günlük, bazıları haftalık güncellenir."
+   },
+   {
+    "q": "Üye olmayanlar endeksi görebilir mi?",
+    "a": "Endeks satırlarının bir kısmı T57 sitesinde herkese açıktır. Tüm ayrıntılar, geçmiş ve uyarılar üyelere sunulur."
+   }
+  ],
+  "title": "Ürün ve Menşeye Göre Canlı Gıda Fiyat Endeksi | T57",
+  "description": "Kamuya açık veriler ve anonimleştirilmiş doğrulanmış işlemlerden ürün, kalite sınıfı ve menşeye göre güncel gıda fiyatları. T57'de teklifleri karşılaştırın ve uyarı kurun.",
+  "parent": "cap-intelligence"
+ },
+ "cap-negotiations": {
+  "route": "/tr/capabilities/intelligence/ai-negotiations",
+  "section": "capabilities",
+  "name": "Yapay Zekâ Müzakere Motoru",
+  "h1": "Arkanızda veri ve yapay zekâyla pazarlık edin.",
+  "answer": "Her gıda işleminde arkanızda piyasa verileri ve yapay zekâ hazırlığıyla pazarlık edin.",
+  "faqs": [
+   {
+    "q": "Yapay zekâ benim adıma pazarlık mı ediyor?",
+    "a": "Hayır. Hazırlar ve önerir. Ne teklif edeceğinize, karşı teklif vereceğinize ya da kabul edeceğinize siz karar verirsiniz; onayınız olmadan hiçbir şey gönderilmez."
+   },
+   {
+    "q": "Karşı taraf motorun bana yaptığı önerileri görebilir mi?",
+    "a": "Hayır. Özetleriniz ve önerileriniz yalnızca size özeldir."
+   },
+   {
+    "q": "Motor hangi verileri kullanıyor?",
+    "a": "T57 fiyat endeksi, anonimleştirilmiş ve toplulaştırılmış ticaret verileri, karşı tarafın herkese açık T57 profili ve geçmiş performansı, eklemeyi seçerseniz de kendi maliyetleriniz ve geçmişiniz."
+   }
+  ],
+  "title": "Gıda Ticareti İçin Yapay Zekâ Müzakere Motoru | T57",
+  "description": "T57'de gıda işlemleri için müzakere özetleri hazırlayan, teklifleri karşılaştıran ve karşı teklif öneren yapay zekâ; her kararı insanlar verir.",
+  "parent": "cap-intelligence"
+ },
+ "cap-equipment-rental": {
+  "route": "/tr/capabilities/agritech/equipment-rental",
+  "section": "capabilities",
+  "name": "Ekipman ve Teknoloji Kiralama",
+  "h1": "Sahip olamayacağınız teknolojiyi kiralayın.",
+  "answer": "Gün, hektar ya da iş bazında kiralanan traktörler, dronlar, sensörler, soğuk odalar ve test hizmetleri.",
+  "faqs": [
+   {
+    "q": "Ekipmanımı ya da dronumu kiraya verebilir miyim?",
+    "a": "Evet. Doğrulanmış üyeler ekipman ve hizmetlerini fiyatları, hizmet verdikleri bölgeler ve müsaitlik durumlarıyla listeler."
+   },
+   {
+    "q": "Kullanmayı bilmem gerekir mi?",
+    "a": "Hayır. Eğitimli bir operatörle kiralayabilir ya da 10 hektarı ilaçlamak gibi yalnızca işin kendisini satın alabilirsiniz."
+   },
+   {
+    "q": "Bir şey bozulursa kim sorumlu?",
+    "a": "Sorumluluğu kiralama şartları, durum kayıtları ve varsa sigorta belirler. Anlaşmazlıklar bu şartlara ve ödeme iş ortağının kurallarına göre çözülür."
+   },
+   {
+    "q": "Düşük puanlı sahiplere ne olur?",
+    "a": "Puanlar yalnızca kayıtlı işlerden gelir. Tekrarlanan ve haklı bulunan şikâyetler önce askıya almaya, ardından T57'den çıkarılmaya yol açar."
+   }
+  ],
+  "title": "Tarım Ekipmanı, Dron ve Tarım Teknolojisi Kiralayın | T57",
+  "description": "T57'de doğrulanmış sahiplerden traktör, dron, sensör, soğuk oda ve test hizmetlerini gün, hektar ya da iş bazında, emanet hesabıyla ödeme yaparak kiralayın.",
+  "parent": "capabilities"
+ },
+ "cap-hire-expert": {
+  "route": "/tr/capabilities/hire-an-expert",
+  "section": "capabilities",
+  "name": "Uzman Desteği",
+  "h1": "Doğru uzman, bir yemek parasına.",
+  "answer": "Gıda ekosistemi genelinde iş bazında çalışan ve üyelerce puanlanan ziraat mühendisleri, gözetim uzmanları, gıda bilimciler ve ambalaj uzmanları.",
+  "faqs": [
+   {
+    "q": "Uzmanlar nasıl kontrol ediliyor?",
+    "a": "Bir uzman iş almadan önce kimliği, nitelikleri ve referansları doğrulanır."
+   },
+   {
+    "q": "Tavsiye yanlışsa ya da iş yapılmazsa ne olur?",
+    "a": "Ödeme serbest bırakılmadan önce itiraz açabilirsiniz. Haklı bulunan şikâyetler uzmanın aleyhine sayılır, tekrarlananlar ise platformdan çıkarılmaya yol açar."
+   },
+   {
+    "q": "Uzmanlar zirai ilaç öneriyor mu?",
+    "a": "Uzmanlar yalnızca müşterinin ülkesinde onaylı ürünleri önerir ve tavsiye ettikleri dozu kaydeder."
+   },
+   {
+    "q": "Şirketim hizmet sunabilir mi?",
+    "a": "Evet. Şirketler hizmet sağlayıcı olarak, bireyler ise uzman olarak katılır."
+   }
+  ],
+  "title": "Gıda ve Tarım Uzmanı Bulun | T57",
+  "description": "T57'de doğrulanmış ziraat mühendisleri, gözetim uzmanları, gıda bilimciler ve ambalaj uzmanlarıyla iş bazında, önceden kararlaştırılan fiyat, emanet hesabıyla ödeme ve puanlamayla çalışın.",
+  "parent": "capabilities"
+ },
  "markets": {
   "route": "/tr/markets",
   "section": "markets",
