@@ -2832,6 +2832,159 @@
   "description": "Finans, sigorta, lojistik, gözetim ya da teknoloji alanında T57 ile iş ortaklığı için başvurun.",
   "parent": "partnerships"
  },
+ "about": {
+  "route": "/tr/about",
+  "section": "about",
+  "name": "T57 Hakkında",
+  "h1": "Var olan gıda, ona ihtiyaç duyan insanlara ulaşmalı.",
+  "answer": "Var olan gıdanın ona ihtiyaç duyan insanlara ve pazarlara ulaşması için varız.",
+  "faqs": [
+   {
+    "q": "T57 nerede yerleşik?",
+    "a": "T57 küresel bir SaaS platformudur; dünyanın her yerindeki her gıda işletmesi çevrim içi başvurabilir, doğrulanabilir ve ticaret yapabilir. Pilot uygulama beş ülkede başlıyor: Suudi Arabistan, BAE, Hindistan, Malezya ve Türkiye."
+   },
+   {
+    "q": "T57 adı ne anlama geliyor?",
+    "a": "T, güven, şeffaflık ve izlenebilirlik üzerine kurulu ticareti (trade) temsil eder. 5, T57'nin birbirine bağladığı beş sektörü temsil eder: tarım ve gıda üretimi, ticaret, lojistik, finans ve teknoloji. 7 ise ulaşmaya çalıştığımız yedi sonucu temsil eder: gıda güvenliği, daha az gıda kaybı, entegrasyon, finansmana erişim, daha yüksek gelir, kapsayıcılık ve dayanıklılık."
+   },
+   {
+    "q": "T57'nin sahibi kim?",
+    "a": "T57 kurucuları tarafından yönetilen bir şirkettir."
+   }
+  ],
+  "title": "T57 Hakkında | Gıda İçin Yapay Zekâ Temelli Dijital Ticaret Altyapısı",
+  "description": "T57 neden var: 60'tan fazla ülkedeki gıda güvenliği çalışmalarından doğan, gıda ekosistemi için pazarlara, teknolojiye ve finansmana erişim."
+ },
+ "about-journey": {
+  "route": "/tr/about/journey",
+  "section": "about",
+  "name": "Yolculuğumuz",
+  "h1": "Tek bir sorudan 150 imzalı anlaşmaya.",
+  "answer": "T57 ve kurucu şirketi AlMukarramah, 2023'ten bu yana hükümetler, kalkınma kurumları ve gıda şirketleriyle anlaşmalar imzaladı ve bağlantılı gıda ticaretinin gerekçesini Cape Town'dan Yinchuan'a uzanan sahnelere taşıdı.",
+  "faqs": [
+   {
+    "q": "T57 kimlerle anlaşma imzaladı?",
+    "a": "T57 ve kurucu şirketi AlMukarramah'nın İslam Gıda Güvenliği Teşkilatı (IOFS), Çeçen Cumhuriyeti Hükümeti, Maldivler Kalkınma Bankası, Kazakistan Gıda Sözleşme Kurumu, Uluslararası İslami İş Dünyası Asamblesi, Dar Al Halal Nijerya ve Singapur'daki Su Ürünleri Mükemmeliyet Merkezi ile anlaşmaları var; ayrıca Gulfood 2026'da 150 mutabakat zaptı ve niyet mektubu imzalandı."
+   },
+   {
+    "q": "T57 ne zaman başladı?",
+    "a": "T57, Ağustos 2023'te Cape Town'daki Gıda Güvenliği Konferansı'nda tanıtıldı ve Ekim 2023'te Doha'daki 2. IOFS Gıda Güvenliği Forumu'nda ön lansmanını yaptı. AlMukarramah'nın geliştirdiği Trade57'den doğdu."
+   },
+   {
+    "q": "Mutabakat zaptları bağlayıcı mı?",
+    "a": "Çoğu mutabakat zaptı ve niyet mektubudur: birlikte çalışmak için çerçevelerdir. Her türlü abonelik ya da ticari taahhüt ayrı bir sözleşmeyle yapılır."
+   }
+  ],
+  "title": "Yolculuğumuz: Anlaşmalar, Ortaklıklar ve Açılış Konuşmaları | T57",
+  "description": "2023'ten bu yana T57 zaman çizelgesi: IOFS anlaşmaları, hükümetler ve kalkınma bankalarıyla mutabakat zaptları, Gulfood 2026'da 150 mutabakat zaptı ve Cape Town'dan Yinchuan'a açılış konuşmaları.",
+  "parent": "about"
+ },
+ "about-leadership": {
+  "route": "/tr/about/leadership",
+  "section": "about",
+  "name": "Yönetim ve Danışmanlar",
+  "h1": "T57'yi inşa eden insanlar.",
+  "answer": "Gıda ticareti, gıda güvenliği, teknoloji, finans ve yönetişim deneyimine sahip, T57'nin arkasındaki kurucular, yönetim ekibi, yönetim kurulu ve danışmanlar.",
+  "faqs": [
+   {
+    "q": "T57'yi kim yönetiyor?",
+    "a": "T57'yi Kurucu ve Yönetim Kurulu Başkanı Afzal Hussain Mohammed Nakheeb, teknoloji, ürün, iletişim ve yönetişime liderlik eden dört kurucu ortakla birlikte yönetiyor."
+   },
+   {
+    "q": "T57, IOFS ile nasıl çalışıyor?",
+    "a": "T57'nin IOFS ile 10 yıllık mutabakat zaptı var. Stratejik İlişkiler Genel Direktörü Prof. Yerlan Baidaulet, IOFS'nin eski Genel Direktörüdür."
+   }
+  ],
+  "title": "Yönetim ve Danışmanlar | T57",
+  "description": "Gıda ticareti, gıda güvenliği, teknoloji, finans ve yönetişim deneyimiyle T57'yi inşa eden kurucular, yönetim ekibi, yönetim kurulu ve on üç danışmanla tanışın.",
+  "parent": "about"
+ },
+ "about-impact": {
+  "route": "/tr/about/impact",
+  "section": "about",
+  "name": "İnovasyon ve Etki",
+  "h1": "Dünyayı besleyen insanlara hizmet eden teknoloji.",
+  "answer": "T57 küçük, yerel yapay zekâyı nasıl sorumlu kullanıyor ve hangi etkiyi hedefliyor: pazar erişimi, finansman, daha az gıda kaybı ve kapsayıcılık.",
+  "faqs": [],
+  "title": "İnovasyon ve Etki | Gıda Ticareti İçin Sorumlu Yapay Zekâ | T57",
+  "description": "T57 küçük, yerel yapay zekâyı nasıl sorumlu kullanıyor ve hangi etkiyi hedefliyor: pazar erişimi, finansman, daha az gıda kaybı ve kapsayıcılık.",
+  "parent": "about"
+ },
+ "about-food-security": {
+  "route": "/tr/about/food-security",
+  "section": "about",
+  "name": "Gıda Güvenliği İçin T57",
+  "h1": "Gıda güvenliğini görünür, doğrulanabilir ve uygulanabilir kılın.",
+  "answer": "Sınır ötesi doğrulanmış arz, menşeye göre arz durumu, yapay zekâ ile erken uyarı ve bir kamu modülü; tek sistemde.",
+  "faqs": [
+   {
+    "q": "T57 bir kamu sistemi mi?",
+    "a": "Hayır. T57, hükümetlerin ve kurumların yetkilendirilmiş verilerle kullanabileceği bağımsız bir platformdur."
+   },
+   {
+    "q": "Bir hükümet hangi verileri görür?",
+    "a": "Arz, fiyatlar ve ticaret hakkında toplulaştırılmış, yetkilendirilmiş veriler; onay olmadan asla tek tek üyelerin verileri değil."
+   },
+   {
+    "q": "T57 yalnızca Müslüman nüfusun çoğunlukta olduğu ülkeler için mi çalışıyor?",
+    "a": "Hayır. T57 pazarlarındaki her gıda işletmesine ve hükümete hizmet verir; IOFS ve İİT ile yakın çalışır."
+   }
+  ],
+  "title": "Gıda Güvenliği İçin T57 | Erken Uyarı ve Doğrulanmış Arz",
+  "description": "T57 gıda güvenliğini nasıl güçlendiriyor: sınır ötesi doğrulanmış arz, menşeye göre arz durumu, yapay zekâ ile erken uyarı ve bir kamu modülü.",
+  "parent": "about"
+ },
+ "about-sdg": {
+  "route": "/tr/about/sdg-delivery",
+  "section": "about",
+  "name": "Sürdürülebilir Kalkınma Amaçları İçin T57",
+  "h1": "Doğrulanmış ticaret, ölçülebilir ilerleme.",
+  "answer": "Doğrulanmış ticareti Sürdürülebilir Kalkınma Amaçları'nda ölçülebilir ilerlemeye dönüştürün.",
+  "faqs": [
+   {
+    "q": "T57 programımız için etki raporu sunabilir mi?",
+    "a": "Evet. Göstergeleri iş ortakları belirler; T57 toplu ve izinli verilerle raporlar."
+   },
+   {
+    "q": "T57, SKA'ları tek başına gerçekleştirdiğini mi iddia ediyor?",
+    "a": "Hayır. T57, hükümetler, kalkınma ortakları ve özel sektörle birlikte belirli hedeflere katkı sağlar."
+   }
+  ],
+  "title": "SKA'lara Katkı için T57 | Gıda Ticaretinde Doğrulanmış Etki",
+  "description": "T57'nin küçük üreticileri doğrulanmış ticarete ve finansmana dahil ederek 1, 2, 5, 8, 9, 10, 12 ve 13 numaralı SKA'lara ölçülebilir etkiyle nasıl katkı sağladığını keşfedin.",
+  "parent": "about"
+ },
+ "about-careers": {
+  "route": "/tr/about/careers",
+  "section": "about",
+  "name": "Kariyer",
+  "h1": "Gıda ticaretinin üzerinde yürüdüğü altyapıyı birlikte inşa edin.",
+  "answer": "Beş kurucu pazarda teknoloji, yapay zekâ, ürün, ülke operasyonları ve iş ortaklıkları alanlarında T57 ekiplerine katılın.",
+  "faqs": [
+   {
+    "q": "Uygun pozisyon yoksa başvurabilir miyim?",
+    "a": "Evet. Özgeçmişinizi hr@t57.ai adresine gönderin ve hangi ekibe katılmak istediğinizi belirtin."
+   },
+   {
+    "q": "Uzaktan çalışan alıyor musunuz?",
+    "a": "Bazı teknoloji pozisyonları uzaktan olabilir; ülke ekipleri ise her pazarda çalışır."
+   }
+  ],
+  "title": "T57'de Kariyer | Yapay Zekâ Temelli Gıda Ticareti Altyapısını İnşa Edin",
+  "description": "Beş kurucu pazarda teknoloji, yapay zekâ, ürün, ülke operasyonları ve iş ortaklıkları alanlarında T57 ekiplerine katılın.",
+  "parent": "about"
+ },
+ "about-media": {
+  "route": "/tr/about/media",
+  "section": "about",
+  "name": "Medya ve Basın Kiti",
+  "h1": "Gazeteciler ve iş ortakları için kaynaklar.",
+  "answer": "Gazeteciler ve iş ortakları için şirket bilgileri, logolar ve basın iletişim bilgileri.",
+  "faqs": [],
+  "title": "Medya ve Basın Kiti | T57",
+  "description": "Gazeteciler için T57 şirket bilgileri, logolar, yönetici fotoğrafları ve basın iletişim bilgileri.",
+  "parent": "about"
+ },
  "contact": {
   "route": "/tr/contact",
   "section": "contact",
@@ -3190,5 +3343,16 @@
   "title": "Çiftçiler ve Üreticiler İçin T57 | Pazar Erişimi ve Yapay Zekâ Araçları",
   "description": "T57, çiftçilerin ve üreticilerin doğrulanmış alıcılara ulaşmasına, piyasa fiyatlarını görmesine, güvenli sözleşmeler imzalamasına, ödemesini daha hızlı almasına ve ticaret finansmanına erişmesine yardımcı olur.",
   "parent": "who-we-serve"
+ },
+ "about-investors": {
+  "route": "/tr/about/investors",
+  "section": "about",
+  "name": "Yatırımcı İlişkileri",
+  "h1": "Altyapıya yatırım yapın altyapıyı birlikte inşa edin.",
+  "answer": "T57, beş kurucu pazarı Riyad'dan açmak için lansman yatırım turunu topluyor. Nitelikli yatırımcılar yatırımcı dosyasını bugün talep edebilir.",
+  "faqs": [],
+  "title": "Yatırımcı İlişkileri | T57'ye Yatırım Yapın",
+  "description": "T57 lansman yatırım turunu Riyad'dan topluyor. Çekiş gücünü, iş ortaklarını ve ekibi görün; nitelikli yatırımcı olarak yatırımcı dosyasını talep edin.",
+  "parent": "about"
  }
 }
