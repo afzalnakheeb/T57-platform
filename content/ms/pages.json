@@ -53,6 +53,249 @@
   "title": "Siapa Yang Kami Bantu | Kelab Dagangan Makanan Disahkan T57",
   "description": "T57 menghubungkan petani, pemproses, pedagang, pembeli, pembiaya, penyedia perkhidmatan dan pengawal selia dalam satu rekod dagangan makanan yang disahkan."
  },
+ "why-t57": {
+  "route": "/ms/why-t57",
+  "section": "why-t57",
+  "name": "Mengapa T57",
+  "h1": "Seluruh perdagangan makanan, dalam satu rekod yang dipercayai.",
+  "answer": "Sertai, cari, biayai, selesaikan dan tutup setiap dagangan dalam satu platform berteraskan AI, supaya setiap pihak dari ladang ke meja dapat melihat, mempercayai dan membiayai setiap transaksi.",
+  "faqs": [
+   {
+    "q": "Apakah yang membezakan T57 daripada platform perdagangan makanan lain?",
+    "a": "T57 ialah ekosistem berteraskan AI, yang bekerjasama dengan IOFS dan ASEAN, menghimpunkan perdagangan, kewangan, logistik dan data bertaraf dasar dalam satu platform yang disahkan."
+   },
+   {
+    "q": "Mengapa perkongsian dengan IOFS dan ASEAN penting kepada saya sebagai pedagang?",
+    "a": "Ia bermakna pendaftaran yang lebih pantas, peraturan asal usul yang lebih jelas dan akses yang lebih baik kepada tender dan pembeli berdaulat, kerana T57 selaras dengan institusi yang menetapkan keutamaan sekuriti makanan dan perdagangan."
+   },
+   {
+    "q": "Adakah T57 hanya untuk kerajaan dan institusi?",
+    "a": "Tidak. Landasan yang sama yang melayani kementerian dan badan multilateral turut melayani petani, koperasi, PKS dan perusahaan, memberi setiap pemain, besar atau kecil, akses kepada pasaran yang disahkan dan rakan dagang yang dipercayai."
+   }
+  ],
+  "title": "Mengapa T57 | Sistem Operasi Makanan Global Berteraskan AI",
+  "description": "T57 ialah ekosistem perdagangan makanan berteraskan AI yang bekerjasama dengan IOFS dan ASEAN, menyatukan dasar, kewangan dan logistik dalam aliran makanan global yang dipercayai."
+ },
+ "club-membership": {
+  "route": "/ms/why-t57/club-membership",
+  "section": "why-t57",
+  "name": "Keahlian Kelab",
+  "h1": "Berdagang hanya dengan ahli yang disahkan.",
+  "answer": "Kelab perdagangan makanan yang disahkan, memadankan rakan dagang yang telah disaring, mengurangkan penipuan dan kemungkiran dalam setiap transaksi agro global.",
+  "faqs": [
+   {
+    "q": "Bagaimana skor amanah T57 membantu petani dan pengeluar, koperasi serta pertubuhan peladang mengurangkan risiko?",
+    "a": "Skor amanah membantu kumpulan ini menilai sama ada bakal pembeli, pengagregat, pemproses atau rakan perkhidmatan mempunyai kesahihan, kestabilan kewangan, sejarah dagangan dan kekuatan hubungan yang diperlukan untuk transaksi yang boleh diharap. Ini mengurangkan risiko berurusan dengan rakan dagang yang lemah atau tidak telus."
+   },
+   {
+    "q": "Mengapa ID T57 berguna kepada pembiaya dan pelabur, rakan kongsi, kolaborator, kerajaan dan pengawal selia?",
+    "a": "ID T57 memberi pihak berkepentingan ini gambaran berstruktur tentang sama ada sesebuah organisasi telah disahkan merentas faktor amanah utama, termasuk pematuhan, pengesahan lapangan, rujukan dan reputasi dalam ekosistem. Ini memudahkan penilaian risiko dan urusan dengan perniagaan yang kelayakannya disokong oleh proses yang lebih maju daripada profil pasaran biasa atau pengecam perniagaan asas."
+   }
+  ],
+  "title": "Keahlian Kelab T57 | Kelab Perdagangan Makanan Global yang Disahkan",
+  "description": "T57 ialah kelab perdagangan makanan dan agro yang dikurasi, bukan pasaran terbuka: ID yang disahkan, skor amanah dan lencana membantu ahli berdagang dengan yakin.",
+  "parent": "why-t57"
+ },
+ "rfq-bidding": {
+  "route": "/ms/why-t57/rfq-bidding",
+  "section": "why-t57",
+  "name": "Bidaan RFQ",
+  "h1": "Satu permintaan. Sebut harga setanding. Satu kontrak.",
+  "answer": "Dapatkan sebut harga yang setanding daripada pembekal yang disahkan, dan jadikan yang terbaik sebagai kontrak.",
+  "faqs": [
+   {
+    "q": "Siapa yang boleh menjawab RFQ di T57?",
+    "a": "Hanya ahli yang disahkan yang produk, kapasiti dan pasarannya sepadan dengan permintaan. Pembeli juga boleh menjemput pembekal tertentu."
+   },
+   {
+    "q": "Bolehkah penjual melihat bidaan satu sama lain?",
+    "a": "Tidak. Setiap bidaan hanya boleh dilihat oleh pembeli, supaya harga kekal adil dan sulit."
+   }
+  ],
+  "title": "Bidaan RFQ untuk Perdagangan Makanan | T57",
+  "description": "Hantar satu RFQ berstruktur kepada pembekal makanan yang disahkan, bandingkan bidaan yang setara dan jadikan sebut harga terbaik sebagai kontrak di T57.",
+  "parent": "why-t57"
+ },
+ "virtual-trade-desk": {
+  "route": "/ms/why-t57/virtual-trade-desk",
+  "section": "why-t57",
+  "name": "Meja Dagangan Maya",
+  "h1": "Meja dagangan untuk setiap perniagaan makanan.",
+  "answer": "Meja dagangan lengkap untuk setiap ahli, dengan AI melakukan kerja asas dan manusia membuat keputusan.",
+  "faqs": [
+   {
+    "q": "Adakah Meja Dagangan Maya itu manusia atau perisian?",
+    "a": "Kedua-duanya. Meja Dagangan ialah perisian yang memadankan, menetapkan harga, merangka dan menyaring, disokong oleh pasukan meja dagangan T57 bagi kes yang memerlukan semakan manusia."
+   },
+   {
+    "q": "Adakah Meja Dagangan berunding bagi pihak saya?",
+    "a": "Tidak. Ia memberi anda padanan, data harga dan semakan. Anda yang berunding dan membuat keputusan."
+   }
+  ],
+  "title": "Meja Dagangan Maya untuk PKS Makanan | T57",
+  "description": "Padanan AI, data harga, kontrak daripada sebut harga dan saringan pematuhan dalam satu meja dagangan untuk PKS makanan. AI menasihati, manusia membuat keputusan.",
+  "parent": "why-t57"
+ },
+ "market-intelligence": {
+  "route": "/ms/why-t57/market-intelligence",
+  "section": "why-t57",
+  "name": "Risikan Pasaran & Harga",
+  "h1": "Lihat pasaran sebelum anda bertindak.",
+  "answer": "Lihat harga, bekalan dan risiko mengikut asal usul sebelum anda memberi sebut harga, membeli atau merancang.",
+  "faqs": [
+   {
+    "q": "Dari mana datangnya data harga T57?",
+    "a": "Daripada sumber pasaran awam serta data dagangan T57 yang dianonimkan dan diagregat. Harga ahli secara individu tidak dikongsi."
+   },
+   {
+    "q": "Bolehkah saya menggunakan data tanpa berdagang di T57?",
+    "a": "Risikan pasaran adalah sebahagian daripada keahlian T57 dan dibina untuk menyokong dagangan di platform."
+   }
+  ],
+  "title": "Risikan Pasaran & Harga Makanan | T57",
+  "description": "Harga makanan, status bekalan mengikut asal usul dan ramalan AI dalam aliran kerja dagangan anda. Beri sebut harga, beli dan rancang dengan gambaran penuh di T57.",
+  "parent": "why-t57"
+ },
+ "trade-finance": {
+  "route": "/ms/why-t57/trade-finance",
+  "section": "why-t57",
+  "name": "Pembiayaan Perdagangan",
+  "h1": "Satu fail urus niaga. Beberapa pemberi pinjaman bersaing.",
+  "answer": "Satu fail urus niaga yang disahkan, beberapa pemberi pinjaman bersaing untuk membiayai dagangan makanan anda.",
+  "faqs": [
+   {
+    "q": "Adakah T57 menyediakan pembiayaan?",
+    "a": "Tidak. T57 tidak memberi pinjaman atau memegang dana pelanggan. Ia menghantar fail urus niaga anda yang disahkan kepada pemberi pinjaman berlesen, yang memutuskan sama ada untuk membiayai dagangan itu dan atas terma apa."
+   },
+   {
+    "q": "Jenis pembiayaan apakah yang boleh saya mohon?",
+    "a": "Pembiayaan pra-penghantaran dan pasca-penghantaran, pembiayaan belum terima dan surat kredit, melalui bank dan syarikat pembiayaan yang mengambil bahagian, termasuk pilihan patuh Syariah."
+   }
+  ],
+  "title": "Pembiayaan Perdagangan untuk PKS Makanan | Pemberi Pinjaman Bersaing | T57",
+  "description": "Hantar satu fail urus niaga yang disahkan kepada beberapa pemberi pinjaman berlesen dan bandingkan tawaran. Pembiayaan perdagangan makanan yang membayar balik sendiri melalui eskrow di T57.",
+  "parent": "why-t57"
+ },
+ "nft-funding": {
+  "route": "/ms/why-t57/nft-funding",
+  "section": "why-t57",
+  "name": "Pembiayaan Berasaskan Aset Digital",
+  "h1": "Jadikan dokumen dagangan aset yang boleh dibiayai.",
+  "answer": "Jadikan dokumen dagangan yang disahkan aset digital yang boleh dipercayai dan dibiayai oleh pembiaya.",
+  "faqs": [
+   {
+    "q": "Adakah ini mata wang kripto?",
+    "a": "Bukan. Dokumen dagangan bertoken ialah rekod digital bagi aset sebenar, seperti invois atau resit gudang. Ia bukan mata wang."
+   },
+   {
+    "q": "Dokumen apakah yang boleh ditokenkan?",
+    "a": "Dokumen dagangan dalam rekod dagangan T57 yang disahkan, seperti invois, resit gudang dan bil muatan, di tempat undang-undang tempatan mengiktiraf dokumen perdagangan elektronik."
+   }
+  ],
+  "title": "Pembiayaan Perdagangan Aset Digital | Dokumen Bertoken | T57",
+  "description": "Jadikan invois, resit gudang dan bil muatan yang disahkan aset digital unik yang boleh dipercayai dan dibiayai oleh pemberi pinjaman, di T57.",
+  "parent": "why-t57"
+ },
+ "elc-15-minutes": {
+  "route": "/ms/why-t57/elc-15-minutes",
+  "section": "why-t57",
+  "name": "eLC dalam 15 Minit",
+  "h1": "Surat kredit, dibina daripada kontrak anda.",
+  "answer": "Surat kredit elektronik, dikeluarkan dalam kira-kira 15 minit setelah permohonan anda diluluskan.",
+  "faqs": [
+   {
+    "q": "Apakah maksud \"15 minit\"?",
+    "a": "Ia ialah masa sasaran bagi bank rakan kongsi untuk mengeluarkan LC elektronik selepas permohonan anda diluluskan. Kelulusan itu sendiri mengikut proses kredit bank."
+   },
+   {
+    "q": "Adakah T57 mengeluarkan surat kredit?",
+    "a": "Tidak. Surat kredit dikeluarkan oleh bank rakan kongsi berlesen. T57 menyediakan permohonan daripada rekod dagangan anda dan menghubungkan anda dengan mereka."
+   }
+  ],
+  "title": "Surat Kredit Elektronik dalam Kira-kira 15 Minit | T57",
+  "description": "LC elektronik yang disediakan daripada kontrak anda yang disahkan dan dikeluarkan oleh bank rakan kongsi dalam kira-kira 15 minit selepas kelulusan. Dokumen digital, kurang percanggahan.",
+  "parent": "why-t57"
+ },
+ "escrow-payments": {
+  "route": "/ms/why-t57/escrow-payments",
+  "section": "why-t57",
+  "name": "Pembayaran Eskrow",
+  "h1": "Wang anda bergerak hanya apabila barang bergerak.",
+  "answer": "Wang anda bergerak hanya apabila barang bergerak, dengan eskrow dilepaskan pada pencapaian yang dipersetujui.",
+  "faqs": [
+   {
+    "q": "Siapa yang memegang wang dalam eskrow?",
+    "a": "Rakan kongsi eskrow berlesen. T57 tidak memegang dana pelanggan."
+   },
+   {
+    "q": "Apa yang berlaku jika ada pertikaian?",
+    "a": "Pelepasan ditangguhkan secara automatik, dan pertikaian dikendalikan mengikut kontrak dan peraturan rakan kongsi. Pelepasan disambung semula setelah ia diselesaikan."
+   }
+  ],
+  "title": "Pembayaran Eskrow untuk Perdagangan Makanan | Bayar Ikut Pencapaian | T57",
+  "description": "Pembeli membayar ke dalam eskrow pada rakan kongsi berlesen, dan dana dilepaskan hanya apabila pencapaian pemeriksaan, penghantaran atau penerimaan dipenuhi di T57.",
+  "parent": "why-t57"
+ },
+ "alternative-payments": {
+  "route": "/ms/why-t57/alternative-payments",
+  "section": "why-t57",
+  "name": "Pembayaran Alternatif",
+  "h1": "Lebih banyak cara menyelesaikan bayaran, dalam batas undang-undang.",
+  "answer": "Selesaikan dagangan makanan dengan stablecoin, aset digital atau bayaran bersandarkan emas, jika dibenarkan undang-undang.",
+  "faqs": [
+   {
+    "q": "Adakah bayaran alternatif tersedia di setiap negara?",
+    "a": "Tidak. Ia hanya ditawarkan di tempat yang dibenarkan undang-undang tempatan, melalui rakan kongsi terkawal. Ahli di negara lain menyelesaikan bayaran melalui bank, eskrow atau surat kredit."
+   },
+   {
+    "q": "Adakah T57 memegang kripto atau emas saya?",
+    "a": "Tidak. Jagaan, tukaran dan penyelesaian dikendalikan oleh rakan kongsi berlesen. T57 merekodkan bayaran dalam rekod dagangan."
+   }
+  ],
+  "title": "Bayaran Stablecoin, Kripto & Emas untuk Perdagangan Makanan | T57",
+  "description": "Selesaikan dagangan makanan rentas sempadan dengan stablecoin, aset digital atau bayaran bersandarkan emas melalui rakan kongsi terkawal, jika sah di sisi undang-undang, di T57.",
+  "parent": "why-t57"
+ },
+ "digital-bank": {
+  "route": "/ms/why-t57/digital-bank",
+  "section": "why-t57",
+  "name": "Bank Digital",
+  "h1": "Bayar dan dibayar dalam apa jua mata wang.",
+  "answer": "Simpan, bayar dan selesaikan dalam apa jua mata wang, hampir serta-merta, terus dalam dagangan makanan anda.",
+  "faqs": [
+   {
+    "q": "Adakah T57 sebuah bank?",
+    "a": "Bukan. Perkhidmatan perbankan digital di T57 disediakan oleh rakan kongsi berlesen. T57 menghubungkan mereka dengan profil dan rekod dagangan anda yang disahkan."
+   },
+   {
+    "q": "Mata wang apakah yang boleh saya simpan?",
+    "a": "Apa jua mata wang yang diperlukan dagangan anda. Rakan kongsi perbankan T57 menyimpan, menukar dan menyelesaikan bayaran merentas mata wang, supaya anda boleh membayar pembekal dan dibayar oleh pembeli dalam mata wang mereka sendiri."
+   }
+  ],
+  "title": "Bank Digital untuk Perdagangan Makanan | Apa Jua Mata Wang | T57",
+  "description": "Simpan, bayar dan selesaikan dalam apa jua mata wang dengan penyelesaian hampir serta-merta daripada rakan kongsi berlesen, dikaitkan dengan setiap kontrak dan invois dalam rekod dagangan T57 anda.",
+  "parent": "why-t57"
+ },
+ "document-audit-trail": {
+  "route": "/ms/why-t57/document-audit-trail",
+  "section": "why-t57",
+  "name": "Pengurusan Dokumen & Jejak Audit",
+  "h1": "Setiap dokumen dagangan, dalam satu rekod.",
+  "answer": "Setiap dokumen, kelulusan dan pencapaian sesuatu dagangan, dalam satu rekod yang kalis usik.",
+  "faqs": [
+   {
+    "q": "Siapa yang boleh melihat dokumen dagangan saya?",
+    "a": "Hanya pihak yang anda benarkan bagi dagangan itu, seperti rakan dagang, pemberi pinjaman, penanggung insurans atau pemeriksa anda. Akses direkodkan dalam jejak audit."
+   },
+   {
+    "q": "Adakah dokumen disimpan dalam blockchain?",
+    "a": "Tidak. Dokumen disimpan dengan selamat, dan cap jari digital bagi setiap rekod utama diikat pada lejar. Ini membuktikan dokumen tidak berubah tanpa mendedahkan kandungannya."
+   }
+  ],
+  "title": "Pengurusan Dokumen Dagangan & Jejak Audit | T57",
+  "description": "Kontrak, invois, sijil dan laporan pemeriksaan dalam satu rekod dagangan kalis usik, dengan jejak audit lengkap bagi setiap dagangan makanan.",
+  "parent": "why-t57"
+ },
  "markets": {
   "route": "/ms/markets",
   "section": "markets",
