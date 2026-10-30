@@ -1476,6 +1476,285 @@
   "description": "Identiti disahkan, log masuk berbilang faktor, akses berasaskan peranan, penyulitan, kediaman data serantau di Azure dan jejak audit penuh di T57.",
   "parent": "platform"
  },
+ "trust": {
+  "route": "/ms/trust",
+  "section": "trust",
+  "name": "Kepercayaan & Pematuhan",
+  "h1": "Kenali rakan dagang anda. Buktikan apa yang berlaku.",
+  "answer": "Berdagang dengan perniagaan yang disahkan, dalam satu rekod, di bawah peraturan yang jelas.",
+  "faqs": [
+   {
+    "q": "Adakah T57 sebuah pasaran terbuka?",
+    "a": "Tidak. T57 ialah kelab dagangan untuk ahli sahaja. Setiap pembeli dan penjual disahkan sebelum berdagang, dan pengesahan diperbaharui."
+   },
+   {
+    "q": "Adakah T57 memegang wang saya?",
+    "a": "Tidak. Pembayaran, eskrow dan surat kredit dikendalikan oleh rakan kongsi berlesen. T57 menyusun dagangan dan merekodkan setiap langkah."
+   },
+   {
+    "q": "Bagaimana saya tahu dengan siapa saya berdagang?",
+    "a": "Setiap ahli mempunyai Pasport T57 yang disahkan, yang menunjukkan peranan, semakan yang telah dilepasi dan sejarah dagangannya, dikongsi dengan persetujuan."
+   },
+   {
+    "q": "Apakah yang berlaku jika dagangan menemui masalah?",
+    "a": "T57 menyediakan proses pertikaian berstruktur berdasarkan rekod dagangan dikongsi, dan eskrow boleh menangguhkan pelepasan sementara pertikaian diselesaikan."
+   }
+  ],
+  "title": "Kepercayaan & Pematuhan | Perdagangan Makanan Disahkan di T57",
+  "description": "Ahli yang disahkan, satu rekod dagangan, jejak audit dan rakan kongsi berlesen untuk pembayaran. Lihat bagaimana T57 menjadikan kepercayaan titik permulaan perdagangan makanan."
+ },
+ "trust-verification": {
+  "route": "/ms/trust/verification",
+  "section": "trust",
+  "name": "Proses Pengesahan",
+  "h1": "Disahkan di lapangan, bukan sekadar di skrin.",
+  "answer": "Ketahui dengan tepat siapa rakan dagang anda, sebelum anda berdagang.",
+  "faqs": [
+   {
+    "q": "Berapa lama pengesahan mengambil masa?",
+    "a": "Bergantung pada perniagaan dan sama ada lawatan tapak diperlukan. T57 memaklumkan perkara yang masih tertunggak pada setiap peringkat."
+   },
+   {
+    "q": "Mengapa T57 melawat ladang atau kilang saya?",
+    "a": "Untuk memastikan perniagaan yang mendakwa sebagai pengeluar benar-benar mengeluarkan. Inilah yang membolehkan pembeli mempercayai label pemilik-pengeluar."
+   },
+   {
+    "q": "Perlukah saya disahkan semula bagi setiap dagangan?",
+    "a": "Tidak. Pasport T57 anda boleh digunakan semula. Ia diperbaharui secara berkala, dan anda mengemas kininya apabila butiran anda berubah."
+   },
+   {
+    "q": "Bagaimana jika permohonan saya ditolak?",
+    "a": "Anda akan menerima sebab yang dinyatakan dan boleh meminta semakan oleh manusia."
+   }
+  ],
+  "title": "Proses Pengesahan | Bagaimana T57 Mengesahkan Setiap Ahli",
+  "description": "KYC, KYB, saringan sekatan, lawatan tapak dan label peranan: bagaimana T57 mengesahkan setiap pembeli dan penjual sebelum mereka berdagang.",
+  "parent": "trust"
+ },
+ "trust-kyb": {
+  "route": "/ms/trust/verification/kyb",
+  "section": "trust",
+  "name": "KYB: Pengesahan Perniagaan",
+  "h1": "Perniagaan sebenar di sebalik setiap dagangan.",
+  "answer": "Sahkan perniagaan di sebalik setiap dagangan.",
+  "faqs": [
+   {
+    "q": "Apakah dokumen yang saya perlukan untuk KYB?",
+    "a": "Pendaftaran syarikat, lesen, butiran pengarah dan pemilik, serta maklumat bank. Senarai tepat bergantung pada negara dan peranan anda."
+   },
+   {
+    "q": "Siapa yang melihat dokumen KYB saya?",
+    "a": "Pasukan pengesahan T57. Pihak lain hanya melihat Pasport anda yang disahkan, dan hanya apa yang anda pilih untuk dikongsi."
+   },
+   {
+    "q": "Berapa kerap KYB diperbaharui?",
+    "a": "Secara berkala, dan setiap kali butiran utama seperti pemilikan atau lesen berubah."
+   },
+   {
+    "q": "Bolehkah koperasi lulus KYB bagi pihak petaninya?",
+    "a": "Boleh. Koperasi atau pertubuhan pengeluar disahkan sebagai perniagaan, dan pengeluar ahlinya disertakan melaluinya."
+   }
+  ],
+  "title": "Pengesahan Perniagaan KYB | T57",
+  "description": "Bagaimana T57 mengesahkan syarikat ahli: semakan pendaftaran, pemilikan benefisial, lesen, butiran bank dan saringan sekatan.",
+  "parent": "trust-verification"
+ },
+ "trust-kyc": {
+  "route": "/ms/trust/verification/kyc",
+  "section": "trust",
+  "name": "KYC: Pengesahan Individu",
+  "h1": "Setiap tandatangan, individu yang disahkan.",
+  "answer": "Sahkan individu yang memiliki dan bertindak bagi setiap ahli.",
+  "faqs": [
+   {
+    "q": "Siapa yang perlu melengkapkan KYC?",
+    "a": "Pemilik, pengarah dan sesiapa yang akan bertindak bagi syarikat di T57."
+   },
+   {
+    "q": "Adakah kad pengenalan saya dikongsi dengan ahli lain?",
+    "a": "Tidak. Ahli lain hanya melihat bahawa anda telah disahkan, bukan dokumen anda."
+   },
+   {
+    "q": "Bagaimana jika saya meninggalkan syarikat?",
+    "a": "Syarikat akan menarik balik akses anda, dan tindakan anda sebelum ini kekal dalam jejak audit."
+   },
+   {
+    "q": "Bolehkah saya menggunakan satu identiti untuk beberapa syarikat?",
+    "a": "Boleh. Setiap pautan syarikat disahkan secara berasingan, dengan peranan dan kuasanya sendiri."
+   }
+  ],
+  "title": "Pengesahan Individu KYC | T57",
+  "description": "Bagaimana T57 mengesahkan pemilik, pengarah dan pengguna: semakan identiti, saringan sekatan dan kuasa menandatangan bagi setiap dagangan.",
+  "parent": "trust-verification"
+ },
+ "trust-scoring": {
+  "route": "/ms/trust/verification/membership-scoring",
+  "section": "trust",
+  "name": "Pemarkahan Keahlian & Penarafan Kepercayaan",
+  "h1": "Kepercayaan dibina atas bukti, bukan reputasi.",
+  "answer": "Biar rekod prestasi anda bercakap bagi pihak perniagaan anda.",
+  "faqs": [
+   {
+    "q": "Apakah yang mempengaruhi penarafan kepercayaan saya?",
+    "a": "Pengesahan anda, dagangan yang diselesaikan, penghantaran tepat masa, ketepatan dokumen, prestasi bayaran dan maklum balas daripada rakan dagang anda."
+   },
+   {
+    "q": "Bolehkah saya melihat penarafan saya sendiri?",
+    "a": "Boleh, berserta faktor utama di sebaliknya."
+   },
+   {
+    "q": "Bolehkah saya mempertikaikan sesuatu penarafan?",
+    "a": "Boleh. Anda boleh membantah sebarang penarafan atau maklum balas, dan manusia akan menyemaknya."
+   },
+   {
+    "q": "Adakah ahli baharu bermula dari kosong?",
+    "a": "Ahli baharu bermula dengan penarafan berdasarkan pengesahan mereka, yang meningkat apabila mereka berdagang."
+   }
+  ],
+  "title": "Pemarkahan Keahlian & Penarafan Kepercayaan | T57",
+  "description": "Penarafan kepercayaan yang dibina daripada semakan yang disahkan dan tingkah laku dagangan sebenar, dijelaskan kepada setiap ahli dan disemak oleh manusia.",
+  "parent": "trust-verification"
+ },
+ "trust-audit-trail": {
+  "route": "/ms/trust/audit-trail",
+  "section": "trust",
+  "name": "Jejak Audit",
+  "h1": "Siapa melakukan apa, dan bila. Dalam setiap dagangan.",
+  "answer": "Lihat siapa melakukan apa, dan bila, dalam setiap dagangan.",
+  "faqs": [
+   {
+    "q": "Bolehkah sesiapa menyunting jejak audit?",
+    "a": "Tidak. Entri tidak boleh diubah atau dipadam. Pembetulan ditambah sebagai entri baharu."
+   },
+   {
+    "q": "Siapa yang boleh melihat jejak audit dagangan saya?",
+    "a": "Pihak dalam dagangan itu, dan sesiapa yang mereka pilih untuk berkongsi, seperti pemberi pinjaman atau juruaudit."
+   },
+   {
+    "q": "Berapa lama rekod disimpan?",
+    "a": "Bagi tempoh yang dikehendaki undang-undang di setiap pasaran."
+   },
+   {
+    "q": "Adakah keputusan AI direkodkan?",
+    "a": "Ya. Cadangan AI dan keputusan manusia yang dibuat berdasarkannya dilog."
+   }
+  ],
+  "title": "Jejak Audit untuk Perdagangan Makanan | Kepercayaan & Pematuhan T57",
+  "description": "Setiap tindakan dalam setiap dagangan, dikaitkan kepada individu yang disahkan, bercap masa dan kalis usik. Bukti sedia audit di T57.",
+  "parent": "trust"
+ },
+ "trust-documents": {
+  "route": "/ms/trust/document-management",
+  "section": "trust",
+  "name": "Sistem Pengurusan Dokumen",
+  "h1": "Setiap dokumen dagangan, satu versi kebenaran.",
+  "answer": "Pastikan setiap dokumen dagangan tepat, terkini dan di satu tempat.",
+  "faqs": [
+   {
+    "q": "Dokumen apakah yang boleh dijana T57?",
+    "a": "Dokumen komersial seperti invois, senarai bungkusan dan borang berasaskan kontrak. Sijil rasmi dikeluarkan oleh pihak berkuasa atau rakan kongsi berkaitan dan dimuat naik ke rekod."
+   },
+   {
+    "q": "Adakah T57 menyemak dokumen saya?",
+    "a": "AI menyemak jurang dan ketidakpadanan serta menandakannya. Pasukan dan rakan kongsi anda membuat keputusan akhir."
+   },
+   {
+    "q": "Siapa yang boleh melihat dokumen saya?",
+    "a": "Hanya pihak yang anda benarkan bagi setiap dagangan."
+   },
+   {
+    "q": "Adakah dokumen kertas asal masih diperlukan?",
+    "a": "Di sesetengah pasaran dan bagi sesetengah dokumen, ya. T57 menunjukkan di mana dokumen asal bercetak masih diperlukan."
+   }
+  ],
+  "title": "Pengurusan Dokumen Dagangan | Kepercayaan & Pematuhan T57",
+  "description": "Cipta, semak, simpan dan kongsi setiap dokumen perdagangan makanan dalam satu rekod, dengan semakan AI, amaran tamat tempoh dan pengesahan ketulenan.",
+  "parent": "trust"
+ },
+ "trust-security": {
+  "route": "/ms/trust/security",
+  "section": "trust",
+  "name": "Keselamatan & Privasi",
+  "h1": "Data anda kekal milik anda. Anda yang menentukan siapa melihatnya.",
+  "answer": "Data dagangan anda kekal milik anda, dilindungi dan sulit.",
+  "faqs": [
+   {
+    "q": "Adakah T57 menjual data saya?",
+    "a": "Tidak. T57 tidak menjual data individu ahli. Analisis pasaran menggunakan data agregat tanpa nama."
+   },
+   {
+    "q": "Bolehkah kakitangan T57 melihat data saya?",
+    "a": "Hanya kakitangan yang memerlukannya untuk pengesahan, sokongan atau pematuhan, di bawah kawalan akses yang ketat, dan setiap akses dilog."
+   },
+   {
+    "q": "Bolehkah saya memadam data saya?",
+    "a": "Anda boleh meminta pemadaman, tertakluk kepada rekod yang dikehendaki undang-undang untuk disimpan oleh T57 atau rakan kongsinya."
+   },
+   {
+    "q": "Bagaimana saya melaporkan kebimbangan keselamatan?",
+    "a": "Hubungi pasukan keselamatan kami di hello@t57.ai."
+   }
+  ],
+  "title": "Keselamatan & Privasi | Data Dagangan Anda di T57",
+  "description": "Log masuk berbilang faktor, akses berasaskan peranan, kawalan persetujuan dan sejarah akses. Anda yang menentukan siapa melihat data dagangan anda di T57.",
+  "parent": "trust"
+ },
+ "trust-data-protection": {
+  "route": "/ms/trust/security/data-protection",
+  "section": "trust",
+  "name": "Perlindungan Data",
+  "h1": "Pengendalian data yang sah di setiap pasaran.",
+  "answer": "Data dikendalikan secara sah di setiap pasaran tempat kami berdagang.",
+  "faqs": [
+   {
+    "q": "Di manakah data saya disimpan?",
+    "a": "Di Microsoft Azure, di pelbagai rantau. Jika undang-undang tempatan mewajibkannya, data disimpan dalam rantau."
+   },
+   {
+    "q": "Bagaimana saya mengakses atau membetulkan data saya?",
+    "a": "Melalui tetapan akaun anda, atau dengan menghubungi pasukan perlindungan data kami."
+   },
+   {
+    "q": "Adakah T57 berkongsi data saya dengan rakan kongsi?",
+    "a": "Hanya dengan persetujuan anda, atau jika dagangan atau undang-undang mewajibkannya, seperti berkongsi dokumen dengan bank rakan kongsi yang anda pilih."
+   },
+   {
+    "q": "Siapa yang bertanggungjawab atas perlindungan data di T57?",
+    "a": "Ketua perlindungan data T57, yang boleh dihubungi di hello@t57.ai."
+   }
+  ],
+  "title": "Perlindungan Data | Pematuhan PDPL, DPDP dan PDPA | T57",
+  "description": "Bagaimana T57 mengendalikan data di bawah PDPL Arab Saudi dan UAE, Akta DPDP India, PDPA Malaysia dan Undang-undang 6698 Türkiye, dengan persetujuan dan kediaman data.",
+  "parent": "trust-security"
+ },
+ "trust-disputes": {
+  "route": "/ms/trust/trade-assurance/disputes",
+  "section": "trust",
+  "name": "Penyelesaian Pertikaian",
+  "h1": "Pertikaian diselesaikan berdasarkan fakta, bukan siapa yang paling lantang.",
+  "answer": "Selesaikan pertikaian dagangan berdasarkan fakta, dengan pantas dan adil.",
+  "faqs": [
+   {
+    "q": "Apakah pertikaian yang diliputi T57?",
+    "a": "Pertikaian berkaitan dagangan yang dibuat di T57, seperti kualiti, kuantiti, penghantaran, dokumen dan bayaran."
+   },
+   {
+    "q": "Adakah T57 memutuskan siapa yang betul?",
+    "a": "T57 membantu pihak-pihak mencapai persetujuan berdasarkan rekod dan kontrak mereka. Jika mereka tidak dapat bersetuju, pertikaian mengikut saluran yang ditetapkan dalam kontrak."
+   },
+   {
+    "q": "Apakah yang berlaku kepada wang saya semasa pertikaian?",
+    "a": "Jika dagangan menggunakan eskrow, jumlah yang dipertikaikan ditahan oleh rakan kongsi eskrow berlesen sehingga pertikaian diselesaikan."
+   },
+   {
+    "q": "Adakah pertikaian menjejaskan penarafan kepercayaan saya?",
+    "a": "Keputusan direkodkan. Penyelesaian yang adil tidak dikira menentang mana-mana pihak, dan anda boleh membantah sebarang kesan terhadap penarafan."
+   }
+  ],
+  "title": "Penyelesaian Pertikaian Dagangan | Jaminan Dagangan T57",
+  "description": "Selesaikan pertikaian perdagangan makanan daripada satu rekod dikongsi, dengan eskrow ditangguhkan melalui rakan kongsi berlesen dan pemeriksaan bebas.",
+  "parent": "trust"
+ },
  "markets": {
   "route": "/ms/markets",
   "section": "markets",
