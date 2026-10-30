@@ -296,6 +296,293 @@
   "description": "Kontrak, invois, sijil dan laporan pemeriksaan dalam satu rekod dagangan kalis usik, dengan jejak audit lengkap bagi setiap dagangan makanan.",
   "parent": "why-t57"
  },
+ "capabilities": {
+  "route": "/ms/capabilities",
+  "section": "capabilities",
+  "name": "Penyelesaian",
+  "h1": "Setiap langkah dagangan makanan. Satu rekod.",
+  "answer": "Jalankan setiap bahagian dagangan makanan, dari sebut harga pertama hingga bayaran akhir, dalam satu rekod.",
+  "faqs": [
+   {
+    "q": "Adakah saya perlu menggunakan setiap keupayaan bagi setiap dagangan?",
+    "a": "Tidak. Ahli memilih keupayaan yang diperlukan oleh setiap dagangan. Oleh kerana semuanya berkongsi satu rekod, menambah perkhidmatan kemudian tidak bermakna bermula semula."
+   },
+   {
+    "q": "Siapa yang menyediakan pembiayaan, pembayaran dan insurans?",
+    "a": "Rakan kongsi berlesen. T57 tidak memberi pinjaman, memegang dana pelanggan, memiliki barang atau menyediakan pengangkutan. Ia menyediakan pengesahan, aliran kerja dan rekod dagangan yang menghubungkan perkhidmatan ini."
+   },
+   {
+    "q": "Bolehkah saya menggunakan T57 untuk dagangan domestik dan juga eksport?",
+    "a": "Boleh. T57 menyokong borong domestik kepada pasar raya, HoReCa dan institusi, serta perdagangan rentas sempadan. Lihat dagangan B2B domestik ."
+   }
+  ],
+  "title": "Penyelesaian T57 | Setiap Langkah Dagangan Makanan dalam Satu Rekod",
+  "description": "RFQ, kontrak, pembiayaan perdagangan, eskrow, eLC, insurans, logistik, kastam dan risikan harga untuk perdagangan makanan, disambungkan dalam satu rekod dagangan T57."
+ },
+ "cap-trade": {
+  "route": "/ms/capabilities/trade",
+  "section": "capabilities",
+  "name": "Pelaksanaan Dagangan",
+  "h1": "Daripada pertanyaan pertama hingga urus niaga selesai dihantar.",
+  "answer": "Jadikan peluang dagangan makanan urus niaga yang dipersetujui, dihantar dan didokumenkan.",
+  "faqs": [
+   {
+    "q": "Bolehkah saya menggunakan Pelaksanaan Dagangan tanpa pembiayaan atau logistik?",
+    "a": "Boleh. Anda boleh menggunakan RFQ, kontrak dan kebolehkesanan secara berasingan, dan menambah pembiayaan, insurans atau logistik kepada mana-mana dagangan kemudian."
+   },
+   {
+    "q": "Adakah T57 menjual atau membeli barang?",
+    "a": "Tidak. T57 tidak memiliki barang. Ahli berdagang terus antara satu sama lain di T57."
+   },
+   {
+    "q": "Produk apakah yang boleh saya dagangkan?",
+    "a": "Makanan merentas seluruh rantaian: hasil tanaman, ternakan dan tangkapan, serta barangan diproses, dikilang dan berjenama."
+   }
+  ],
+  "title": "Pelaksanaan Dagangan Makanan | RFQ, Kontrak & Kebolehkesanan | T57",
+  "description": "RFQ, pertanian kontrak, tender kerajaan, kebolehkesanan dan pesanan melalui sembang, dari pertanyaan pertama hingga penghantaran dalam satu rekod dagangan T57.",
+  "parent": "capabilities"
+ },
+ "cap-rfq": {
+  "route": "/ms/capabilities/trade/rfq",
+  "section": "capabilities",
+  "name": "RFQ & Pelaksanaan Dagangan",
+  "h1": "Satu permintaan. Sebut harga yang setara.",
+  "answer": "Hantar satu permintaan berstruktur, bandingkan sebut harga yang disahkan dan laksanakan urus niaga pilihan anda.",
+  "faqs": [
+   {
+    "q": "Berapa lama RFQ kekal dibuka?",
+    "a": "Pembeli menetapkan tarikh akhir. Bidaan yang diterima selepas ia ditutup tidak dipaparkan melainkan pembeli membuka semula RFQ."
+   },
+   {
+    "q": "Bolehkah saya berunding selepas menerima bidaan?",
+    "a": "Boleh. Anda boleh mengajukan soalan penjelasan atau meminta bidaan yang disemak semula daripada mana-mana pembekal sebelum menganugerahkan kontrak."
+   },
+   {
+    "q": "Bolehkah penjual membuat tawaran tanpa RFQ?",
+    "a": "Boleh. Penjual yang disahkan boleh menerbitkan senarai produk dan terma borong yang boleh dijawab terus oleh pembeli."
+   }
+  ],
+  "title": "RFQ & Pelaksanaan Dagangan untuk Makanan | T57",
+  "description": "RFQ berstruktur, pembida yang disahkan, perbandingan setara dan kontrak daripada sebut harga yang diterima. Dapatkan bekalan dan laksanakan dagangan makanan dalam satu rekod T57.",
+  "parent": "cap-trade"
+ },
+ "cap-trade-desk": {
+  "route": "/ms/capabilities/trade/virtual-trade-desk",
+  "section": "capabilities",
+  "name": "Meja Dagangan Maya",
+  "h1": "Meja dagangan syarikat besar, tanpa perlu menambah kakitangan.",
+  "answer": "Berikan perniagaan anda meja dagangan setaraf syarikat dagangan global, tanpa perlu mengambil satu pasukan.",
+  "faqs": [
+   {
+    "q": "Adakah Meja Dagangan termasuk dalam keahlian?",
+    "a": "Ya. Setiap ahli yang disahkan boleh menggunakan Meja Dagangan. Peringkat keahlian yang lebih tinggi menawarkan data yang lebih mendalam dan had penggunaan yang lebih tinggi."
+   },
+   {
+    "q": "Adakah Meja Dagangan membuat keputusan untuk saya?",
+    "a": "Tidak. Ia memberi cadangan, draf dan semakan. Anda yang membuat setiap keputusan komersial."
+   },
+   {
+    "q": "Apa yang berlaku apabila Meja Dagangan menanda masalah?",
+    "a": "Anda akan melihat isu itu bersama cadangan penyelesaian. Jika isu itu berkaitan pematuhan atau pengesahan, ia dirujuk kepada pasukan T57 untuk semakan manusia."
+   }
+  ],
+  "title": "Meja Dagangan Maya untuk Perdagangan Makanan | AI + Semakan Manusia | T57",
+  "description": "Padanan rakan dagang AI, data harga, perangkaan kontrak, saringan sekatan dan semakan dokumen untuk PKS makanan, dengan manusia membuat setiap keputusan.",
+  "parent": "cap-trade"
+ },
+ "cap-contract-farming": {
+  "route": "/ms/capabilities/trade/contract-farming",
+  "section": "capabilities",
+  "name": "Pertanian Kontrak",
+  "h1": "Persetujui tanaman musim depan, hari ini.",
+  "answer": "Persetujui tanaman musim depan hari ini, dengan pembeli, penanam dan pembiayaan dalam satu rekod.",
+  "faqs": [
+   {
+    "q": "Bolehkah pekebun kecil secara individu menggunakan pertanian kontrak di T57?",
+    "a": "Boleh, biasanya melalui koperasi atau pertubuhan peladang yang memegang keahlian T57 dan menandatangani bagi pihak ahlinya."
+   },
+   {
+    "q": "Apa yang berlaku jika harga berubah sepanjang musim?",
+    "a": "Ia bergantung pada kontrak. Perjanjian harga tetap, harga minimum dan berasaskan formula masing-masing mengendalikan perubahan harga secara berbeza, dan termanya dipersetujui di awal."
+   },
+   {
+    "q": "Adakah T57 menyediakan input atau pembiayaan?",
+    "a": "Tidak. Input datang daripada pembeli atau rakan kongsi, dan pembiayaan daripada pemberi pinjaman berlesen. T57 menyediakan kontrak, rekod dan aliran kerja."
+   }
+  ],
+  "title": "Platform Pertanian Kontrak | Kontrak Hadapan untuk Makanan | T57",
+  "description": "Perjanjian hadapan, piawaian kualiti, pembiayaan input dan bayaran berasaskan pencapaian antara pembeli, petani dan koperasi dalam satu rekod T57.",
+  "parent": "cap-trade"
+ },
+ "cap-tenders": {
+  "route": "/ms/capabilities/trade/government-tenders",
+  "section": "capabilities",
+  "name": "Tender Kerajaan",
+  "h1": "Menangi tender makanan awam sebagai pembekal yang disahkan.",
+  "answer": "Cari, jawab dan penuhi tender makanan awam sebagai pembekal yang disahkan.",
+  "faqs": [
+   {
+    "q": "Adakah T57 menghantar bidaan bagi pihak saya?",
+    "a": "Tidak. T57 membantu anda mencari, memahami dan menyediakan jawapan. Anda menghantarnya melalui saluran rasmi pihak berkuasa yang mengeluarkan tender."
+   },
+   {
+    "q": "Bolehkah pembeli kerajaan menggunakan T57 untuk menjalankan tender?",
+    "a": "Pembeli kerajaan boleh menjemput ahli T57 yang disahkan untuk membida dan menjejak penghantaran di T57, seiring dengan peraturan dan sistem perolehan mereka sendiri."
+   },
+   {
+    "q": "Tender dari negara mana yang diliputi?",
+    "a": "Tender dari pasaran pengasas T57 terlebih dahulu (Arab Saudi, UAE, India, Malaysia dan Türkiye), dengan lebih banyak pasaran ditambah dari semasa ke semasa."
+   }
+  ],
+  "title": "Tender Makanan Kerajaan | Cari & Menangi Kontrak Awam | T57",
+  "description": "Temui tender makanan awam, dapatkan ringkasan AI dan semakan kelayakan, bina jawapan yang patuh dan penuhi kontrak dalam satu rekod dagangan T57.",
+  "parent": "cap-trade"
+ },
+ "cap-traceability": {
+  "route": "/ms/capabilities/trade/traceability",
+  "section": "capabilities",
+  "name": "Kebolehkesanan",
+  "h1": "Buktikan dari mana datangnya makanan anda.",
+  "answer": "Buktikan dari mana datangnya makanan anda, bagaimana ia dikendalikan dan siapa yang mengendalikannya.",
+  "faqs": [
+   {
+    "q": "Siapa yang menambah maklumat ke rekod lot?",
+    "a": "Pihak yang mengendalikannya, seperti pengeluar, pemproses, pemeriksa dan rakan kongsi logistik, masing-masing menambah peristiwa yang menjadi tanggungjawab mereka."
+   },
+   {
+    "q": "Bolehkah pengguna melihat maklumat kebolehkesanan?",
+    "a": "Boleh, jika jenama atau penjual memilih untuk berkongsinya melalui pautan atau kod QR. Butiran komersial kekal sulit."
+   },
+   {
+    "q": "Adakah kebolehkesanan di T57 menggantikan pensijilan?",
+    "a": "Tidak. Sijil masih dikeluarkan oleh badan yang diakreditasi. T57 mengaitkannya dengan lot yang diliputi dan memudahkan semakan."
+   }
+  ],
+  "title": "Kebolehkesanan Makanan dari Sumber ke Pembeli | T57",
+  "description": "Kebolehkesanan makanan peringkat lot dengan asal usul yang disahkan, sijil yang dipautkan dan rekod kalis usik. Buktikan asal usul dan percepat penarikan balik di T57.",
+  "parent": "cap-trade"
+ },
+ "cap-chat-orders": {
+  "route": "/ms/capabilities/trade/whatsapp-orders",
+  "section": "capabilities",
+  "name": "Pesanan Berasaskan LLM",
+  "h1": "Pesan melalui WhatsApp. Dapat pesanan sebenar.",
+  "answer": "Pesan makanan seperti cara anda sudah berhubung dengan pembekal, melalui WhatsApp, suara atau sembang.",
+  "faqs": [
+   {
+    "q": "Adakah saya perlu memasang apa-apa?",
+    "a": "Tidak. Ahli yang disahkan boleh memesan melalui WhatsApp atau sembang T57 setelah akaun mereka dipautkan."
+   },
+   {
+    "q": "Bagaimana jika AI tersalah faham pesanan saya?",
+    "a": "Anda sentiasa melihat ringkasan sebelum mengesahkan, jadi anda boleh membetulkannya. Tiada apa dihantar kepada pembekal sehingga anda mengesahkan."
+   },
+   {
+    "q": "Adakah perbualan WhatsApp saya disimpan?",
+    "a": "Hanya butiran pesanan yang anda sahkan direkodkan dalam rekod dagangan, di bawah dasar privasi T57."
+   }
+  ],
+  "title": "Pesanan Melalui WhatsApp & Sembang AI untuk Perniagaan Makanan | T57",
+  "description": "Pesan makanan melalui mesej WhatsApp atau nota suara. AI menukar bahasa biasa kepada pesanan berstruktur yang disahkan dalam rekod dagangan T57 anda.",
+  "parent": "cap-trade"
+ },
+ "cap-trust-payments": {
+  "route": "/ms/capabilities/finance/trust-payments",
+  "section": "capabilities",
+  "name": "Kepercayaan & Pembayaran",
+  "h1": "Bayar dan dibayar dengan yakin.",
+  "answer": "Bayar dan dibayar dengan yakin, atas terma yang boleh dilihat dan dipercayai kedua-dua pihak.",
+  "faqs": [
+   {
+    "q": "Pilihan bayaran mana yang patut saya pilih?",
+    "a": "Eskrow sesuai untuk kebanyakan hubungan baharu dan borong domestik. eLC sesuai untuk dagangan rentas sempadan yang lebih besar yang memerlukan jaminan bank. Bayaran dompet sesuai untuk hubungan berulang yang sudah dipercayai."
+   },
+   {
+    "q": "Bolehkah saya menggabungkan pilihan bayaran?",
+    "a": "Boleh. Contohnya, deposit boleh dibayar ke dalam eskrow dan bakinya di bawah LC, semuanya dalam rekod dagangan yang sama."
+   },
+   {
+    "q": "Siapa yang menyelesaikan pertikaian bayaran?",
+    "a": "Pertikaian dikendalikan mengikut kontrak dan peraturan rakan kongsi berlesen. Pelepasan ditangguhkan secara automatik sehingga ia diselesaikan."
+   }
+  ],
+  "title": "Kepercayaan & Pembayaran untuk Perdagangan Makanan | Eskrow, Dompet, eLC | T57",
+  "description": "Eskrow, dompet dalam apa jua mata wang dan surat kredit elektronik daripada rakan kongsi berlesen, diikat pada pencapaian dalam satu rekod dagangan T57 yang disahkan.",
+  "parent": "capabilities"
+ },
+ "cap-escrow": {
+  "route": "/ms/capabilities/finance/escrow",
+  "section": "capabilities",
+  "name": "Eskrow & Jaminan Dagangan",
+  "h1": "Bayaran ditahan dengan selamat sehingga barangnya betul.",
+  "answer": "Tahan bayaran dengan selamat sehingga barang, kualiti dan dokumennya betul.",
+  "faqs": [
+   {
+    "q": "Siapa yang memegang wang?",
+    "a": "Rakan kongsi eskrow berlesen, dalam akaun yang berasingan daripada T57 dan daripada kedua-dua pihak yang berdagang."
+   },
+   {
+    "q": "Berapakah kos eskrow?",
+    "a": "Yuran eskrow ditetapkan oleh rakan kongsi dan dipaparkan sebelum anda bersetuju dengan kontrak."
+   },
+   {
+    "q": "Bolehkah eskrow digunakan bersama surat kredit atau pembiayaan perdagangan?",
+    "a": "Boleh. Eskrow boleh berfungsi seiring LC atau membayar balik pemberi pinjaman pembiayaan perdagangan semasa penyelesaian, dalam rekod dagangan yang sama."
+   }
+  ],
+  "title": "Eskrow & Jaminan Dagangan untuk Perdagangan Makanan | T57",
+  "description": "Dana pembeli dipegang oleh rakan kongsi eskrow berlesen dan dilepaskan secara berperingkat semasa pemeriksaan, penghantaran atau penerimaan, dengan pencetus pertikaian, di T57.",
+  "parent": "cap-trust-payments"
+ },
+ "cap-wallet": {
+  "route": "/ms/capabilities/finance/digital-wallet",
+  "section": "capabilities",
+  "name": "Dompet Digital & Pembayaran",
+  "h1": "Satu dompet untuk setiap bayaran dagangan.",
+  "answer": "Satu dompet untuk setiap bayaran dagangan, dalam apa jua mata wang, dikaitkan dengan setiap invois.",
+  "faqs": [
+   {
+    "q": "Adakah dompet T57 sebuah akaun bank?",
+    "a": "Ia ialah akaun e-wang atau akaun pembayaran yang disediakan oleh rakan kongsi berlesen. Untuk perkhidmatan perbankan penuh, lihat Perbankan Digital."
+   },
+   {
+    "q": "Bolehkah saya membayar pihak yang bukan ahli T57?",
+    "a": "Boleh. Anda boleh membayar pembekal dan penyedia perkhidmatan luar melalui pindahan bank daripada dompet anda, tertakluk kepada semakan rakan kongsi."
+   },
+   {
+    "q": "Berapakah yurannya?",
+    "a": "Yuran dan kadar tukaran ditetapkan oleh rakan kongsi pembayaran dan dipaparkan sebelum anda mengesahkan setiap bayaran."
+   }
+  ],
+  "title": "Dompet Digital untuk Bayaran Perdagangan Makanan | Apa Jua Mata Wang | T57",
+  "description": "Bayar pembekal dan rakan kongsi serta dibayar oleh pembeli dalam apa jua mata wang, dengan bayaran ahli hampir serta-merta dan padanan automatik di T57.",
+  "parent": "cap-trust-payments"
+ },
+ "cap-elc": {
+  "route": "/ms/capabilities/finance/elc",
+  "section": "capabilities",
+  "name": "Surat Kredit Elektronik",
+  "h1": "Surat kredit, dibina daripada kontrak anda.",
+  "answer": "Surat kredit yang disediakan daripada kontrak anda, dikeluarkan secara digital dan dikemukakan tanpa kertas.",
+  "faqs": [
+   {
+    "q": "Apakah maksud \"kira-kira 15 minit\"?",
+    "a": "Ia ialah masa sasaran pengeluaran selepas bank meluluskan permohonan anda. Kelulusan mengikut proses kredit biasa bank."
+   },
+   {
+    "q": "Bolehkah bank saya sendiri mengeluarkan LC di T57?",
+    "a": "Jika bank anda rakan kongsi T57, boleh. Jika tidak, T57 boleh menghubungkan anda dengan bank yang mengambil bahagian."
+   },
+   {
+    "q": "Adakah LC elektronik sah di sisi undang-undang?",
+    "a": "Surat kredit lazimnya dikeluarkan dan dimaklumkan secara elektronik antara bank. Pengemukaan elektronik dokumen perdagangan bergantung pada undang-undang tempatan, dan T57 menyokong pengemukaan kertas di tempat ia masih diwajibkan."
+   }
+  ],
+  "title": "Surat Kredit Elektronik (eLC) untuk Perdagangan Makanan | T57",
+  "description": "LC yang disediakan daripada kontrak anda, dikeluarkan oleh bank rakan kongsi dalam kira-kira 15 minit selepas kelulusan, dengan semakan percanggahan AI dan pengemukaan digital di T57.",
+  "parent": "cap-trust-payments"
+ },
  "markets": {
   "route": "/ms/markets",
   "section": "markets",
