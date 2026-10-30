@@ -1,5 +1,5 @@
-import DocumentLang from '../../components/DocumentLang';
-import { chrome } from '../../lib/site';
+import DocumentLang from '../../../components/DocumentLang';
+import { chrome } from '../../../lib/site';
 
 // Shown for any /hi address that is not a translated page, inside the Hindi header and footer.
 export const metadata = { title: 'पेज नहीं मिला | T57', robots: { index: false } };

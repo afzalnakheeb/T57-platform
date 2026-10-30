@@ -1,4 +1,4 @@
-import { chrome } from '../lib/site';
+import { chrome } from '../../../lib/site';
 
 // Shown for any address that is not a sitemap page, inside the shared header and footer.
 export const metadata = { title: 'Page not found | T57', robots: { index: false } };

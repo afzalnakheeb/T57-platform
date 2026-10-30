@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
-import MicrositePage from '../../../components/MicrositePage';
-import { byRouteIn, metadataFor, pagesIn } from '../../../lib/site';
+import MicrositePage from '../../../../components/MicrositePage';
+import { byRouteIn, metadataFor, pagesIn } from '../../../../lib/site';
 
 // Arabic pages, under /ar, for every page prototype/build.py has a complete translation for.
 type Params = { params: { slug?: string[] } };

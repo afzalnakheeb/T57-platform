@@ -2,10 +2,11 @@ import React from 'react';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import './globals.css';
-import { SITE, assetVersion, assistantVersion } from '../lib/site';
+import '../app/globals.css';
+import { SITE, assetVersion, assistantVersion, dirOf, type Lang } from '../lib/site';
 
-export const metadata = {
+// Shared by the root layout of each language (app/(en)/layout.tsx, app/ar/layout.tsx, ...).
+export const rootMetadata = {
   metadataBase: new URL(SITE),
   title: 'T57.ai',
   description: 'AI-native digital trade infrastructure for food.',
@@ -18,16 +19,17 @@ export const metadata = {
 
 export const viewport = { themeColor: '#2f2e7d' };
 
+// Each language has its own root layout, so every page is served with the right <html lang> and dir from the first byte.
 // Each page renders the header, menu, footer and transition veil in its own language (components/MicrositePage).
 // The inline script covers the screen (or, inside a microsite, hides the content) before first paint when arriving from
 // another microsite, so the petal transition continues without a flash. If the page script is slow or fails to load,
 // the cover lifts after 3 seconds anyway, so a page can never stay hidden. Arabic pages get their language and right-to-left
-// direction here too, before anything paints, and Malay, Turkish and Hindi pages their language.
-const arrive = `var d=document.documentElement,p=location.pathname;if(p==='/ar'||p.indexOf('/ar/')===0){d.lang='ar';d.dir='rtl'}else if(p==='/ms'||p.indexOf('/ms/')===0){d.lang='ms'}else if(p==='/tr'||p.indexOf('/tr/')===0){d.lang='tr'}else if(p==='/hi'||p.indexOf('/hi/')===0){d.lang='hi'}try{var g=sessionStorage.getItem('t57-go');if(g)document.documentElement.classList.add(g.indexOf('lift:')===0?'lifting':'arriving')}catch(e){}setTimeout(function(){d.classList.remove('arriving','lifting')},3000)`;
+// direction come from the server.
+const arrive = `var d=document.documentElement;try{var g=sessionStorage.getItem('t57-go');if(g)document.documentElement.classList.add(g.indexOf('lift:')===0?'lifting':'arriving')}catch(e){}setTimeout(function(){d.classList.remove('arriving','lifting')},3000)`;
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootShell({ lang, children }: { lang: Lang; children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lang} dir={dirOf(lang)} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: arrive }} />
         {/* Roboto is self-hosted (public/fonts, Latin subset), so no third-party font request delays the first paint. */}

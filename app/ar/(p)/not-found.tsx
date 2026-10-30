@@ -1,5 +1,5 @@
-import DocumentLang from '../../components/DocumentLang';
-import { chrome } from '../../lib/site';
+import DocumentLang from '../../../components/DocumentLang';
+import { chrome } from '../../../lib/site';
 
 // Shown for any /ar address that is not a translated page, inside the Arabic header and footer.
 export const metadata = { title: 'الصفحة غير موجودة | T57', robots: { index: false } };

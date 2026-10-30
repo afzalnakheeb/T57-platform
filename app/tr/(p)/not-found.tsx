@@ -1,5 +1,5 @@
-import DocumentLang from '../../components/DocumentLang';
-import { chrome } from '../../lib/site';
+import DocumentLang from '../../../components/DocumentLang';
+import { chrome } from '../../../lib/site';
 
 // Shown for any /tr address that is not a translated page, inside the Turkish header and footer.
 export const metadata = { title: 'Sayfa bulunamadı | T57', robots: { index: false } };

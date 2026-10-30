@@ -1,5 +1,5 @@
-import { chrome } from '../../lib/site';
-import { DECKS } from '../../lib/decks';
+import { chrome } from '../../../lib/site';
+import { DECKS } from '../../../lib/decks';
 
 // The pitch decks page: one card per deck, each opened with the access code T57 sends to recipients.
 // The decks themselves are served by app/decks/[deck]/route.ts. The page stays out of search.

@@ -1,5 +1,5 @@
-import DocumentLang from '../../components/DocumentLang';
-import { chrome } from '../../lib/site';
+import DocumentLang from '../../../components/DocumentLang';
+import { chrome } from '../../../lib/site';
 
 // Shown for any /ms address that is not a translated page, inside the Malay header and footer.
 export const metadata = { title: 'Halaman tidak ditemui | T57', robots: { index: false } };
