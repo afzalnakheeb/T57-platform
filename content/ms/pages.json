@@ -53,6 +53,209 @@
   "title": "Siapa Yang Kami Bantu | Kelab Dagangan Makanan Disahkan T57",
   "description": "T57 menghubungkan petani, pemproses, pedagang, pembeli, pembiaya, penyedia perkhidmatan dan pengawal selia dalam satu rekod dagangan makanan yang disahkan."
  },
+ "markets": {
+  "route": "/ms/markets",
+  "section": "markets",
+  "name": "Pasaran",
+  "h1": "Lima pasaran pengasas. Satu rangkaian yang disahkan.",
+  "answer": "Berdagang merentas lima pasaran pengasas dalam satu rangkaian yang disahkan.",
+  "faqs": [
+   {
+    "q": "Di negara manakah T57 beroperasi?",
+    "a": "Arab Saudi, UAE, India, Malaysia dan Türkiye. Lebih banyak pasaran akan menyusul."
+   },
+   {
+    "q": "Bolehkah saya berdagang dengan negara yang bukan pasaran T57?",
+    "a": "Ahli di pasaran pengasas boleh membeli daripada atau menjual kepada ahli yang disahkan di pasaran pengasas yang lain."
+   },
+   {
+    "q": "Adakah T57 menyokong perdagangan domestik, atau eksport sahaja?",
+    "a": "Kedua-duanya. Dagangan B2B domestik dan perdagangan rentas sempadan berjalan dalam platform yang sama."
+   }
+  ],
+  "title": "Pasaran | Arab Saudi, UAE, India, Malaysia, Türkiye | T57",
+  "description": "Satu rangkaian perdagangan makanan yang disahkan merentas lima pasaran pengasas, untuk borong domestik dan perdagangan rentas sempadan, dengan pasukan dan rakan kongsi tempatan."
+ },
+ "markets-global": {
+  "route": "/ms/markets/global-rollout",
+  "section": "markets",
+  "name": "Pelancaran Global",
+  "h1": "Lima pasaran didahulukan. Terbuka kepada dunia.",
+  "answer": "T57 bermula dengan pasukan di lapangan di lima pasaran pengasas, terbuka dalam talian kepada perniagaan yang disahkan di 195 negara, dan membuka pasaran baharu fasa demi fasa, dengan rakan kongsi negara di tempat yang belum ada pejabat.",
+  "faqs": [
+   {
+    "q": "Adakah T57 hanya untuk lima pasaran pengasas?",
+    "a": "Tidak. Lima pasaran pengasas mempunyai pasukan negara di lapangan, tetapi T57 terbuka dalam talian kepada perniagaan yang disahkan di 195 negara, dan pasaran baharu dibuka fasa demi fasa."
+   },
+   {
+    "q": "Bolehkah saya menyertai jika negara saya belum menjadi pasaran T57?",
+    "a": "Boleh. Mohon dalam talian dan lengkapkan semakan KYB dan KYC digital serta saringan pematuhan. Sesetengah perkhidmatan tempatan, seperti penghantaran atau terma bayar kemudian, bergantung pada liputan rakan kongsi di negara anda."
+   },
+   {
+    "q": "Apa yang berubah apabila T57 membuka sesebuah pasaran?",
+    "a": "Pasukan tempatan atau rakan kongsi negara, sokongan dalam bahasa tempatan, rakan kongsi logistik, pemeriksaan dan pembiayaan tempatan, serta panduan tentang peraturan makanan negara tersebut."
+   },
+   {
+    "q": "Bagaimanakah T57 memilih pasaran seterusnya?",
+    "a": "Berdasarkan koridor dagangan yang mempunyai penawaran dan permintaan sebenar, kesediaan rakan kongsi tempatan, pendapat undang-undang dan permintaan ahli. Sesuatu fasa hanya dibuka apabila semua ini tersedia."
+   },
+   {
+    "q": "Adakah tarikhnya tetap?",
+    "a": "Tidak. Ia ialah sasaran daripada pelan pelancaran T57, dan setiap fasa dibuka apabila sudah bersedia."
+   },
+   {
+    "q": "Apakah rakan kongsi negara T57?",
+    "a": "Perniagaan tempatan berlesen yang mengendalikan T57 di negara atau bandarnya, seperti francais. Lihat halaman Rakan Kongsi Negara untuk memohon."
+   }
+  ],
+  "title": "Pelancaran Global | Daripada 5 Pasaran kepada 101, Terbuka ke Seluruh Dunia | T57",
+  "description": "T57 bermula dengan pasukan di lima pasaran pengasas, terbuka dalam talian di 195 negara, dan membuka pasaran baharu secara berfasa, bersama rakan kongsi negara.",
+  "parent": "markets"
+ },
+ "markets-oic": {
+  "route": "/ms/markets/oic-halal",
+  "section": "markets",
+  "name": "Negara OIC & Perdagangan Halal",
+  "h1": "Perdagangan halal merentas OIC, disahkan dari hujung ke hujung.",
+  "answer": "Hubungkan pengeluar dan pembeli makanan halal merentas OIC dalam satu rangkaian yang dipercayai.",
+  "faqs": [
+   {
+    "q": "Adakah T57 mengeluarkan sijil halal?",
+    "a": "Tidak. Sijil halal dikeluarkan oleh badan halal yang bertauliah. T57 merekodkannya, menjejaki tarikh luput dan menunjukkannya kepada pembeli."
+   },
+   {
+    "q": "Negara OIC manakah yang boleh menggunakan T57?",
+    "a": "Pasaran pengasas T57 termasuk Arab Saudi, UAE, Malaysia dan Türkiye, semuanya anggota OIC, serta India, pembekal utama kepada pasaran OIC. Lebih banyak negara OIC akan menyusul."
+   },
+   {
+    "q": "Adakah pembiayaan perdagangan Islam tersedia?",
+    "a": "T57 menghubungkan ahli dengan rakan kongsi berlesen, termasuk yang menawarkan pembiayaan patuh Syariah di mana tersedia."
+   }
+  ],
+  "title": "Perdagangan Makanan OIC & Halal | Pembekal Halal yang Disahkan | T57",
+  "description": "Temui pembekal dan pembeli makanan halal yang disahkan merentas negara OIC, dengan sijil direkodkan, dokumen dalam satu rekod dan pembiayaan melalui rakan kongsi berlesen.",
+  "parent": "markets"
+ },
+ "markets-asean": {
+  "route": "/ms/markets/asean",
+  "section": "markets",
+  "name": "Pasaran ASEAN",
+  "h1": "Makanan Asia Tenggara, ke Teluk dan India.",
+  "answer": "Hubungkan pengeluar makanan Asia Tenggara dengan pembeli di seluruh Asia dan Teluk.",
+  "faqs": [
+   {
+    "q": "Negara ASEAN manakah yang boleh menggunakan T57?",
+    "a": "Malaysia ialah pasaran pengasas. Negara ASEAN lain akan menyusul."
+   },
+   {
+    "q": "Bolehkah pengeluar ASEAN menjual di dalam ASEAN?",
+    "a": "Boleh. Borong domestik tersedia di Malaysia, dan perdagangan rentas sempadan berkembang apabila lebih banyak pasaran ASEAN menyertai."
+   },
+   {
+    "q": "Apakah kaitan T57 dengan DEFA?",
+    "a": "T57 ialah platform bebas. Rekod digital dan perkongsian data berasaskan persetujuannya direka untuk selaras dengan peraturan perdagangan digital serantau seperti DEFA, sebaik ia berkuat kuasa."
+   }
+  ],
+  "title": "Perdagangan Makanan ASEAN | Pengeksport dan Pembeli yang Disahkan | T57",
+  "description": "Hubungkan pengeluar makanan ASEAN dengan pembeli yang disahkan di Teluk, India dan Türkiye, dengan dokumen digital, rekod halal dan pembiayaan perdagangan melalui rakan kongsi.",
+  "parent": "markets"
+ },
+ "mkt-my-overview": {
+  "route": "/ms/markets/malaysia/overview",
+  "section": "markets",
+  "name": "Malaysia: Gambaran Keseluruhan Pasaran",
+  "h1": "Makanan halal Malaysia, kepada pembeli di tiga rantau.",
+  "answer": "Bawa makanan halal Malaysia kepada pembeli yang disahkan di Teluk, India dan ASEAN.",
+  "faqs": [
+   {
+    "q": "Adakah T57 mengiktiraf pensijilan JAKIM?",
+    "a": "T57 merekodkan sijil halal daripada JAKIM dan badan lain, serta menunjukkan kepada pembeli sama ada sesuatu sijil diiktiraf di pasaran mereka."
+   },
+   {
+    "q": "Adakah pembiayaan perdagangan Islam tersedia?",
+    "a": "Ya, melalui rakan kongsi berlesen, di mana tersedia."
+   },
+   {
+    "q": "Adakah T57 tersedia dalam Bahasa Melayu?",
+    "a": "Ya. Laman ini tersedia dalam Bahasa Melayu, dan pasukan kami menyokong anda dalam Bahasa Melayu dan Bahasa Inggeris."
+   }
+  ],
+  "title": "T57 di Malaysia | Rangkaian Perdagangan Makanan Halal yang Disahkan",
+  "description": "Bawa makanan halal Malaysia kepada pembeli yang disahkan di Teluk, India dan ASEAN, dengan sijil halal direkodkan dan pembiayaan melalui rakan kongsi berlesen.",
+  "parent": "markets"
+ },
+ "mkt-my-features": {
+  "route": "/ms/markets/malaysia/features",
+  "section": "markets",
+  "name": "Malaysia: Ciri Yang Tersedia",
+  "h1": "Setiap keupayaan T57, di Malaysia.",
+  "answer": "Segala yang anda perlukan untuk berdagang makanan di Malaysia, di satu tempat.",
+  "faqs": [
+   {
+    "q": "Adakah semua ciri tersedia di setiap pasaran?",
+    "a": "Ya. Rakan kongsi yang menyampaikan perkhidmatan terkawal berbeza mengikut negara."
+   },
+   {
+    "q": "Bolehkah saya membayar dalam MYR?",
+    "a": "Boleh, melalui rakan kongsi pembayaran dan eskrow berlesen."
+   },
+   {
+    "q": "Siapa yang menyediakan pembiayaan di Malaysia?",
+    "a": "Bank berlesen di Malaysia, termasuk bank Islam. T57 tidak memberi pinjaman."
+   }
+  ],
+  "title": "Ciri T57 di Malaysia | Dagangan, Pembiayaan, Logistik",
+  "description": "Keahlian yang disahkan, pelaksanaan dagangan, pembiayaan, eskrow, insurans, logistik dan risikan AI untuk perniagaan makanan di Malaysia.",
+  "parent": "mkt-my-overview"
+ },
+ "mkt-my-compliance": {
+  "route": "/ms/markets/malaysia/compliance",
+  "section": "markets",
+  "name": "Malaysia: Panduan Peraturan",
+  "h1": "Fahami peraturan makanan Malaysia sebelum anda menghantar.",
+  "answer": "Fahami peraturan perdagangan makanan di Malaysia sebelum anda menghantar.",
+  "faqs": [
+   {
+    "q": "Adakah panduan ini nasihat undang-undang?",
+    "a": "Tidak. Ia ringkasan untuk membantu anda bersedia. Sentiasa sahkan keperluan dengan pihak berkuasa berkaitan atau ejen kastam anda."
+   },
+   {
+    "q": "Berapa kerap panduan ini dikemas kini?",
+    "a": "T57 menyemaknya secara berkala."
+   },
+   {
+    "q": "Bolehkah T57 menguruskan pelepasan kastam untuk saya?",
+    "a": "T57 menghubungkan anda dengan ejen kastam berlesen, yang menguruskan pelepasan dalam rekod dagangan dikongsi."
+   }
+  ],
+  "title": "Peraturan Perdagangan Makanan di Malaysia | Panduan Peraturan T57",
+  "description": "Badan, dokumen dan peraturan utama bagi perdagangan makanan di Malaysia: keselamatan makanan KKM, MAQIS, halal JAKIM, kastam, e-invois dan PDPA.",
+  "parent": "mkt-my-overview"
+ },
+ "mkt-my-start": {
+  "route": "/ms/markets/malaysia/getting-started",
+  "section": "markets",
+  "name": "Malaysia: Langkah Permulaan",
+  "h1": "Dagangan pertama anda di Malaysia, dalam empat langkah.",
+  "answer": "Mula berdagang di T57 di Malaysia dalam empat langkah.",
+  "faqs": [
+   {
+    "q": "Berapa lama sebelum saya boleh berdagang?",
+    "a": "Sebaik sahaja pengesahan selesai."
+   },
+   {
+    "q": "Adakah sebarang kos untuk menyertai?",
+    "a": "Lihat halaman Harga untuk pilihan keahlian."
+   },
+   {
+    "q": "Bolehkah seseorang membantu saya dalam Bahasa Melayu?",
+    "a": "Boleh. Pasukan Malaysia kami menyokong ahli dalam Bahasa Melayu dan Bahasa Inggeris."
+   }
+  ],
+  "title": "Mula Bersama T57 di Malaysia",
+  "description": "Sertai T57 di Malaysia dalam empat langkah: mohon, dapatkan pengesahan, sediakan akaun dan berdagang, dengan bantuan pasukan tempatan kami.",
+  "parent": "mkt-my-overview"
+ },
  "governments": {
   "route": "/ms/who-we-serve/governments",
   "section": "who-we-serve",
