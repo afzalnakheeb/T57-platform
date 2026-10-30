@@ -25,6 +25,15 @@ def ledger(m):
     return '<figure class="ledger">\n' + s + '</figure>'
 worlds = re.sub(r'\{\{LEDGER:([^}#]*)(?:#([^}]*))?\}\}', ledger, open(f'{D}/worlds.html').read()) + investors.articles() + blog.articles() + legal.articles()
 worlds = photos.apply(worlds)
+# The homepage partner strip scrolls through every partner on the /partnerships wall, so a logo added there shows here too.
+def partner_strip():
+    items = re.findall(r'<li(?: class="([^"]*)")?>(.*?)</li>', re.search(r'<ul class="pwall"[^>]*>(.*?)</ul>', worlds, re.S).group(1))
+    li = lambda c, x: f'<li class="lm-tx">{x}</li>' if 'pw-tx' in c else f'<li>{x}</li>'
+    run = ''.join(li(c, x) for c, x in items)
+    copy = re.sub(r' alt="[^"]*"', ' alt=""', run)
+    return (f'<div class="logo-marquee" role="region" aria-label="Partners" dir="ltr"><div class="lm-track">'
+            f'<ul class="lm-run">{run}</ul><ul class="lm-run" aria-hidden="true">{copy}</ul></div></div>')
+worlds = worlds.replace('{{PARTNER_STRIP}}', partner_strip())
 # Leadership cards: a LinkedIn link for each person whose profile is confirmed, and a personal website where there is one.
 LINKS = json.load(open(f'{D}/people-links.json'))
 def plinks(m):
