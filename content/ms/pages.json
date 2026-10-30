@@ -29,5 +29,324 @@
   ],
   "title": "T57 | Infrastruktur Perdagangan Digital Berteraskan AI untuk Makanan",
   "description": "Perdagangan makanan yang disahkan dalam satu rekod: RFQ, kontrak, pembiayaan perdagangan, insurans, pemeriksaan dan logistik untuk petani, pemproses, pedagang dan pembeli."
+ },
+ "who-we-serve": {
+  "route": "/ms/who-we-serve",
+  "section": "who-we-serve",
+  "name": "Siapa Yang Kami Bantu",
+  "h1": "Menghimpunkan setiap pihak dalam rantaian makanan ke dalam satu kelab dagangan yang disahkan.",
+  "answer": "T57 wujud untuk menghubungkan semua yang menanam, menghasilkan, membeli, membiayai dan mengawal selia makanan dalam satu rekod yang dipercayai.",
+  "faqs": [
+   {
+    "q": "Siapa yang boleh menyertai T57?",
+    "a": "Mana-mana perniagaan atau institusi dalam rantaian makanan boleh memohon, daripada petani dan nelayan hingga pemproses, jenama, pedagang, pengimport, pasar raya, pembeli HoReCa, pemberi pinjaman, syarikat insurans, penyedia perkhidmatan dan agensi kerajaan."
+   },
+   {
+    "q": "Mengapa T57 mengesahkan setiap ahli?",
+    "a": "Pengesahan membolehkan setiap ahli berdagang dengan yakin. Ia juga memberi pemberi pinjaman dan syarikat insurans maklumat yang boleh dipercayai untuk menyokong sesuatu dagangan."
+   },
+   {
+    "q": "Bolehkah individu menyertai T57?",
+    "a": "T57 dibina untuk perniagaan dan institusi berdaftar. Petani individu boleh menyertai melalui koperasi atau pertubuhan peladang."
+   }
+  ],
+  "title": "Siapa Yang Kami Bantu | Kelab Dagangan Makanan Disahkan T57",
+  "description": "T57 menghubungkan petani, pemproses, pedagang, pembeli, pembiaya, penyedia perkhidmatan dan pengawal selia dalam satu rekod dagangan makanan yang disahkan."
+ },
+ "governments": {
+  "route": "/ms/who-we-serve/governments",
+  "section": "who-we-serve",
+  "name": "Kerajaan dan Pengawal Selia",
+  "h1": "Lihat bekalan makanan anda. Bertindak sebelum berlaku kekurangan.",
+  "answer": "Data dagangan masa nyata, amaran sekuriti makanan dan tender yang telus, dalam satu paparan untuk kementerian dan agensi.",
+  "faqs": [
+   {
+    "q": "Bagaimanakah T57 menyokong strategi sekuriti makanan nasional dan serantau secara praktikal?",
+    "a": "Banyak negara kini memperluas rizab strategik dan kapasiti silo untuk menyimpan bekalan komoditi penting bagi tempoh beberapa bulan. T57 melengkapi infrastruktur fizikal ini dengan menjejaki tahap sara diri, paras stok dan pendedahan import secara masa nyata. Gabungan rizab fizikal dan risikan digital ini membantu kerajaan beralih daripada pengurusan sekuriti makanan yang reaktif kepada yang bersifat jangkaan."
+   },
+   {
+    "q": "Mengapa penting untuk menyalurkan modal swasta dan modal impak ke dalam sektor pertanian dan sistem makanan, selain bajet awam?",
+    "a": "Walaupun pertanian sejak sekian lama penting bagi peluang pekerjaan dan sekuriti makanan, pelabur global baru kini mencari laluan yang kukuh dan boleh diukur untuk menyokong sistem makanan sebagai sebahagian daripada komitmen iklim dan SDG mereka. T57 membantu kerajaan menampilkan peluang yang berdaya laburan dan berasaskan data, daripada pusat sokongan model hingga zon pertanian khas dan program CSR, dengan penjejakan prestasi dan impak yang telus untuk memenuhi jangkaan pengawal selia dan pelabur."
+   }
+  ],
+  "title": "T57 untuk Kerajaan | Sekuriti Makanan & Perolehan Bersih",
+  "description": "T57 memberi kerajaan dan pengawal selia risikan sekuriti makanan masa nyata dan perolehan yang telus dalam satu platform, untuk mengurangkan pembaziran dan menstabilkan harga.",
+  "parent": "who-we-serve"
+ },
+ "financiers": {
+  "route": "/ms/who-we-serve/financiers",
+  "section": "who-we-serve",
+  "name": "Pembiaya dan Pelabur",
+  "h1": "Biayai dagangan makanan yang disahkan, dengan risiko yang lebih rendah.",
+  "answer": "Setiap urus niaga disertakan pihak, dokumen dan data penghantaran yang disahkan, dari perjanjian hingga penyelesaian.",
+  "faqs": [
+   {
+    "q": "Bagaimanakah T57 mengendalikan pertikaian dan mengurangkan risiko bagi pembiaya dan pelabur?",
+    "a": "T57 mengurangkan risiko melalui model keahlian kelab yang dikurasi, memastikan pihak berurus niaga yang ditapis dan berwibawa dalam persekitaran yang tinggi kepercayaannya. Meja dagangan mayanya menyokong pelaksanaan, mengurus pertikaian, menyelia dokumentasi dan memastikan setiap transaksi disusuli dengan konsisten demi keyakinan pelabur."
+   },
+   {
+    "q": "Mengapa pembiayaan makanan dan pertanian menjadi peluang penting bagi pelabur sekarang?",
+    "a": "Permintaan import makanan global kekal sangat besar: FAO menganggarkan bil import makanan global sebanyak US$2.22 trilion pada 2025, menunjukkan betapa besar dan berterusannya keperluan pembiayaan berkaitan perdagangan dalam pasaran makanan."
+   },
+   {
+    "q": "Adakah pembiayaan perdagangan secara amnya dianggap berisiko lebih rendah berbanding bentuk pendedahan kredit lain?",
+    "a": "Ya. ICC Trade Register menunjukkan bahawa produk pembiayaan perdagangan, rantaian bekalan dan eksport terus mempamerkan profil risiko rendah dan prestasi gagal bayar yang berdaya tahan walaupun dalam keadaan pasaran yang mencabar."
+   },
+   {
+    "q": "Mengapa pembiaya memerlukan alat usaha wajar dan pemantauan yang lebih kukuh dalam pasaran pertanian?",
+    "a": "Transaksi makanan dan pertanian sering melibatkan rantaian bekalan yang berpecah-pecah, pihak berurus niaga rentas sempadan, serta ketidaktentuan iklim atau logistik, menjadikan keterlihatan dan pengesahan sangat bernilai. Dana Antarabangsa bagi Pembangunan Pertanian (IFAD) menyatakan bahawa pengeluar kecil masih kurang mendapat pembiayaan, menunjukkan keperluan pembiayaan yang besar tidak dipenuhi kerana jurang risiko menghalang modal."
+   }
+  ],
+  "title": "T57 untuk Pembiaya | Peluang Makanan & Pertanian yang Ditapis",
+  "description": "Salurkan modal ke dalam dagangan makanan dan pertanian yang dikurasi dan bersandarkan kontrak, dengan usaha wajar yang lebih pantas, keterlihatan transaksi penuh dan risiko pihak berurus niaga yang lebih terkawal.",
+  "parent": "who-we-serve"
+ },
+ "sellers": {
+  "route": "/ms/who-we-serve/sellers",
+  "section": "who-we-serve",
+  "name": "Penjual dan Pengeksport",
+  "h1": "Jual kepada pembeli yang disahkan, dan terima bayaran dengan selamat.",
+  "answer": "Cari pembeli, capai persetujuan terma dan terima bayaran, dengan pembiayaan dan logistik dalam satu platform.",
+  "faqs": [
+   {
+    "q": "Bagaimanakah meja dagangan maya T57 membantu dalam pertikaian dan pengurusan risiko?",
+    "a": "Meja dagangan maya berperanan sebagai pengurus risiko. Jika berlaku pertikaian, meja ini akan campur tangan untuk menjadi pengantara, menguatkuasakan terma yang dipersetujui dan melindungi kepentingan penjual. Jika pembeli menjadi tidak solven atau gagal membayar, T57 beralih kepada pendekatan pemulihan dan penjualan semula berasaskan komisen, membantu mengalihkan barangan atau mendapatkan semula nilainya."
+   },
+   {
+    "q": "Bagaimanakah platform membantu merapatkan jurang pembiayaan?",
+    "a": "Platform dagangan khusus yang menyediakan data transaksi dan pematuhan yang lengkap dapat mengurangkan tanggapan risiko pembiaya, meningkatkan akses kepada kredit dan mengurangkan kos modal. T57 direka untuk mendedahkan data ini secara boleh diaudit supaya pembiaya dapat menilai urus niaga anda dengan lebih yakin."
+   },
+   {
+    "q": "Mengapa dokumentasi dan pensijilan menjadi isu besar dalam eksport makanan?",
+    "a": "Eksport makanan tertakluk kepada rejim pemeriksaan dan pensijilan yang ketat di negara pengimport. Pensijilan yang tidak lengkap atau salah boleh menyebabkan penolakan atau ketidakpatuhan di sempadan. Sistem yang memusatkan dokumen, memautkannya kepada lot dan penghantaran, serta mengesahkan pensijilan dapat mengurangkan risiko penolakan dan kelewatan yang mahal."
+   },
+   {
+    "q": "Bolehkah risikan yang lebih baik benar-benar membantu dalam pasaran eksport yang tidak menentu?",
+    "a": "Harga pertanian kekal terdedah kepada cuaca ekstrem, perubahan dasar biobahan api dan halangan perdagangan yang semakin meningkat. Pengeksport yang menggunakan risikan pasaran, tanaman dan harga yang berstruktur lebih mampu menyesuaikan sumber bekalan dan harga untuk melindungi margin."
+   }
+  ],
+  "title": "T57 untuk Penjual & Pengeksport | Platform Eksport Pertanian yang Dipercayai",
+  "description": "T57 membantu pengeksport makanan dan pertanian mencari pembeli yang disahkan, mengurus dokumen, menerima bayaran dengan selamat dan berkembang dengan risikan pasaran masa nyata.",
+  "parent": "who-we-serve"
+ },
+ "traders": {
+  "route": "/ms/who-we-serve/traders",
+  "section": "who-we-serve",
+  "name": "Pedagang dan Pengagregat",
+  "h1": "Dagangkan jumlah yang lebih besar, dengan risiko yang lebih rendah.",
+  "answer": "Padankan penawaran dan permintaan dengan lebih pantas, bersama rakan kongsi yang disahkan, harga semasa dan pembiayaan bagi setiap urus niaga.",
+  "faqs": [
+   {
+    "q": "Bolehkah orang tengah menyertai T57?",
+    "a": "Boleh. Pedagang dan orang tengah dialu-alukan. Mereka dilabel mengikut peranan supaya setiap pihak berurus niaga tahu bagaimana dagangan distrukturkan."
+   },
+   {
+    "q": "Adakah T57 memberi pinjaman kepada pedagang?",
+    "a": "Tidak. T57 tidak memberi pinjaman. Ia menghantar fail urus niaga anda kepada pemberi pinjaman berlesen, yang memutuskan sama ada untuk membiayai dagangan itu dan atas terma apa."
+   },
+   {
+    "q": "Bagaimanakah kontrak sandar-menyandar berfungsi di T57?",
+    "a": "Sebut harga pembekal yang diterima dan pesanan pembeli yang diterima masing-masing menjana kontrak, dan kedua-duanya berada dalam rekod dagangan yang sama supaya terma kekal konsisten."
+   },
+   {
+    "q": "Apa yang ditunjukkan oleh rekod prestasi?",
+    "a": "Dagangan anda yang telah selesai, status pengesahan dan peranan, supaya pihak berurus niaga dan pemberi pinjaman baharu dapat melihat sejarah anda sebelum berurusan."
+   }
+  ],
+  "title": "T57 untuk Pedagang & Pengagregat | Biayai dan Laksanakan Urus Niaga",
+  "description": "Pembekal dan pembeli yang disahkan, kontrak sandar-menyandar dan pembiayaan daripada pemberi pinjaman yang bersaing, semuanya dalam satu rekod dagangan makanan.",
+  "parent": "who-we-serve"
+ },
+ "buyers": {
+  "route": "/ms/who-we-serve/buyers",
+  "section": "who-we-serve",
+  "name": "Pembeli dan Pengimport",
+  "h1": "Dapatkan bekalan makanan daripada pembekal yang boleh anda percayai.",
+  "answer": "Bandingkan pembekal yang disahkan, jejaki setiap penghantaran dan bayar hanya apabila terma dipenuhi.",
+  "faqs": [
+   {
+    "q": "Bagaimanakah T57 mengesahkan pembekal?",
+    "a": "T57 menjalankan semakan perniagaan dan identiti, saringan pematuhan dan, jika perlu, pemeriksaan fizikal di premis pembekal. Setiap pembekal yang disahkan menerima Pasport T57 dan label peranan."
+   },
+   {
+    "q": "Bolehkah saya membeli hanya daripada pengeluar?",
+    "a": "Boleh. Label peranan menunjukkan sama ada pembekal itu pemilik-pengeluar, pemproses, pedagang atau orang tengah, jadi anda boleh menapis untuk pengeluar sahaja."
+   },
+   {
+    "q": "Adakah T57 memegang bayaran saya?",
+    "a": "Tidak. T57 tidak memegang dana pelanggan. Eskrow dan surat kredit disediakan oleh rakan kongsi berlesen."
+   },
+   {
+    "q": "Bolehkah saya membeli secara tempatan selain mengimport?",
+    "a": "Boleh. T57 menyokong urusan borong domestik untuk pasar raya, HoReCa dan institusi selain perdagangan rentas sempadan. Lihat dagangan B2B domestik ."
+   }
+  ],
+  "title": "T57 untuk Pembeli & Pengimport | Dapatkan Bekalan daripada Pembekal Disahkan",
+  "description": "Dapatkan bekalan makanan daripada pengeluar dan pemproses yang disahkan. RFQ, kontrak, eskrow, surat kredit, pemeriksaan dan logistik dalam satu rekod dagangan.",
+  "parent": "who-we-serve"
+ },
+ "enterprises": {
+  "route": "/ms/who-we-serve/enterprises",
+  "section": "who-we-serve",
+  "name": "Pengilang dan Perusahaan",
+  "h1": "Pastikan bekalan. Lindungi margin anda.",
+  "answer": "Dapatkan bekalan daripada pengeluar yang disahkan, kesan pergerakan harga lebih awal dan uruskan setiap kontrak di satu tempat.",
+  "faqs": [
+   {
+    "q": "Mengapa pengilang dan perusahaan memerlukan aliran kerja dagangan digital sekarang?",
+    "a": "Aliran kerja dagangan digital penting untuk menangani kerugian yang tinggi, ketidaktentuan dan geseran operasi dalam industri ini. FAO melaporkan 13.3% kehilangan makanan sebelum peringkat runcit, manakala Bank Dunia menunjukkan inflasi makanan yang berterusan dan pergerakan komoditi yang tidak sekata merentas pasaran."
+   },
+   {
+    "q": "Bagaimanakah T57 membantu mengurangkan risiko perolehan?",
+    "a": "T57 membantu menstruktur RFQ, memusatkan keterlihatan bidaan dan menyokong dagangan dalam persekitaran pihak berurus niaga yang lebih disahkan. Dalam pasaran yang tidak menentu, keputusan sumber bekalan yang lebih pantas dan dokumentasi yang lebih baik dapat membantu melindungi kesinambungan bekalan dan margin."
+   },
+   {
+    "q": "Mengapa kepantasan penyelesaian begitu penting dalam perdagangan makanan dan pertanian?",
+    "a": "Penyelesaian yang tertangguh boleh melambatkan penghantaran, mengikat modal kerja dan menjejaskan keyakinan dalam hubungan dagangan. Platform digital yang mempercepat penyelesaian meningkatkan akses pasaran dan kecekapan perniagaan."
+   },
+   {
+    "q": "Bolehkah T57 menyokong tadbir urus, kesediaan audit dan pematuhan?",
+    "a": "Boleh. T57 direka untuk menghubungkan dokumen, peringkat, pihak berurus niaga dan rekod pembayaran dalam satu aliran kerja yang boleh dijejaki. Ini memudahkan pasukan perusahaan menyokong kawalan dalaman, semakan dan keperluan audit merentas operasi dagangan yang kompleks."
+   }
+  ],
+  "title": "T57 untuk Pengilang & Perusahaan | Perdagangan Makanan Lebih Pantas",
+  "description": "T57 membantu pengilang dan perusahaan makanan mendigitalkan sumber bekalan, RFQ, pembayaran, pembiayaan perdagangan dan jejak audit dalam satu platform yang selamat.",
+  "parent": "who-we-serve"
+ },
+ "food-processors": {
+  "route": "/ms/who-we-serve/food-processors",
+  "section": "who-we-serve",
+  "name": "Pemproses Makanan",
+  "h1": "Pastikan kilang anda beroperasi pada kapasiti penuh.",
+  "answer": "Bekalan bahan mentah yang stabil daripada ladang yang disahkan, dengan semakan kualiti dan pembiayaan sedia terbina.",
+  "faqs": [
+   {
+    "q": "Mengapa pendigitalan dagangan amat penting bagi pemproses makanan?",
+    "a": "Pemproses bergantung pada bekalan bahan mentah yang tepat pada masanya dan boleh dijangka, serta beroperasi dengan margin yang tipis. Platform jaminan bekalan dan pelaksanaan dagangan menjadikan input lebih boleh dijangka, mengoptimumkan penggunaan kapasiti dan melindungi margin dalam pasaran yang tidak menentu."
+   },
+   {
+    "q": "Adakah T57 membantu menangani cabaran modal kerja dan pembiayaan?",
+    "a": "Bank rakan kongsi, struktur eskrow, aliran kerja eLC yang lebih pantas dan keupayaan dagangan bertoken direka untuk memendekkan kitaran penyelesaian dan menghubungkan dagangan sebenar dengan penyelesaian pembiayaan yang inovatif. Bagi pemproses, ini boleh bermakna kurang tunai tersekat dalam perjalanan dan lebih ruang untuk melabur dalam inventori, penyelenggaraan atau pertumbuhan."
+   },
+   {
+    "q": "Bagaimanakah T57 membantu mengurangkan risiko bekalan dan kehilangan?",
+    "a": "T57 menyokong sumber bekalan yang lebih boleh diharap dengan menstruktur RFQ, bekerjasama dengan pihak yang telah ditapis dan mewujudkan keterlihatan yang lebih baik merentas urus niaga."
+   },
+   {
+    "q": "Bolehkah T57 menyokong keperluan pematuhan dan audit bagi kilang pemprosesan?",
+    "a": "Boleh. T57 memastikan data dagangan, pembayaran dan dokumentasi kekal terhubung dalam satu jejak audit, menyokong kawalan dalaman dan audit luaran. Ini membantu pemproses memenuhi keperluan dokumentasi pengawal selia dan rangka kerja pematuhan kewangan."
+   }
+  ],
+  "title": "T57 untuk Pemproses Makanan | Jaminan Bekalan & Pelaksanaan Dagangan",
+  "description": "T57 membantu pemproses makanan mendigitalkan sumber bekalan, RFQ, pembayaran, pembiayaan dan dokumen dalam satu platform, untuk input yang lebih stabil dan kitaran tunai yang lebih pantas.",
+  "parent": "who-we-serve"
+ },
+ "cooperatives": {
+  "route": "/ms/who-we-serve/cooperatives",
+  "section": "who-we-serve",
+  "name": "Koperasi dan Pertubuhan Peladang",
+  "h1": "Jadikan hasil tuaian ahli anda kuasa di pasaran.",
+  "answer": "Himpunkan hasil, capai pembeli yang lebih besar dan bayar ahli dengan lebih cepat, dengan setiap dagangan direkodkan.",
+  "faqs": [
+   {
+    "q": "Mengapa koperasi & pertubuhan peladang memerlukan platform digital seperti T57?",
+    "a": "Skala sahaja tidak mencukupi. Koperasi dan pertubuhan peladang memerlukan sistem yang memprofesionalkan operasi, meningkatkan akses pasaran dan mengukuhkan kuasa tawar-menawar. Apabila disokong dan disusun dengan baik oleh platform seperti T57, koperasi pertanian memainkan peranan penting dalam sistem agromakanan yang mampan dan sekuriti makanan."
+   },
+   {
+    "q": "Bagaimanakah ahli mendapat manfaat apabila koperasi atau pertubuhan peladang mereka memenangi tender kerajaan atau perjanjian pertanian kontrak?",
+    "a": "Tender kerajaan dan perjanjian pertanian kontrak mengunci permintaan dan garis masa, jadi ahli tahu apa yang perlu dihasilkan, bila hasil akan diambil dan atas terma apa, sekali gus membawa harga yang lebih konsisten dan kehilangan lepas tuai yang lebih rendah. T57 membantu ahli merancang jumlah dan campuran tanaman, memadankan bekalan dengan keperluan tender, menyelaraskan logistik dan dokumentasi, serta menjejaki pemenuhan dan pembayaran di satu tempat, menjadikan kemenangan tender dan kontrak manfaat yang dikongsi oleh setiap petani."
+   }
+  ],
+  "title": "T57 untuk Koperasi & Pertubuhan Peladang | Akses Pasaran dan Pembiayaan",
+  "description": "T57 membantu koperasi dan pertubuhan peladang berdagang secara terus, melihat harga semasa, mendapatkan pembiayaan, mengurus logistik dan menjalankan operasi yang boleh diaudit untuk ahli.",
+  "parent": "who-we-serve"
+ },
+ "collaborators": {
+  "route": "/ms/who-we-serve/collaborators",
+  "section": "who-we-serve",
+  "name": "Rakan Kongsi dan Rakan Kerjasama",
+  "h1": "Bina sistem makanan yang lebih kukuh, bersama-sama.",
+  "answer": "Rakan pembangunan, persatuan dan institusi menjangkau seluruh rantaian makanan melalui satu platform.",
+  "faqs": [
+   {
+    "q": "Bagaimanakah rakan kongsi T57 membantu saya mencapai pasaran yang lebih baik?",
+    "a": "Rakan kongsi T57 yang telah ditapis membantu anda memenuhi piawaian, menggerakkan hasil dengan konsisten dan mengakses keupayaan premium untuk berkembang, tanpa perlu membina sendiri hubungan tersebut."
+   },
+   {
+    "q": "Jenis rakan kongsi apa yang boleh saya akses di T57?",
+    "a": "Anda boleh berhubung dengan pelbagai rakan kongsi yang membantu memenuhi keperluan pematuhan yang kompleks, mengurangkan kehilangan logistik, membuka akses kepada pembiayaan dan insurans, mempercepat inovasi, dan menjadikan lebih banyak usaha anda hasil dagangan yang boleh dijangka serta bernilai lebih tinggi."
+   },
+   {
+    "q": "Bagaimanakah T57 memastikan rakan kerjasama boleh dipercayai?",
+    "a": "T57 menggunakan model gaya kelab yang merangkumi usaha wajar, semakan rekod prestasi dan data prestasi berterusan, memastikan peserta ekosistem hanya bekerja dengan rakan kongsi yang disahkan."
+   },
+   {
+    "q": "Mengapa kerajaan dan pengawal selia perlu mengambil berat tentang rangkaian rakan kongsi T57?",
+    "a": "Dengan menyediakan akses kepada rakan kongsi yang dipercayai di sepanjang rantaian nilai, T57 membantu pengguna menyelaraskan matlamat mereka dengan sempadan dasar dan peraturan yang ditetapkan kerajaan."
+   }
+  ],
+  "title": "Rangkaian Rakan Kongsi & Rakan Kerjasama T57 | Ekosistem Makanan & Pertanian",
+  "description": "T57 menghimpunkan ahli agronomi, pembiaya, syarikat logistik, badan pensijilan dan universiti dalam satu platform yang disahkan untuk perdagangan makanan yang lebih pintar dan impak yang lebih besar.",
+  "parent": "who-we-serve"
+ },
+ "service-providers": {
+  "route": "/ms/who-we-serve/service-providers",
+  "section": "who-we-serve",
+  "name": "Penyedia Perkhidmatan",
+  "h1": "Jadikan kepakaran anda sumber kerja yang berterusan.",
+  "answer": "Firma pemeriksaan, logistik, guaman dan khidmat nasihat dipadankan dengan dagangan aktif yang memerlukan mereka.",
+  "faqs": [
+   {
+    "q": "Apakah yang membezakan T57 daripada pasaran dalam talian biasa?",
+    "a": "T57 dibina atas peserta yang disahkan, aliran kerja berkait dagangan dan pelaksanaan yang ditadbir, bukan sekadar penyenaraian dan perkenalan."
+   },
+   {
+    "q": "Bolehkah saya menawarkan perkhidmatan merentas sempadan tanpa pejabat tempatan?",
+    "a": "Boleh. T57 direka untuk membantu penyedia berurusan secara digital merentas wilayah sambil mengurangkan geseran dalam proses penemuan, kontrak dan pembayaran."
+   },
+   {
+    "q": "Bagaimanakah T57 membantu saya membina kepercayaan dengan pelanggan?",
+    "a": "Profil yang disahkan, sejarah perkhidmatan, penarafan dan rekod prestasi membantu pembeli menilai kredibiliti sebelum berurusan."
+   },
+   {
+    "q": "Mengapa penyedia perkhidmatan semakin penting dalam perdagangan makanan?",
+    "a": "Pembeli dan pengawal selia semakin mengharapkan kebolehkesanan, keselamatan makanan, dokumentasi yang boleh diharap dan penyelesaian isu yang lebih pantas di sepanjang rantaian bekalan. Ini menjadikan penyedia perkhidmatan bahagian penting dalam rantaian bekalan."
+   }
+  ],
+  "title": "T57 untuk Penyedia Perkhidmatan | Berkembang dalam Makanan dan Pertanian",
+  "description": "Sertai T57 sebagai penyedia perkhidmatan makanan dan pertanian. Capai permintaan yang disahkan, sampaikan kepakaran yang dipercayai dan berkembang melalui aliran kerja berstruktur yang berisiko lebih rendah.",
+  "parent": "who-we-serve"
+ },
+ "farmers": {
+  "route": "/ms/who-we-serve/farmers",
+  "section": "who-we-serve",
+  "name": "Petani dan Pengeluar",
+  "h1": "Jual hasil tuaian anda pada harga yang adil.",
+  "answer": "Capai pembeli yang disahkan secara terus, lihat harga pasaran dan terima bayaran lebih cepat.",
+  "faqs": [
+   {
+    "q": "Mengapa petani atau pengeluar patut menggunakan platform dagangan digital seperti T57?",
+    "a": "T57 menyediakan akses kepada pembeli yang disahkan dan proses pembayaran yang telus. Ini mengurangkan ketidakpastian dan meningkatkan pendapatan sebenar yang diterima."
+   },
+   {
+    "q": "Apa yang perlu petani beri perhatian dalam pertanian kontrak?",
+    "a": "Perjanjian pertanian kontrak sering dibuat antara pembeli yang lebih kuat dan petani yang lebih lemah. Ini boleh mengakibatkan terma yang tidak adil, kebergantungan berlebihan pada seorang pembeli, atau pertikaian tentang kualiti dan potongan. Petani boleh memanfaatkan kepakaran T57 untuk merundingkan terma terbaik."
+   },
+   {
+    "q": "Bolehkah akses pasaran yang lebih baik benar-benar mengurangkan pembaziran?",
+    "a": "Boleh. Padanan bekalan dengan permintaan yang lebih baik, bersama pelaksanaan dagangan yang lebih teratur, dapat mengurangkan kehilangan antara penuaian dan pasaran."
+   },
+   {
+    "q": "Mengapa pembiayaan menjadi isu besar bagi pengeluar?",
+    "a": "Bank Dunia menyatakan bahawa pembiayaan pertanian masih sangat terhad di banyak pasaran membangun disebabkan risiko, kos transaksi dan kesukaran melayani peminjam luar bandar yang berselerak. Oleh itu, model pembiayaan yang berkait dengan dagangan dan didayakan secara digital amat penting bagi pengeluar yang memerlukan modal kerja berasaskan pesanan sebenar."
+   },
+   {
+    "q": "Adakah risikan harga benar-benar penting di peringkat ladang?",
+    "a": "Ya. Apabila pengeluar tidak dapat melihat permintaan dan harga, mereka berunding dari kedudukan yang lebih lemah dan sering terlalu bergantung pada orang tengah. Model teras T57 menangani perkara ini secara langsung dengan meningkatkan akses kepada risikan pasaran dan harga."
+   }
+  ],
+  "title": "T57 untuk Petani & Pengeluar | Akses Pasaran dan Alat AI",
+  "description": "T57 membantu petani dan pengeluar sampai kepada pembeli yang disahkan, melihat harga pasaran, memeterai kontrak yang selamat, menerima bayaran lebih cepat dan mengakses pembiayaan perdagangan.",
+  "parent": "who-we-serve"
  }
 }
