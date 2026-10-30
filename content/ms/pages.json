@@ -3355,6 +3355,63 @@
   "description": "T57 sedang mengumpul dana pusingan pelancarannya dari Riyadh. Lihat daya tarikan, rakan kongsi dan pasukannya, dan minta pek pelabur sebagai pelabur yang layak.",
   "parent": "about"
  },
+ "blog-future-of-ai-food-trade-t57": {
+  "route": "/ms/resources/blog/future-of-ai-food-trade-t57",
+  "section": "resources",
+  "name": "Mengapa 150 MoU + LoI di Gulfood 2026 Mengubah Matematik Pertumbuhan T57",
+  "h1": "Mengapa 150 MoU + LoI di Gulfood 2026 Mengubah Matematik Pertumbuhan T57",
+  "answer": "Apa makna 150 MoU dan surat hasrat yang dimeterai sebagai permintaan yang sudah layak.",
+  "faqs": [],
+  "title": "Mengapa 150 MoU Gulfood Mengubah Matematik Pertumbuhan T57 | T57",
+  "description": "T57 memperoleh 150 MoU dan LoI di Gulfood 2026, membuktikan permintaan global yang kukuh terhadap infrastruktur perdagangan makanan berkuasa AI sebelum pelancaran.",
+  "post": {
+   "author": "Mohammed Umair",
+   "role": "Chief Sales Officer",
+   "date": "2026-05-12",
+   "topic": "Inside T57",
+   "image": "/blog/future-of-ai-food-trade-t57.jpg",
+   "minutes": 5
+  },
+  "parent": "res-blog"
+ },
+ "blog-food-trade-deals-before-handshake-virtual-trade-infrastructure": {
+  "route": "/ms/resources/blog/food-trade-deals-before-handshake-virtual-trade-infrastructure",
+  "section": "resources",
+  "name": "Apabila Urus Niaga Makanan Berlaku Sebelum Berjabat Tangan",
+  "h1": "Apabila Urus Niaga Makanan Berlaku Sebelum Berjabat Tangan",
+  "answer": "Mengapa penemuan dan kontrak beralih daripada lantai pameran perdagangan ke platform dagangan berteraskan AI.",
+  "faqs": [],
+  "title": "Urus Niaga Makanan Sebelum Berjabat Tangan | T57 Insights",
+  "description": "Ketahui bagaimana AI, KYC/KYB dan pembiayaan terbenam mengubah perdagangan makanan dengan memungkinkan urus niaga yang lebih pantas dan dipercayai, sebelum acara dagangan fizikal bermula.",
+  "post": {
+   "author": "Afzal Hussain Mohammed Nakheeb",
+   "role": "Founder, Chairman & Head of Strategy",
+   "date": "2026-04-20",
+   "topic": "AI and technology",
+   "image": "/blog/food-trade-deals-before-handshake-virtual-trade-infrastructure.jpg",
+   "minutes": 6
+  },
+  "parent": "res-blog"
+ },
+ "blog-gcc-food-security-strategy-hormuz-crisis": {
+  "route": "/ms/resources/blog/gcc-food-security-strategy-hormuz-crisis",
+  "section": "resources",
+  "name": "Daripada 90 Hari kepada 5 Tahun: Bagaimana Teluk Boleh Menukar Krisis Makanan kepada Kelebihan Strategik",
+  "h1": "Daripada 90 Hari kepada 5 Tahun: Bagaimana Teluk Boleh Menukar Krisis Makanan kepada Kelebihan Strategik",
+  "answer": "Tindak balas jangka panjang terhadap kebergantungan makanan Teluk pada Selat Hormuz.",
+  "faqs": [],
+  "title": "Menukar Krisis Makanan Teluk kepada Kelebihan | T57",
+  "description": "Bagaimana GCC boleh menukar krisis bekalan makanan kepada kelebihan jangka panjang: peta hala tuju bagi rantaian bekalan, rizab, pengeluaran dan infrastruktur digital.",
+  "post": {
+   "author": "Afzal Hussain Mohammed Nakheeb",
+   "role": "Founder, Chairman & Head of Strategy",
+   "date": "2026-04-06",
+   "topic": "Food security",
+   "image": "/blog/gcc-food-security-strategy-hormuz-crisis.jpg",
+   "minutes": 6
+  },
+  "parent": "res-blog"
+ },
  "blog-blockchain-food-supply-chain": {
   "route": "/ms/resources/blog/blockchain-food-supply-chain",
   "section": "resources",
@@ -3427,6 +3484,44 @@
    "date": "2026-02-26",
    "topic": "AI and technology",
    "image": "/blog/agriculture-ai-stack.jpg",
+   "minutes": 4
+  },
+  "parent": "res-blog"
+ },
+ "blog-gulfood-2026-farm-to-fork": {
+  "route": "/ms/resources/blog/gulfood-2026-farm-to-fork",
+  "section": "resources",
+  "name": "Dari Ladang ke Meja di Gulfood: Bagaimana AI, Blockchain dan Bakat Manusia Akan Membina Semula Kepercayaan dalam Rantaian Makanan Global",
+  "h1": "Dari Ladang ke Meja di Gulfood: Bagaimana AI, Blockchain dan Bakat Manusia Akan Membina Semula Kepercayaan dalam Rantaian Makanan Global",
+  "answer": "Pengajaran daripada panel Gulfood 2026 tentang kepercayaan dalam rantaian makanan.",
+  "faqs": [],
+  "title": "Dari Ladang ke Meja di Gulfood: AI, Blockchain, Bakat | T57",
+  "description": "Dari Ladang ke Meja di Gulfood: Bagaimana AI, Blockchain dan Bakat Manusia Akan Membina Semula Kepercayaan dalam Rantaian Makanan Global - Renungan dari Gulfood 2026",
+  "post": {
+   "author": "Abdul Bari Kareem",
+   "role": "Co-founder & CTO",
+   "date": "2026-01-29",
+   "topic": "AI and technology",
+   "image": "/blog/gulfood-2026-farm-to-fork.jpg",
+   "minutes": 5
+  },
+  "parent": "res-blog"
+ },
+ "blog-gulfood-2026-ai-powered-food-decisions": {
+  "route": "/ms/resources/blog/gulfood-2026-ai-powered-food-decisions",
+  "section": "resources",
+  "name": "Daripada Data ke Hidangan: Keputusan Makanan Dipacu AI yang Mesti Diperluas",
+  "h1": "Daripada Data ke Hidangan: Keputusan Makanan Dipacu AI yang Mesti Diperluas",
+  "answer": "Perluas keputusan berisiko tinggi dahulu, kemudian AI.",
+  "faqs": [],
+  "title": "Daripada Data ke Hidangan: Keputusan Makanan AI | T57",
+  "description": "Pandangan daripada panel Gulfood 2026 tentang teknologi terobosan dan automasi berkuasa AI sebagai pencipta nilai bagi sistem makanan pintar.",
+  "post": {
+   "author": "Afzal Hussain Mohammed Nakheeb",
+   "role": "Founder, Chairman & Head of Strategy",
+   "date": "2026-01-27",
+   "topic": "AI and technology",
+   "image": "/blog/gulfood-2026-ai-powered-food-decisions.jpg",
    "minutes": 4
   },
   "parent": "res-blog"
