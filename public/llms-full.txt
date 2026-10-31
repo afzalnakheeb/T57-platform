@@ -29,11 +29,11 @@
 
 - [Who We Serve](https://www.t57.ai/who-we-serve): T57 exists to connect everyone who grows, makes, buys, finances and regulates food on one trusted record.
 - [Governments and Regulators](https://www.t57.ai/who-we-serve/governments): Live trade data, food-security alerts and transparent tenders, in one view for ministries and agencies.
-- [Financiers and Investors](https://www.t57.ai/who-we-serve/financiers): Every deal comes with verified parties, documents and shipment data, from deal to settlement.
+- [Banks and Financiers](https://www.t57.ai/who-we-serve/financiers): Every deal comes with verified parties, documents and shipment data, from deal to settlement.
 - [Sellers and Exporters](https://www.t57.ai/who-we-serve/sellers): Find buyers, agree terms and get paid, with finance and logistics on one platform.
 - [Traders and Aggregators](https://www.t57.ai/who-we-serve/traders): Match supply and demand faster, with verified partners, live prices and finance for each deal.
 - [Buyers and Importers](https://www.t57.ai/who-we-serve/buyers): Compare verified suppliers, track every shipment and pay only when terms are met.
-- [Manufacturers and Enterprises](https://www.t57.ai/who-we-serve/enterprises): Source from verified producers, see price moves early and run every contract in one place.
+- [Retail, HoReCa and Enterprise Buyers](https://www.t57.ai/who-we-serve/enterprises): Source from verified producers, see price moves early and run every contract in one place.
 - [Food Processors](https://www.t57.ai/who-we-serve/food-processors): Steady raw materials from verified farms, with quality checks and finance built in.
 - [Cooperatives and FPOs](https://www.t57.ai/who-we-serve/cooperatives): Pool produce, reach bigger buyers and pay members faster, with every trade on record.
 - [Partners and Collaborators](https://www.t57.ai/who-we-serve/collaborators): Development partners, associations and institutions reach the whole food chain through one platform.
@@ -49,7 +49,7 @@
 - [Market & Price Intelligence](https://www.t57.ai/why-t57/market-intelligence): See prices, supply and risk by origin before you quote, buy or plan.
 - [Trade Finance](https://www.t57.ai/why-t57/trade-finance): One verified deal file, several lenders competing to fund your food trade.
 - [Digital Asset-Based Funding](https://www.t57.ai/why-t57/nft-funding): Turn verified trade documents into digital assets that funders can trust and finance.
-- [eLC in 15 Minutes](https://www.t57.ai/why-t57/elc-15-minutes): Electronic letters of credit, issued in about 15 minutes once your application is approved.
+- [eLC in Hours, Not Weeks](https://www.t57.ai/why-t57/elc-15-minutes): Electronic letters of credit, issued within hours once your application is approved.
 - [Escrow Payments](https://www.t57.ai/why-t57/escrow-payments): Your money moves only when the goods do, with escrow released at agreed milestones.
 - [Alternative Payments](https://www.t57.ai/why-t57/alternative-payments): Settle food trades in stablecoins, digital assets or bullion-backed payments, where the law allows.
 - [Digital Bank](https://www.t57.ai/why-t57/digital-bank): Hold, pay and settle in any currency, near-instantly, inside your food trade.
@@ -261,7 +261,7 @@
 - [What kinds of finance can I request?](https://www.t57.ai/why-t57/trade-finance): Pre-shipment and post-shipment finance, receivables finance and letters of credit, through participating banks and finance companies, including Shariah-compliant options.
 - [Is this cryptocurrency?](https://www.t57.ai/why-t57/nft-funding): No. A tokenized trade document is a digital record of a real asset, such as an invoice or warehouse receipt. It is not a currency.
 - [Which documents can be tokenized?](https://www.t57.ai/why-t57/nft-funding): Trade documents on a verified T57 trade record, such as invoices, warehouse receipts and bills of lading, where local law recognizes electronic trade documents.
-- [What does "15 minutes" mean?](https://www.t57.ai/why-t57/elc-15-minutes): It is the target time for a partner bank to issue the electronic LC after your application has been approved. Approval itself follows the bank's own credit process.
+- [What does "hours, not weeks" mean?](https://www.t57.ai/why-t57/elc-15-minutes): It is the target time for a partner bank to issue the electronic LC after your application has been approved. Approval itself follows the bank's own credit process.
 - [Does T57 issue letters of credit?](https://www.t57.ai/why-t57/elc-15-minutes): No. Letters of credit are issued by licensed partner banks. T57 prepares the application from your trade record and connects you to them.
 - [Who holds the money in escrow?](https://www.t57.ai/why-t57/escrow-payments): A licensed escrow partner. T57 does not hold client funds.
 - [What happens if there is a dispute?](https://www.t57.ai/why-t57/escrow-payments): Release pauses automatically, and the dispute is handled under the contract and the partner's rules. Release resumes once it is resolved.
@@ -304,7 +304,7 @@
 - [Is the T57 wallet a bank account?](https://www.t57.ai/capabilities/finance/digital-wallet): It is an e-money or payment account provided by a licensed partner. For full banking services, see Digital Banking.
 - [Can I pay people who are not on T57?](https://www.t57.ai/capabilities/finance/digital-wallet): Yes. You can pay external suppliers and service providers by bank transfer from your wallet, subject to the partner's checks.
 - [What are the fees?](https://www.t57.ai/capabilities/finance/digital-wallet): Fees and exchange rates are set by the payment partner and shown before you confirm each payment.
-- [What does "about 15 minutes" mean?](https://www.t57.ai/capabilities/finance/elc): It is the target time for issuance after the bank has approved your application. Approval follows the bank's normal credit process.
+- [What does "within hours" mean?](https://www.t57.ai/capabilities/finance/elc): It is the target time for issuance after the bank has approved your application. Approval follows the bank's normal credit process.
 - [Can my own bank issue the LC on T57?](https://www.t57.ai/capabilities/finance/elc): If your bank is a T57 partner, yes. If not, T57 can connect you to participating banks.
 - [Are electronic LCs legally valid?](https://www.t57.ai/capabilities/finance/elc): Letters of credit are commonly issued and advised electronically between banks. Electronic presentation of trade documents depends on local law, and T57 supports paper presentation where it is still required.
 - [Can I keep my existing bank?](https://www.t57.ai/capabilities/finance/banking): Yes. You can keep using your own bank and connect it to T57, or use T57's partners alongside it.

@@ -155,9 +155,12 @@ def up(i):
 PARENT = {i: up(i) for i in pages if i != 'home'}
 # Blog articles hang under Blog & Insights for breadcrumbs, but are not pages of the microsite bar or the menu.
 POSTS = set(re.findall(r'<article class="world" id="([a-z0-9-]+)"[^>]*data-kind="post"', worlds))
+# Pages kept live at their address but left out of menus, microsite bars and pagers (Afzal, 31 Oct: no crypto,
+# NFT or "digital bank" promises in navigation).
+UNLISTED = {'nft-funding', 'alternative-payments', 'digital-bank', 'cap-digital-assets'}
 KIDS = {}
 for i, q in PARENT.items():
-    if q and i not in POSTS: KIDS.setdefault(q, []).append(i)
+    if q and i not in POSTS and i not in UNLISTED: KIDS.setdefault(q, []).append(i)
 def short(i, role=''):
     n = re.sub(r'\s+and\s+', ' & ', html.unescape(pages[i]['name']))
     if ': ' in n: n = n.split(': ')[0] if role == 'group' else n.split(': ', 1)[1]

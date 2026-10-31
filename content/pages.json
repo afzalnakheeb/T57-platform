@@ -199,12 +199,12 @@
  "elc-15-minutes": {
   "route": "/why-t57/elc-15-minutes",
   "section": "why-t57",
-  "name": "eLC in 15 Minutes",
+  "name": "eLC in Hours, Not Weeks",
   "h1": "Letters of credit, built from your contract.",
-  "answer": "Electronic letters of credit, issued in about 15 minutes once your application is approved.",
+  "answer": "Electronic letters of credit, issued within hours once your application is approved.",
   "faqs": [
    {
-    "q": "What does \"15 minutes\" mean?",
+    "q": "What does \"hours, not weeks\" mean?",
     "a": "It is the target time for a partner bank to issue the electronic LC after your application has been approved. Approval itself follows the bank's own credit process."
    },
    {
@@ -212,8 +212,8 @@
     "a": "No. Letters of credit are issued by licensed partner banks. T57 prepares the application from your trade record and connects you to them."
    }
   ],
-  "title": "Electronic Letter of Credit in About 15 Minutes | T57",
-  "description": "Electronic LCs built from your verified contract and issued by partner banks in about 15 minutes after approval. Digital documents, fewer discrepancies.",
+  "title": "Electronic Letter of Credit in Hours, Not Weeks | T57",
+  "description": "Electronic LCs built from your verified contract and issued by partner banks within hours of approval. Digital documents, fewer discrepancies.",
   "parent": "why-t57"
  },
  "escrow-payments": {
@@ -567,7 +567,7 @@
   "answer": "Letters of credit built from your contract, issued digitally and presented without paper.",
   "faqs": [
    {
-    "q": "What does \"about 15 minutes\" mean?",
+    "q": "What does \"within hours\" mean?",
     "a": "It is the target time for issuance after the bank has approved your application. Approval follows the bank's normal credit process."
    },
    {
@@ -580,7 +580,7 @@
    }
   ],
   "title": "Electronic Letter of Credit (eLC) for Food Trade | T57",
-  "description": "LCs built from your contract, issued by partner banks in about 15 minutes after approval, with AI discrepancy checks and digital presentation on T57.",
+  "description": "LCs built from your contract, issued by partner banks within hours of approval, with AI discrepancy checks and digital presentation on T57.",
   "parent": "cap-trust-payments"
  },
  "cap-banking": {
@@ -3071,7 +3071,7 @@
  "financiers": {
   "route": "/who-we-serve/financiers",
   "section": "who-we-serve",
-  "name": "Financiers and Investors",
+  "name": "Banks and Financiers",
   "h1": "Finance verified food trade, with less risk.",
   "answer": "Every deal comes with verified parties, documents and shipment data, from deal to settlement.",
   "faqs": [
@@ -3092,8 +3092,8 @@
     "a": "Food and agri transactions often involve fragmented supply chains, cross-border counterparties, and climate or logistics volatility, which makes visibility and verification especially valuable. The International Fund for Agricultural Development (IFAD) notes that small-scale producers remain underserved by finance, highlighting that large financing needs go unmet because risk gaps discourage capital."
    }
   ],
-  "title": "T57 for Financiers | Vetted Food & Agri Opportunities",
-  "description": "Deploy capital into curated, contract-backed food and agri trades, with faster due diligence, full transaction visibility and tighter counterparty risk.",
+  "title": "T57 for Banks & Financiers | Finance Verified Food Trade",
+  "description": "Finance food and agri trades you can verify: vetted borrowers, documents and shipment milestones on one record. You lend; T57 never does.",
   "parent": "who-we-serve"
  },
  "sellers": {
@@ -3183,7 +3183,7 @@
  "enterprises": {
   "route": "/who-we-serve/enterprises",
   "section": "who-we-serve",
-  "name": "Manufacturers and Enterprises",
+  "name": "Retail, HoReCa and Enterprise Buyers",
   "h1": "Secure supply. Protect your margins.",
   "answer": "Source from verified producers, see price moves early and run every contract in one place.",
   "faqs": [
@@ -3204,8 +3204,8 @@
     "a": "Yes. T57 is designed to connect documents, milestones, counterparties, and payment records within a single, trackable workflow. This makes it easier for enterprise teams to support internal controls, reviews, and audit requirements across complex trade operations."
    }
   ],
-  "title": "T57 for Manufacturers & Enterprises | Faster Food Trade",
-  "description": "T57 helps food manufacturers and enterprises digitize sourcing, RFQs, payments, trade finance and audit trails on one secure platform.",
+  "title": "T57 for Retail, HoReCa & Enterprise Buyers",
+  "description": "Retailers, HoReCa groups and food enterprises run sourcing, supplier approvals, contracts, shipments and payments on one record auditors can check.",
   "parent": "who-we-serve"
  },
  "food-processors": {

@@ -199,12 +199,12 @@
  "elc-15-minutes": {
   "route": "/ms/why-t57/elc-15-minutes",
   "section": "why-t57",
-  "name": "eLC dalam 15 Minit",
+  "name": "eLC dalam Beberapa Jam, Bukan Minggu",
   "h1": "Surat kredit, dibina daripada kontrak anda.",
-  "answer": "Surat kredit elektronik, dikeluarkan dalam kira-kira 15 minit setelah permohonan anda diluluskan.",
+  "answer": "Surat kredit elektronik, dikeluarkan dalam beberapa jam setelah permohonan anda diluluskan.",
   "faqs": [
    {
-    "q": "Apakah maksud \"15 minit\"?",
+    "q": "Apakah maksud \"beberapa jam, bukan minggu\"?",
     "a": "Ia ialah masa sasaran bagi bank rakan kongsi untuk mengeluarkan LC elektronik selepas permohonan anda diluluskan. Kelulusan itu sendiri mengikut proses kredit bank."
    },
    {
@@ -212,8 +212,8 @@
     "a": "Tidak. Surat kredit dikeluarkan oleh bank rakan kongsi berlesen. T57 menyediakan permohonan daripada rekod dagangan anda dan menghubungkan anda dengan mereka."
    }
   ],
-  "title": "Surat Kredit Elektronik dalam Kira-kira 15 Minit | T57",
-  "description": "LC elektronik disediakan daripada kontrak anda yang disahkan dan dikeluarkan oleh bank rakan kongsi selepas kelulusan. Dokumen digital.",
+  "title": "Surat Kredit Elektronik dalam Jam, Bukan Minggu | T57",
+  "description": "LC elektronik daripada kontrak anda yang disahkan, dikeluarkan bank rakan kongsi dalam beberapa jam selepas kelulusan. Dokumen digital.",
   "parent": "why-t57"
  },
  "escrow-payments": {
@@ -567,7 +567,7 @@
   "answer": "Surat kredit yang disediakan daripada kontrak anda, dikeluarkan secara digital dan dikemukakan tanpa kertas.",
   "faqs": [
    {
-    "q": "Apakah maksud \"kira-kira 15 minit\"?",
+    "q": "Apakah maksud \"dalam beberapa jam\"?",
     "a": "Ia ialah masa sasaran pengeluaran selepas bank meluluskan permohonan anda. Kelulusan mengikut proses kredit biasa bank."
    },
    {
@@ -580,7 +580,7 @@
    }
   ],
   "title": "Surat Kredit Elektronik (eLC) untuk Dagangan Makanan | T57",
-  "description": "LC disediakan daripada kontrak anda dan dikeluarkan oleh bank rakan kongsi selepas kelulusan, dengan semakan percanggahan AI di T57.",
+  "description": "LC disediakan daripada kontrak anda dan dikeluarkan oleh bank rakan kongsi dalam beberapa jam selepas kelulusan, dengan semakan percanggahan AI dan pengemukaan digital di T57.",
   "parent": "cap-trust-payments"
  },
  "cap-banking": {
@@ -3071,7 +3071,7 @@
  "financiers": {
   "route": "/ms/who-we-serve/financiers",
   "section": "who-we-serve",
-  "name": "Pembiaya dan Pelabur",
+  "name": "Bank dan Pembiaya",
   "h1": "Biayai dagangan makanan yang disahkan, dengan risiko yang lebih rendah.",
   "answer": "Setiap urus niaga disertakan pihak, dokumen dan data penghantaran yang disahkan, dari perjanjian hingga penyelesaian.",
   "faqs": [
@@ -3092,8 +3092,8 @@
     "a": "Transaksi makanan dan pertanian sering melibatkan rantaian bekalan yang berpecah-pecah, pihak berurus niaga rentas sempadan, serta ketidaktentuan iklim atau logistik, menjadikan keterlihatan dan pengesahan sangat bernilai. Dana Antarabangsa bagi Pembangunan Pertanian (IFAD) menyatakan bahawa pengeluar kecil masih kurang mendapat pembiayaan, menunjukkan keperluan pembiayaan yang besar tidak dipenuhi kerana jurang risiko menghalang modal."
    }
   ],
-  "title": "T57 untuk Pembiaya | Peluang Makanan & Pertanian Ditapis",
-  "description": "Salurkan modal ke dalam dagangan makanan bersandarkan kontrak, dengan usaha wajar lebih pantas, keterlihatan penuh dan risiko pihak lawan lebih rendah.",
+  "title": "T57 untuk Bank & Pembiaya | Biayai Dagangan Makanan Disahkan",
+  "description": "Biayai dagangan makanan yang boleh anda sahkan: peminjam ditapis, dokumen dan pencapaian penghantaran dalam satu rekod. Anda meminjamkan; T57 tidak.",
   "parent": "who-we-serve"
  },
  "sellers": {
@@ -3183,7 +3183,7 @@
  "enterprises": {
   "route": "/ms/who-we-serve/enterprises",
   "section": "who-we-serve",
-  "name": "Pengilang dan Perusahaan",
+  "name": "Pembeli Runcit, HoReCa dan Perusahaan",
   "h1": "Pastikan bekalan. Lindungi margin anda.",
   "answer": "Dapatkan bekalan daripada pengeluar yang disahkan, kesan pergerakan harga lebih awal dan uruskan setiap kontrak di satu tempat.",
   "faqs": [
@@ -3204,8 +3204,8 @@
     "a": "Boleh. T57 direka untuk menghubungkan dokumen, peringkat, pihak berurus niaga dan rekod pembayaran dalam satu aliran kerja yang boleh dijejaki. Ini memudahkan pasukan perusahaan menyokong kawalan dalaman, semakan dan keperluan audit merentas operasi dagangan yang kompleks."
    }
   ],
-  "title": "T57 untuk Pengilang & Perusahaan Makanan",
-  "description": "T57 membantu pengilang dan perusahaan makanan mendigitalkan sumber bekalan, RFQ, bayaran, pembiayaan perdagangan dan jejak audit dalam satu platform selamat.",
+  "title": "T57 untuk Pembeli Runcit, HoReCa & Perusahaan",
+  "description": "Peruncit, hotel, restoran dan syarikat makanan mengurus sumber, kelulusan pembekal, kontrak, penghantaran dan bayaran dalam satu rekod.",
   "parent": "who-we-serve"
  },
  "food-processors": {
