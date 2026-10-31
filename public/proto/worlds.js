@@ -716,7 +716,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     const POP = ['who-we-serve', 'buyers', 'sellers', 'financiers', 'governments', 'pricing', 'club-membership', 'contact-demo'];
     // Everyday words are dropped, and common ways of asking map onto the words the pages use.
     const STOP = new Set(['how', 'much', 'does', 'do', 'it', 'the', 'what', 'is', 'are', 'can', 'an', 'for', 'to', 'of', 'in', 'on', 'my', 'me', 'you', 'your', 'with', 'and', 'or', 'about', 'which', 'who', 'where', 'when', 'why', 'there', 'get', 'use', 'i']);
-    const SYN = { cost: ['pric', 'fee', 'plan'], costs: ['pric', 'fee', 'plan'], price: ['pric', 'fee', 'plan'], prices: ['pric', 'fee', 'plan'], fee: ['fee', 'pric'], fees: ['fee', 'pric'], login: ['apply', 'member'], signin: ['apply', 'member'], log: ['apply', 'member'], signup: ['apply', 'member'], register: ['apply', 'regist', 'member'],
+    const SYN = { join: ['apply', 'member', 'regist'], founder: ['founder', 'leadership'], founded: ['founder', 'leadership'], logistics: ['logistic', 'freight', 'forwarder'], farmer: ['farmer', 'producer'], farmers: ['farmer', 'producer'], dashboard: ['dashboard', 'monitor', 'view'], halal: ['halal', 'certif'], cost: ['pric', 'fee', 'plan'], costs: ['pric', 'fee', 'plan'], price: ['pric', 'fee', 'plan'], prices: ['pric', 'fee', 'plan'], fee: ['fee', 'pric'], fees: ['fee', 'pric'], login: ['apply', 'member'], signin: ['apply', 'member'], log: ['apply', 'member'], signup: ['apply', 'member'], register: ['apply', 'regist', 'member'],
       supermarket: ['retail', 'buyer', 'horeca'], supermarkets: ['retail', 'buyer', 'horeca'], retail: ['retail', 'buyer'], restaurant: ['horeca', 'buyer'], hotel: ['horeca', 'buyer'], bank: ['bank', 'financ', 'lender'], banks: ['bank', 'financ', 'lender'], lender: ['lender', 'financ'], loan: ['financ', 'lender'], fpo: ['fpo', 'cooperativ'], coop: ['cooperativ', 'fpo'], 'co-op': ['cooperativ', 'fpo'], ministry: ['government'], demo: ['demo'] };
     const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
     // Arabic: drop short vowels and tatweel, and fold alef, yaa and taa marbuta forms, so spelling variants still match.
@@ -731,7 +731,9 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       if (!words.length) { kick.textContent = AR ? 'الأكثر زيارة' : MS ? 'Paling dilawati' : TR ? 'En çok ziyaret edilenler' : HI ? 'सबसे ज़्यादा देखे गए' : 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
       const W = [8, 5, 2, 1], hits = [];
       // blog articles rank below the product pages they discuss
-      IDX.forEach(p => { let s = 0; for (const w of words) { let m = 0; for (const v of [w, ...(SYN[w] || [])]) p.f.forEach((f, k) => { if (f.includes(v)) m += W[k] * (new RegExp('\\b' + v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(f) ? 2 : 1); }); if (!m) return; s += m; } hits.push([p.route.includes('/resources/blog/') ? s / 2 : s, p]); });
+      // a page needs at least half the words; pages that match more words rank higher
+      const need = Math.ceil(words.length / 2);
+      IDX.forEach(p => { let s = 0, n = 0; for (const w of words) { let m = 0; const vs = [w, ...(SYN[w] || [])]; if (w.length > 4 && w.endsWith('s')) vs.push(w.slice(0, -1)); for (const v of vs) p.f.forEach((f, k) => { if (f.includes(v)) m += W[k] * (new RegExp('\\b' + v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(f) ? 2 : 1); }); if (m) { s += m; n++; } } if (n < need) return; s *= n / words.length; hits.push([p.route.includes('/resources/blog/') ? s / 2 : s, p]); });
       hits.sort((a, b) => b[0] - a[0]);
       kick.textContent = !hits.length ? '' : AR ? (hits.length === 1 ? 'صفحة واحدة' : hits.length === 2 ? 'صفحتان' : `${hits.length} ${hits.length <= 10 ? 'صفحات' : 'صفحة'}`) : MS ? `${hits.length} halaman` : TR ? `${hits.length} sayfa` : HI ? `${hits.length} पेज` : `${hits.length} page${hits.length === 1 ? '' : 's'}`; kick.hidden = !hits.length; none.hidden = !!hits.length;
       list.innerHTML = hits.slice(0, 12).map(([, p]) => row(p, words)).join('');
@@ -762,7 +764,11 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     support: ['Help Center', 'Contact support', 'Have your company name and trade reference ready, so we can help faster.', 'Send to support', ['name', 'email']],
     invest: ['Investors', 'Request the investor pack', 'For qualified investors. We send the teaser and presentation, then arrange a call with the founder and access to the memorandum and data room under NDA.', 'Request the pack', ['name', 'email', 'company', 'investor']],
     subscribe: ['T57 Insights', 'Subscribe to T57 Insights', 'Market insight on food trade, finance and AI. Unsubscribe at any time.', 'Subscribe', ['email']],
+    // government and bank briefings are demo requests with their own wording
+    briefing: ['Public sector', 'Request a government briefing', 'A 45-minute session with our public-sector team, under NDA if you need it.', 'Request my briefing', ['name', 'email', 'company']],
+    pipeline: ['Banks and financiers', 'Request a pipeline briefing', 'A 30-minute walk-through of a verified deal file, with a specialist from our finance partnerships team.', 'Request my briefing', ['name', 'email', 'company']],
   };
+  const API_KIND = { briefing: 'demo', pipeline: 'demo' };
   const DONE = { join: 'Thank you. Your country team will contact you within two working days.', demo: 'Thank you. A specialist will contact you to confirm a time.', partner: 'Thank you. Our partnerships team will be in touch.',
     contact: 'Thank you. We will reply within two working days.', support: 'Thank you. Our support team has your request.', subscribe: 'Thank you. You are subscribed to T57 Insights.',
     invest: 'Thank you. Our investor relations team will send the pack and contact you within two working days.' };
@@ -775,6 +781,8 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       support: ['Pusat Bantuan', 'Hubungi sokongan', 'Sediakan nama syarikat dan rujukan dagangan anda supaya kami dapat membantu dengan lebih pantas.', 'Hantar kepada sokongan', FORM.support[4]],
       invest: ['Pelabur', 'Minta pek pelabur', 'Untuk pelabur yang layak. Kami akan menghantar ringkasan dan pembentangan, kemudian mengatur panggilan bersama pengasas serta akses kepada memorandum dan bilik data di bawah NDA.', 'Minta pek', FORM.invest[4]],
       subscribe: ['T57 Insights', 'Langgan T57 Insights', 'Analisis pasaran tentang perdagangan makanan, pembiayaan dan AI. Berhenti melanggan pada bila-bila masa.', 'Langgan', FORM.subscribe[4]],
+      briefing: ['Sektor awam', 'Mohon taklimat kerajaan', 'Sesi 45 minit bersama pasukan sektor awam kami, di bawah NDA jika diperlukan.', 'Mohon taklimat', FORM.briefing[4]],
+      pipeline: ['Bank dan pembiaya', 'Mohon taklimat peluang pembiayaan', 'Penerangan 30 minit tentang satu fail dagangan yang disahkan, bersama pakar daripada pasukan perkongsian pembiayaan kami.', 'Mohon taklimat', FORM.pipeline[4]],
     });
     Object.assign(DONE, { join: 'Terima kasih. Pasukan negara anda akan menghubungi anda dalam tempoh dua hari bekerja.', demo: 'Terima kasih. Pakar kami akan menghubungi anda untuk mengesahkan masa.', partner: 'Terima kasih. Pasukan perkongsian kami akan menghubungi anda.',
       contact: 'Terima kasih. Kami akan membalas dalam tempoh dua hari bekerja.', support: 'Terima kasih. Permintaan anda telah sampai kepada pasukan sokongan kami.', subscribe: 'Terima kasih. Anda kini melanggan T57 Insights.',
@@ -789,6 +797,8 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       support: ['हेल्प सेंटर', 'सपोर्ट टीम से संपर्क करें', 'अपनी कंपनी का नाम और ट्रेड रेफ़रेंस तैयार रखें, ताकि हम जल्दी मदद कर सकें।', 'सपोर्ट को भेजें', FORM.support[4]],
       invest: ['निवेशक', 'निवेशक पैक मँगाएँ', 'योग्य निवेशकों के लिए। हम टीज़र और प्रेज़ेंटेशन भेजते हैं, फिर संस्थापक के साथ कॉल और NDA के तहत मेमोरेंडम व डेटा रूम की पहुँच की व्यवस्था करते हैं।', 'पैक मँगाएँ', FORM.invest[4]],
       subscribe: ['T57 Insights', 'T57 Insights सब्सक्राइब करें', 'खाद्य व्यापार, फ़ाइनेंस और AI पर बाज़ार की समझ। जब चाहें सब्सक्रिप्शन बंद करें।', 'सब्सक्राइब करें', FORM.subscribe[4]],
+      briefing: ['सरकारी क्षेत्र', 'सरकारी ब्रीफ़िंग का अनुरोध करें', 'हमारी पब्लिक-सेक्टर टीम के साथ 45 मिनट का सत्र, ज़रूरत हो तो NDA के तहत।', 'ब्रीफ़िंग का अनुरोध करें', FORM.briefing[4]],
+      pipeline: ['बैंक और फ़ाइनेंसर', 'डील पाइपलाइन ब्रीफ़िंग का अनुरोध करें', 'फ़ाइनेंस पार्टनरशिप टीम के विशेषज्ञ के साथ, एक सत्यापित डील फ़ाइल को 30 मिनट में समझें।', 'ब्रीफ़िंग का अनुरोध करें', FORM.pipeline[4]],
     });
     Object.assign(DONE, { join: 'धन्यवाद। आपके देश की टीम दो कार्यदिवसों के भीतर आपसे संपर्क करेगी।', demo: 'धन्यवाद। समय तय करने के लिए हमारे विशेषज्ञ आपसे संपर्क करेंगे।', partner: 'धन्यवाद। हमारी साझेदारी टीम जल्द ही आपसे संपर्क करेगी।',
       contact: 'धन्यवाद। हम दो कार्यदिवसों के भीतर जवाब देंगे।', support: 'धन्यवाद। आपका अनुरोध हमारी सपोर्ट टीम तक पहुँच गया है।', subscribe: 'धन्यवाद। आपने T57 Insights सब्सक्राइब कर लिया है।',
@@ -803,6 +813,8 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       support: ['Yardım Merkezi', 'Destek ekibine ulaşın', 'Size daha hızlı yardımcı olabilmemiz için şirket adınızı ve ticaret referansınızı hazır bulundurun.', 'Desteğe gönder', FORM.support[4]],
       invest: ['Yatırımcılar', 'Yatırımcı dosyasını talep edin', 'Nitelikli yatırımcılar içindir. Tanıtım özetini ve sunumu gönderiyor, ardından kurucuyla bir görüşme ve gizlilik sözleşmesi kapsamında bilgi memorandumu ile veri odasına erişim sağlıyoruz.', 'Dosyayı talep et', FORM.invest[4]],
       subscribe: ['T57 Insights', "T57 Insights'a abone olun", 'Gıda ticareti, finansman ve yapay zekâ üzerine piyasa analizleri. Aboneliğinizi istediğiniz zaman iptal edebilirsiniz.', 'Abone ol', FORM.subscribe[4]],
+      briefing: ['Kamu sektörü', 'Kamu bilgilendirme toplantısı talep edin', 'Kamu sektörü ekibimizle 45 dakikalık bir oturum; dilerseniz gizlilik sözleşmesi kapsamında.', 'Toplantı talep et', FORM.briefing[4]],
+      pipeline: ['Bankalar ve finansörler', 'Finansman fırsatları sunumu talep edin', 'Finansman ortaklıkları ekibimizden bir uzmanla, doğrulanmış bir işlem dosyası üzerinden 30 dakikalık bir inceleme.', 'Sunum talep et', FORM.pipeline[4]],
     });
     Object.assign(DONE, { join: 'Teşekkürler. Ülke ekibiniz iki iş günü içinde sizinle iletişime geçecek.', demo: 'Teşekkürler. Bir uzmanımız zamanı teyit etmek için sizinle iletişime geçecek.', partner: 'Teşekkürler. İş ortaklıkları ekibimiz sizinle iletişime geçecek.',
       contact: 'Teşekkürler. İki iş günü içinde yanıt vereceğiz.', support: 'Teşekkürler. Talebiniz destek ekibimize ulaştı.', subscribe: "Teşekkürler. T57 Insights'a abone oldunuz.",
@@ -817,6 +829,8 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       support: ['مركز المساعدة', 'تواصل مع الدعم', 'جهّز اسم منشأتك ومرجع الصفقة لنساعدك أسرع.', 'أرسل إلى الدعم', FORM.support[4]],
       invest: ['المستثمرون', 'اطلب ملف المستثمرين', 'للمستثمرين المؤهلين. نرسل الملخص التعريفي والعرض التقديمي، ثم نرتب مكالمة مع المؤسس والوصول إلى مذكرة الاستثمار وغرفة البيانات بموجب اتفاقية سرية.', 'اطلب الملف', FORM.invest[4]],
       subscribe: ['رؤى T57', 'اشترك في رؤى T57', 'رؤى حول تجارة الغذاء والتمويل والذكاء الاصطناعي. يمكنك إلغاء الاشتراك في أي وقت.', 'اشترك', FORM.subscribe[4]],
+      briefing: ['القطاع الحكومي', 'اطلب إحاطة حكومية', 'جلسة مدتها 45 دقيقة مع فريق القطاع العام لدينا، بموجب اتفاقية عدم إفصاح إن رغبت.', 'اطلب الإحاطة', FORM.briefing[4]],
+      pipeline: ['البنوك والممولون', 'اطلب عرضًا لفرص التمويل', 'جولة مدتها 30 دقيقة على ملف صفقة موثَّق، مع متخصص من فريق شراكات التمويل لدينا.', 'اطلب العرض', FORM.pipeline[4]],
     });
     Object.assign(DONE, { join: 'شكرًا لك. سيتواصل معك فريق بلدك خلال يومي عمل.', demo: 'شكرًا لك. سيتواصل معك متخصص لتأكيد الموعد.', partner: 'شكرًا لك. سيتواصل معك فريق الشراكات.',
       contact: 'شكرًا لك. سنرد خلال يومي عمل.', support: 'شكرًا لك. وصل طلبك إلى فريق الدعم.', subscribe: 'شكرًا لك. تم اشتراكك في رؤى T57.',
@@ -876,13 +890,13 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   });
 
   // The get-started dialog: every "talk to us", "book a demo" or "apply" button opens it with the right form
-  const ROLE_OF = { farmers: 'Producer or farmer', cooperatives: 'Cooperative or FPO', 'food-processors': 'Processor', enterprises: 'Retail, HoReCa or enterprise buyer', traders: 'Trader', sellers: 'Seller or exporter', buyers: 'Buyer', financiers: 'Financier', 'service-providers': 'Service provider', governments: 'Government or institution', collaborators: 'Partner' };
+  const ROLE_OF = { farmers: 'Producer or farmer', cooperatives: 'Cooperative or FPO', 'food-processors': 'Processor', enterprises: 'Retail, HoReCa or enterprise buyer', traders: 'Trader', sellers: 'Seller or exporter', buyers: 'Buyer', financiers: 'Financier', 'service-providers': 'Logistics or inspection provider', governments: 'Government or institution', collaborators: 'Partner' };
   const dlg = document.getElementById('get-started');
   if (dlg && dlg.showModal) {
     const df = dlg.querySelector('form');
     const open = (kind, cta) => {
       const c = FORM[kind] || FORM.contact;
-      df.dataset.apiForm = kind; df.dataset.cta = cta; df.dataset.t = Date.now(); df.classList.remove('sent');
+      df.dataset.apiForm = API_KIND[kind] || kind; df.dataset.cta = cta; df.dataset.t = Date.now(); df.classList.remove('sent');
       dlg.querySelector('[data-fdlg-eb]').textContent = c[0]; dlg.querySelector('[data-fdlg-h]').textContent = c[1];
       dlg.querySelector('[data-fdlg-sub]').textContent = c[2]; dlg.querySelector('[data-fdlg-btn]').textContent = c[3];
       df.querySelectorAll('[data-k]').forEach(el => el.hidden = !el.dataset.k.split(' ').includes(kind));
@@ -896,9 +910,10 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       const t = a.textContent.trim(), kind = a.dataset.form || kindOf(t); open(kind, t);
       // Audience pages pre-select the visitor's role, so "Register now" is one click to the right form
       const who = ((a.getAttribute('href') || '').match(/#cta-(.+)/) || [])[1], ri = ROLE_OF[who], rs = df.querySelector('select[name="role"]');
-      if (kind === 'join' && ri && rs) rs.value = ri;
+      if ((kind === 'join' || API_KIND[kind]) && ri && rs) rs.value = ri;
       // plan buttons on the pricing table pre-select their plan
       const ps = df.querySelector('select[name="plan"]'); if (ps) ps.value = kind === 'join' && a.dataset.plan || '';
+      const ty = df.querySelector('select[name="type"]'); if (ty) ty.value = kind === 'partner' && a.dataset.type || '';
     }, true);
     dlg.querySelector('[data-fdlg-close]').addEventListener('click', () => dlg.close());
     dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
