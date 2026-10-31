@@ -46,14 +46,14 @@
 "Quotes, contracts, inspection reports, finance and shipping documents live in different inboxes and systems, so details get lost or changed.": "Teklifler, sözleşmeler, gözetim raporları, finansman ve nakliye belgeleri farklı e-posta kutularında ve sistemlerde duruyor; ayrıntılar kayboluyor ya da değişiyor.",
 "Access to finance": "Finansmana erişim",
 "Lenders cannot see a clean, verified history of a trade, so good businesses are turned away or charged more.": "Finansörler bir ticaretin temiz ve doğrulanmış geçmişini göremiyor; bu yüzden sağlam işletmeler geri çevriliyor ya da daha yüksek maliyetle karşılaşıyor.",
-"Bring every part of the food chain into one verified trade club": "Gıda zincirinin her halkasını doğrulanmış tek bir ticaret kulübünde bir araya getirin",
+"Bring every part of the food chain into one verified trade club": "Gıda zincirinin her halkası, doğrulanmış tek bir ticaret kulübünde",
 "<i aria-hidden=\"true\"></i>Institutions": "<i aria-hidden=\"true\"></i>Kurumlar",
 "<i aria-hidden=\"true\"></i>Trade participants": "<i aria-hidden=\"true\"></i>Ticaret tarafları",
 "<i aria-hidden=\"true\"></i>Production &amp; supply": "<i aria-hidden=\"true\"></i>Üretim ve tedarik",
 "<i aria-hidden=\"true\"></i>Ecosystem &amp; growth": "<i aria-hidden=\"true\"></i>Ekosistem ve büyüme",
 "Why T57 · One trade, start to finish": "Neden T57 · Tek ticaret, baştan sona",
 "From first check to final payment, on one trade record": "İlk doğrulamadan son ödemeye, tek ticaret kaydında",
-"Get verified": "Doğrulanın",
+"Get verified": "Doğrulamadan geçin",
 "Complete business and identity checks, plus a physical check where needed, and receive your T57 Passport and role label.": "Şirket ve kimlik doğrulamasını, gerektiğinde yerinde kontrolü tamamlayın; T57 Pasaportunuzu ve rol etiketinizi alın.",
 "Find and agree": "Bulun ve anlaşın",
 "Send or answer an RFQ, compare quotes from verified members and turn the accepted quote into a contract.": "Teklif talebi (RFQ) gönderin ya da yanıtlayın, doğrulanmış üyelerden gelen teklifleri karşılaştırın ve kabul ettiğiniz teklifi sözleşmeye dönüştürün.",
@@ -251,5 +251,6 @@
 "Every food trade,": "Her gıda ticareti,",
 "on one verified record.": "tek bir doğrulanmış kayıtta.",
 "Find verified partners, agree contracts, get financed, inspected, shipped and paid, without juggling eight separate services.": "Doğrulanmış iş ortakları bulun, sözleşmeleri imzalayın; finansman, gözetim, sevkiyat ve ödemeyi sekiz ayrı hizmetle uğraşmadan tamamlayın.",
-"<b>150+</b> MoUs across 67 countries": "67 ülkede <b>150+</b> mutabakat zaptı"
+"<b>150+</b> MoUs across 67 countries": "67 ülkede <b>150+</b> mutabakat zaptı",
+"Working with the institutions that shape food trade": "Gıda ticaretine yön veren kurumlarla birlikte çalışıyoruz"
 }

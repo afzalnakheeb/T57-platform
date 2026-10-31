@@ -19,7 +19,7 @@
 "Label": "صنّف",
 "Each member is labeled as owner-producer, processor, trader or intermediary, so you always know who you deal with.": "يُصنَّف كل عضو بدوره: مالك منتج، أو مصنّع، أو تاجر، أو وسيط، فتعرف دائمًا مع من تتعامل.",
 "Record": "وثّق",
-"Quotes, contracts, documents and milestones sit on one shared trade record, with an audit trail and tamper-evident anchoring.": "العروض والعقود والمستندات والمراحل كلها في سجل تجاري واحد مشترك، مع مسار تدقيق وتثبيت يكشف أي تلاعب.",
+"Quotes, contracts, documents and milestones sit on one shared trade record, with an audit trail and tamper-evident anchoring.": "العروض والعقود والمستندات والمراحل كلها في سجلّ صفقة واحد مشترك، مع مسار تدقيق وتثبيت يكشف أي تلاعب.",
 "Assure": "اضمن",
 "Escrow, letters of credit and insurance come through licensed partners, and a structured dispute process applies if a party does not perform.": "الضمان وخطابات الاعتماد والتأمين يقدّمها شركاء مرخّصون، وإن أخلّ طرف بالتزامه طُبّق إجراء منظّم لحل النزاع.",
 "VERIFIED MEMBER": "عضو موثَّق",
@@ -57,7 +57,7 @@
 "How do I know who I am trading with?": "كيف أعرف من أتعامل معه؟",
 "Every member has a verified T57 Passport that shows their role, checks passed and trade history, shared with consent.": "لكل عضو جواز T57 موثَّق يبيّن دوره والفحوص التي اجتازها وسجل تعاملاته، ولا يُشارك إلا بموافقته.",
 "What happens if a trade goes wrong?": "ماذا يحدث إذا تعثرت صفقة؟",
-"T57 provides a structured dispute process based on the shared trade record, and escrow can pause release while a dispute is resolved.": "توفر T57 إجراءً منظّمًا لحل النزاعات يستند إلى السجل التجاري المشترك، ويمكن تعليق صرف المبلغ من حساب الضمان حتى يُحسم النزاع.",
+"T57 provides a structured dispute process based on the shared trade record, and escrow can pause release while a dispute is resolved.": "توفر T57 إجراءً منظّمًا لحل النزاعات يستند إلى سجلّ الصفقة المشترك، ويمكن تعليق صرف المبلغ من حساب الضمان حتى يُحسم النزاع.",
 "Inside the trust layer": "من داخل طبقة الثقة",
 "Every part of the trust layer": "جميع مكوّنات طبقة الثقة",
 "Verification": "التحقق",
@@ -80,5 +80,5 @@
 "T57 PASSPORT": "جواز T57",
 "Illustrative": "توضيحي",
 "Trust & Compliance | Verified Food Trade on T57": "الثقة والامتثال | تجارة غذاء موثَّقة على T57",
-"Verified members, one trade record, an audit trail and licensed partners for payments. See how T57 makes trust the starting point of food trade.": "أعضاء موثَّقون، وسجل تجاري واحد، ومسار تدقيق، وشركاء مرخّصون للمدفوعات. تعرّف كيف تجعل T57 الثقة نقطة البداية في تجارة الغذاء."
+"Verified members, one trade record, an audit trail and licensed partners for payments. See how T57 makes trust the starting point of food trade.": "أعضاء موثَّقون، وسجلّ صفقة واحد، ومسار تدقيق، وشركاء مرخّصون للمدفوعات. تعرّف كيف تجعل T57 الثقة نقطة البداية في تجارة الغذاء."
 }

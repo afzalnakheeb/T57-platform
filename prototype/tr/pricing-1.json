@@ -225,8 +225,8 @@
 "Market intelligence": "Piyasa analizi",
 "Price index": "Fiyat endeksi",
 "Price index and supply status by origin": "Fiyat endeksi ve menşeye göre arz durumu",
-"Plus forecasting and route analysis": "Artı tahmin ve rota analizi",
-"Plus custom models and reports": "Artı özel modeller ve raporlar",
+"Plus forecasting and route analysis": "Ek olarak tahminleme ve rota analizi",
+"Plus custom models and reports": "Ek olarak size özel modeller ve raporlar",
 "Data services (credit reports, verified trade history, HS codes)": "Veri hizmetleri (kredi raporları, doğrulanmış ticaret geçmişi, GTİP kodları)",
 "Pay per use": "Kullandıkça öde",
 "Monthly allowance": "Aylık kullanım hakkı",
@@ -239,7 +239,7 @@
 "Full integration": "Tam entegrasyon",
 "Help center and email": "Yardım merkezi ve e-posta",
 "Plus live chat": "Artı canlı sohbet",
-"Priority support and onboarding": "Öncelikli destek ve sisteme alıştırma",
+"Priority support and onboarding": "Öncelikli destek ve birebir kurulum desteği",
 "Dedicated account manager": "Özel müşteri temsilcisi",
 "Prices are standard list prices in US dollars, excluding taxes. Local prices may be lower in markets with lower purchasing power. Data services beyond the monthly allowance are charged per use. Finance, insurance, logistics and inspection partners quote for their own services.": "Fiyatlar vergiler hariç, ABD doları cinsinden standart liste fiyatlarıdır. Satın alma gücünün daha düşük olduğu pazarlarda yerel fiyatlar daha düşük olabilir. Aylık kullanım hakkını aşan veri hizmetleri kullanım başına ücretlendirilir. Finansman, sigorta, lojistik ve gözetim iş ortakları kendi hizmetleri için fiyat verir.",
 "How plans work": "Paketler nasıl işler",
@@ -280,5 +280,6 @@
 "Plans and Pricing | Explore, Core, Growth, Enterprise | T57": "Paketler ve Fiyatlar | Keşif, Temel, Büyüme, Kurumsal | T57",
 "Compare T57 plans from $199 a month, with verification included, two months free on annual billing and trade fees from 0.75% down to 0.20% per side.": "Doğrulamanın dahil olduğu T57 paketlerini karşılaştırın: aylık 199 dolardan başlayan fiyatlar, yıllık ödemede iki ay ücretsiz.",
 "Fees for listings and leads that never become trades.": "Hiçbir zaman işleme dönüşmeyen ilanlar ve müşteri adayları için ücretler.",
-"Apply now, 90 days free": "Hemen başvurun, 90 gün ücretsiz"
+"Apply now, 90 days free": "Hemen başvurun, 90 gün ücretsiz",
+"A pepper and cardamom cooperative joins on Explore for its first exports to the Gulf. After a season of regular orders from verified buyers in Riyadh and Jeddah, it moves to Core, then to Growth, where the lower trade fee and member accounts for its farmers more than cover the higher membership.": "Bir karabiber ve kakule kooperatifi Körfez'e ilk ihracatları için Keşif paketiyle katılıyor. Riyad ve Cidde'deki doğrulanmış alıcılardan düzenli sipariş aldığı bir sezonun ardından Temel'e, sonra da Büyüme'ye geçiyor; burada düşük işlem ücreti ve çiftçileri için üye hesapları, daha yüksek üyelik bedelini fazlasıyla karşılıyor."
 }

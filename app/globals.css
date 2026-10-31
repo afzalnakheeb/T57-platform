@@ -1450,6 +1450,7 @@ html[lang=ar], .lang-ar { --font-display:"Noto Kufi Arabic", Roboto, system-ui, 
 .lang-ar .up, .lang-ar .down, .lang-ar .t-c, .lang-ar .t-p, .lang-ar .mv-c, .lang-ar .mv-p, .lang-ar .tk em, .lang-ar [data-fpi-mom], .lang-ar [data-chart-v] { direction:ltr; unicode-bidi:isolate; }
 /* a quiet cross-link under a page's main actions */
 .xlink { margin-top:16px; font-size:15px; } .xlink a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+.pt-cta .btn-ghost { color:var(--persian-indigo); border-color:var(--persian-indigo); } .pt-cta .btn-ghost:hover { background:var(--persian-indigo); color:#fff; }
 .pt-cta td { padding-top:16px; } .pt-cta .btn { width:100%; justify-content:center; min-height:40px; padding:0 12px; font-size:14px; }
 /* home: T57 compared with other kinds of platform */
 .vs-wrap { overflow-x:auto; margin-top:32px; border:1px solid var(--line); border-radius:12px; background:#fff; }

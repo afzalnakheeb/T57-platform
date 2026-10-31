@@ -252,5 +252,6 @@
 "Time": "समय",
 "Months of argument": "महीनों की बहस",
 "A clear, recorded process": "एक साफ़, दर्ज प्रक्रिया",
-"No. Entries are tamper-evident: any change can be detected, and nothing is deleted. Corrections are added as new entries.": "नहीं। प्रविष्टियों में छेड़छाड़ पकड़ में आती है: कोई भी बदलाव पकड़ा जा सकता है, और कुछ भी मिटाया नहीं जाता। सुधार नई प्रविष्टियों के रूप में जोड़े जाते हैं।"
+"No. Entries are tamper-evident: any change can be detected, and nothing is deleted. Corrections are added as new entries.": "नहीं। प्रविष्टियों में छेड़छाड़ पकड़ में आती है: कोई भी बदलाव पकड़ा जा सकता है, और कुछ भी मिटाया नहीं जाता। सुधार नई प्रविष्टियों के रूप में जोड़े जाते हैं।",
+"Corrections are added as new entries, never written over old ones, and fingerprints of key records are anchored on a blockchain ledger, so any change can be detected.": "सुधार नई प्रविष्टियों के रूप में जोड़े जाते हैं, पुरानी प्रविष्टियों के ऊपर कभी नहीं लिखे जाते, और मुख्य रिकॉर्ड के फ़िंगरप्रिंट ब्लॉकचेन लेजर पर एंकर होते हैं, ताकि कोई भी बदलाव पकड़ा जा सके।"
 }

@@ -169,7 +169,7 @@
    },
    {
     "q": "Ne tür finansman talep edebilirim?",
-    "a": "Katılımcı bankalar ve finansman şirketleri aracılığıyla, faizsiz seçenekler dahil sevk öncesi ve sevk sonrası finansman, alacak finansmanı ve akreditif."
+    "a": "Katılımcı bankalar ve finansman şirketleri aracılığıyla, katılım finansmanı ilkelerine uygun seçenekler dahil sevk öncesi ve sevk sonrası finansman, alacak finansmanı ve akreditif."
    }
   ],
   "title": "Gıda KOBİ'leri İçin Ticaret Finansmanı | T57",
@@ -671,7 +671,7 @@
     "a": "Stablecoin'ler ve altına dayalı tokenler oynaklığı azaltmak için tasarlanmıştır; iş ortakları ödeme anında yerel para birimine dönüşüm yapabilir."
    },
    {
-    "q": "Dijital varlıkla ödemeler faizsiz finansman ilkelerine uygun mu?",
+    "q": "Dijital varlıkla ödemeler katılım finansmanı ilkelerine uygun mu?",
     "a": "Âlimlerin görüşleri farklıdır. İslami esaslara uygun ödemeye ihtiyaç duyan üyeler bir uzmana danışmalı; bunun yerine altına dayalı tokenleri ya da geleneksel seçenekleri tercih edebilir."
    }
   ],
@@ -700,7 +700,7 @@
    }
   ],
   "title": "Gıda Ticareti Finansmanı ve Sermaye | T57",
-  "description": "T57'de yarışan lisanslı kredi verenlerden doğrulanmış gıda işlemleri için ticaret ve tedarik zinciri finansmanı, faizsiz finansman ve tokenleştirilmiş fonlama.",
+  "description": "T57'de yarışan lisanslı kredi verenlerden doğrulanmış gıda işlemleri için ticaret ve tedarik zinciri finansmanı, katılım finansmanı ve tokenleştirilmiş fonlama.",
   "parent": "capabilities"
  },
  "cap-supply-chain-finance": {
@@ -1831,7 +1831,7 @@
    },
    {
     "q": "Katılım esaslı ticaret finansmanı var mı?",
-    "a": "T57, üyeleri mümkün olan yerlerde faizsiz finansman sunanlar dahil lisanslı iş ortaklarıyla buluşturur."
+    "a": "T57, üyeleri mümkün olan yerlerde katılım finansmanı sunanlar dahil lisanslı iş ortaklarıyla buluşturur."
    }
   ],
   "title": "İİT ve Helal Gıda Ticareti | Doğrulanmış Helal Tedarikçiler | T57",

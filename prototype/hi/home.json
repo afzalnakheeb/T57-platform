@@ -7,7 +7,7 @@
 "T57 connects verified producers, buyers, banks and logistics on one AI-native trade platform.": "T57 सत्यापित उत्पादकों, खरीदारों, बैंकों और लॉजिस्टिक्स को एक AI-नेटिव ट्रेड प्लेटफ़ॉर्म पर जोड़ता है।",
 "Find your role": "अपनी भूमिका चुनें",
 "See the market board": "मार्केट बोर्ड देखें",
-"Food crosses borders every day. T57 puts each shipment on one trade record, from quote to payment.": "खाद्यान्न हर दिन सीमाएँ पार करता है। T57 हर शिपमेंट को कोटेशन से भुगतान तक एक ही ट्रेड रिकॉर्ड पर रखता है।",
+"Food crosses borders every day. T57 puts each shipment on one trade record, from quote to payment.": "खाद्य उत्पाद हर दिन सीमाएँ पार करते हैं। T57 हर शिपमेंट को कोटेशन से भुगतान तक एक ही ट्रेड रिकॉर्ड पर रखता है।",
 "One record, from first quote to final payment.": "पहले कोटेशन से आख़िरी भुगतान तक, एक ही रिकॉर्ड।",
 "Animation in three steps. Today, one food trade needs eight separate services, each with its own paperwork, so they are scattered and tangled. With T57, all eight line up on one trade record between the farm and the buyer. The result: the trade is verified, financed and paid.": "तीन चरणों का एनिमेशन। आज खाद्य व्यापार के एक सौदे के लिए आठ अलग-अलग सेवाएँ चाहिए, हर एक की अपनी कागज़ी कार्रवाई, इसलिए सब कुछ बिखरा और उलझा रहता है। T57 के साथ ये आठों सेवाएँ खेत और खरीदार के बीच एक ही ट्रेड रिकॉर्ड पर क्रम से आ जाती हैं। नतीजा: सौदा सत्यापित, फ़ाइनेंस और भुगतान, तीनों पूरे।",
 "8 services · 8 sets of paperwork": "8 सेवाएँ · 8 तरह की कागज़ी कार्रवाई",
@@ -118,7 +118,7 @@
 "Compliance screening clear": "अनुपालन जाँच में कोई आपत्ति नहीं",
 "Global Food Market Board": "ग्लोबल फ़ूड मार्केट बोर्ड",
 "See the world's food prices move": "दुनिया की खाद्य कीमतों का उतार-चढ़ाव देखें",
-"Benchmarks for the staples the world trades, from the FAO and the World Bank. Teal is up on the month, amber is down.": "दुनिया में सबसे ज़्यादा बिकने वाले मुख्य खाद्यान्नों के मानक, FAO और विश्व बैंक से। हरा-नीला रंग महीने भर में बढ़त है, पीला गिरावट।",
+"Benchmarks for the staples the world trades, from the FAO and the World Bank. Teal is up on the month, amber is down.": "दुनिया भर में कारोबार होने वाली मुख्य खाद्य कमोडिटी की बेंचमार्क कीमतें, FAO और विश्व बैंक से। हरा-नीला यानी महीने भर में तेज़ी, पीला यानी गिरावट।",
 "<span class=\"live-dot\" aria-hidden=\"true\"></span>Latest data: September 2026<br><span>FAO, 2 Oct 2026 · World Bank Pink Sheet, 2 Oct 2026</span>": "<span class=\"live-dot\" aria-hidden=\"true\"></span>ताज़ा डेटा: सितंबर 2026<br><span>FAO, 2 अक्टूबर 2026 · विश्व बैंक पिंक शीट, 2 अक्टूबर 2026</span>",
 "FAO Food Price Index and sub-indices, nominal, 2014–2016 = 100. Monthly, January 2024 to September 2026.": "FAO खाद्य मूल्य सूचकांक और उप-सूचकांक, नाममात्र, 2014–2016 = 100। मासिक, जनवरी 2024 से सितंबर 2026।",
 "Biggest moves this month": "इस महीने के सबसे बड़े बदलाव",
@@ -251,5 +251,6 @@
 "Every food trade,": "हर खाद्य सौदा,",
 "on one verified record.": "एक सत्यापित रिकॉर्ड पर।",
 "Find verified partners, agree contracts, get financed, inspected, shipped and paid, without juggling eight separate services.": "सत्यापित पार्टनर खोजें, कॉन्ट्रैक्ट तय करें, और फ़ाइनेंस, निरीक्षण, शिपिंग और भुगतान पाएँ, आठ अलग-अलग सेवाओं के चक्कर काटे बिना।",
-"<b>150+</b> MoUs across 67 countries": "67 देशों में <b>150+</b> MoU"
+"<b>150+</b> MoUs across 67 countries": "67 देशों में <b>150+</b> MoU",
+"Working with the institutions that shape food trade": "खाद्य व्यापार की दिशा तय करने वाली संस्थाओं के साथ मिलकर काम"
 }

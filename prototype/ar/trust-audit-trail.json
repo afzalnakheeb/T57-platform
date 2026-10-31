@@ -60,5 +60,6 @@
 "Silent": "صامتة",
 "Audit Trail for Food Trade | T57 Trust & Compliance": "مسار التدقيق لتجارة الغذاء | الثقة والامتثال في T57",
 "Every action on every trade, attributed to a verified person, time-stamped and tamper-evident. Audit-ready evidence on T57.": "كل إجراء في كل صفقة منسوب إلى شخص موثَّق، ومختوم زمنيًا، ويكشف أي عبث. أدلة جاهزة للتدقيق على T57.",
-"No. Entries are tamper-evident: any change can be detected, and nothing is deleted. Corrections are added as new entries.": "لا، القيود تكشف أي تلاعب: يمكن رصد أي تعديل، ولا يُحذف شيء، والتصحيحات تُضاف قيودًا جديدة."
+"No. Entries are tamper-evident: any change can be detected, and nothing is deleted. Corrections are added as new entries.": "لا، القيود تكشف أي تلاعب: يمكن رصد أي تعديل، ولا يُحذف شيء، والتصحيحات تُضاف قيودًا جديدة.",
+"Corrections are added as new entries, never written over old ones, and fingerprints of key records are anchored on a blockchain ledger, so any change can be detected.": "تُضاف التصحيحات قيودًا جديدة ولا تُكتب فوق القيود السابقة، وبصمات السجلّات الرئيسية مثبَّتة على سجلّ بلوك تشين، فيُكتشف أي تغيير."
 }

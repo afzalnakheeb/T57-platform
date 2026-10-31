@@ -22,7 +22,7 @@
 "Ministries often rely on scattered reports, manual spreadsheets, and diplomatic emails to understand supply, demand, and risk, which makes early-warning and coordinated action difficult.": "Kementerian sering bergantung pada laporan yang berselerak, hamparan manual dan e-mel diplomatik untuk memahami penawaran, permintaan dan risiko, menyukarkan amaran awal dan tindakan yang diselaras.",
 "Opaque, high-risk public procurement": "Perolehan awam yang kabur dan berisiko tinggi",
 "Large food tenders are vulnerable to leakage, fraud, payment delays, and quality failures, undermining public trust and budgets.": "Tender makanan berskala besar terdedah kepada ketirisan, penipuan, kelewatan bayaran dan kegagalan kualiti, sekali gus menjejaskan kepercayaan awam dan bajet negara.",
-"Limited visibility to align policy, markets, and investment": "Keterlihatan terhad untuk menyelaraskan dasar, pasaran dan pelaburan",
+"Limited visibility to align policy, markets, and investment": "Gambaran terhad untuk menyelaraskan dasar, pasaran dan pelaburan",
 "Policy decisions on trade, subsidies, storage, and investment often proceed without a clear, data-backed picture of surpluses, deficits, food waste, or SME capacity across regions and value chains.": "Keputusan dasar tentang perdagangan, subsidi, penyimpanan dan pelaburan sering dibuat tanpa gambaran jelas berasaskan data tentang lebihan, kekurangan, pembaziran makanan atau kapasiti PKS merentas wilayah dan rantaian nilai.",
 "How T57 works for governments and regulators": "Bagaimana T57 berfungsi untuk kerajaan dan pengawal selia",
 "From live intelligence to clean procurement": "Daripada data masa nyata kepada perolehan yang telus",
@@ -35,7 +35,7 @@
 "From insight to investment": "Daripada analisis kepada pelaburan",
 "Banks, sovereign funds, impact capital and CSR programs connected to vetted food-security projects.": "Bank, dana kekayaan negara, modal impak dan program CSR dihubungkan dengan projek sekuriti makanan yang telah ditapis.",
 "Secure procurement rails": "Landasan perolehan yang selamat",
-"Every tender step, on a tamper-evident record": "Setiap langkah tender, dalam rekod yang menunjukkan sebarang usikan",
+"Every tender step, on a tamper-evident record": "Setiap langkah tender, dalam rekod yang mendedahkan sebarang usikan",
 "Every document, logistics event, and approval is recorded on a tamper-evident ledger for immediate auditability, and funds are released only when milestones are verified. Tenders scale from a single container to national food-reserve purchases of millions of tonnes.": "Setiap dokumen, peristiwa logistik dan kelulusan direkodkan dalam lejar yang menunjukkan sebarang usikan untuk diaudit serta-merta, dan dana dilepaskan hanya apabila setiap peringkat disahkan. Tender boleh berskala daripada satu kontena hingga pembelian rizab makanan negara berjuta-juta tan.",
 "AI READS PRICE, DEMAND AND RISK AT EVERY STEP": "AI MEMBACA HARGA, PERMINTAAN DAN RISIKO PADA SETIAP LANGKAH",
 "RFQ published": "RFQ diterbitkan",
@@ -53,7 +53,7 @@
 "BLOCK 03": "BLOK 03",
 "BLOCK 04": "BLOK 04",
 "BLOCK 05": "BLOK 05",
-"Shared, tamper-resistant trade record": "Rekod dagangan dikongsi yang sukar diusik",
+"Shared, tamper-resistant trade record": "Rekod dagangan dikongsi yang mendedahkan sebarang usikan",
 "Use case": "Kes penggunaan",
 "Stabilizing wheat supply during a regional shock": "Menstabilkan bekalan gandum ketika kejutan serantau",
 "DOMESTIC WHEAT PRICE PRESSURE": "TEKANAN HARGA GANDUM DOMESTIK",
@@ -100,5 +100,6 @@
 "T57 for Governments | Food Security & Clean Procurement": "T57 untuk Kerajaan | Sekuriti Makanan & Perolehan Telus",
 "T57 gives governments and regulators live food security intelligence and transparent procurement on one platform, to cut waste and steady prices.": "T57 memberi kerajaan data sekuriti makanan masa nyata dan perolehan yang telus dalam satu platform, untuk mengurangkan pembaziran dan menstabilkan harga.",
 "Every document, logistics event, and approval is recorded on a tamper-evident ledger for immediate auditability, and funds are released only when milestones are verified. Tenders run from a single container to national reserve purchases.": "Setiap dokumen, peristiwa logistik dan kelulusan direkodkan dalam lejar yang menunjukkan sebarang usikan untuk diaudit serta-merta, dan dana dilepaskan hanya apabila setiap peringkat disahkan. Tender dijalankan daripada satu kontena hingga pembelian rizab negara.",
-"See your food supply early, and buy it cleanly.": "Lihat bekalan makanan anda lebih awal, dan beli secara telus."
+"See your food supply early, and buy it cleanly.": "Lihat bekalan makanan anda lebih awal, dan beli secara telus.",
+"Shared, tamper-evident trade record": "Rekod dagangan dikongsi yang setiap perubahannya dapat dikesan"
 }
