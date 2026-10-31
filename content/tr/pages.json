@@ -81,7 +81,7 @@
   "section": "why-t57",
   "name": "Kulüp Üyeliği",
   "h1": "Yalnızca doğrulanmış üyelerle ticaret yapın.",
-  "answer": "İncelenmiş karşı tarafları eşleştiren, her küresel tarım işleminde dolandırıcılık ve temerrüdü azaltan doğrulanmış bir gıda ticareti kulübü.",
+  "answer": "Ticaret başlamadan önce her üyenin şirketi, sahipleri, belgeleri ve yaptırım durumu kontrol edilir.",
   "faqs": [
    {
     "q": "T57 güven puanı çiftçilerin ve üreticilerin, kooperatiflerin ve üretici örgütlerinin riski azaltmasına nasıl yardımcı olur?",
@@ -1759,8 +1759,8 @@
   "route": "/tr/markets",
   "section": "markets",
   "name": "Pazarlar",
-  "h1": "Beş kurucu pazar. Tek doğrulanmış ağ.",
-  "answer": "Suudi Arabistan, BAE, Hindistan, Malezya ve Türkiye. Beşinde de tek bir ticaret kaydıyla alın ve satın.",
+  "h1": "İlk günden beş pazara satış yapın.",
+  "answer": "Alıcıları, kuralları, belgeleri ve yerel iş ortaklarını görmek için ülkenizi ve koridorunuzu seçin.",
   "faqs": [
    {
     "q": "T57 hangi ülkelerde faaliyet gösteriyor?",
@@ -1866,8 +1866,8 @@
   "route": "/tr/markets/saudi-arabia/overview",
   "section": "markets",
   "name": "Suudi Arabistan: Pazara Genel Bakış",
-  "h1": "Suudi Arabistan'da gıda ticareti, yurt içinde ve yurt dışında.",
-  "answer": "Doğrulanmış Suudi ithalatçılara, perakendecilere ve otellere ulaşın, Suudi gıdasını ihraç edin; ödeme ve gümrük için yerel ortaklarla.",
+  "h1": "Suudi Arabistan'a ve Suudi Arabistan'dan gıda satın.",
+  "answer": "Suudi süpermarketlerine, otellerine ve ithalatçılarına ulaşın; SFDA ve FASAH adımlarında size yol gösterelim.",
   "faqs": [
    {
     "q": "Suudi Arabistan'da T57'ye kimler katılabilir?",
@@ -2346,8 +2346,8 @@
   "route": "/tr/pricing",
   "section": "pricing",
   "name": "Fiyatlandırmaya Genel Bakış",
-  "h1": "Vaadi için değil, gerçekleşen ticaret için ödeyin.",
-  "answer": "Doğrulanmış ticaret için net fiyatlar; ücretler yalnızca ticaret yaptığınızda.",
+  "h1": "Yalnızca ticaret tamamlandığında ödeyin.",
+  "answer": "Üyelik aylık $199'dan başlar. Taraf başına küçük bir ücret yalnızca tamamlanan işlemlerde alınır.",
   "faqs": [
    {
     "q": "Ürün listelemek ya da teklif göndermek için ödeme yapıyor muyum?",
@@ -2794,7 +2794,7 @@
   "section": "partners",
   "name": "Ülke Ortakları",
   "h1": "T57'yi ülkenize getirin.",
-  "answer": "T57'yi ülkenizde ya da şehrinizde, franchise benzeri lisanslı bir ülke iş ortağı olarak yürütün. Doğrulanmış gıda işletmelerinden oluşan yerel ağı siz kurarsınız; platformu, markayı ve desteği T57 sağlar.",
+  "answer": "Ülkenizde T57'nin yetkili iş ortağı olun. Yerel ağı siz kurarsınız; platformu, markayı ve standartları biz sağlarız.",
   "faqs": [
    {
     "q": "Bu bir franchise mı?",
@@ -3053,7 +3053,7 @@
   "section": "who-we-serve",
   "name": "Hükümetler ve Düzenleyici Kurumlar",
   "h1": "Gıda arzınızı görün. Kıtlıktan önce harekete geçin.",
-  "answer": "Bakanlıklar ve kurumlar için anlık ticaret verileri, gıda güvenliği uyarıları ve şeffaf ihaleler tek ekranda.",
+  "answer": "Bakanlıklar ve kurumlar için anlık ticaret verileri, erken uyarılar ve temiz ihaleler.",
   "faqs": [
    {
     "q": "T57 ulusal ve bölgesel gıda güvenliği stratejilerini pratikte nasıl destekler?",
@@ -3072,8 +3072,8 @@
   "route": "/tr/who-we-serve/financiers",
   "section": "who-we-serve",
   "name": "Bankalar ve Finansörler",
-  "h1": "Doğrulanmış gıda ticaretini finanse edin, üstelik daha az riskle.",
-  "answer": "Her işlem; doğrulanmış taraflar, belgeler ve sevkiyat verileriyle, işlemden ödemeye kadar gelir.",
+  "h1": "Doğrulayabildiğiniz gıda ticaretini finanse edin.",
+  "answer": "Doğrulanmış borçlular, belgeler ve sevkiyat aşamaları tek bir kayıtta. Krediyi siz verirsiniz; T57 asla kredi vermez.",
   "faqs": [
    {
     "q": "T57 uyuşmazlıkları nasıl ele alır ve finansörler ile yatırımcılar için riski nasıl azaltır?",
@@ -3100,8 +3100,8 @@
   "route": "/tr/who-we-serve/sellers",
   "section": "who-we-serve",
   "name": "Satıcılar ve İhracatçılar",
-  "h1": "Doğrulanmış alıcılara satın, ödemenizi güvenle alın.",
-  "answer": "Alıcı bulun, şartları kararlaştırın ve ödemenizi alın; finansman ve lojistik aynı platformda.",
+  "h1": "Doğrulanmış alıcılara ihracat yapın. Ödemenizi aşama aşama alın.",
+  "answer": "Doğrulanmış alıcılar size talep gönderir; iş ortağının emanet hesabı, her aşama tamamlandıkça ödemeyi serbest bırakır.",
   "faqs": [
    {
     "q": "T57'nin sanal ticaret masası uyuşmazlıklarda ve risk yönetiminde nasıl yardımcı olur?",
@@ -3128,8 +3128,8 @@
   "route": "/tr/who-we-serve/traders",
   "section": "who-we-serve",
   "name": "Tüccarlar ve Toplayıcılar",
-  "h1": "Daha fazla hacimle ticaret yapın, üstelik daha az riskle.",
-  "answer": "Doğrulanmış iş ortakları, anlık fiyatlar ve her işleme özel finansmanla arz ve talebi daha hızlı eşleştirin.",
+  "h1": "Her işleme finansman bulun. Alıcı da satıcı da sizde kalsın.",
+  "answer": "Doğrulanmış taraflarla back-to-back sözleşmeler; her işlemi finanse etmek için lisanslı kredi kuruluşları yarışır.",
   "faqs": [
    {
     "q": "Aracılar T57'ye katılabilir mi?",
@@ -3156,8 +3156,8 @@
   "route": "/tr/who-we-serve/buyers",
   "section": "who-we-serve",
   "name": "Alıcılar ve İthalatçılar",
-  "h1": "Gıdanızı güvenebileceğiniz tedarikçilerden alın.",
-  "answer": "Doğrulanmış tedarikçileri karşılaştırın, her sevkiyatı takip edin ve yalnızca şartlar yerine geldiğinde ödeyin.",
+  "h1": "Doğrulanmış gıda üreticilerinden doğrudan satın alın.",
+  "answer": "Tek bir talep gönderin, doğrulanmış teklifleri yan yana karşılaştırın ve şartlar yerine geldiğinde iş ortağının emanet hesabı üzerinden ödeyin.",
   "faqs": [
    {
     "q": "T57 tedarikçileri nasıl doğruluyor?",
@@ -3184,8 +3184,8 @@
   "route": "/tr/who-we-serve/enterprises",
   "section": "who-we-serve",
   "name": "Perakende, HoReCa ve Kurumsal Alıcılar",
-  "h1": "Arzınızı güvenceye alın. Marjlarınızı koruyun.",
-  "answer": "Doğrulanmış üreticilerden tedarik edin, fiyat hareketlerini erken görün ve her sözleşmeyi tek yerden yürütün.",
+  "h1": "Tüm tedarikçileriniz için tek bir satın alma masası.",
+  "answer": "Doğrulanmış tedarikçiler, onaylar ve her sözleşme, sevkiyat ve ödeme; denetçilerinizin kontrol edebileceği tek bir kayıtta.",
   "faqs": [
    {
     "q": "İmalatçılar ve kurumsal şirketler neden şimdi dijital bir ticaret iş akışına ihtiyaç duyuyor?",
@@ -3213,7 +3213,7 @@
   "section": "who-we-serve",
   "name": "Gıda İşleyicileri",
   "h1": "Tesisinizi tam kapasiteyle çalıştırın.",
-  "answer": "Doğrulanmış çiftliklerden istikrarlı hammadde; kalite kontrolü ve finansman işin içinde.",
+  "answer": "Doğrulanmış çiftlik ve değirmenlerden, sevkiyattan önce kalitesi kontrol edilmiş hammadde için sözleşme yapın.",
   "faqs": [
    {
     "q": "Ticaretin dijitalleşmesi gıda işleyicileri için neden özellikle önemli?",
@@ -3240,8 +3240,8 @@
   "route": "/tr/who-we-serve/cooperatives",
   "section": "who-we-serve",
   "name": "Kooperatifler ve Üretici Örgütleri",
-  "h1": "Üyelerinizin hasadını pazar gücüne dönüştürün.",
-  "answer": "Ürünleri birleştirin, daha büyük alıcılara ulaşın ve üyelere daha hızlı ödeme yapın; her işlem kayıtta.",
+  "h1": "Üyelerinizin hasadını birlikte satın, daha fazla kazanın.",
+  "answer": "Üye hacimlerini birleştirin, daha büyük alıcıları ve ihaleleri kazanın, her çiftçiye daha hızlı ödeme yapın.",
   "faqs": [
    {
     "q": "Kooperatifler ve üretici örgütleri neden T57 gibi dijital platformlara ihtiyaç duyar?",
@@ -3260,8 +3260,8 @@
   "route": "/tr/who-we-serve/collaborators",
   "section": "who-we-serve",
   "name": "İş Ortakları ve İş Birlikçiler",
-  "h1": "Daha güçlü bir gıda sistemini birlikte kuralım.",
-  "answer": "Kalkınma ortakları, birlikler ve kurumlar tek bir platformla tüm gıda zincirine ulaşır.",
+  "h1": "Programınızı anlık ticaret verileriyle yönetin.",
+  "answer": "Kurumlar doğrulanmış çiftçilere, KOBİ'lere ve tüccarlara ulaşır, sonuçları işlem işlem ölçer.",
   "faqs": [
    {
     "q": "T57 iş ortakları daha iyi pazarlara ulaşmama nasıl yardımcı olur?",
@@ -3288,8 +3288,8 @@
   "route": "/tr/who-we-serve/service-providers",
   "section": "who-we-serve",
   "name": "Hizmet Sağlayıcılar",
-  "h1": "Uzmanlığınızı düzenli işe dönüştürün.",
-  "answer": "Gözetim, lojistik, hukuk ve danışmanlık firmaları, onlara ihtiyaç duyan canlı işlemlerle eşleşir.",
+  "h1": "Canlı gıda işlemlerinden doğrudan iş alın.",
+  "answer": "Gözetim, nakliye, gümrük ve sertifikasyon işleri doğrudan doğrulanmış işlemlerden gelir.",
   "faqs": [
    {
     "q": "T57'nin sıradan bir pazar yerinden farkı nedir?",
@@ -3317,7 +3317,7 @@
   "section": "who-we-serve",
   "name": "Çiftçiler ve Üreticiler",
   "h1": "Hasadınızı adil fiyata satın.",
-  "answer": "Doğrulanmış alıcılara doğrudan ulaşın, piyasa fiyatlarını görün ve ödemenizi daha hızlı alın.",
+  "answer": "Üretici örgütünüz veya kooperatifiniz aracılığıyla katılın. Günün fiyatını görün, kontrol edilmiş alıcılarla tanışın, ödemenizi teslimatta alın.",
   "faqs": [
    {
     "q": "Bir çiftçi ya da üretici neden T57 gibi dijital bir ticaret platformu kullanmalı?",

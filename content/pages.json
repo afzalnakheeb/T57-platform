@@ -81,7 +81,7 @@
   "section": "why-t57",
   "name": "Club Membership",
   "h1": "Trade only with verified members.",
-  "answer": "Verified food-trade club that matches vetted counterparties, reducing fraud and defaults across every global agri transaction.",
+  "answer": "Every member's business, owners, documents and sanctions status are checked before anyone trades.",
   "faqs": [
    {
     "q": "How does the T57 trust score help farmers and producers, cooperatives, and FPOs reduce risk?",
@@ -1759,8 +1759,8 @@
   "route": "/markets",
   "section": "markets",
   "name": "Markets",
-  "h1": "Five founding markets. One verified network.",
-  "answer": "Saudi Arabia, the UAE, India, Malaysia and Türkiye. Buy and sell across all five on one trade record.",
+  "h1": "Sell into five markets from day one.",
+  "answer": "Pick your country and corridor to see buyers, rules, documents and local partners.",
   "faqs": [
    {
     "q": "Which countries does T57 operate in?",
@@ -1866,8 +1866,8 @@
   "route": "/markets/saudi-arabia/overview",
   "section": "markets",
   "name": "Saudi Arabia: Market Overview",
-  "h1": "Trade food in Saudi Arabia, at home and abroad.",
-  "answer": "Reach verified Saudi importers, retailers and hotels, and export Saudi food, with local partners for payments and customs.",
+  "h1": "Sell food to and from Saudi Arabia.",
+  "answer": "Reach Saudi supermarkets, hotels and importers, with SFDA and FASAH steps guided.",
   "faqs": [
    {
     "q": "Who can join T57 in Saudi Arabia?",
@@ -2346,8 +2346,8 @@
   "route": "/pricing",
   "section": "pricing",
   "name": "Pricing Overview",
-  "h1": "Pay for trade that happens, not the promise of it.",
-  "answer": "Clear prices for verified trade, and fees only when you trade.",
+  "h1": "Pay only when a trade completes.",
+  "answer": "Membership from $199 a month. A small fee per side applies only to completed trades.",
   "faqs": [
    {
     "q": "Do I pay to list products or send quotes?",
@@ -2794,7 +2794,7 @@
   "section": "partners",
   "name": "Country Partners",
   "h1": "Bring T57 to your country.",
-  "answer": "Run T57 in your country or city as a licensed country partner, like a franchise. You build the local network of verified food businesses; T57 provides the platform, the brand and the support.",
+  "answer": "Become T57's authorised partner in your country. You build the local network; we provide the platform, brand and standards.",
   "faqs": [
    {
     "q": "Is this a franchise?",
@@ -3053,7 +3053,7 @@
   "section": "who-we-serve",
   "name": "Governments and Regulators",
   "h1": "See your food supply. Act before shortages.",
-  "answer": "Live trade data, food-security alerts and transparent tenders, in one view for ministries and agencies.",
+  "answer": "Live trade data, early warnings and clean tenders for ministries and agencies.",
   "faqs": [
    {
     "q": "How does T57 support national and regional food-security strategies in practice?",
@@ -3072,8 +3072,8 @@
   "route": "/who-we-serve/financiers",
   "section": "who-we-serve",
   "name": "Banks and Financiers",
-  "h1": "Finance verified food trade, with less risk.",
-  "answer": "Every deal comes with verified parties, documents and shipment data, from deal to settlement.",
+  "h1": "Finance food trades you can verify.",
+  "answer": "Verified borrowers, documents and shipment milestones on one record. You lend; T57 never does.",
   "faqs": [
    {
     "q": "How does T57 handle disputes and reduce risks for financiers and investors?",
@@ -3100,8 +3100,8 @@
   "route": "/who-we-serve/sellers",
   "section": "who-we-serve",
   "name": "Sellers and Exporters",
-  "h1": "Sell to verified buyers, and get paid safely.",
-  "answer": "Find buyers, agree terms and get paid, with finance and logistics on one platform.",
+  "h1": "Export to verified buyers. Get paid on milestones.",
+  "answer": "Verified buyers send you requests, and partner escrow releases payment as each milestone is met.",
   "faqs": [
    {
     "q": "How does T57's virtual trade desk help in disputes and risk management?",
@@ -3128,8 +3128,8 @@
   "route": "/who-we-serve/traders",
   "section": "who-we-serve",
   "name": "Traders and Aggregators",
-  "h1": "Trade more volume, with less risk.",
-  "answer": "Match supply and demand faster, with verified partners, live prices and finance for each deal.",
+  "h1": "Fund every deal. Keep both sides yours.",
+  "answer": "Back-to-back contracts with verified parties, and licensed lenders compete to finance each trade.",
   "faqs": [
    {
     "q": "Can intermediaries join T57?",
@@ -3156,8 +3156,8 @@
   "route": "/who-we-serve/buyers",
   "section": "who-we-serve",
   "name": "Buyers and Importers",
-  "h1": "Source food from suppliers you can trust.",
-  "answer": "Compare verified suppliers, track every shipment and pay only when terms are met.",
+  "h1": "Buy direct from verified food producers.",
+  "answer": "Send one request, compare verified quotes side by side, and pay through partner escrow when terms are met.",
   "faqs": [
    {
     "q": "How does T57 verify suppliers?",
@@ -3184,8 +3184,8 @@
   "route": "/who-we-serve/enterprises",
   "section": "who-we-serve",
   "name": "Retail, HoReCa and Enterprise Buyers",
-  "h1": "Secure supply. Protect your margins.",
-  "answer": "Source from verified producers, see price moves early and run every contract in one place.",
+  "h1": "One sourcing desk for every supplier.",
+  "answer": "Verified suppliers, approvals, and every contract, shipment and payment on one record your auditors can check.",
   "faqs": [
    {
     "q": "Why do manufacturers and enterprises need a digital trade workflow now?",
@@ -3213,7 +3213,7 @@
   "section": "who-we-serve",
   "name": "Food Processors",
   "h1": "Keep your plant running at full capacity.",
-  "answer": "Steady raw materials from verified farms, with quality checks and finance built in.",
+  "answer": "Contract raw materials from verified farms and mills, checked for quality before they ship.",
   "faqs": [
    {
     "q": "Why is digitizing trade especially important for food processors?",
@@ -3240,8 +3240,8 @@
   "route": "/who-we-serve/cooperatives",
   "section": "who-we-serve",
   "name": "Cooperatives and FPOs",
-  "h1": "Turn your members' harvest into market power.",
-  "answer": "Pool produce, reach bigger buyers and pay members faster, with every trade on record.",
+  "h1": "Sell members' harvest together, for more.",
+  "answer": "Pool member volumes, win bigger buyers and tenders, and pay every farmer faster.",
   "faqs": [
    {
     "q": "Why do cooperatives & FPOs need digital platforms like T57?",
@@ -3260,8 +3260,8 @@
   "route": "/who-we-serve/collaborators",
   "section": "who-we-serve",
   "name": "Partners and Collaborators",
-  "h1": "Build a stronger food system, together.",
-  "answer": "Development partners, associations and institutions reach the whole food chain through one platform.",
+  "h1": "Run your programme on live trade data.",
+  "answer": "Institutions reach verified farmers, SMEs and traders, and measure results trade by trade.",
   "faqs": [
    {
     "q": "How do T57 partners help me reach better markets?",
@@ -3288,8 +3288,8 @@
   "route": "/who-we-serve/service-providers",
   "section": "who-we-serve",
   "name": "Service Providers",
-  "h1": "Turn your expertise into steady work.",
-  "answer": "Inspection, logistics, legal and advisory firms are matched to live trades that need them.",
+  "h1": "Get booked on live food trades.",
+  "answer": "Inspection, freight, customs and certification jobs come straight from verified trades.",
   "faqs": [
    {
     "q": "How is T57 different from a simple marketplace?",
@@ -3317,7 +3317,7 @@
   "section": "who-we-serve",
   "name": "Farmers and Producers",
   "h1": "Sell your harvest at a fair price.",
-  "answer": "Reach verified buyers directly, see market prices and get paid faster.",
+  "answer": "Join through your FPO or co-op. See today's price, meet checked buyers and get paid on delivery.",
   "faqs": [
    {
     "q": "Why should a farmer or producer use a digital trade platform like T57?",

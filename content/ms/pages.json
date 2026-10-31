@@ -81,7 +81,7 @@
   "section": "why-t57",
   "name": "Keahlian Kelab",
   "h1": "Berdagang hanya dengan ahli yang disahkan.",
-  "answer": "Kelab perdagangan makanan yang disahkan, memadankan rakan dagang yang telah disaring, mengurangkan penipuan dan kemungkiran dalam setiap transaksi agro global.",
+  "answer": "Perniagaan, pemilik, dokumen dan status sekatan setiap ahli disemak sebelum sebarang dagangan berlaku.",
   "faqs": [
    {
     "q": "Bagaimana skor amanah T57 membantu petani dan pengeluar, koperasi serta pertubuhan peladang mengurangkan risiko?",
@@ -1759,8 +1759,8 @@
   "route": "/ms/markets",
   "section": "markets",
   "name": "Pasaran",
-  "h1": "Lima pasaran pengasas. Satu rangkaian yang disahkan.",
-  "answer": "Arab Saudi, UAE, India, Malaysia dan Türkiye. Beli dan jual merentas kelima-limanya dalam satu rekod dagangan.",
+  "h1": "Jual ke lima pasaran sejak hari pertama.",
+  "answer": "Pilih negara dan koridor anda untuk melihat pembeli, peraturan, dokumen dan rakan kongsi tempatan.",
   "faqs": [
    {
     "q": "Di negara manakah T57 beroperasi?",
@@ -1866,8 +1866,8 @@
   "route": "/ms/markets/saudi-arabia/overview",
   "section": "markets",
   "name": "Arab Saudi: Gambaran Keseluruhan Pasaran",
-  "h1": "Berdagang makanan di Arab Saudi, di dalam dan luar negara.",
-  "answer": "Capai pengimport, peruncit dan hotel Saudi yang disahkan, dan eksport makanan Saudi, dengan rakan kongsi tempatan untuk pembayaran dan kastam.",
+  "h1": "Jual makanan ke Arab Saudi dan dari Arab Saudi.",
+  "answer": "Tembusi pasar raya, hotel dan pengimport Saudi, dengan panduan langkah demi langkah untuk SFDA dan FASAH.",
   "faqs": [
    {
     "q": "Siapa yang boleh menyertai T57 di Arab Saudi?",
@@ -2346,8 +2346,8 @@
   "route": "/ms/pricing",
   "section": "pricing",
   "name": "Gambaran Keseluruhan Harga",
-  "h1": "Bayar untuk dagangan yang benar-benar berlaku, bukan janjinya.",
-  "answer": "Harga yang jelas untuk dagangan yang disahkan, dan yuran hanya apabila anda berdagang.",
+  "h1": "Bayar hanya apabila dagangan selesai.",
+  "answer": "Keahlian dari $199 sebulan. Yuran kecil bagi setiap pihak dikenakan hanya atas dagangan yang selesai.",
   "faqs": [
    {
     "q": "Adakah saya perlu membayar untuk menyenaraikan produk atau menghantar sebut harga?",
@@ -2794,7 +2794,7 @@
   "section": "partners",
   "name": "Rakan Kongsi Negara",
   "h1": "Bawa T57 ke negara anda.",
-  "answer": "Jalankan T57 di negara atau bandar anda sebagai rakan kongsi negara berlesen, seperti francais. Anda membina rangkaian tempatan perniagaan makanan yang disahkan; T57 menyediakan platform, jenama dan sokongan.",
+  "answer": "Jadilah rakan kongsi sah T57 di negara anda. Anda membina rangkaian tempatan; kami menyediakan platform, jenama dan piawaian.",
   "faqs": [
    {
     "q": "Adakah ini satu francais?",
@@ -3053,7 +3053,7 @@
   "section": "who-we-serve",
   "name": "Kerajaan dan Pengawal Selia",
   "h1": "Lihat bekalan makanan anda. Bertindak sebelum berlaku kekurangan.",
-  "answer": "Data dagangan masa nyata, amaran sekuriti makanan dan tender yang telus, dalam satu paparan untuk kementerian dan agensi.",
+  "answer": "Data dagangan masa nyata, amaran awal dan tender yang bersih untuk kementerian dan agensi.",
   "faqs": [
    {
     "q": "Bagaimanakah T57 menyokong strategi sekuriti makanan nasional dan serantau secara praktikal?",
@@ -3072,8 +3072,8 @@
   "route": "/ms/who-we-serve/financiers",
   "section": "who-we-serve",
   "name": "Bank dan Pembiaya",
-  "h1": "Biayai dagangan makanan yang disahkan, dengan risiko yang lebih rendah.",
-  "answer": "Setiap urus niaga disertakan pihak, dokumen dan data penghantaran yang disahkan, dari perjanjian hingga penyelesaian.",
+  "h1": "Biayai dagangan makanan yang boleh anda sahkan.",
+  "answer": "Peminjam yang disahkan, dokumen dan peringkat penghantaran dalam satu rekod. Anda yang memberi pinjaman; T57 tidak sekali-kali.",
   "faqs": [
    {
     "q": "Bagaimanakah T57 mengendalikan pertikaian dan mengurangkan risiko bagi pembiaya dan pelabur?",
@@ -3100,8 +3100,8 @@
   "route": "/ms/who-we-serve/sellers",
   "section": "who-we-serve",
   "name": "Penjual dan Pengeksport",
-  "h1": "Jual kepada pembeli yang disahkan, dan terima bayaran dengan selamat.",
-  "answer": "Cari pembeli, capai persetujuan terma dan terima bayaran, dengan pembiayaan dan logistik dalam satu platform.",
+  "h1": "Eksport kepada pembeli yang disahkan. Terima bayaran ikut peringkat.",
+  "answer": "Pembeli yang disahkan menghantar permintaan kepada anda, dan akaun eskrow rakan kongsi melepaskan bayaran sebaik setiap peringkat dicapai.",
   "faqs": [
    {
     "q": "Bagaimanakah meja dagangan maya T57 membantu dalam pertikaian dan pengurusan risiko?",
@@ -3128,8 +3128,8 @@
   "route": "/ms/who-we-serve/traders",
   "section": "who-we-serve",
   "name": "Pedagang dan Pengagregat",
-  "h1": "Dagangkan jumlah yang lebih besar, dengan risiko yang lebih rendah.",
-  "answer": "Padankan penawaran dan permintaan dengan lebih pantas, bersama rakan kongsi yang disahkan, harga semasa dan pembiayaan bagi setiap urus niaga.",
+  "h1": "Dapatkan pembiayaan untuk setiap urus niaga. Pembeli dan penjual kekal milik anda.",
+  "answer": "Kontrak back-to-back dengan pihak yang disahkan, dan pemberi pinjaman berlesen bersaing untuk membiayai setiap dagangan.",
   "faqs": [
    {
     "q": "Bolehkah orang tengah menyertai T57?",
@@ -3156,8 +3156,8 @@
   "route": "/ms/who-we-serve/buyers",
   "section": "who-we-serve",
   "name": "Pembeli dan Pengimport",
-  "h1": "Dapatkan bekalan makanan daripada pembekal yang boleh anda percayai.",
-  "answer": "Bandingkan pembekal yang disahkan, jejaki setiap penghantaran dan bayar hanya apabila terma dipenuhi.",
+  "h1": "Beli terus daripada pengeluar makanan yang disahkan.",
+  "answer": "Hantar satu permintaan, bandingkan sebut harga yang disahkan secara bersebelahan, dan bayar melalui akaun eskrow rakan kongsi apabila terma dipenuhi.",
   "faqs": [
    {
     "q": "Bagaimanakah T57 mengesahkan pembekal?",
@@ -3184,8 +3184,8 @@
   "route": "/ms/who-we-serve/enterprises",
   "section": "who-we-serve",
   "name": "Pembeli Runcit, HoReCa dan Perusahaan",
-  "h1": "Pastikan bekalan. Lindungi margin anda.",
-  "answer": "Dapatkan bekalan daripada pengeluar yang disahkan, kesan pergerakan harga lebih awal dan uruskan setiap kontrak di satu tempat.",
+  "h1": "Satu meja perolehan untuk setiap pembekal.",
+  "answer": "Pembekal yang disahkan, kelulusan, serta setiap kontrak, penghantaran dan bayaran dalam satu rekod yang boleh disemak oleh juruaudit anda.",
   "faqs": [
    {
     "q": "Mengapa pengilang dan perusahaan memerlukan aliran kerja dagangan digital sekarang?",
@@ -3213,7 +3213,7 @@
   "section": "who-we-serve",
   "name": "Pemproses Makanan",
   "h1": "Pastikan kilang anda beroperasi pada kapasiti penuh.",
-  "answer": "Bekalan bahan mentah yang stabil daripada ladang yang disahkan, dengan semakan kualiti dan pembiayaan sedia terbina.",
+  "answer": "Kontrak bahan mentah daripada ladang dan kilang yang disahkan, dengan kualiti disemak sebelum dihantar.",
   "faqs": [
    {
     "q": "Mengapa pendigitalan dagangan amat penting bagi pemproses makanan?",
@@ -3240,8 +3240,8 @@
   "route": "/ms/who-we-serve/cooperatives",
   "section": "who-we-serve",
   "name": "Koperasi dan Pertubuhan Peladang",
-  "h1": "Jadikan hasil tuaian ahli anda kuasa di pasaran.",
-  "answer": "Himpunkan hasil, capai pembeli yang lebih besar dan bayar ahli dengan lebih cepat, dengan setiap dagangan direkodkan.",
+  "h1": "Jual hasil tuaian ahli bersama-sama, untuk pulangan lebih tinggi.",
+  "answer": "Himpunkan jumlah hasil ahli, menangi pembeli dan tender yang lebih besar, dan bayar setiap peladang dengan lebih cepat.",
   "faqs": [
    {
     "q": "Mengapa koperasi & pertubuhan peladang memerlukan platform digital seperti T57?",
@@ -3260,8 +3260,8 @@
   "route": "/ms/who-we-serve/collaborators",
   "section": "who-we-serve",
   "name": "Rakan Kongsi dan Rakan Kerjasama",
-  "h1": "Bina sistem makanan yang lebih kukuh, bersama-sama.",
-  "answer": "Rakan pembangunan, persatuan dan institusi menjangkau seluruh rantaian makanan melalui satu platform.",
+  "h1": "Jalankan program anda berpandukan data dagangan masa nyata.",
+  "answer": "Institusi menjangkau peladang, PKS dan pedagang yang disahkan, serta mengukur hasil bagi setiap dagangan.",
   "faqs": [
    {
     "q": "Bagaimanakah rakan kongsi T57 membantu saya mencapai pasaran yang lebih baik?",
@@ -3288,8 +3288,8 @@
   "route": "/ms/who-we-serve/service-providers",
   "section": "who-we-serve",
   "name": "Penyedia Perkhidmatan",
-  "h1": "Jadikan kepakaran anda sumber kerja yang berterusan.",
-  "answer": "Firma pemeriksaan, logistik, guaman dan khidmat nasihat dipadankan dengan dagangan aktif yang memerlukan mereka.",
+  "h1": "Dapatkan tempahan kerja daripada dagangan makanan aktif.",
+  "answer": "Kerja pemeriksaan, pengangkutan, kastam dan pensijilan datang terus daripada dagangan yang disahkan.",
   "faqs": [
    {
     "q": "Apakah yang membezakan T57 daripada pasaran dalam talian biasa?",
@@ -3317,7 +3317,7 @@
   "section": "who-we-serve",
   "name": "Petani dan Pengeluar",
   "h1": "Jual hasil tuaian anda pada harga yang adil.",
-  "answer": "Capai pembeli yang disahkan secara terus, lihat harga pasaran dan terima bayaran lebih cepat.",
+  "answer": "Sertai melalui pertubuhan peladang atau koperasi anda. Lihat harga hari ini, temui pembeli yang telah disemak dan terima bayaran sebaik barang diserahkan.",
   "faqs": [
    {
     "q": "Mengapa petani atau pengeluar patut menggunakan platform dagangan digital seperti T57?",
