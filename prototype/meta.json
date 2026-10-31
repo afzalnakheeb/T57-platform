@@ -4,8 +4,8 @@
   "description": "T57 gives governments and regulators live food security intelligence and transparent procurement on one platform, to cut waste and steady prices."
  },
  "financiers": {
-  "title": "T57 for Financiers | Vetted Food & Agri Opportunities",
-  "description": "Deploy capital into curated, contract-backed food and agri trades, with faster due diligence, full transaction visibility and tighter counterparty risk."
+  "title": "T57 for Banks & Financiers | Finance Verified Food Trade",
+  "description": "Finance food and agri trades you can verify: vetted borrowers, documents and shipment milestones on one record. You lend; T57 never does."
  },
  "sellers": {
   "title": "T57 for Sellers & Exporters | Trusted Agri Export Platform",
@@ -16,8 +16,8 @@
   "description": "T57 helps farmers and producers reach verified buyers, see market prices, sign secure contracts, get paid faster and access trade finance."
  },
  "enterprises": {
-  "title": "T57 for Manufacturers & Enterprises | Faster Food Trade",
-  "description": "T57 helps food manufacturers and enterprises digitize sourcing, RFQs, payments, trade finance and audit trails on one secure platform."
+  "title": "T57 for Retail, HoReCa & Enterprise Buyers",
+  "description": "Retailers, HoReCa groups and food enterprises run sourcing, supplier approvals, contracts, shipments and payments on one record auditors can check."
  },
  "food-processors": {
   "title": "T57 for Food Processors | Supply Assurance & Trade Execution",
@@ -80,8 +80,8 @@
   "description": "Turn verified invoices, warehouse receipts and bills of lading into unique digital assets that lenders can trust and fund, on T57."
  },
  "elc-15-minutes": {
-  "title": "Electronic Letter of Credit in About 15 Minutes | T57",
-  "description": "Electronic LCs built from your verified contract and issued by partner banks in about 15 minutes after approval. Digital documents, fewer discrepancies."
+  "title": "Electronic Letter of Credit in Hours, Not Weeks | T57",
+  "description": "Electronic LCs built from your verified contract and issued by partner banks within hours of approval. Digital documents, fewer discrepancies."
  },
  "escrow-payments": {
   "title": "Escrow Payments for Food Trade | Pay on Milestones | T57",
@@ -145,7 +145,7 @@
  },
  "cap-elc": {
   "title": "Electronic Letter of Credit (eLC) for Food Trade | T57",
-  "description": "LCs built from your contract, issued by partner banks in about 15 minutes after approval, with AI discrepancy checks and digital presentation on T57."
+  "description": "LCs built from your contract, issued by partner banks within hours of approval, with AI discrepancy checks and digital presentation on T57."
  },
  "cap-banking": {
   "title": "Banking & Money Movement for Food Trade | T57",

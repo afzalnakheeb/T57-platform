@@ -199,12 +199,12 @@
  "elc-15-minutes": {
   "route": "/tr/why-t57/elc-15-minutes",
   "section": "why-t57",
-  "name": "15 Dakikada e-Akreditif",
+  "name": "Haftalar Değil, Saatler İçinde e-Akreditif",
   "h1": "Akreditifler, sözleşmenizden oluşturulur.",
-  "answer": "Başvurunuz onaylandıktan sonra yaklaşık 15 dakikada açılan elektronik akreditifler.",
+  "answer": "Başvurunuz onaylandıktan sonra saatler içinde açılan elektronik akreditifler.",
   "faqs": [
    {
-    "q": "\"15 dakika\" ne anlama geliyor?",
+    "q": "\"Haftalar değil, saatler\" ne anlama geliyor?",
     "a": "Başvurunuz onaylandıktan sonra iş ortağı bankanın elektronik akreditifi açması için hedeflenen süredir. Onayın kendisi bankanın kendi kredi sürecine bağlıdır."
    },
    {
@@ -212,8 +212,8 @@
     "a": "Hayır. Akreditifleri lisanslı iş ortağı bankalar açar. T57 başvuruyu ticaret kaydınızdan hazırlar ve sizi onlarla buluşturur."
    }
   ],
-  "title": "Yaklaşık 15 Dakikada Elektronik Akreditif | T57",
-  "description": "Doğrulanmış sözleşmenizden oluşturulan, onaydan sonra iş ortağı bankalarca yaklaşık 15 dakikada açılan e-akreditifler. Dijital belge, daha az uyumsuzluk.",
+  "title": "Haftalar Değil, Saatler İçinde Elektronik Akreditif | T57",
+  "description": "Doğrulanmış sözleşmenizden oluşturulan, onaydan sonra iş ortağı bankalarca saatler içinde açılan e-akreditifler. Dijital belge, daha az uyumsuzluk.",
   "parent": "why-t57"
  },
  "escrow-payments": {
@@ -567,7 +567,7 @@
   "answer": "Sözleşmenizden oluşturulan, dijital olarak açılan ve kâğıtsız ibraz edilen akreditifler.",
   "faqs": [
    {
-    "q": "\"Yaklaşık 15 dakika\" ne anlama geliyor?",
+    "q": "\"Saatler içinde\" ne anlama geliyor?",
     "a": "Banka başvurunuzu onayladıktan sonra açılış için hedeflenen süredir. Onay, bankanın olağan kredi sürecine bağlıdır."
    },
    {
@@ -580,7 +580,7 @@
    }
   ],
   "title": "Gıda Ticareti İçin Elektronik Akreditif (e-akreditif) | T57",
-  "description": "Sözleşmenizden oluşturulup onaydan sonra yaklaşık 15 dakikada iş ortağı bankalarca açılan akreditifler; yapay zekâ uyumsuzluk kontrolü, dijital ibraz.",
+  "description": "Sözleşmenizden oluşturulup onaydan sonra saatler içinde iş ortağı bankalarca açılan akreditifler; yapay zekâ uyumsuzluk kontrolü, dijital ibraz.",
   "parent": "cap-trust-payments"
  },
  "cap-banking": {
@@ -3071,7 +3071,7 @@
  "financiers": {
   "route": "/tr/who-we-serve/financiers",
   "section": "who-we-serve",
-  "name": "Finansörler ve Yatırımcılar",
+  "name": "Bankalar ve Finansörler",
   "h1": "Doğrulanmış gıda ticaretini finanse edin, üstelik daha az riskle.",
   "answer": "Her işlem; doğrulanmış taraflar, belgeler ve sevkiyat verileriyle, işlemden ödemeye kadar gelir.",
   "faqs": [
@@ -3092,8 +3092,8 @@
     "a": "Gıda ve tarım işlemleri çoğu zaman parçalı tedarik zincirleri, sınır ötesi karşı taraflar ve iklim ya da lojistik dalgalanması içerir; bu da görünürlüğü ve doğrulamayı özellikle değerli kılar. Uluslararası Tarımsal Kalkınma Fonu (IFAD), küçük ölçekli üreticilerin finansmana yeterince erişemediğini ve risk boşlukları sermayeyi caydırdığı için büyük finansman ihtiyaçlarının karşılanmadığını belirtiyor."
    }
   ],
-  "title": "Finansörler İçin T57 | İncelenmiş Gıda ve Tarım Fırsatları",
-  "description": "Sermayenizi sözleşmeye dayalı, seçilmiş gıda ve tarım işlemlerine yönlendirin: daha hızlı durum tespiti, tam görünürlük, daha düşük karşı taraf riski.",
+  "title": "Bankalar ve Finansörler İçin T57 | Doğrulanmış Gıda Ticareti",
+  "description": "Doğrulayabildiğiniz gıda işlemlerini finanse edin: incelenmiş borçlular, belgeler ve sevkiyat aşamaları tek kayıtta. Krediyi siz verirsiniz, T57 vermez.",
   "parent": "who-we-serve"
  },
  "sellers": {
@@ -3183,7 +3183,7 @@
  "enterprises": {
   "route": "/tr/who-we-serve/enterprises",
   "section": "who-we-serve",
-  "name": "İmalatçılar ve Kurumsal Şirketler",
+  "name": "Perakende, HoReCa ve Kurumsal Alıcılar",
   "h1": "Arzınızı güvenceye alın. Marjlarınızı koruyun.",
   "answer": "Doğrulanmış üreticilerden tedarik edin, fiyat hareketlerini erken görün ve her sözleşmeyi tek yerden yürütün.",
   "faqs": [
@@ -3204,8 +3204,8 @@
     "a": "Evet. T57 belgeleri, aşamaları, karşı tarafları ve ödeme kayıtlarını izlenebilir tek bir iş akışında birbirine bağlayacak şekilde tasarlandı. Bu da kurumsal ekiplerin karmaşık ticaret operasyonlarında iç kontrolleri, incelemeleri ve denetim gerekliliklerini desteklemesini kolaylaştırır."
    }
   ],
-  "title": "İmalatçılar ve Kurumsal Alıcılar İçin T57",
-  "description": "T57, gıda imalatçılarının ve kurumsal alıcıların tedariki, teklif taleplerini, ödemeleri ve finansmanı tek platformda yönetmesini sağlar.",
+  "title": "Perakende, HoReCa ve Kurumsal Alıcılar İçin T57",
+  "description": "Perakendeciler, otel-restoran grupları ve gıda şirketleri tedarik, tedarikçi onayı, sözleşme, sevkiyat ve ödemeyi denetlenebilir tek kayıtta yürütür.",
   "parent": "who-we-serve"
  },
  "food-processors": {

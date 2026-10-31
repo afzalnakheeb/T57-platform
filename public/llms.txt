@@ -46,11 +46,11 @@
 ## Who T57 serves
 
 - [Governments and Regulators](https://www.t57.ai/who-we-serve/governments): Live trade data, food-security alerts and transparent tenders, in one view for ministries and agencies.
-- [Financiers and Investors](https://www.t57.ai/who-we-serve/financiers): Every deal comes with verified parties, documents and shipment data, from deal to settlement.
+- [Banks and Financiers](https://www.t57.ai/who-we-serve/financiers): Every deal comes with verified parties, documents and shipment data, from deal to settlement.
 - [Sellers and Exporters](https://www.t57.ai/who-we-serve/sellers): Find buyers, agree terms and get paid, with finance and logistics on one platform.
 - [Traders and Aggregators](https://www.t57.ai/who-we-serve/traders): Match supply and demand faster, with verified partners, live prices and finance for each deal.
 - [Buyers and Importers](https://www.t57.ai/who-we-serve/buyers): Compare verified suppliers, track every shipment and pay only when terms are met.
-- [Manufacturers and Enterprises](https://www.t57.ai/who-we-serve/enterprises): Source from verified producers, see price moves early and run every contract in one place.
+- [Retail, HoReCa and Enterprise Buyers](https://www.t57.ai/who-we-serve/enterprises): Source from verified producers, see price moves early and run every contract in one place.
 - [Food Processors](https://www.t57.ai/who-we-serve/food-processors): Steady raw materials from verified farms, with quality checks and finance built in.
 - [Cooperatives and FPOs](https://www.t57.ai/who-we-serve/cooperatives): Pool produce, reach bigger buyers and pay members faster, with every trade on record.
 - [Partners and Collaborators](https://www.t57.ai/who-we-serve/collaborators): Development partners, associations and institutions reach the whole food chain through one platform.

@@ -126,5 +126,8 @@
 "See how deals reach you": "تعرّف كيف تصلك الصفقات",
 "T57 shortens slow due diligence and weak transaction visibility that constrain capital, and goes beyond listing opportunities to manage execution, disputes, documentation and follow-through.": "تختصر T57 الفحص النافي للجهالة وتكشف تفاصيل الصفقة، ولا تكتفي بعرض الفرص، بل تتولى التنفيذ والنزاعات والمستندات والمتابعة حتى النهاية.",
 "Each milestone is verified and written to a shared record before the next tranche is released. If something goes wrong at loading, later payments stop. And unlike bank-only networks, T57 shows you every party to the trade: buyer, seller, insurer, forwarder, shipping line and inspector.": "تُوثَّق كل مرحلة وتُقيَّد في سجل مشترك قبل صرف الدفعة التالية، وإن تعثر شيء عند التحميل توقفت الدفعات اللاحقة. وبخلاف الشبكات المقصورة على البنوك، تعرض لك T57 كل أطراف الصفقة: المشتري، والبائع، وشركة التأمين، ووكيل الشحن، وخط الملاحة، والمفتش.",
-"Request a pipeline briefing": "اطلب عرضًا لفرص التمويل"
+"Request a pipeline briefing": "اطلب عرضًا لفرص التمويل",
+"Banks and Financiers": "البنوك والمموّلون",
+"T57 for Banks & Financiers | Finance Verified Food Trade": "T57 للبنوك والمموّلين | موّل صفقات غذاء موثَّقة",
+"Finance food and agri trades you can verify: vetted borrowers, documents and shipment milestones on one record. You lend; T57 never does.": "موّل صفقات غذائية وزراعية يمكنك التحقق منها: مقترضون مدقَّقون ومستندات ومراحل شحن في سجلّ واحد. أنت تُقرض، وT57 لا تُقرض أبدًا."
 }
