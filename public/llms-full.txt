@@ -28,22 +28,22 @@
 ## Who we serve
 
 - [Who We Serve](https://www.t57.ai/who-we-serve): T57 exists to connect everyone who grows, makes, buys, finances and regulates food on one trusted record.
-- [Governments and Regulators](https://www.t57.ai/who-we-serve/governments): Live trade data, food-security alerts and transparent tenders, in one view for ministries and agencies.
-- [Banks and Financiers](https://www.t57.ai/who-we-serve/financiers): Every deal comes with verified parties, documents and shipment data, from deal to settlement.
-- [Sellers and Exporters](https://www.t57.ai/who-we-serve/sellers): Find buyers, agree terms and get paid, with finance and logistics on one platform.
-- [Traders and Aggregators](https://www.t57.ai/who-we-serve/traders): Match supply and demand faster, with verified partners, live prices and finance for each deal.
-- [Buyers and Importers](https://www.t57.ai/who-we-serve/buyers): Compare verified suppliers, track every shipment and pay only when terms are met.
-- [Retail, HoReCa and Enterprise Buyers](https://www.t57.ai/who-we-serve/enterprises): Source from verified producers, see price moves early and run every contract in one place.
-- [Food Processors](https://www.t57.ai/who-we-serve/food-processors): Steady raw materials from verified farms, with quality checks and finance built in.
-- [Cooperatives and FPOs](https://www.t57.ai/who-we-serve/cooperatives): Pool produce, reach bigger buyers and pay members faster, with every trade on record.
-- [Partners and Collaborators](https://www.t57.ai/who-we-serve/collaborators): Development partners, associations and institutions reach the whole food chain through one platform.
-- [Service Providers](https://www.t57.ai/who-we-serve/service-providers): Inspection, logistics, legal and advisory firms are matched to live trades that need them.
-- [Farmers and Producers](https://www.t57.ai/who-we-serve/farmers): Reach verified buyers directly, see market prices and get paid faster.
+- [Governments and Regulators](https://www.t57.ai/who-we-serve/governments): Live trade data, early warnings and clean tenders for ministries and agencies.
+- [Banks and Financiers](https://www.t57.ai/who-we-serve/financiers): Verified borrowers, documents and shipment milestones on one record. You lend; T57 never does.
+- [Sellers and Exporters](https://www.t57.ai/who-we-serve/sellers): Verified buyers send you requests, and partner escrow releases payment as each milestone is met.
+- [Traders and Aggregators](https://www.t57.ai/who-we-serve/traders): Back-to-back contracts with verified parties, and licensed lenders compete to finance each trade.
+- [Buyers and Importers](https://www.t57.ai/who-we-serve/buyers): Send one request, compare verified quotes side by side, and pay through partner escrow when terms are met.
+- [Retail, HoReCa and Enterprise Buyers](https://www.t57.ai/who-we-serve/enterprises): Verified suppliers, approvals, and every contract, shipment and payment on one record your auditors can check.
+- [Food Processors](https://www.t57.ai/who-we-serve/food-processors): Contract raw materials from verified farms and mills, checked for quality before they ship.
+- [Cooperatives and FPOs](https://www.t57.ai/who-we-serve/cooperatives): Pool member volumes, win bigger buyers and tenders, and pay every farmer faster.
+- [Partners and Collaborators](https://www.t57.ai/who-we-serve/collaborators): Institutions reach verified farmers, SMEs and traders, and measure results trade by trade.
+- [Service Providers](https://www.t57.ai/who-we-serve/service-providers): Inspection, freight, customs and certification jobs come straight from verified trades.
+- [Farmers and Producers](https://www.t57.ai/who-we-serve/farmers): Join through your FPO or co-op. See today's price, meet checked buyers and get paid on delivery.
 
 ## Why T57
 
 - [Why T57](https://www.t57.ai/why-t57): Join, discover, finance, settle and close every trade on one AI-native platform, so every actor from farm to fork can see, trust and finance each transaction.
-- [Club Membership](https://www.t57.ai/why-t57/club-membership): Verified food-trade club that matches vetted counterparties, reducing fraud and defaults across every global agri transaction.
+- [Club Membership](https://www.t57.ai/why-t57/club-membership): Every member's business, owners, documents and sanctions status are checked before anyone trades.
 - [RFQ Bidding](https://www.t57.ai/why-t57/rfq-bidding): Get comparable quotes from verified suppliers, and turn the best one into a contract.
 - [Virtual Trade Desk](https://www.t57.ai/why-t57/virtual-trade-desk): A full trade desk for every member, with AI doing the groundwork and people deciding.
 - [Market & Price Intelligence](https://www.t57.ai/why-t57/market-intelligence): See prices, supply and risk by origin before you quote, buy or plan.
@@ -130,11 +130,11 @@
 
 ## Markets
 
-- [Markets](https://www.t57.ai/markets): Saudi Arabia, the UAE, India, Malaysia and Türkiye. Buy and sell across all five on one trade record.
+- [Markets](https://www.t57.ai/markets): Pick your country and corridor to see buyers, rules, documents and local partners.
 - [Global Rollout](https://www.t57.ai/markets/global-rollout): T57 starts with teams on the ground in five founding markets, is open online to verified businesses in 195 countries, and opens new markets phase by phase, with country partners where it has no office yet.
 - [OIC Nations & Halal Trade](https://www.t57.ai/markets/oic-halal): Connect halal food producers and buyers across the OIC on one trusted network.
 - [ASEAN Markets](https://www.t57.ai/markets/asean): Link Southeast Asian food producers to buyers across Asia and the Gulf.
-- [Saudi Arabia: Market Overview](https://www.t57.ai/markets/saudi-arabia/overview): Reach verified Saudi importers, retailers and hotels, and export Saudi food, with local partners for payments and customs.
+- [Saudi Arabia: Market Overview](https://www.t57.ai/markets/saudi-arabia/overview): Reach Saudi supermarkets, hotels and importers, with SFDA and FASAH steps guided.
 - [Saudi Arabia: Features Available](https://www.t57.ai/markets/saudi-arabia/features): Everything you need to trade food in Saudi Arabia, in one place.
 - [Saudi Arabia: Regulatory Guide](https://www.t57.ai/markets/saudi-arabia/compliance): Know the rules for food trade in Saudi Arabia before you ship.
 - [Saudi Arabia: Getting Started](https://www.t57.ai/markets/saudi-arabia/getting-started): Start trading on T57 in Saudi Arabia in four steps.
@@ -157,7 +157,7 @@
 
 ## Pricing
 
-- [Pricing Overview](https://www.t57.ai/pricing): Clear prices for verified trade, and fees only when you trade.
+- [Pricing Overview](https://www.t57.ai/pricing): Membership from $199 a month. A small fee per side applies only to completed trades.
 - [Membership Plans & Pricing](https://www.t57.ai/pricing/plans): Choose the plan that fits how much you trade.
 - [Enterprise & Custom Pricing](https://www.t57.ai/pricing/enterprise): Run your group's food trade on T57, on terms built for you.
 - [Government & Institutional Pricing](https://www.t57.ai/pricing/government): Programs that strengthen your country's food security, designed with you.
@@ -216,7 +216,7 @@
 - [Financial Services Partners](https://www.t57.ai/partners/financial-services): Reach verified food businesses with better data and less risk.
 - [Logistics Partners](https://www.t57.ai/partners/logistics): Freight, cold chain, warehouse, inspection and customs partners serve verified traders from inside the T57 trade record.
 - [Research & University Partners](https://www.t57.ai/partners/research): T57 works with agricultural universities and research institutes to bring their research to farmers and food SMEs, and to turn it into income for the scientists behind it.
-- [Country Partners](https://www.t57.ai/partners/country-partner): Run T57 in your country or city as a licensed country partner, like a franchise. You build the local network of verified food businesses; T57 provides the platform, the brand and the support.
+- [Country Partners](https://www.t57.ai/partners/country-partner): Become T57's authorised partner in your country. You build the local network; we provide the platform, brand and standards.
 - [Become a Partner](https://www.t57.ai/partners/apply): Partner with T57 in finance, insurance, logistics, inspection or technology. Tell us about your business to start.
 
 ## About T57

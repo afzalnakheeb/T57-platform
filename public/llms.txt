@@ -34,8 +34,8 @@
 - [AI Native](https://www.t57.ai/ai-native): T57 is AI-native. Here is what that means for your business.
 - [Platform](https://www.t57.ai/platform): The food operating system: one platform that connects every party, service and record in food trade.
 - [Trust & Compliance](https://www.t57.ai/trust): Trade with verified businesses, on one record, under clear rules.
-- [Markets](https://www.t57.ai/markets): Saudi Arabia, the UAE, India, Malaysia and Türkiye. Buy and sell across all five on one trade record.
-- [Pricing Overview](https://www.t57.ai/pricing): Clear prices for verified trade, and fees only when you trade.
+- [Markets](https://www.t57.ai/markets): Pick your country and corridor to see buyers, rules, documents and local partners.
+- [Pricing Overview](https://www.t57.ai/pricing): Membership from $199 a month. A small fee per side applies only to completed trades.
 - [Resources Overview](https://www.t57.ai/resources): Insight, research, news, videos, events and plain-language guides on digital food trade, food security, trade finance and AI.
 - [Help Center](https://www.t57.ai/help): Get help with T57, whenever you need it.
 - [Partnerships Overview](https://www.t57.ai/partnerships): Partner with the network that food trade runs on.
@@ -45,21 +45,21 @@
 
 ## Who T57 serves
 
-- [Governments and Regulators](https://www.t57.ai/who-we-serve/governments): Live trade data, food-security alerts and transparent tenders, in one view for ministries and agencies.
-- [Banks and Financiers](https://www.t57.ai/who-we-serve/financiers): Every deal comes with verified parties, documents and shipment data, from deal to settlement.
-- [Sellers and Exporters](https://www.t57.ai/who-we-serve/sellers): Find buyers, agree terms and get paid, with finance and logistics on one platform.
-- [Traders and Aggregators](https://www.t57.ai/who-we-serve/traders): Match supply and demand faster, with verified partners, live prices and finance for each deal.
-- [Buyers and Importers](https://www.t57.ai/who-we-serve/buyers): Compare verified suppliers, track every shipment and pay only when terms are met.
-- [Retail, HoReCa and Enterprise Buyers](https://www.t57.ai/who-we-serve/enterprises): Source from verified producers, see price moves early and run every contract in one place.
-- [Food Processors](https://www.t57.ai/who-we-serve/food-processors): Steady raw materials from verified farms, with quality checks and finance built in.
-- [Cooperatives and FPOs](https://www.t57.ai/who-we-serve/cooperatives): Pool produce, reach bigger buyers and pay members faster, with every trade on record.
-- [Partners and Collaborators](https://www.t57.ai/who-we-serve/collaborators): Development partners, associations and institutions reach the whole food chain through one platform.
-- [Service Providers](https://www.t57.ai/who-we-serve/service-providers): Inspection, logistics, legal and advisory firms are matched to live trades that need them.
-- [Farmers and Producers](https://www.t57.ai/who-we-serve/farmers): Reach verified buyers directly, see market prices and get paid faster.
+- [Governments and Regulators](https://www.t57.ai/who-we-serve/governments): Live trade data, early warnings and clean tenders for ministries and agencies.
+- [Banks and Financiers](https://www.t57.ai/who-we-serve/financiers): Verified borrowers, documents and shipment milestones on one record. You lend; T57 never does.
+- [Sellers and Exporters](https://www.t57.ai/who-we-serve/sellers): Verified buyers send you requests, and partner escrow releases payment as each milestone is met.
+- [Traders and Aggregators](https://www.t57.ai/who-we-serve/traders): Back-to-back contracts with verified parties, and licensed lenders compete to finance each trade.
+- [Buyers and Importers](https://www.t57.ai/who-we-serve/buyers): Send one request, compare verified quotes side by side, and pay through partner escrow when terms are met.
+- [Retail, HoReCa and Enterprise Buyers](https://www.t57.ai/who-we-serve/enterprises): Verified suppliers, approvals, and every contract, shipment and payment on one record your auditors can check.
+- [Food Processors](https://www.t57.ai/who-we-serve/food-processors): Contract raw materials from verified farms and mills, checked for quality before they ship.
+- [Cooperatives and FPOs](https://www.t57.ai/who-we-serve/cooperatives): Pool member volumes, win bigger buyers and tenders, and pay every farmer faster.
+- [Partners and Collaborators](https://www.t57.ai/who-we-serve/collaborators): Institutions reach verified farmers, SMEs and traders, and measure results trade by trade.
+- [Service Providers](https://www.t57.ai/who-we-serve/service-providers): Inspection, freight, customs and certification jobs come straight from verified trades.
+- [Farmers and Producers](https://www.t57.ai/who-we-serve/farmers): Join through your FPO or co-op. See today's price, meet checked buyers and get paid on delivery.
 
 ## Founding markets
 
-- [Saudi Arabia: Market Overview](https://www.t57.ai/markets/saudi-arabia/overview): Reach verified Saudi importers, retailers and hotels, and export Saudi food, with local partners for payments and customs.
+- [Saudi Arabia: Market Overview](https://www.t57.ai/markets/saudi-arabia/overview): Reach Saudi supermarkets, hotels and importers, with SFDA and FASAH steps guided.
 - [UAE: Market Overview](https://www.t57.ai/markets/uae/overview): Trade food through the UAE with verified partners across the region.
 - [India: Market Overview](https://www.t57.ai/markets/india/overview): Connect India's farmers and food makers to verified buyers at home and abroad.
 - [Malaysia: Market Overview](https://www.t57.ai/markets/malaysia/overview): Take Malaysian halal food to verified buyers across the Gulf, India and ASEAN.
