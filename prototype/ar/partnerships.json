@@ -12,7 +12,7 @@
 "Disconnected workflows": "إجراءات متفرقة",
 "Partners receive documents by email and re-key them.": "تصل المستندات إلى الشركاء بالبريد الإلكتروني ويُعاد إدخالها يدويًا.",
 "Partner types": "فئات الشركاء",
-"Four kinds of specialist, one trade record": "أربع فئات من المختصين، وسجلّ تجاري واحد",
+"Four kinds of specialist, one trade record": "أربع فئات من المختصين، وسجلّ صفقة واحد",
 "Financial services": "الخدمات المالية",
 "Banks, insurers, escrow": "البنوك، والتأمين، وحسابات الضمان",
 "Freight, cold chain, testing": "الشحن، وسلسلة التبريد، والفحص المخبري",
@@ -46,7 +46,7 @@
 "Partners licensed in T57's markets, or serving trade with them, can apply.": "يحق التقديم للشركاء المرخّصين في أسواق T57، أو الذين يخدمون التجارة معها.",
 "Page 1 of 7": "الصفحة 1 من 7",
 "Talk to our partnerships team": "تواصل مع فريق الشراكات",
-"Partners connected around one trade record": "شركاء يلتقون حول سجلّ تجاري واحد",
+"Partners connected around one trade record": "شركاء يلتقون حول سجلّ صفقة واحد",
 "Found one by one": "بحث عن العملاء واحدًا تلو الآخر",
 "Verified members, ready to buy": "أعضاء موثَّقون جاهزون للشراء",
 "Weak, unverified": "بيانات ضعيفة وغير موثَّقة",
@@ -55,5 +55,5 @@
 "Email and re-keying": "بريد إلكتروني وإعادة إدخال يدوي",
 "Connected by API or portal": "ربط مباشر عبر واجهات البرمجة أو البوابة",
 "Partnerships | Finance, Logistics & Technology | T57": "الشراكات | التمويل والخدمات اللوجستية والتقنية | T57",
-"Partner with T57 to serve verified food businesses with finance, insurance, logistics, inspection and technology, connected to one trade record.": "كن شريكًا لـT57 لتقدّم لمنشآت الغذاء الموثَّقة خدمات التمويل والتأمين والخدمات اللوجستية والفحص والتقنية، مرتبطة بسجلّ تجاري واحد."
+"Partner with T57 to serve verified food businesses with finance, insurance, logistics, inspection and technology, connected to one trade record.": "كن شريكًا لـT57 لتقدّم لمنشآت الغذاء الموثَّقة خدمات التمويل والتأمين والخدمات اللوجستية والفحص والتقنية، مرتبطة بسجلّ صفقة واحد."
 }

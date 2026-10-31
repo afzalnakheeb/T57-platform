@@ -2,7 +2,7 @@
 "Know who you trade with.": "Kiminle ticaret yaptığınızı bilin.",
 "Prove what happened.": "Ne olduğunu kanıtlayın.",
 "Trade with verified businesses, on one record, under clear rules.": "Doğrulanmış işletmelerle, tek kayıtta ve net kurallarla ticaret yapın.",
-"Get verified and join T57": "Doğrulanın ve T57'ye katılın",
+"Get verified and join T57": "Doğrulamadan geçin, T57'ye katılın",
 "T57 exists to make trust the starting point of food trade. Every member is verified, every trade is recorded, and regulated services come only through licensed partners.": "T57, güveni gıda ticaretinin başlangıç noktası yapmak için var. Her üye doğrulanır, her işlem kaydedilir ve düzenlemeye tabi hizmetler yalnızca lisanslı iş ortakları aracılığıyla sunulur.",
 "Food trade still runs on hope that the other side is who they say they are.": "Gıda ticareti hâlâ karşı tarafın söylediği kişi olduğu umuduyla yürüyor.",
 "Buyers often cannot tell a producer from a reseller. Documents are forged, invoices are financed twice and contracts go unenforced across borders. Banks feel this too: weak data on smaller firms is one reason the Asian Development Bank reports that 41% of SME trade finance applications were rejected in 2025. The key challenges T57 addresses include:": "Alıcılar çoğu zaman üreticiyi yeniden satıcıdan ayırt edemiyor. Belgeler sahteleniyor, faturalar iki kez finanse ediliyor ve sözleşmeler sınır ötesinde uygulanamıyor. Bankalar da bunu hissediyor: küçük firmalar hakkındaki zayıf veriler, Asya Kalkınma Bankası'nın 2025'te KOBİ ticaret finansmanı başvurularının %41'inin reddedildiğini bildirmesinin nedenlerinden biri. T57'nin çözdüğü başlıca sorunlar:",
@@ -252,5 +252,6 @@
 "A clear, recorded process": "Net, kayıtlı bir süreç",
 "Trade Dispute Resolution | T57 Trade Assurance": "Ticari Anlaşmazlık Çözümü | T57 Ticaret Güvencesi",
 "Resolve food trade disputes from one shared record, with escrow paused through licensed partners and independent inspection.": "Gıda ticareti anlaşmazlıklarını tek bir ortak kayıttan, lisanslı iş ortakları aracılığıyla durdurulan emanet hesabı ve bağımsız gözetimle çözün.",
-"No. Entries are tamper-evident: any change can be detected, and nothing is deleted. Corrections are added as new entries.": "Hayır. Kayıtlarda her değişiklik izlenir ve tespit edilebilir; hiçbir kayıt silinmez. Düzeltmeler yeni kayıtlar olarak eklenir."
+"No. Entries are tamper-evident: any change can be detected, and nothing is deleted. Corrections are added as new entries.": "Hayır. Kayıtlarda her değişiklik izlenir ve tespit edilebilir; hiçbir kayıt silinmez. Düzeltmeler yeni kayıtlar olarak eklenir.",
+"Corrections are added as new entries, never written over old ones, and fingerprints of key records are anchored on a blockchain ledger, so any change can be detected.": "Düzeltmeler eski kayıtların üzerine yazılmaz, yeni kayıtlar olarak eklenir; önemli kayıtların parmak izleri bir blokzincir defterine işlenir, böylece her değişiklik fark edilir."
 }
