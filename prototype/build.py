@@ -128,7 +128,8 @@ text = lambda s: re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s))).
 pages, ARTS = {}, {}
 for m in re.finditer(r'(<article class="world" id="([a-z0-9-]+)".*?</article>)', worlds, re.S):
     art, i = m.group(1), m.group(2)
-    art = art.replace(' hidden>', '>', 1)
+    # Show the page's own article (only its opening tag: the home article has no hidden flag, so a blind replace hit the chart tooltip)
+    art = re.sub(r'^(<article[^>]*?) hidden>', r'\1>', art, count=1)
     art = one_hero(i, art)
     ARTS[i] = art
     h1 = text(re.search(r'<h1[^>]*>(.*?)</h1>', art, re.S).group(1))

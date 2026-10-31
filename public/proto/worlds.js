@@ -364,6 +364,19 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     const tk = document.querySelector('[data-ticker]');
     if (tk) { const items = PINK.map(p => `<span class="tk"><b>${tx(p.name)}</b> $${fmtPrice(p.last, p.unit)}${p.unit} <em class="${dir(p.ch)}">${sign(p.ch)}</em></span>`).join('');
       tk.innerHTML = `<div class="tk-run">${items}</div><div class="tk-run" aria-hidden="true">${items}</div>`; }
+    // homepage price tape: the six FAO indices (with a 12-month trend line), then the World Bank food benchmarks
+    const tp = document.querySelector('[data-tape]');
+    if (tp) {
+      const spk = col => { const v = FAO.slice(-12).map(r => +r[col]), lo = Math.min(...v), hi = Math.max(...v) || 1;
+        return `<svg class="tp-spk" viewBox="0 0 44 16" aria-hidden="true"><path d="${v.map((y, i) => (i ? 'L' : 'M') + (i * 4).toFixed(1) + ' ' + (14 - (y - lo) / ((hi - lo) || 1) * 12).toFixed(1)).join(' ')}"/></svg>`; };
+      const fao = FAO_SERIES.map(([n, col]) => { const a = +FAO[FAO.length - 2][col], b = +FAO[FAO.length - 1][col], ch = (b - a) / a * 100;
+        return `<li class="tp-i"><span class="tp-src">FAO</span><b>${tx(n)}</b><span class="tp-p">${num(b.toFixed(1))}</span>${spk(col).replace('tp-spk', 'tp-spk ' + dir(ch))}<em class="${dir(ch)}">${sign(ch)}</em></li>`; }).join('');
+      const wb = PINK.filter(p => p.group !== 'Inputs and energy').map(p => `<li class="tp-i"><b>${tx(p.name)}</b><span class="tp-p">$${fmtPrice(p.last, p.unit)}<small>${p.unit}</small></span><em class="${dir(p.ch)}">${sign(p.ch)}</em></li>`).join('');
+      const run = fao + wb;
+      tp.innerHTML = `<ul class="tp-run">${run}</ul><ul class="tp-run" aria-hidden="true">${run}</ul>`;
+      const pb = document.querySelector('[data-tape-pause]'), band = tp.closest('.tape');
+      if (pb) pb.addEventListener('click', () => { const on = band.classList.toggle('paused'); pb.setAttribute('aria-pressed', on); pb.textContent = tx(on ? 'Play' : 'Pause'); });
+    }
     // movers
     const mv = document.querySelector('[data-movers]');
     if (mv) mv.innerHTML = [...PINK].filter(p => p.group !== 'Inputs and energy').sort((a, b) => Math.abs(b.ch) - Math.abs(a.ch)).slice(0, 6)
