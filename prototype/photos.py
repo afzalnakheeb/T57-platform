@@ -29,7 +29,13 @@ PHOTOS = {
     '2228376734': ('Container ships being loaded by gantry cranes at a port, seen from above.', 'Customs documents and port milestones are tracked on one shared record.'),
     '934538578': ('A hand picks fresh tea leaves in the morning light.', 'Better information for growers means less food lost and higher incomes.'),
     '2207530533': ('Golden-brown dates piled in a metal tray at a market.', 'Saudi dates reach buyers in more than 125 countries.'),
+    '2221317893': ('Grain silos and a rail siding lit at dusk.', ''),
 }
+
+# Photos the creative review ruled off-brand (banknotes, neon networks, wheat on dollars) are shown with an
+# on-brand replacement; each page keeps its caption, and the alt text follows the photo actually shown.
+REPLACE = {'1188850479': '2221317893', '1495516898': '2207530533', '843053834': '2228376734',
+           '1281959537': '1426834146', '485310005': '2252966040'}
 
 # Market pages reuse their market's arrival photo (already in public/img).
 MARKET = {
@@ -89,7 +95,7 @@ def band(wid):
         name, alt, cap = MARKET[m.group(1)]
         return _figure(f'/img/{name}.jpg', f'/img/{name}-sm.jpg', alt, cap)
     if wid in PAGES:
-        i = PAGES[wid]; alt, cap = PHOTOS[i]
+        cap = PHOTOS[PAGES[wid]][1]; i = REPLACE.get(PAGES[wid], PAGES[wid]); alt = PHOTOS[i][0]
         return _figure(f'/img/p/{i}.webp', f'/img/p/{i}-sm.webp', alt, cap, i)
     return ''
 

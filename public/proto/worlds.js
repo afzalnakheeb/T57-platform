@@ -710,6 +710,8 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   // headings and FAQ questions. The index loads on first open.
   const srch = document.getElementById('srch'), srchBtn = document.getElementById('srch-btn');
   if (srch && srch.showModal) {
+    // the 404 page's search button opens the same panel
+    document.querySelectorAll('[data-open-search]').forEach(b => b.addEventListener('click', () => srchBtn && srchBtn.click()));
     const q = document.getElementById('srch-q'), list = document.getElementById('srch-res'), none = document.getElementById('srch-none'), kick = document.getElementById('srch-k');
     const POP = ['who-we-serve', 'buyers', 'sellers', 'financiers', 'governments', 'pricing', 'club-membership', 'contact-demo'];
     // Everyday words are dropped, and common ways of asking map onto the words the pages use.

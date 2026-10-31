@@ -18,6 +18,7 @@ export default function NotFound() {
           <h1>आप जो पेज खोज रहे हैं, वह नहीं मिला।</h1>
           <p className="std">हो सकता है इसका पता बदल गया हो। आप होम पेज से आगे बढ़ सकते हैं, या हमें <a href="mailto:hello@t57.ai">hello@t57.ai</a> पर बताएँ कि आप क्या ढूँढ रहे थे।</p>
           <p><a className="btn btn-indigo" href="/hi">होम पेज पर लौटें</a></p>
+          <p className="nf-links"><button type="button" className="btn btn-ghost" data-open-search>T57.ai में खोजें</button><a href="/hi/who-we-serve">हम किसके लिए हैं</a><a href="/hi/pricing">कीमतें</a><a href="/hi#cta-home" data-form="demo">डेमो बुक करें</a><a href="/hi/help">हेल्प सेंटर</a></p>
         </section>
       </main>
       <div dangerouslySetInnerHTML={{ __html: chrome('bottom', 'hi') }} />

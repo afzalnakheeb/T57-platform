@@ -18,6 +18,7 @@ export default function NotFound() {
           <h1>Halaman ini tidak ditemui.</h1>
           <p className="std">Alamatnya mungkin telah berubah. Mulakan dari halaman utama, atau beritahu kami apa yang anda cari di <a href="mailto:hello@t57.ai">hello@t57.ai</a>.</p>
           <p><a className="btn btn-indigo" href="/ms">Kembali ke halaman utama</a></p>
+          <p className="nf-links"><button type="button" className="btn btn-ghost" data-open-search>Cari di T57.ai</button><a href="/ms/who-we-serve">Siapa Yang Kami Bantu</a><a href="/ms/pricing">Harga</a><a href="/ms#cta-home" data-form="demo">Tempah demo</a><a href="/ms/help">Pusat Bantuan</a></p>
         </section>
       </main>
       <div dangerouslySetInnerHTML={{ __html: chrome('bottom', 'ms') }} />

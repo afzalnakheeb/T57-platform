@@ -18,6 +18,7 @@ export default function NotFound() {
           <h1>Aradığınız sayfa bulunamadı.</h1>
           <p className="std">Adres değişmiş olabilir. Ana sayfadan devam edebilir ya da ne aradığınızı <a href="mailto:hello@t57.ai">hello@t57.ai</a> adresinden bize yazabilirsiniz.</p>
           <p><a className="btn btn-indigo" href="/tr">Ana sayfaya dön</a></p>
+          <p className="nf-links"><button type="button" className="btn btn-ghost" data-open-search>T57.ai'de ara</button><a href="/tr/who-we-serve">Kimlere Hizmet Veriyoruz</a><a href="/tr/pricing">Fiyatlandırma</a><a href="/tr#cta-home" data-form="demo">Demo talep edin</a><a href="/tr/help">Yardım Merkezi</a></p>
         </section>
       </main>
       <div dangerouslySetInnerHTML={{ __html: chrome('bottom', 'tr') }} />
