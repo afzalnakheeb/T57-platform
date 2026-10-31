@@ -822,15 +822,15 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       contact: 'شكرًا لك. سنرد خلال يومي عمل.', support: 'شكرًا لك. وصل طلبك إلى فريق الدعم.', subscribe: 'شكرًا لك. تم اشتراكك في رؤى T57.',
       invest: 'شكرًا لك. سيرسل فريق علاقات المستثمرين الملف ويتواصل معك خلال يومي عمل.' });
   }
-  const MSG = HI ? { fields: 'कृपया चिह्नित फ़ील्ड भरें।', consent: 'हम आपकी जानकारी का उपयोग कैसे करते हैं, इस पर सहमति के लिए कृपया बॉक्स पर टिक करें।', sending: 'भेजा जा रहा है…', check: 'कृपया चिह्नित फ़ील्ड जाँच लें।',
+  const MSG = HI ? { email: 'कृपया अपना कामकाजी ईमेल लिखें, जैसे name@company.com।', fields: 'कृपया चिह्नित फ़ील्ड भरें।', consent: 'हम आपकी जानकारी का उपयोग कैसे करते हैं, इस पर सहमति के लिए कृपया बॉक्स पर टिक करें।', sending: 'भेजा जा रहा है…', check: 'कृपया चिह्नित फ़ील्ड जाँच लें।',
       busy: 'इस कनेक्शन से बहुत ज़्यादा अनुरोध आए हैं। कृपया कुछ मिनट बाद फिर कोशिश करें।', fail: m => `अभी इसे ऑनलाइन नहीं भेजा जा सका। <a href="${m}">इसके बजाय ईमेल से भेजें</a>, आपके जवाब पहले से भरे होंगे।` }
-    : TR ? { fields: 'Lütfen işaretli alanları doldurun.', consent: 'Bilgilerinizin nasıl kullanılacağını kabul etmek için lütfen kutuyu işaretleyin.', sending: 'Gönderiliyor…', check: 'Lütfen işaretli alanları kontrol edin.',
+    : TR ? { email: 'Lütfen iş e-postanızı yazın, örneğin ad@sirket.com.', fields: 'Lütfen işaretli alanları doldurun.', consent: 'Bilgilerinizin nasıl kullanılacağını kabul etmek için lütfen kutuyu işaretleyin.', sending: 'Gönderiliyor…', check: 'Lütfen işaretli alanları kontrol edin.',
       busy: 'Bu bağlantıdan çok fazla istek geldi. Lütfen birkaç dakika sonra tekrar deneyin.', fail: m => `Şu anda çevrimiçi gönderemedik. Yanıtlarınız doldurulmuş olarak <a href="${m}">e-postayla gönderin</a>.` }
-    : MS ? { fields: 'Sila lengkapkan ruangan yang ditandakan.', consent: 'Sila tandakan kotak untuk bersetuju dengan cara kami menggunakan maklumat anda.', sending: 'Sedang dihantar…', check: 'Sila semak ruangan yang ditandakan.',
+    : MS ? { email: 'Sila masukkan e-mel kerja anda, contohnya nama@syarikat.com.', fields: 'Sila lengkapkan ruangan yang ditandakan.', consent: 'Sila tandakan kotak untuk bersetuju dengan cara kami menggunakan maklumat anda.', sending: 'Sedang dihantar…', check: 'Sila semak ruangan yang ditandakan.',
       busy: 'Terlalu banyak permintaan daripada sambungan ini. Sila cuba lagi dalam beberapa minit.', fail: m => `Kami tidak dapat menghantarnya dalam talian buat masa ini. <a href="${m}">Hantar melalui e-mel</a>, dengan jawapan anda sudah diisi.` }
-    : AR ? { fields: 'يرجى إكمال الحقول المظللة.', consent: 'يرجى تحديد المربع للموافقة على طريقة استخدامنا لبياناتك.', sending: 'جارٍ الإرسال…', check: 'يرجى مراجعة الحقول المظللة.',
+    : AR ? { email: 'يرجى كتابة بريدك الإلكتروني للعمل، مثل name@company.com.', fields: 'يرجى إكمال الحقول المظللة.', consent: 'يرجى تحديد المربع للموافقة على طريقة استخدامنا لبياناتك.', sending: 'جارٍ الإرسال…', check: 'يرجى مراجعة الحقول المظللة.',
       busy: 'طلبات كثيرة من هذا الاتصال. يرجى المحاولة بعد بضع دقائق.', fail: m => `تعذّر الإرسال عبر الإنترنت الآن. <a href="${m}">أرسله بالبريد الإلكتروني بدلًا من ذلك</a>، مع إجاباتك معبأة.` }
-    : { fields: 'Please complete the highlighted fields.', consent: 'Please tick the box to agree to how we use your details.', sending: 'Sending…', check: 'Please check the highlighted fields.',
+    : { email: 'Enter a work email like name@company.com.', fields: 'Please complete the highlighted fields.', consent: 'Please tick the box to agree to how we use your details.', sending: 'Sending…', check: 'Please check the highlighted fields.',
       busy: 'Too many requests from this connection. Please try again in a few minutes.', fail: m => `We could not send this online just now. <a href="${m}">Send it by email instead</a>, with your answers filled in.` };
   const kindOf = t => HI ? (/निवेश/.test(t) ? 'invest' : /सब्सक्राइब/.test(t) ? 'subscribe' : /सपोर्ट|सहायता/.test(t) ? 'support' : /पार्टनर|साझेदार/.test(t) ? 'partner'
     : /डेमो|देखें/.test(t) ? 'demo' : /जुड़ें|आवेदन|सदस्य|शुरू|ट्रायल|मुफ़्त|रजिस्टर/.test(t) ? 'join' : 'contact') : TR ? (/yatırım/i.test(t) ? 'invest' : /abone/i.test(t) ? 'subscribe' : /destek/i.test(t) ? 'support' : /iş ortağı|İş ortağı|ortaklık/i.test(t) ? 'partner'
@@ -855,12 +855,12 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     const say = (cls, html) => { msg.className = 'mf-msg ' + cls; msg.innerHTML = html; msg.hidden = false; };
     f.addEventListener('submit', async e => {
       e.preventDefault();
-      f.querySelectorAll('.bad').forEach(x => x.classList.remove('bad'));
+      f.querySelectorAll('.bad').forEach(x => x.classList.remove('bad')); f.querySelectorAll('[aria-invalid]').forEach(x => x.removeAttribute('aria-invalid'));
       const miss = required(f).filter(n => !f.elements[n].value.trim() || (n === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.elements[n].value.trim())));
       const consent = f.elements.consent;
-      miss.forEach(n => f.elements[n].closest('label').classList.add('bad'));
+      miss.forEach(n => { f.elements[n].closest('label').classList.add('bad'); f.elements[n].setAttribute('aria-invalid', 'true'); });
       if (!consent.checked) consent.closest('label').classList.add('bad');
-      if (miss.length || !consent.checked) { say('err', miss.length ? MSG.fields : MSG.consent); (miss.length ? f.elements[miss[0]] : consent).focus(); return; }
+      if (miss.length || !consent.checked) { say('err', miss.length === 1 && miss[0] === 'email' && f.elements.email.value.trim() ? MSG.email : miss.length ? MSG.fields : MSG.consent); (miss.length ? f.elements[miss[0]] : consent).focus(); return; }
       const o = payload(f); btn.disabled = true; say('', MSG.sending);
       try {
         const r = await fetch('/api/forms', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(o) });
