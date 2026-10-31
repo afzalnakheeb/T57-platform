@@ -29,8 +29,8 @@
       <h2 class="h2" id="p97-calc">अपने शुद्ध फ़ायदे का अनुमान लगाएँ</h2>
       <form class="roi" data-roi onsubmit="return false" aria-label="ROI कैलकुलेटर">
         <fieldset><legend><b>01</b> आपका व्यापार</legend>
-          <label class="roi-f"><span>आपकी भूमिका</span><select data-roi-in="role"><option>उत्पादक या सहकारी संस्था</option><option>प्रोसेसर</option><option>ट्रेडर</option><option>खरीदार</option></select></label>
-          <label class="roi-f"><span>आपका बाज़ार</span><select data-roi-in="market"><option>सऊदी अरब</option><option>यूएई</option><option>भारत</option><option>मलेशिया</option><option>तुर्किये</option><option>अन्य</option></select></label>
+          <label class="roi-f"><span>आपकी भूमिका</span><select data-roi-in="role"><option value="Producer or cooperative">उत्पादक या सहकारी संस्था</option><option value="Processor">प्रोसेसर</option><option value="Trader">ट्रेडर</option><option value="Buyer">खरीदार</option></select></label>
+          <label class="roi-f"><span>आपका बाज़ार</span><select data-roi-in="market"><option value="Saudi Arabia">सऊदी अरब</option><option value="UAE">यूएई</option><option value="India">भारत</option><option value="Malaysia">मलेशिया</option><option value="Türkiye">तुर्किये</option><option value="Other">अन्य</option></select></label>
           <label class="roi-f"><span>हर महीने सौदे</span><span class="roi-in"><input type="number" inputmode="decimal" min="0" step="1" value="8" data-roi-in="trades"></span></label>
           <label class="roi-f"><span>औसत सौदा मूल्य</span><span class="roi-in"><em>$</em><input type="number" inputmode="decimal" min="0" step="1000" value="20000" data-roi-in="value"></span></label>
         </fieldset>
@@ -101,7 +101,7 @@
   <nav class="pager gutter" aria-label="इस खंड के पेज"><div class="wrap pager-in"><a class="pg-prev" href="/hi/pricing/government" data-go="pricing-government"><small>पिछला</small><b>सरकारी और संस्थागत कीमतें</b></a><a class="pg-up" href="/hi/pricing" data-go="pricing"><small>वापस</small><b>कीमतें</b></a><span></span><p class="pg-n">5 में से पेज 5</p></div></nav>
   <section class="cta night gutter" id="cta-pricing-roi" aria-labelledby="p97-cta">
     <div class="cta-in">
-      <div><h2 id="p97-cta">देखें कि T57 आपके व्यवसाय के लिए कितना फ़ायदेमंद हो सकता है, और कौन-सा प्लान फ़ायदा देता है।</h2><div class="actions"><a class="btn btn-world" href="/hi#cta-home">अपना ROI निकालें</a><a class="btn btn-ghost" href="/hi#cta-home">अपना मुफ़्त ट्रायल शुरू करें</a></div></div>
+      <div><h2 id="p97-cta">देखें कि T57 आपके व्यवसाय के लिए कितना फ़ायदेमंद हो सकता है, और कौन-सा प्लान फ़ायदा देता है।</h2><div class="actions"><a class="btn btn-world" href="/hi#cta-home" data-form="contact">अपना ROI निकालें</a><a class="btn btn-ghost" href="/hi#cta-home" data-form="join">अपना मुफ़्त ट्रायल शुरू करें</a></div></div>
       <svg class="petal-big" viewBox="774 418 250 244" aria-hidden="true"><use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-finance"></use><use href="#mk-agri"></use></svg>
     </div>
   </section>

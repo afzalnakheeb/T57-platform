@@ -29,8 +29,8 @@
       <h2 class="h2" id="p97-calc">Estimate your net benefit</h2>
       <form class="roi" data-roi onsubmit="return false" aria-label="ROI calculator">
         <fieldset><legend><b>01</b> Your trade</legend>
-          <label class="roi-f"><span>Your role</span><select data-roi-in="role"><option>Producer or cooperative</option><option>Processor</option><option>Trader</option><option>Buyer</option></select></label>
-          <label class="roi-f"><span>Your market</span><select data-roi-in="market"><option>Saudi Arabia</option><option>UAE</option><option>India</option><option>Malaysia</option><option>Türkiye</option><option>Other</option></select></label>
+          <label class="roi-f"><span>Your role</span><select data-roi-in="role"><option value="Producer or cooperative">Producer or cooperative</option><option value="Processor">Processor</option><option value="Trader">Trader</option><option value="Buyer">Buyer</option></select></label>
+          <label class="roi-f"><span>Your market</span><select data-roi-in="market"><option value="Saudi Arabia">Saudi Arabia</option><option value="UAE">UAE</option><option value="India">India</option><option value="Malaysia">Malaysia</option><option value="Türkiye">Türkiye</option><option value="Other">Other</option></select></label>
           <label class="roi-f"><span>Trades a month</span><span class="roi-in"><input type="number" inputmode="decimal" min="0" step="1" value="8" data-roi-in="trades"></span></label>
           <label class="roi-f"><span>Average trade value</span><span class="roi-in"><em>$</em><input type="number" inputmode="decimal" min="0" step="1000" value="20000" data-roi-in="value"></span></label>
         </fieldset>
@@ -101,7 +101,7 @@
   <nav class="pager gutter" aria-label="Pages in this section"><div class="wrap pager-in"><a class="pg-prev" href="/pricing/government" data-go="pricing-government"><small>Previous</small><b>Government &amp; Institutional Pricing</b></a><a class="pg-up" href="/pricing" data-go="pricing"><small>Back to</small><b>Pricing</b></a><span></span><p class="pg-n">Page 5 of 5</p></div></nav>
   <section class="cta night gutter" id="cta-pricing-roi" aria-labelledby="p97-cta">
     <div class="cta-in">
-      <div><h2 id="p97-cta">See what T57 could be worth to your business, and which plan pays off.</h2><div class="actions"><a class="btn btn-world" href="/#cta-home">Calculate your ROI</a><a class="btn btn-ghost" href="/#cta-home">Start your free trial</a></div></div>
+      <div><h2 id="p97-cta">See what T57 could be worth to your business, and which plan pays off.</h2><div class="actions"><a class="btn btn-world" href="/#cta-home" data-form="contact">Calculate your ROI</a><a class="btn btn-ghost" href="/#cta-home" data-form="join">Start your free trial</a></div></div>
       <svg class="petal-big" viewBox="774 418 250 244" aria-hidden="true"><use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-finance"></use><use href="#mk-agri"></use></svg>
     </div>
   </section>

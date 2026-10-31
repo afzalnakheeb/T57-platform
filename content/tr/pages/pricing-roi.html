@@ -29,8 +29,8 @@
       <h2 class="h2" id="p97-calc">Net faydanızı tahmin edin</h2>
       <form class="roi" data-roi onsubmit="return false" aria-label="Yatırım getirisi hesaplayıcı">
         <fieldset><legend><b>01</b> Ticaretiniz</legend>
-          <label class="roi-f"><span>Rolünüz</span><select data-roi-in="role"><option>Üretici ya da kooperatif</option><option>Gıda işleyici</option><option>Tüccar</option><option>Alıcı</option></select></label>
-          <label class="roi-f"><span>Pazarınız</span><select data-roi-in="market"><option>Suudi Arabistan</option><option>BAE</option><option>Hindistan</option><option>Malezya</option><option>Türkiye</option><option>Diğer</option></select></label>
+          <label class="roi-f"><span>Rolünüz</span><select data-roi-in="role"><option value="Producer or cooperative">Üretici ya da kooperatif</option><option value="Processor">Gıda işleyici</option><option value="Trader">Tüccar</option><option value="Buyer">Alıcı</option></select></label>
+          <label class="roi-f"><span>Pazarınız</span><select data-roi-in="market"><option value="Saudi Arabia">Suudi Arabistan</option><option value="UAE">BAE</option><option value="India">Hindistan</option><option value="Malaysia">Malezya</option><option value="Türkiye">Türkiye</option><option value="Other">Diğer</option></select></label>
           <label class="roi-f"><span>Aylık işlem sayısı</span><span class="roi-in"><input type="number" inputmode="decimal" min="0" step="1" value="8" data-roi-in="trades"></span></label>
           <label class="roi-f"><span>Ortalama işlem değeri</span><span class="roi-in"><em>$</em><input type="number" inputmode="decimal" min="0" step="1000" value="20000" data-roi-in="value"></span></label>
         </fieldset>
@@ -101,7 +101,7 @@
   <nav class="pager gutter" aria-label="Bu bölümdeki sayfalar"><div class="wrap pager-in"><a class="pg-prev" href="/tr/pricing/government" data-go="pricing-government"><small>Önceki</small><b>Kamu ve Kurumlar İçin Fiyatlandırma</b></a><a class="pg-up" href="/tr/pricing" data-go="pricing"><small>Geri dön:</small><b>Fiyatlandırma</b></a><span></span><p class="pg-n">Sayfa 5 / 5</p></div></nav>
   <section class="cta night gutter" id="cta-pricing-roi" aria-labelledby="p97-cta">
     <div class="cta-in">
-      <div><h2 id="p97-cta">T57'nin işletmenize ne kazandırabileceğini ve hangi paketin kendini amorti ettiğini görün.</h2><div class="actions"><a class="btn btn-world" href="/tr#cta-home">Yatırım getirinizi hesaplayın</a><a class="btn btn-ghost" href="/tr#cta-home">Ücretsiz denemenizi başlatın</a></div></div>
+      <div><h2 id="p97-cta">T57'nin işletmenize ne kazandırabileceğini ve hangi paketin kendini amorti ettiğini görün.</h2><div class="actions"><a class="btn btn-world" href="/tr#cta-home" data-form="contact">Yatırım getirinizi hesaplayın</a><a class="btn btn-ghost" href="/tr#cta-home" data-form="join">Ücretsiz denemenizi başlatın</a></div></div>
       <svg class="petal-big" viewBox="774 418 250 244" aria-hidden="true"><use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-finance"></use><use href="#mk-agri"></use></svg>
     </div>
   </section>

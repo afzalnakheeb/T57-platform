@@ -19,14 +19,14 @@
     <button class="lang-btn" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Dil"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg></button>
     <div class="langs"><a class="lang-sw" href="/" hreflang="en" lang="en"><span class="ls-l">English</span><span class="ls-s" aria-hidden="true">EN</span></a><a class="lang-sw" href="/ar" hreflang="ar" lang="ar"><span class="ls-l">العربية</span><span class="ls-s" aria-hidden="true">عربي</span></a><a class="lang-sw" href="/ms" hreflang="ms" lang="ms"><span class="ls-l">Bahasa Malaysia</span><span class="ls-s" aria-hidden="true">BM</span></a><a class="lang-sw" href="/hi" hreflang="hi" lang="hi"><span class="ls-l">हिन्दी</span><span class="ls-s" aria-hidden="true">हिं</span></a></div>
     <button class="srch-btn" type="button" id="srch-btn" aria-haspopup="dialog" aria-controls="srch" title="Ara (/ tuşuna basın)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span class="sr">Sitede ara</span></button>
-    <a class="demo" href="/tr#cta-home">Demo talep edin</a>
+    <a class="demo" href="/tr#cta-home" data-label="Demo" data-form="demo">Demo talep edin</a>
     <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="mb-l">Menü</span></button>
   </div>
 </header>
 
 <dialog class="srch" id="srch" aria-labelledby="srch-h">
   <div class="srch-in">
-    <form class="srch-f" role="search" onsubmit="return false"><h2 class="sr" id="srch-h">T57.ai'de ara</h2><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="srch-q" type="search" placeholder="Sayfa, hizmet ve yanıt arayın" autocomplete="off" spellcheck="false" aria-label="T57.ai'de ara" aria-controls="srch-res" aria-autocomplete="list"><button class="srch-x" type="button" data-srch-close>Kapat<kbd>Esc</kbd></button></form>
+    <form class="srch-f" role="search" onsubmit="return false"><h2 class="sr" id="srch-h">T57.ai'de ara</h2><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="srch-q" type="search" placeholder="Sayfa, hizmet ve yanıt arayın" autocomplete="off" spellcheck="false" aria-label="T57.ai'de ara" aria-controls="srch-res" aria-autocomplete="list"><button class="srch-x" type="button" data-srch-close aria-label="Aramayı kapat">Kapat<kbd aria-hidden="true">Esc</kbd></button></form>
     <p class="srch-k" id="srch-k">En çok ziyaret edilenler</p>
     <ul class="srch-res" id="srch-res" role="listbox" aria-labelledby="srch-k"></ul>
     <p class="srch-none" id="srch-none" hidden>Eşleşen sayfa bulunamadı. Daha az ya da farklı kelimeler deneyin veya <a href="/tr/contact" data-go="contact">bize sorun</a>.</p>
