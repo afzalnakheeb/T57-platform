@@ -14,7 +14,7 @@
 
 ## Main pages
 
-- [Home](https://www.t57.ai/): T57 connects verified producers, buyers, banks and logistics on one AI-native trade platform.
+- [Home](https://www.t57.ai/): Find verified partners, agree contracts, get financed, inspected, shipped and paid, without juggling eight separate services.
 - [Who We Serve](https://www.t57.ai/who-we-serve): T57 exists to connect everyone who grows, makes, buys, finances and regulates food on one trusted record.
 - [Why T57](https://www.t57.ai/why-t57): Join, discover, finance, settle and close every trade on one AI-native platform, so every actor from farm to fork can see, trust and finance each transaction.
 - [Capabilities](https://www.t57.ai/capabilities): Run every part of a food trade, from first quote to final payment, on one record.
