@@ -66,5 +66,6 @@
 "Invisible": "غير مرئي",
 "Logged, monitored, auditable": "مسجّل ومراقَب وقابل للتدقيق",
 "Security Architecture | How T57 Protects Trade Data": "بنية الأمن | كيف تحمي T57 بيانات التجارة",
-"Verified identity, multi-factor sign-in, role-based access, encryption, regional data residency on Azure and a full audit trail on T57.": "هوية موثَّقة، ودخول متعدد العوامل، ووصول بحسب الدور، وتشفير، وتوطين إقليمي للبيانات على Azure، ومسار تدقيق كامل على T57."
+"Verified identity, multi-factor sign-in, role-based access, encryption, regional data residency on Azure and a full audit trail on T57.": "هوية موثَّقة، ودخول متعدد العوامل، ووصول بحسب الدور، وتشفير، وتوطين إقليمي للبيانات على Azure، ومسار تدقيق كامل على T57.",
+"Food trade runs on sensitive information: prices, buyers, bank details, identity documents and contracts. A single breach can expose a business to fraud or competitors, and many countries now require certain data to stay within their borders. Members and regulated partners need to know exactly how their data is protected and who can see it.": "تقوم تجارة الغذاء على معلومات حساسة: الأسعار، والمشترون، والبيانات المصرفية، ومستندات الهوية، والعقود. واختراق واحد قد يعرّض المنشأة للاحتيال أو للمنافسين، ودول كثيرة باتت تشترط بقاء بيانات معينة داخل حدودها. ويحتاج الأعضاء والشركاء الخاضعون للتنظيم إلى أن يعرفوا بالضبط كيف تُحمى بياناتهم ومن يراها."
 }
