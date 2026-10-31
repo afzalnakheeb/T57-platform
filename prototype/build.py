@@ -288,7 +288,16 @@ HEAD = ['# T57', '', '> T57 is an AI-native digital trade platform for food. Sta
         '- Works with the Islamic Organization for Food Security (IOFS), an OIC institution, under a 10-year memorandum of understanding signed in June 2023.',
         '- More than 150 non-binding MoUs and letters of intent from companies in 67 countries, 120 of them signed at Gulfood 2026.',
         '- Five industries on one trade record: agriculture and food production, trade, logistics, finance and technology.',
-        '- Contact: hello@t57.ai, +966 56 971 22 22.']
+        '- Contact: hello@t57.ai, +966 56 971 22 22.',
+        '', '## Pricing', '',
+        '- Membership plans, per month: Explore $199, Core $499, Growth $749, Enterprise from $1,499. Annual: Explore $1,990, Core $4,990, Growth $7,490, Enterprise custom.',
+        '- Trade fee, charged to each side of a completed trade: Explore 0.75%, Core 0.60%, Growth 0.40%, Enterprise 0.20%. No fee to list products or send quotes.',
+        '- Founding members get 90 days free at launch. Partner services (finance, escrow, insurance, inspection, logistics) are quoted by the licensed partner and shown before you accept.',
+        f'- Full details: {SITE}/pricing/plans',
+        '', '## How to join', '',
+        '- Apply online from any country; T57 verifies the business (KYC/KYB) and labels it by role, such as farmer, processor, trader, buyer, financier or logistics provider.',
+        '- Once verified, members post or answer requests, agree contracts and run each trade on one record from quote to payment.',
+        '- Governments and banks can request a briefing with the public-sector or finance partnerships team.']
 SECS = [('who-we-serve', 'Who we serve'), ('why-t57', 'Why T57'), ('capabilities', 'Capabilities'), ('ai-native', 'AI Native'), ('platform', 'Platform'), ('trust', 'Trust and compliance'), ('markets', 'Markets'), ('pricing', 'Pricing'), ('resources', 'Resources'), ('help', 'Help Center'), ('partnerships', 'Partnerships'), ('partners', 'Partner programs'), ('about', 'About T57'), ('contact', 'Contact')]
 line = lambda p: f'- [{html.unescape(p["name"])}]({SITE}{p["route"]}): {p["answer"]}'
 L = HEAD + ['', '## Main pages', '']
@@ -307,7 +316,7 @@ for sec, head in SECS:
 L += ['', '## Common questions', '']
 seen = set()
 for i, p in pages.items():
-    for f in p['faqs'][:2]:
+    for f in p['faqs']:
         if f['q'] in seen: continue
         seen.add(f['q']); L.append(f'- [{f["q"]}]({SITE}{p["route"]}): {f["a"]}')
 open(f'{R}/public/llms-full.txt', 'w').write('\n'.join(L) + '\n')

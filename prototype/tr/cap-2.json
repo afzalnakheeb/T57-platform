@@ -181,7 +181,7 @@
 "On recorded milestones": "Kayda geçen aşamalarda",
 "Only the disputed part pauses": "Yalnızca uyuşmazlık konusu kısım durur",
 "Escrow & Trade Assurance for Food Trade | T57": "Gıda Ticareti İçin Emanet Hesabı ve Ticari Güvence | T57",
-"Buyer funds held by licensed escrow partners and released in stages on inspection, shipment or delivery, with dispute triggers, on T57.": "Alıcının fonları lisanslı emanet hesabı iş ortaklarında tutulur ve T57'de gözetim, sevkiyat ya da teslimatta, uyuşmazlık tetikleyicileriyle kademeli olarak serbest bırakılır.",
+"Buyer funds held by licensed escrow partners and released in stages on inspection, shipment or delivery, with dispute triggers, on T57.": "Alıcı fonları lisanslı emanet iş ortaklarında tutulur; T57'de gözetim, sevkiyat ya da teslimatta, uyuşmazlık tetikleyicileriyle kademeli serbest bırakılır.",
 "One wallet for every": "Her ticari ödeme için",
 "trade payment.": "tek cüzdan.",
 "One wallet for every trade payment, in any currency, linked to every invoice.": "Her para biriminde, her faturaya bağlı, her ticari ödeme için tek cüzdan.",
@@ -303,7 +303,7 @@
 "Checked before presentation": "İbrazdan önce kontrol edilir",
 "Presented digitally": "Dijital olarak ibraz edilir",
 "Electronic Letter of Credit (eLC) for Food Trade | T57": "Gıda Ticareti İçin Elektronik Akreditif (e-akreditif) | T57",
-"LCs built from your contract, issued by partner banks in about 15 minutes after approval, with AI discrepancy checks and digital presentation on T57.": "Sözleşmenizden oluşturulan, onaydan sonra iş ortağı bankalarca yaklaşık 15 dakikada açılan akreditifler; T57'de yapay zekâ ile uyumsuzluk kontrolü ve dijital ibraz.",
+"LCs built from your contract, issued by partner banks in about 15 minutes after approval, with AI discrepancy checks and digital presentation on T57.": "Sözleşmenizden oluşturulup onaydan sonra yaklaşık 15 dakikada iş ortağı bankalarca açılan akreditifler; yapay zekâ uyumsuzluk kontrolü, dijital ibraz.",
 "Riyadh restaurant group reorders produce by voice note": "Riyadlı bir restoran grubu sebzeyi sesli mesajla yeniden sipariş ediyor",
 "The head chef of a Riyadh restaurant group sends a voice note in Arabic: \"Same vegetables as Monday, but double the tomatoes, deliver tomorrow morning.\" T57's AI matches the request to Monday's order with a verified local supplier, doubles the tomatoes and shows a summary. The chef confirms with one tap, the supplier receives a structured order, and the delivery and invoice are recorded automatically.": "Riyadlı bir restoran grubunun şefi Arapça bir sesli mesaj gönderiyor: \"Pazartesi gelen sebzelerin aynısı, ama domates iki katı olsun, yarın sabah teslim.\" T57'nin yapay zekâsı talebi doğrulanmış yerel bir tedarikçiye verilen pazartesi siparişiyle eşleştiriyor, domatesi iki katına çıkarıyor ve bir özet gösteriyor. Şef tek dokunuşla onaylıyor, tedarikçi yapılandırılmış bir sipariş alıyor; teslimat ve fatura otomatik olarak kaydediliyor.",
 "Funds are held by regulated escrow providers, never by T57. For both sides, this means money is held separately by a regulated provider.": "Fonlar asla T57'de değil, düzenlemeye tabi emanet hesabı sağlayıcılarında tutulur. İki taraf için de bu, paranın düzenlemeye tabi bir sağlayıcıda ayrı tutulması demektir."

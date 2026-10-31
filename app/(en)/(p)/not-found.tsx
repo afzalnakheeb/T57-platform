@@ -1,3 +1,4 @@
+import DocumentLang from '../../../components/DocumentLang';
 import { chrome } from '../../../lib/site';
 
 // Shown for any address that is not a sitemap page, inside the shared header and footer.
@@ -6,6 +7,7 @@ export const metadata = { title: 'Page not found | T57', robots: { index: false 
 export default function NotFound() {
   return (
     <>
+    <DocumentLang lang="en" dir="ltr" title={metadata.title} />
     <div dangerouslySetInnerHTML={{ __html: chrome('top') }} />
     <main id="main">
       <section className="gutter" style={{ padding: '120px 0 140px', maxWidth: 760, margin: '0 auto' }}>
