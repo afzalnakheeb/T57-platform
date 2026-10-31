@@ -1,5 +1,6 @@
 import { chrome } from '../../../lib/site';
 import { DECKS } from '../../../lib/decks';
+import { FOLDERS } from '../../../lib/folders';
 
 // The pitch decks page: one card per deck, each opened with the access code T57 sends to recipients.
 // The decks themselves are served by app/decks/[deck]/route.ts. The page stays out of search.
@@ -22,6 +23,7 @@ const css = `
 .deck-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px;margin-top:48px}
 .deck-card{display:flex;flex-direction:column;gap:14px;padding:32px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px);color:#fff;text-decoration:none;transition:border-color .2s,transform .2s,background .2s}
 .deck-card:hover{border-color:#f8b716;background:rgba(255,255,255,.09);transform:translateY(-3px)}
+.deck-card .lang.folder{background:#39c4c4}
 .deck-card .lang{display:inline-flex;align-self:flex-start;padding:4px 12px;border-radius:999px;background:#f8b716;color:#2f2e7d;font:700 13px/20px var(--font-text);letter-spacing:.06em}
 .deck-card h2{font:700 24px/1.3 var(--font-display);margin:0}
 .deck-card p{margin:0;color:rgba(255,255,255,.78);font-size:16px;line-height:26px}
@@ -58,6 +60,14 @@ export default function DecksPage() {
                   <h2>{d.title}</h2>
                   <p>{d.summary}</p>
                   <span className="open">{lock}{d.lang === 'ar' ? 'يتطلب رمز الدخول' : 'Access code required'}</span>
+                </a>
+              ))}
+              {FOLDERS.map((f) => (
+                <a key={f.id} className="deck-card" href={`/decks/${f.id}`} lang="en">
+                  <span className="lang folder">Folder</span>
+                  <h2>{f.title}</h2>
+                  <p>{f.summary}</p>
+                  <span className="open">{lock}{`PIN required · ${f.items.length} items`}</span>
                 </a>
               ))}
             </div>

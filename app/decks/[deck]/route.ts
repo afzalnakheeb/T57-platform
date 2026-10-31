@@ -1,4 +1,6 @@
 import { cookies, headers } from 'next/headers';
+import { folderById, itemById } from '../../../lib/folders';
+import { folderGET, folderPOST, itemGET } from '../../../lib/folder-pages';
 import { COOKIE, cleared, codeMatches, configured, deckById, deckHtml, failed, hasAccess, lockedFor, token, type Deck } from '../../../lib/decks';
 
 // One pitch deck: the deck itself for a visitor who has entered the access code, else the access-code page.
@@ -16,7 +18,12 @@ const html = (body: string, status = 200) =>
 const notFound = () => new Response('Not found', { status: 404, headers: PRIVATE });
 const visitor = () => (headers().get('x-forwarded-for') || '').split(',')[0].trim() || 'unknown';
 
-export function GET(_req: Request, { params }: Ctx) {
+export function GET(req: Request, { params }: Ctx) {
+  // A folder (lib/folders.ts) has its own PIN and pages.
+  const folder = folderById(params.deck);
+  if (folder) return folderGET(req, folder);
+  const inFolder = itemById(params.deck);
+  if (inFolder) return itemGET(inFolder.folder, inFolder.item);
   const deck = deckById(params.deck);
   if (!deck) return notFound();
   if (hasAccess(cookies().get(COOKIE)?.value)) return html(deckHtml(deck.id));
@@ -24,6 +31,8 @@ export function GET(_req: Request, { params }: Ctx) {
 }
 
 export async function POST(req: Request, { params }: Ctx) {
+  const folder = folderById(params.deck);
+  if (folder) return folderPOST(req, folder);
   const deck = deckById(params.deck);
   if (!deck) return notFound();
   if (!configured()) return html(gate(deck, 'off'), 503);
