@@ -104,6 +104,7 @@ button:hover,.btn:hover{background:#ffc93d;text-decoration:none}
 .share h2{margin:0 0 6px;font-size:20px}
 .linkrow{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
 .linkrow code{flex:1 1 320px;min-width:0;overflow-wrap:anywhere;padding:13px 16px;border-radius:10px;background:rgba(11,19,64,.6);border:1px solid rgba(255,255,255,.18);font:500 15px/1.4 ui-monospace,Menlo,Consolas,monospace;color:#fff}
+.msgbox{margin:14px 0 0;padding:16px 18px;border-radius:10px;background:rgba(11,19,64,.6);border:1px solid rgba(255,255,255,.18);font:400 15px/1.55 Roboto,system-ui,sans-serif;color:#fff;white-space:pre-wrap}
 .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 .player{position:relative;margin-top:28px;border-radius:14px;overflow:hidden;border:1px solid rgba(248,183,22,.35);box-shadow:0 30px 80px rgba(0,0,0,.45);background:#000;aspect-ratio:16/9}
 .player video{display:block;width:100%;height:100%}
@@ -158,8 +159,9 @@ ${msg ? `<div class="msg" role="alert">${esc(msg)}</div>` : ''}
 }
 
 function folderPage(f: Folder) {
-  const link = `${SITE}/decks/${f.id}?pin=${encodeURIComponent(folderPin(f))}`;
-  const msg = `${f.title}, from T57: ${f.summary}\n\nThis private link opens the folder directly:\n${link}`;
+  const link = `${SITE}/decks/${f.id}`;
+  const pin = folderPin(f);
+  const msg = `Dear [Name],\n\nPlease find T57's ${f.title} below: ${f.summary}\n\nLink: ${link}\nPIN: ${pin}\n\nOpen the link and enter the PIN to view the deck and the film. Please keep the PIN private.\n\nBest regards,\nAfzal Hussain Mohammed Nakheeb\nFounder and Chairman, T57 · afzal@t57.ai`;
   const cards = f.items.map((i) => `<a class="card" href="/decks/${i.id}">
 <span class="tag${i.kind === 'film' ? ' film' : ''}">${i.kind === 'film' ? 'Film' : 'Pitch deck'}</span>
 <h2>${esc(i.title)}</h2>
@@ -175,17 +177,19 @@ function folderPage(f: Folder) {
 <div class="grid">${cards}</div>
 <section class="share" aria-labelledby="share-h">
 <h2 id="share-h">Share this folder</h2>
-<p>This link carries the folder’s PIN, so whoever receives it opens the folder in one click. Share it only with the people you mean to.</p>
-<div class="linkrow"><code id="link">${esc(link)}</code><button type="button" id="copy">Copy link</button></div>
+<p>Send the link and the PIN together in the message below. The recipient opens the link and enters the PIN.</p>
+<div class="linkrow"><code>Link: ${esc(link)}</code><code style="flex:0 1 200px">PIN: ${esc(pin)}</code></div>
+<pre id="msg" class="msgbox">${esc(msg)}</pre>
+<div class="btns"><button type="button" id="copy">Copy message</button></div>
 <div class="btns">
 <a class="btn ghost" href="https://wa.me/?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">Send on WhatsApp</a>
 <a class="btn ghost" href="mailto:?subject=${encodeURIComponent(`T57 · ${f.title}`)}&body=${encodeURIComponent(msg)}">Send by email</a>
 </div>
 </section>
 </main>
-<script>(()=>{const b=document.getElementById('copy'),l=${JSON.stringify(link).replace(/</g, '\\u003c')};
-b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(l)}catch(e){const r=document.createRange();r.selectNodeContents(document.getElementById('link'));const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy')}
-b.textContent='Copied';setTimeout(()=>b.textContent='Copy link',2500)})})()</script>`);
+<script>(()=>{const b=document.getElementById('copy'),l=${JSON.stringify(msg).replace(/</g, '\\u003c')};
+b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(l)}catch(e){const r=document.createRange();r.selectNodeContents(document.getElementById('msg'));const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy')}
+b.textContent='Copied';setTimeout(()=>b.textContent='Copy message',2500)})})()</script>`);
 }
 
 // The film arrives encrypted (AES-256-CTR, the first 16 bytes are the counter); the browser decrypts it
