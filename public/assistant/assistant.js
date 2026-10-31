@@ -54,7 +54,7 @@
   const root = document.createElement('div');
   root.className = 't57ai'; root.dir = ar ? 'rtl' : 'ltr'; root.lang = lang;
   root.innerHTML = `
-    <button class="ai-launch" type="button" aria-haspopup="dialog" aria-expanded="false">${badge}<span class="ai-launch-t">${L.open}</span></button>
+    <button class="ai-launch" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="${L.open}">${badge}<span class="ai-launch-t">${L.open}</span></button>
     <section class="ai-panel" role="dialog" aria-modal="false" aria-label="${L.title}" hidden>
       <header class="ai-head">${badge}<div><b>${L.title}</b><span>${L.sub}</span></div>
         <button class="ai-ic ai-reset" type="button" title="${L.reset}" aria-label="${L.reset}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
