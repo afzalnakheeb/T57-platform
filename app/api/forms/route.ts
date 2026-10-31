@@ -13,7 +13,7 @@ import { put } from '@vercel/blob';
 export const runtime = 'nodejs';
 
 type Field = { max: number; required?: boolean; email?: boolean; options?: string[] };
-const ROLES = ['Producer or farmer', 'Cooperative or FPO', 'Processor', 'Trader', 'Buyer', 'Financier', 'Service provider', 'Government or institution', 'Partner', 'Other'];
+const ROLES = ['Producer or farmer', 'Cooperative or FPO', 'Processor', 'Trader', 'Seller or exporter', 'Buyer', 'Retail, HoReCa or enterprise buyer', 'Financier', 'Logistics or inspection provider', 'Service provider', 'Government or institution', 'Partner', 'Other'];
 const INVESTORS = ['Family office', 'Venture or private equity fund', 'Strategic or corporate investor', 'Sovereign or development institution', 'Qualified individual investor', 'Other'];
 const COMMON: Record<string, Field> = {
   name: { max: 120, required: true }, email: { max: 160, required: true, email: true }, company: { max: 160 },

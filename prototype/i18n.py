@@ -68,7 +68,8 @@ def attr_units(src):
     for m in re.finditer(r'\s(' + '|'.join(ATTRS) + r')="([^"]*)"', src):
         if letters.search(m.group(2)): yield m.start(2), m.end(2), m.group(2)
 
-def norm(s): return re.sub(r'\s+', ' ', s).strip()
+# data-form (which form a button opens, added by build.py) is structure, not text: units match without it
+def norm(s): return re.sub(r'\s+', ' ', re.sub(r' data-form="[a-z]+"', '', s)).strip()
 
 def loose(src):
     # text runs left outside any unit (a label beside an input, a link beside an icon): each one is a unit too

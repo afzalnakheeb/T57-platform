@@ -266,5 +266,10 @@
 "Urgent: a shipment is held or a payment is disputed": "عاجل: شحنة محتجزة أو دفعة متنازع عليها",
 "Website": "الموقع الإلكتروني",
 "I agree that T57 may use these details to reply to me, as set out in": "أوافق على استخدام T57 هذه البيانات للرد عليّ، وفق ما ورد في",
-"Language": "اللغة"
+"Language": "اللغة",
+"Close search": "إغلاق البحث",
+"Seller or exporter": "بائع أو مصدّر",
+"Retail, HoReCa or enterprise buyer": "مشترٍ مؤسسي أو تجزئة أو ضيافة",
+"Logistics or inspection provider": "مزوّد خدمات لوجستية أو فحص",
+"Demo": "عرض تجريبي"
 }

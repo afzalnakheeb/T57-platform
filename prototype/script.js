@@ -513,10 +513,10 @@
     veil.classList.add('go');
     anim(main, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.5, transform: 'scale(0.985)' }], { duration: 380 });
     anim(vbg, [{ opacity: 0 }, { opacity: 1 }], { duration: 340 });
-    await anim(mark, [{ opacity: 0, transform: 'scale(.82)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 400, delay: 80, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    await anim(mark, [{ opacity: 0, transform: 'scale(.82)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 280, delay: 40, easing: 'cubic-bezier(.2,.8,.2,1)' });
     if (target !== mark) anim(target, [{ transform: 'scale(1)' }, { transform: 'scale(1.12)' }], { duration: 300, easing: 'cubic-bezier(.2,.8,.2,1)' });
     anim(dest, [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 280 });
-    await anim(target, [{ filter: 'none' }, { filter: 'drop-shadow(0 0 8px rgba(57,196,196,.9))' }], { duration: 320 });
+    await anim(target, [{ filter: 'none' }, { filter: 'drop-shadow(0 0 8px rgba(57,196,196,.9))' }], { duration: 180 });
     location.href = href;
     addEventListener('pageshow', e => { if (e.persisted) { veil.classList.remove('go'); clearAll([vbg, mark, dest, main, ...veilPetals]); busy = false; } }, { once: true });
   }
@@ -531,12 +531,12 @@
     document.documentElement.classList.remove('arriving');
     const hold = (el, k) => el.animate([k, k], { duration: 10, fill: 'forwards' });
     hold(vbg, { opacity: 1 }); hold(mark, { opacity: 1, transform: 'scale(1)' }); hold(dest, { opacity: 1 });
-    await new Promise(r => setTimeout(r, 120));
-    const start = mark.getBoundingClientRect().width * 0.9, end = Math.hypot(innerWidth, innerHeight) * 2.4, dur = 900;
+    await new Promise(r => setTimeout(r, 60));
+    const start = mark.getBoundingClientRect().width * 0.9, end = Math.hypot(innerWidth, innerHeight) * 2.4, dur = 620;
     const setSize = w => { const v = w.toFixed(1) + 'px auto, 100% 100%'; vbg.style.webkitMaskSize = v; vbg.style.maskSize = v; };
     setSize(start); veil.classList.add('reveal');
     const lines = [...document.querySelectorAll('#' + name + ' .hero h1 .ln, #' + name + ' .hero .std, #' + name + ' .hero .actions')];
-    lines.forEach((l, i) => l.animate([{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }], { duration: 600, delay: 380 + i * 90, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
+    lines.forEach((l, i) => l.animate([{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }], { duration: 500, delay: 220 + i * 70, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
     anim(dest, [{ opacity: 1 }, { opacity: 0 }], { duration: 200 });
     // the logo grows with the hole for the first part, then fades, so it seems to open into the page
     anim(mark, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.9, transform: 'scale(1.5)', offset: 0.35 }, { opacity: 0, transform: 'scale(3)' }], { duration: 520, easing: 'cubic-bezier(.4,0,.6,1)' });
@@ -588,14 +588,14 @@
         { opacity: 0, transform: `translate(${dx}px, ${dy}px) scale(.4)` },
         { opacity: 1, offset: 0.6 },
         { opacity: 1, transform: 'translate(0,0) scale(1)' }
-      ], { duration: 900, delay: 200 + i * 170, easing: 'cubic-bezier(.2,.9,.25,1.15)', fill: 'both' }).finished;
+      ], { duration: 620, delay: 80 + i * 90, easing: 'cubic-bezier(.2,.9,.25,1.15)', fill: 'both' }).finished;
     });
     dest.lang = 'en'; dest.textContent = 'T57.ai';
     await Promise.all(ps);
     if (!introOn) return;
-    ring.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, fill: 'forwards' });
-    dest.animate([{ opacity: 0, letterSpacing: '.6em' }, { opacity: 1, letterSpacing: '.24em' }], { duration: 700, fill: 'forwards', easing: 'cubic-bezier(.2,.8,.2,1)' });
-    await new Promise(r => setTimeout(r, 750));
+    ring.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 300, fill: 'forwards' });
+    dest.animate([{ opacity: 0, letterSpacing: '.6em' }, { opacity: 1, letterSpacing: '.24em' }], { duration: 450, fill: 'forwards', easing: 'cubic-bezier(.2,.8,.2,1)' });
+    await new Promise(r => setTimeout(r, 320));
     if (!introOn) return;
     // fly the mark to the header logo
     const from = mark.getBoundingClientRect(), to = logo.getBoundingClientRect();
@@ -604,8 +604,8 @@
     logo.querySelectorAll('.petal').forEach(p => p.style.opacity = '0');
     const wm = logo.querySelector('.wordmark'); wm.style.opacity = '0';
     dest.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 300, fill: 'forwards' });
-    vbg.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 700, delay: 250, fill: 'forwards' });
-    await mark.animate([{ transform: 'none' }, { transform: `translate(${dx}px, ${dy}px) scale(${s})` }], { duration: 900, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' }).finished;
+    vbg.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 450, delay: 120, fill: 'forwards' });
+    await mark.animate([{ transform: 'none' }, { transform: `translate(${dx}px, ${dy}px) scale(${s})` }], { duration: 600, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' }).finished;
     logo.querySelectorAll('.petal').forEach(p => p.style.opacity = '');
     wm.animate([{ opacity: 0, transform: 'translateX(-24px)' }, { opacity: 1, transform: 'none' }], { duration: 600, easing: 'cubic-bezier(.2,.8,.2,1)' });
     wm.style.opacity = '';
@@ -652,8 +652,9 @@
   // Pricing: ROI calculator. Standard list prices; annual billing is ten months for twelve, Enterprise at its starting price.
   document.querySelectorAll('[data-roi]').forEach(f => {
     const PLANS = [['Explore', 199, .0075, 1990], ['Core', 499, .006, 4990], ['Growth', 749, .004, 7490], ['Enterprise', 1499, .002, 1499 * 12]];
+    const MAX = { trades: 10000, value: 10000000 };
     const usd = n => (n < 0 ? '−$' : '$') + Math.round(Math.abs(n)).toLocaleString(TR ? 'tr-TR' : 'en-US');
-    const v = k => { const el = f.querySelector(`[data-roi-in="${k}"]`); return el.tagName === 'SELECT' ? el.value : Math.max(0, +el.value || 0); };
+    const v = k => { const el = f.querySelector(`[data-roi-in="${k}"]`); return el.tagName === 'SELECT' ? el.value : Math.min(MAX[k] || Infinity, Math.max(0, +el.value || 0)); };
     const out = k => f.querySelector(`[data-r="${k}"]`);
     function run() {
       f.querySelectorAll('input[type=range]').forEach(r => f.querySelector(`[data-roi-out="${r.dataset.roiIn}"]`).textContent = r.value + '%');
@@ -662,6 +663,8 @@
       const rework = v('trades') * 12 * v('rework') * c('c_rework');
       const margin = vol * c('margin') * c('c_margin');
       const fin = vol * c('rate') * (v('wait') / 365) - vol * c('rate') * (1 - c('c_rate')) * (v('wait') * (1 - c('c_wait')) / 365);
+      // with no trades entered there is nothing to compare, so show dashes rather than a result
+      if (!vol) { ['net', 'gross', 'plan', 'fees'].forEach(k => out(k).textContent = '—'); out('net').classList.remove('neg'); out('rows').innerHTML = ''; return; }
       const gross = time + rework + margin + fin;
       const costs = PLANS.map(([n, m, fee, yr]) => [n, yr + vol * fee]);
       const best = costs.reduce((a, b) => b[1] < a[1] ? b : a);
@@ -707,7 +710,11 @@
   const srch = document.getElementById('srch'), srchBtn = document.getElementById('srch-btn');
   if (srch && srch.showModal) {
     const q = document.getElementById('srch-q'), list = document.getElementById('srch-res'), none = document.getElementById('srch-none'), kick = document.getElementById('srch-k');
-    const POP = ['platform-domestic', 'markets-global', 'club-membership', 'cap-hire-expert', 'cap-equipment-rental', 'partners-country', 'pricing', 'trust-verification'];
+    const POP = ['who-we-serve', 'buyers', 'sellers', 'financiers', 'governments', 'pricing', 'club-membership', 'contact-demo'];
+    // Everyday words are dropped, and common ways of asking map onto the words the pages use.
+    const STOP = new Set(['how', 'much', 'does', 'do', 'it', 'the', 'what', 'is', 'are', 'can', 'an', 'for', 'to', 'of', 'in', 'on', 'my', 'me', 'you', 'your', 'with', 'and', 'or', 'about', 'which', 'who', 'where', 'when', 'why', 'there', 'get', 'use', 'i']);
+    const SYN = { cost: ['pric', 'fee', 'plan'], costs: ['pric', 'fee', 'plan'], price: ['pric', 'fee', 'plan'], prices: ['pric', 'fee', 'plan'], fee: ['fee', 'pric'], fees: ['fee', 'pric'], login: ['apply', 'member'], signin: ['apply', 'member'], log: ['apply', 'member'], signup: ['apply', 'member'], register: ['apply', 'regist', 'member'],
+      supermarket: ['retail', 'buyer', 'horeca'], supermarkets: ['retail', 'buyer', 'horeca'], retail: ['retail', 'buyer'], restaurant: ['horeca', 'buyer'], hotel: ['horeca', 'buyer'], bank: ['bank', 'financ', 'lender'], banks: ['bank', 'financ', 'lender'], lender: ['lender', 'financ'], loan: ['financ', 'lender'], fpo: ['fpo', 'cooperativ'], coop: ['cooperativ', 'fpo'], 'co-op': ['cooperativ', 'fpo'], ministry: ['government'], demo: ['demo'] };
     const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
     // Arabic: drop short vowels and tatweel, and fold alef, yaa and taa marbuta forms, so spelling variants still match.
     const norm = t => String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f\u064b-\u0652\u0670\u0640]/g, '').replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه');
@@ -717,10 +724,11 @@
     const row = (p, words) => `<li role="option" aria-selected="false"><a href="${p.route}" data-go="${p.id}">${p.sec ? `<small>${esc(p.sec)}</small>` : ''}<b>${mark(p.name, words)}</b><span>${mark(p.ans, words)}</span></a></li>`;
     const pick = n => { const it = [...list.children]; if (!it.length) return; sel = (n + it.length) % it.length; it.forEach((li, k) => li.setAttribute('aria-selected', k === sel ? 'true' : 'false')); it[sel].scrollIntoView({ block: 'nearest' }); };
     const run = () => {
-      const words = norm(q.value).trim().split(/\s+/).filter(w => w.length > 1); sel = -1;
+      const words = norm(q.value).trim().split(/\s+/).filter(w => w.length > 1 && !(!AR && !MS && !TR && !HI && STOP.has(w))); sel = -1;
       if (!words.length) { kick.textContent = AR ? 'الأكثر زيارة' : MS ? 'Paling dilawati' : TR ? 'En çok ziyaret edilenler' : HI ? 'सबसे ज़्यादा देखे गए' : 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
       const W = [8, 5, 2, 1], hits = [];
-      IDX.forEach(p => { let s = 0; for (const w of words) { let m = 0; p.f.forEach((f, k) => { if (f.includes(w)) m += W[k] * (new RegExp('\\b' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(f) ? 2 : 1); }); if (!m) return; s += m; } hits.push([s, p]); });
+      // blog articles rank below the product pages they discuss
+      IDX.forEach(p => { let s = 0; for (const w of words) { let m = 0; for (const v of [w, ...(SYN[w] || [])]) p.f.forEach((f, k) => { if (f.includes(v)) m += W[k] * (new RegExp('\\b' + v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(f) ? 2 : 1); }); if (!m) return; s += m; } hits.push([p.route.includes('/resources/blog/') ? s / 2 : s, p]); });
       hits.sort((a, b) => b[0] - a[0]);
       kick.textContent = !hits.length ? '' : AR ? (hits.length === 1 ? 'صفحة واحدة' : hits.length === 2 ? 'صفحتان' : `${hits.length} ${hits.length <= 10 ? 'صفحات' : 'صفحة'}`) : MS ? `${hits.length} halaman` : TR ? `${hits.length} sayfa` : HI ? `${hits.length} पेज` : `${hits.length} page${hits.length === 1 ? '' : 's'}`; kick.hidden = !hits.length; none.hidden = !!hits.length;
       list.innerHTML = hits.slice(0, 12).map(([, p]) => row(p, words)).join('');
@@ -865,7 +873,7 @@
   });
 
   // The get-started dialog: every "talk to us", "book a demo" or "apply" button opens it with the right form
-  const ROLE_OF = { farmers: 1, cooperatives: 2, 'food-processors': 3, enterprises: 3, traders: 4, buyers: 5, financiers: 6, 'service-providers': 7, governments: 8, collaborators: 9 };
+  const ROLE_OF = { farmers: 'Producer or farmer', cooperatives: 'Cooperative or FPO', 'food-processors': 'Processor', enterprises: 'Retail, HoReCa or enterprise buyer', traders: 'Trader', sellers: 'Seller or exporter', buyers: 'Buyer', financiers: 'Financier', 'service-providers': 'Service provider', governments: 'Government or institution', collaborators: 'Partner' };
   const dlg = document.getElementById('get-started');
   if (dlg && dlg.showModal) {
     const df = dlg.querySelector('form');
@@ -885,7 +893,9 @@
       const t = a.textContent.trim(), kind = a.dataset.form || kindOf(t); open(kind, t);
       // Audience pages pre-select the visitor's role, so "Register now" is one click to the right form
       const who = ((a.getAttribute('href') || '').match(/#cta-(.+)/) || [])[1], ri = ROLE_OF[who], rs = df.querySelector('select[name="role"]');
-      if (kind === 'join' && ri && rs) rs.selectedIndex = ri;
+      if (kind === 'join' && ri && rs) rs.value = ri;
+      // plan buttons on the pricing table pre-select their plan
+      const ps = df.querySelector('select[name="plan"]'); if (ps) ps.value = kind === 'join' && a.dataset.plan || '';
     }, true);
     dlg.querySelector('[data-fdlg-close]').addEventListener('click', () => dlg.close());
     dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });

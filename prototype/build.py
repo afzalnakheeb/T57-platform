@@ -31,7 +31,7 @@ def partner_strip():
     li = lambda c, x: f'<li class="lm-tx">{x}</li>' if 'pw-tx' in c else f'<li>{x}</li>'
     run = ''.join(li(c, x) for c, x in items)
     copy = re.sub(r' alt="[^"]*"', ' alt=""', run)
-    return (f'<div class="logo-marquee" role="region" aria-label="Partners" dir="ltr"><div class="lm-track">'
+    return (f'<div class="logo-marquee" role="region" aria-label="Partners" dir="ltr" tabindex="0"><div class="lm-track">'
             f'<ul class="lm-run">{run}</ul><ul class="lm-run" aria-hidden="true">{copy}</ul></div></div>')
 worlds = worlds.replace('{{PARTNER_STRIP}}', partner_strip())
 # Leadership cards: a LinkedIn link for each person whose profile is confirmed, and a personal website where there is one.
@@ -57,7 +57,21 @@ for i, attrs in arts:
     ROUTE[i] = m.group(1) if m else '/' if i == 'home' else '/who-we-serve' if i == 'who-we-serve' else f'/who-we-serve/{i}'
 PETAL = {i: re.search(r'data-petal="([^"]+)"', a).group(1) for i, a in arts if 'data-petal=' in a}
 
+# Which form a call to action opens is decided here from its English label, and carried as data-form, so every
+# language opens the same form whatever its wording (the page script only guesses for links without one).
+def form_kind(t):
+    t = html.unescape(re.sub(r'<[^>]+>', ' ', t))
+    for kind, rx in (('invest', r'invest'), ('subscribe', r'subscri'), ('support', r'support|security team'),
+                     ('join', r'trading partner|chat'), ('partner', r'partner'), ('demo', r'demo|see how t57 works|watch|compare plans'),
+                     ('join', r'apply|join|register|free trial|membership|sign up|start|trade with|use escrow|post your|list your|try |track your')):
+        if re.search(rx, t, re.I): return kind
+    return 'contact'
+def cta_forms(s):
+    return re.sub(r'<a ((?:(?!data-form)[^>])*?href="/?#cta-[a-z0-9-]+"(?:(?!data-form)[^>])*)>(.*?)</a>',
+                  lambda m: f'<a {m.group(1)} data-form="{form_kind(m.group(2))}">{m.group(2)}</a>', s, flags=re.S)
+
 def relink(s, page=None):
+    s = cta_forms(s)
     s = re.sub(r'href="#([a-z0-9-]+)"', lambda m: f'href="{ROUTE[m.group(1)]}"' if m.group(1) in ROUTE else m.group(0), s)
     if page != 'home': s = s.replace('href="#cta-home"', 'href="/#cta-home"')
     return s
