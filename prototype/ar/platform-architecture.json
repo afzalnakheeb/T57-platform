@@ -64,5 +64,6 @@
 "Single points of failure": "نقاط عطل منفردة",
 "Modular, monitored services": "خدمات مستقلة ومراقبة",
 "T57 Architecture | Cloud-Native, API-First Platform": "بنية T57 | منصة سحابية الأصل تبدأ بالواجهات البرمجية",
-"Region-aware cloud on Microsoft Azure, modular services, partner connectors and member APIs, built for verified, regulated food trade across borders.": "سحابة تراعي كل منطقة على Microsoft Azure، وخدمات مستقلة، وموصلات للشركاء، وواجهات برمجية للأعضاء، مبنية لتجارة غذاء موثَّقة وخاضعة للتنظيم عبر الحدود."
+"Region-aware cloud on Microsoft Azure, modular services, partner connectors and member APIs, built for verified, regulated food trade across borders.": "سحابة تراعي كل منطقة على Microsoft Azure، وخدمات مستقلة، وموصلات للشركاء، وواجهات برمجية للأعضاء، مبنية لتجارة غذاء موثَّقة وخاضعة للتنظيم عبر الحدود.",
+"Food trade involves banks, insurers, logistics firms, inspectors, customs authorities and thousands of businesses, each with its own systems and rules, in many countries with their own data laws. Most trade platforms are built as closed marketplaces that cannot connect deeply to these parties, or as single-country systems that cannot cross borders. Neither can carry a trade from end to end.": "تشمل تجارة الغذاء البنوك وشركات التأمين والشركات اللوجستية والمفتشين والجمارك وآلاف المنشآت، لكلٍّ أنظمته وقواعده، في دول كثيرة لكلٍّ منها قوانين بياناتها. ومعظم منصات التجارة إما أسواق مغلقة لا تتكامل بعمق مع هذه الأطراف، أو أنظمة لدولة واحدة لا تعبر الحدود، وكلاهما لا يحمل الصفقة من أولها إلى آخرها."
 }
