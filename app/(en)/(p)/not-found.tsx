@@ -13,6 +13,7 @@ export default function NotFound() {
         <h1>We could not find that page.</h1>
         <p className="std">The address may have changed. Start from the home page, or tell us what you were looking for at <a href="mailto:hello@t57.ai">hello@t57.ai</a>.</p>
         <p><a className="btn btn-indigo" href="/">Go to the home page</a></p>
+        <p className="nf-links"><button type="button" className="btn btn-ghost" data-open-search>Search T57.ai</button><a href="/who-we-serve">Who We Serve</a><a href="/pricing">Pricing</a><a href="/#cta-home" data-form="demo">Request a demo</a><a href="/help">Help Center</a></p>
       </section>
     </main>
     <div dangerouslySetInnerHTML={{ __html: chrome('bottom') }} />
