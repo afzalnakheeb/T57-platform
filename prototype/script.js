@@ -1399,6 +1399,19 @@ document.querySelectorAll('.bl').forEach(sec => {
     const s = mount(fig, h, html.replace('<div class="scn-hub', '</div><div class="scn-hub'), 'scn-hubbed', N);
   });
 
+  // 6. Global rollout: the market map fills as the phases advance
+  document.querySelectorAll('ol.waves').forEach(fig => {
+    const waves = [...fig.querySelectorAll(':scope > .wave')].map(w => ({ n: +(w.querySelector('.wv-n') || {}).dataset?.n || 0, k: txt(w.querySelector('.wv-k')), b: txt(w.querySelector('h3')), d: txt(w.querySelector('.wv-d')), chips: [...w.querySelectorAll('ul li')].map(txt) })).filter(w => w.n);
+    if (waves.length < 3 || !/global-rollout/.test(location.pathname)) return; const h = host(fig); if (!h) return;
+    const total = waves[waves.length - 1].n; const phaseOf = i => waves.findIndex(w => i < w.n);
+    const unit = txt(fig.querySelector('.wv-bar small')) || '';
+    const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-list">${waves.map((w, i) => `<li data-k="${i}"><span class="sl-n">${i + 1}</span><b>${esc(w.b)}</b><span class="sl-d">${esc(w.k)}${w.d ? ' · ' + esc(w.d) : ''}${w.chips.length ? '<br>' + w.chips.map(c => `<em class="chip">${esc(c)}</em>`).join('') : ''}</span></li>`).join('')}</ol></div>
+      <div class="scn-dotmap" aria-hidden="true"><p class="dm-n"><b data-count>${waves[0].n}</b> <span>${esc(unit)}</span></p><div class="dm-grid">${Array.from({ length: total }, (_, i) => `<i data-k="${phaseOf(i)}"></i>`).join('')}</div></div></div>`;
+    const sc = mount(fig, h, html.replace('<div class="scn-dotmap', '</div><div class="scn-dotmap'), 'scn-rollout', waves.length);
+    const cnt = sc.querySelector('[data-count]'); const rec = scenes[scenes.length - 1];
+    rec.upd = (p, k) => { cnt.textContent = waves[Math.max(0, Math.min(waves.length - 1, k - 1))].n; };
+  });
+
   // drive them from scroll
   if (!scenes.length) return;
   const stat = () => reduce || innerWidth < 900;
@@ -1526,7 +1539,7 @@ document.querySelectorAll('.bl').forEach(sec => {
   }
   // Capabilities: eight groups around one record
   const cm = document.querySelector('.life.cmap-nav');
-  if (cm && document.querySelector('figure.cmap')) {
+  if (cm && (document.querySelector('figure.cmap') || /^\/(ar\/|ms\/|tr\/|hi\/)?markets\/?$/.test(location.pathname))) {
     const sts = [...cm.querySelectorAll('.life-st')]; if (sts.length >= 4) {
       const nodes = sts.map(st => { const c = (st.getAttribute('style') || '').match(/--c:([^;]+)/); const links = [...st.querySelectorAll('li a')].map(a => ({ t: txt(a), href: a.getAttribute('href'), go: a.dataset.go })); return { n: txt(st.querySelector('.life-n')) || '', c: c ? c[1].trim() : 'var(--persian-blue)', kicker: '', title: txt(st.querySelector('h3')), desc: '', href: links[0] ? links[0].href : '#', go: links[0] && links[0].go, links }; });
       orbit(cm, nodes, txt(cm.closest('section').querySelector('h2'))); cm.classList.add('orb-on');
@@ -1543,4 +1556,25 @@ document.querySelectorAll('.bl').forEach(sec => {
   }
   // soft spotlight on cards
   if (matchMedia('(hover:hover)').matches && !reduce) document.querySelectorAll('.rcard, .ch-c, .aud').forEach(c => c.addEventListener('pointermove', e => { const r = c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px'); }));
+})();
+
+/* ---------- Today / With T57: drag to compare (audience and market pages) ---------- */
+(() => {
+  const gl = document.querySelector('.glance .gl-rows'); if (!gl) return;
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/';
+  if (!/^\/(who-we-serve\/.+|markets|markets\/global-rollout)\/?$/.test(path)) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const sr = el => { const c = el.cloneNode(true); c.querySelectorAll('.sr').forEach(x => x.remove()); return c.textContent.trim().replace(/\s+/g, ' '); };
+  const rows = [...gl.children].map(li => ({ ic: li.querySelector('.gl-ic'), k: sr(li.querySelector('.gl-k')), b: sr(li.querySelector('.gl-b')), a: sr(li.querySelector('.gl-a')) })).filter(r => r.b && r.a);
+  if (rows.length < 2) return;
+  const legend = [...document.querySelectorAll('.glance .gl-legend span')].map(x => x.textContent.trim()); const title = (document.querySelector('.glance .gl-h') || {}).textContent || '';
+  const sec = document.querySelector('main .chapter, .chapter'); if (!sec) return;
+  const layer = (cls, key) => `<ul class="cmp-l ${cls}">${rows.map(r => `<li>${r.ic ? r.ic.outerHTML : ''}<span class="cmp-k">${esc(r.k)}</span><b>${esc(r[key])}</b></li>`).join('')}</ul>`;
+  const el = document.createElement('section'); el.className = 'chapter cmp-sec gutter'; el.setAttribute('aria-label', title.trim());
+  el.innerHTML = `<div class="wrap"><h2 class="h2">${esc(title.trim())}</h2><div class="cmp" style="--x:50%;--v:.5"><div class="cmp-tags"><span>${esc(legend[0] || '')}</span><span>${esc(legend[1] || '')}</span></div>${layer('cmp-with', 'a')}<div class="cmp-today">${layer('cmp-was', 'b')}</div><input class="cmp-r" type="range" min="0" max="100" value="50" aria-label="${esc((legend[0] || '') + ' / ' + (legend[1] || ''))}"></div></div>`;
+  sec.insertAdjacentElement('afterend', el);
+  const cmp = el.querySelector('.cmp'), r = el.querySelector('.cmp-r');
+  const set = v => { cmp.style.setProperty('--x', v + '%'); cmp.style.setProperty('--v', (v / 100).toFixed(3)); cmp.classList.toggle('is-with', v >= 50); }; r.addEventListener('input', () => set(r.value));
+  if (!reduce && 'IntersectionObserver' in window) { const io = new IntersectionObserver(([e]) => { if (!e.isIntersecting) return; io.disconnect(); const t0 = performance.now(); const f = now => { const k = (now - t0) / 2600; if (k >= 1 || cmp.dataset.touched) return; const v = 50 + Math.sin(k * Math.PI * 2) * 34 * (1 - k); r.value = v; set(v.toFixed(1)); requestAnimationFrame(f); }; requestAnimationFrame(f); }, { threshold: 0.5 }); io.observe(cmp); r.addEventListener('pointerdown', () => { cmp.dataset.touched = '1'; }); }
 })();
