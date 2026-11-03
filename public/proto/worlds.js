@@ -1485,7 +1485,7 @@ document.querySelectorAll('.bl').forEach(sec => {
   const need = document.querySelector('ul.need'); if (!need || !/\/markets\/[^/]+\/getting-started\/?$/.test(location.pathname)) return;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const key = 't57need:' + location.pathname; let saved = []; try { saved = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) {}
-  const lis = [...need.children], N = lis.length;
+  need.classList.add('chk'); const lis = [...need.children], N = lis.length;
   const box = document.createElement('div'); box.className = 'need-top';
   box.innerHTML = '<div class="need-bar" aria-hidden="true"><i></i></div><p class="need-n" aria-live="polite"><b>0</b> / ' + N + '</p>';
   need.insertAdjacentElement('beforebegin', box);
@@ -1740,5 +1740,54 @@ document.querySelectorAll('.bl').forEach(sec => {
     show(list[0]);
     const go = () => { box.classList.add('in'); if (!reduce && !touched) timer = setInterval(() => show(list[(list.indexOf(cur) + 1) % list.length]), 3400); };
     if (reduce || !('IntersectionObserver' in window)) box.classList.add('in'); else { const io = new IntersectionObserver(([e]) => { clearInterval(timer); if (e.isIntersecting) go(); }, { threshold: 0.4 }); io.observe(box); }
+  }
+})();
+
+/* ---------- Resources hubs: video theatre, events year ribbon, newsroom by year ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const lang = document.documentElement.lang || 'en';
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  // Videos: one big player and a playlist
+  if (path === '/resources/videos') {
+    const grid = document.querySelector('.vids'); const figs = grid ? [...grid.querySelectorAll(':scope > figure.vid')] : [];
+    if (figs.length >= 3) {
+      const items = figs.map(f => { const v = f.querySelector('video'); return { poster: v.getAttribute('poster'), src: (v.querySelector('source') || {}).src || v.getAttribute('src'), track: v.querySelector('track'), title: txt(f.querySelector('figcaption b')), d: txt(f.querySelector('figcaption p')), t: txt(f.querySelector('.vid-f > span')), label: v.getAttribute('aria-label') || '' }; });
+      const th = document.createElement('div'); th.className = 'theatre';
+      th.innerHTML = `<div class="th-main"><div class="th-f"><video controls playsinline preload="none"></video></div><div class="th-cap"><b></b><p></p></div></div><ol class="th-list">${items.map((x, i) => `<li><button type="button" data-i="${i}"><img src="${esc(x.poster || '')}" alt="" loading="lazy" width="160" height="90"><span><b>${esc(x.title)}</b><em>${esc(x.t)}</em></span></button></li>`).join('')}</ol>`;
+      grid.insertAdjacentElement('beforebegin', th); grid.hidden = true;
+      const vid = th.querySelector('video'), cb = th.querySelector('.th-cap b'), cp = th.querySelector('.th-cap p'); let cur = -1;
+      const load = (i, play) => { cur = i; const x = items[i]; vid.pause(); vid.setAttribute('poster', x.poster || ''); vid.setAttribute('aria-label', x.label || x.title); vid.innerHTML = `<source src="${esc(x.src)}" type="video/mp4">` + (x.track ? x.track.outerHTML : ''); vid.load(); cb.textContent = x.title; cp.textContent = x.d; th.querySelectorAll('.th-list button').forEach(b => b.classList.toggle('on', +b.dataset.i === i)); if (play) vid.play().catch(() => {}); };
+      th.querySelectorAll('.th-list button').forEach(b => b.addEventListener('click', () => { load(+b.dataset.i, true); th.querySelector('.th-main').scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' }); }));
+      vid.addEventListener('ended', () => { if (cur < items.length - 1) load(cur + 1, true); });
+      load(0, false);
+    }
+  }
+  // Newsroom: announcements per year, click to filter
+  if (path === '/resources/newsroom') {
+    const ol = document.querySelector('ol.news-tl'); const lis = ol ? [...ol.children] : [];
+    if (lis.length >= 4) {
+      const yr = li => (txt(li.querySelector('time')).match(/(20\d\d)/) || [])[1]; const by = {}; lis.forEach(li => { const y = yr(li); if (y) { li.dataset.y = y; by[y] = (by[y] || 0) + 1; } });
+      const years = Object.keys(by).sort((a, b) => b - a); const max = Math.max(...Object.values(by));
+      const bar = document.createElement('div'); bar.className = 'yrs'; bar.setAttribute('role', 'group');
+      const allL = { en: 'All', ar: 'الكل', ms: 'Semua', tr: 'Tümü', hi: 'सभी' }[lang] || 'All';
+      bar.innerHTML = `<button type="button" aria-pressed="true" data-y="all"><b>${lis.length}</b><span>${esc(allL)}</span></button>` + years.map(y => `<button type="button" aria-pressed="false" data-y="${y}"><b>${by[y]}</b><i style="--h:${Math.round(by[y] / max * 100)}"></i><span>${y}</span></button>`).join('');
+      ol.insertAdjacentElement('beforebegin', bar);
+      bar.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { bar.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false')); lis.forEach(li => { li.hidden = b.dataset.y !== 'all' && li.dataset.y !== b.dataset.y; }); }));
+    }
+  }
+  // Events: a year ribbon with today and the one dated event the site already states
+  if (path === '/resources/events') {
+    const ev = document.querySelector('.evs'); if (ev) {
+      const loc = { ar: 'ar-SA-u-nu-latn', hi: 'hi-IN-u-nu-latn' }[lang] || lang; const now = new Date(); const y = now.getFullYear();
+      const f = new Intl.DateTimeFormat(loc, { month: 'short' }); const mo = Array.from({ length: 12 }, (_, m) => f.format(new Date(y, m, 1)));
+      const past = ev.querySelector('.ev-c.past b'); const name = txt(past);
+      const box = document.createElement('div'); box.className = 'yrib'; box.setAttribute('aria-hidden', 'true');
+      box.innerHTML = `<p class="yr-y">${y}</p><ol>${mo.map((m, i) => `<li style="--k:${i}" class="${i < now.getMonth() ? 'past' : ''}${i === now.getMonth() ? ' now' : ''}"><span>${esc(m)}</span></li>`).join('')}</ol>`;
+      ev.insertAdjacentElement('beforebegin', box);
+      if (!reduce && 'IntersectionObserver' in window) { const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { box.classList.add('in'); o.disconnect(); } }, { threshold: 0.5 }); o.observe(box); } else box.classList.add('in');
+    }
   }
 })();
