@@ -1874,6 +1874,56 @@ html:not([lang="en"]) .explainer.hero-fx .fx-box text { font-size:15px; font-wei
 /* proportion bars under big stats */
 .bigstats .bs-bar { display:block; height:6px; margin-top:12px; border-radius:3px; background:#2f2e7d1f; overflow:hidden; } .bigstats .bs-bar i { display:block; height:100%; width:calc(var(--w) * 1%); background:linear-gradient(90deg, var(--persian-indigo), var(--rosy-copper)); transform-origin:left; transform:scaleX(0); transition:transform 1.4s .2s var(--ease-out); } [dir="rtl"] .bigstats .bs-bar i { transform-origin:right; } .bigstats.in .bs-bar i { transform:none; }
 @media (prefers-reduced-motion:reduce) { .dv-bar i, .dv-dots i, .bs-bar i { transform:none !important; transition:none !important; } .dv-bar b { opacity:1 !important; } .dv-arrow svg { stroke-dashoffset:0 !important; } }
+
+/* ===== Inner-page system: one look with the homepage (indigo, almond, copper) ===== */
+/* 1. colour: no cyan or mint on light chapters; warm almond ground, copper labels */
+.chapter:not(.night):not(.ledger-sec) { --world:var(--persian-indigo); --world-text:var(--persian-indigo); --accent:var(--persian-indigo); }
+.chapter.alt { background:#f7f1ea; }
+.chapter:not(.night) .eyebrow { color:var(--copper-ink); }
+.chapter:not(.night) .feat.twelve i { color:var(--rosy-copper); }
+.feat span svg, .way a::after { color:var(--rosy-copper); }
+
+/* 2. hero: calmer height, brand pattern, brighter copy */
+.hero { background:var(--scallop), radial-gradient(55% 80% at 88% 10%, #5b5fef26, transparent 65%), var(--night); }
+.hero-in { padding-block:clamp(48px, 6vw, 88px) clamp(56px, 7vw, 104px); }
+.hero h1 { text-wrap:balance; }
+.hero .glance { background:#ffffff0f; border-color:#ffffff29; box-shadow:0 30px 60px -40px #000; backdrop-filter:none; }
+.hero .glance .gl-ic { background:#ffffff1a; }
+.hero .glance .gl-tabs button[aria-selected="true"] { background:#fff; border-color:#fff; color:var(--brand-blue); }
+.hero .glance .gl-h { color:var(--almond-cream); }
+
+/* 3. feature lists become cards with a number that earns attention */
+.feats { gap:20px; margin-top:44px; }
+.feat { position:relative; align-content:start; gap:8px; padding:28px 26px 30px; border:0; border-radius:18px; background:#fff; box-shadow:0 1px 0 var(--line), 0 18px 40px -32px #0b134066; overflow:hidden; }
+.chapter:not(.alt) .feat { background:#f7f1ea; box-shadow:none; }
+.feat::before { content:""; position:absolute; inset:0 0 auto 0; height:4px; background:linear-gradient(90deg, var(--persian-indigo), var(--rosy-copper)); transform:scaleX(0); transform-origin:left; transition:transform .6s var(--ease-out); }
+.feat:hover::before, .feat:focus-visible::before { transform:scaleX(1); }
+.feat b { font:700 19px/1.3 var(--font-display); }
+.feat.twelve i { font-size:34px; line-height:1; margin-bottom:10px; background:none; color:#e3d3c5; -webkit-text-fill-color:currentColor; transition:color .4s; letter-spacing:0; }
+.feat.twelve:hover i { color:var(--rosy-copper); }
+.feat:hover { transform:translateY(-4px); box-shadow:0 26px 44px -28px #0b134077; }
+.chapter:not(.alt) .feat:hover { background:#fff; }
+
+/* 4. use case: a pull-quote, not an empty half page */
+.uc-text { max-width:940px; margin-top:28px; padding-inline-start:clamp(20px, 3vw, 40px); border-inline-start:3px solid var(--rosy-copper); }
+.uc-text p { margin:0 0 16px; font:400 clamp(19px, 1.9vw, 24px)/1.55 var(--font-display); color:var(--ink-strong); }
+.uc-text p:last-child { margin-bottom:0; }
+
+/* 5. the explainer card no longer floats in dead space */
+.explainer { border-radius:20px; box-shadow:0 30px 60px -40px #0b1340aa; }
+
+/* 6. closing call to action: brand pattern, same ground as the hero */
+.cta { background:var(--scallop), var(--night); }
+.cta-in { padding-block:clamp(64px, 8vw, 104px); }
+.cta h2 { text-wrap:balance; }
+
+/* 7. sub-navigation: indigo, copper marker */
+.micro { background:var(--brand-blue); }
+
+a.feat.twelve b::after, a.feat:not(.twelve) b::after { color:var(--rosy-copper); transition:margin .3s var(--ease-out); } a.feat:hover b::after { margin-inline-start:6px; }
+.hero .glance { background:#0e1647f2; }
+.uc-text { margin-bottom:8px; } .chapter + .pband, .pband { margin-top:0; }
+.chapter:not(.night) .btn-world { background:var(--persian-indigo); color:#fff; } .chapter:not(.night) .btn-world:hover { background:var(--night); color:#fff; }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
