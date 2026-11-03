@@ -1337,7 +1337,7 @@ document.querySelectorAll('.bl').forEach(sec => {
     if (!h.heading.h2) h.heading.h2 = fig.getAttribute('aria-label') || items[0].b;
     const N = items.length;
     const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-list">${items.map((x, i) => `<li data-k="${i}"><span class="sl-n">${esc(x.n || String(i + 1).padStart(2, '0'))}</span><b>${esc(x.b)}</b>${x.d ? `<span class="sl-d">${esc(x.d)}</span>` : ''}</li>`).join('')}</ol></div>
-      <div class="scn-plates" aria-hidden="true" style="--n:${N}"><div class="pl-stage">${items.map((x, i) => `<div class="pl" data-k="${i}" style="--k:${i}"><span>${esc(x.n || String(i + 1).padStart(2, '0'))}</span></div>`).join('')}<i class="pl-spine"></i></div></div></div>`;
+      <div class="scn-plates" aria-hidden="true" style="--n:${N}"><div class="plt-stage">${items.map((x, i) => `<div class="plt" data-k="${i}" style="--k:${i}"><span>${esc(x.n || String(i + 1).padStart(2, '0'))}</span></div>`).join('')}<i class="plt-spine"></i></div></div></div>`;
     mount(fig, h, html.replace('<div class="scn-plates', '</div><div class="scn-plates'), 'scn-stack', N);
   });
 
