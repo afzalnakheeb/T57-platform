@@ -1358,7 +1358,7 @@ document.querySelectorAll('.bl').forEach(sec => {
   document.querySelectorAll('figure.track').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('.tk-s text')].map(t => ({ n: '', b: txt(t) })), kind: 'ship', pay: txt(el.querySelector('.tk-pay')) }));
   if (/\/markets\/[^/]+\/compliance\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/)/, ''))) document.querySelectorAll('.chapter .feats').forEach(el => { const items = [...el.querySelectorAll('.feat')].map(f => ({ n: '', b: txt(f.querySelector('b')), d: txt(f.querySelector('span')) })); if (items.length >= 3 && items.length <= 8) routes.push({ fig: el, items, kind: 'gate' }); });
   if (/^\/(who-we-serve|capabilities)\/.+|platform\/domestic-trade\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => { const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
-  if (/^\/(pricing\/(enterprise|government|roi-calculator)|why-t57\/club-membership|about(\/(investors|food-security|sdg-delivery))?)\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => { const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
+  if (/^\/(pricing\/(enterprise|government|roi-calculator)|why-t57\/club-membership|partners\/(research|country-partner|apply)|about(\/(investors|food-security|sdg-delivery))?)\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => { const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
   if (/^\/why-t57\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter .life').forEach(el => { const items = [...el.querySelectorAll('.life-st')].map(st => ({ n: txt(st.querySelector('.life-n')), b: txt(st.querySelector('h3')), d: [...st.querySelectorAll('li a, li span')].map(txt).filter(Boolean).join('  ·  ') })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
   routes.forEach(r => {
     const items = r.items.filter(x => x.b); const N = items.length; if (N < 3) return;
@@ -1844,7 +1844,7 @@ document.querySelectorAll('.bl').forEach(sec => {
   const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
   const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
   // capability pages: features as an explorer
-  if (/^\/capabilities\/[^/]+\/[^/]+/.test(path)) document.querySelectorAll('.chapter .feats').forEach(fe => {
+  if (/^\/capabilities\/[^/]+\/[^/]+/.test(path) || /^\/markets\/[^/]+\/features$/.test(path)) document.querySelectorAll('.chapter .feats').forEach(fe => {
     const items = [...fe.querySelectorAll(':scope > .feat')].map(f => ({ b: txt(f.querySelector('b')), d: txt(f.querySelector('span')) })).filter(x => x.b && x.d);
     if (items.length < 5 || items.length > 14 || fe.querySelector('a.feat')) return;
     const N = items.length;
@@ -1891,4 +1891,43 @@ document.querySelectorAll('.bl').forEach(sec => {
     cta.parentNode.insertBefore(sec, cta);
     if (reduce || !('IntersectionObserver' in window)) sec.classList.add('in'); else { const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { sec.classList.add('in'); o.disconnect(); } }, { threshold: 0.3 }); o.observe(sec); }
   }).catch(() => {});
+})();
+
+/* ---------- Partners technology stack; country corridors ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  const marks = '<use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-finance"></use><use href="#mk-agri"></use>';
+  const watch = (el, th = 0.35) => { if (reduce || !('IntersectionObserver' in window)) { el.classList.add('in'); return; } const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { el.classList.add('in'); o.disconnect(); } }, { threshold: th }); o.observe(el); };
+  // technology partners: four kinds of module plug into one record, on a cloud base
+  if (path === '/partners/technology') {
+    const card = document.querySelector('.ms-card'), fe = card && card.nextElementSibling;
+    if (card && fe && fe.classList.contains('feats')) {
+      const mods = [...fe.children].map(f => ({ b: txt(f.querySelector('b')), d: txt(f.querySelector('span')), href: f.getAttribute('href') })).filter(m => m.b);
+      if (mods.length >= 3) {
+        const box = document.createElement('div'); box.className = 'tstack'; box.setAttribute('role', 'group');
+        box.innerHTML = `<div class="ts-mods">${mods.map((m, i) => `<${m.href ? 'a href="' + m.href + '"' : 'div'} class="ts-m" style="--k:${i}"><b>${esc(m.b)}</b><span>${esc(m.d)}</span><i aria-hidden="true"></i></${m.href ? 'a' : 'div'}>`).join('')}</div><div class="ts-rec"><svg viewBox="774 418 250 244" aria-hidden="true">${marks}</svg><b>T57</b></div><div class="ts-base"><small>${esc(txt(card.querySelector('.eyebrow')))}</small><b>${esc(txt(card.querySelector('.ms-name')))}</b><span>${esc(txt(card.querySelector('p:not(.eyebrow):not(.ms-name)')))}</span></div>`;
+        card.insertAdjacentElement('beforebegin', box); card.hidden = true; fe.hidden = true; watch(box);
+      }
+    }
+  }
+  // country overview: the four corridors, with goods moving both ways
+  const corr = document.querySelector('.corr');
+  if (corr && /^\/markets\/[^/]+\/overview$/.test(path)) {
+    const items = [...corr.querySelectorAll('.corr-i')].map(c => ({ b: txt(c.querySelector('b')), d: txt(c.querySelector('span')) })).filter(x => x.b);
+    const me = (document.title.split(/\s[|·–—-]\s/)[0] || '').replace(/overview/i, '').trim();
+    if (items.length >= 3) {
+      const N = items.length, C = 250, R = 170; const pos = items.map((_, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / N + Math.PI / N; return [C + Math.cos(a) * R, C + Math.sin(a) * R]; });
+      const box = document.createElement('div'); box.className = 'crr'; box.setAttribute('role', 'group');
+      box.innerHTML = `<svg viewBox="0 0 500 500" class="crr-svg">${pos.map((q, i) => `<g class="crr-g" data-i="${i}"><path id="cr${i}" class="crr-p" d="M${C} ${C} L${q[0].toFixed(1)} ${q[1].toFixed(1)}"/><path class="crr-p2" d="M${q[0].toFixed(1)} ${q[1].toFixed(1)} L${C} ${C}"/>${reduce ? '' : `<circle r="4" class="crr-d out"><animateMotion dur="${2.6 + i * .3}s" repeatCount="indefinite" path="M${C} ${C} L${q[0].toFixed(1)} ${q[1].toFixed(1)}"/></circle><circle r="4" class="crr-d in"><animateMotion dur="${2.6 + i * .3}s" begin="${(1.3).toFixed(1)}s" repeatCount="indefinite" path="M${q[0].toFixed(1)} ${q[1].toFixed(1)} L${C} ${C}"/></circle>`}<a href="#" class="crr-n"><circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="34"/><text x="${q[0].toFixed(1)}" y="${(q[1] + 4).toFixed(1)}" text-anchor="middle">${esc(items[i].b)}</text></a></g>`).join('')}<circle class="crr-c" cx="${C}" cy="${C}" r="58"/><text class="crr-me" x="${C}" y="${C + 5}" text-anchor="middle">${esc(me)}</text></svg><div class="crr-p3" aria-live="polite"><p class="orb-k"></p><h3 class="orb-t"></h3><p class="orb-d"></p></div>`;
+      corr.insertAdjacentElement('beforebegin', box); corr.hidden = true;
+      const k = box.querySelector('.orb-k'), t = box.querySelector('.orb-t'), d = box.querySelector('.orb-d'); let cur = 0, timer = null, touched = false;
+      const show = i => { cur = i; k.textContent = me + ' ⇄'; t.textContent = items[i].b; d.textContent = items[i].d; box.querySelectorAll('.crr-g').forEach(g => g.classList.toggle('now', +g.dataset.i === i)); };
+      box.querySelectorAll('.crr-n').forEach(a => { const i = +a.closest('.crr-g').dataset.i; a.addEventListener('click', e => e.preventDefault()); a.addEventListener('pointerenter', () => { touched = true; clearInterval(timer); show(i); }); a.addEventListener('focus', () => { touched = true; clearInterval(timer); show(i); }); });
+      show(0);
+      if (!reduce && 'IntersectionObserver' in window) { const io = new IntersectionObserver(([e]) => { clearInterval(timer); if (e.isIntersecting && !touched) timer = setInterval(() => show((cur + 1) % N), 4200); }, { threshold: 0.4 }); io.observe(box); }
+    }
+  }
 })();

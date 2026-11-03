@@ -2227,6 +2227,21 @@ ul.need.dl-tiles { grid-template-columns:repeat(auto-fit, minmax(190px, 1fr)); m
 .ar-n a { display:block; max-width:132px; padding:8px 12px; border-radius:999px; background:#ffffff14; border:1.5px solid #ffffff44; color:#fff; text-decoration:none; font:600 12px/1.25 var(--font-display); text-align:center; transition:background .25s, color .25s, border-color .25s; } .ar-n a:hover, .ar-n a:focus-visible { background:#fff; color:var(--brand-blue); border-color:#fff; }
 @media (max-width:640px) { .ar-n a { font-size:10px; max-width:84px; padding:6px 8px; } .ar-me b { font-size:12px; } }
 @media (prefers-reduced-motion:reduce) { .ar-svg line { stroke-dashoffset:0; animation:none !important; } .ar-n li { opacity:1; transform:translate(-50%, -50%); transition:none; } }
+
+/* ===== Partners technology, country corridors ===== */
+.tstack { margin-top:40px; display:grid; gap:0; justify-items:center; padding:clamp(20px, 3vw, 36px); border-radius:24px; background:var(--scallop), var(--night); color:#fff; }
+.ts-mods { display:grid; grid-template-columns:repeat(auto-fit, minmax(190px, 1fr)); gap:14px; width:100%; } .ts-m { position:relative; display:grid; gap:6px; align-content:start; padding:20px 20px 30px; border-radius:16px; background:#ffffff12; border:1.5px solid #ffffff2e; color:#fff; text-decoration:none; transform:translateY(-36px); opacity:0; transition:transform .8s var(--ease-out), opacity .6s; transition-delay:calc(var(--k) * 140ms); } .tstack.in .ts-m { transform:none; opacity:1; }
+.ts-m b { font:700 18px/1.25 var(--font-display); } .ts-m span { font-size:14px; line-height:21px; color:var(--on-night-muted); } .ts-m i { position:absolute; inset-inline:50%; bottom:-22px; width:2px; height:22px; background:linear-gradient(#ffffff66, var(--rosy-copper)); transform-origin:top; transform:scaleY(0); transition:transform .5s .9s var(--ease-out); } .tstack.in .ts-m i { transform:none; } a.ts-m:hover { background:#ffffff1f; border-color:#fff; }
+.ts-rec { display:flex; align-items:center; gap:14px; margin-top:22px; padding:14px 28px; border-radius:999px; background:var(--rosy-copper); box-shadow:0 20px 40px -24px #000; } .ts-rec svg { width:36px; height:36px; } .ts-rec use { fill:#fff; } .ts-rec b { font:800 22px var(--font-display); letter-spacing:.08em; }
+.ts-base { display:grid; gap:4px; justify-items:center; text-align:center; margin-top:18px; padding:18px 28px 20px; width:min(100%, 640px); border-radius:16px; border:1.5px dashed #ffffff55; } .ts-base small { font:600 11px var(--font-text); letter-spacing:.16em; text-transform:uppercase; color:var(--almond-cream); } .ts-base b { font:700 22px var(--font-display); } .ts-base span { font-size:14px; color:var(--on-night-muted); max-width:52ch; }
+@media (prefers-reduced-motion:reduce) { .ts-m, .ts-m i { transform:none; opacity:1; transition:none; } }
+.crr { display:grid; grid-template-columns:minmax(0, 1.05fr) minmax(0, 1fr); gap:clamp(24px, 4vw, 56px); align-items:center; margin-top:36px; padding:clamp(20px, 3vw, 40px); border-radius:24px; background:var(--scallop), var(--night); color:#fff; }
+.crr-svg { width:100%; height:auto; max-height:520px; overflow:visible; } .crr-p, .crr-p2 { stroke:#ffffff33; stroke-width:2; fill:none; transition:stroke .4s; } .crr-p2 { display:none; } .crr-g.now .crr-p { stroke:var(--rosy-copper); stroke-width:3; }
+.crr-d { fill:#8f93ff; } .crr-d.in { fill:var(--almond-cream); } .crr-g.now .crr-d { fill:#fff; r:5; }
+.crr-n { outline:none; cursor:pointer; } .crr-n circle { fill:var(--night); stroke:#ffffff55; stroke-width:2.5; transition:fill .35s, stroke .35s; } .crr-n text { font:700 12px var(--font-display); fill:#fff; pointer-events:none; } .crr-g.now .crr-n circle, .crr-n:hover circle, .crr-n:focus-visible circle { fill:#2f2e7d; stroke:var(--rosy-copper); }
+.crr-c { fill:var(--rosy-copper); } .crr-me { font:800 15px var(--font-display); fill:#fff; }
+.crr-p3 { display:grid; gap:12px; align-content:center; min-height:200px; } .crr-p3 .orb-t { border-inline-start-color:var(--rosy-copper); }
+@media (max-width:800px) { .crr { grid-template-columns:minmax(0, 1fr); } }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
