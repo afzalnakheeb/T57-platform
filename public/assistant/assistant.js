@@ -43,7 +43,7 @@
   const save = () => { try { sessionStorage.setItem(KEY, JSON.stringify({ open: state.open, msgs: state.msgs.slice(-24) })); } catch (e) {} };
 
   // The AI mark: a honeycomb cell (the brand's hexagon motif) holding the letters AI.
-  const MARK = '<svg class="ai-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3.5 34.3 11.75v16.5L20 36.5 5.7 28.25v-16.5Z" fill="none" stroke="#39c4c4" stroke-width="2.4" stroke-linejoin="round"/><text x="20" y="25.2" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-size="13.5" font-weight="700" fill="currentColor" letter-spacing=".5">AI</text></svg>';
+  const MARK = '<svg class="ai-mark" viewBox="0 0 40 40" aria-hidden="true"><path class="ai-hex" pathLength="1" d="M20 3.5 34.3 11.75v16.5L20 36.5 5.7 28.25v-16.5Z" fill="none" stroke="#39c4c4" stroke-width="2.4" stroke-linejoin="round"/><text x="20" y="25.2" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-size="13.5" font-weight="700" fill="currentColor" letter-spacing=".5">AI</text></svg>';
   const badge = MARK;
 
   const css = document.createElement('link');
@@ -70,6 +70,11 @@
   document.body.appendChild(root);
   const $ = s => root.querySelector(s);
   const launch = $('.ai-launch'), panel = $('.ai-panel'), log = $('.ai-log'), form = $('.ai-form'), box = $('#ai-q');
+
+  try { if (!sessionStorage.getItem('t57ai-hint') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    sessionStorage.setItem('t57ai-hint', '1');
+    setTimeout(() => { root.classList.add('hint'); setTimeout(() => root.classList.remove('hint'), 4200); }, 3800);
+  } } catch (e) {}
 
   const esc = s => s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
   // A small, safe Markdown: links to this site (or email), bold, lists and paragraphs. Everything else is plain text.

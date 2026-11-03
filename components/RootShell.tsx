@@ -33,6 +33,7 @@ export default function RootShell({ lang, children }: { lang: Lang; children: Re
       <head>
         <script dangerouslySetInnerHTML={{ __html: arrive }} />
         {/* Roboto is self-hosted (public/fonts, Latin subset), so no third-party font request delays the first paint. */}
+        <link rel="preload" href="/fonts/urbanist-latin-wght-normal.woff2" as="font" type="font/woff2" crossOrigin="" />
         <link rel="preload" href="/fonts/roboto-400.woff2" as="font" type="font/woff2" crossOrigin="" />
         <link rel="preload" href="/fonts/roboto-700.woff2" as="font" type="font/woff2" crossOrigin="" />
       </head>
