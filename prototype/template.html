@@ -1975,6 +1975,8 @@ a.feat.twelve b::after, a.feat:not(.twelve) b::after { color:var(--rosy-copper);
 .sp-col b { order:4; font:600 16px/1.35 var(--font-display); }
 /* long words in any language never push the page wider */
 .scn-in, .scn-grid, .scn-copy, .scn-steps li, .scn-list li, .sp-col { min-width:0; max-width:100%; overflow-wrap:anywhere; }
+.scn-in { grid-template-columns:minmax(0, 1fr); }
+.tc-stamp { max-width:calc(100% - 72px); width:auto; white-space:normal; margin-inline-start:36px; }
 /* phones and reduced motion: no pinning, everything shown */
 @media (max-width:899px) {
   .scn, .scn-pipeline { height:auto; } .scn-in, .scn-pipeline > .scn-in { position:static; min-height:0; padding-block:64px 24px; }
