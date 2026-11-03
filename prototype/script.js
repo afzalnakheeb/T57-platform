@@ -1356,6 +1356,7 @@ document.querySelectorAll('.bl').forEach(sec => {
   document.querySelectorAll('ol.gpath').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('li')].map(li => ({ n: txt(li.querySelector('.gp-n')), b: txt(li.querySelector('b')) })), kind: 'path' }));
   document.querySelectorAll('ol.slq').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('li')].map(li => ({ n: '', b: txt(li.querySelector('b')), d: txt(li.querySelector('span')) })), kind: 'flow' }));
   document.querySelectorAll('figure.track').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('.tk-s text')].map(t => ({ n: '', b: txt(t) })), kind: 'ship', pay: txt(el.querySelector('.tk-pay')) }));
+  if (/\/markets\/[^/]+\/compliance\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/)/, ''))) document.querySelectorAll('.chapter .feats').forEach(el => { const items = [...el.querySelectorAll('.feat')].map(f => ({ n: '', b: txt(f.querySelector('b')), d: txt(f.querySelector('span')) })); if (items.length >= 3 && items.length <= 8) routes.push({ fig: el, items, kind: 'gate' }); });
   routes.forEach(r => {
     const items = r.items.filter(x => x.b); const N = items.length; if (N < 3) return;
     const sec = r.fig.closest('section'); if (!sec) return;
@@ -1365,7 +1366,7 @@ document.querySelectorAll('.bl').forEach(sec => {
     if (!hd.h2) return;
     const pts = items.map((_, i) => [70 + i * (1060 / (N - 1)), 150 + Math.sin(i * 1.25 + 0.4) * 70]);
     const d = pts.map((q, i) => i ? `C ${(pts[i - 1][0] + q[0]) / 2} ${pts[i - 1][1]}, ${(pts[i - 1][0] + q[0]) / 2} ${q[1]}, ${q[0]} ${q[1]}` : `M ${q[0]} ${q[1]}`).join(' ');
-    const labels = N <= 6;
+    const labels = N <= 6 && r.kind !== 'gate';
     const html = `<div class="scn-in gutter"><div class="scn-grid scn-grid-top">${head({ heading: hd })}</div></div>
       <div class="scn-route"><svg viewBox="0 0 1200 300" aria-hidden="true"><path class="sr-base" d="${d}"/><path class="sr-run" d="${d}" pathLength="1"/>${pts.map((q, i) => `<g class="sr-pin" data-k="${i}"><circle cx="${q[0]}" cy="${q[1]}" r="${labels ? 20 : 16}"/>${r.kind === 'path' ? `<text x="${q[0]}" y="${q[1] + 6}" text-anchor="middle">${esc(items[i].n || i + 1)}</text>` : `<path class="sr-ck" d="M${q[0] - 7} ${q[1]} l5 5 l9 -10"/>`}${labels ? `<text class="sr-l" x="${q[0]}" y="${q[1] + (q[1] > 150 ? 52 : -34)}" text-anchor="middle">${esc(items[i].b)}</text>` : ''}</g>`).join('')}<g class="sr-mk"><circle r="11"/></g></svg>
         <p class="sr-now" aria-hidden="true"><b></b><span></span></p></div>
@@ -1441,4 +1442,24 @@ document.querySelectorAll('.bl').forEach(sec => {
   if (grid && ph) mk(grid, () => [...grid.querySelectorAll('.ht-c')].flatMap(c => [...c.querySelectorAll('li')].map(li => ({ el: li, text: li.textContent + ' ' + c.querySelector('h3').textContent }))), () => grid.querySelectorAll('.ht-c').forEach(c => { c.hidden = ![...c.querySelectorAll('li')].some(li => !li.hidden); }));
   const faq = document.querySelector('.faq-wrap .faq');
   if (faq && ph && path === '/help/faq') mk(faq, () => [...faq.querySelectorAll('details')].map(d => ({ el: d, text: d.textContent })));
+})();
+
+/* ---------- Readiness checklist on Getting Started pages ---------- */
+(() => {
+  const need = document.querySelector('ul.need'); if (!need) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const key = 't57need:' + location.pathname; let saved = []; try { saved = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) {}
+  const lis = [...need.children], N = lis.length;
+  const box = document.createElement('div'); box.className = 'need-top';
+  box.innerHTML = '<div class="need-bar" aria-hidden="true"><i></i></div><p class="need-n" aria-live="polite"><b>0</b> / ' + N + '</p>';
+  need.insertAdjacentElement('beforebegin', box);
+  const bar = box.querySelector('i'), cnt = box.querySelector('b');
+  const upd = () => { const k = lis.filter(l => l.classList.contains('ok')).length; bar.style.transform = 'scaleX(' + (k / N) + ')'; cnt.textContent = k; box.classList.toggle('all', k === N); try { localStorage.setItem(key, JSON.stringify(lis.map((l, i) => l.classList.contains('ok') ? i : -1).filter(i => i >= 0))); } catch (e) {} };
+  lis.forEach((li, i) => {
+    li.tabIndex = 0; li.setAttribute('role', 'checkbox'); li.setAttribute('aria-checked', 'false');
+    const flip = () => { li.classList.toggle('ok'); li.setAttribute('aria-checked', li.classList.contains('ok')); upd(); };
+    li.addEventListener('click', flip); li.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); flip(); } });
+    if (saved.includes(i)) { li.classList.add('ok'); li.setAttribute('aria-checked', 'true'); }
+  });
+  upd();
 })();
