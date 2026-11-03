@@ -1433,6 +1433,18 @@ document.querySelectorAll('.bl').forEach(sec => {
     mount(fig, h, html.replace('<div class="scn-petals', '</div><div class="scn-petals'), 'scn-pet', 5);
   });
 
+  // 9. Trust sub-pages: a record passes four gates and is stamped
+  if (/^\/trust\/(verification\/(kyb|kyc|membership-scoring)|document-management|security(\/data-protection)?|trade-assurance\/disputes)\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => {
+    const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })).filter(x => x.b);
+    if (items.length < 3 || items.length > 6) return; const h = host(el); if (!h) return; const N = items.length;
+    const crumbs = [...document.querySelectorAll('.crumbs li, .crumbs a, .crumbs span')].map(txt).filter(Boolean); const subject = (document.querySelector('.hero h1') && '') || crumbs[crumbs.length - 1] || '';
+    const subj = (document.title.split(/\s[|·–—-]\s/)[0] || '').trim() || txt(document.querySelector('.micro b')) || subject;
+    const ICON = ['<path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>', '<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/>', '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>', '<path d="M6 3h9l4 4v14H6z"/><path d="M9 13l2 2 4-4"/>', '<path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/>', '<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>'];
+    const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-list">${items.map((x, i) => `<li data-k="${i}"><span class="sl-n">${esc(x.n || String(i + 1).padStart(2, '0'))}</span><b>${esc(x.b)}</b><span class="sl-d">${esc(x.d)}</span></li>`).join('')}</ol></div>
+      <div class="scn-gates" aria-hidden="true" style="--n:${N}"><div class="gt-rec"><b>${esc(subj)}</b><i></i><i></i><i></i></div><div class="gt-track"><i class="gt-run"></i>${items.map((x, i) => `<div class="gt" data-k="${i}"><svg viewBox="0 0 24 24">${ICON[i % ICON.length]}</svg><span>${esc(x.b)}</span></div>`).join('')}</div><p class="gt-stamp">${esc(items[N - 1].b)}</p></div></div>`;
+    mount(el, h, html.replace('<div class="scn-gates', '</div><div class="scn-gates'), 'scn-gated', N);
+  });
+
   // drive them from scroll
   if (!scenes.length) return;
   const stat = () => reduce || innerWidth < 900;
@@ -1859,4 +1871,25 @@ document.querySelectorAll('.bl').forEach(sec => {
       if ('IntersectionObserver' in window) { const links = [...nav.querySelectorAll('a')]; const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id)); }), { rootMargin: '-20% 0px -70% 0px' }); hs.forEach(h => io.observe(h)); }
     }
   }
+})();
+
+/* ---------- Audience pages: where this role sits among the eleven ---------- */
+(() => {
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  if (!/^\/who-we-serve\/[^/]+$/.test(path)) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const lang = document.documentElement.lang || 'en'; const cta = document.querySelector('.cta'); if (!cta) return;
+  const file = lang === 'ar' ? 'search-ar' : lang === 'ms' ? 'search-ms' : lang === 'tr' ? 'search-tr' : lang === 'hi' ? 'search-hi' : 'search';
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const T = { en: ['One record, eleven roles', 'You are here'], ar: ['سجلّ واحد، إحدى عشرة صفة', 'أنت هنا'], ms: ['Satu rekod, sebelas peranan', 'Anda di sini'], tr: ['Tek kayıt, on bir rol', 'Buradasınız'], hi: ['एक रिकॉर्ड, ग्यारह भूमिकाएँ', 'आप यहाँ हैं'] }[lang] || ['One record, eleven roles', 'You are here'];
+  fetch('/proto/' + file + '.json').then(r => r.json()).then(d => {
+    const base = path; const all = d.filter(p => /^\/who-we-serve\/[^/]+$/.test(p[1].replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '')) && !/\/who-we-serve$/.test(p[1]));
+    const me = all.find(p => p[1].replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') === base); if (!me || all.length < 6) return;
+    const others = all.filter(p => p !== me); const N = others.length, C = 250, R = 190;
+    const pos = others.map((_, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / N; return [C + Math.cos(a) * R, C + Math.sin(a) * R]; });
+    const sec = document.createElement('section'); sec.className = 'chapter aud-ring gutter'; sec.setAttribute('aria-label', T[0]);
+    sec.innerHTML = `<div class="wrap"><h2 class="h2">${esc(T[0])}</h2><div class="ar-wrap"><svg viewBox="0 0 500 500" class="ar-svg">${pos.map((q, i) => `<line class="ar-l" style="--k:${i}" x1="${C}" y1="${C}" x2="${q[0].toFixed(1)}" y2="${q[1].toFixed(1)}"/>`).join('')}<circle class="ar-c" cx="${C}" cy="${C}" r="74"/><foreignObject x="${C - 66}" y="${C - 40}" width="132" height="80"><div xmlns="http://www.w3.org/1999/xhtml" class="ar-me"><small>${esc(T[1])}</small><b>${esc(me[2])}</b></div></foreignObject></svg><ul class="ar-n">${others.map((p, i) => { const q = pos[i]; return `<li style="left:${(q[0] / 5).toFixed(2)}%;top:${(q[1] / 5).toFixed(2)}%;--k:${i}"><a href="${p[1]}" data-go="${p[0]}">${esc(p[2])}</a></li>`; }).join('')}</ul></div></div>`;
+    cta.parentNode.insertBefore(sec, cta);
+    if (reduce || !('IntersectionObserver' in window)) sec.classList.add('in'); else { const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { sec.classList.add('in'); o.disconnect(); } }, { threshold: 0.3 }); o.observe(sec); }
+  }).catch(() => {});
 })();
