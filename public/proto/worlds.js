@@ -1,4 +1,4 @@
-window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-bidding": "trade", "virtual-trade-desk": "tech", "market-intelligence": "tech", "trade-finance": "finance", "nft-funding": "finance", "elc-15-minutes": "finance", "escrow-payments": "finance", "alternative-payments": "finance", "digital-bank": "finance", "document-audit-trail": "tech", "capabilities": "all", "cap-trade": "trade", "cap-rfq": "trade", "cap-trade-desk": "trade", "cap-contract-farming": "trade", "cap-tenders": "trade", "cap-traceability": "trade", "cap-chat-orders": "trade", "cap-trust-payments": "finance", "cap-escrow": "finance", "cap-wallet": "finance", "cap-elc": "finance", "cap-banking": "finance", "cap-digital-bank": "finance", "cap-any-currency": "finance", "cap-digital-assets": "finance", "cap-financing": "finance", "cap-supply-chain-finance": "finance", "cap-fundraising": "finance", "cap-risk": "finance", "cap-logistics": "logistics", "cap-logistics-network": "logistics", "cap-tracking": "logistics", "cap-customs": "logistics", "cap-intelligence": "tech", "cap-price-index": "tech", "cap-negotiations": "tech", "cap-equipment-rental": "agri", "cap-hire-expert": "tech", "ai-native": "tech", "ai-matchmaking": "tech", "ai-negotiations": "tech", "ai-orders": "tech", "ai-price-index": "tech", "ai-forecasting": "tech", "ai-risk": "tech", "ai-crop-yield": "tech", "ai-profit-loss": "tech", "ai-crop-planning": "tech", "ai-agronomy": "tech", "ai-compliance": "tech", "ai-analytics": "tech", "ai-documents": "tech", "platform": "tech", "platform-trade-cycle": "tech", "platform-domestic": "trade", "platform-architecture": "tech", "platform-roadmap": "tech", "platform-intelligence": "tech", "platform-blockchain": "tech", "platform-security": "tech", "trust": "trade", "trust-verification": "trade", "trust-kyb": "trade", "trust-kyc": "trade", "trust-scoring": "trade", "trust-audit-trail": "trade", "trust-documents": "trade", "trust-security": "trade", "trust-data-protection": "trade", "trust-disputes": "trade", "markets": "logistics", "markets-global": "logistics", "markets-oic": "logistics", "markets-asean": "logistics", "mkt-sa-overview": "logistics", "mkt-sa-features": "logistics", "mkt-sa-compliance": "logistics", "mkt-sa-start": "logistics", "mkt-uae-overview": "logistics", "mkt-uae-features": "logistics", "mkt-uae-compliance": "logistics", "mkt-uae-start": "logistics", "mkt-in-overview": "logistics", "mkt-in-features": "logistics", "mkt-in-compliance": "logistics", "mkt-in-start": "logistics", "mkt-my-overview": "logistics", "mkt-my-features": "logistics", "mkt-my-compliance": "logistics", "mkt-my-start": "logistics", "mkt-tr-overview": "logistics", "mkt-tr-features": "logistics", "mkt-tr-compliance": "logistics", "mkt-tr-start": "logistics", "pricing": "finance", "pricing-plans": "finance", "pricing-enterprise": "finance", "pricing-government": "finance", "pricing-roi": "finance", "resources": "tech", "res-blog": "tech", "res-reports": "tech", "res-newsroom": "tech", "res-videos": "tech", "res-events": "tech", "res-glossary": "tech", "help": "tech", "help-start": "tech", "help-howto": "tech", "help-faq": "tech", "help-contact": "tech", "partnerships": "trade", "partners-technology": "tech", "partners-finance": "finance", "partners-logistics": "logistics", "partners-research": "agri", "partners-country": "trade", "partners-apply": "trade", "about": "trade", "about-leadership": "trade", "about-impact": "tech", "about-food-security": "trade", "about-sdg": "trade", "about-careers": "trade", "about-media": "trade", "contact": "trade", "contact-demo": "trade", "contact-offices": "trade"}, "name": {"home": "T57.ai home", "who-we-serve": "Who We Serve", "why-t57": "Why T57", "club-membership": "Club Membership", "rfq-bidding": "RFQ Bidding", "virtual-trade-desk": "Virtual Trade Desk", "market-intelligence": "Market & Price Intelligence", "trade-finance": "Trade Finance", "nft-funding": "Digital Asset-Based Funding", "elc-15-minutes": "eLC in 15 Minutes", "escrow-payments": "Escrow Payments", "alternative-payments": "Alternative Payments", "digital-bank": "Digital Bank", "document-audit-trail": "Document Management & Audit Trail", "capabilities": "Capabilities", "cap-trade": "Trade Execution", "cap-rfq": "RFQ & Trade Execution", "cap-trade-desk": "Virtual Trade Desk", "cap-contract-farming": "Contract Farming", "cap-tenders": "Government Tenders", "cap-traceability": "Traceability", "cap-chat-orders": "LLM-Based Orders", "cap-trust-payments": "Trust & Payments", "cap-escrow": "Escrow & Trade Assurance", "cap-wallet": "Digital Wallet & Payments", "cap-elc": "Electronic Letter of Credit", "cap-banking": "Banking & Money Movement", "cap-digital-bank": "Digital Banking", "cap-any-currency": "Any-Currency Accounts & Remittance", "cap-digital-assets": "Crypto & Digital Assets", "cap-financing": "Financing & Capital", "cap-supply-chain-finance": "Trade & Supply Chain Finance", "cap-fundraising": "Asset-Based Fundraising & Tokenization", "cap-risk": "Risk & Protection", "cap-logistics": "Logistics & Fulfilment", "cap-logistics-network": "Intelligent Logistics Network", "cap-tracking": "Real-Time Shipment Tracking", "cap-customs": "Customs & Documentation Hub", "cap-intelligence": "Intelligence & Data", "cap-price-index": "Live Food Price Index", "cap-negotiations": "AI Negotiations Engine", "cap-equipment-rental": "Equipment & Technology Rental", "cap-hire-expert": "Hire an Expert", "ai-native": "AI Native", "ai-matchmaking": "AI Trade Matchmaking", "ai-negotiations": "AI Negotiations Engine", "ai-orders": "LLM-Based Trade Orders", "ai-price-index": "Live Food Price Index, AI-Powered", "ai-forecasting": "Supply & Demand Forecasting", "ai-risk": "Risk Intelligence & Heatmaps", "ai-crop-yield": "Crop & Yield Forecasting", "ai-profit-loss": "Profit & Loss Prediction", "ai-crop-planning": "AI Crop Planning & Analytics", "ai-agronomy": "Agronomy Expert Network, AI-Assisted", "ai-compliance": "AI-Powered Compliance & KYC", "ai-analytics": "Predictive Trade Analytics Dashboard", "ai-documents": "AI Trade Document Generation", "platform": "Platform", "platform-trade-cycle": "One Trade, Every Step", "platform-domestic": "Domestic B2B Trade", "platform-architecture": "System Architecture", "platform-roadmap": "Platform Roadmap", "platform-intelligence": "Intelligence Layer", "platform-blockchain": "Blockchain & Smart Contract Layer", "platform-security": "Security Architecture", "trust": "Trust & Compliance", "trust-verification": "Verification Process", "trust-kyb": "KYB: Business Verification", "trust-kyc": "KYC: Individual Verification", "trust-scoring": "Membership Scoring & Trust Rating", "trust-audit-trail": "Audit Trail", "trust-documents": "Document Management System", "trust-security": "Security & Privacy", "trust-data-protection": "Data Protection", "trust-disputes": "Dispute Resolution", "markets": "Markets", "markets-global": "Global Rollout", "markets-oic": "OIC Nations & Halal Trade", "markets-asean": "ASEAN Markets", "mkt-sa-overview": "Saudi Arabia: Market Overview", "mkt-sa-features": "Saudi Arabia: Features Available", "mkt-sa-compliance": "Saudi Arabia: Regulatory Guide", "mkt-sa-start": "Saudi Arabia: Getting Started", "mkt-uae-overview": "UAE: Market Overview", "mkt-uae-features": "UAE: Features Available", "mkt-uae-compliance": "UAE: Regulatory Guide", "mkt-uae-start": "UAE: Getting Started", "mkt-in-overview": "India: Market Overview", "mkt-in-features": "India: Features Available", "mkt-in-compliance": "India: Regulatory Guide", "mkt-in-start": "India: Getting Started", "mkt-my-overview": "Malaysia: Market Overview", "mkt-my-features": "Malaysia: Features Available", "mkt-my-compliance": "Malaysia: Regulatory Guide", "mkt-my-start": "Malaysia: Getting Started", "mkt-tr-overview": "Türkiye: Market Overview", "mkt-tr-features": "Türkiye: Features Available", "mkt-tr-compliance": "Türkiye: Regulatory Guide", "mkt-tr-start": "Türkiye: Getting Started", "pricing": "Pricing Overview", "pricing-plans": "Membership Plans & Pricing", "pricing-enterprise": "Enterprise & Custom Pricing", "pricing-government": "Government & Institutional Pricing", "pricing-roi": "ROI Calculator", "resources": "Resources Overview", "res-blog": "Blog & Insights", "res-reports": "Reports & Whitepapers", "res-newsroom": "Newsroom", "res-videos": "Explainer Videos", "res-events": "Webinars & Events", "res-glossary": "FAQ & Glossary", "help": "Help Center", "help-start": "Getting Started Guides", "help-howto": "Platform How-Tos", "help-faq": "FAQs", "help-contact": "Contact Support", "partnerships": "Partnerships Overview", "partners-technology": "Technology Partners", "partners-finance": "Financial Services Partners", "partners-logistics": "Logistics Partners", "partners-research": "Research & University Partners", "partners-country": "Country Partners", "partners-apply": "Become a Partner", "about": "About T57", "about-leadership": "Leadership & Advisors", "about-impact": "Innovation & Impact", "about-food-security": "T57 for Food Security", "about-sdg": "T57 for SDG Delivery", "about-careers": "Careers", "about-media": "Media & Press Kit", "contact": "Contact", "contact-demo": "Request a Demo", "contact-offices": "Regional Offices", "governments": "Governments and Regulators", "financiers": "Financiers and Investors", "sellers": "Sellers and Exporters", "traders": "Traders and Aggregators", "buyers": "Buyers and Importers", "enterprises": "Manufacturers and Enterprises", "food-processors": "Food Processors", "cooperatives": "Cooperatives and FPOs", "collaborators": "Partners and Collaborators", "service-providers": "Service Providers", "farmers": "Farmers and Producers"}, "parent": {"club-membership": "why-t57", "rfq-bidding": "why-t57", "virtual-trade-desk": "why-t57", "market-intelligence": "why-t57", "trade-finance": "why-t57", "nft-funding": "why-t57", "elc-15-minutes": "why-t57", "escrow-payments": "why-t57", "alternative-payments": "why-t57", "digital-bank": "why-t57", "document-audit-trail": "why-t57", "cap-trade": "capabilities", "cap-rfq": "cap-trade", "cap-trade-desk": "cap-trade", "cap-contract-farming": "cap-trade", "cap-tenders": "cap-trade", "cap-traceability": "cap-trade", "cap-chat-orders": "cap-trade", "cap-trust-payments": "capabilities", "cap-escrow": "cap-trust-payments", "cap-wallet": "cap-trust-payments", "cap-elc": "cap-trust-payments", "cap-banking": "capabilities", "cap-digital-bank": "cap-banking", "cap-any-currency": "cap-banking", "cap-digital-assets": "cap-banking", "cap-financing": "capabilities", "cap-supply-chain-finance": "cap-financing", "cap-fundraising": "cap-financing", "cap-risk": "capabilities", "cap-logistics": "capabilities", "cap-logistics-network": "cap-logistics", "cap-tracking": "cap-logistics", "cap-customs": "cap-logistics", "cap-intelligence": "capabilities", "cap-price-index": "cap-intelligence", "cap-negotiations": "cap-intelligence", "cap-equipment-rental": "capabilities", "cap-hire-expert": "capabilities", "ai-matchmaking": "ai-native", "ai-negotiations": "ai-native", "ai-orders": "ai-native", "ai-price-index": "ai-native", "ai-forecasting": "ai-native", "ai-risk": "ai-native", "ai-crop-yield": "ai-native", "ai-profit-loss": "ai-native", "ai-crop-planning": "ai-native", "ai-agronomy": "ai-native", "ai-compliance": "ai-native", "ai-analytics": "ai-native", "ai-documents": "ai-native", "platform-trade-cycle": "platform", "platform-domestic": "platform", "platform-architecture": "platform", "platform-roadmap": "platform", "platform-intelligence": "platform", "platform-blockchain": "platform", "platform-security": "platform", "trust-verification": "trust", "trust-kyb": "trust-verification", "trust-kyc": "trust-verification", "trust-scoring": "trust-verification", "trust-audit-trail": "trust", "trust-documents": "trust", "trust-security": "trust", "trust-data-protection": "trust-security", "trust-disputes": "trust", "markets-global": "markets", "markets-oic": "markets", "markets-asean": "markets", "mkt-sa-overview": "markets", "mkt-sa-features": "mkt-sa-overview", "mkt-sa-compliance": "mkt-sa-overview", "mkt-sa-start": "mkt-sa-overview", "mkt-uae-overview": "markets", "mkt-uae-features": "mkt-uae-overview", "mkt-uae-compliance": "mkt-uae-overview", "mkt-uae-start": "mkt-uae-overview", "mkt-in-overview": "markets", "mkt-in-features": "mkt-in-overview", "mkt-in-compliance": "mkt-in-overview", "mkt-in-start": "mkt-in-overview", "mkt-my-overview": "markets", "mkt-my-features": "mkt-my-overview", "mkt-my-compliance": "mkt-my-overview", "mkt-my-start": "mkt-my-overview", "mkt-tr-overview": "markets", "mkt-tr-features": "mkt-tr-overview", "mkt-tr-compliance": "mkt-tr-overview", "mkt-tr-start": "mkt-tr-overview", "pricing-plans": "pricing", "pricing-enterprise": "pricing", "pricing-government": "pricing", "pricing-roi": "pricing", "res-blog": "resources", "res-reports": "resources", "res-newsroom": "resources", "res-videos": "resources", "res-events": "resources", "res-glossary": "resources", "help-start": "help", "help-howto": "help", "help-faq": "help", "help-contact": "help", "partners-technology": "partnerships", "partners-finance": "partnerships", "partners-logistics": "partnerships", "partners-research": "partnerships", "partners-country": "partnerships", "partners-apply": "partnerships", "about-leadership": "about", "about-impact": "about", "about-food-security": "about", "about-sdg": "about", "about-careers": "about", "about-media": "about", "contact-demo": "contact", "contact-offices": "contact", "governments": "who-we-serve", "financiers": "who-we-serve", "sellers": "who-we-serve", "traders": "who-we-serve", "buyers": "who-we-serve", "enterprises": "who-we-serve", "food-processors": "who-we-serve", "cooperatives": "who-we-serve", "collaborators": "who-we-serve", "service-providers": "who-we-serve", "farmers": "who-we-serve"}, "site": {"home": "home", "who-we-serve": "who-we-serve", "why-t57": "why-t57", "club-membership": "why-t57", "rfq-bidding": "why-t57", "virtual-trade-desk": "why-t57", "market-intelligence": "why-t57", "trade-finance": "why-t57", "nft-funding": "why-t57", "elc-15-minutes": "why-t57", "escrow-payments": "why-t57", "alternative-payments": "why-t57", "digital-bank": "why-t57", "document-audit-trail": "why-t57", "capabilities": "capabilities", "cap-trade": "capabilities", "cap-rfq": "capabilities", "cap-trade-desk": "capabilities", "cap-contract-farming": "capabilities", "cap-tenders": "capabilities", "cap-traceability": "capabilities", "cap-chat-orders": "capabilities", "cap-trust-payments": "capabilities", "cap-escrow": "capabilities", "cap-wallet": "capabilities", "cap-elc": "capabilities", "cap-banking": "capabilities", "cap-digital-bank": "capabilities", "cap-any-currency": "capabilities", "cap-digital-assets": "capabilities", "cap-financing": "capabilities", "cap-supply-chain-finance": "capabilities", "cap-fundraising": "capabilities", "cap-risk": "capabilities", "cap-logistics": "capabilities", "cap-logistics-network": "capabilities", "cap-tracking": "capabilities", "cap-customs": "capabilities", "cap-intelligence": "capabilities", "cap-price-index": "capabilities", "cap-negotiations": "capabilities", "cap-equipment-rental": "capabilities", "cap-hire-expert": "capabilities", "ai-native": "ai-native", "ai-matchmaking": "ai-native", "ai-negotiations": "ai-native", "ai-orders": "ai-native", "ai-price-index": "ai-native", "ai-forecasting": "ai-native", "ai-risk": "ai-native", "ai-crop-yield": "ai-native", "ai-profit-loss": "ai-native", "ai-crop-planning": "ai-native", "ai-agronomy": "ai-native", "ai-compliance": "ai-native", "ai-analytics": "ai-native", "ai-documents": "ai-native", "platform": "platform", "platform-trade-cycle": "platform", "platform-domestic": "platform", "platform-architecture": "platform", "platform-roadmap": "platform", "platform-intelligence": "platform", "platform-blockchain": "platform", "platform-security": "platform", "trust": "trust", "trust-verification": "trust", "trust-kyb": "trust", "trust-kyc": "trust", "trust-scoring": "trust", "trust-audit-trail": "trust", "trust-documents": "trust", "trust-security": "trust", "trust-data-protection": "trust", "trust-disputes": "trust", "markets": "markets", "markets-global": "markets", "markets-oic": "markets", "markets-asean": "markets", "mkt-sa-overview": "markets", "mkt-sa-features": "markets", "mkt-sa-compliance": "markets", "mkt-sa-start": "markets", "mkt-uae-overview": "markets", "mkt-uae-features": "markets", "mkt-uae-compliance": "markets", "mkt-uae-start": "markets", "mkt-in-overview": "markets", "mkt-in-features": "markets", "mkt-in-compliance": "markets", "mkt-in-start": "markets", "mkt-my-overview": "markets", "mkt-my-features": "markets", "mkt-my-compliance": "markets", "mkt-my-start": "markets", "mkt-tr-overview": "markets", "mkt-tr-features": "markets", "mkt-tr-compliance": "markets", "mkt-tr-start": "markets", "pricing": "pricing", "pricing-plans": "pricing", "pricing-enterprise": "pricing", "pricing-government": "pricing", "pricing-roi": "pricing", "resources": "resources", "res-blog": "resources", "res-reports": "resources", "res-newsroom": "resources", "res-videos": "resources", "res-events": "resources", "res-glossary": "resources", "help": "help", "help-start": "help", "help-howto": "help", "help-faq": "help", "help-contact": "help", "partnerships": "partnerships", "partners-technology": "partnerships", "partners-finance": "partnerships", "partners-logistics": "partnerships", "partners-research": "partnerships", "partners-country": "partnerships", "partners-apply": "partnerships", "about": "about", "about-leadership": "about", "about-impact": "about", "about-food-security": "about", "about-sdg": "about", "about-careers": "about", "about-media": "about", "contact": "contact", "contact-demo": "contact", "contact-offices": "contact", "governments": "governments", "financiers": "financiers", "sellers": "sellers", "traders": "traders", "buyers": "buyers", "enterprises": "enterprises", "food-processors": "food-processors", "cooperatives": "cooperatives", "collaborators": "collaborators", "service-providers": "service-providers", "farmers": "farmers"}};
+window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-bidding": "trade", "virtual-trade-desk": "tech", "market-intelligence": "tech", "trade-finance": "finance", "nft-funding": "finance", "elc-15-minutes": "finance", "escrow-payments": "finance", "alternative-payments": "finance", "digital-bank": "finance", "document-audit-trail": "tech", "capabilities": "all", "cap-trade": "trade", "cap-rfq": "trade", "cap-trade-desk": "trade", "cap-contract-farming": "trade", "cap-tenders": "trade", "cap-traceability": "trade", "cap-chat-orders": "trade", "cap-trust-payments": "finance", "cap-escrow": "finance", "cap-wallet": "finance", "cap-elc": "finance", "cap-banking": "finance", "cap-digital-bank": "finance", "cap-any-currency": "finance", "cap-digital-assets": "finance", "cap-financing": "finance", "cap-supply-chain-finance": "finance", "cap-fundraising": "finance", "cap-risk": "finance", "cap-logistics": "logistics", "cap-logistics-network": "logistics", "cap-tracking": "logistics", "cap-customs": "logistics", "cap-intelligence": "tech", "cap-price-index": "tech", "cap-negotiations": "tech", "cap-equipment-rental": "agri", "cap-hire-expert": "tech", "ai-native": "tech", "ai-matchmaking": "tech", "ai-negotiations": "tech", "ai-orders": "tech", "ai-price-index": "tech", "ai-forecasting": "tech", "ai-risk": "tech", "ai-crop-yield": "tech", "ai-profit-loss": "tech", "ai-crop-planning": "tech", "ai-agronomy": "tech", "ai-compliance": "tech", "ai-analytics": "tech", "ai-documents": "tech", "platform": "tech", "platform-trade-cycle": "tech", "platform-domestic": "trade", "platform-architecture": "tech", "platform-roadmap": "tech", "platform-intelligence": "tech", "platform-blockchain": "tech", "platform-security": "tech", "trust": "trade", "trust-verification": "trade", "trust-kyb": "trade", "trust-kyc": "trade", "trust-scoring": "trade", "trust-audit-trail": "trade", "trust-documents": "trade", "trust-security": "trade", "trust-data-protection": "trade", "trust-disputes": "trade", "markets": "logistics", "markets-global": "logistics", "markets-oic": "logistics", "markets-asean": "logistics", "mkt-sa-overview": "logistics", "mkt-sa-features": "logistics", "mkt-sa-compliance": "logistics", "mkt-sa-start": "logistics", "mkt-uae-overview": "logistics", "mkt-uae-features": "logistics", "mkt-uae-compliance": "logistics", "mkt-uae-start": "logistics", "mkt-in-overview": "logistics", "mkt-in-features": "logistics", "mkt-in-compliance": "logistics", "mkt-in-start": "logistics", "mkt-my-overview": "logistics", "mkt-my-features": "logistics", "mkt-my-compliance": "logistics", "mkt-my-start": "logistics", "mkt-tr-overview": "logistics", "mkt-tr-features": "logistics", "mkt-tr-compliance": "logistics", "mkt-tr-start": "logistics", "pricing": "finance", "pricing-plans": "finance", "pricing-enterprise": "finance", "pricing-government": "finance", "pricing-roi": "finance", "resources": "tech", "res-blog": "tech", "res-reports": "tech", "res-newsroom": "tech", "res-videos": "tech", "res-events": "tech", "res-glossary": "tech", "help": "tech", "help-start": "tech", "help-howto": "tech", "help-faq": "tech", "help-contact": "tech", "partnerships": "trade", "partners-technology": "tech", "partners-finance": "finance", "partners-logistics": "logistics", "partners-research": "agri", "partners-country": "trade", "partners-apply": "trade", "about": "trade", "about-journey": "trade", "about-leadership": "trade", "about-impact": "tech", "about-food-security": "trade", "about-sdg": "trade", "about-careers": "trade", "about-media": "trade", "contact": "trade", "contact-demo": "trade", "contact-offices": "trade", "about-investors": "finance", "blog-systems-marketing-ai-global-food-trade": "tech", "blog-t57-gulfood-2026-mous-learning-sales-engine": "tech", "blog-future-of-ai-food-trade-t57": "tech", "blog-marketing-11-crore-farmers-digital-agriculture-mission-t57": "trade", "blog-food-trade-deals-before-handshake-virtual-trade-infrastructure": "tech", "blog-model-support-centers-missing-middle-food-systems": "agri", "blog-gcc-food-security-strategy-hormuz-crisis": "logistics", "blog-hormuz-shock-gcc-food-security-risk": "logistics", "blog-saudi-date-industry-challenges-t57-supply-chain": "agri", "blog-t57-club-membership-agriculture-trust-model": "agri", "blog-india-avocado-market-growth-farmer-challenge": "trade", "blog-structural-shifts-reshaping-turkish-agriculture-2026": "trade", "blog-blockchain-food-supply-chain": "tech", "blog-five-forces-reshaping-malaysian-agriculture-2026": "trade", "blog-five-forces-reshaping-middle-east-agriculture-2026": "trade", "blog-agriculture-ai-stack": "tech", "blog-india-us-trade-deal-2026-agriculture-impact": "trade", "blog-smart-contracts-in-global-agri-trade": "finance", "blog-gulfood-2026-farm-to-fork": "tech", "blog-gulfood-2026-ai-powered-food-decisions": "tech", "blog-india-farm-sector-2026-strategic-outlook": "trade", "blog-digital-agri-finance-alliance-global-food-system-transformation": "finance", "blog-escrow-crypto-ai-agents-agriculture": "finance", "blog-rewriting-trade-finance-for-global-agriculture": "finance", "blog-how-data-can-save-farmers-lives": "agri", "legal": "tech", "legal-privacy": "tech", "legal-terms": "tech", "legal-cookies": "tech", "legal-accessibility": "tech"}, "name": {"home": "T57.ai home", "who-we-serve": "Who We Serve", "why-t57": "Why T57", "club-membership": "Club Membership", "rfq-bidding": "RFQ Bidding", "virtual-trade-desk": "Virtual Trade Desk", "market-intelligence": "Market & Price Intelligence", "trade-finance": "Trade Finance", "nft-funding": "Digital Asset-Based Funding", "elc-15-minutes": "eLC in Hours, Not Weeks", "escrow-payments": "Escrow Payments", "alternative-payments": "Alternative Payments", "digital-bank": "Digital Bank", "document-audit-trail": "Document Management & Audit Trail", "capabilities": "Capabilities", "cap-trade": "Trade Execution", "cap-rfq": "RFQ & Trade Execution", "cap-trade-desk": "Virtual Trade Desk", "cap-contract-farming": "Contract Farming", "cap-tenders": "Government Tenders", "cap-traceability": "Traceability", "cap-chat-orders": "LLM-Based Orders", "cap-trust-payments": "Trust & Payments", "cap-escrow": "Escrow & Trade Assurance", "cap-wallet": "Digital Wallet & Payments", "cap-elc": "Electronic Letter of Credit", "cap-banking": "Banking & Money Movement", "cap-digital-bank": "Digital Banking", "cap-any-currency": "Any-Currency Accounts & Remittance", "cap-digital-assets": "Crypto & Digital Assets", "cap-financing": "Financing & Capital", "cap-supply-chain-finance": "Trade & Supply Chain Finance", "cap-fundraising": "Asset-Based Fundraising & Tokenization", "cap-risk": "Risk & Protection", "cap-logistics": "Logistics & Fulfilment", "cap-logistics-network": "Intelligent Logistics Network", "cap-tracking": "Real-Time Shipment Tracking", "cap-customs": "Customs & Documentation Hub", "cap-intelligence": "Intelligence & Data", "cap-price-index": "Live Food Price Index", "cap-negotiations": "AI Negotiations Engine", "cap-equipment-rental": "Equipment & Technology Rental", "cap-hire-expert": "Hire an Expert", "ai-native": "AI Native", "ai-matchmaking": "AI Trade Matchmaking", "ai-negotiations": "AI Negotiations Engine", "ai-orders": "LLM-Based Trade Orders", "ai-price-index": "Live Food Price Index, AI-Powered", "ai-forecasting": "Supply & Demand Forecasting", "ai-risk": "Risk Intelligence & Heatmaps", "ai-crop-yield": "Crop & Yield Forecasting", "ai-profit-loss": "Profit & Loss Prediction", "ai-crop-planning": "AI Crop Planning & Analytics", "ai-agronomy": "Agronomy Expert Network, AI-Assisted", "ai-compliance": "AI-Powered Compliance & KYC", "ai-analytics": "Predictive Trade Analytics Dashboard", "ai-documents": "AI Trade Document Generation", "platform": "Platform", "platform-trade-cycle": "One Trade, Every Step", "platform-domestic": "Domestic B2B Trade", "platform-architecture": "System Architecture", "platform-roadmap": "Platform Roadmap", "platform-intelligence": "Intelligence Layer", "platform-blockchain": "Blockchain & Smart Contract Layer", "platform-security": "Security Architecture", "trust": "Trust & Compliance", "trust-verification": "Verification Process", "trust-kyb": "KYB: Business Verification", "trust-kyc": "KYC: Individual Verification", "trust-scoring": "Membership Scoring & Trust Rating", "trust-audit-trail": "Audit Trail", "trust-documents": "Document Management System", "trust-security": "Security & Privacy", "trust-data-protection": "Data Protection", "trust-disputes": "Dispute Resolution", "markets": "Markets", "markets-global": "Global Rollout", "markets-oic": "OIC Nations & Halal Trade", "markets-asean": "ASEAN Markets", "mkt-sa-overview": "Saudi Arabia: Market Overview", "mkt-sa-features": "Saudi Arabia: Features Available", "mkt-sa-compliance": "Saudi Arabia: Regulatory Guide", "mkt-sa-start": "Saudi Arabia: Getting Started", "mkt-uae-overview": "UAE: Market Overview", "mkt-uae-features": "UAE: Features Available", "mkt-uae-compliance": "UAE: Regulatory Guide", "mkt-uae-start": "UAE: Getting Started", "mkt-in-overview": "India: Market Overview", "mkt-in-features": "India: Features Available", "mkt-in-compliance": "India: Regulatory Guide", "mkt-in-start": "India: Getting Started", "mkt-my-overview": "Malaysia: Market Overview", "mkt-my-features": "Malaysia: Features Available", "mkt-my-compliance": "Malaysia: Regulatory Guide", "mkt-my-start": "Malaysia: Getting Started", "mkt-tr-overview": "Türkiye: Market Overview", "mkt-tr-features": "Türkiye: Features Available", "mkt-tr-compliance": "Türkiye: Regulatory Guide", "mkt-tr-start": "Türkiye: Getting Started", "pricing": "Pricing Overview", "pricing-plans": "Membership Plans & Pricing", "pricing-enterprise": "Enterprise & Custom Pricing", "pricing-government": "Government & Institutional Pricing", "pricing-roi": "ROI Calculator", "resources": "Resources Overview", "res-blog": "Blog & Insights", "res-reports": "Reports & Whitepapers", "res-newsroom": "Newsroom", "res-videos": "Explainer Videos", "res-events": "Webinars & Events", "res-glossary": "FAQ & Glossary", "help": "Help Center", "help-start": "Getting Started Guides", "help-howto": "Platform How-Tos", "help-faq": "FAQs", "help-contact": "Contact Support", "partnerships": "Partnerships Overview", "partners-technology": "Technology Partners", "partners-finance": "Financial Services Partners", "partners-logistics": "Logistics Partners", "partners-research": "Research & University Partners", "partners-country": "Country Partners", "partners-apply": "Become a Partner", "about": "About T57", "about-journey": "Our Journey", "about-leadership": "Leadership & Advisors", "about-impact": "Innovation & Impact", "about-food-security": "T57 for Food Security", "about-sdg": "T57 for SDG Delivery", "about-careers": "Careers", "about-media": "Media & Press Kit", "contact": "Contact", "contact-demo": "Request a Demo", "contact-offices": "Where We Work", "governments": "Governments and Regulators", "financiers": "Banks and Financiers", "sellers": "Sellers and Exporters", "traders": "Traders and Aggregators", "buyers": "Buyers and Importers", "enterprises": "Retail, HoReCa and Enterprise Buyers", "food-processors": "Food Processors", "cooperatives": "Cooperatives and FPOs", "collaborators": "Partners and Collaborators", "service-providers": "Service Providers", "farmers": "Farmers and Producers", "about-investors": "Investor Relations", "blog-systems-marketing-ai-global-food-trade": "Marketing a System, Not a Product: Designing Trade Infrastructure for Multi-Party Value", "blog-t57-gulfood-2026-mous-learning-sales-engine": "The Day Our MoUs and LoIs Turned Into a Learning Machine", "blog-future-of-ai-food-trade-t57": "Why 150+ MoUs and LoIs Change T57’s Growth Math", "blog-marketing-11-crore-farmers-digital-agriculture-mission-t57": "When a Nation Becomes Your Customer: Inside the Race to Sell AI to India’s Farms", "blog-food-trade-deals-before-handshake-virtual-trade-infrastructure": "When Food Trade Deals Happen Before the Handshake", "blog-model-support-centers-missing-middle-food-systems": "The Missing Middle of Food Systems: Why Model Support Centers Will Rewrite the Future of Agriculture", "blog-gcc-food-security-strategy-hormuz-crisis": "From 90 Days to 5 Years: How the Gulf Can Turn a Food Crisis into a Strategic Advantage", "blog-hormuz-shock-gcc-food-security-risk": "Hormuz Shock: How the Gulf’s Food-Security Model Could Fail Its First Real Test", "blog-saudi-date-industry-challenges-t57-supply-chain": "Date Farming in Saudi Arabia: How One Platform Can Rewrite a Centuries-Old Struggle", "blog-t57-club-membership-agriculture-trust-model": "Building Trust at Scale: Why a Club Membership Model Can Transform Agriculture Markets", "blog-india-avocado-market-growth-farmer-challenge": "Bridging the Gap: How T57 Can Transform India’s Emerging Avocado Industry", "blog-structural-shifts-reshaping-turkish-agriculture-2026": "Structural Shifts That Will Redefine Turkish Agriculture in 2026", "blog-blockchain-food-supply-chain": "Can Blockchain Finally Close the $1 Trillion Annual Global Cost of Food Waste?", "blog-five-forces-reshaping-malaysian-agriculture-2026": "Five Forces Reshaping Malaysian Agriculture: A 2026 Outlook for Policymakers", "blog-five-forces-reshaping-middle-east-agriculture-2026": "Five Forces Reshaping Middle East Agriculture: A Strategic Outlook for 2026", "blog-agriculture-ai-stack": "The Quiet Upload of Agriculture into the AI Stack", "blog-india-us-trade-deal-2026-agriculture-impact": "India-US Trade Deal After the Supreme Court Shock: Tactical Truce, Hidden Traps, or Trump’s Next Tariff Gambit?", "blog-smart-contracts-in-global-agri-trade": "How Smart Contracts Can Repair Trust in Global Agri Trade", "blog-gulfood-2026-farm-to-fork": "From Farm to Fork at Gulfood: How AI, Blockchain, and Human Talent Will Rewire Trust in the Global Food Chain", "blog-gulfood-2026-ai-powered-food-decisions": "From Data to Dinner: The AI-driven Food Decisions That Must Scale", "blog-india-farm-sector-2026-strategic-outlook": "Navigating the New Agricultural Paradigm: 5 Strategic Shifts for India’s Farm Sector in 2026", "blog-digital-agri-finance-alliance-global-food-system-transformation": "How a Digital Agri-Finance Alliance Can Drive Global Food System Transformation", "blog-escrow-crypto-ai-agents-agriculture": "Trust in Clicks, Not Weeks: How Escrow, Crypto, and AI Agents Will Replace Endless Paperwork in the Agricultural Sector", "blog-rewriting-trade-finance-for-global-agriculture": "How T57 Is Rewriting Trade Finance for Global Agriculture", "blog-how-data-can-save-farmers-lives": "Busting the Middlemen Cartel: How Data Can Save Farmers’ Lives", "legal": "Legal & Policies", "legal-privacy": "Privacy Notice", "legal-terms": "Terms of Use", "legal-cookies": "Cookie Policy", "legal-accessibility": "Accessibility Statement"}, "parent": {"club-membership": "why-t57", "rfq-bidding": "why-t57", "virtual-trade-desk": "why-t57", "market-intelligence": "why-t57", "trade-finance": "why-t57", "nft-funding": "why-t57", "elc-15-minutes": "why-t57", "escrow-payments": "why-t57", "alternative-payments": "why-t57", "digital-bank": "why-t57", "document-audit-trail": "why-t57", "cap-trade": "capabilities", "cap-rfq": "cap-trade", "cap-trade-desk": "cap-trade", "cap-contract-farming": "cap-trade", "cap-tenders": "cap-trade", "cap-traceability": "cap-trade", "cap-chat-orders": "cap-trade", "cap-trust-payments": "capabilities", "cap-escrow": "cap-trust-payments", "cap-wallet": "cap-trust-payments", "cap-elc": "cap-trust-payments", "cap-banking": "capabilities", "cap-digital-bank": "cap-banking", "cap-any-currency": "cap-banking", "cap-digital-assets": "cap-banking", "cap-financing": "capabilities", "cap-supply-chain-finance": "cap-financing", "cap-fundraising": "cap-financing", "cap-risk": "capabilities", "cap-logistics": "capabilities", "cap-logistics-network": "cap-logistics", "cap-tracking": "cap-logistics", "cap-customs": "cap-logistics", "cap-intelligence": "capabilities", "cap-price-index": "cap-intelligence", "cap-negotiations": "cap-intelligence", "cap-equipment-rental": "capabilities", "cap-hire-expert": "capabilities", "ai-matchmaking": "ai-native", "ai-negotiations": "ai-native", "ai-orders": "ai-native", "ai-price-index": "ai-native", "ai-forecasting": "ai-native", "ai-risk": "ai-native", "ai-crop-yield": "ai-native", "ai-profit-loss": "ai-native", "ai-crop-planning": "ai-native", "ai-agronomy": "ai-native", "ai-compliance": "ai-native", "ai-analytics": "ai-native", "ai-documents": "ai-native", "platform-trade-cycle": "platform", "platform-domestic": "platform", "platform-architecture": "platform", "platform-roadmap": "platform", "platform-intelligence": "platform", "platform-blockchain": "platform", "platform-security": "platform", "trust-verification": "trust", "trust-kyb": "trust-verification", "trust-kyc": "trust-verification", "trust-scoring": "trust-verification", "trust-audit-trail": "trust", "trust-documents": "trust", "trust-security": "trust", "trust-data-protection": "trust-security", "trust-disputes": "trust", "markets-global": "markets", "markets-oic": "markets", "markets-asean": "markets", "mkt-sa-overview": "markets", "mkt-sa-features": "mkt-sa-overview", "mkt-sa-compliance": "mkt-sa-overview", "mkt-sa-start": "mkt-sa-overview", "mkt-uae-overview": "markets", "mkt-uae-features": "mkt-uae-overview", "mkt-uae-compliance": "mkt-uae-overview", "mkt-uae-start": "mkt-uae-overview", "mkt-in-overview": "markets", "mkt-in-features": "mkt-in-overview", "mkt-in-compliance": "mkt-in-overview", "mkt-in-start": "mkt-in-overview", "mkt-my-overview": "markets", "mkt-my-features": "mkt-my-overview", "mkt-my-compliance": "mkt-my-overview", "mkt-my-start": "mkt-my-overview", "mkt-tr-overview": "markets", "mkt-tr-features": "mkt-tr-overview", "mkt-tr-compliance": "mkt-tr-overview", "mkt-tr-start": "mkt-tr-overview", "pricing-plans": "pricing", "pricing-enterprise": "pricing", "pricing-government": "pricing", "pricing-roi": "pricing", "res-blog": "resources", "res-reports": "resources", "res-newsroom": "resources", "res-videos": "resources", "res-events": "resources", "res-glossary": "resources", "help-start": "help", "help-howto": "help", "help-faq": "help", "help-contact": "help", "partners-technology": "partnerships", "partners-finance": "partnerships", "partners-logistics": "partnerships", "partners-research": "partnerships", "partners-country": "partnerships", "partners-apply": "partnerships", "about-journey": "about", "about-leadership": "about", "about-impact": "about", "about-food-security": "about", "about-sdg": "about", "about-careers": "about", "about-media": "about", "contact-demo": "contact", "contact-offices": "contact", "governments": "who-we-serve", "financiers": "who-we-serve", "sellers": "who-we-serve", "traders": "who-we-serve", "buyers": "who-we-serve", "enterprises": "who-we-serve", "food-processors": "who-we-serve", "cooperatives": "who-we-serve", "collaborators": "who-we-serve", "service-providers": "who-we-serve", "farmers": "who-we-serve", "about-investors": "about", "blog-systems-marketing-ai-global-food-trade": "res-blog", "blog-t57-gulfood-2026-mous-learning-sales-engine": "res-blog", "blog-future-of-ai-food-trade-t57": "res-blog", "blog-marketing-11-crore-farmers-digital-agriculture-mission-t57": "res-blog", "blog-food-trade-deals-before-handshake-virtual-trade-infrastructure": "res-blog", "blog-model-support-centers-missing-middle-food-systems": "res-blog", "blog-gcc-food-security-strategy-hormuz-crisis": "res-blog", "blog-hormuz-shock-gcc-food-security-risk": "res-blog", "blog-saudi-date-industry-challenges-t57-supply-chain": "res-blog", "blog-t57-club-membership-agriculture-trust-model": "res-blog", "blog-india-avocado-market-growth-farmer-challenge": "res-blog", "blog-structural-shifts-reshaping-turkish-agriculture-2026": "res-blog", "blog-blockchain-food-supply-chain": "res-blog", "blog-five-forces-reshaping-malaysian-agriculture-2026": "res-blog", "blog-five-forces-reshaping-middle-east-agriculture-2026": "res-blog", "blog-agriculture-ai-stack": "res-blog", "blog-india-us-trade-deal-2026-agriculture-impact": "res-blog", "blog-smart-contracts-in-global-agri-trade": "res-blog", "blog-gulfood-2026-farm-to-fork": "res-blog", "blog-gulfood-2026-ai-powered-food-decisions": "res-blog", "blog-india-farm-sector-2026-strategic-outlook": "res-blog", "blog-digital-agri-finance-alliance-global-food-system-transformation": "res-blog", "blog-escrow-crypto-ai-agents-agriculture": "res-blog", "blog-rewriting-trade-finance-for-global-agriculture": "res-blog", "blog-how-data-can-save-farmers-lives": "res-blog", "legal-privacy": "legal", "legal-terms": "legal", "legal-cookies": "legal", "legal-accessibility": "legal"}, "site": {"home": "home", "who-we-serve": "who-we-serve", "why-t57": "why-t57", "club-membership": "why-t57", "rfq-bidding": "why-t57", "virtual-trade-desk": "why-t57", "market-intelligence": "why-t57", "trade-finance": "why-t57", "nft-funding": "why-t57", "elc-15-minutes": "why-t57", "escrow-payments": "why-t57", "alternative-payments": "why-t57", "digital-bank": "why-t57", "document-audit-trail": "why-t57", "capabilities": "capabilities", "cap-trade": "capabilities", "cap-rfq": "capabilities", "cap-trade-desk": "capabilities", "cap-contract-farming": "capabilities", "cap-tenders": "capabilities", "cap-traceability": "capabilities", "cap-chat-orders": "capabilities", "cap-trust-payments": "capabilities", "cap-escrow": "capabilities", "cap-wallet": "capabilities", "cap-elc": "capabilities", "cap-banking": "capabilities", "cap-digital-bank": "capabilities", "cap-any-currency": "capabilities", "cap-digital-assets": "capabilities", "cap-financing": "capabilities", "cap-supply-chain-finance": "capabilities", "cap-fundraising": "capabilities", "cap-risk": "capabilities", "cap-logistics": "capabilities", "cap-logistics-network": "capabilities", "cap-tracking": "capabilities", "cap-customs": "capabilities", "cap-intelligence": "capabilities", "cap-price-index": "capabilities", "cap-negotiations": "capabilities", "cap-equipment-rental": "capabilities", "cap-hire-expert": "capabilities", "ai-native": "ai-native", "ai-matchmaking": "ai-native", "ai-negotiations": "ai-native", "ai-orders": "ai-native", "ai-price-index": "ai-native", "ai-forecasting": "ai-native", "ai-risk": "ai-native", "ai-crop-yield": "ai-native", "ai-profit-loss": "ai-native", "ai-crop-planning": "ai-native", "ai-agronomy": "ai-native", "ai-compliance": "ai-native", "ai-analytics": "ai-native", "ai-documents": "ai-native", "platform": "platform", "platform-trade-cycle": "platform", "platform-domestic": "platform", "platform-architecture": "platform", "platform-roadmap": "platform", "platform-intelligence": "platform", "platform-blockchain": "platform", "platform-security": "platform", "trust": "trust", "trust-verification": "trust", "trust-kyb": "trust", "trust-kyc": "trust", "trust-scoring": "trust", "trust-audit-trail": "trust", "trust-documents": "trust", "trust-security": "trust", "trust-data-protection": "trust", "trust-disputes": "trust", "markets": "markets", "markets-global": "markets", "markets-oic": "markets", "markets-asean": "markets", "mkt-sa-overview": "markets", "mkt-sa-features": "markets", "mkt-sa-compliance": "markets", "mkt-sa-start": "markets", "mkt-uae-overview": "markets", "mkt-uae-features": "markets", "mkt-uae-compliance": "markets", "mkt-uae-start": "markets", "mkt-in-overview": "markets", "mkt-in-features": "markets", "mkt-in-compliance": "markets", "mkt-in-start": "markets", "mkt-my-overview": "markets", "mkt-my-features": "markets", "mkt-my-compliance": "markets", "mkt-my-start": "markets", "mkt-tr-overview": "markets", "mkt-tr-features": "markets", "mkt-tr-compliance": "markets", "mkt-tr-start": "markets", "pricing": "pricing", "pricing-plans": "pricing", "pricing-enterprise": "pricing", "pricing-government": "pricing", "pricing-roi": "pricing", "resources": "resources", "res-blog": "resources", "res-reports": "resources", "res-newsroom": "resources", "res-videos": "resources", "res-events": "resources", "res-glossary": "resources", "help": "help", "help-start": "help", "help-howto": "help", "help-faq": "help", "help-contact": "help", "partnerships": "partnerships", "partners-technology": "partnerships", "partners-finance": "partnerships", "partners-logistics": "partnerships", "partners-research": "partnerships", "partners-country": "partnerships", "partners-apply": "partnerships", "about": "about", "about-journey": "about", "about-leadership": "about", "about-impact": "about", "about-food-security": "about", "about-sdg": "about", "about-careers": "about", "about-media": "about", "contact": "contact", "contact-demo": "contact", "contact-offices": "contact", "governments": "governments", "financiers": "financiers", "sellers": "sellers", "traders": "traders", "buyers": "buyers", "enterprises": "enterprises", "food-processors": "food-processors", "cooperatives": "cooperatives", "collaborators": "collaborators", "service-providers": "service-providers", "farmers": "farmers", "about-investors": "about", "blog-systems-marketing-ai-global-food-trade": "resources", "blog-t57-gulfood-2026-mous-learning-sales-engine": "resources", "blog-future-of-ai-food-trade-t57": "resources", "blog-marketing-11-crore-farmers-digital-agriculture-mission-t57": "resources", "blog-food-trade-deals-before-handshake-virtual-trade-infrastructure": "resources", "blog-model-support-centers-missing-middle-food-systems": "resources", "blog-gcc-food-security-strategy-hormuz-crisis": "resources", "blog-hormuz-shock-gcc-food-security-risk": "resources", "blog-saudi-date-industry-challenges-t57-supply-chain": "resources", "blog-t57-club-membership-agriculture-trust-model": "resources", "blog-india-avocado-market-growth-farmer-challenge": "resources", "blog-structural-shifts-reshaping-turkish-agriculture-2026": "resources", "blog-blockchain-food-supply-chain": "resources", "blog-five-forces-reshaping-malaysian-agriculture-2026": "resources", "blog-five-forces-reshaping-middle-east-agriculture-2026": "resources", "blog-agriculture-ai-stack": "resources", "blog-india-us-trade-deal-2026-agriculture-impact": "resources", "blog-smart-contracts-in-global-agri-trade": "resources", "blog-gulfood-2026-farm-to-fork": "resources", "blog-gulfood-2026-ai-powered-food-decisions": "resources", "blog-india-farm-sector-2026-strategic-outlook": "resources", "blog-digital-agri-finance-alliance-global-food-system-transformation": "resources", "blog-escrow-crypto-ai-agents-agriculture": "resources", "blog-rewriting-trade-finance-for-global-agriculture": "resources", "blog-how-data-can-save-farmers-lives": "resources", "legal": "legal", "legal-privacy": "legal", "legal-terms": "legal", "legal-cookies": "legal", "legal-accessibility": "legal"}};
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const C = { green:'#008b8c', cyan:'#39c4c4', indigo:'#2f2e7d', amber:'#f8b716', night:'#0b1340', sapphire:'#8f93ff', mist:'#c9cdf0' };
@@ -55,6 +55,42 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     ['Beef', 'Proteins and produce', '/kg', 7.28, 6.86], ['Chicken', 'Proteins and produce', '/kg', 1.69, 1.81], ['Oranges', 'Proteins and produce', '/kg', 0.77, 0.79], ['Bananas', 'Proteins and produce', '/kg', 1.10, 1.12],
     ['Urea', 'Inputs and energy', '/t', 390.0, 407.5], ['DAP fertilizer', 'Inputs and energy', '/t', 793.5, 800.6], ['Brent crude', 'Inputs and energy', '/bbl', 90.9, 116.8]
   ].map(([name, group, unit, a, b]) => ({ name, group, unit, prev: a, last: b, ch: (b - a) / a * 100 }));
+  // Arabic labels for the market board and other text the script writes (pages under /ar set <html lang="ar">).
+  const AR = document.documentElement.lang === 'ar';
+  // Bahasa Malaysia labels (pages under /ms set <html lang="ms">).
+  const MS = document.documentElement.lang === 'ms';
+  // Turkish labels (pages under /tr set <html lang="tr">). Turkish writes decimals with a comma and thousands with a point.
+  const TR = document.documentElement.lang === 'tr';
+  // Hindi labels (pages under /hi set <html lang="hi">). Figures stay in international digits, as in Indian business writing.
+  const HI = document.documentElement.lang === 'hi';
+  const num = s => TR ? String(s).replace(/[.,]/g, c => c === '.' ? ',' : '.') : String(s);
+  const TX = HI ? { 'Food Price Index': 'खाद्य मूल्य सूचकांक', Cereals: 'अनाज', 'Vegetable oils': 'वनस्पति तेल', Dairy: 'डेयरी', Meat: 'मांस', Sugar: 'चीनी',
+    'Wheat, US HRW': 'गेहूँ, अमेरिका HRW', 'Wheat, US SRW': 'गेहूँ, अमेरिका SRW', Maize: 'मक्का', 'Rice, Thai 5%': 'चावल, थाई 5%', 'Rice, Viet Nam 5%': 'चावल, वियतनाम 5%',
+    Soybeans: 'सोयाबीन', 'Soybean oil': 'सोयाबीन तेल', 'Palm oil': 'पाम तेल', 'Coffee, Arabica': 'कॉफ़ी, अरेबिका', Cocoa: 'कोको', Tea: 'चाय', Beef: 'बीफ़', Chicken: 'चिकन',
+    Oranges: 'संतरा', Bananas: 'केला', Urea: 'यूरिया', 'DAP fertilizer': 'DAP खाद', 'Brent crude': 'ब्रेंट कच्चा तेल', Grains: 'अनाज', 'Oils and oilseeds': 'तेल और तिलहन',
+    'Sugar and softs': 'चीनी और बागानी फ़सलें', 'Proteins and produce': 'प्रोटीन और ताज़ी उपज', 'Inputs and energy': 'कृषि इनपुट और ऊर्जा',
+    Explore: 'एक्सप्लोर', Core: 'कोर', Growth: 'ग्रोथ', Enterprise: 'एंटरप्राइज़', ' (from)': ' (शुरुआती)',
+    'on the month': 'मासिक', 'on the year': 'सालाना', 'on a year earlier': 'एक साल पहले की तुलना में', trillion: 'ट्रिलियन', Replay: 'फिर से चलाएँ', Play: 'चलाएँ', Pause: 'रोकें' } : TR ? { 'Food Price Index': 'Gıda Fiyat Endeksi', Cereals: 'Tahıllar', 'Vegetable oils': 'Bitkisel yağlar', Dairy: 'Süt ürünleri', Meat: 'Et', Sugar: 'Şeker',
+    'Wheat, US HRW': 'Buğday, ABD HRW', 'Wheat, US SRW': 'Buğday, ABD SRW', Maize: 'Mısır', 'Rice, Thai 5%': 'Pirinç, Tayland %5', 'Rice, Viet Nam 5%': 'Pirinç, Vietnam %5',
+    Soybeans: 'Soya fasulyesi', 'Soybean oil': 'Soya yağı', 'Palm oil': 'Palm yağı', 'Coffee, Arabica': 'Kahve, Arabica', Cocoa: 'Kakao', Tea: 'Çay', Beef: 'Sığır eti', Chicken: 'Tavuk',
+    Oranges: 'Portakal', Bananas: 'Muz', Urea: 'Üre', 'DAP fertilizer': 'DAP gübresi', 'Brent crude': 'Brent ham petrol', Grains: 'Tahıllar', 'Oils and oilseeds': 'Yağlar ve yağlı tohumlar',
+    'Sugar and softs': 'Şeker ve tropikal ürünler', 'Proteins and produce': 'Protein ve taze ürünler', 'Inputs and energy': 'Girdiler ve enerji',
+    Explore: 'Keşif', Core: 'Temel', Growth: 'Büyüme', Enterprise: 'Kurumsal', ' (from)': ' (başlangıç)',
+    'on the month': 'aylık', 'on the year': 'yıllık', 'on a year earlier': 'bir yıl öncesine göre', trillion: 'trilyon', Replay: 'Yeniden oynat', Play: 'Oynat', Pause: 'Duraklat' } : MS ? { 'Food Price Index': 'Indeks Harga Makanan', Cereals: 'Bijirin', 'Vegetable oils': 'Minyak sayuran', Dairy: 'Tenusu', Meat: 'Daging', Sugar: 'Gula',
+    'Wheat, US HRW': 'Gandum, HRW AS', 'Wheat, US SRW': 'Gandum, SRW AS', Maize: 'Jagung', 'Rice, Thai 5%': 'Beras Thai 5%', 'Rice, Viet Nam 5%': 'Beras Vietnam 5%',
+    Soybeans: 'Kacang soya', 'Soybean oil': 'Minyak soya', 'Palm oil': 'Minyak sawit', 'Coffee, Arabica': 'Kopi Arabika', Cocoa: 'Koko', Tea: 'Teh', Beef: 'Daging lembu', Chicken: 'Ayam',
+    Oranges: 'Oren', Bananas: 'Pisang', Urea: 'Urea', 'DAP fertilizer': 'Baja DAP', 'Brent crude': 'Minyak mentah Brent', Grains: 'Bijirin', 'Oils and oilseeds': 'Minyak dan biji minyak',
+    'Sugar and softs': 'Gula dan komoditi lembut', 'Proteins and produce': 'Protein dan hasil segar', 'Inputs and energy': 'Input dan tenaga',
+    Explore: 'Teroka', Core: 'Teras', Growth: 'Pertumbuhan', Enterprise: 'Perusahaan', ' (from)': ' (dari)',
+    'on the month': 'berbanding bulan lalu', 'on the year': 'berbanding tahun lalu', 'on a year earlier': 'berbanding setahun lalu', trillion: 'trilion', Replay: 'Main semula', Play: 'Main', Pause: 'Jeda' } : AR ? { 'Food Price Index': 'مؤشر أسعار الغذاء', Cereals: 'الحبوب', 'Vegetable oils': 'الزيوت النباتية', Dairy: 'الألبان', Meat: 'اللحوم', Sugar: 'السكر',
+    'Wheat, US HRW': 'القمح الأمريكي الصلب', 'Wheat, US SRW': 'القمح الأمريكي الطري', Maize: 'الذرة', 'Rice, Thai 5%': 'الأرز التايلندي 5%', 'Rice, Viet Nam 5%': 'الأرز الفيتنامي 5%',
+    Soybeans: 'فول الصويا', 'Soybean oil': 'زيت الصويا', 'Palm oil': 'زيت النخيل', 'Coffee, Arabica': 'البن العربي', Cocoa: 'الكاكاو', Tea: 'الشاي', Beef: 'لحم البقر', Chicken: 'الدجاج',
+    Oranges: 'البرتقال', Bananas: 'الموز', Urea: 'اليوريا', 'DAP fertilizer': 'سماد DAP', 'Brent crude': 'خام برنت', Grains: 'الحبوب', 'Oils and oilseeds': 'الزيوت والبذور الزيتية',
+    'Sugar and softs': 'السكر والمحاصيل الاستوائية', 'Proteins and produce': 'البروتينات والفواكه', 'Inputs and energy': 'المدخلات والطاقة',
+    Explore: 'استكشاف', Core: 'الأساسية', Growth: 'النمو', Enterprise: 'الشركات', ' (from)': ' (ابتداءً من)',
+    'on the month': 'على أساس شهري', 'on the year': 'على أساس سنوي', 'on a year earlier': 'عن العام السابق', trillion: 'تريليون', Replay: 'إعادة', Play: 'تشغيل', Pause: 'إيقاف مؤقت' } : {};
+  const tx = s => TX[s] || s;
+  const DATE_LOCALE = AR ? 'ar-u-ca-gregory-nu-latn' : MS ? 'ms-MY' : TR ? 'tr-TR' : HI ? 'hi-IN' : 'en-US';
   const IMPORT_BILL_PER_YEAR = 2.22e12; // FAO Food Outlook, Nov 2025 (2025 forecast)
 
   /* ---------- Living scenes ---------- */
@@ -313,38 +349,51 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   requestAnimationFrame(loop);
 
   /* ---------- Market board ---------- */
-  const fmtPrice = (v, unit) => (unit === '/kg' ? v.toFixed(2) : v >= 1000 ? Math.round(v).toLocaleString('en-US') : v.toFixed(1)).replace(/\.0$/, '');
-  const sign = v => (v >= 0 ? '▲ +' : '▼ ') + v.toFixed(1) + '%';
+  const fmtPrice = (v, unit) => num((unit === '/kg' ? v.toFixed(2) : v >= 1000 ? Math.round(v).toLocaleString('en-US') : v.toFixed(1)).replace(/\.0$/, ''));
+  const sign = v => TR ? (v >= 0 ? '▲ +%' : '▼ −%') + num(Math.abs(v).toFixed(1)) : (v >= 0 ? '▲ +' : '▼ ') + v.toFixed(1) + '%';
   const dir = v => (v >= 0 ? 'up' : 'down');
   (function board() {
     const last = FAO[FAO.length - 1], prev = FAO[FAO.length - 2], yago = FAO[FAO.length - 13];
     const mom = (last[1] - prev[1]) / prev[1] * 100, yoy = (last[1] - yago[1]) / yago[1] * 100;
-    document.querySelectorAll('[data-fpi-latest]').forEach(e => e.textContent = (+last[1]).toFixed(1));
+    document.querySelectorAll('[data-fpi-latest]').forEach(e => e.textContent = num((+last[1]).toFixed(1)));
     document.querySelectorAll('[data-fpi-mom]').forEach(e => { e.textContent = sign(mom); e.className = dir(mom); });
-    document.querySelectorAll('[data-fpi-yoy]').forEach(e => e.textContent = (yoy >= 0 ? '+' : '') + yoy.toFixed(1) + '% on a year earlier');
+    document.querySelectorAll('[data-fpi-yoy]').forEach(e => e.innerHTML = TR ? `${tx('on a year earlier')} <bdi dir="ltr">${yoy >= 0 ? '+' : '−'}%${num(Math.abs(yoy).toFixed(1))}</bdi>` : `<bdi dir="ltr">${(yoy >= 0 ? '+' : '') + yoy.toFixed(1)}%</bdi> ${tx('on a year earlier')}`);
     const spark = document.querySelector('[data-fpi-spark]');
     if (spark) { const v = FAO.map(r => +r[1]), lo = Math.min(...v), hi = Math.max(...v); spark.setAttribute('d', v.map((y, i) => (i ? 'L' : 'M') + (i / (v.length - 1) * 300).toFixed(1) + ' ' + (64 - (y - lo) / (hi - lo) * 58).toFixed(1)).join(' ')); }
     // ticker
     const tk = document.querySelector('[data-ticker]');
-    if (tk) { const items = PINK.map(p => `<span class="tk"><b>${p.name}</b> $${fmtPrice(p.last, p.unit)}${p.unit} <em class="${dir(p.ch)}">${sign(p.ch)}</em></span>`).join('');
+    if (tk) { const items = PINK.map(p => `<span class="tk"><b>${tx(p.name)}</b> $${fmtPrice(p.last, p.unit)}${p.unit} <em class="${dir(p.ch)}">${sign(p.ch)}</em></span>`).join('');
       tk.innerHTML = `<div class="tk-run">${items}</div><div class="tk-run" aria-hidden="true">${items}</div>`; }
+    // homepage price tape: the six FAO indices (with a 12-month trend line), then the World Bank food benchmarks
+    const tp = document.querySelector('[data-tape]');
+    if (tp) {
+      const spk = col => { const v = FAO.slice(-12).map(r => +r[col]), lo = Math.min(...v), hi = Math.max(...v) || 1;
+        return `<svg class="tp-spk" viewBox="0 0 44 16" aria-hidden="true"><path d="${v.map((y, i) => (i ? 'L' : 'M') + (i * 4).toFixed(1) + ' ' + (14 - (y - lo) / ((hi - lo) || 1) * 12).toFixed(1)).join(' ')}"/></svg>`; };
+      const fao = FAO_SERIES.map(([n, col]) => { const a = +FAO[FAO.length - 2][col], b = +FAO[FAO.length - 1][col], ch = (b - a) / a * 100;
+        return `<li class="tp-i"><span class="tp-src">FAO</span><b>${tx(n)}</b><span class="tp-p">${num(b.toFixed(1))}</span>${spk(col).replace('tp-spk', 'tp-spk ' + dir(ch))}<em class="${dir(ch)}">${sign(ch)}</em></li>`; }).join('');
+      const wb = PINK.filter(p => p.group !== 'Inputs and energy').map(p => `<li class="tp-i"><b>${tx(p.name)}</b><span class="tp-p">$${fmtPrice(p.last, p.unit)}<small>${p.unit}</small></span><em class="${dir(p.ch)}">${sign(p.ch)}</em></li>`).join('');
+      const run = fao + wb;
+      tp.innerHTML = `<ul class="tp-run">${run}</ul><ul class="tp-run" aria-hidden="true">${run}</ul>`;
+      const pb = document.querySelector('[data-tape-pause]'), band = tp.closest('.tape');
+      if (pb) pb.addEventListener('click', () => { const on = band.classList.toggle('paused'); pb.setAttribute('aria-pressed', on); pb.textContent = tx(on ? 'Play' : 'Pause'); });
+    }
     // movers
     const mv = document.querySelector('[data-movers]');
     if (mv) mv.innerHTML = [...PINK].filter(p => p.group !== 'Inputs and energy').sort((a, b) => Math.abs(b.ch) - Math.abs(a.ch)).slice(0, 6)
-      .map(p => `<li><span class="mv-n">${p.name}</span><span class="mv-p">$${fmtPrice(p.last, p.unit)}${p.unit}</span><span class="mv-c ${dir(p.ch)}">${sign(p.ch)}</span><i class="mv-bar ${dir(p.ch)}" style="--w:${Math.min(1, Math.abs(p.ch) / 10)}"></i></li>`).join('');
+      .map(p => `<li><span class="mv-n">${tx(p.name)}</span><span class="mv-p">$${fmtPrice(p.last, p.unit)}${p.unit}</span><span class="mv-c ${dir(p.ch)}">${sign(p.ch)}</span><i class="mv-bar ${dir(p.ch)}" style="--w:${Math.min(1, Math.abs(p.ch) / 10)}"></i></li>`).join('');
     // heat tiles, grouped
     const ht = document.querySelector('[data-heat]');
     if (ht) { const groups = [...new Set(PINK.map(p => p.group))];
-      ht.innerHTML = groups.map(g => `<div class="hg"><span class="hg-k">${g}</span><div class="hg-tiles">${PINK.filter(p => p.group === g).map(p => {
+      ht.innerHTML = groups.map(g => `<div class="hg"><span class="hg-k">${tx(g)}</span><div class="hg-tiles">${PINK.filter(p => p.group === g).map(p => {
         const a = Math.min(1, Math.abs(p.ch) / 8);
-        return `<div class="tile ${dir(p.ch)}" style="--a:${(0.12 + a * 0.6).toFixed(2)}"><span class="t-n">${p.name}</span><span class="t-p">$${fmtPrice(p.last, p.unit)}<small>${p.unit}</small></span><span class="t-c">${sign(p.ch)}</span></div>`; }).join('')}</div></div>`).join(''); }
+        return `<div class="tile ${dir(p.ch)}" style="--a:${(0.12 + a * 0.6).toFixed(2)}"><span class="t-n">${tx(p.name)}</span><span class="t-p">$${fmtPrice(p.last, p.unit)}<small>${p.unit}</small></span><span class="t-c">${sign(p.ch)}</span></div>`; }).join('')}</div></div>`).join(''); }
     // chart with tabs
     const svg = document.querySelector('[data-chart]'), tabs = document.querySelector('[data-tabs]'), tip = document.querySelector('[data-chart-tip]');
     if (!svg) return;
     let W = 720, H = 300; const L = 44, Rr = 12, T = 16, B = 34, months = FAO.map(r => r[0]);
-    const label = m => new Date(m + '-01T00:00:00Z').toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+    const label = m => new Date(m + '-01T00:00:00Z').toLocaleDateString(DATE_LOCALE, { month: 'short', year: 'numeric', timeZone: 'UTC' });
     let cur = 0;
-    tabs.innerHTML = FAO_SERIES.map(([n], i) => `<button type="button" role="tab" aria-selected="${i === 0}" data-i="${i}">${n}</button>`).join('');
+    tabs.innerHTML = FAO_SERIES.map(([n], i) => `<button type="button" role="tab" aria-selected="${i === 0}" data-i="${i}">${tx(n)}</button>`).join('');
     function render(i, animate) {
       cur = i; W = Math.max(320, Math.round(svg.clientWidth) || 720); H = W < 520 ? 240 : 300; svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
       const col = FAO_SERIES[i][1], v = FAO.map(r => +r[col]), lo = Math.floor(Math.min(...v) / 10) * 10, hi = Math.ceil(Math.max(...v) / 10) * 10;
@@ -356,13 +405,13 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       svg.innerHTML = `<defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#39c4c4" stop-opacity=".28"/><stop offset="1" stop-color="#39c4c4" stop-opacity="0"/></linearGradient></defs>${g}<path class="area" d="${area}"/><path class="line" d="${d}" pathLength="1"/><circle class="end" cx="${X(v.length - 1)}" cy="${Y(v[v.length - 1])}" r="5"/><line class="cross" y1="${T}" y2="${H - B}" x1="-10" x2="-10"/><circle class="hov" r="5" cx="-10" cy="-10"/>`;
       if (animate && !reduce) svg.querySelector('.line').animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }], { duration: 1200, easing: 'cubic-bezier(.2,.8,.2,1)' });
       const lm = (v[v.length - 1] - v[v.length - 2]) / v[v.length - 2] * 100, ly = (v[v.length - 1] - v[v.length - 13]) / v[v.length - 13] * 100;
-      document.querySelector('[data-chart-v]').textContent = v[v.length - 1].toFixed(1);
-      const cd = document.querySelector('[data-chart-d]'); cd.innerHTML = `<em class="${dir(lm)}">${sign(lm)}</em> on the month · <em class="${dir(ly)}">${sign(ly)}</em> on the year`;
+      document.querySelector('[data-chart-v]').textContent = num(v[v.length - 1].toFixed(1));
+      const cd = document.querySelector('[data-chart-d]'); cd.innerHTML = `<em class="${dir(lm)}">${sign(lm)}</em> ${tx('on the month')} · <em class="${dir(ly)}">${sign(ly)}</em> ${tx('on the year')}`;
       svg.setAttribute('aria-label', `FAO ${FAO_SERIES[i][0]}, monthly, January 2024 to September 2026. Latest ${v[v.length - 1].toFixed(1)}.`);
       tabs.querySelectorAll('button').forEach((b, k) => b.setAttribute('aria-selected', k === i));
       svg.onpointermove = e => { const r = svg.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * W, k = Math.max(0, Math.min(v.length - 1, Math.round((x - L) / (W - L - Rr) * (v.length - 1))));
         const cx = X(k), cy = Y(v[k]); svg.querySelector('.cross').setAttribute('x1', cx); svg.querySelector('.cross').setAttribute('x2', cx); const hv = svg.querySelector('.hov'); hv.setAttribute('cx', cx); hv.setAttribute('cy', cy);
-        tip.hidden = false; tip.innerHTML = `<b>${v[k].toFixed(1)}</b>${label(months[k])}`; tip.style.left = (cx / W * 100) + '%'; tip.style.top = (cy / H * 100) + '%'; };
+        tip.hidden = false; tip.innerHTML = `<b>${num(v[k].toFixed(1))}</b>${label(months[k])}`; tip.style.left = (cx / W * 100) + '%'; tip.style.top = (cy / H * 100) + '%'; };
       svg.onpointerleave = () => { tip.hidden = true; svg.querySelector('.hov').setAttribute('cx', -10); svg.querySelector('.cross').setAttribute('x1', -10); svg.querySelector('.cross').setAttribute('x2', -10); };
     }
     tabs.addEventListener('click', e => { const b = e.target.closest('button'); if (b) render(+b.dataset.i, true); });
@@ -373,7 +422,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     // import bill counter, paced from the annual figure
     const ib = document.querySelector('[data-importbill]');
     if (ib) { const y0 = Date.UTC(new Date().getUTCFullYear(), 0, 1), perMs = IMPORT_BILL_PER_YEAR / (365 * 864e5);
-      const tick = () => { const v = (Date.now() - y0) * perMs; ib.textContent = '$' + (v / 1e12).toFixed(4) + ' trillion'; if (!reduce) requestAnimationFrame(tick); }; tick(); }
+      const tick = () => { const v = (Date.now() - y0) * perMs; ib.textContent = AR ? (v / 1e12).toFixed(4) + ' ' + tx('trillion') + ' دولار' : MS ? 'US$' + (v / 1e12).toFixed(4) + ' trilion' : TR ? num((v / 1e12).toFixed(4)) + ' trilyon $' : HI ? '$' + (v / 1e12).toFixed(4) + ' ट्रिलियन' : '$' + (v / 1e12).toFixed(4) + ' trillion'; if (!reduce) requestAnimationFrame(tick); }; tick(); }
   })();
 
   /* ---------- Scroll storytelling ---------- */
@@ -389,16 +438,16 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   document.querySelectorAll('.problem, [data-run], .lede').forEach(el => io.observe(el));
   function countOnView(el) { el.querySelectorAll('[data-count-on-view]').forEach(t => {
     const n = +t.dataset.countOnView, dec = +(t.dataset.dec || 0), t0 = performance.now();
-    const step = now => { const k = Math.min(1, (now - t0) / 1400); t.textContent = (n * (1 - (1 - k) ** 3)).toFixed(dec); if (k < 1) requestAnimationFrame(step); };
+    const step = now => { const k = Math.min(1, (now - t0) / 1400); t.textContent = num((n * (1 - (1 - k) ** 3)).toFixed(dec)); if (k < 1) requestAnimationFrame(step); };
     requestAnimationFrame(step);
   }); }
   const countUp = el => el.querySelectorAll('[data-count]').forEach(t => {
-    const n = +t.dataset.count, t0 = performance.now(), fmt = v => Math.round(v).toLocaleString('en-US');
+    const n = +t.dataset.count, t0 = performance.now(), fmt = v => Math.round(v).toLocaleString(TR ? 'tr-TR' : 'en-US');
     const step = now => { const k = Math.min(1, (now - t0) / 1400); t.textContent = fmt(n * (1 - (1 - k) ** 3)); if (k < 1) requestAnimationFrame(step); };
     requestAnimationFrame(step);
   });
   const coverIO = new IntersectionObserver(ents => ents.forEach(en => { const was = en.target.classList.contains('in'); en.target.classList.toggle('in', en.isIntersecting); if (en.isIntersecting && !was) countUp(en.target); }), { threshold: 0.25 });
-  document.querySelectorAll('.cover-frame, .arr-frame').forEach(el => reduce ? el.classList.add('in') : coverIO.observe(el));
+  document.querySelectorAll('.cover-frame, .arr-frame, .pb-frame').forEach(el => reduce ? el.classList.add('in') : coverIO.observe(el));
   if (reduce) document.querySelectorAll('[data-run]').forEach(el => el.classList.add('run'));
 
   function railUpdate() {
@@ -449,13 +498,18 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   // While content lifts, the page behind it takes the colour of the top of the page, so light and dark pages never flash white.
   const groundTo = () => { const m = document.getElementById('main'); let el = m && m.querySelector('.world'); for (let i = 0; el && i < 4; i++, el = el.firstElementChild) { const c = getComputedStyle(el).backgroundColor; if (c && c !== 'transparent' && !c.endsWith(', 0)')) { document.body.style.backgroundColor = c; return; } } };
 
+  // If a transition is already running (the intro, an arrival, or a leave that is still waiting on the network),
+  // a click goes straight to its page, so a tap is never swallowed.
   async function go(name, href) {
-    if (busy) return;
+    if (busy) { location.href = href; return; }
     if (name === current) { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); return; }
     if (reduce) { location.href = href; return; }
     busy = true;
+    try { await leave(name, href); } catch (e) { location.href = href; }
+  }
+  async function leave(name, href, label) {
     const main = document.getElementById('main');
-    if (sameSite(name)) {
+    if (!label && sameSite(name)) {
       try { sessionStorage.setItem('t57-go', 'lift:' + name); } catch (e) {}
       const hp = logo.querySelector('.p-' + (WORLD_PETAL[name] || 'all')) || logo;
       groundTo();
@@ -468,16 +522,16 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     }
     try { sessionStorage.setItem('t57-go', name); } catch (e) {}
     const petal = WORLD_PETAL[name];
-    const target = petal === 'all' ? mark : mark.querySelector('.p-' + petal);
-    dest.textContent = WORLD_NAME[name];
+    const target = (petal && petal !== 'all' && mark.querySelector('.p-' + petal)) || mark;
+    dest.removeAttribute('lang'); dest.textContent = label || WORLD_NAME[name];
     clearAll(veilPetals);
     veil.classList.add('go');
     anim(main, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.5, transform: 'scale(0.985)' }], { duration: 380 });
     anim(vbg, [{ opacity: 0 }, { opacity: 1 }], { duration: 340 });
-    await anim(mark, [{ opacity: 0, transform: 'scale(.82)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 400, delay: 80, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    await anim(mark, [{ opacity: 0, transform: 'scale(.82)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 280, delay: 40, easing: 'cubic-bezier(.2,.8,.2,1)' });
     if (target !== mark) anim(target, [{ transform: 'scale(1)' }, { transform: 'scale(1.12)' }], { duration: 300, easing: 'cubic-bezier(.2,.8,.2,1)' });
     anim(dest, [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 280 });
-    await anim(target, [{ filter: 'none' }, { filter: 'drop-shadow(0 0 8px rgba(57,196,196,.9))' }], { duration: 320 });
+    await anim(target, [{ filter: 'none' }, { filter: 'drop-shadow(0 0 8px rgba(57,196,196,.9))' }], { duration: 180 });
     location.href = href;
     addEventListener('pageshow', e => { if (e.persisted) { veil.classList.remove('go'); clearAll([vbg, mark, dest, main, ...veilPetals]); busy = false; } }, { once: true });
   }
@@ -487,17 +541,17 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   // The hole is sized frame by frame so it runs the same in every browser.
   async function arrive(name) {
     busy = true;
-    dest.textContent = WORLD_NAME[name] || '';
+    dest.removeAttribute('lang'); dest.textContent = WORLD_NAME[name] || '';
     veil.classList.add('go');
     document.documentElement.classList.remove('arriving');
     const hold = (el, k) => el.animate([k, k], { duration: 10, fill: 'forwards' });
     hold(vbg, { opacity: 1 }); hold(mark, { opacity: 1, transform: 'scale(1)' }); hold(dest, { opacity: 1 });
-    await new Promise(r => setTimeout(r, 120));
-    const start = mark.getBoundingClientRect().width * 0.9, end = Math.hypot(innerWidth, innerHeight) * 2.4, dur = 900;
+    await new Promise(r => setTimeout(r, 60));
+    const start = mark.getBoundingClientRect().width * 0.9, end = Math.hypot(innerWidth, innerHeight) * 2.4, dur = 620;
     const setSize = w => { const v = w.toFixed(1) + 'px auto, 100% 100%'; vbg.style.webkitMaskSize = v; vbg.style.maskSize = v; };
     setSize(start); veil.classList.add('reveal');
     const lines = [...document.querySelectorAll('#' + name + ' .hero h1 .ln, #' + name + ' .hero .std, #' + name + ' .hero .actions')];
-    lines.forEach((l, i) => l.animate([{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }], { duration: 600, delay: 380 + i * 90, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
+    lines.forEach((l, i) => l.animate([{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }], { duration: 500, delay: 220 + i * 70, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
     anim(dest, [{ opacity: 1 }, { opacity: 0 }], { duration: 200 });
     // the logo grows with the hole for the first part, then fades, so it seems to open into the page
     anim(mark, [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0.9, transform: 'scale(1.5)', offset: 0.35 }, { opacity: 0, transform: 'scale(3)' }], { duration: 520, easing: 'cubic-bezier(.4,0,.6,1)' });
@@ -521,9 +575,24 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   /* ---------- Logo intro: the five petals assemble into the mark ---------- */
   const CENTER = [898, 540];
   const PC = { agri:[898, 617], logistics:[975, 566], trade:[952, 470], tech:[847, 470], finance:[822, 567] };
+  // A tap, key press or scroll during the intro skips straight to the page.
+  let introOn = false;
+  function endIntro() {
+    if (!introOn) return; introOn = false;
+    [vbg, mark, dest, ...mark.querySelectorAll('.petal')].forEach(el => el.getAnimations().forEach(a => a.cancel()));
+    logo.querySelectorAll('.petal').forEach(p => p.style.opacity = '');
+    const wm = logo.querySelector('.wordmark'); if (wm) wm.style.opacity = '';
+    veil.classList.remove('go');
+    busy = false;
+  }
+  ['pointerdown', 'keydown', 'wheel', 'touchmove'].forEach(t => addEventListener(t, endIntro, { passive: true }));
   async function intro() {
     if (reduce) return;
-    busy = true;
+    busy = true; introOn = true;
+    try { await introRun(); } catch (e) { /* skipped: endIntro has restored the page */ }
+    introOn = false;
+  }
+  async function introRun() {
     veil.classList.add('go');
     vbg.animate([{ opacity: 1 }, { opacity: 1 }], { duration: 10, fill: 'forwards' });
     mark.animate([{ opacity: 1 }, { opacity: 1 }], { duration: 10, fill: 'forwards' });
@@ -536,13 +605,15 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
         { opacity: 0, transform: `translate(${dx}px, ${dy}px) scale(.4)` },
         { opacity: 1, offset: 0.6 },
         { opacity: 1, transform: 'translate(0,0) scale(1)' }
-      ], { duration: 900, delay: 200 + i * 170, easing: 'cubic-bezier(.2,.9,.25,1.15)', fill: 'both' }).finished;
+      ], { duration: 620, delay: 80 + i * 90, easing: 'cubic-bezier(.2,.9,.25,1.15)', fill: 'both' }).finished;
     });
-    dest.textContent = 'T57.ai';
+    dest.lang = 'en'; dest.textContent = 'T57.ai';
     await Promise.all(ps);
-    ring.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, fill: 'forwards' });
-    dest.animate([{ opacity: 0, letterSpacing: '.6em' }, { opacity: 1, letterSpacing: '.24em' }], { duration: 700, fill: 'forwards', easing: 'cubic-bezier(.2,.8,.2,1)' });
-    await new Promise(r => setTimeout(r, 750));
+    if (!introOn) return;
+    ring.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 300, fill: 'forwards' });
+    dest.animate([{ opacity: 0, letterSpacing: '.6em' }, { opacity: 1, letterSpacing: '.24em' }], { duration: 450, fill: 'forwards', easing: 'cubic-bezier(.2,.8,.2,1)' });
+    await new Promise(r => setTimeout(r, 320));
+    if (!introOn) return;
     // fly the mark to the header logo
     const from = mark.getBoundingClientRect(), to = logo.getBoundingClientRect();
     const toW = to.height * (250 / 244);
@@ -550,8 +621,8 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     logo.querySelectorAll('.petal').forEach(p => p.style.opacity = '0');
     const wm = logo.querySelector('.wordmark'); wm.style.opacity = '0';
     dest.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 300, fill: 'forwards' });
-    vbg.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 700, delay: 250, fill: 'forwards' });
-    await mark.animate([{ transform: 'none' }, { transform: `translate(${dx}px, ${dy}px) scale(${s})` }], { duration: 900, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' }).finished;
+    vbg.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 450, delay: 120, fill: 'forwards' });
+    await mark.animate([{ transform: 'none' }, { transform: `translate(${dx}px, ${dy}px) scale(${s})` }], { duration: 600, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' }).finished;
     logo.querySelectorAll('.petal').forEach(p => p.style.opacity = '');
     wm.animate([{ opacity: 0, transform: 'translateX(-24px)' }, { opacity: 1, transform: 'none' }], { duration: 600, easing: 'cubic-bezier(.2,.8,.2,1)' });
     wm.style.opacity = '';
@@ -598,8 +669,9 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   // Pricing: ROI calculator. Standard list prices; annual billing is ten months for twelve, Enterprise at its starting price.
   document.querySelectorAll('[data-roi]').forEach(f => {
     const PLANS = [['Explore', 199, .0075, 1990], ['Core', 499, .006, 4990], ['Growth', 749, .004, 7490], ['Enterprise', 1499, .002, 1499 * 12]];
-    const usd = n => (n < 0 ? '−$' : '$') + Math.round(Math.abs(n)).toLocaleString('en-US');
-    const v = k => { const el = f.querySelector(`[data-roi-in="${k}"]`); return el.tagName === 'SELECT' ? el.value : Math.max(0, +el.value || 0); };
+    const MAX = { trades: 10000, value: 10000000 };
+    const usd = n => (n < 0 ? '−$' : '$') + Math.round(Math.abs(n)).toLocaleString(TR ? 'tr-TR' : 'en-US');
+    const v = k => { const el = f.querySelector(`[data-roi-in="${k}"]`); return el.tagName === 'SELECT' ? el.value : Math.min(MAX[k] || Infinity, Math.max(0, +el.value || 0)); };
     const out = k => f.querySelector(`[data-r="${k}"]`);
     function run() {
       f.querySelectorAll('input[type=range]').forEach(r => f.querySelector(`[data-roi-out="${r.dataset.roiIn}"]`).textContent = r.value + '%');
@@ -608,16 +680,18 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       const rework = v('trades') * 12 * v('rework') * c('c_rework');
       const margin = vol * c('margin') * c('c_margin');
       const fin = vol * c('rate') * (v('wait') / 365) - vol * c('rate') * (1 - c('c_rate')) * (v('wait') * (1 - c('c_wait')) / 365);
+      // with no trades entered there is nothing to compare, so show dashes rather than a result
+      if (!vol) { ['net', 'gross', 'plan', 'fees'].forEach(k => out(k).textContent = '—'); out('net').classList.remove('neg'); out('rows').innerHTML = ''; return; }
       const gross = time + rework + margin + fin;
       const costs = PLANS.map(([n, m, fee, yr]) => [n, yr + vol * fee]);
       const best = costs.reduce((a, b) => b[1] < a[1] ? b : a);
       out('net').textContent = usd(gross - best[1]);
       out('net').classList.toggle('neg', gross - best[1] < 0);
       out('gross').textContent = usd(gross);
-      out('plan').textContent = best[0];
-      out('fees').textContent = usd(best[1]) + (best[0] === 'Enterprise' ? ' (from)' : '');
-      out('ctx').textContent = `For a ${v('role').toLowerCase()} in ${v('market')}, on ${usd(vol / 12)} of trade a month.`;
-      out('rows').innerHTML = costs.map(([n, t]) => `<tr${n === best[0] ? ' class="on"' : ''}><th scope="row">${n}</th><td>${usd(t)}${n === 'Enterprise' ? ' (from)' : ''}</td></tr>`).join('');
+      out('plan').textContent = tx(best[0]);
+      out('fees').textContent = usd(best[1]) + (best[0] === 'Enterprise' ? tx(' (from)') : '');
+      out('ctx').textContent = AR ? `${v('role')} في ${v('market')}، بحجم تجارة شهري قدره ${usd(vol / 12)}.` : MS ? `Bagi ${v('role').toLowerCase()} di ${v('market')}, dengan dagangan ${usd(vol / 12)} sebulan.` : HI ? `${v('market')} में एक ${v('role')} के लिए, हर महीने ${usd(vol / 12)} के व्यापार पर।` : TR ? `${v('market')} pazarındaki bir ${v('role').toLocaleLowerCase('tr-TR')} için, aylık ${usd(vol / 12)} ticaret hacmiyle.` : `For a ${v('role').toLowerCase()} in ${v('market')}, on ${usd(vol / 12)} of trade a month.`;
+      out('rows').innerHTML = costs.map(([n, t]) => `<tr${n === best[0] ? ' class="on"' : ''}><th scope="row">${tx(n)}</th><td>${usd(t)}${n === 'Enterprise' ? tx(' (from)') : ''}</td></tr>`).join('');
     }
     f.addEventListener('input', run); run();
     f.querySelector('[data-roi-print]').addEventListener('click', () => print());
@@ -652,22 +726,32 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   // headings and FAQ questions. The index loads on first open.
   const srch = document.getElementById('srch'), srchBtn = document.getElementById('srch-btn');
   if (srch && srch.showModal) {
+    // the 404 page's search button opens the same panel
+    document.querySelectorAll('[data-open-search]').forEach(b => b.addEventListener('click', () => srchBtn && srchBtn.click()));
     const q = document.getElementById('srch-q'), list = document.getElementById('srch-res'), none = document.getElementById('srch-none'), kick = document.getElementById('srch-k');
-    const POP = ['platform-domestic', 'markets-global', 'club-membership', 'cap-hire-expert', 'cap-equipment-rental', 'partners-country', 'pricing', 'trust-verification'];
+    const POP = ['who-we-serve', 'buyers', 'sellers', 'financiers', 'governments', 'pricing', 'club-membership', 'contact-demo'];
+    // Everyday words are dropped, and common ways of asking map onto the words the pages use.
+    const STOP = new Set(['how', 'much', 'does', 'do', 'it', 'the', 'what', 'is', 'are', 'can', 'an', 'for', 'to', 'of', 'in', 'on', 'my', 'me', 'you', 'your', 'with', 'and', 'or', 'about', 'which', 'who', 'where', 'when', 'why', 'there', 'get', 'use', 'i']);
+    const SYN = { join: ['apply', 'member', 'regist'], founder: ['founder', 'leadership'], founded: ['founder', 'leadership'], logistics: ['logistic', 'freight', 'forwarder'], farmer: ['farmer', 'producer'], farmers: ['farmer', 'producer'], dashboard: ['dashboard', 'monitor', 'view'], halal: ['halal', 'certif'], cost: ['pric', 'fee', 'plan'], costs: ['pric', 'fee', 'plan'], price: ['pric', 'fee', 'plan'], prices: ['pric', 'fee', 'plan'], fee: ['fee', 'pric'], fees: ['fee', 'pric'], login: ['apply', 'member'], signin: ['apply', 'member'], log: ['apply', 'member'], signup: ['apply', 'member'], register: ['apply', 'regist', 'member'],
+      supermarket: ['retail', 'buyer', 'horeca'], supermarkets: ['retail', 'buyer', 'horeca'], retail: ['retail', 'buyer'], restaurant: ['horeca', 'buyer'], hotel: ['horeca', 'buyer'], bank: ['bank', 'financ', 'lender'], banks: ['bank', 'financ', 'lender'], lender: ['lender', 'financ'], loan: ['financ', 'lender'], fpo: ['fpo', 'cooperativ'], coop: ['cooperativ', 'fpo'], 'co-op': ['cooperativ', 'fpo'], ministry: ['government'], demo: ['demo'] };
     const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
-    const norm = t => String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    // Arabic: drop short vowels and tatweel, and fold alef, yaa and taa marbuta forms, so spelling variants still match.
+    const norm = t => String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f\u064b-\u0652\u0670\u0640]/g, '').replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه');
     let IDX = null, sel = -1;
-    const load = () => IDX ? Promise.resolve(IDX) : fetch('/proto/search.json').then(r => r.json()).then(d => (IDX = d.map(([id, route, name, sec, h1, ans, hd, faq]) => ({ id, route, name, sec, ans, f: [norm(name), norm(h1), norm(hd + ' ' + faq), norm(ans + ' ' + sec)] }))));
+    const load = () => IDX ? Promise.resolve(IDX) : fetch(AR ? '/proto/search-ar.json' : MS ? '/proto/search-ms.json' : TR ? '/proto/search-tr.json' : HI ? '/proto/search-hi.json' : '/proto/search.json').then(r => r.json()).then(d => (IDX = d.map(([id, route, name, sec, h1, ans, hd, faq]) => ({ id, route, name, sec, ans, f: [norm(name), norm(h1), norm(hd + ' ' + faq), norm(ans + ' ' + sec)] }))));
     const mark = (t, words) => { let h = esc(t); words.forEach(w => { h = h.replace(new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>'); }); return h; };
     const row = (p, words) => `<li role="option" aria-selected="false"><a href="${p.route}" data-go="${p.id}">${p.sec ? `<small>${esc(p.sec)}</small>` : ''}<b>${mark(p.name, words)}</b><span>${mark(p.ans, words)}</span></a></li>`;
     const pick = n => { const it = [...list.children]; if (!it.length) return; sel = (n + it.length) % it.length; it.forEach((li, k) => li.setAttribute('aria-selected', k === sel ? 'true' : 'false')); it[sel].scrollIntoView({ block: 'nearest' }); };
     const run = () => {
-      const words = norm(q.value).trim().split(/\s+/).filter(w => w.length > 1); sel = -1;
-      if (!words.length) { kick.textContent = 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
+      const words = norm(q.value).trim().split(/\s+/).filter(w => w.length > 1 && !(!AR && !MS && !TR && !HI && STOP.has(w))); sel = -1;
+      if (!words.length) { kick.textContent = AR ? 'الأكثر زيارة' : MS ? 'Paling dilawati' : TR ? 'En çok ziyaret edilenler' : HI ? 'सबसे ज़्यादा देखे गए' : 'Popular'; kick.hidden = false; none.hidden = true; list.innerHTML = POP.map(id => IDX.find(p => p.id === id)).filter(Boolean).map(p => row(p, [])).join(''); return; }
       const W = [8, 5, 2, 1], hits = [];
-      IDX.forEach(p => { let s = 0; for (const w of words) { let m = 0; p.f.forEach((f, k) => { if (f.includes(w)) m += W[k] * (new RegExp('\\b' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(f) ? 2 : 1); }); if (!m) return; s += m; } hits.push([s, p]); });
+      // blog articles rank below the product pages they discuss
+      // a page needs at least half the words; pages that match more words rank higher
+      const need = Math.ceil(words.length / 2);
+      IDX.forEach(p => { let s = 0, n = 0; for (const w of words) { let m = 0; const vs = [w, ...(SYN[w] || [])]; if (w.length > 4 && w.endsWith('s')) vs.push(w.slice(0, -1)); for (const v of vs) p.f.forEach((f, k) => { if (f.includes(v)) m += W[k] * (new RegExp('\\b' + v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(f) ? 2 : 1); }); if (m) { s += m; n++; } } if (n < need) return; s *= n / words.length; hits.push([p.route.includes('/resources/blog/') ? s / 2 : s, p]); });
       hits.sort((a, b) => b[0] - a[0]);
-      kick.textContent = hits.length ? `${hits.length} page${hits.length === 1 ? '' : 's'}` : ''; kick.hidden = !hits.length; none.hidden = !!hits.length;
+      kick.textContent = !hits.length ? '' : AR ? (hits.length === 1 ? 'صفحة واحدة' : hits.length === 2 ? 'صفحتان' : `${hits.length} ${hits.length <= 10 ? 'صفحات' : 'صفحة'}`) : MS ? `${hits.length} halaman` : TR ? `${hits.length} sayfa` : HI ? `${hits.length} पेज` : `${hits.length} page${hits.length === 1 ? '' : 's'}`; kick.hidden = !hits.length; none.hidden = !!hits.length;
       list.innerHTML = hits.slice(0, 12).map(([, p]) => row(p, words)).join('');
     };
     const open = () => { if (srch.open) return; srch.showModal(); q.value = ''; q.focus(); load().then(run).catch(() => { none.hidden = false; }); };
@@ -694,11 +778,95 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     partner: ['Partnerships', 'Become a T57 partner', 'Tell us about your services, licences and markets.', 'Submit application', ['name', 'email', 'company', 'type']],
     contact: ['Contact', 'Talk to T57', 'We will connect you with the right team.', 'Send', ['name', 'email']],
     support: ['Help Center', 'Contact support', 'Have your company name and trade reference ready, so we can help faster.', 'Send to support', ['name', 'email']],
+    invest: ['Investors', 'Request the investor pack', 'For qualified investors. We send the teaser and presentation, then arrange a call with the founder and access to the memorandum and data room under NDA.', 'Request the pack', ['name', 'email', 'company', 'investor']],
     subscribe: ['T57 Insights', 'Subscribe to T57 Insights', 'Market insight on food trade, finance and AI. Unsubscribe at any time.', 'Subscribe', ['email']],
+    // government and bank briefings are demo requests with their own wording
+    briefing: ['Public sector', 'Request a government briefing', 'A 45-minute session with our public-sector team, under NDA if you need it.', 'Request my briefing', ['name', 'email', 'company']],
+    pipeline: ['Banks and financiers', 'Request a pipeline briefing', 'A 30-minute walk-through of a verified deal file, with a specialist from our finance partnerships team.', 'Request my briefing', ['name', 'email', 'company']],
   };
+  const API_KIND = { briefing: 'demo', pipeline: 'demo' };
   const DONE = { join: 'Thank you. Your country team will contact you within two working days.', demo: 'Thank you. A specialist will contact you to confirm a time.', partner: 'Thank you. Our partnerships team will be in touch.',
-    contact: 'Thank you. We will reply within two working days.', support: 'Thank you. Our support team has your request.', subscribe: 'Thank you. You are subscribed to T57 Insights.' };
-  const kindOf = t => /subscri/i.test(t) ? 'subscribe' : /support|security team/i.test(t) ? 'support' : /partner/i.test(t) ? 'partner'
+    contact: 'Thank you. We will reply within two working days.', support: 'Thank you. Our support team has your request.', subscribe: 'Thank you. You are subscribed to T57 Insights.',
+    invest: 'Thank you. Our investor relations team will send the pack and contact you within two working days.' };
+  if (MS) {
+    Object.assign(FORM, {
+      join: ['Mulakan', 'Sertai T57', 'Ahli pengasas menikmati percubaan percuma 90 hari semasa pelancaran. Ceritakan tentang perniagaan anda dan pasukan negara kami akan menghubungi anda.', 'Mohon keahlian', FORM.join[4]],
+      demo: ['Tempah demo', 'Lihat T57 dengan produk anda sendiri', 'Demo 30 minit bersama pakar daripada pasukan negara anda.', 'Tempah demo saya', FORM.demo[4]],
+      partner: ['Perkongsian', 'Jadi rakan kongsi T57', 'Kongsikan perkhidmatan, lesen dan pasaran anda.', 'Hantar permohonan', FORM.partner[4]],
+      contact: ['Hubungi kami', 'Berbincang dengan T57', 'Kami akan menyambungkan anda dengan pasukan yang tepat.', 'Hantar', FORM.contact[4]],
+      support: ['Pusat Bantuan', 'Hubungi sokongan', 'Sediakan nama syarikat dan rujukan dagangan anda supaya kami dapat membantu dengan lebih pantas.', 'Hantar kepada sokongan', FORM.support[4]],
+      invest: ['Pelabur', 'Minta pek pelabur', 'Untuk pelabur yang layak. Kami akan menghantar ringkasan dan pembentangan, kemudian mengatur panggilan bersama pengasas serta akses kepada memorandum dan bilik data di bawah NDA.', 'Minta pek', FORM.invest[4]],
+      subscribe: ['T57 Insights', 'Langgan T57 Insights', 'Analisis pasaran tentang perdagangan makanan, pembiayaan dan AI. Berhenti melanggan pada bila-bila masa.', 'Langgan', FORM.subscribe[4]],
+      briefing: ['Sektor awam', 'Mohon taklimat kerajaan', 'Sesi 45 minit bersama pasukan sektor awam kami, di bawah NDA jika diperlukan.', 'Mohon taklimat', FORM.briefing[4]],
+      pipeline: ['Bank dan pembiaya', 'Mohon taklimat peluang pembiayaan', 'Penerangan 30 minit tentang satu fail dagangan yang disahkan, bersama pakar daripada pasukan perkongsian pembiayaan kami.', 'Mohon taklimat', FORM.pipeline[4]],
+    });
+    Object.assign(DONE, { join: 'Terima kasih. Pasukan negara anda akan menghubungi anda dalam tempoh dua hari bekerja.', demo: 'Terima kasih. Pakar kami akan menghubungi anda untuk mengesahkan masa.', partner: 'Terima kasih. Pasukan perkongsian kami akan menghubungi anda.',
+      contact: 'Terima kasih. Kami akan membalas dalam tempoh dua hari bekerja.', support: 'Terima kasih. Permintaan anda telah sampai kepada pasukan sokongan kami.', subscribe: 'Terima kasih. Anda kini melanggan T57 Insights.',
+      invest: 'Terima kasih. Pasukan perhubungan pelabur kami akan menghantar pek dan menghubungi anda dalam tempoh dua hari bekerja.' });
+  }
+  if (HI) {
+    Object.assign(FORM, {
+      join: ['शुरुआत करें', 'T57 से जुड़ें', 'संस्थापक सदस्यों को लॉन्च पर 90 दिन का मुफ़्त ट्रायल मिलता है। अपने व्यवसाय के बारे में बताइए, आपके देश की टीम आपसे संपर्क करेगी।', 'सदस्यता के लिए आवेदन करें', FORM.join[4]],
+      demo: ['डेमो बुक करें', 'अपने ही उत्पादों पर T57 को काम करते देखें', 'आपके देश की टीम के विशेषज्ञ के साथ 30 मिनट का डेमो।', 'मेरा डेमो बुक करें', FORM.demo[4]],
+      partner: ['साझेदारी', 'T57 के पार्टनर बनें', 'अपनी सेवाओं, लाइसेंस और बाज़ारों के बारे में बताइए।', 'आवेदन भेजें', FORM.partner[4]],
+      contact: ['संपर्क', 'T57 से बात करें', 'हम आपको सही टीम से जोड़ेंगे।', 'भेजें', FORM.contact[4]],
+      support: ['हेल्प सेंटर', 'सपोर्ट टीम से संपर्क करें', 'अपनी कंपनी का नाम और ट्रेड रेफ़रेंस तैयार रखें, ताकि हम जल्दी मदद कर सकें।', 'सपोर्ट को भेजें', FORM.support[4]],
+      invest: ['निवेशक', 'निवेशक पैक मँगाएँ', 'योग्य निवेशकों के लिए। हम टीज़र और प्रेज़ेंटेशन भेजते हैं, फिर संस्थापक के साथ कॉल और NDA के तहत मेमोरेंडम व डेटा रूम की पहुँच की व्यवस्था करते हैं।', 'पैक मँगाएँ', FORM.invest[4]],
+      subscribe: ['T57 Insights', 'T57 Insights सब्सक्राइब करें', 'खाद्य व्यापार, फ़ाइनेंस और AI पर बाज़ार की समझ। जब चाहें सब्सक्रिप्शन बंद करें।', 'सब्सक्राइब करें', FORM.subscribe[4]],
+      briefing: ['सरकारी क्षेत्र', 'सरकारी ब्रीफ़िंग का अनुरोध करें', 'हमारी पब्लिक-सेक्टर टीम के साथ 45 मिनट का सत्र, ज़रूरत हो तो NDA के तहत।', 'ब्रीफ़िंग का अनुरोध करें', FORM.briefing[4]],
+      pipeline: ['बैंक और फ़ाइनेंसर', 'डील पाइपलाइन ब्रीफ़िंग का अनुरोध करें', 'फ़ाइनेंस पार्टनरशिप टीम के विशेषज्ञ के साथ, एक सत्यापित डील फ़ाइल को 30 मिनट में समझें।', 'ब्रीफ़िंग का अनुरोध करें', FORM.pipeline[4]],
+    });
+    Object.assign(DONE, { join: 'धन्यवाद। आपके देश की टीम दो कार्यदिवसों के भीतर आपसे संपर्क करेगी।', demo: 'धन्यवाद। समय तय करने के लिए हमारे विशेषज्ञ आपसे संपर्क करेंगे।', partner: 'धन्यवाद। हमारी साझेदारी टीम जल्द ही आपसे संपर्क करेगी।',
+      contact: 'धन्यवाद। हम दो कार्यदिवसों के भीतर जवाब देंगे।', support: 'धन्यवाद। आपका अनुरोध हमारी सपोर्ट टीम तक पहुँच गया है।', subscribe: 'धन्यवाद। आपने T57 Insights सब्सक्राइब कर लिया है।',
+      invest: 'धन्यवाद। हमारी निवेशक संबंध टीम पैक भेजेगी और दो कार्यदिवसों के भीतर आपसे संपर्क करेगी।' });
+  }
+  if (TR) {
+    Object.assign(FORM, {
+      join: ['Başlayın', "T57'ye katılın", 'Kurucu üyeler lansmanda 90 günlük ücretsiz deneme süresinden yararlanır. İşletmenizi tanıtın, ülke ekibimiz sizinle iletişime geçsin.', 'Üyelik başvurusu yap', FORM.join[4]],
+      demo: ['Demo talep edin', "T57'yi kendi ürünlerinizle görün", 'Ülke ekibinizden bir uzmanla 30 dakikalık demo.', 'Demomu planla', FORM.demo[4]],
+      partner: ['İş ortaklıkları', "T57'nin iş ortağı olun", 'Hizmetlerinizi, lisanslarınızı ve faaliyet gösterdiğiniz pazarları paylaşın.', 'Başvuruyu gönder', FORM.partner[4]],
+      contact: ['İletişim', "T57 ile görüşün", 'Sizi doğru ekiple buluşturalım.', 'Gönder', FORM.contact[4]],
+      support: ['Yardım Merkezi', 'Destek ekibine ulaşın', 'Size daha hızlı yardımcı olabilmemiz için şirket adınızı ve ticaret referansınızı hazır bulundurun.', 'Desteğe gönder', FORM.support[4]],
+      invest: ['Yatırımcılar', 'Yatırımcı dosyasını talep edin', 'Nitelikli yatırımcılar içindir. Tanıtım özetini ve sunumu gönderiyor, ardından kurucuyla bir görüşme ve gizlilik sözleşmesi kapsamında bilgi memorandumu ile veri odasına erişim sağlıyoruz.', 'Dosyayı talep et', FORM.invest[4]],
+      subscribe: ['T57 Insights', "T57 Insights'a abone olun", 'Gıda ticareti, finansman ve yapay zekâ üzerine piyasa analizleri. Aboneliğinizi istediğiniz zaman iptal edebilirsiniz.', 'Abone ol', FORM.subscribe[4]],
+      briefing: ['Kamu sektörü', 'Kamu bilgilendirme toplantısı talep edin', 'Kamu sektörü ekibimizle 45 dakikalık bir oturum; dilerseniz gizlilik sözleşmesi kapsamında.', 'Toplantı talep et', FORM.briefing[4]],
+      pipeline: ['Bankalar ve finansörler', 'Finansman fırsatları sunumu talep edin', 'Finansman ortaklıkları ekibimizden bir uzmanla, doğrulanmış bir işlem dosyası üzerinden 30 dakikalık bir inceleme.', 'Sunum talep et', FORM.pipeline[4]],
+    });
+    Object.assign(DONE, { join: 'Teşekkürler. Ülke ekibiniz iki iş günü içinde sizinle iletişime geçecek.', demo: 'Teşekkürler. Bir uzmanımız zamanı teyit etmek için sizinle iletişime geçecek.', partner: 'Teşekkürler. İş ortaklıkları ekibimiz sizinle iletişime geçecek.',
+      contact: 'Teşekkürler. İki iş günü içinde yanıt vereceğiz.', support: 'Teşekkürler. Talebiniz destek ekibimize ulaştı.', subscribe: "Teşekkürler. T57 Insights'a abone oldunuz.",
+      invest: 'Teşekkürler. Yatırımcı ilişkileri ekibimiz dosyayı gönderecek ve iki iş günü içinde sizinle iletişime geçecek.' });
+  }
+  if (AR) {
+    Object.assign(FORM, {
+      join: ['ابدأ الآن', 'انضم إلى T57', 'يحصل الأعضاء المؤسِّسون على تجربة مجانية لمدة 90 يومًا عند الإطلاق. أخبرنا عن منشأتك وسيتواصل معك فريق بلدك.', 'قدّم طلب العضوية', FORM.join[4]],
+      demo: ['اطلب عرضًا توضيحيًا', 'شاهد T57 على منتجاتك', 'عرض توضيحي مدته 30 دقيقة مع متخصص من فريق بلدك.', 'احجز العرض', FORM.demo[4]],
+      partner: ['الشراكات', 'كن شريكًا لـ T57', 'أخبرنا عن خدماتك وتراخيصك وأسواقك.', 'أرسل الطلب', FORM.partner[4]],
+      contact: ['تواصل معنا', 'تحدّث إلى T57', 'سنوصلك بالفريق المناسب.', 'إرسال', FORM.contact[4]],
+      support: ['مركز المساعدة', 'تواصل مع الدعم', 'جهّز اسم منشأتك ومرجع الصفقة لنساعدك أسرع.', 'أرسل إلى الدعم', FORM.support[4]],
+      invest: ['المستثمرون', 'اطلب ملف المستثمرين', 'للمستثمرين المؤهلين. نرسل الملخص التعريفي والعرض التقديمي، ثم نرتب مكالمة مع المؤسس والوصول إلى مذكرة الاستثمار وغرفة البيانات بموجب اتفاقية سرية.', 'اطلب الملف', FORM.invest[4]],
+      subscribe: ['رؤى T57', 'اشترك في رؤى T57', 'رؤى حول تجارة الغذاء والتمويل والذكاء الاصطناعي. يمكنك إلغاء الاشتراك في أي وقت.', 'اشترك', FORM.subscribe[4]],
+      briefing: ['القطاع الحكومي', 'اطلب إحاطة حكومية', 'جلسة مدتها 45 دقيقة مع فريق القطاع العام لدينا، بموجب اتفاقية عدم إفصاح إن رغبت.', 'اطلب الإحاطة', FORM.briefing[4]],
+      pipeline: ['البنوك والممولون', 'اطلب عرضًا لفرص التمويل', 'جولة مدتها 30 دقيقة على ملف صفقة موثَّق، مع متخصص من فريق شراكات التمويل لدينا.', 'اطلب العرض', FORM.pipeline[4]],
+    });
+    Object.assign(DONE, { join: 'شكرًا لك. سيتواصل معك فريق بلدك خلال يومي عمل.', demo: 'شكرًا لك. سيتواصل معك متخصص لتأكيد الموعد.', partner: 'شكرًا لك. سيتواصل معك فريق الشراكات.',
+      contact: 'شكرًا لك. سنرد خلال يومي عمل.', support: 'شكرًا لك. وصل طلبك إلى فريق الدعم.', subscribe: 'شكرًا لك. تم اشتراكك في رؤى T57.',
+      invest: 'شكرًا لك. سيرسل فريق علاقات المستثمرين الملف ويتواصل معك خلال يومي عمل.' });
+  }
+  const MSG = HI ? { email: 'कृपया अपना कामकाजी ईमेल लिखें, जैसे name@company.com।', fields: 'कृपया चिह्नित फ़ील्ड भरें।', consent: 'हम आपकी जानकारी का उपयोग कैसे करते हैं, इस पर सहमति के लिए कृपया बॉक्स पर टिक करें।', sending: 'भेजा जा रहा है…', check: 'कृपया चिह्नित फ़ील्ड जाँच लें।',
+      busy: 'इस कनेक्शन से बहुत ज़्यादा अनुरोध आए हैं। कृपया कुछ मिनट बाद फिर कोशिश करें।', fail: m => `अभी इसे ऑनलाइन नहीं भेजा जा सका। <a href="${m}">इसके बजाय ईमेल से भेजें</a>, आपके जवाब पहले से भरे होंगे।` }
+    : TR ? { email: 'Lütfen iş e-postanızı yazın, örneğin ad@sirket.com.', fields: 'Lütfen işaretli alanları doldurun.', consent: 'Bilgilerinizin nasıl kullanılacağını kabul etmek için lütfen kutuyu işaretleyin.', sending: 'Gönderiliyor…', check: 'Lütfen işaretli alanları kontrol edin.',
+      busy: 'Bu bağlantıdan çok fazla istek geldi. Lütfen birkaç dakika sonra tekrar deneyin.', fail: m => `Şu anda çevrimiçi gönderemedik. Yanıtlarınız doldurulmuş olarak <a href="${m}">e-postayla gönderin</a>.` }
+    : MS ? { email: 'Sila masukkan e-mel kerja anda, contohnya nama@syarikat.com.', fields: 'Sila lengkapkan ruangan yang ditandakan.', consent: 'Sila tandakan kotak untuk bersetuju dengan cara kami menggunakan maklumat anda.', sending: 'Sedang dihantar…', check: 'Sila semak ruangan yang ditandakan.',
+      busy: 'Terlalu banyak permintaan daripada sambungan ini. Sila cuba lagi dalam beberapa minit.', fail: m => `Kami tidak dapat menghantarnya dalam talian buat masa ini. <a href="${m}">Hantar melalui e-mel</a>, dengan jawapan anda sudah diisi.` }
+    : AR ? { email: 'يرجى كتابة بريدك الإلكتروني للعمل، مثل name@company.com.', fields: 'يرجى إكمال الحقول المظللة.', consent: 'يرجى تحديد المربع للموافقة على طريقة استخدامنا لبياناتك.', sending: 'جارٍ الإرسال…', check: 'يرجى مراجعة الحقول المظللة.',
+      busy: 'طلبات كثيرة من هذا الاتصال. يرجى المحاولة بعد بضع دقائق.', fail: m => `تعذّر الإرسال عبر الإنترنت الآن. <a href="${m}">أرسله بالبريد الإلكتروني بدلًا من ذلك</a>، مع إجاباتك معبأة.` }
+    : { email: 'Enter a work email like name@company.com.', fields: 'Please complete the highlighted fields.', consent: 'Please tick the box to agree to how we use your details.', sending: 'Sending…', check: 'Please check the highlighted fields.',
+      busy: 'Too many requests from this connection. Please try again in a few minutes.', fail: m => `We could not send this online just now. <a href="${m}">Send it by email instead</a>, with your answers filled in.` };
+  const kindOf = t => HI ? (/निवेश/.test(t) ? 'invest' : /सब्सक्राइब/.test(t) ? 'subscribe' : /सपोर्ट|सहायता/.test(t) ? 'support' : /पार्टनर|साझेदार/.test(t) ? 'partner'
+    : /डेमो|देखें/.test(t) ? 'demo' : /जुड़ें|आवेदन|सदस्य|शुरू|ट्रायल|मुफ़्त|रजिस्टर/.test(t) ? 'join' : 'contact') : TR ? (/yatırım/i.test(t) ? 'invest' : /abone/i.test(t) ? 'subscribe' : /destek/i.test(t) ? 'support' : /iş ortağı|İş ortağı|ortaklık/i.test(t) ? 'partner'
+    : /demo|izleyin|nasıl çalış/i.test(t) ? 'demo' : /katıl|başvur|kaydol|üyelik|başla|dene|ücretsiz/i.test(t) ? 'join' : 'contact') : MS ? (/pelabur/i.test(t) ? 'invest' : /langgan/i.test(t) ? 'subscribe' : /sokongan|bantuan/i.test(t) ? 'support' : /rakan kongsi|perkongsian/i.test(t) ? 'partner'
+    : /demo|tonton|lihat cara/i.test(t) ? 'demo' : /sertai|mohon|daftar|keahlian|mula|cuba|percuma/i.test(t) ? 'join' : 'contact') : AR ? (/مستثمر/.test(t) ? 'invest' : /اشترك/.test(t) ? 'subscribe' : /الدعم/.test(t) ? 'support' : /شريك|الشراك/.test(t) ? 'partner'
+    : /عرض توضيحي|عرضًا توضيحيًا|شاهد/.test(t) ? 'demo' : /انضم|قدّم طلب|العضوية|ابدأ|سجّل|جرّب/.test(t) ? 'join' : 'contact') : /invest/i.test(t) ? 'invest' : /subscri/i.test(t) ? 'subscribe' : /support|security team/i.test(t) ? 'support' : /partner/i.test(t) ? 'partner'
     : /demo|see how t57 works|watch/i.test(t) ? 'demo' : /chat/i.test(t) ? 'support' : /apply|join|register|free trial|membership|sign up|start|trade with|use escrow|post your|list your|try |track your/i.test(t) ? 'join' : 'contact';
   function required(f) { return (FORM[f.dataset.apiForm] || FORM.contact)[4].filter(n => f.elements[n] && !f.elements[n].closest('[hidden]')); }
   function payload(f) {
@@ -717,33 +885,34 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     const say = (cls, html) => { msg.className = 'mf-msg ' + cls; msg.innerHTML = html; msg.hidden = false; };
     f.addEventListener('submit', async e => {
       e.preventDefault();
-      f.querySelectorAll('.bad').forEach(x => x.classList.remove('bad'));
+      f.querySelectorAll('.bad').forEach(x => x.classList.remove('bad')); f.querySelectorAll('[aria-invalid]').forEach(x => x.removeAttribute('aria-invalid'));
       const miss = required(f).filter(n => !f.elements[n].value.trim() || (n === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.elements[n].value.trim())));
       const consent = f.elements.consent;
-      miss.forEach(n => f.elements[n].closest('label').classList.add('bad'));
+      miss.forEach(n => { f.elements[n].closest('label').classList.add('bad'); f.elements[n].setAttribute('aria-invalid', 'true'); });
       if (!consent.checked) consent.closest('label').classList.add('bad');
-      if (miss.length || !consent.checked) { say('err', miss.length ? 'Please complete the highlighted fields.' : 'Please tick the box to agree to how we use your details.'); (miss.length ? f.elements[miss[0]] : consent).focus(); return; }
-      const o = payload(f); btn.disabled = true; say('', 'Sending…');
+      if (miss.length || !consent.checked) { say('err', miss.length === 1 && miss[0] === 'email' && f.elements.email.value.trim() ? MSG.email : miss.length ? MSG.fields : MSG.consent); (miss.length ? f.elements[miss[0]] : consent).focus(); return; }
+      const o = payload(f); btn.disabled = true; say('', MSG.sending);
       try {
         const r = await fetch('/api/forms', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(o) });
         const j = await r.json().catch(() => ({}));
         if (r.ok && j.ok) { f.classList.add('sent'); say('ok', DONE[o.kind] || DONE.contact); return; }
-        if (r.status === 422 && j.fields) { j.fields.forEach(n => f.elements[n] && f.elements[n].closest('label').classList.add('bad')); say('err', 'Please check the highlighted fields.'); return; }
-        if (r.status === 429) { say('err', 'Too many requests from this connection. Please try again in a few minutes.'); return; }
+        if (r.status === 422 && j.fields) { j.fields.forEach(n => f.elements[n] && f.elements[n].closest('label').classList.add('bad')); say('err', MSG.check); return; }
+        if (r.status === 429) { say('err', MSG.busy); return; }
         throw new Error(j.error || r.status);
       } catch (err) {
-        say('err', `We could not send this online just now. <a href="${mailto(f, o)}">Send it by email instead</a>, with your answers filled in.`);
+        say('err', MSG.fail(mailto(f, o)));
       } finally { btn.disabled = false; }
     });
   });
 
   // The get-started dialog: every "talk to us", "book a demo" or "apply" button opens it with the right form
+  const ROLE_OF = { farmers: 'Producer or farmer', cooperatives: 'Cooperative or FPO', 'food-processors': 'Processor', enterprises: 'Retail, HoReCa or enterprise buyer', traders: 'Trader', sellers: 'Seller or exporter', buyers: 'Buyer', financiers: 'Financier', 'service-providers': 'Logistics or inspection provider', governments: 'Government or institution', collaborators: 'Partner' };
   const dlg = document.getElementById('get-started');
   if (dlg && dlg.showModal) {
     const df = dlg.querySelector('form');
     const open = (kind, cta) => {
       const c = FORM[kind] || FORM.contact;
-      df.dataset.apiForm = kind; df.dataset.cta = cta; df.dataset.t = Date.now(); df.classList.remove('sent');
+      df.dataset.apiForm = API_KIND[kind] || kind; df.dataset.cta = cta; df.dataset.t = Date.now(); df.classList.remove('sent');
       dlg.querySelector('[data-fdlg-eb]').textContent = c[0]; dlg.querySelector('[data-fdlg-h]').textContent = c[1];
       dlg.querySelector('[data-fdlg-sub]').textContent = c[2]; dlg.querySelector('[data-fdlg-btn]').textContent = c[3];
       df.querySelectorAll('[data-k]').forEach(el => el.hidden = !el.dataset.k.split(' ').includes(kind));
@@ -751,10 +920,16 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       dlg.showModal(); const first = df.querySelector('[data-k]:not([hidden]) input, [data-k]:not([hidden]) select'); first && first.focus();
     };
     document.addEventListener('click', e => {
-      const a = e.target.closest('a[href$="#cta-home"], section.cta a[href^="#cta-"], [data-form]');
+      const a = e.target.closest('a[href$="#cta-home"], a[href^="#cta-"], [data-form]');
       if (!a || a.closest('#get-started') || e.metaKey || e.ctrlKey || e.shiftKey) return;
       e.preventDefault(); e.stopPropagation();
-      const t = a.textContent.trim(); open(a.dataset.form || kindOf(t), t);
+      const t = a.textContent.trim(), kind = a.dataset.form || kindOf(t); open(kind, t);
+      // Audience pages pre-select the visitor's role, so "Register now" is one click to the right form
+      const who = ((a.getAttribute('href') || '').match(/#cta-(.+)/) || [])[1], ri = ROLE_OF[who], rs = df.querySelector('select[name="role"]');
+      if ((kind === 'join' || API_KIND[kind]) && ri && rs) rs.value = ri;
+      // plan buttons on the pricing table pre-select their plan
+      const ps = df.querySelector('select[name="plan"]'); if (ps) ps.value = kind === 'join' && a.dataset.plan || '';
+      const ty = df.querySelector('select[name="type"]'); if (ty) ty.value = kind === 'partner' && a.dataset.type || '';
     }, true);
     dlg.querySelector('[data-fdlg-close]').addEventListener('click', () => dlg.close());
     dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
@@ -767,7 +942,7 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     if (reduce) return;
     // Plays once when it scrolls into view, holds the result, then offers Replay
     let timer, left = 6240, t0 = 0;
-    const done = () => { fx.classList.add('done'); btn.setAttribute('aria-pressed', 'false'); btn.textContent = 'Replay'; };
+    const done = () => { fx.classList.add('done'); btn.setAttribute('aria-pressed', 'false'); btn.textContent = tx('Replay'); };
     const run = () => { clearTimeout(timer); t0 = performance.now(); timer = setTimeout(done, left); };
     const stop = () => { if (t0) left -= performance.now() - t0; clearTimeout(timer); t0 = 0; };
     new IntersectionObserver(([en]) => {
@@ -779,13 +954,21 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     btn.addEventListener('click', () => {
       if (fx.classList.contains('done')) {
         fx.classList.remove('done', 'play', 'paused'); void fx.offsetWidth; fx.classList.add('play');
-        btn.textContent = 'Pause'; left = 6240; run(); return;
+        btn.textContent = tx('Pause'); left = 6240; run(); return;
       }
-      const p = btn.getAttribute('aria-pressed') !== 'true'; btn.setAttribute('aria-pressed', p); btn.textContent = p ? 'Play' : 'Pause';
+      const p = btn.getAttribute('aria-pressed') !== 'true'; btn.setAttribute('aria-pressed', p); btn.textContent = p ? tx('Play') : tx('Pause');
       fx.classList.toggle('paused', p); p ? stop() : run();
     });
   });
 
+  // Phones: the language list opens from the globe button and closes on a choice, a tap elsewhere or Escape.
+  const hdr = document.querySelector('.hdr'), langBtn = document.querySelector('.lang-btn');
+  if (hdr && langBtn) {
+    const setLangs = on => { hdr.classList.toggle('langs-open', on); langBtn.setAttribute('aria-expanded', on); };
+    langBtn.addEventListener('click', e => { e.stopPropagation(); setLangs(!hdr.classList.contains('langs-open')); });
+    document.addEventListener('click', e => { if (!e.target.closest('.langs')) setLangs(false); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && hdr.classList.contains('langs-open')) { setLangs(false); langBtn.focus(); } });
+  }
   const menu = document.getElementById('menu'), menuBtn = document.getElementById('menu-btn');
   menu.querySelectorAll('.sub-t').forEach(b => b.addEventListener('click', () => setSub(b.parentElement, b.getAttribute('aria-expanded') !== 'true')));
   const setMenu = open => { menu.hidden = !open; menuBtn.setAttribute('aria-expanded', open); };
@@ -797,6 +980,13 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
     const tp = e.target.closest('[data-tone-pick]'); if (tp) { setTone(tp.dataset.tonePick); if (!busy) intro(); return; }
     const a = e.target.closest('a[data-go]'); if (a && !e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0) { e.preventDefault(); go(a.dataset.go, a.getAttribute('href')); return; }
     if (e.target.closest('#replay')) { e.preventDefault(); intro(); }
+    // The language switch opens the same page in the other language behind the full petal veil, named in that language.
+    const ls = e.target.closest('a.lang-sw');
+    if (ls && !e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0 && !busy && !reduce) {
+      e.preventDefault(); busy = true;
+      const href = ls.getAttribute('href'), label = (ls.querySelector('.ls-l') || ls).textContent;
+      leave(current, href, label).catch(() => { location.href = href; });
+    }
   });
 
   const here = (document.querySelector('.world') || {}).id || 'home';
@@ -804,143 +994,139 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   let arriving = null, seen = false;
   try { arriving = sessionStorage.getItem('t57-go'); sessionStorage.removeItem('t57-go'); seen = !!sessionStorage.getItem('t57-seen'); sessionStorage.setItem('t57-seen', '1'); } catch (e) {}
   if (arriving && arriving.startsWith('lift:')) liftIn();
-  else if (arriving && !reduce) arrive(here);
+  else if (arriving && !reduce) arrive(here).catch(() => { veil.classList.remove('go', 'reveal'); vbg.style.webkitMaskSize = vbg.style.maskSize = ''; busy = false; });
   else { document.documentElement.classList.remove('arriving', 'lifting'); if (!seen) setTimeout(intro, 150); }
 })();
 
-/* ---------- Home: scroll storytelling, role picker, pillars, conversion helpers ---------- */
+// Our journey: type filter, year rail, scroll-drawn line and reveal
+document.querySelectorAll('.jr').forEach(sec => {
+  const tl = sec.querySelector('.jr-tl'), items = [...sec.querySelectorAll('.jr-i')], years = [...sec.querySelectorAll('.jr-y')];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  sec.classList.add('js');
+  const io = new IntersectionObserver(ents => ents.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { threshold: 0.2, rootMargin: '0px 0px -8% 0px' });
+  items.forEach(i => reduce ? i.classList.add('in') : io.observe(i));
+  sec.querySelectorAll('.jr-f button').forEach(b => b.addEventListener('click', () => {
+    const f = b.dataset.f;
+    sec.querySelectorAll('.jr-f button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    items.forEach(i => { i.hidden = f !== 'all' && !i.dataset.k.split(' ').includes(f); });
+    years.forEach(y => { const l = y.nextElementSibling; y.hidden = l.hidden = ![...l.children].some(i => !i.hidden); });
+    sec.querySelector('.jr-none').hidden = items.some(i => !i.hidden);
+    tick();
+  }));
+  const rail = [...sec.querySelectorAll('.jr-rail a')];
+  let raf = 0;
+  const tick = () => { raf = 0;
+    const r = tl.getBoundingClientRect(), vh = innerHeight;
+    tl.style.setProperty('--p', Math.max(0, Math.min(1, (vh * 0.6 - r.top) / r.height)).toFixed(4));
+    let cur = years[0];
+    years.forEach(y => { if (!y.hidden && y.getBoundingClientRect().top < vh * 0.4) cur = y; });
+    rail.forEach(a => a.setAttribute('aria-current', String(a.hash === '#' + cur.id)));
+  };
+  addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(tick); }, { passive: true });
+  addEventListener('resize', tick); tick();
+});
+
+// T57 Insights: filter articles by author and topic; author cards set the author filter
+document.querySelectorAll('.bl').forEach(sec => {
+  const cards = [...sec.querySelectorAll('.bl-c')], st = { a: 'all', t: 'all' };
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  sec.classList.add('js');
+  const io = new IntersectionObserver(ents => ents.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { threshold: 0.1 });
+  cards.forEach(c => reduce ? c.classList.add('in') : io.observe(c));
+  const apply = () => {
+    sec.querySelectorAll('.bl-f button').forEach(b => { const k = 'a' in b.dataset ? 'a' : 't'; b.setAttribute('aria-pressed', String(b.dataset[k] === st[k])); });
+    cards.forEach(c => { c.hidden = (st.a !== 'all' && c.dataset.a !== st.a) || (st.t !== 'all' && c.dataset.t !== st.t); if (!c.hidden) c.classList.add('in'); });
+    sec.querySelector('.bl-none').hidden = cards.some(c => !c.hidden);
+  };
+  sec.querySelectorAll('.bl-f button').forEach(b => b.addEventListener('click', () => { const k = 'a' in b.dataset ? 'a' : 't'; st[k] = b.dataset[k]; apply(); }));
+  document.querySelectorAll('.bl-au').forEach(b => b.addEventListener('click', () => { st.a = b.dataset.a; st.t = 'all'; apply(); sec.querySelector('.bl-bar').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }));
+});
+
+/* ---------- Home: scroll polish, role preview, pillars, conversion helpers (adds no text of its own) ---------- */
 (() => {
   const home = document.getElementById('home');
   if (!home) return;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
   const $ = (s, r = home) => r.querySelector(s), $$ = (s, r = home) => [...r.querySelectorAll(s)];
+  const hero = $('.home-hero');
 
-  // Reveal on scroll (below-the-fold elements only; the hero animates in with CSS)
+  // Reveal on scroll: existing headings, cards and rows rise in, lightly staggered
   if (!reduce) {
     document.documentElement.classList.add('rv-on');
-    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
-    $$('[data-rv]').filter(el => !el.closest('.hx')).forEach(el => { el.classList.add('rv0'); io.observe(el); });
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    $$('.chapter .eyebrow, .chapter .h2, .chapter .lede, .vs-wrap, .problem, .steps li, .vid, .aud, .usp, .duo-card, .faq details, .pf, .pl, .cta h2').forEach(el => {
+      const sib = el.parentElement ? [...el.parentElement.children].indexOf(el) : 0;
+      el.style.setProperty('--d', (Math.min(sib, 5) * 0.07).toFixed(2) + 's'); el.classList.add('rv0'); io.observe(el);
+    });
   }
 
-  // Progress bar, chapter rail, sticky mobile CTA
-  const prog = $('.hx-prog'), rail = $('.rail'), sticky = $('.sticky-cta'), hx = $('#hx'), cta = $('#cta-home');
-  const links = $$('.rail a'), secs = links.map(a => document.getElementById(a.dataset.rail));
+  // Progress bar, chapter rail (labels come from each section's own heading) and a mobile call to action
+  const bar = document.createElement('div'); bar.className = 'hx-prog'; bar.setAttribute('aria-hidden', 'true'); bar.innerHTML = '<i></i>'; home.prepend(bar);
+  const rail = document.createElement('nav'); rail.className = 'rail';
+  const stops = [hero, ...['vs-home', 'problem-home', 'pillars-home', 'why-home', 'story-home', 'who-home', 'offers-home', 'board', 'cta-home'].map(id => document.getElementById(id))].filter(Boolean);
+  const ol = document.createElement('ol');
+  stops.forEach(s => { const h = $('h1, h2', s), li = document.createElement('li'), a = document.createElement('a'); a.href = '#' + (s.id || 'main');
+    const t = document.createElement('span'); t.textContent = (h ? h.textContent : '').replace(/\s+/g, ' ').trim().slice(0, 42); a.append(t); a.setAttribute('aria-label', t.textContent); li.append(a); ol.append(li);
+    a.addEventListener('click', e => { e.preventDefault(); s.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); }); });
+  rail.append(ol); home.prepend(rail);
+  const dots = $$('a', rail);
+  const cta1 = $('.home-hero .actions a'), cta = document.getElementById('cta-home');
+  let sticky = null;
+  if (cta1) { sticky = document.createElement('div'); sticky.className = 'sticky-cta'; const c = cta1.cloneNode(true); c.className = 'btn btn-world'; c.tabIndex = -1; sticky.setAttribute('aria-hidden', 'true'); sticky.append(c); home.append(sticky); }
   let tick = false;
   const onScroll = () => {
     tick = false;
     const H = document.documentElement.scrollHeight - innerHeight;
-    prog.style.setProperty('--sp', H > 0 ? Math.min(1, scrollY / H).toFixed(4) : 0);
-    const past = hx.getBoundingClientRect().bottom < innerHeight * 0.35;
+    bar.style.setProperty('--sp', H > 0 ? Math.min(1, scrollY / H).toFixed(4) : 0);
+    const past = hero.getBoundingClientRect().bottom < innerHeight * 0.35;
     rail.classList.toggle('show', past);
-    const ct = cta.getBoundingClientRect();
-    sticky.classList.toggle('show', past && ct.top > innerHeight * 0.8);
-    let cur = 0; secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < innerHeight * 0.5) cur = i; });
-    links.forEach((a, i) => a.classList.toggle('on', i === cur));
+    const on = past && cta && cta.getBoundingClientRect().top > innerHeight * 0.8;
+    if (sticky) { sticky.classList.toggle('show', on); document.documentElement.classList.toggle('has-cta', on); }
+    let cur = 0; stops.forEach((s, i) => { if (s.getBoundingClientRect().top < innerHeight * 0.5) cur = i; });
+    dots.forEach((a, i) => a.classList.toggle('on', i === cur));
   };
   addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(onScroll); } }, { passive: true });
   addEventListener('resize', onScroll); onScroll();
-  links.forEach(a => a.addEventListener('click', e => { const s = document.getElementById(a.dataset.rail); if (s) { e.preventDefault(); s.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); } }));
-  $$('a[href="#watch-home"], a[href="#board"]').forEach(a => a.addEventListener('click', e => { const s = document.querySelector(a.getAttribute('href')); if (s) { e.preventDefault(); s.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); } }));
 
-  // Hero pointer parallax and magnetic buttons
-  if (fine && !reduce) {
-    let raf = 0, px = 0, py = 0;
-    hx.addEventListener('pointermove', e => {
-      const r = hx.getBoundingClientRect(); px = (e.clientX - r.left) / r.width * 2 - 1; py = (e.clientY - r.top) / r.height * 2 - 1;
-      if (!raf) raf = requestAnimationFrame(() => { raf = 0; hx.style.setProperty('--px', px.toFixed(3)); hx.style.setProperty('--py', py.toFixed(3)); });
-    });
-    $$('.mag').forEach(b => {
-      b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(); b.style.translate = `${((e.clientX - r.left) / r.width - .5) * 10}px ${((e.clientY - r.top) / r.height - .5) * 8}px`; });
-      b.addEventListener('pointerleave', () => { b.style.translate = ''; });
-    });
-    const pp = $('.passport');
-    if (pp) {
-      pp.addEventListener('pointermove', e => { const r = pp.getBoundingClientRect(); pp.style.setProperty('--tx', (((e.clientX - r.left) / r.width - .5) * 14).toFixed(1) + 'deg'); pp.style.setProperty('--ty', ((.5 - (e.clientY - r.top) / r.height) * 14).toFixed(1) + 'deg'); });
-      pp.addEventListener('pointerleave', () => { pp.style.removeProperty('--tx'); pp.style.removeProperty('--ty'); });
-    }
+  // Magnetic hero and closing buttons
+  if (fine && !reduce) $$('.home-hero .actions .btn, .cta .actions .btn, .duo-card .btn').forEach(b => {
+    b.classList.add('mag');
+    b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(); b.style.translate = `${((e.clientX - r.left) / r.width - .5) * 10}px ${((e.clientY - r.top) / r.height - .5) * 8}px`; });
+    b.addEventListener('pointerleave', () => { b.style.translate = ''; });
+  });
+
+  // Film: a large play button over the poster (its label is the video's own label)
+  const vid = $('.vid');
+  if (vid) {
+    const v = $('video', vid), pb = document.createElement('button'); pb.type = 'button'; pb.className = 'vid-play'; pb.setAttribute('aria-label', v.getAttribute('aria-label') || '');
+    pb.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>'; $('.vid-f', vid).append(pb);
+    pb.addEventListener('click', () => v.play()); v.addEventListener('play', () => vid.classList.add('playing'));
   }
 
   // Five pillars: the active pillar lights its petal in the mark and the rest step back
   const mono = $('.mono'), pls = $$('.pl');
-  const lightPetal = p => { mono.classList.add('has'); $$('.pt', mono).forEach(g => g.classList.toggle('on', g.dataset.p === p)); pls.forEach(x => x.classList.toggle('on', x.dataset.p === p)); };
   if (mono && pls.length) {
-    lightPetal(pls[0].dataset.p);
-    const pio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) lightPetal(e.target.dataset.p); }), { rootMargin: '-42% 0px -42% 0px' });
+    const light = p => { mono.classList.add('has'); $$('.pt', mono).forEach(g => g.classList.toggle('on', g.dataset.p === p)); pls.forEach(x => x.classList.toggle('on', x.dataset.p === p)); };
+    light(pls[0].dataset.p);
+    const pio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) light(e.target.dataset.p); }), { rootMargin: '-42% 0px -42% 0px' });
     pls.forEach(x => pio.observe(x));
   }
 
-  // Role picker: hover, focus or tap a role to preview what T57 does for it
-  const prev = $('[data-role-prev]'), rls = $$('.rl');
-  if (prev) {
-    const img = $('img', prev), nm = $('[data-rp-name]', prev), sm = $('[data-rp-sum]', prev), go = $('[data-rp-go]', prev);
+  // Who we serve: hover, focus or tap a role to preview it (wide screens)
+  const groups = $('.groups');
+  if (groups && matchMedia('(min-width: 901px)').matches) {
+    const IMG = { farmers: 'farmer', cooperatives: 'dates', 'food-processors': 'grain', enterprises: 'silos', sellers: 'ship', buyers: 'quay', traders: 'grain', financiers: 'silos', governments: 'port', 'service-providers': 'port', collaborators: 'paddy' };
+    const list = document.createElement('div'); list.className = 'pk-list'; [...groups.children].forEach(g => list.append(g)); groups.append(list); groups.classList.add('picking');
+    const prev = document.createElement('a'); prev.className = 'pk-prev'; prev.innerHTML = '<img alt="" width="760" height="760" decoding="async"><div class="pk-in"><b></b><p></p><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>'; groups.append(prev);
+    const img = $('img', prev), nm = $('b', prev), sm = $('p', prev), auds = $$('.aud', groups);
     const pick = a => {
       if (a.classList.contains('on')) return;
-      rls.forEach(x => x.classList.toggle('on', x === a));
-      prev.classList.add('swap');
-      setTimeout(() => { img.src = a.dataset.img; nm.innerHTML = a.dataset.name; sm.textContent = a.dataset.sum; go.href = a.getAttribute('href'); go.dataset.go = a.dataset.go; prev.classList.remove('swap'); }, reduce ? 0 : 220);
+      auds.forEach(x => x.classList.toggle('on', x === a)); prev.classList.add('swap');
+      setTimeout(() => { img.src = `/img/home/${IMG[a.dataset.go] || 'paddy'}.webp`; nm.textContent = $('b', a).textContent; sm.textContent = $('span', a).textContent; prev.href = a.getAttribute('href'); prev.dataset.go = a.dataset.go; prev.classList.remove('swap'); }, reduce ? 0 : 200);
     };
-    rls[0].classList.add('on');
-    rls.forEach(a => { a.addEventListener('pointerenter', () => fine && pick(a)); a.addEventListener('focus', () => pick(a)); });
-  }
-
-  // Capability tabs
-  const tl = $$('.ct'), tp = $$('.cp');
-  const sel = i => { tl.forEach((b, k) => { b.setAttribute('aria-selected', k === i); b.tabIndex = k === i ? 0 : -1; tp[k].hidden = k !== i; }); };
-  tl.forEach((b, i) => { b.addEventListener('click', () => sel(i)); b.addEventListener('keydown', e => {
-    const n = e.key === 'ArrowRight' ? (i + 1) % tl.length : e.key === 'ArrowLeft' ? (i + tl.length - 1) % tl.length : e.key === 'Home' ? 0 : e.key === 'End' ? tl.length - 1 : -1;
-    if (n >= 0) { e.preventDefault(); sel(n); tl[n].focus(); } }); });
-
-  // Film: a large play button over the poster
-  const vf = $('.cine'); if (vf) { const v = $('video', vf), pb = $('.vid-play', vf);
-    pb.addEventListener('click', () => { v.play(); });
-    v.addEventListener('play', () => vf.classList.add('playing')); v.addEventListener('pause', () => { if (v.currentTime === 0) vf.classList.remove('playing'); }); }
-
-  // Scrubbed explainer: scrolling through the tall section plays the trade forward and back
-  const wrap = $('[data-scrub-wrap]'), fx = $('[data-scrub]');
-  if (wrap && fx && !reduce) {
-    const TOTAL = 6240; let anims = [];
-    const arm = () => { fx.classList.add('play', 'paused'); fx.classList.remove('done'); requestAnimationFrame(() => { anims = fx.getAnimations({ subtree: true }); anims.forEach(a => a.pause()); upd(); }); };
-    const upd = () => {
-      const r = wrap.getBoundingClientRect(), span = r.height - innerHeight;
-      const p = Math.min(1, Math.max(0, -r.top / span));
-      anims.forEach(a => { a.currentTime = p * TOTAL; });
-    };
-    wrap.classList.add('on'); arm();
-    addEventListener('scroll', () => requestAnimationFrame(upd), { passive: true }); addEventListener('resize', upd);
-  }
-
-  // Final CTA: start with an email, finish in the join dialog
-  const cm = $('[data-cta-mail]');
-  if (cm) cm.addEventListener('submit', e => {
-    e.preventDefault(); const v = cm.elements.email.value.trim();
-    if (window.T57_openForm) { window.T57_openForm('join', 'Apply for membership'); const f = document.querySelector('#get-started input[name=email]'); if (f && v) f.value = v; }
-  });
-
-  // Hero mark: the pillars take turns to light up, or follow the pointer
-  const hm = $('.hm-mono');
-  if (hm) {
-    const NM = { agri: ['Seed', 'Agriculture'], trade: ['Ripple', 'Trade'], finance: ['Value index', 'Finance'], logistics: ['Honeycomb', 'Logistics'], tech: ['Fingerprint', 'Technology'] };
-    const order = ['agri', 'trade', 'finance', 'logistics', 'tech'], cs = $('[data-hm-s]'), cn = $('[data-hm-n]');
-    let idx = -1, held = false, timer = 0;
-    const light = p => { hm.classList.toggle('has', !!p); $$('.hp', hm).forEach(g => g.classList.toggle('on', g.dataset.p === p)); cs.textContent = p ? NM[p][0] : 'Five pillars'; cn.textContent = p ? NM[p][1] : 'One ecosystem'; };
-    const next = () => { if (held || document.hidden) return; idx = (idx + 1) % order.length; light(order[idx]); };
-    $$('.hp', hm).forEach(g => { g.addEventListener('pointerenter', () => { held = true; light(g.dataset.p); }); g.addEventListener('pointerleave', () => { held = false; idx = order.indexOf(g.dataset.p); }); });
-    if (!reduce) setTimeout(() => { next(); timer = setInterval(next, 2800); }, 2400);
-  }
-
-  // The story: one pinned stage walks through verify, agree, finance and deliver
-  const st = $('[data-story]');
-  if (st) {
-    const mq = matchMedia('(min-width: 901px)'), sls = $$('.sl', st), sps = $$('.sp', st), bar = $('.story-bar', st);
-    const setIdx = i => { sls.forEach((x, k) => x.classList.toggle('on', k === i)); sps.forEach((x, k) => x.classList.toggle('on', k === i)); };
-    const run = () => {
-      const pin = mq.matches && !reduce; st.classList.toggle('pin', pin);
-      if (!pin) { sps.forEach(x => x.classList.add('on')); sls.forEach(x => x.classList.add('on')); return; }
-      const r = st.getBoundingClientRect(), p = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight)));
-      bar.style.setProperty('--sp', p.toFixed(3)); setIdx(Math.min(sls.length - 1, Math.floor(p * sls.length)));
-    };
-    addEventListener('scroll', () => requestAnimationFrame(run), { passive: true }); addEventListener('resize', run); run();
+    const first = auds.find(a => a.dataset.go === 'farmers') || auds[0]; first.classList.add('on'); img.src = `/img/home/${IMG[first.dataset.go] || 'paddy'}.webp`; nm.textContent = $('b', first).textContent; sm.textContent = $('span', first).textContent; prev.href = first.getAttribute('href'); prev.dataset.go = first.dataset.go;
+    auds.forEach(a => { a.addEventListener('pointerenter', () => fine && pick(a)); a.addEventListener('focus', () => pick(a)); });
   }
 })();
 
@@ -949,12 +1135,10 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;
   const root = document.documentElement;
-
-  // Inertial scroll: wheel input eases toward a target; everything else (keys, anchors, touch) stays native
   let target = scrollY, cur = scrollY, active = false;
   const max = () => root.scrollHeight - innerHeight;
   const blocked = el => {
-    if (el.closest('dialog[open], textarea, select, input, video, .menu, .srch')) return true;
+    if (el.closest('dialog[open], textarea, select, input, video, .menu, .srch, .t57ai, .vs-wrap')) return true;
     for (let n = el; n && n !== document.body && n !== root; n = n.parentElement) {
       const o = getComputedStyle(n).overflowY;
       if ((o === 'auto' || o === 'scroll') && n.scrollHeight > n.clientHeight + 1) return true;
@@ -975,13 +1159,26 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   }, { passive: false });
   addEventListener('scroll', () => { if (!active) { cur = target = scrollY; } }, { passive: true });
 
-  // Cursor: a trailing ring that swells over links and buttons
   const ring = document.createElement('div'); ring.className = 'cur'; ring.setAttribute('aria-hidden', 'true'); document.body.appendChild(ring);
   let x = -100, y = -100, rx = x, ry = y, seen = false;
   addEventListener('pointermove', e => { x = e.clientX; y = e.clientY; if (!seen) { seen = true; rx = x; ry = y; ring.classList.add('on'); }
-    ring.classList.toggle('link', !!e.target.closest('a, button, summary, label, [role=tab], .rl, input, .vid-play')); }, { passive: true });
+    ring.classList.toggle('link', !!e.target.closest('a, button, summary, label, [role=tab], input, .vid-play')); }, { passive: true });
   addEventListener('pointerdown', () => ring.classList.add('down')); addEventListener('pointerup', () => ring.classList.remove('down'));
   document.addEventListener('pointerleave', () => ring.classList.remove('on')); document.addEventListener('pointerenter', () => seen && ring.classList.add('on'));
   const tick = () => { rx += (x - rx) * 0.2; ry += (y - ry) * 0.2; ring.style.transform = `translate3d(${rx}px, ${ry}px, 0)`; requestAnimationFrame(tick); };
   tick();
+})();
+
+/* The story: one pinned stage walks through verify, agree, finance and deliver */
+(() => {
+  const st = document.querySelector('[data-story]'); if (!st) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches, mq = matchMedia('(min-width: 901px)');
+  const sls = [...st.querySelectorAll('.sl')], sps = [...st.querySelectorAll('.sp')], bar = st.querySelector('.story-bar');
+  const run = () => {
+    const pin = mq.matches && !reduce; st.classList.toggle('pin', pin);
+    if (!pin) { sps.forEach(x => x.classList.add('on')); sls.forEach(x => x.classList.add('on')); return; }
+    const r = st.getBoundingClientRect(), p = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight))), i = Math.min(sls.length - 1, Math.floor(p * sls.length));
+    bar.style.setProperty('--sp', p.toFixed(3)); sls.forEach((x, k) => x.classList.toggle('on', k === i)); sps.forEach((x, k) => x.classList.toggle('on', k === i));
+  };
+  addEventListener('scroll', () => requestAnimationFrame(run), { passive: true }); addEventListener('resize', run); run();
 })();

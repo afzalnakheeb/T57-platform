@@ -5,8 +5,9 @@ export default function robots() {
   if (process.env.VERCEL_ENV !== 'production') return { rules: [{ userAgent: '*', disallow: '/' }] };
   return {
     rules: [
+      // Search and AI crawlers are all welcome. The private investor videos page is kept out of search by its own
+      // noindex, so it is not named here.
       { userAgent: '*', allow: '/' },
-      { userAgent: ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'PerplexityBot', 'Google-Extended', 'Applebot-Extended', 'Bingbot'], allow: '/' },
     ],
     sitemap: `${SITE}/sitemap.xml`,
   };

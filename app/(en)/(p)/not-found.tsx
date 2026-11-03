@@ -1,0 +1,24 @@
+import DocumentLang from '../../../components/DocumentLang';
+import { chrome } from '../../../lib/site';
+
+// Shown for any address that is not a sitemap page, inside the shared header and footer.
+export const metadata = { title: 'Page not found | T57', robots: { index: false } };
+
+export default function NotFound() {
+  return (
+    <>
+    <DocumentLang lang="en" dir="ltr" title={metadata.title} />
+    <div dangerouslySetInnerHTML={{ __html: chrome('top') }} />
+    <main id="main">
+      <section className="gutter" style={{ padding: '120px 0 140px', maxWidth: 760, margin: '0 auto' }}>
+        <p className="eyebrow">404</p>
+        <h1>We could not find that page.</h1>
+        <p className="std">The address may have changed. Start from the home page, or tell us what you were looking for at <a href="mailto:hello@t57.ai">hello@t57.ai</a>.</p>
+        <p><a className="btn btn-indigo" href="/">Go to the home page</a></p>
+        <p className="nf-links"><button type="button" className="btn btn-ghost" data-open-search>Search T57.ai</button><a href="/who-we-serve">Who We Serve</a><a href="/pricing">Pricing</a><a href="/#cta-home" data-form="demo">Request a demo</a><a href="/help">Help Center</a></p>
+      </section>
+    </main>
+    <div dangerouslySetInnerHTML={{ __html: chrome('bottom') }} />
+    </>
+  );
+}

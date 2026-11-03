@@ -7,10 +7,13 @@
 #   public/proto/worlds.js          scenes, explainers and transitions
 #   public/llms.txt                 plain-language site summary for AI answer engines
 # Run: python3 prototype/build.py
-import json, re, os, html
+import json, re, os, html, sys
 D = os.path.dirname(os.path.abspath(__file__)); R = os.path.dirname(D)
 parts = json.load(open(f'{D}/parts.json')); led = open(f'{D}/ledger.tpl').read()
 META = json.load(open(f'{D}/meta.json'))
+sys.path.insert(0, D); import blog, legal, investors, photos
+from svgslim import slim
+META.update(blog.meta()); META.update(legal.meta()); META.update(investors.meta())
 orig = ["Buyer match","AI MATCHED","Offer","PRICE INTELLIGENCE","Contract","SMART CONTRACT","Logistics","TRACKED SHIPMENT","Payment","ESCROW RELEASE"]
 n = [0]
 def ledger(m):
@@ -20,7 +23,30 @@ def ledger(m):
     s = s.replace('id="hexes"', f'id="hexes{n[0]}"').replace('url(#hexes)', f'url(#hexes{n[0]})')
     if aria: s = re.sub(r'aria-label="[^"]*"', f'aria-label="{aria}"', s, count=1)
     return '<figure class="ledger">\n' + s + '</figure>'
-worlds = re.sub(r'\{\{LEDGER:([^}#]*)(?:#([^}]*))?\}\}', ledger, open(f'{D}/worlds.html').read())
+worlds = re.sub(r'\{\{LEDGER:([^}#]*)(?:#([^}]*))?\}\}', ledger, open(f'{D}/worlds.html').read()) + investors.articles() + blog.articles() + legal.articles()
+worlds = photos.apply(worlds)
+# The homepage partner strip scrolls through every partner on the /partnerships wall, so a logo added there shows here too.
+def partner_strip():
+    items = re.findall(r'<li(?: class="([^"]*)")?>(.*?)</li>', re.search(r'<ul class="pwall"[^>]*>(.*?)</ul>', worlds, re.S).group(1))
+    li = lambda c, x: f'<li class="lm-tx">{x}</li>' if 'pw-tx' in c else f'<li>{x}</li>'
+    run = ''.join(li(c, x) for c, x in items)
+    copy = re.sub(r' alt="[^"]*"', ' alt=""', run)
+    return (f'<div class="logo-marquee" role="region" aria-label="Partners" dir="ltr" tabindex="0"><div class="lm-track">'
+            f'<ul class="lm-run">{run}</ul><ul class="lm-run" aria-hidden="true">{copy}</ul></div></div>')
+worlds = worlds.replace('{{PARTNER_STRIP}}', partner_strip())
+# Leadership cards: a LinkedIn link for each person whose profile is confirmed, and a personal website where there is one.
+LINKS = json.load(open(f'{D}/people-links.json'))
+def plinks(m):
+    l = LINKS.get(html.unescape(m.group(2)), {})
+    a = [f'<a href="{l[k]}" target="_blank" rel="noopener">{t}</a>' for k, t in (('linkedin', 'LinkedIn'), ('web', re.sub(r'^https?://(www\.)?', '', l.get('web', '')).rstrip('/'))) if l.get(k)]
+    return m.group(1) + (f'<span class="pc-links">{"".join(a)}</span>' if a else '')
+worlds = re.sub(r'(<b>([^<]+)</b><em>[^<]*</em>)', plinks, worlds)
+# Headshots replace the initials on cards, and lead each board roster entry, wherever a photo is on file.
+def headshot(name):
+    p = LINKS.get(html.unescape(name), {}).get('photo')
+    return f'<img class="pc-av pc-ph" src="{p}" alt="" width="96" height="96" loading="lazy" decoding="async">' if p else ''
+worlds = re.sub(r'(<span class="pc-av" aria-hidden="true">[A-Z]{1,3}</span>)((?:<div>)?<b>([^<]+)</b>)', lambda m: (headshot(m.group(3)) or m.group(1)) + m.group(2), worlds)
+worlds = re.sub(r'<li><b>([^<]+)</b>', lambda m: f'<li>{headshot(m.group(1))}<b>{m.group(1)}</b>', worlds)
 
 # Sitemap v7 routes (IDs 1-13)
 # Sitemap v7 routes: an article's data-route, else Home, Who We Serve and its audiences (IDs 1-13)
@@ -31,13 +57,27 @@ for i, attrs in arts:
     ROUTE[i] = m.group(1) if m else '/' if i == 'home' else '/who-we-serve' if i == 'who-we-serve' else f'/who-we-serve/{i}'
 PETAL = {i: re.search(r'data-petal="([^"]+)"', a).group(1) for i, a in arts if 'data-petal=' in a}
 
+# Which form a call to action opens is decided here from its English label, and carried as data-form, so every
+# language opens the same form whatever its wording (the page script only guesses for links without one).
+def form_kind(t):
+    t = html.unescape(re.sub(r'<[^>]+>', ' ', t))
+    for kind, rx in (('invest', r'invest'), ('subscribe', r'subscri'), ('support', r'support|security team'),
+                     ('join', r'trading partner|chat'), ('partner', r'partner'), ('demo', r'demo|see how t57 works|watch|compare plans'),
+                     ('join', r'apply|join|register|free trial|membership|sign up|start|trade with|use escrow|post your|list your|try |track your')):
+        if re.search(rx, t, re.I): return kind
+    return 'contact'
+def cta_forms(s):
+    return re.sub(r'<a ((?:(?!data-form)[^>])*?href="/?#cta-[a-z0-9-]+"(?:(?!data-form)[^>])*)>(.*?)</a>',
+                  lambda m: f'<a {m.group(1)} data-form="{form_kind(m.group(2))}">{m.group(2)}</a>', s, flags=re.S)
+
 def relink(s, page=None):
+    s = cta_forms(s)
     s = re.sub(r'href="#([a-z0-9-]+)"', lambda m: f'href="{ROUTE[m.group(1)]}"' if m.group(1) in ROUTE else m.group(0), s)
     if page != 'home': s = s.replace('href="#cta-home"', 'href="/#cta-home"')
     return s
 
 t = open(f'{D}/template.html').read()
-for k, v in {'DEFS': parts['defs'], 'LOGO': parts['logo'], 'MARK': parts['mark']}.items():
+for k, v in {'DEFS': slim(parts['defs']), 'LOGO': slim(parts['logo']), 'MARK': slim(parts['mark'])}.items():
     t = t.replace('{{' + k + '}}', v)
 a = t.index('<style>') + 7; b = t.index('</style>')
 open(f'{R}/app/globals.css', 'w').write(t[a:b].strip() + '\n')
@@ -50,11 +90,47 @@ os.makedirs(f'{R}/content/pages', exist_ok=True)
 open(f'{R}/content/chrome-top.html', 'w').write(relink(top))
 open(f'{R}/content/chrome-bottom.html', 'w').write(relink(bottom))
 
-text = lambda s: re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
+# One hero per page: nothing hero-sized is stacked under the hero. The explainer, an arrival photo and the "Watch"
+# films move below the opening challenge, and the photo band becomes a breather further down (or is dropped when the
+# page already opens with a photo). Media and resource pages, whose films are the content, keep their order.
+def one_hero(i, art):
+    if i == 'home' or i.startswith(('res-', 'help')): return art
+    parts = re.split(r'(?=\n  <(?:section|div|figure|nav)\b)', art)
+    h = next((k for k, p in enumerate(parts) if p.lstrip().startswith('<section class="hero')), None)
+    if h is None: return art
+    kind = lambda p: ('band' if p.lstrip().startswith('<div class="pband') else 'cover' if p.lstrip().startswith('<div class="cover') else
+                      'watch' if 'class="chapter gutter watch"' in p[:200] else 'arrival' if p.lstrip().startswith('<section class="arrival') else
+                      'chapter' if p.lstrip().startswith('<section class="chapter') else 'other')
+    lead, k = {}, h + 1
+    while k < len(parts) and kind(parts[k]) in ('band', 'cover', 'watch', 'arrival'):
+        lead.setdefault(kind(parts[k]), parts[k]); k += 1
+    if not lead: return art
+    rest = parts[k:]
+    ch = [n for n, p in enumerate(rest) if kind(p) == 'chapter']
+    if not ch: return art
+    if '<img' in parts[h] or 'arrival' in lead: lead.pop('band', None)
+    if 'cover' in lead:
+        # the explainer's own caption repeats the H1: the H1 already says it
+        h1 = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', re.search(r'<h1[^>]*>(.*?)</h1>', parts[h], re.S).group(1))).strip()
+        lead['cover'] = re.sub(r'\s*<text class="fx-cap"[^>]*>(.*?)</text>', lambda m: '' if m.group(1).strip() == h1 else m.group(0), lead['cover'])
+    ins = {}
+    first = [lead[x] for x in ('arrival', 'cover') if x in lead]
+    if first: ins.setdefault(ch[0], []).extend(first)
+    if 'watch' in lead: ins.setdefault(ch[1] if len(ch) > 2 else ch[0], []).append(lead['watch'])
+    if 'band' in lead: ins.setdefault(ch[3] if len(ch) > 4 else ch[-1] if len(ch) > 1 else ch[0], []).append(lead['band'])
+    out = []
+    for n, p in enumerate(rest):
+        out.append(p); out.extend(ins.get(n, []))
+    return ''.join(parts[:h + 1] + out)
+
+# plain text for metadata and structured data (the Arabic right-to-left marks belong only in the visible page)
+text = lambda s: re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s))).replace('\u200f', '').strip()
 pages, ARTS = {}, {}
 for m in re.finditer(r'(<article class="world" id="([a-z0-9-]+)".*?</article>)', worlds, re.S):
     art, i = m.group(1), m.group(2)
-    art = art.replace(' hidden>', '>', 1)
+    # Show the page's own article (only its opening tag: the home article has no hidden flag, so a blind replace hit the chart tooltip)
+    art = re.sub(r'^(<article[^>]*?) hidden>', r'\1>', art, count=1)
+    art = one_hero(i, art)
     ARTS[i] = art
     h1 = text(re.search(r'<h1[^>]*>(.*?)</h1>', art, re.S).group(1))
     std = text(re.search(r'<p class="std">(.*?)</p>', art, re.S).group(1))
@@ -78,9 +154,14 @@ def up(i):
         if r in BY_ROUTE: return BY_ROUTE[r]
     return None
 PARENT = {i: up(i) for i in pages if i != 'home'}
+# Blog articles hang under Blog & Insights for breadcrumbs, but are not pages of the microsite bar or the menu.
+POSTS = set(re.findall(r'<article class="world" id="([a-z0-9-]+)"[^>]*data-kind="post"', worlds))
+# Pages kept live at their address but left out of menus, microsite bars and pagers (Afzal, 31 Oct: no crypto,
+# NFT or "digital bank" promises in navigation).
+UNLISTED = {'nft-funding', 'alternative-payments', 'digital-bank', 'cap-digital-assets'}
 KIDS = {}
 for i, q in PARENT.items():
-    if q: KIDS.setdefault(q, []).append(i)
+    if q and i not in POSTS and i not in UNLISTED: KIDS.setdefault(q, []).append(i)
 def short(i, role=''):
     n = re.sub(r'\s+and\s+', ' & ', html.unescape(pages[i]['name']))
     if ': ' in n: n = n.split(': ')[0] if role == 'group' else n.split(': ', 1)[1]
@@ -129,6 +210,7 @@ def pager(i):
 # Breadcrumbs: every page below Home shows its trail (Home > section > group > page) in place of the
 # hero eyebrow, so a visitor always sees where they are and can step back up one level at a time.
 def label(k):
+    if k in POSTS: return 'Article'
     if not PARENT.get(k): return short(k, 'section')
     return short(k, 'group') if KIDS.get(k) else short(k)
 def crumbs(i):
@@ -199,16 +281,107 @@ os.makedirs(f'{R}/public/proto', exist_ok=True)
 names = {i: html.unescape(re.search(r'aria-label="([^"]+)"', a).group(1)) for i, a in arts}
 open(f'{R}/public/proto/worlds.js', 'w').write(f'window.T57_PAGES = {json.dumps({"petal": PETAL, "name": names, "parent": {k: v for k, v in PARENT.items() if v}, "site": {i: (i if p['route'].startswith('/who-we-serve/') else {'partners': 'partnerships', '': 'home'}.get(p['section'], p['section'])) for i, p in pages.items()}}, ensure_ascii=False)};\n' + open(f'{D}/script.js').read())
 
-# llms.txt: a plain summary that AI assistants can read and cite (llmstxt.org format)
+# llms.txt (llmstxt.org): a short index that AI assistants can read and cite: what T57 is, the facts, and the main pages.
+# llms-full.txt carries every page and the common questions.
 SITE = 'https://www.t57.ai'
-L = ['# T57.ai', '', '> T57 is an AI-native digital trade platform for food. It connects verified farmers, processors, traders, buyers, financiers, service providers and regulators on one trade record, from quote to payment. T57 does not lend or hold funds; finance, escrow and insurance come from licensed partners.', '',
-     'T57 works with the Islamic Organization for Food Security (IOFS), an OIC institution, under a 10-year memorandum of understanding, and has signed more than 150 memoranda and letters of intent across 67 countries. Founding markets: Saudi Arabia, UAE, India, Malaysia and Türkiye.']
-for sec, head in [('who-we-serve', 'Who we serve'), ('why-t57', 'Why T57'), ('capabilities', 'Capabilities'), ('ai-native', 'AI Native'), ('platform', 'Platform'), ('trust', 'Trust and compliance'), ('markets', 'Markets'), ('pricing', 'Pricing'), ('resources', 'Resources'), ('help', 'Help Center'), ('partnerships', 'Partnerships'), ('partners', 'Partner programs'), ('about', 'About T57'), ('contact', 'Contact')]:
+HEAD = ['# T57', '', '> T57 is an AI-native digital trade platform for food. Started in Madinah, Saudi Arabia, it puts verified farmers, processors, traders, buyers, banks and logistics firms on one trade record, from quote to payment. T57 does not lend, hold funds or own goods; finance, escrow and insurance come through licensed partners.', '',
+        '## Facts', '',
+        '- A Saudi initiative: started in Madinah, headquarters moving to Riyadh. A global SaaS platform, piloting in five founding markets: Saudi Arabia, UAE, India, Malaysia and Türkiye.',
+        '- Founder and Chairman: Afzal Hussain Mohammed Nakheeb.',
+        '- A members-only verified trade club: every member passes KYC/KYB and is labeled by role; every trade runs on one tamper-evident trade record.',
+        '- Works with the Islamic Organization for Food Security (IOFS), an OIC institution, under a 10-year memorandum of understanding signed in June 2023.',
+        '- More than 150 non-binding MoUs and letters of intent from companies in 67 countries, 120 of them signed at Gulfood 2026.',
+        '- Five industries on one trade record: agriculture and food production, trade, logistics, finance and technology.',
+        '- Contact: hello@t57.ai, +966 56 971 22 22.',
+        '', '## Pricing', '',
+        '- Membership plans, per month: Explore $199, Core $499, Growth $749, Enterprise from $1,499. Annual: Explore $1,990, Core $4,990, Growth $7,490, Enterprise custom.',
+        '- Trade fee, charged to each side of a completed trade: Explore 0.75%, Core 0.60%, Growth 0.40%, Enterprise 0.20%. No fee to list products or send quotes.',
+        '- Founding members get 90 days free at launch. Partner services (finance, escrow, insurance, inspection, logistics) are quoted by the licensed partner and shown before you accept.',
+        f'- Full details: {SITE}/pricing/plans',
+        '', '## How to join', '',
+        '- Apply online from any country; T57 verifies the business (KYC/KYB) and labels it by role, such as farmer, processor, trader, buyer, financier or logistics provider.',
+        '- Once verified, members post or answer requests, agree contracts and run each trade on one record from quote to payment.',
+        '- Governments and banks can request a briefing with the public-sector or finance partnerships team.']
+SECS = [('who-we-serve', 'Who we serve'), ('why-t57', 'Why T57'), ('capabilities', 'Capabilities'), ('ai-native', 'AI Native'), ('platform', 'Platform'), ('trust', 'Trust and compliance'), ('markets', 'Markets'), ('pricing', 'Pricing'), ('resources', 'Resources'), ('help', 'Help Center'), ('partnerships', 'Partnerships'), ('partners', 'Partner programs'), ('about', 'About T57'), ('contact', 'Contact')]
+line = lambda p: f'- [{html.unescape(p["name"])}]({SITE}{p["route"]}): {p["answer"]}'
+L = HEAD + ['', '## Main pages', '']
+for i, p in pages.items():
+    if i == 'home' or p['route'].count('/') == 1 and i not in POSTS: L.append(line(p))
+L += ['', '## Who T57 serves', ''] + [line(pages[k]) for k in KIDS.get('who-we-serve', [])]
+L += ['', '## Founding markets', ''] + [line(p) for i, p in pages.items() if re.fullmatch(r'/markets/[a-z-]+/overview', p['route'])]
+L += ['', '## Languages', '', f'- العربية: {SITE}/ar', f'- Bahasa Malaysia: {SITE}/ms', f'- Türkçe: {SITE}/tr', f'- हिन्दी: {SITE}/hi',
+      '', '## More', '', f'- [Every page and common questions]({SITE}/llms-full.txt)']
+open(f'{R}/public/llms.txt', 'w').write('\n'.join(L) + '\n')
+L = HEAD[:]
+for sec, head in SECS:
     L += ['', f'## {head}', '']
     for i, p in pages.items():
-        if p['section'] == sec: L.append(f'- [{p["name"]}]({SITE}{p["route"]}): {p["answer"]}')
+        if p['section'] == sec: L.append(line(p))
 L += ['', '## Common questions', '']
+seen = set()
 for i, p in pages.items():
-    for f in p['faqs'][:2]: L.append(f'- [{f["q"]}]({SITE}{p["route"]}): {f["a"]}')
-open(f'{R}/public/llms.txt', 'w').write('\n'.join(L) + '\n')
+    for f in p['faqs']:
+        if f['q'] in seen: continue
+        seen.add(f['q']); L.append(f'- [{f["q"]}]({SITE}{p["route"]}): {f["a"]}')
+open(f'{R}/public/llms-full.txt', 'w').write('\n'.join(L) + '\n')
 print('built', len(pages), 'pages,', n[0], 'ledgers')
+
+# Other languages: a page is built under /<lang> once every text unit on it, and its title and description,
+# have a translation in prototype/<lang>/*.json (see i18n.py). Links to translated pages stay in the language.
+import glob, i18n
+LANGS = ['ar', 'ms', 'tr', 'hi']
+# The header's language switch lists every other language, each named in its own language.
+SWITCH = {'en': ('/', 'English', 'EN'), 'ar': ('/ar', 'العربية', 'عربي'), 'ms': ('/ms', 'Bahasa Malaysia', 'BM'), 'tr': ('/tr', 'Türkçe', 'TR'), 'hi': ('/hi', 'हिन्दी', 'हिं')}
+def switch(lang):
+    return '<div class="langs">' + ''.join(f'<a class="lang-sw" href="{h}" hreflang="{l}" lang="{l}"><span class="ls-l">{a}</span><span class="ls-s" aria-hidden="true">{b}</span></a>'
+                                           for l, (h, a, b) in SWITCH.items() if l != lang) + '</div>'
+LANGSW = re.compile(r'<div class="langs">.*?</div>')
+for lang in LANGS:
+    tr = {}
+    for f in sorted(glob.glob(f'{D}/{lang}/*.json')): tr.update(json.load(open(f)))
+    if not tr: continue
+    if lang == 'ar':
+        # a right-to-left mark after closing punctuation keeps it at the end of the line inside left-to-right SVG text
+        tr = {k: re.sub(r'([.:!؟،])$', '\\1\u200f', v) for k, v in tr.items()}
+    done, out = {}, {}
+    for i, p in pages.items():
+        src = open(f'{R}/content/pages/{i}.html').read()
+        src = re.sub(r'\s*<section[^>]*data-en-only.*?</section>', '', src, flags=re.S)  # English-only sections wait for their translations
+        miss = set(); art = i18n.apply(src, tr, miss)
+        if miss or p['title'] not in tr or p['description'] not in tr: continue
+        done[i] = art
+    pre = lambda r: f'/{lang}' + ('' if r == '/' else r)
+    LR = {pages[i]['route'] for i in done}
+    def relang(s):
+        return re.sub(r'href="(/[^"#?]*)(#[^"]*)?"', lambda m: f'href="{pre(m.group(1))}{m.group(2) or ""}"' if m.group(1) in LR else m.group(0), s)
+    os.makedirs(f'{R}/content/{lang}/pages', exist_ok=True)
+    for f in glob.glob(f'{R}/content/{lang}/pages/*.html'): os.remove(f)
+    lp = {}
+    for i, art in done.items():
+        if lang == 'ar':  # redone films have their own Arabic cut and captions
+            art = re.sub(r'/video/([a-z0-9-]+)\.en\.', r'/video/\1.ar.', art).replace('srclang="en" label="English"', 'srclang="ar" label="العربية"')
+        else:  # the English cut, with captions in this language wherever they exist
+            CAP = {'ms': 'Bahasa Malaysia', 'tr': 'Türkçe', 'hi': 'हिन्दी'}
+            art = re.sub(r'<track kind="captions" srclang="en" label="English" src="/video/([a-z0-9-]+)\.en\.vtt" default>',
+                         lambda m: f'<track kind="captions" srclang="{lang}" label="{CAP[lang]}" src="/video/{m.group(1)}.{lang}.vtt" default>'
+                         if os.path.exists(f'{R}/public/video/{m.group(1)}.{lang}.vtt') else m.group(0), art)
+        open(f'{R}/content/{lang}/pages/{i}.html', 'w').write(relang(art))
+        h1 = text(re.search(r'<h1[^>]*>(.*?)</h1>', art, re.S).group(1))
+        std = text(re.search(r'<p class="std">(.*?)</p>', art, re.S).group(1))
+        faqs = [{'q': text(q), 'a': text(x)} for q, x in re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p></details>', art, re.S)]
+        name = html.unescape(re.search(r'aria-label="([^"]+)"', art).group(1))
+        lp[i] = dict(pages[i], route=pre(pages[i]['route']), name=tr.get('Home', 'Home') if i == 'home' else name, h1=h1, answer=std, faqs=faqs,
+                     title=tr[pages[i]['title']].replace('\u200f', ''), description=tr[pages[i]['description']].replace('\u200f', ''))
+    json.dump(lp, open(f'{R}/content/{lang}/pages.json', 'w'), indent=1, ensure_ascii=False)
+    # the site search index for this language: translated pages only, in the same shape as search.json
+    sec_l = lambda i: re.sub(r' Overview$', '', lp[sec_of(i)]['name']) if sec_of(i) != i and sec_of(i) in lp else ''
+    json.dump([[i, q['route'], q['name'], sec_l(i), q['h1'], q['answer'], heads(done[i]), ' · '.join(f['q'] for f in q['faqs'])] for i, q in lp.items()],
+              open(f'{R}/public/proto/search-{lang}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+    for part in ('top', 'bottom'):
+        src, k = LANGSW.subn('<div class="langs"></div>', open(f'{R}/content/chrome-{part}.html').read())
+        assert part == 'bottom' or k == 1
+        miss = set(); c = i18n.apply(src, tr, miss)
+        assert not miss, f'{lang} chrome-{part} untranslated: {sorted(miss)[:8]}'
+        # the switch goes in after relang, so its links keep pointing at the other languages
+        open(f'{R}/content/{lang}/chrome-{part}.html', 'w').write(relang(c).replace('<div class="langs"></div>', switch(lang)))
+    print(lang, len(done), 'pages translated')
