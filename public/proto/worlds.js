@@ -1414,6 +1414,15 @@ document.querySelectorAll('.bl').forEach(sec => {
     rec.upd = (p, k) => { cnt.textContent = waves[Math.max(0, Math.min(waves.length - 1, k - 1))].n; };
   });
 
+  // 7. About: T, 5 and 7, one at a time
+  document.querySelectorAll('.ns').forEach(fig => {
+    const cols = [...fig.querySelectorAll(':scope > .ns-col')].map(c => ({ big: txt(c.querySelector('.ns-big')), b: txt(c.querySelector('h3')), d: txt(c.querySelector(':scope > p:not(.ns-big)')), chips: [...c.querySelectorAll('.ns-i b, .ns-seven li b')].map(txt) })).filter(c => c.big && c.b);
+    if (cols.length < 3) return; const h = host(fig); if (!h) return;
+    const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-list">${cols.map((c, i) => `<li data-k="${i}"><span class="sl-n">${esc(c.big)}</span><b>${esc(c.b)}</b><span class="sl-d">${esc(c.d)}</span></li>`).join('')}</ol></div>
+      <div class="scn-big" aria-hidden="true">${cols.map((c, i) => `<div class="sb-c" data-k="${i}"><b>${esc(c.big)}</b>${c.chips.length ? `<ul>${c.chips.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</div>`).join('')}</div></div>`;
+    mount(fig, h, html.replace('<div class="scn-big', '</div><div class="scn-big'), 'scn-decode', cols.length);
+  });
+
   // drive them from scroll
   if (!scenes.length) return;
   const stat = () => reduce || innerWidth < 900;
@@ -1598,4 +1607,38 @@ document.querySelectorAll('.bl').forEach(sec => {
   const sync = () => fig.querySelectorAll('button').forEach(x => { const t = btns.find(b => b.dataset.t === x.dataset.t); x.classList.toggle('on', !!t && t.getAttribute('aria-pressed') === 'true'); });
   bar.addEventListener('click', () => setTimeout(sync, 0)); sync();
   if (reduce || !('IntersectionObserver' in window)) fig.classList.add('in'); else { const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { fig.classList.add('in'); o.disconnect(); } }, { threshold: 0.3 }); o.observe(fig); }
+})();
+
+/* ---------- Leadership: people filter; Careers: five countries, live ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const ph = (document.getElementById('srch-q') || {}).placeholder || '';
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  if (path === '/about/leadership') {
+    const cards = [...document.querySelectorAll('.pc, .adv, .roster li')]; if (!cards.length) return;
+    const secs = [...document.querySelectorAll('.chapter')].map(sec => ({ sec, n: sec.querySelectorAll('.pc, .adv, .roster li').length, h: txt(sec.querySelector('h2')) })).filter(x => x.n && x.h);
+    const first = document.querySelector('.chapter .standfirst, .chapter .lede'); const anchor = first ? first.closest('.wrap') || first : null;
+    const box = document.createElement('div'); box.className = 'ppl';
+    const advs = [...document.querySelectorAll('.adv')]; const exp = {}; advs.forEach(a => { const e = txt(a.querySelector('em')); if (e) exp[e] = (exp[e] || 0) + 1; });
+    box.innerHTML = `<ul class="ppl-c">${secs.map(x => `<li><b data-n="${x.n}">${x.n}</b><span>${esc(x.h)}</span></li>`).join('')}</ul>${ph ? `<input class="hfilter ppl-f" type="search" placeholder="${esc(ph)}" aria-label="${esc(ph)}" autocomplete="off">` : ''}<div class="ppl-e" role="group">${Object.entries(exp).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<button type="button" aria-pressed="false" data-e="${esc(k)}">${esc(k)}<em>${n}</em></button>`).join('')}</div>`;
+    if (anchor) anchor.insertAdjacentElement('beforeend', box); else document.querySelector('main, body').prepend(box);
+    let q = '', ex = '';
+    const apply = () => cards.forEach(c => { const t = c.textContent.toLowerCase(); const okq = !q || t.includes(q); const okx = !ex || (c.classList.contains('adv') && txt(c.querySelector('em')) === ex); c.hidden = !(okq && okx); });
+    const inp = box.querySelector('.ppl-f'); if (inp) inp.addEventListener('input', () => { q = inp.value.toLowerCase().trim(); apply(); });
+    box.querySelectorAll('.ppl-e button').forEach(b => b.addEventListener('click', () => { const on = b.getAttribute('aria-pressed') !== 'true'; box.querySelectorAll('.ppl-e button').forEach(x => x.setAttribute('aria-pressed', 'false')); b.setAttribute('aria-pressed', on ? 'true' : 'false'); ex = on ? b.dataset.e : ''; apply(); }));
+    if (!reduce && 'IntersectionObserver' in window) { const o = new IntersectionObserver(([e]) => { if (!e.isIntersecting) return; o.disconnect(); const t0 = performance.now(); const f = now => { const k = Math.min(1, (now - t0) / 1200); box.querySelectorAll('[data-n]').forEach(b => { b.textContent = Math.round(+b.dataset.n * (1 - (1 - k) ** 3)); }); if (k < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); }, { threshold: 0.5 }); o.observe(box); }
+  }
+  if (path === '/about/careers') {
+    const f = document.querySelector('.fmts'); if (!f) return;
+    const lang = document.documentElement.lang || 'en'; const loc = { ar: 'ar-SA-u-nu-latn', hi: 'hi-IN-u-nu-latn' }[lang] || lang;
+    const co = [['SA', 'Asia/Riyadh'], ['AE', 'Asia/Dubai'], ['IN', 'Asia/Kolkata'], ['MY', 'Asia/Kuala_Lumpur'], ['TR', 'Europe/Istanbul']];
+    let dn; try { dn = new Intl.DisplayNames([lang], { type: 'region' }); } catch (e) { dn = null; }
+    const ul = document.createElement('ul'); ul.className = 'five-co';
+    ul.innerHTML = co.map(([r, z]) => `<li><b>${esc(dn ? dn.of(r) : r)}</b><span class="fc-t"></span></li>`).join('');
+    f.insertAdjacentElement('afterend', ul);
+    const tick = () => co.forEach(([r, z], i) => { const d = new Date(); const h = +new Intl.DateTimeFormat('en-GB', { hour: '2-digit', hour12: false, timeZone: z }).format(d); ul.children[i].querySelector('.fc-t').innerHTML = `<i class="${h >= 6 && h < 19 ? 'day' : 'night'}" aria-hidden="true"></i><time>${new Intl.DateTimeFormat(loc, { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: z }).format(d)}</time>`; });
+    tick(); setInterval(tick, 20000);
+  }
 })();
