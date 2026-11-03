@@ -2260,6 +2260,15 @@ ul.need.dl-tiles { grid-template-columns:repeat(auto-fit, minmax(190px, 1fr)); m
 @media (min-width:900px) { .gov-grid.gov-alt { display:none; } } @media (max-width:899px) { .gpb { display:none; } } @media (max-width:640px) { .fc-bars li { grid-template-columns:70px minmax(0, 1fr) 70px; } }
 .fc-r::-webkit-slider-runnable-track { background:#ffffff33 !important; } .fc-r::-moz-range-track { background:#ffffff33 !important; }
 .gpb-c { display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; } .gpb-c span { flex-basis:auto; }
+
+/* ===== Trade cycle trip ===== */
+.scn-tripped .scn-route, .scn-tripped .scn-trip { position:sticky; top:calc(100svh - 74svh); z-index:2; max-width:1200px; margin:0 auto; padding:0 24px; }
+.scn-trip svg { display:block; width:100%; height:auto; overflow:visible; max-height:30svh; }
+.trip-crate rect { fill:var(--rosy-copper); stroke:var(--almond-cream); stroke-width:2; } .trip-crate path { stroke:#fff; stroke-width:2; fill:none; }
+.trip-chips { position:relative; min-height:150px; margin-top:20px; } .trip-chips ul { position:absolute; inset:0; list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; align-content:flex-start; gap:10px; pointer-events:none; } .trip-chips li { padding:12px 18px; border-radius:999px; border:1.5px solid #ffffff55; background:#ffffff12; font:600 clamp(14px, 1.5vw, 17px) var(--font-display); color:#fff; opacity:0; transform:translateY(18px) scale(.94); transition:opacity .4s, transform .5s var(--ease-out); }
+.trip-chips ul.now li { opacity:1; transform:none; transition-delay:calc(var(--j) * 110ms); }
+.trip-rec { display:grid; grid-template-columns:repeat(5, 1fr); gap:6px; margin-top:8px; } .trip-rec i { height:8px; border-radius:4px; background:#ffffff26; transition:background .5s; } .trip-rec i.on { background:linear-gradient(90deg, #8f93ff, var(--rosy-copper)); } .trip-rec span { display:none; }
+@media (max-width:899px) { .scn-trip { display:none; } }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">

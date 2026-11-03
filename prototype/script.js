@@ -1444,6 +1444,23 @@ document.querySelectorAll('.bl').forEach(sec => {
     mount(el, h, html.replace('<div class="scn-gates', '</div><div class="scn-gates'), 'scn-gated', N);
   });
 
+  // 10. Trade cycle: a crate travels five stages while the services for each appear
+  if (/\/platform\/trade-cycle\/?$/.test(location.pathname)) document.querySelectorAll('.chapter .life').forEach(fig => {
+    const stages = [...fig.querySelectorAll('.life-st')].map(st => ({ n: txt(st.querySelector('.life-n')), b: txt(st.querySelector('h3')), li: [...st.querySelectorAll('li')].map(txt).filter(Boolean) })).filter(x => x.b);
+    if (stages.length < 4) return; const h = host(fig); if (!h) return; const N = stages.length;
+    const pts = stages.map((_, i) => [80 + i * (1040 / (N - 1)), 120 + Math.sin(i * 1.5 + .3) * 38]);
+    const d = pts.map((q, i) => i ? `C ${(pts[i - 1][0] + q[0]) / 2} ${pts[i - 1][1]}, ${(pts[i - 1][0] + q[0]) / 2} ${q[1]}, ${q[0]} ${q[1]}` : `M ${q[0]} ${q[1]}`).join(' ');
+    const html = `<div class="scn-in gutter"><div class="scn-grid scn-grid-top">${head(h)}</div></div>
+      <div class="scn-trip"><svg viewBox="0 0 1200 230" aria-hidden="true"><path class="sr-base" d="${d}"/><path class="sr-run" d="${d}" pathLength="1"/>${pts.map((q, i) => `<g class="sr-pin" data-k="${i}"><circle cx="${q[0]}" cy="${q[1]}" r="20"/><text x="${q[0]}" y="${q[1] + 6}" text-anchor="middle">${esc(stages[i].n || i + 1)}</text><text class="sr-l" x="${q[0]}" y="${q[1] + 50}" text-anchor="middle">${esc(stages[i].b)}</text></g>`).join('')}<g class="trip-crate"><rect x="-17" y="-13" width="34" height="26" rx="4"/><path d="M-17 -3 H17 M0 -13 V13"/></g></svg>
+        <div class="trip-chips" aria-hidden="true">${stages.map((x, i) => `<ul data-k="${i}">${x.li.map((c, j) => `<li style="--j:${j}">${esc(c)}</li>`).join('')}</ul>`).join('')}</div>
+        <div class="trip-rec" aria-hidden="true">${stages.map((x, i) => `<i data-k="${i}"></i>`).join('')}<span>${esc(h.heading.h2 && '')}</span></div></div>
+      <ol class="scn-steps scn-steps-static">${stages.map(x => `<li><b>${esc(x.b)}</b><span>${esc(x.li.join(' · '))}</span></li>`).join('')}</ol>`;
+    const sc = document.createElement('section'); sc.className = 'scn scn-routed scn-tripped'; sc.style.setProperty('--n', N); sc.setAttribute('aria-label', h.heading.h2);
+    sc.innerHTML = html.replace('</div></div>\n      <div class="scn-trip', '</div></div></div><div class="scn-trip'); h.sec.parentNode.insertBefore(sc, h.sec); h.sec.hidden = true;
+    const run = sc.querySelector('.sr-run'), crate = sc.querySelector('.trip-crate');
+    scenes.push({ el: sc, n: N, upd(p, k) { const len = run.getTotalLength(), t = Math.min(1, Math.max(0, p * N / (N - 1))); const pt = run.getPointAtLength(len * t), pt2 = run.getPointAtLength(Math.min(len, len * t + 4)); run.style.strokeDashoffset = 1 - t; crate.setAttribute('transform', `translate(${pt.x} ${pt.y - 24}) rotate(${(Math.atan2(pt2.y - pt.y, pt2.x - pt.x) * 180 / Math.PI).toFixed(1)})`); sc.querySelectorAll('.trip-chips ul').forEach(u => u.classList.toggle('now', +u.dataset.k === k - 1)); } });
+  });
+
   // drive them from scroll
   if (!scenes.length) return;
   const stat = () => reduce || innerWidth < 900;
