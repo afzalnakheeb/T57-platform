@@ -1358,6 +1358,7 @@ document.querySelectorAll('.bl').forEach(sec => {
   document.querySelectorAll('ol.slq').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('li')].map(li => ({ n: '', b: txt(li.querySelector('b')), d: txt(li.querySelector('span')) })), kind: 'flow' }));
   document.querySelectorAll('figure.track').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('.tk-s text')].map(t => ({ n: '', b: txt(t) })), kind: 'ship', pay: txt(el.querySelector('.tk-pay')) }));
   if (/\/markets\/[^/]+\/compliance\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/)/, ''))) document.querySelectorAll('.chapter .feats').forEach(el => { const items = [...el.querySelectorAll('.feat')].map(f => ({ n: '', b: txt(f.querySelector('b')), d: txt(f.querySelector('span')) })); if (items.length >= 3 && items.length <= 8) routes.push({ fig: el, items, kind: 'gate' }); });
+  if (/^\/(pricing\/(enterprise|government|roi-calculator)|about(\/(investors|food-security|sdg-delivery))?)\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => { const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
   routes.forEach(r => {
     const items = r.items.filter(x => x.b); const N = items.length; if (N < 3) return;
     const sec = r.fig.closest('section'); if (!sec) return;
@@ -1463,4 +1464,30 @@ document.querySelectorAll('.bl').forEach(sec => {
     if (saved.includes(i)) { li.classList.add('ok'); li.setAttribute('aria-checked', 'true'); }
   });
   upd();
+})();
+
+/* ---------- About and Resources: SDG tiles, press timeline, report covers, reading progress, glossary letters ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // SDG tiles flip to show their targets
+  document.querySelectorAll('.sdgs .sdg').forEach(t => { t.tabIndex = 0; const f = () => t.classList.toggle('flip'); t.addEventListener('click', f); t.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); f(); } }); });
+  // press timeline: the spine draws as you read down it
+  document.querySelectorAll('ol.news-tl').forEach(ol => {
+    const lis = [...ol.children]; if (reduce) { lis.forEach(l => l.classList.add('on')); ol.style.setProperty('--sp', 1); return; }
+    const f = () => { const r = ol.getBoundingClientRect(), mid = innerHeight * 0.62; const p = Math.min(1, Math.max(0, (mid - r.top) / r.height)); ol.style.setProperty('--sp', p.toFixed(3)); lis.forEach(l => l.classList.toggle('on', l.getBoundingClientRect().top < mid)); };
+    addEventListener('scroll', () => requestAnimationFrame(f), { passive: true }); addEventListener('resize', f); f();
+  });
+  // report covers tilt toward the pointer
+  if (!reduce && matchMedia('(hover:hover)').matches) document.querySelectorAll('.rcover .cv-art').forEach(c => {
+    c.addEventListener('pointermove', e => { const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; c.style.setProperty('--ry', (x * 14).toFixed(1) + 'deg'); c.style.setProperty('--rx', (-y * 10).toFixed(1) + 'deg'); c.style.setProperty('--sx', (x * 100 + 50).toFixed(0) + '%'); });
+    c.addEventListener('pointerleave', () => { c.style.setProperty('--ry', '0deg'); c.style.setProperty('--rx', '0deg'); });
+  });
+  // blog posts: reading progress
+  const post = document.querySelector('.chapter.post');
+  if (post && !reduce) { const bar = document.createElement('div'); bar.className = 'rd-bar'; bar.setAttribute('aria-hidden', 'true'); document.body.appendChild(bar);
+    const f = () => { const r = post.getBoundingClientRect(); const p = Math.min(1, Math.max(0, (innerHeight * 0.3 - r.top) / (r.height - innerHeight * 0.3 + 1))); bar.style.transform = 'scaleX(' + p + ')'; };
+    addEventListener('scroll', () => requestAnimationFrame(f), { passive: true }); f(); }
+  // glossary: the letter you are reading stays lit
+  const az = document.querySelector('.gl-az'), terms = [...document.querySelectorAll('.gl-i[id]')];
+  if (az && terms.length && 'IntersectionObserver' in window) { const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) az.querySelectorAll('a').forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id)); }), { rootMargin: '-30% 0px -60% 0px' }); terms.forEach(t => io.observe(t)); }
 })();

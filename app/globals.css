@@ -2018,3 +2018,31 @@ ul.need li.ok { background:#f7f1ea; border-color:var(--rosy-copper); } ul.need l
 ul.need li.ok { text-decoration:line-through; text-decoration-color:#d4584488; }
 ul.need li:focus-visible { outline:2px solid var(--persian-indigo); outline-offset:3px; }
 ul.need[role], ul.need { grid-template-columns:minmax(0, 1fr); } ul.need li::after { display:none; } ul.need li { padding:16px 20px; font:500 17px/24px var(--font-display); color:var(--ink-strong); } ul.need li::before { position:static; }
+
+/* ===== About and Resources ===== */
+/* SDG tiles: official colours, flip for targets */
+.sdgs { grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:14px; }
+.sdg { display:block; padding:0; min-height:0; aspect-ratio:1 / 1; border:0; border-radius:16px; background:var(--s); color:#fff; cursor:pointer; perspective:900px; overflow:hidden; transition:transform .4s var(--ease-out); }
+.sdg:hover, .sdg:focus-visible { transform:translateY(-4px); } .sdg:focus-visible { outline:3px solid var(--persian-indigo); outline-offset:3px; }
+.sdg-n { position:absolute; inset:auto; left:18px; top:14px; width:auto; background:none; font:800 clamp(56px, 6vw, 84px)/1 var(--font-display); color:#ffffffee; }
+.sdg b { position:absolute; left:18px; right:18px; bottom:18px; font:700 17px/1.25 var(--font-display); color:#fff; }
+.sdg em, .sdg p { position:absolute; left:18px; right:18px; opacity:0; transform:translateY(10px); transition:opacity .35s, transform .45s var(--ease-out); color:#fff; }
+.sdg em { top:16px; font-size:11px; letter-spacing:.1em; } .sdg p { top:42px; font-size:14px; line-height:20px; }
+.sdg:hover::after, .sdg:focus-visible::after, .sdg.flip::after { opacity:.92; }
+.sdg::after { content:""; position:absolute; inset:0; background:linear-gradient(0deg, #00000055, #0000003a); opacity:0; transition:opacity .35s; pointer-events:none; }
+.sdg:hover .sdg-n, .sdg:focus-visible .sdg-n, .sdg.flip .sdg-n { opacity:0; } .sdg:hover b, .sdg:focus-visible b, .sdg.flip b { opacity:0; }
+.sdg:hover em, .sdg:hover p, .sdg:focus-visible em, .sdg:focus-visible p, .sdg.flip em, .sdg.flip p { opacity:1; transform:none; z-index:1; }
+.sdg-n, .sdg b { transition:opacity .3s; }
+/* press timeline: a spine that draws as you read */
+.news-tl { position:relative; border-left:0; padding-inline-start:36px; } .news-tl::before { content:""; position:absolute; inset-block:6px; inset-inline-start:0; width:3px; background:#2f2e7d1f; border-radius:2px; } .news-tl::after { content:""; position:absolute; inset-block-start:6px; inset-inline-start:0; width:3px; height:calc((100% - 12px) * var(--sp, 0)); background:linear-gradient(var(--persian-indigo), var(--rosy-copper)); border-radius:2px; }
+.news-tl li { padding-block:10px 22px; } .news-tl li::before { left:auto; inset-inline-start:-42px; top:14px; background:#fff; border:3px solid #2f2e7d44; box-shadow:none; transition:background .4s, border-color .4s, transform .4s var(--ease-out); } .news-tl li.on::before { background:var(--rosy-copper); border-color:var(--rosy-copper); transform:scale(1.2); } .news-tl time { color:var(--copper-ink); }
+.news-tl li { opacity:.55; transition:opacity .5s; } .news-tl li.on { opacity:1; }
+/* report covers */
+.rcover .cv-art { transform:perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition:transform .35s var(--ease-out), box-shadow .35s; overflow:hidden; }
+.rcover .cv-art::after { content:""; position:absolute; inset:0; background:linear-gradient(105deg, transparent calc(var(--sx, 50%) - 22%), #ffffff22 var(--sx, 50%), transparent calc(var(--sx, 50%) + 22%)); pointer-events:none; opacity:0; transition:opacity .3s; } .rcover .cv-art:hover::after { opacity:1; }
+.rcover .cv-art span { color:var(--almond-cream); }
+/* blog reading progress */
+.rd-bar { position:fixed; inset:0 0 auto 0; height:3px; z-index:60; background:var(--rosy-copper); transform:scaleX(0); transform-origin:left; } [dir="rtl"] .rd-bar { transform-origin:right; }
+/* glossary letters */
+.gl-az a.on { background:var(--persian-indigo); color:#fff; border-color:var(--persian-indigo); }
+@media (prefers-reduced-motion:reduce) { .news-tl li { opacity:1; } }
