@@ -1358,7 +1358,7 @@ document.querySelectorAll('.bl').forEach(sec => {
   document.querySelectorAll('ol.slq').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('li')].map(li => ({ n: '', b: txt(li.querySelector('b')), d: txt(li.querySelector('span')) })), kind: 'flow' }));
   document.querySelectorAll('figure.track').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('.tk-s text')].map(t => ({ n: '', b: txt(t) })), kind: 'ship', pay: txt(el.querySelector('.tk-pay')) }));
   if (/\/markets\/[^/]+\/compliance\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/)/, ''))) document.querySelectorAll('.chapter .feats').forEach(el => { const items = [...el.querySelectorAll('.feat')].map(f => ({ n: '', b: txt(f.querySelector('b')), d: txt(f.querySelector('span')) })); if (items.length >= 3 && items.length <= 8) routes.push({ fig: el, items, kind: 'gate' }); });
-  if (/^\/(who-we-serve|capabilities)\/.+/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => { const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
+  if (/^\/(who-we-serve|capabilities)\/.+|platform\/domestic-trade\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => { const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
   if (/^\/(pricing\/(enterprise|government|roi-calculator)|why-t57\/club-membership|about(\/(investors|food-security|sdg-delivery))?)\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => { const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
   if (/^\/why-t57\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter .life').forEach(el => { const items = [...el.querySelectorAll('.life-st')].map(st => ({ n: txt(st.querySelector('.life-n')), b: txt(st.querySelector('h3')), d: [...st.querySelectorAll('li a, li span')].map(txt).filter(Boolean).join('  ·  ') })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
   routes.forEach(r => {
@@ -1583,7 +1583,7 @@ document.querySelectorAll('.bl').forEach(sec => {
 (() => {
   const gl = document.querySelector('.glance .gl-rows'); if (!gl) return;
   const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/';
-  if (!/^\/(who-we-serve\/.+|markets|markets\/global-rollout|why-t57\/club-membership)\/?$/.test(path)) return;
+  if (!/^\/(who-we-serve\/.+|markets|markets\/global-rollout|why-t57\/club-membership|platform\/domestic-trade)\/?$/.test(path)) return;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   const sr = el => { const c = el.cloneNode(true); c.querySelectorAll('.sr').forEach(x => x.remove()); return c.textContent.trim().replace(/\s+/g, ' '); };
@@ -1824,4 +1824,39 @@ document.querySelectorAll('.bl').forEach(sec => {
     const go = () => { box.classList.add('in'); if (!reduce && !touched) timer = setInterval(() => show((cur + 1) % N), 3600); };
     if (reduce || !('IntersectionObserver' in window)) box.classList.add('in'); else { const io = new IntersectionObserver(([e]) => { clearInterval(timer); if (e.isIntersecting) go(); }, { threshold: 0.4 }); io.observe(box); }
   });
+})();
+
+/* ---------- Capability feature explorer; blog contents ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  // capability pages: features as an explorer
+  if (/^\/capabilities\/[^/]+\/[^/]+/.test(path)) document.querySelectorAll('.chapter .feats').forEach(fe => {
+    const items = [...fe.querySelectorAll(':scope > .feat')].map(f => ({ b: txt(f.querySelector('b')), d: txt(f.querySelector('span')) })).filter(x => x.b && x.d);
+    if (items.length < 5 || items.length > 14 || fe.querySelector('a.feat')) return;
+    const N = items.length;
+    const box = document.createElement('div'); box.className = 'fxe'; box.setAttribute('role', 'group');
+    box.innerHTML = `<ol class="fx-l">${items.map((x, i) => `<li><button type="button" data-i="${i}"><span>${String(i + 1).padStart(2, '0')}</span><b>${esc(x.b)}</b></button></li>`).join('')}</ol><div class="fx-p" aria-live="polite"><p class="fx-n"></p><h3 class="fx-t"></h3><p class="fx-d"></p><div class="fx-bar" aria-hidden="true"><i></i></div></div>`;
+    fe.insertAdjacentElement('beforebegin', box); fe.classList.add('fx-alt');
+    const n = box.querySelector('.fx-n'), t = box.querySelector('.fx-t'), d = box.querySelector('.fx-d'), bar = box.querySelector('.fx-bar i'); let cur = 0, timer = null, touched = false;
+    const show = i => { cur = i; n.textContent = String(i + 1).padStart(2, '0') + ' / ' + String(N).padStart(2, '0'); t.textContent = items[i].b; d.textContent = items[i].d; box.querySelectorAll('.fx-l button').forEach(b => b.classList.toggle('on', +b.dataset.i === i)); bar.style.transition = 'none'; bar.style.transform = 'scaleX(0)'; void bar.offsetWidth; if (!touched && !reduce) { bar.style.transition = 'transform 5s linear'; bar.style.transform = 'scaleX(1)'; } };
+    box.querySelectorAll('.fx-l button').forEach(b => b.addEventListener('click', () => { touched = true; clearInterval(timer); show(+b.dataset.i); bar.style.transition = 'none'; bar.style.transform = 'scaleX(0)'; }));
+    show(0);
+    if (!reduce && 'IntersectionObserver' in window) { const io = new IntersectionObserver(([e]) => { clearInterval(timer); if (e.isIntersecting && !touched) { show(cur); timer = setInterval(() => show((cur + 1) % N), 5000); } }, { threshold: 0.4 }); io.observe(box); }
+  });
+  // blog posts: contents with the section you are reading
+  const body = document.querySelector('.post-body'), side = document.querySelector('.post-side');
+  if (body && side) {
+    const hs = [...body.querySelectorAll('h2')]; if (hs.length >= 3) {
+      hs.forEach((h, i) => { if (!h.id) h.id = 'sec-' + (i + 1); });
+      const L = { en: ['In this article', 'Copy link', 'Copied'], ar: ['في هذا المقال', 'نسخ الرابط', 'تم النسخ'], ms: ['Dalam artikel ini', 'Salin pautan', 'Disalin'], tr: ['Bu yazıda', 'Bağlantıyı kopyala', 'Kopyalandı'], hi: ['इस लेख में', 'लिंक कॉपी करें', 'कॉपी हो गया'] }[document.documentElement.lang || 'en'] || ['In this article', 'Copy link', 'Copied'];
+      const nav = document.createElement('nav'); nav.className = 'post-toc'; nav.setAttribute('aria-label', L[0]);
+      nav.innerHTML = `<p class="eyebrow">${esc(L[0])}</p><ol>${hs.map(h => `<li><a href="#${h.id}">${esc(txt(h))}</a></li>`).join('')}</ol><button type="button" class="copy-btn">${esc(L[1])}</button>`;
+      side.appendChild(nav);
+      const btn = nav.querySelector('button'); btn.addEventListener('click', async () => { try { await navigator.clipboard.writeText(location.href); } catch (e) {} btn.textContent = L[2]; btn.classList.add('ok'); setTimeout(() => { btn.textContent = L[1]; btn.classList.remove('ok'); }, 1800); });
+      if ('IntersectionObserver' in window) { const links = [...nav.querySelectorAll('a')]; const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id)); }), { rootMargin: '-20% 0px -70% 0px' }); hs.forEach(h => io.observe(h)); }
+    }
+  }
 })();
