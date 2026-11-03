@@ -1790,3 +1790,37 @@ document.querySelectorAll('.bl').forEach(sec => {
     }
   }
 })();
+
+/* ---------- AI sub-pages: before / with AI reveal; Platform sub-pages: parts wheel ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  // before / with AI
+  document.querySelectorAll('.ba').forEach(ba => {
+    const b = ba.querySelector('.ba-b'), a = ba.querySelector('.ba-a'); if (!b || !a) return;
+    const kb = txt(b.querySelector('.ba-k')), ka = txt(a.querySelector('.ba-k')), pb = txt(b.querySelector('p:not(.ba-k)')), pa = txt(a.querySelector('p:not(.ba-k)'));
+    const box = document.createElement('div'); box.className = 'bax'; box.style.setProperty('--v', 0);
+    box.innerHTML = `<div class="bx-tags"><span>${esc(kb)}</span><span>${esc(ka)}</span></div><div class="bx-st"><p class="bx-b">${esc(pb)}</p><p class="bx-a">${esc(pa)}</p></div><input class="cmp-r bx-r" type="range" min="0" max="100" value="0" aria-label="${esc(kb + ' / ' + ka)}">`;
+    ba.insertAdjacentElement('afterend', box); ba.hidden = true;
+    const r = box.querySelector('input'); const set = v => { box.style.setProperty('--v', (v / 100).toFixed(3)); box.style.setProperty('--x', v + '%'); box.classList.toggle('is-ai', v >= 50); };
+    r.addEventListener('input', () => { box.dataset.t = '1'; set(+r.value); }); set(0);
+    if (!reduce && 'IntersectionObserver' in window) { const io = new IntersectionObserver(([e]) => { if (!e.isIntersecting) return; io.disconnect(); const t0 = performance.now(); const f = now => { if (box.dataset.t) return; const k = Math.min(1, (now - t0) / 2200); const v = 100 * (1 - Math.cos(k * Math.PI)) / 2; r.value = v; set(v); if (k < 1) requestAnimationFrame(f); }; setTimeout(() => requestAnimationFrame(f), 500); }, { threshold: 0.6 }); io.observe(box); } else { r.value = 100; set(100); }
+  });
+  // parts wheel from an accordion
+  document.querySelectorAll('.acc').forEach(acc => {
+    const parts = [...acc.querySelectorAll(':scope > details.acc-i')].map(d => ({ t: txt(d.querySelector('summary')), d: txt(d.querySelector('div')) })).filter(x => x.t);
+    if (parts.length < 4 || parts.length > 12) return;
+    const N = parts.length, C = 180, R = 136, gap = 1.6; const pol = (a, r) => [C + r * Math.cos((a - 90) * Math.PI / 180), C + r * Math.sin((a - 90) * Math.PI / 180)];
+    const seg = parts.map((x, i) => { const a0 = i * 360 / N + gap / 2, a1 = (i + 1) * 360 / N - gap / 2; const [x0, y0] = pol(a0, R), [x1, y1] = pol(a1, R); const [lx, ly] = pol((a0 + a1) / 2, R); return `<g class="sr-g cov" data-g="${i}" tabindex="0" style="--s:${i % 2 ? '#8f93ff' : '#5b5fef'};--k:${i}"><path pathLength="1" d="M${x0.toFixed(2)} ${y0.toFixed(2)} A${R} ${R} 0 0 1 ${x1.toFixed(2)} ${y1.toFixed(2)}"/><text x="${lx.toFixed(1)}" y="${(ly + 5).toFixed(1)}" text-anchor="middle">${i + 1}</text></g>`; }).join('');
+    const box = document.createElement('div'); box.className = 'sdg-ring dv pw'; box.setAttribute('role', 'group'); box.style.setProperty('--c', 'var(--rosy-copper)');
+    box.innerHTML = `<svg viewBox="0 0 360 360" class="sr-svg">${seg}<text class="sr-c" x="180" y="186" text-anchor="middle">${N}</text><text class="sr-c2" x="180" y="214" text-anchor="middle"></text></svg><div class="sr-info" aria-live="polite"><p class="sr-k"></p><h3 class="sr-t"></h3><p class="sr-d"></p></div>`;
+    acc.insertAdjacentElement('beforebegin', box); acc.classList.add('acc-alt');
+    const k = box.querySelector('.sr-k'), t = box.querySelector('.sr-t'), d = box.querySelector('.sr-d'); let cur = 0, timer = null, touched = false;
+    const show = n => { cur = n; const x = parts[n]; k.textContent = String(n + 1).padStart(2, '0') + ' / ' + String(N).padStart(2, '0'); t.textContent = x.t; d.textContent = x.d; box.querySelectorAll('.sr-g').forEach(g => g.classList.toggle('now', +g.dataset.g === n)); };
+    box.querySelectorAll('.sr-g').forEach(g => { const n = +g.dataset.g; const take = () => { touched = true; clearInterval(timer); show(n); }; g.addEventListener('pointerenter', take); g.addEventListener('focus', take); g.addEventListener('click', take); });
+    show(0);
+    const go = () => { box.classList.add('in'); if (!reduce && !touched) timer = setInterval(() => show((cur + 1) % N), 3600); };
+    if (reduce || !('IntersectionObserver' in window)) box.classList.add('in'); else { const io = new IntersectionObserver(([e]) => { clearInterval(timer); if (e.isIntersecting) go(); }, { threshold: 0.4 }); io.observe(box); }
+  });
+})();
