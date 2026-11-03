@@ -1422,6 +1422,16 @@ document.querySelectorAll('.bl').forEach(sec => {
     mount(fig, h, html.replace('<div class="scn-big', '</div><div class="scn-big'), 'scn-decode', cols.length);
   });
 
+  // 8. Impact: five changes, five petals
+  if (/\/about\/impact\/?$/.test(location.pathname)) document.querySelectorAll('ul.impact').forEach(fig => {
+    const items = [...fig.querySelectorAll(':scope > li')].map(li => ({ b: txt(li.querySelector('b')), d: txt(li.querySelector('span')) })).filter(x => x.b);
+    if (items.length !== 5) return; const h = host(fig); if (!h) return;
+    const ids = ['trade', 'finance', 'logistics', 'agri', 'tech'];
+    const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-list">${items.map((x, i) => `<li data-k="${i}"><span class="sl-n">${String(i + 1).padStart(2, '0')}</span><b>${esc(x.b)}</b><span class="sl-d">${esc(x.d)}</span></li>`).join('')}</ol></div>
+      <div class="scn-petals" aria-hidden="true"><svg viewBox="774 418 250 244"><use class="pt-ring" href="#mk-ring"></use>${ids.map((id, i) => `<use class="pt" data-k="${i}" href="#mk-${id}"></use>`).join('')}</svg></div></div>`;
+    mount(fig, h, html.replace('<div class="scn-petals', '</div><div class="scn-petals'), 'scn-pet', 5);
+  });
+
   // drive them from scroll
   if (!scenes.length) return;
   const stat = () => reduce || innerWidth < 900;
@@ -1471,7 +1481,7 @@ document.querySelectorAll('.bl').forEach(sec => {
 
 /* ---------- Readiness checklist on Getting Started pages ---------- */
 (() => {
-  const need = document.querySelector('ul.need'); if (!need) return;
+  const need = document.querySelector('ul.need'); if (!need || !/\/markets\/[^/]+\/getting-started\/?$/.test(location.pathname)) return;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const key = 't57need:' + location.pathname; let saved = []; try { saved = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) {}
   const lis = [...need.children], N = lis.length;
@@ -1639,5 +1649,35 @@ document.querySelectorAll('.bl').forEach(sec => {
     f.insertAdjacentElement('afterend', ul);
     const tick = () => co.forEach(([r, z], i) => { const d = new Date(); const h = +new Intl.DateTimeFormat('en-GB', { hour: '2-digit', hour12: false, timeZone: z }).format(d); ul.children[i].querySelector('.fc-t').innerHTML = `<i class="${h >= 6 && h < 19 ? 'day' : 'night'}" aria-hidden="true"></i><time>${new Intl.DateTimeFormat(loc, { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: z }).format(d)}</time>`; });
     tick(); setInterval(tick, 20000);
+  }
+})();
+
+/* ---------- Investors numbers, Demo progress, Media tiles and copy ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const lang = document.documentElement.lang || 'en';
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  if (path === '/about/investors') {
+    const els = [...document.querySelectorAll('.facts dd, .feats .feat b')];
+    const targets = [];
+    els.forEach(el => { const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT); let n; while ((n = w.nextNode())) { const m = n.nodeValue.match(/(?<![A-Za-z0-9])(\$?)(\d[\d,]*(?:\.\d+)?)(\+|%)?/); if (m) { const sp = document.createElement('b'); sp.className = 'numhi'; sp.dataset.to = m[2].replace(/,/g, ''); sp.dataset.dec = (m[2].split('.')[1] || '').length; sp.dataset.pre = m[1]; sp.dataset.suf = m[3] || ''; sp.textContent = m[0]; const i = m.index; const after = n.splitText(i); after.nodeValue = after.nodeValue.slice(m[0].length); n.parentNode.insertBefore(sp, after); targets.push(sp); break; } } });
+    if (!reduce && 'IntersectionObserver' in window) { const o = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; o.unobserve(e.target); const t = e.target, to = +t.dataset.to, dec = +t.dataset.dec, t0 = performance.now(); const f = now => { const k = Math.min(1, (now - t0) / 1400); t.textContent = t.dataset.pre + (to * (1 - (1 - k) ** 3)).toFixed(dec) + t.dataset.suf; if (k < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); }), { threshold: 0.6 }); targets.forEach(t => { t.textContent = t.dataset.pre + (0).toFixed(+t.dataset.dec) + t.dataset.suf; o.observe(t); }); }
+  }
+  if (path === '/contact/demo') {
+    const form = document.querySelector('form.mform'), see = [...document.querySelectorAll('.demo-see ul.need li')]; if (!form || !see.length) return;
+    const req = [...form.querySelectorAll('input[required], select[required]')]; const fields = req.length ? req : [...form.querySelectorAll('input:not([type=checkbox]):not([type=hidden])')].slice(0, 3);
+    const submit = form.querySelector('button[type=submit], .btn'); const bar = document.createElement('div'); bar.className = 'demo-meter'; bar.innerHTML = '<span class="dm-bar" aria-hidden="true"><i></i></span><b class="dm-c" aria-live="polite">0 / ' + fields.length + '</b>';
+    (submit ? submit.parentNode : form).insertBefore(bar, submit || null);
+    const fill = bar.querySelector('i'), cnt = bar.querySelector('.dm-c');
+    const upd = () => { const k = fields.filter(f => f.value.trim() && (f.type !== 'email' || f.checkValidity())).length; fill.style.transform = 'scaleX(' + (k / fields.length) + ')'; cnt.textContent = k + ' / ' + fields.length; const lit = Math.ceil(k / fields.length * see.length); see.forEach((li, i) => li.classList.toggle('lit', i < lit)); };
+    form.addEventListener('input', upd); upd();
+  }
+  if (path === '/about/media') {
+    const need = document.querySelector('ul.need'); if (need) need.classList.add('dl-tiles');
+    const facts = document.querySelector('dl.facts');
+    if (facts) { const L = { en: ['Copy fact sheet', 'Copied'], ar: ['نسخ ورقة الحقائق', 'تم النسخ'], ms: ['Salin helaian fakta', 'Disalin'], tr: ['Bilgi notunu kopyala', 'Kopyalandı'], hi: ['तथ्य-पत्र कॉपी करें', 'कॉपी हो गया'] }[lang] || ['Copy fact sheet', 'Copied'];
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'copy-btn'; b.textContent = L[0]; facts.insertAdjacentElement('beforebegin', b);
+      b.addEventListener('click', async () => { const text = [...facts.querySelectorAll(':scope > div')].map(d => d.querySelector('dt').textContent.trim() + ': ' + d.querySelector('dd').textContent.trim()).join('\n'); try { await navigator.clipboard.writeText(text); } catch (e) { const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (e2) {} ta.remove(); } b.textContent = L[1]; b.classList.add('ok'); setTimeout(() => { b.textContent = L[0]; b.classList.remove('ok'); }, 1800); }); }
   }
 })();
