@@ -1785,12 +1785,17 @@ html:not([lang="en"]) .home-hero h1 { line-height:1.3; font-size:clamp(36px, 4.6
 .sticky-cta .btn { background:var(--brand-blue); color:#fff; }
 @media (max-width:640px) { .explainer.hero-fx .fx-box text { font-size:26px; } }
 
-/* AI assistant launcher: brand blue, compact; the label opens on hover or focus */
-.ai-launch { background:var(--brand-blue) !important; box-shadow:0 8px 24px -10px #0b1340aa !important; gap:0 !important; padding:8px !important; transition:gap .3s var(--ease-out), padding .3s var(--ease-out), transform .25s !important; }
-.ai-launch .ai-launch-t { max-width:0; overflow:hidden; white-space:nowrap; opacity:0; transition:max-width .35s var(--ease-out), opacity .25s; }
-.ai-launch:hover, .ai-launch:focus-visible { gap:10px !important; padding:8px 20px 8px 8px !important; }
-.t57ai[dir="rtl"] .ai-launch:hover, .t57ai[dir="rtl"] .ai-launch:focus-visible { padding:8px 8px 8px 20px !important; }
-.ai-launch:hover .ai-launch-t, .ai-launch:focus-visible .ai-launch-t { max-width:200px; opacity:1; }
+
+/* centred section heads, calmer vertical rhythm */
+#problem-home .wrap > .eyebrow, #why-home .wrap > .eyebrow, #offers-home .wrap > .eyebrow, .pil-head .eyebrow { justify-self:center; }
+#problem-home, #why-home, #offers-home { text-align:center; }
+#problem-home .h2, #why-home .h2, #offers-home .h2, .pil-head .h2 { max-width:20em; margin-inline:auto; text-wrap:balance; }
+#problem-home .lede, #offers-home .lede, .pil-head .lede { max-width:62ch; margin-inline:auto; }
+.pil-head { margin-inline:auto; text-align:center; }
+#problem-home .problems { text-align:center; } #problem-home .problem svg { margin-inline:auto; } #problem-home .problem p { margin-inline:auto; max-width:34ch; }
+#offers-home .usp { text-align:start; }
+.chapter { padding-block:clamp(56px, 7vw, 104px); }
+html:not([lang="en"]) .explainer.hero-fx .fx-box text { font-size:15px; font-weight:500; }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
