@@ -346,6 +346,7 @@ for lang in LANGS:
     done, out = {}, {}
     for i, p in pages.items():
         src = open(f'{R}/content/pages/{i}.html').read()
+        src = re.sub(r'\s*<section[^>]*data-en-only.*?</section>', '', src, flags=re.S)  # English-only sections wait for their translations
         miss = set(); art = i18n.apply(src, tr, miss)
         if miss or p['title'] not in tr or p['description'] not in tr: continue
         done[i] = art

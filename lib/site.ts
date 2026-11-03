@@ -98,7 +98,7 @@ export function jsonLd(id: string, lang: Lang = 'en') {
       isPartOf: { '@id': `${SITE}/#site` },
       about: { '@id': `${SITE}/#org` },
       abstract: p.answer,
-      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.hero .std'] },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.std'] },
     },
     {
       '@type': 'BreadcrumbList',

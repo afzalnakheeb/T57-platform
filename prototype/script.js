@@ -513,9 +513,10 @@
       const hp = logo.querySelector('.p-' + (WORLD_PETAL[name] || 'all')) || logo;
       groundTo();
       hp.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.2)' }, { transform: 'scale(1)' }], { duration: 420, easing: 'ease-in-out' });
-      await anim(main, [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(-10px)' }], { duration: 200, easing: 'ease-in' });
+      const wp = document.getElementById('wipe');
+      await wp.animate([{ clipPath: 'inset(100% 0 0 0)' }, { clipPath: 'inset(0 0 0 0)' }], { duration: 420, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' }).finished;
       location.href = href;
-      addEventListener('pageshow', e => { if (e.persisted) { clearAll([main]); busy = false; } }, { once: true });
+      addEventListener('pageshow', e => { if (e.persisted) { wp.getAnimations().forEach(a => a.cancel()); clearAll([main]); busy = false; } }, { once: true });
       return;
     }
     try { sessionStorage.setItem('t57-go', name); } catch (e) {}
@@ -564,8 +565,10 @@
   function liftIn() {
     const main = document.getElementById('main');
     groundTo();
+    const wp = document.getElementById('wipe');
+    wp.animate([{ clipPath: 'inset(0 0 0 0)' }, { clipPath: 'inset(0 0 100% 0)' }], { duration: 560, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'both' }).finished.then(() => wp.getAnimations().forEach(a => a.cancel()));
     document.documentElement.classList.remove('lifting');
-    main.animate([{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'none' }], { duration: 360, easing: 'cubic-bezier(.2,.8,.2,1)' }).finished.then(() => { document.body.style.backgroundColor = ''; });
+    main.animate([{ opacity: 0, transform: 'translateY(22px)' }, { opacity: 1, transform: 'none' }], { duration: 640, delay: 180, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }).finished.then(() => { document.body.style.backgroundColor = ''; });
   }
 
   /* ---------- Logo intro: the five petals assemble into the mark ---------- */
@@ -1037,3 +1040,147 @@ document.querySelectorAll('.bl').forEach(sec => {
   sec.querySelectorAll('.bl-f button').forEach(b => b.addEventListener('click', () => { const k = 'a' in b.dataset ? 'a' : 't'; st[k] = b.dataset[k]; apply(); }));
   document.querySelectorAll('.bl-au').forEach(b => b.addEventListener('click', () => { st.a = b.dataset.a; st.t = 'all'; apply(); sec.querySelector('.bl-bar').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }));
 });
+
+/* ---------- Home: scroll polish, role preview, pillars, conversion helpers (adds no text of its own) ---------- */
+(() => {
+  const home = document.getElementById('home');
+  if (!home) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const $ = (s, r = home) => r.querySelector(s), $$ = (s, r = home) => [...r.querySelectorAll(s)];
+  const hero = $('.home-hero');
+
+  // Reveal on scroll: existing headings, cards and rows rise in, lightly staggered
+  if (!reduce) {
+    document.documentElement.classList.add('rv-on');
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    $$('.chapter .eyebrow, .chapter .h2, .chapter .lede, .vs-wrap, .problem, .steps li, .vid, .aud, .usp, .duo-card, .faq details, .pf, .pl, .cta h2').forEach(el => {
+      const sib = el.parentElement ? [...el.parentElement.children].indexOf(el) : 0;
+      el.style.setProperty('--d', (Math.min(sib, 5) * 0.07).toFixed(2) + 's'); el.classList.add('rv0'); io.observe(el);
+    });
+  }
+
+  // Progress bar, chapter rail (labels come from each section's own heading) and a mobile call to action
+  const bar = document.createElement('div'); bar.className = 'hx-prog'; bar.setAttribute('aria-hidden', 'true'); bar.innerHTML = '<i></i>'; home.prepend(bar);
+  const rail = document.createElement('nav'); rail.className = 'rail';
+  const stops = [hero, ...['vs-home', 'problem-home', 'pillars-home', 'why-home', 'story-home', 'who-home', 'offers-home', 'board', 'cta-home'].map(id => document.getElementById(id))].filter(Boolean);
+  const ol = document.createElement('ol');
+  stops.forEach(s => { const h = $('h1, h2', s), li = document.createElement('li'), a = document.createElement('a'); a.href = '#' + (s.id || 'main');
+    const t = document.createElement('span'); t.textContent = (h ? h.textContent : '').replace(/\s+/g, ' ').trim().slice(0, 42); a.append(t); a.setAttribute('aria-label', t.textContent); li.append(a); ol.append(li);
+    a.addEventListener('click', e => { e.preventDefault(); s.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); }); });
+  rail.append(ol); home.prepend(rail);
+  const dots = $$('a', rail);
+  const cta1 = $('.home-hero .actions a'), cta = document.getElementById('cta-home');
+  let sticky = null;
+  if (cta1) { sticky = document.createElement('div'); sticky.className = 'sticky-cta'; const c = cta1.cloneNode(true); c.className = 'btn btn-world'; c.tabIndex = -1; sticky.setAttribute('aria-hidden', 'true'); sticky.append(c); home.append(sticky); }
+  let tick = false;
+  const onScroll = () => {
+    tick = false;
+    const H = document.documentElement.scrollHeight - innerHeight;
+    bar.style.setProperty('--sp', H > 0 ? Math.min(1, scrollY / H).toFixed(4) : 0);
+    const past = hero.getBoundingClientRect().bottom < innerHeight * 0.35;
+    rail.classList.toggle('show', past);
+    const on = past && cta && cta.getBoundingClientRect().top > innerHeight * 0.8;
+    if (sticky) { sticky.classList.toggle('show', on); document.documentElement.classList.toggle('has-cta', on); }
+    let cur = 0; stops.forEach((s, i) => { if (s.getBoundingClientRect().top < innerHeight * 0.5) cur = i; });
+    dots.forEach((a, i) => a.classList.toggle('on', i === cur));
+  };
+  addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  addEventListener('resize', onScroll); onScroll();
+
+  // Magnetic hero and closing buttons
+  if (fine && !reduce) $$('.home-hero .actions .btn, .cta .actions .btn, .duo-card .btn').forEach(b => {
+    b.classList.add('mag');
+    b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(); b.style.translate = `${((e.clientX - r.left) / r.width - .5) * 10}px ${((e.clientY - r.top) / r.height - .5) * 8}px`; });
+    b.addEventListener('pointerleave', () => { b.style.translate = ''; });
+  });
+
+  // Film: a large play button over the poster (its label is the video's own label)
+  const vid = $('.vid');
+  if (vid) {
+    const v = $('video', vid), pb = document.createElement('button'); pb.type = 'button'; pb.className = 'vid-play'; pb.setAttribute('aria-label', v.getAttribute('aria-label') || '');
+    pb.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>'; $('.vid-f', vid).append(pb);
+    pb.addEventListener('click', () => v.play()); v.addEventListener('play', () => vid.classList.add('playing'));
+  }
+
+  // Five pillars: the active pillar lights its petal in the mark and the rest step back
+  const mono = $('.mono'), pls = $$('.pl');
+  if (mono && pls.length) {
+    const light = p => { mono.classList.add('has'); $$('.pt', mono).forEach(g => g.classList.toggle('on', g.dataset.p === p)); pls.forEach(x => x.classList.toggle('on', x.dataset.p === p)); };
+    light(pls[0].dataset.p);
+    const pio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) light(e.target.dataset.p); }), { rootMargin: '-42% 0px -42% 0px' });
+    pls.forEach(x => pio.observe(x));
+  }
+
+  // Who we serve: hover, focus or tap a role to preview it (wide screens)
+  const groups = $('.groups');
+  if (groups && matchMedia('(min-width: 901px)').matches) {
+    const IMG = { farmers: 'farmer', cooperatives: 'dates', 'food-processors': 'grain', enterprises: 'silos', sellers: 'ship', buyers: 'quay', traders: 'grain', financiers: 'silos', governments: 'port', 'service-providers': 'port', collaborators: 'paddy' };
+    const list = document.createElement('div'); list.className = 'pk-list'; [...groups.children].forEach(g => list.append(g)); groups.append(list); groups.classList.add('picking');
+    const prev = document.createElement('a'); prev.className = 'pk-prev'; prev.innerHTML = '<img alt="" width="760" height="760" decoding="async"><div class="pk-in"><b></b><p></p><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>'; groups.append(prev);
+    const img = $('img', prev), nm = $('b', prev), sm = $('p', prev), auds = $$('.aud', groups);
+    const pick = a => {
+      if (a.classList.contains('on')) return;
+      auds.forEach(x => x.classList.toggle('on', x === a)); prev.classList.add('swap');
+      setTimeout(() => { img.src = `/img/home/${IMG[a.dataset.go] || 'paddy'}.webp`; nm.textContent = $('b', a).textContent; sm.textContent = $('span', a).textContent; prev.href = a.getAttribute('href'); prev.dataset.go = a.dataset.go; prev.classList.remove('swap'); }, reduce ? 0 : 200);
+    };
+    const first = auds.find(a => a.dataset.go === 'farmers') || auds[0]; first.classList.add('on'); img.src = `/img/home/${IMG[first.dataset.go] || 'paddy'}.webp`; nm.textContent = $('b', first).textContent; sm.textContent = $('span', first).textContent; prev.href = first.getAttribute('href'); prev.dataset.go = first.dataset.go;
+    auds.forEach(a => { a.addEventListener('pointerenter', () => fine && pick(a)); a.addEventListener('focus', () => pick(a)); });
+  }
+})();
+
+/* ---------- Feel: inertial scrolling and a quiet cursor (fine pointers only) ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  const root = document.documentElement;
+  let target = scrollY, cur = scrollY, active = false;
+  const max = () => root.scrollHeight - innerHeight;
+  const blocked = el => {
+    if (el.closest('dialog[open], textarea, select, input, video, .menu, .srch, .t57ai, .vs-wrap')) return true;
+    for (let n = el; n && n !== document.body && n !== root; n = n.parentElement) {
+      const o = getComputedStyle(n).overflowY;
+      if ((o === 'auto' || o === 'scroll') && n.scrollHeight > n.clientHeight + 1) return true;
+    }
+    return false;
+  };
+  const loop = () => {
+    cur += (target - cur) * 0.11;
+    if (Math.abs(target - cur) < 0.4) { cur = target; active = false; scrollTo(0, cur); root.classList.remove('sm'); return; }
+    scrollTo(0, cur); requestAnimationFrame(loop);
+  };
+  addEventListener('wheel', e => {
+    if (e.ctrlKey || e.metaKey || Math.abs(e.deltaX) > Math.abs(e.deltaY) || blocked(e.target)) return;
+    e.preventDefault();
+    const d = e.deltaMode === 1 ? e.deltaY * 34 : e.deltaMode === 2 ? e.deltaY * innerHeight : e.deltaY;
+    if (!active) { cur = scrollY; target = scrollY; active = true; root.classList.add('sm'); requestAnimationFrame(loop); }
+    target = Math.min(max(), Math.max(0, target + d * 0.9));
+  }, { passive: false });
+  addEventListener('scroll', () => { if (!active) { cur = target = scrollY; } }, { passive: true });
+
+  const ring = document.createElement('div'); ring.className = 'cur'; ring.setAttribute('aria-hidden', 'true'); document.body.appendChild(ring);
+  let x = -100, y = -100, rx = x, ry = y, seen = false;
+  addEventListener('pointermove', e => { x = e.clientX; y = e.clientY; if (!seen) { seen = true; rx = x; ry = y; ring.classList.add('on'); }
+    ring.classList.toggle('link', !!e.target.closest('a, button, summary, label, [role=tab], input, .vid-play')); }, { passive: true });
+  addEventListener('pointerdown', () => ring.classList.add('down')); addEventListener('pointerup', () => ring.classList.remove('down'));
+  document.addEventListener('pointerleave', () => ring.classList.remove('on')); document.addEventListener('pointerenter', () => seen && ring.classList.add('on'));
+  const tick = () => { rx += (x - rx) * 0.2; ry += (y - ry) * 0.2; ring.style.transform = `translate3d(${rx}px, ${ry}px, 0)`; requestAnimationFrame(tick); };
+  tick();
+})();
+
+/* The story: one pinned stage walks through verify, agree, finance and deliver */
+(() => {
+  const st = document.querySelector('[data-story]'); if (!st) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches, mq = matchMedia('(min-width: 901px)');
+  const sls = [...st.querySelectorAll('.sl')], sps = [...st.querySelectorAll('.sp')], bar = st.querySelector('.story-bar');
+  const run = () => {
+    const pin = mq.matches && !reduce; st.classList.toggle('pin', pin);
+    if (!pin) { sps.forEach(x => x.classList.add('on')); sls.forEach(x => x.classList.add('on')); return; }
+    const r = st.getBoundingClientRect(), p = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight))), i = Math.min(sls.length - 1, Math.floor(p * sls.length));
+    bar.style.setProperty('--sp', p.toFixed(3)); sls.forEach((x, k) => x.classList.toggle('on', k === i)); sps.forEach((x, k) => x.classList.toggle('on', k === i));
+  };
+  addEventListener('scroll', () => requestAnimationFrame(run), { passive: true }); addEventListener('resize', run); run();
+})();
+
+/* Header lifts once the page scrolls */
+(() => { const h = document.querySelector('.hdr'); if (!h) return; const f = () => h.classList.toggle('scrolled', scrollY > 8); addEventListener('scroll', f, { passive: true }); f(); })();
