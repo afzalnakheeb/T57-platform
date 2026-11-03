@@ -1182,3 +1182,6 @@ document.querySelectorAll('.bl').forEach(sec => {
   };
   addEventListener('scroll', () => requestAnimationFrame(run), { passive: true }); addEventListener('resize', run); run();
 })();
+
+/* Header lifts once the page scrolls */
+(() => { const h = document.querySelector('.hdr'); if (!h) return; const f = () => h.classList.toggle('scrolled', scrollY > 8); addEventListener('scroll', f, { passive: true }); f(); })();
