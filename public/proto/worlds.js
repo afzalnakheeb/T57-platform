@@ -1682,3 +1682,63 @@ document.querySelectorAll('.bl').forEach(sec => {
       b.addEventListener('click', async () => { const text = [...facts.querySelectorAll(':scope > div')].map(d => d.querySelector('dt').textContent.trim() + ': ' + d.querySelector('dd').textContent.trim()).join('\n'); try { await navigator.clipboard.writeText(text); } catch (e) { const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (e2) {} ta.remove(); } b.textContent = L[1]; b.classList.add('ok'); setTimeout(() => { b.textContent = L[0]; b.classList.remove('ok'); }, 1800); }); }
   }
 })();
+
+/* ---------- Journey HUD, Food Security supply swap and Hormuz range, SDG ring ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  // Journey: a running tally while you read the timeline
+  const tl = document.querySelector('.jr-tl');
+  if (tl) {
+    const items = [...tl.querySelectorAll('.jr-i')]; const fbtn = [...document.querySelectorAll('.jr-f button[data-f]')].filter(b => b.dataset.f !== 'all');
+    const names = {}; fbtn.forEach(b => { const c = b.cloneNode(true); const em = c.querySelector('em'); if (em) em.remove(); names[b.dataset.f] = c.textContent.trim(); });
+    const keys = fbtn.map(b => b.dataset.f);
+    if (items.length && keys.length) {
+      const hud = document.createElement('div'); hud.className = 'jr-hud'; hud.setAttribute('aria-hidden', 'true');
+      hud.innerHTML = `<b class="jh-y"></b><span class="jh-n"></span><ul>${keys.map(k => `<li data-f="${k}"><b>0</b><span>${esc(names[k])}</span></li>`).join('')}</ul>`; document.body.appendChild(hud);
+      const yEls = [...tl.querySelectorAll('.jr-y')];
+      const f = () => { const r = tl.getBoundingClientRect(); hud.classList.toggle('on', r.top < innerHeight * .5 && r.bottom > innerHeight * .4); if (!hud.classList.contains('on')) return;
+        const mid = innerHeight * .62; const vis = items.filter(i => !i.hidden && i.offsetParent !== null); const seen = vis.filter(i => i.getBoundingClientRect().top < mid);
+        const counts = {}; keys.forEach(k => counts[k] = 0); seen.forEach(i => (i.dataset.k || '').split(/\s+/).forEach(k => { if (k in counts) counts[k]++; }));
+        hud.querySelector('.jh-n').textContent = seen.length + ' / ' + vis.length; hud.querySelectorAll('li').forEach(li => { li.querySelector('b').textContent = counts[li.dataset.f]; });
+        const y = yEls.filter(h => h.getBoundingClientRect().top < mid).pop() || yEls[0]; hud.querySelector('.jh-y').textContent = txt(y); };
+      addEventListener('scroll', () => requestAnimationFrame(f), { passive: true }); addEventListener('resize', f); f();
+    }
+  }
+  // Food security: the at-risk origin hands over to a surplus origin
+  const sb = document.querySelector('.sboard ul');
+  if (sb) {
+    const rows = [...sb.children]; const risky = rows.filter(r => r.classList.contains('sb-at-risk') || r.classList.contains('sb-short')); const sur = rows.filter(r => r.classList.contains('sb-surplus'));
+    if (risky.length && sur.length) {
+      sb.style.position = 'relative'; const NS = 'http://www.w3.org/2000/svg'; const svg = document.createElementNS(NS, 'svg'); svg.setAttribute('class', 'sb-link'); svg.setAttribute('aria-hidden', 'true'); const pth = document.createElementNS(NS, 'path'); pth.setAttribute('pathLength', '1'); svg.appendChild(pth); sb.appendChild(svg);
+      let n = 0, timer = null;
+      const step = () => { const a = risky[n % risky.length]; const prod = txt(a.querySelector('b')); const b = sur.find(r => txt(r.querySelector('b')) === prod) || sur[0];
+        rows.forEach(r => r.classList.remove('sw-a', 'sw-b')); a.classList.add('sw-a');
+        const ay = a.offsetTop + a.offsetHeight / 2, by = b.offsetTop + b.offsetHeight / 2, w = sb.offsetWidth, x = w - 10;
+        svg.setAttribute('viewBox', `0 0 ${w} ${sb.offsetHeight}`); pth.setAttribute('d', `M${x - 40} ${ay} H${x} V${by} H${x - 40}`); pth.style.transition = 'none'; pth.style.strokeDashoffset = 1; void pth.getBoundingClientRect(); pth.style.transition = 'stroke-dashoffset 1.1s .3s cubic-bezier(.2,.8,.2,1)'; pth.style.strokeDashoffset = 0;
+        setTimeout(() => b.classList.add('sw-b'), 1200); n++; };
+      if (!reduce && 'IntersectionObserver' in window) { const io = new IntersectionObserver(([e]) => { clearInterval(timer); if (e.isIntersecting) { step(); timer = setInterval(step, 5200); } }, { threshold: 0.5 }); io.observe(sb); }
+    }
+  }
+  // Hormuz: a range band on a 0-100 scale
+  if (path === '/about/food-security') document.querySelectorAll('.bigstats > div').forEach(d => { const b = d.querySelector('b'); const m = b && (b.dataset.n ? null : null); const t = d.textContent; const r = t.match(/(\d{1,2})\s*[–-]\s*(\d{1,2})\s*%/); if (!r) return; const bar = d.querySelector('.bs-bar'); if (bar) { const lo = +r[1], hi = +r[2]; bar.classList.add('range'); const i = bar.querySelector('i'); i.style.setProperty('--w', hi - lo); i.style.marginInlineStart = lo + '%'; i.style.width = (hi - lo) + '%'; } });
+  // SDG: 17 goals in a ring, the ones T57 contributes to lit
+  const sdgs = [...document.querySelectorAll('.sdgs .sdg')];
+  if (sdgs.length) {
+    const cov = {}; sdgs.forEach(t => { cov[+txt(t.querySelector('.sdg-n'))] = { c: (t.getAttribute('style') || '').match(/--s:([^;]+)/)?.[1] || '#8f93ff', title: txt(t.querySelector('b')), tg: txt(t.querySelector('em')), d: txt(t.querySelector('p')) }; });
+    const C = 180, R = 136, W = 44, N = 17, gap = 1.6; const pol = (a, r) => [C + r * Math.cos((a - 90) * Math.PI / 180), C + r * Math.sin((a - 90) * Math.PI / 180)];
+    const seg = Array.from({ length: N }, (_, i) => { const a0 = i * 360 / N + gap / 2, a1 = (i + 1) * 360 / N - gap / 2; const [x0, y0] = pol(a0, R), [x1, y1] = pol(a1, R); const [lx, ly] = pol((a0 + a1) / 2, R); const g = cov[i + 1]; return `<g class="sr-g${g ? ' cov' : ''}" data-g="${i + 1}" style="--s:${g ? g.c : '#ffffff'};--k:${i}"${g ? ' tabindex="0"' : ''}><path pathLength="1" d="M${x0.toFixed(2)} ${y0.toFixed(2)} A${R} ${R} 0 0 1 ${x1.toFixed(2)} ${y1.toFixed(2)}"/><text x="${lx.toFixed(1)}" y="${(ly + 5).toFixed(1)}" text-anchor="middle">${i + 1}</text></g>`; }).join('');
+    const box = document.createElement('div'); box.className = 'sdg-ring dv'; box.setAttribute('role', 'group');
+    const total = Object.keys(cov).length;
+    box.innerHTML = `<svg viewBox="0 0 360 360" class="sr-svg">${seg}<text class="sr-c" x="180" y="186" text-anchor="middle">${total}</text><text class="sr-c2" x="180" y="214" text-anchor="middle">/ ${N}</text></svg><div class="sr-info" aria-live="polite"><p class="sr-k"></p><h3 class="sr-t"></h3><p class="sr-d"></p></div>`;
+    sdgs[0].closest('.sdgs').insertAdjacentElement('beforebegin', box);
+    const k = box.querySelector('.sr-k'), t = box.querySelector('.sr-t'), d = box.querySelector('.sr-d'); let cur = 0, timer = null, touched = false; const list = Object.keys(cov).map(Number);
+    const show = n => { cur = n; const g = cov[n]; box.style.setProperty('--c', g.c); k.textContent = n + ' · ' + g.tg; t.textContent = g.title; d.textContent = g.d; box.querySelectorAll('.sr-g').forEach(x => x.classList.toggle('now', +x.dataset.g === n)); };
+    box.querySelectorAll('.sr-g.cov').forEach(x => { const n = +x.dataset.g; x.addEventListener('pointerenter', () => { touched = true; clearInterval(timer); show(n); }); x.addEventListener('focus', () => { touched = true; clearInterval(timer); show(n); }); });
+    show(list[0]);
+    const go = () => { box.classList.add('in'); if (!reduce && !touched) timer = setInterval(() => show(list[(list.indexOf(cur) + 1) % list.length]), 3400); };
+    if (reduce || !('IntersectionObserver' in window)) box.classList.add('in'); else { const io = new IntersectionObserver(([e]) => { clearInterval(timer); if (e.isIntersecting) go(); }, { threshold: 0.4 }); io.observe(box); }
+  }
+})();

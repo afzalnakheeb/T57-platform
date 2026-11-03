@@ -2143,6 +2143,25 @@ ul.need[role], ul.need { grid-template-columns:minmax(0, 1fr); } ul.need li::aft
 /* media tiles and copy */
 ul.need.dl-tiles { grid-template-columns:repeat(auto-fit, minmax(190px, 1fr)); max-width:none; gap:14px; } ul.need.dl-tiles li { flex-direction:column; align-items:flex-start; gap:18px; padding:22px; min-height:140px; cursor:default; font-size:17px; } ul.need.dl-tiles li:hover { transform:none; border-color:var(--line); } ul.need.dl-tiles li::before { content:""; width:44px; height:44px; border:0; border-radius:12px; background:#f7f1ea url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a8402e' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 4v10M8 10l4 4 4-4M5 19h14'/%3E%3C/svg%3E") center / 22px no-repeat; } ul.need.dl-tiles li::after { display:none; }
 .copy-btn { display:inline-flex; align-items:center; min-height:40px; margin:16px 0 4px; padding:0 18px; border:1.5px solid var(--persian-indigo); border-radius:999px; background:#fff; color:var(--persian-indigo); font:600 14px var(--font-text); cursor:pointer; transition:background .2s, color .2s; } .copy-btn:hover { background:var(--persian-indigo); color:#fff; } .copy-btn.ok { background:var(--rosy-copper); border-color:var(--rosy-copper); color:#fff; }
+
+/* ===== Journey, Food Security, SDG ===== */
+.jr-hud { position:fixed; left:50%; bottom:18px; z-index:50; display:flex; align-items:center; gap:14px; padding:10px 18px; border-radius:999px; background:#0b1340ee; color:#fff; box-shadow:0 14px 30px -14px #000; transform:translate(-50%, 24px); opacity:0; pointer-events:none; transition:opacity .35s, transform .45s var(--ease-out); max-width:calc(100vw - 32px); }
+.jr-hud.on { opacity:1; transform:translate(-50%, 0); }
+.jh-y { font:800 20px var(--font-display); color:var(--almond-cream); } .jh-n { font:600 13px var(--font-display); color:#ffffffaa; font-variant-numeric:tabular-nums; }
+.jr-hud ul { list-style:none; margin:0; padding:0; display:flex; gap:12px; } .jr-hud li { display:flex; align-items:baseline; gap:5px; font-size:12px; color:#ffffffb3; } .jr-hud li b { font:700 16px var(--font-display); color:#fff; font-variant-numeric:tabular-nums; }
+@media (max-width:760px) { .jr-hud { gap:10px; padding:8px 14px; } .jr-hud ul li span, .jh-n { display:none; } .jr-hud { bottom:76px; } }
+/* supply swap */
+.sb-link { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; overflow:visible; } .sb-link path { fill:none; stroke:var(--rosy-copper); stroke-width:3; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:1; stroke-dashoffset:1; }
+.sboard li { transition:background .4s, box-shadow .4s; } .sboard li.sw-a { background:#d4584426; box-shadow:inset 0 0 0 1.5px var(--rosy-copper); } .sboard li.sw-b { background:#ffffff1c; box-shadow:inset 0 0 0 1.5px var(--almond-cream); }
+.bigstats .bs-bar.range { background:#2f2e7d1f; } .bigstats .bs-bar.range i { transform-origin:left; }
+/* SDG ring */
+.sdg-ring { display:grid; grid-template-columns:minmax(0, 420px) minmax(0, 1fr); gap:clamp(24px, 4vw, 64px); align-items:center; margin:40px 0 24px; --c:#8f93ff; }
+.sr-svg { width:100%; height:auto; overflow:visible; } .sr-g path { fill:none; stroke:#ffffff1c; stroke-width:44; } .sr-g text { font:700 13px var(--font-display); fill:#ffffff66; pointer-events:none; }
+.sr-g.cov path { stroke:var(--s); stroke-dasharray:1; stroke-dashoffset:1; transition:stroke-dashoffset .8s var(--ease-out), opacity .3s; transition-delay:calc(var(--k) * 70ms); opacity:.8; } .sdg-ring.in .sr-g.cov path { stroke-dashoffset:0; } .sr-g.cov text { fill:#fff; } .sr-g.cov { cursor:pointer; outline:none; } .sr-g.cov.now path { opacity:1; stroke-width:54; } .sr-g.cov:focus-visible path { stroke:#fff; }
+.sr-c { font:800 64px var(--font-display); fill:#fff; } .sr-c2 { font:600 20px var(--font-display); fill:var(--almond-cream); }
+.sr-info { display:grid; gap:10px; } .sr-k { margin:0; font:600 12px/1.3 var(--font-text); letter-spacing:.14em; text-transform:uppercase; color:var(--almond-cream); } .sr-t { margin:0; font:700 clamp(24px, 3vw, 36px)/1.2 var(--font-display); color:#fff; border-inline-start:5px solid var(--c); padding-inline-start:16px; } .sr-d { margin:0; font-size:17px; line-height:27px; color:var(--on-night-muted); max-width:42ch; }
+@media (max-width:760px) { .sdg-ring { grid-template-columns:minmax(0, 1fr); } .sr-svg { max-width:320px; margin-inline:auto; } }
+@media (prefers-reduced-motion:reduce) { .sr-g.cov path { stroke-dashoffset:0; transition:none; } .jr-hud { transition:none; } }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
