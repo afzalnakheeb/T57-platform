@@ -1292,3 +1292,79 @@ document.querySelectorAll('.bl').forEach(sec => {
     const o = new IntersectionObserver(([e]) => { if (!e.isIntersecting) return; o.disconnect(); bs.classList.add('in'); const t0 = performance.now(); const step = now => { const k = Math.min(1, (now - t0) / 1500); items.forEach(b => { if (b.dataset.n) b.textContent = (+b.dataset.n * (1 - (1 - k) ** 3)).toFixed(+b.dataset.dec) + b.dataset.s; }); if (k < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); }, { threshold: 0.4 }); o.observe(bs);
   });
 })();
+
+/* ---------- Scroll-driven scenes: Trust passport, layer stacks (Platform, AI), AI-advises-people-decide pipeline ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const CHECK = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>';
+  const scenes = [];
+  // where a scene goes: before the source's section; if the section holds nothing else, the section is replaced
+  function host(fig) {
+    const sec = fig.closest('section.chapter, section'); if (!sec) return null;
+    const wrap = sec.querySelector('.wrap') || sec;
+    const rest = [...wrap.children].filter(e => !e.matches('.eyebrow, h2, .lede, .standfirst') && e !== fig && !e.contains(fig));
+    const heading = { eyebrow: txt(wrap.querySelector('.eyebrow')), h2: txt(wrap.querySelector('h2')), lede: txt(wrap.querySelector('.lede, .standfirst')) };
+    return { sec, replace: rest.length === 0, heading };
+  }
+  function mount(fig, h, html, cls, n) {
+    const s = document.createElement('section'); s.className = 'scn ' + cls; s.style.setProperty('--n', n); s.setAttribute('aria-label', h.heading.h2 || fig.getAttribute('aria-label') || '');
+    s.innerHTML = html; h.sec.parentNode.insertBefore(s, h.sec);
+    if (h.replace) h.sec.hidden = true; else { fig.hidden = true; const w = h.sec.querySelector('.wrap') || h.sec; w.querySelectorAll(':scope > .eyebrow, :scope > h2, :scope > .lede').forEach(e => { e.hidden = true; }); }
+    scenes.push({ el: s, n }); return s;
+  }
+  const head = h => `<div class="scn-copy">${h.heading.eyebrow ? `<p class="eyebrow">${esc(h.heading.eyebrow)}</p>` : ''}<h2 class="h2">${esc(h.heading.h2)}</h2>${h.heading.lede ? `<p class="lede">${esc(h.heading.lede)}</p>` : ''}`;
+
+  // 1. Trust: a passport that collects its checks as you scroll
+  document.querySelectorAll('figure.tpass').forEach(fig => {
+    const rows = [...fig.querySelectorAll('.tp-card ol li')].map(li => ({ b: txt(li.querySelector('b')), s: txt(li.querySelector('span')) })).filter(r => r.b);
+    if (rows.length < 2) return; const h = host(fig); if (!h) return;
+    const label = txt(fig.querySelector('.tp-head span')) || 'T57', logo = fig.querySelector('.tp-head svg'), stamp = txt(fig.querySelector('.tp-stamp'));
+    if (!h.heading.h2) h.heading.h2 = fig.getAttribute('aria-label') || label;
+    const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-steps">${rows.map((r, i) => `<li data-k="${i}"><b>${esc(r.b)}</b>${r.s ? `<span>${esc(r.s)}</span>` : ''}</li>`).join('')}</ol></div>
+      <div class="scn-card tcard" role="img" aria-label="${esc(label)}"><div class="tc-head">${logo ? logo.outerHTML : ''}<span>${esc(label)}</span><em class="tc-n"><b data-cur>0</b> / ${rows.length}</em></div>
+        <div class="tc-bar" style="--n:${rows.length}">${rows.map((_, i) => `<i data-k="${i}"></i>`).join('')}</div>
+        <ul class="tc-rows">${rows.map((r, i) => `<li data-k="${i}">${CHECK}<b>${esc(r.b)}</b></li>`).join('')}</ul>${stamp ? `<p class="tc-stamp">${esc(stamp)}</p>` : ''}</div></div>`;
+    mount(fig, h, html.replace('<div class="scn-card', '</div><div class="scn-card'), 'scn-trust', rows.length);
+  });
+
+  // 2. Platform and AI: layers that separate and light up one at a time
+  const stacks = [...document.querySelectorAll('figure.pboard'), ...document.querySelectorAll('figure.ailayers, .ailayers')].filter((e, i, a) => a.indexOf(e) === i && !e.parentElement.closest('.ailayers'));
+  stacks.forEach(fig => {
+    const items = [...fig.querySelectorAll('ol > li')].map(li => ({ n: txt(li.querySelector('.pb-n, .ly-n')), b: txt(li.querySelector('b')), d: txt(li.querySelector('span:last-child:not(.pb-n):not(.ly-n)')), ic: li.querySelector('svg') })).filter(x => x.b);
+    if (items.length < 2) return; const h = host(fig); if (!h) return;
+    if (!h.heading.h2) h.heading.h2 = fig.getAttribute('aria-label') || items[0].b;
+    const N = items.length;
+    const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-list">${items.map((x, i) => `<li data-k="${i}"><span class="sl-n">${esc(x.n || String(i + 1).padStart(2, '0'))}</span><b>${esc(x.b)}</b>${x.d ? `<span class="sl-d">${esc(x.d)}</span>` : ''}</li>`).join('')}</ol></div>
+      <div class="scn-plates" aria-hidden="true" style="--n:${N}"><div class="pl-stage">${items.map((x, i) => `<div class="pl" data-k="${i}" style="--k:${i}"><span>${esc(x.n || String(i + 1).padStart(2, '0'))}</span></div>`).join('')}<i class="pl-spine"></i></div></div></div>`;
+    mount(fig, h, html.replace('<div class="scn-plates', '</div><div class="scn-plates'), 'scn-stack', N);
+  });
+
+  // 3. AI pipeline: data in, model, output, and a person decides
+  document.querySelectorAll('figure.aipipe').forEach(fig => {
+    const cols = [...fig.querySelectorAll('.ap-col')].map(c => ({ k: txt(c.querySelector('.ap-k')), li: [...c.querySelectorAll('li')].map(txt), b: txt(c.querySelector('b')), ic: c.querySelector('svg'), human: c.classList.contains('ap-human') }));
+    if (cols.length < 3) return; const h = host(fig); if (!h) return;
+    if (!h.heading.h2) h.heading.h2 = fig.getAttribute('aria-label') || '';
+    const N = cols.length;
+    const html = `<div class="scn-in gutter"><div class="scn-grid scn-grid-top">${head(h)}</div></div>
+      <div class="scn-pipe" style="--n:${N}"><i class="sp-line"></i><i class="sp-dot"></i>${cols.map((c, i) => `<div class="sp-col${c.human ? ' human' : ''}" data-k="${i}"><p class="sp-k">${esc(c.k)}</p><div class="sp-ic">${c.ic ? c.ic.outerHTML : (i === 0 ? '<svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>' : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h4"/></svg>')}</div>${c.li.length ? `<ul>${c.li.map(l => `<li>${esc(l)}</li>`).join('')}</ul>` : ''}${c.b ? `<b>${esc(c.b)}</b>` : ''}</div>`).join('')}</div>`;
+    const s = mount(fig, h, html.replace('<div class="scn-pipe', '</div><div class="scn-pipe').replace('</div></div>\n      </div><div class="scn-pipe', '</div></div></div><div class="scn-pipe'), 'scn-pipeline', N);
+  });
+
+  // drive them from scroll
+  if (!scenes.length) return;
+  const stat = () => reduce || innerWidth < 900;
+  const run = () => scenes.forEach(({ el, n }) => {
+    let p = 1;
+    if (!stat()) { const r = el.getBoundingClientRect(); p = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight))); }
+    const k = stat() ? n : Math.min(n, Math.floor(p * (n + 0.35) * (n / (n + 0.35)) + 0.0001) + (p > 0.02 ? 1 : 0));
+    el.style.setProperty('--p', p.toFixed(3)); el.style.setProperty('--on', k);
+    el.querySelectorAll('[data-k]').forEach(x => x.classList.toggle('on', +x.dataset.k < k));
+    el.querySelectorAll('[data-k]').forEach(x => x.classList.toggle('now', +x.dataset.k === k - 1));
+    const cur = el.querySelector('[data-cur]'); if (cur) cur.textContent = k;
+    el.classList.toggle('done', k >= n);
+  });
+  let tick = false; const go = () => { if (!tick) { tick = true; requestAnimationFrame(() => { tick = false; run(); }); } };
+  addEventListener('scroll', go, { passive: true }); addEventListener('resize', go); run();
+})();
