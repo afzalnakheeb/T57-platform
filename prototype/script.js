@@ -1237,3 +1237,57 @@ document.querySelectorAll('.bl').forEach(sec => {
 (() => { if (matchMedia('(prefers-reduced-motion: reduce)').matches) return; const hero = document.querySelector('.hero'), hin = hero && hero.querySelector('.hero-in'); if (!hin) return;
   let tick = false; const f = () => { tick = false; const r = hero.getBoundingClientRect(); const p = Math.min(1, Math.max(0, -r.top / (r.height * .9))); hin.style.setProperty('--hp', p.toFixed(3)); };
   addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(f); } }, { passive: true }); f(); })();
+
+/* ---------- Data visuals drawn from each page's own figures ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const lang = document.documentElement.lang || 'en';
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const reveal = (el, th = 0.3) => { if (reduce || !('IntersectionObserver' in window)) { el.classList.add('in'); return; } const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { el.classList.add('in'); o.disconnect(); } }, { threshold: th }); o.observe(el); };
+  const num = s => parseFloat(String(s).replace(/[^0-9.]/g, ''));
+
+  // Pricing plans: trade fee per side falls as the plan grows, read from the comparison table
+  const pt = document.querySelector('table.pt');
+  if (pt && path === '/pricing/plans') {
+    const names = [...pt.querySelectorAll('thead th[scope="col"] > b')].map(b => b.textContent.trim());
+    const fee = pt.querySelector('tr.pt-fee'), price = pt.querySelector('tr.pt-price');
+    if (fee && price && names.length) {
+      const fv = [...fee.querySelectorAll('td')].map(td => td.textContent.trim()), pv = [...price.querySelectorAll('td')].map(td => td.textContent.trim());
+      const nums = fv.map(num), max = Math.max(...nums);
+      const T = { en: ['Higher plan, lower fee', 'Trade fee per side, by plan'], ar: ['خطة أعلى، رسوم أقل', ''], ms: ['Pelan lebih tinggi, yuran lebih rendah', ''], tr: ['Daha yüksek plan, daha düşük ücret', ''], hi: ['ऊँचा प्लान, कम शुल्क', ''] }[lang] || ['Higher plan, lower fee', ''];
+      const sub = fee.querySelector('th').textContent.trim();
+      const box = document.createElement('figure');
+      box.className = 'dv'; box.style.margin = '40px 0 0'; box.setAttribute('role', 'img'); box.setAttribute('aria-label', T[0] + ': ' + names.map((n, i) => n + ' ' + fv[i]).join(', '));
+      box.innerHTML = `<h3>${esc(T[0])}</h3><p>${esc(sub)}</p><div class="dv-bars" style="--n:${names.length}">${nums.map((v, i) => `<div class="dv-bar" style="--h:${Math.round(v / max * 78) + 10};--k:${i}"><b>${esc(fv[i])}</b><i></i></div>`).join('')}</div><div class="dv-lab" style="--n:${names.length}">${names.map((n, i) => `<span><b>${esc(n)}</b>${esc(pv[i])}</span>`).join('')}</div>`;
+      pt.closest('.pt-wrap').insertAdjacentElement('afterend', box); reveal(box);
+    }
+  }
+
+  // Markets: how far T57 reaches (figures stated on the page: 5 founding, 101 planned, 195 open online)
+  const L = { en: ['Founding markets', 'Planned markets', 'Countries open online'], ar: ['أسواق مؤسِّسة', 'أسواق مخطط لها', 'دولة متاحة عبر الإنترنت'], ms: ['Pasaran pengasas', 'Pasaran dirancang', 'Negara dibuka dalam talian'], tr: ['Kurucu pazarlar', 'Planlanan pazarlar', 'Çevrimiçi açık ülke'], hi: ['संस्थापक बाज़ार', 'योजनाबद्ध बाज़ार', 'ऑनलाइन खुले देश'] }[lang] || [];
+  if ((path === '/markets' || path === '/markets/global') && L.length) {
+    const sec = document.querySelector('main .chapter:not(.alt) .wrap, .chapter .wrap');
+    const std = document.querySelector('.chapter .standfirst');
+    if (std) {
+      const dots = Array.from({ length: 195 }, (_, i) => `<i class="${i < 5 ? 'f' : i < 101 ? 'p' : ''}" style="--k:${i}"></i>`).join('');
+      const box = document.createElement('figure'); box.className = 'dv'; box.style.margin = '40px 0 56px'; box.setAttribute('role', 'img'); box.setAttribute('aria-label', `5 ${L[0]}, 101 ${L[1]}, 195 ${L[2]}`);
+      box.innerHTML = `<div class="dv-reach"><div class="dv-dots">${dots}</div><ul class="dv-key"><li class="f"><b data-to="5">5</b><span>${esc(L[0])}</span></li><li class="p"><b data-to="101">101</b><span>${esc(L[1])}</span></li><li><b data-to="195">195</b><span>${esc(L[2])}</span></li></ul></div>`;
+      std.insertAdjacentElement('afterend', box); reveal(box, 0.35);
+      if (!reduce) { box.querySelectorAll('[data-to]').forEach(b => { b.textContent = '0'; }); const o = new IntersectionObserver(([e]) => { if (!e.isIntersecting) return; o.disconnect(); const t0 = performance.now(); const step = now => { const k = Math.min(1, (now - t0) / 1600); box.querySelectorAll('[data-to]').forEach(b => { b.textContent = Math.round(+b.dataset.to * (1 - (1 - k) ** 3)); }); if (k < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); }, { threshold: 0.35 }); o.observe(box); }
+    }
+  }
+
+  // Big stats: count up, with a proportion bar for the percentages
+  document.querySelectorAll('.bigstats').forEach(bs => {
+    const items = [...bs.querySelectorAll('b')];
+    items.forEach(b => {
+      const t = b.textContent.trim(), m = t.match(/^(\d+(?:\.\d+)?)(.*)$/); const frac = { '⅓': 33.3, '⅔': 66.7, '½': 50, '¼': 25 }[t];
+      const pct = frac || (/%$/.test(t) && m ? +m[1] : null);
+      if (pct != null) { const bar = document.createElement('span'); bar.className = 'bs-bar'; bar.setAttribute('aria-hidden', 'true'); bar.innerHTML = `<i style="--w:${pct}"></i>`; b.parentElement.appendChild(bar); }
+      if (m && !reduce) { b.dataset.n = m[1]; b.dataset.s = m[2]; b.dataset.dec = (m[1].split('.')[1] || '').length; b.textContent = '0' + m[2]; }
+    });
+    if (reduce || !('IntersectionObserver' in window)) { bs.classList.add('in'); return; }
+    const o = new IntersectionObserver(([e]) => { if (!e.isIntersecting) return; o.disconnect(); bs.classList.add('in'); const t0 = performance.now(); const step = now => { const k = Math.min(1, (now - t0) / 1500); items.forEach(b => { if (b.dataset.n) b.textContent = (+b.dataset.n * (1 - (1 - k) ** 3)).toFixed(+b.dataset.dec) + b.dataset.s; }); if (k < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); }, { threshold: 0.4 }); o.observe(bs);
+  });
+})();
