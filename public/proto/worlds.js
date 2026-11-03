@@ -1358,6 +1358,7 @@ document.querySelectorAll('.bl').forEach(sec => {
   document.querySelectorAll('ol.slq').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('li')].map(li => ({ n: '', b: txt(li.querySelector('b')), d: txt(li.querySelector('span')) })), kind: 'flow' }));
   document.querySelectorAll('figure.track').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('.tk-s text')].map(t => ({ n: '', b: txt(t) })), kind: 'ship', pay: txt(el.querySelector('.tk-pay')) }));
   if (/\/markets\/[^/]+\/compliance\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/)/, ''))) document.querySelectorAll('.chapter .feats').forEach(el => { const items = [...el.querySelectorAll('.feat')].map(f => ({ n: '', b: txt(f.querySelector('b')), d: txt(f.querySelector('span')) })); if (items.length >= 3 && items.length <= 8) routes.push({ fig: el, items, kind: 'gate' }); });
+  if (/^\/(who-we-serve|capabilities)\/.+/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => { const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
   if (/^\/(pricing\/(enterprise|government|roi-calculator)|about(\/(investors|food-security|sdg-delivery))?)\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => { const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
   routes.forEach(r => {
     const items = r.items.filter(x => x.b); const N = items.length; if (N < 3) return;
@@ -1490,4 +1491,57 @@ document.querySelectorAll('.bl').forEach(sec => {
   // glossary: the letter you are reading stays lit
   const az = document.querySelector('.gl-az'), terms = [...document.querySelectorAll('.gl-i[id]')];
   if (az && terms.length && 'IntersectionObserver' in window) { const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) az.querySelectorAll('a').forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id)); }), { rootMargin: '-30% 0px -60% 0px' }); terms.forEach(t => io.observe(t)); }
+})();
+
+/* ---------- Orbit explorer (Who we serve, Capabilities) and office clocks (Contact) ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const marks = '<use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-finance"></use><use href="#mk-agri"></use>';
+  function orbit(anchor, nodes, label) {
+    const N = nodes.length, R = 205, C = 280;
+    const pos = nodes.map((_, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / N; return [C + Math.cos(a) * R, C + Math.sin(a) * R]; });
+    const box = document.createElement('div'); box.className = 'orb'; box.setAttribute('role', 'group'); box.setAttribute('aria-label', label);
+    box.innerHTML = `<svg viewBox="0 0 560 560" class="orb-svg"><circle class="orb-ring" cx="${C}" cy="${C}" r="${R}"/>${pos.map((q, i) => `<line class="orb-l" data-i="${i}" x1="${C}" y1="${C}" x2="${q[0]}" y2="${q[1]}"/>`).join('')}<circle class="orb-hub" cx="${C}" cy="${C}" r="62"/><svg x="${C - 40}" y="${C - 39}" width="80" height="78" viewBox="774 418 250 244">${marks}</svg>${pos.map((q, i) => `<a class="orb-n" data-i="${i}" href="${nodes[i].href}" data-go="${nodes[i].go || ''}" style="--c:${nodes[i].c}" aria-label="${esc(nodes[i].title)}"><circle cx="${q[0]}" cy="${q[1]}" r="30"/><text x="${q[0]}" y="${q[1] + 6}" text-anchor="middle">${esc(nodes[i].n)}</text></a>`).join('')}</svg>
+      <div class="orb-panel" aria-live="polite"><p class="orb-k"></p><h3 class="orb-t"></h3><p class="orb-d"></p><ul class="orb-links"></ul></div>`;
+    anchor.insertAdjacentElement('beforebegin', box);
+    const k = box.querySelector('.orb-k'), t = box.querySelector('.orb-t'), d = box.querySelector('.orb-d'), ul = box.querySelector('.orb-links');
+    let cur = -1, timer = null, touched = false;
+    const show = i => { cur = i; const n = nodes[i]; box.style.setProperty('--c', n.c); k.textContent = n.kicker || ''; t.textContent = n.title; d.textContent = n.desc || ''; d.hidden = !n.desc;
+      ul.innerHTML = (n.links || []).map(l => `<li><a href="${l.href}" data-go="${l.go || ''}">${esc(l.t)}</a></li>`).join(''); ul.hidden = !(n.links && n.links.length);
+      box.querySelectorAll('[data-i]').forEach(e => e.classList.toggle('now', +e.dataset.i === i)); };
+    const stop = () => { touched = true; clearInterval(timer); };
+    box.querySelectorAll('.orb-n').forEach(a => { const i = +a.dataset.i; a.addEventListener('pointerenter', () => { stop(); show(i); }); a.addEventListener('focus', () => { stop(); show(i); }); a.addEventListener('click', e => { if (nodes[i].links && nodes[i].links.length > 1) { e.preventDefault(); stop(); show(i); } }); });
+    box.addEventListener('pointerenter', stop);
+    show(0);
+    if (!reduce && 'IntersectionObserver' in window) { const io = new IntersectionObserver(([e]) => { if (e.isIntersecting && !touched) timer = setInterval(() => show((cur + 1) % N), 3600); else clearInterval(timer); }, { threshold: 0.4 }); io.observe(box); }
+    return box;
+  }
+  // Who we serve: eleven roles around one record
+  const groups = document.querySelector('.groups');
+  if (groups && groups.querySelectorAll('a.aud').length >= 5) {
+    const nodes = []; let n = 0;
+    groups.querySelectorAll('.group').forEach(g => { const c = (g.getAttribute('style') || '').match(/--c:([^;]+)/); g.querySelectorAll('a.aud').forEach(a => { n++; nodes.push({ n: String(n).padStart(2, '0'), c: c ? c[1].trim() : 'var(--persian-blue)', kicker: txt(g.querySelector('h3')), title: txt(a.querySelector('b')), desc: txt(a.querySelector('span')), href: a.getAttribute('href'), go: a.dataset.go, links: [{ t: txt(a.querySelector('b')) + ' →', href: a.getAttribute('href'), go: a.dataset.go }] }); }); });
+    orbit(groups, nodes, txt(groups.closest('section').querySelector('h2'))); groups.classList.add('orb-on');
+  }
+  // Capabilities: eight groups around one record
+  const cm = document.querySelector('.life.cmap-nav');
+  if (cm && document.querySelector('figure.cmap')) {
+    const sts = [...cm.querySelectorAll('.life-st')]; if (sts.length >= 4) {
+      const nodes = sts.map(st => { const c = (st.getAttribute('style') || '').match(/--c:([^;]+)/); const links = [...st.querySelectorAll('li a')].map(a => ({ t: txt(a), href: a.getAttribute('href'), go: a.dataset.go })); return { n: txt(st.querySelector('.life-n')) || '', c: c ? c[1].trim() : 'var(--persian-blue)', kicker: '', title: txt(st.querySelector('h3')), desc: '', href: links[0] ? links[0].href : '#', go: links[0] && links[0].go, links }; });
+      orbit(cm, nodes, txt(cm.closest('section').querySelector('h2'))); cm.classList.add('orb-on');
+    }
+  }
+  // Contact: the local time at each office
+  const offs = [...document.querySelectorAll('.offices .office')];
+  if (offs.length >= 5) {
+    const zones = ['Asia/Riyadh', 'Asia/Dubai', 'Asia/Kolkata', 'Asia/Kuala_Lumpur', 'Europe/Istanbul'];
+    const lang = document.documentElement.lang || 'en'; const loc = { ar: 'ar-SA-u-nu-latn', hi: 'hi-IN-u-nu-latn' }[lang] || lang;
+    const clocks = zones.map((z, i) => { const t = document.createElement('p'); t.className = 'office-t'; offs[i].appendChild(t); let f; try { f = new Intl.DateTimeFormat(loc, { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: z }); } catch (e) { return null; } return { t, f, z }; }).filter(Boolean);
+    const tick = () => clocks.forEach(({ t, f, z }) => { const h = +new Intl.DateTimeFormat('en-GB', { hour: '2-digit', hour12: false, timeZone: z }).format(new Date()); t.innerHTML = `<i class="${h >= 6 && h < 19 ? 'day' : 'night'}" aria-hidden="true"></i><time>${f.format(new Date())}</time>`; });
+    tick(); setInterval(tick, 20000);
+  }
+  // soft spotlight on cards
+  if (matchMedia('(hover:hover)').matches && !reduce) document.querySelectorAll('.rcard, .ch-c, .aud').forEach(c => c.addEventListener('pointermove', e => { const r = c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px'); }));
 })();

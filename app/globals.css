@@ -2046,3 +2046,22 @@ ul.need[role], ul.need { grid-template-columns:minmax(0, 1fr); } ul.need li::aft
 /* glossary letters */
 .gl-az a.on { background:var(--persian-indigo); color:#fff; border-color:var(--persian-indigo); }
 @media (prefers-reduced-motion:reduce) { .news-tl li { opacity:1; } }
+
+/* ===== Who we serve, Capabilities, Contact ===== */
+.orb { display:grid; grid-template-columns:minmax(0, 1.05fr) minmax(0, 1fr); gap:clamp(24px, 4vw, 64px); align-items:center; margin:40px 0 0; padding:clamp(20px, 3vw, 40px); border-radius:24px; background:var(--scallop), var(--night); color:#fff; --c:#8f93ff; }
+.orb-svg { width:100%; height:auto; max-height:560px; overflow:visible; }
+.orb-ring { fill:none; stroke:#ffffff1f; stroke-width:2; stroke-dasharray:3 9; } .orb-hub { fill:#ffffff12; stroke:#ffffff33; stroke-width:2; } .orb-svg > svg use { fill:#fff; }
+.orb-l { stroke:#ffffff1f; stroke-width:2; transition:stroke .4s; } .orb-l.now { stroke:var(--c); stroke-width:3; }
+.orb-n { cursor:pointer; outline:none; } .orb-n circle { fill:var(--night); stroke:var(--c); stroke-width:3; transition:fill .35s, r .35s var(--ease-out); } .orb-n text { font:700 15px var(--font-display); fill:#fff; pointer-events:none; }
+.orb-n:hover circle, .orb-n:focus-visible circle, .orb-n.now circle { fill:var(--c); r:36; } .orb-n:focus-visible circle { stroke:#fff; }
+.orb-panel { display:grid; gap:12px; align-content:center; min-height:260px; }
+.orb-k { margin:0; font:600 12px/1.3 var(--font-text); letter-spacing:.16em; text-transform:uppercase; color:var(--almond-cream); min-height:16px; }
+.orb-t { margin:0; font:700 clamp(26px, 3vw, 38px)/1.15 var(--font-display); color:#fff; border-inline-start:4px solid var(--c); padding-inline-start:16px; }
+.orb-d { margin:0; font-size:18px; line-height:28px; color:var(--on-night-muted); max-width:34ch; }
+.orb-links { list-style:none; margin:6px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:10px; } .orb-links a { display:inline-flex; padding:10px 16px; border-radius:999px; border:1.5px solid #ffffff44; color:#fff; text-decoration:none; font:500 15px var(--font-text); transition:background .25s, border-color .25s, color .25s; } .orb-links a:hover { background:#fff; color:var(--brand-blue); border-color:#fff; }
+@media (min-width:900px) { .groups.orb-on, .life.cmap-nav.orb-on { display:none; } }
+@media (max-width:899px) { .orb { display:none; } }
+/* office clocks */
+.office-t { display:flex; align-items:center; gap:8px; margin:10px 0 0; font:600 18px var(--font-display); color:var(--ink-strong); font-variant-numeric:tabular-nums; } .office-t i { width:12px; height:12px; border-radius:50%; background:var(--amber-flame); } .office-t i.night { background:transparent; box-shadow:inset -4px -3px 0 0 var(--persian-indigo); border-radius:50%; width:14px; height:14px; }
+/* card spotlight */
+.rcard, .ch-c, .aud { position:relative; } .rcard::after, .ch-c::after, .aud::after { content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; opacity:0; transition:opacity .3s; background:radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), #d458441c, transparent 70%); } .rcard:hover::after, .ch-c:hover::after, .aud:hover::after { opacity:1; }
