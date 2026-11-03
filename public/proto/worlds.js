@@ -1185,3 +1185,56 @@ document.querySelectorAll('.bl').forEach(sec => {
 
 /* Header lifts once the page scrolls */
 (() => { const h = document.querySelector('.hdr'); if (!h) return; const f = () => h.classList.toggle('scrolled', scrollY > 8); addEventListener('scroll', f, { passive: true }); f(); })();
+
+/* ---------- Site-wide motion: reveal on scroll, heading rule, journey rail, "Keep exploring" ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const root = document.documentElement;
+  const SEL = '.chapter .h2, .chapter .lede, .chapter .standfirst, .chapter .feat, .chapter .life-st, .chapter .problem, .chapter .faq, .chapter .pband, .chapter .photo, .chapter .usp, .chapter .aud, .chapter .rcard, .chapter .ch-c, .chapter .glance';
+  const SKIP = '.pillars, .explainer, .ledger, .vid, .mkmap, .cmap, [data-en-only], .jr, .life::before';
+  const targets = [...document.querySelectorAll(SEL)].filter(el => !el.closest(SKIP) && !el.closest('#problem-home .problems') );
+  // the journey rail draws itself as it scrolls in
+  const lives = [...document.querySelectorAll('.life')];
+  if (!reduce && 'IntersectionObserver' in window) {
+    root.classList.add('mo');
+    const seen = new Map();
+    targets.forEach(el => { const p = el.parentElement; const i = seen.get(p) || 0; seen.set(p, i + 1); el.style.setProperty('--i', Math.min(i, 7)); el.classList.add('rv'); });
+    const io = new IntersectionObserver(ents => ents.forEach(en => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('in'); io.unobserve(en.target);
+      setTimeout(() => en.target.classList.remove('rv'), 1400);
+    }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    targets.forEach(el => io.observe(el));
+    const lio = new IntersectionObserver(ents => ents.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); lio.unobserve(en.target); } }), { threshold: 0.25 });
+    lives.forEach(l => lio.observe(l));
+  } else { lives.forEach(l => l.classList.add('in')); }
+
+  // "Keep exploring": three related pages before the closing call to action
+  const cta = document.querySelector('main .cta, .cta');
+  const lang = root.lang || 'en';
+  const T = { en: ['Keep exploring', 'Related pages'], ar: ['واصل الاستكشاف', 'صفحات ذات صلة'], ms: ['Teruskan meneroka', 'Halaman berkaitan'], tr: ['Keşfetmeye devam edin', 'İlgili sayfalar'], hi: ['खोजते रहिए', 'संबंधित पृष्ठ'] }[lang] || ['Keep exploring', 'Related pages'];
+  if (!cta || document.querySelector('.explore')) return;
+  const file = lang === 'ar' ? 'search-ar' : lang === 'ms' ? 'search-ms' : lang === 'tr' ? 'search-tr' : lang === 'hi' ? 'search-hi' : 'search';
+  const here = location.pathname.replace(/\/$/, '') || '/';
+  if (here === '/' || /^\/(ar|ms|tr|hi)$/.test(here)) return;
+  fetch('/proto/' + file + '.json').then(r => r.json()).then(d => {
+    const i = d.findIndex(p => (p[1].replace(/\/$/, '') || '/') === here);
+    if (i < 0) return;
+    const me = d[i], sec = me[3];
+    if (!sec || /^blog-/.test(me[0])) return;
+    const pool = d.filter((p, k) => k !== i && p[3] === sec && !/^blog-/.test(p[0]));
+    if (!pool.length) return;
+    const after = pool.filter(p => d.indexOf(p) > i), pick = [...after, ...pool.filter(p => !after.includes(p))].slice(0, 3);
+    const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+    const s = document.createElement('section');
+    s.className = 'explore gutter'; s.setAttribute('aria-label', T[1]);
+    s.innerHTML = `<div class="wrap"><h2 class="h2">${T[0]}</h2><ul>${pick.map((p, k) => `<li style="--i:${k}"><a href="${p[1]}" data-go="${p[0]}"><small>${esc(sec)}</small><b>${esc(p[2])}</b><span>${esc(p[5] || p[4] || '')}</span><i aria-hidden="true"></i></a></li>`).join('')}</ul></div>`;
+    cta.parentNode.insertBefore(s, cta);
+    if (!reduce && 'IntersectionObserver' in window) { const eio = new IntersectionObserver(([en]) => { if (en.isIntersecting) { s.classList.add('in'); eio.disconnect(); } }, { threshold: 0.2 }); eio.observe(s); } else s.classList.add('in');
+  }).catch(() => {});
+})();
+
+/* hero parallax */
+(() => { if (matchMedia('(prefers-reduced-motion: reduce)').matches) return; const hero = document.querySelector('.hero'), hin = hero && hero.querySelector('.hero-in'); if (!hin) return;
+  let tick = false; const f = () => { tick = false; const r = hero.getBoundingClientRect(); const p = Math.min(1, Math.max(0, -r.top / (r.height * .9))); hin.style.setProperty('--hp', p.toFixed(3)); };
+  addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(f); } }, { passive: true }); f(); })();
