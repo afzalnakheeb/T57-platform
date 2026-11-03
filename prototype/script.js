@@ -1849,9 +1849,9 @@ document.querySelectorAll('.bl').forEach(sec => {
     if (items.length < 5 || items.length > 14 || fe.querySelector('a.feat')) return;
     const N = items.length;
     const box = document.createElement('div'); box.className = 'fxe'; box.setAttribute('role', 'group');
-    box.innerHTML = `<ol class="fx-l">${items.map((x, i) => `<li><button type="button" data-i="${i}"><span>${String(i + 1).padStart(2, '0')}</span><b>${esc(x.b)}</b></button></li>`).join('')}</ol><div class="fx-p" aria-live="polite"><p class="fx-n"></p><h3 class="fx-t"></h3><p class="fx-d"></p><div class="fx-bar" aria-hidden="true"><i></i></div></div>`;
+    box.innerHTML = `<ol class="fx-l">${items.map((x, i) => `<li><button type="button" data-i="${i}"><span>${String(i + 1).padStart(2, '0')}</span><b>${esc(x.b)}</b></button></li>`).join('')}</ol><div class="fx-p" aria-live="polite"><p class="fx-n"></p><h3 class="fx-t"></h3><p class="fx-d"></p><div class="fxe-bar" aria-hidden="true"><i></i></div></div>`;
     fe.insertAdjacentElement('beforebegin', box); fe.classList.add('fx-alt');
-    const n = box.querySelector('.fx-n'), t = box.querySelector('.fx-t'), d = box.querySelector('.fx-d'), bar = box.querySelector('.fx-bar i'); let cur = 0, timer = null, touched = false;
+    const n = box.querySelector('.fx-n'), t = box.querySelector('.fx-t'), d = box.querySelector('.fx-d'), bar = box.querySelector('.fxe-bar i'); let cur = 0, timer = null, touched = false;
     const show = i => { cur = i; n.textContent = String(i + 1).padStart(2, '0') + ' / ' + String(N).padStart(2, '0'); t.textContent = items[i].b; d.textContent = items[i].d; box.querySelectorAll('.fx-l button').forEach(b => b.classList.toggle('on', +b.dataset.i === i)); bar.style.transition = 'none'; bar.style.transform = 'scaleX(0)'; void bar.offsetWidth; if (!touched && !reduce) { bar.style.transition = 'transform 5s linear'; bar.style.transform = 'scaleX(1)'; } };
     box.querySelectorAll('.fx-l button').forEach(b => b.addEventListener('click', () => { touched = true; clearInterval(timer); show(+b.dataset.i); bar.style.transition = 'none'; bar.style.transform = 'scaleX(0)'; }));
     show(0);
@@ -1928,6 +1928,45 @@ document.querySelectorAll('.bl').forEach(sec => {
       box.querySelectorAll('.crr-n').forEach(a => { const i = +a.closest('.crr-g').dataset.i; a.addEventListener('click', e => e.preventDefault()); a.addEventListener('pointerenter', () => { touched = true; clearInterval(timer); show(i); }); a.addEventListener('focus', () => { touched = true; clearInterval(timer); show(i); }); });
       show(0);
       if (!reduce && 'IntersectionObserver' in window) { const io = new IntersectionObserver(([e]) => { clearInterval(timer); if (e.isIntersecting && !touched) timer = setInterval(() => show((cur + 1) % N), 4200); }, { threshold: 0.4 }); io.observe(box); }
+    }
+  }
+})();
+
+/* ---------- Pricing overview: fee calculator; Government: programme builder ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const lang = document.documentElement.lang || 'en';
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  if (path === '/pricing') {
+    const fx = document.querySelector('.fee-ex'), steps = [...document.querySelectorAll('.ladder .ld-step')], fees = [...document.querySelectorAll('.ladder .ld-fee text')];
+    if (fx && steps.length >= 3 && fees.length === steps.length) {
+      const plans = steps.map((st, i) => ({ n: txt(st.querySelector('.ld-n')), m: txt(st.querySelector('.ld-p')), r: parseFloat(txt(fees[i]).replace(',', '.')) })).filter(x => x.n && x.r);
+      const L = { en: ['Try it: what a trade costs', 'Trade value', 'Plan', 'Fee per side', 'Each side pays this. Finance, escrow, insurance and logistics are quoted by licensed partners.'], ar: ['جرّب: كم تكلّف الصفقة', 'قيمة الصفقة', 'الخطة', 'الرسوم لكل طرف', 'يدفع كل طرف هذا المبلغ. التمويل والضمان والتأمين والخدمات اللوجستية تسعّرها الجهات المرخّصة.'], ms: ['Cuba: kos sesuatu dagangan', 'Nilai dagangan', 'Pelan', 'Yuran setiap pihak', 'Setiap pihak membayar ini. Pembiayaan, eskrow, insurans dan logistik ditawarkan oleh rakan berlesen.'], tr: ['Deneyin: bir işlemin maliyeti', 'İşlem tutarı', 'Plan', 'Taraf başına ücret', 'Her taraf bunu öder. Finansman, emanet, sigorta ve lojistik lisanslı ortaklarca fiyatlanır.'], hi: ['आज़माइए: एक सौदे की लागत', 'सौदे का मूल्य', 'प्लान', 'प्रति पक्ष शुल्क', 'हर पक्ष यह चुकाता है। वित्त, एस्क्रो, बीमा और लॉजिस्टिक्स की कीमत लाइसेंस प्राप्त भागीदार तय करते हैं।'] }[lang] || [];
+      const fmt = v => new Intl.NumberFormat({ ar: 'ar-SA-u-nu-latn', hi: 'hi-IN-u-nu-latn' }[lang] || lang, { style: 'currency', currency: 'USD', maximumFractionDigits: v < 100 ? 2 : 0 }).format(v);
+      const box = document.createElement('div'); box.className = 'feec'; let plan = Math.min(1, plans.length - 1), val = 20000;
+      box.innerHTML = `<h3>${esc(L[0])}</h3><div class="fc-row"><label for="fc-v">${esc(L[1])}</label><output class="fc-val"></output></div><input id="fc-v" class="cmp-r fc-r" type="range" min="0" max="100" value="50" step="1"><div class="fc-plans" role="group" aria-label="${esc(L[2])}">${plans.map((x, i) => `<button type="button" data-i="${i}" aria-pressed="${i === plan}"><b>${esc(x.n)}</b><span>${x.r.toFixed(2)}%</span></button>`).join('')}</div><div class="fc-out"><p class="fc-k">${esc(L[3])}</p><p class="fc-n"></p></div><ul class="fc-bars">${plans.map((x, i) => `<li data-i="${i}"><span>${esc(x.n)}</span><i><b></b></i><em></em></li>`).join('')}</ul><p class="fc-note">${esc(L[4])}</p>`;
+      fx.insertAdjacentElement('afterend', box); fx.hidden = true;
+      const r = box.querySelector('input'), vo = box.querySelector('.fc-val'), no = box.querySelector('.fc-n'); let shown = 0, raf = 0;
+      const toVal = pos => Math.round(Math.pow(10, 3 + pos / 100 * 2.7) / 500) * 500 || 1000; // $1,000 .. $500,000
+      const render = () => { const f = val * plans[plan].r / 100; vo.textContent = fmt(val); const t0 = performance.now(), from = shown; cancelAnimationFrame(raf); const step = now => { const k = reduce ? 1 : Math.min(1, (now - t0) / 380); shown = from + (f - from) * (1 - (1 - k) ** 3); no.textContent = fmt(shown); if (k < 1) raf = requestAnimationFrame(step); }; raf = requestAnimationFrame(step);
+        const max = val * plans[0].r / 100; box.querySelectorAll('.fc-bars li').forEach((li, i) => { const x = val * plans[i].r / 100; li.querySelector('b').style.width = (x / max * 100) + '%'; li.querySelector('em').textContent = fmt(x); li.classList.toggle('on', i === plan); }); box.querySelectorAll('.fc-plans button').forEach(b => b.setAttribute('aria-pressed', +b.dataset.i === plan ? 'true' : 'false')); };
+      r.value = Math.round((Math.log10(val) - 3) / 2.7 * 100); r.addEventListener('input', () => { val = toVal(+r.value); render(); });
+      box.querySelectorAll('.fc-plans button').forEach(b => b.addEventListener('click', () => { plan = +b.dataset.i; render(); })); shown = val * plans[plan].r / 100; render();
+    }
+  }
+  if (path === '/pricing/government') {
+    const grid = document.querySelector('.gov-grid'), cards = grid ? [...grid.querySelectorAll('.gov-c')] : [];
+    const progs = cards.map(c => ({ b: txt(c.querySelector('b')), d: txt(c.querySelector('span')), o: txt(c.querySelector('em')) })).filter(x => x.b && x.o);
+    if (progs.length >= 4) {
+      const L = { en: ['Build a national programme', 'Choose what your country needs', 'selected', 'What it means'], ar: ['ابنِ برنامجاً وطنياً', 'اختر ما يحتاجه بلدك', 'مختار', 'ماذا يعني ذلك'], ms: ['Bina program kebangsaan', 'Pilih apa yang negara anda perlukan', 'dipilih', 'Maksudnya'], tr: ['Ulusal program oluşturun', 'Ülkenizin ihtiyacını seçin', 'seçildi', 'Ne anlama gelir'], hi: ['राष्ट्रीय कार्यक्रम बनाइए', 'चुनिए आपके देश को क्या चाहिए', 'चुने गए', 'इसका मतलब'] }[lang] || [];
+      const box = document.createElement('div'); box.className = 'gpb'; const on = new Set([0, 3]);
+      box.innerHTML = `<div class="gp-l"><h3>${esc(L[0])}</h3><p>${esc(L[1])}</p><ul>${progs.map((x, i) => `<li><button type="button" data-i="${i}" aria-pressed="${on.has(i)}"><span class="gp-ck" aria-hidden="true"></span><span><b>${esc(x.b)}</b><small>${esc(x.d)}</small></span></button></li>`).join('')}</ul></div><div class="gp-r" aria-live="polite"><p class="gpb-c"><b></b> / ${progs.length} <span>${esc(L[2])}</span></p><ol></ol></div>`;
+      grid.insertAdjacentElement('beforebegin', box); grid.classList.add('gov-alt');
+      const ol = box.querySelector('ol'), nb = box.querySelector('.gpb-c b');
+      const render = () => { nb.textContent = on.size; ol.innerHTML = progs.map((x, i) => on.has(i) ? `<li><i aria-hidden="true"></i><span><small>${esc(x.b)}</small>${esc(x.o)}</span></li>` : '').join(''); box.querySelectorAll('.gp-l button').forEach(b => b.setAttribute('aria-pressed', on.has(+b.dataset.i) ? 'true' : 'false')); };
+      box.querySelectorAll('.gp-l button').forEach(b => b.addEventListener('click', () => { const i = +b.dataset.i; on.has(i) ? on.delete(i) : on.add(i); render(); })); render();
     }
   }
 })();
