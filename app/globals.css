@@ -1980,3 +1980,29 @@ a.feat.twelve b::after, a.feat:not(.twelve) b::after { color:var(--rosy-copper);
   .scn-pipe { position:static; grid-template-columns:minmax(0, 1fr); gap:28px; padding:8px 24px 64px; } .sp-line { display:none; } .sp-col { opacity:1; grid-template-columns:64px minmax(0, 1fr); text-align:start; justify-items:start; column-gap:16px; } .sp-ic { width:64px; height:64px; grid-row:1 / 4; } .sp-ic svg { width:30px; height:30px; } .sp-col > * { grid-column:2; } .sp-ic { grid-column:1; } .sp-k { order:0; }
 }
 @media (prefers-reduced-motion:reduce) { .scn, .scn-pipeline { height:auto; } .scn-in { position:static; min-height:0; } }
+
+/* ===== Partners and Help scenes ===== */
+.scn-routed { height:calc(100svh + var(--n, 5) * 60svh); }
+.scn-routed .scn-in { position:sticky; top:0; min-height:0; padding-block:130px 0; z-index:1; }
+.scn-route { position:sticky; top:calc(100svh - 62svh); z-index:2; max-width:1200px; margin:0 auto; padding:0 24px; }
+.scn-route svg { display:block; width:100%; height:auto; overflow:visible; max-height:46svh; }
+.sr-base { fill:none; stroke:#ffffff26; stroke-width:4; stroke-linecap:round; } .sr-run { fill:none; stroke:var(--rosy-copper); stroke-width:4; stroke-linecap:round; stroke-dasharray:1; stroke-dashoffset:1; }
+.sr-pin circle { fill:var(--night); stroke:#ffffff40; stroke-width:3; transition:fill .4s, stroke .4s; } .sr-pin text { font:700 16px var(--font-display); fill:#ffffff99; } .sr-pin .sr-l { font:600 19px var(--font-display); fill:#ffffff88; transition:fill .4s; }
+.sr-ck { fill:none; stroke:#ffffff55; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+.sr-pin.on circle { fill:var(--persian-indigo); stroke:#8f93ff; } .sr-pin.on text { fill:#fff; } .sr-pin.on .sr-ck { stroke:#fff; } .sr-pin.now circle { fill:var(--rosy-copper); stroke:var(--almond-cream); }
+.sr-mk circle { fill:#fff; stroke:var(--rosy-copper); stroke-width:4; }
+.sr-now { display:grid; gap:4px; max-width:760px; margin:18px 0 0; } .sr-now b { font:700 clamp(22px, 2.4vw, 32px)/1.25 var(--font-display); color:#fff; } .sr-now span { font-size:16px; color:var(--almond-cream); }
+.scn-steps-static { display:none; }
+/* hub */
+.scn-hub { position:absolute; inset-block:0; inset-inline-end:max(24px, calc((100% - 1200px) / 2)); width:min(480px, 44%); display:grid; place-items:center; }
+.scn-hub svg { width:100%; height:auto; overflow:visible; max-height:70svh; }
+.hb-l { stroke:#ffffff2b; stroke-width:2; transition:stroke .5s; } .hb-l.on { stroke:#8f93ff; } .hb-l.now { stroke:var(--rosy-copper); stroke-width:3; }
+.hb-n circle { fill:var(--night); stroke:#ffffff40; stroke-width:3; transition:fill .4s, stroke .4s; } .hb-n text { font:700 15px var(--font-display); fill:#ffffff99; } .hb-n.on circle { fill:var(--persian-indigo); stroke:#8f93ff; } .hb-n.now circle { fill:var(--rosy-copper); stroke:var(--almond-cream); } .hb-n.on text, .hb-n.now text { fill:#fff; }
+.hb-c { fill:#ffffff12; stroke:#ffffff33; stroke-width:2; } .scn-hub use { fill:#fff; }
+.scn-list b a { color:inherit; text-decoration:none; } .scn-list b a:hover { text-decoration:underline; }
+/* waffle */
+.dv-dots.wf { grid-template-columns:repeat(10, 1fr); max-width:420px; } .dv-dots.wf i.p { background:#8f93ff55; } .dv-dots.wf i.f { background:var(--rosy-copper); }
+/* help filter */
+.hfilter { display:block; width:min(520px, 100%); min-height:48px; margin:24px 0 8px; padding:0 18px; border:1.5px solid var(--line); border-radius:999px; background:#fff; font:400 16px var(--font-text); color:var(--ink); } .hfilter:focus { outline:none; border-color:var(--persian-indigo); box-shadow:0 0 0 3px #2f2e7d22; }
+@media (max-width:899px) { .scn-routed { height:auto; } .scn-routed .scn-in { position:static; padding-block:64px 8px; } .scn-route { display:none; } .scn-steps-static { display:grid; max-width:1200px; margin:0 auto; padding:0 24px 64px; } .scn-steps-static li { opacity:1; } .scn-hub { display:none; } }
+@media (prefers-reduced-motion:reduce) { .scn-routed { height:auto; } .scn-routed .scn-in { position:static; } .scn-route { display:none; } .scn-steps-static { display:grid; max-width:1200px; margin:0 auto; padding:0 24px 64px; } .scn-steps-static li { opacity:1; } }

@@ -1352,10 +1352,55 @@ document.querySelectorAll('.bl').forEach(sec => {
     const s = mount(fig, h, html.replace('<div class="scn-pipe', '</div><div class="scn-pipe').replace('</div></div>\n      </div><div class="scn-pipe', '</div></div></div><div class="scn-pipe'), 'scn-pipeline', N);
   });
 
+  // 4. Partners and Help: a route with pins that light as you scroll (finance repayment, shipment milestones, getting-started path)
+  const routes = [];
+  document.querySelectorAll('ol.gpath').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('li')].map(li => ({ n: txt(li.querySelector('.gp-n')), b: txt(li.querySelector('b')) })), kind: 'path' }));
+  document.querySelectorAll('ol.slq').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('li')].map(li => ({ n: '', b: txt(li.querySelector('b')), d: txt(li.querySelector('span')) })), kind: 'flow' }));
+  document.querySelectorAll('figure.track').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('.tk-s text')].map(t => ({ n: '', b: txt(t) })), kind: 'ship', pay: txt(el.querySelector('.tk-pay')) }));
+  routes.forEach(r => {
+    const items = r.items.filter(x => x.b); const N = items.length; if (N < 3) return;
+    const sec = r.fig.closest('section'); if (!sec) return;
+    const wrap = sec.querySelector('.wrap') || sec;
+    const rest = [...wrap.children].filter(e => !e.matches('.eyebrow, h2, .lede, .standfirst, p') && e !== r.fig && !e.contains(r.fig));
+    const hd = { eyebrow: txt(wrap.querySelector('.eyebrow')), h2: txt(wrap.querySelector('h2')), lede: '' };
+    if (!hd.h2) return;
+    const pts = items.map((_, i) => [70 + i * (1060 / (N - 1)), 150 + Math.sin(i * 1.25 + 0.4) * 70]);
+    const d = pts.map((q, i) => i ? `C ${(pts[i - 1][0] + q[0]) / 2} ${pts[i - 1][1]}, ${(pts[i - 1][0] + q[0]) / 2} ${q[1]}, ${q[0]} ${q[1]}` : `M ${q[0]} ${q[1]}`).join(' ');
+    const labels = N <= 6;
+    const html = `<div class="scn-in gutter"><div class="scn-grid scn-grid-top">${head({ heading: hd })}</div></div>
+      <div class="scn-route"><svg viewBox="0 0 1200 300" aria-hidden="true"><path class="sr-base" d="${d}"/><path class="sr-run" d="${d}" pathLength="1"/>${pts.map((q, i) => `<g class="sr-pin" data-k="${i}"><circle cx="${q[0]}" cy="${q[1]}" r="${labels ? 20 : 16}"/>${r.kind === 'path' ? `<text x="${q[0]}" y="${q[1] + 6}" text-anchor="middle">${esc(items[i].n || i + 1)}</text>` : `<path class="sr-ck" d="M${q[0] - 7} ${q[1]} l5 5 l9 -10"/>`}${labels ? `<text class="sr-l" x="${q[0]}" y="${q[1] + (q[1] > 150 ? 52 : -34)}" text-anchor="middle">${esc(items[i].b)}</text>` : ''}</g>`).join('')}<g class="sr-mk"><circle r="11"/></g></svg>
+        <p class="sr-now" aria-hidden="true"><b></b><span></span></p></div>
+      <ol class="scn-steps scn-steps-static">${items.map(x => `<li><b>${esc(x.b)}</b>${x.d ? `<span>${esc(x.d)}</span>` : ''}</li>`).join('')}</ol>`;
+    const s = document.createElement('section'); s.className = 'scn scn-routed'; s.style.setProperty('--n', Math.min(N, 6)); s.setAttribute('aria-label', hd.h2);
+    s.innerHTML = html.replace('</div></div>\n      <div class="scn-route', '</div></div></div><div class="scn-route');
+    sec.parentNode.insertBefore(s, sec);
+    if (rest.length === 0) sec.hidden = true; else { r.fig.hidden = true; wrap.querySelectorAll(':scope > .eyebrow, :scope > h2').forEach(e => { e.hidden = true; }); }
+    const path = s.querySelector('.sr-run'), mk = s.querySelector('.sr-mk'), nowB = s.querySelector('.sr-now b'), nowS = s.querySelector('.sr-now span');
+    scenes.push({ el: s, n: N, upd(p, k) {
+      const len = path.getTotalLength(), t = Math.min(1, Math.max(0, p * N / (N - 1)));
+      const pt = path.getPointAtLength(len * t); mk.setAttribute('transform', `translate(${pt.x} ${pt.y})`);
+      path.style.strokeDashoffset = 1 - t; const i = Math.max(0, Math.min(N - 1, k - 1));
+      nowB.textContent = items[i].b; nowS.textContent = items[i].d || (r.kind === 'ship' && k >= N && r.pay ? r.pay : '');
+    } });
+  });
+
+  // 5. Partnerships: partner types around one trade record
+  document.querySelectorAll('figure.ring').forEach(fig => {
+    const sec = fig.closest('section'); const wrap = sec && sec.querySelector('.wrap'); const auds = document.querySelectorAll('.auds a.aud');
+    if (!sec || !auds.length) return;
+    const items = [...auds].map(a => ({ b: txt(a.querySelector('b')), d: txt(a.querySelector('span')), href: a.getAttribute('href'), go: a.dataset.go }));
+    const N = items.length; const h = host(fig); if (!h) return;
+    const marks = '<use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-finance"></use><use href="#mk-agri"></use>';
+    const nodes = items.map((x, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / N; return [200 + Math.cos(a) * 160, 200 + Math.sin(a) * 160]; });
+    const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-list">${items.map((x, i) => `<li data-k="${i}"><span class="sl-n">${String(i + 1).padStart(2, '0')}</span><b><a href="${x.href}" data-go="${x.go || ''}">${esc(x.b)}</a></b><span class="sl-d">${esc(x.d)}</span></li>`).join('')}</ol></div>
+      <div class="scn-hub" aria-hidden="true"><svg viewBox="0 0 400 400">${nodes.map((q, i) => `<line class="hb-l" data-k="${i}" x1="200" y1="200" x2="${q[0]}" y2="${q[1]}"/>`).join('')}${nodes.map((q, i) => `<g class="hb-n" data-k="${i}"><circle cx="${q[0]}" cy="${q[1]}" r="26"/><text x="${q[0]}" y="${q[1] + 5}" text-anchor="middle">${String(i + 1).padStart(2, '0')}</text></g>`).join('')}<circle class="hb-c" cx="200" cy="200" r="52"/><svg x="168" y="170" width="64" height="62" viewBox="774 418 250 244">${marks}</svg></svg></div></div>`;
+    const s = mount(fig, h, html.replace('<div class="scn-hub', '</div><div class="scn-hub'), 'scn-hubbed', N);
+  });
+
   // drive them from scroll
   if (!scenes.length) return;
   const stat = () => reduce || innerWidth < 900;
-  const run = () => scenes.forEach(({ el, n }) => {
+  const run = () => scenes.forEach(sc => { const { el, n } = sc;
     let p = 1;
     if (!stat()) { const r = el.getBoundingClientRect(); p = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight))); }
     const k = stat() ? n : Math.min(n, Math.floor(p * (n + 0.35) * (n / (n + 0.35)) + 0.0001) + (p > 0.02 ? 1 : 0));
@@ -1363,8 +1408,38 @@ document.querySelectorAll('.bl').forEach(sec => {
     el.querySelectorAll('[data-k]').forEach(x => x.classList.toggle('on', +x.dataset.k < k));
     el.querySelectorAll('[data-k]').forEach(x => x.classList.toggle('now', +x.dataset.k === k - 1));
     const cur = el.querySelector('[data-cur]'); if (cur) cur.textContent = k;
-    el.classList.toggle('done', k >= n);
+    el.classList.toggle('done', k >= n); if (sc.upd) sc.upd(p, k);
   });
   let tick = false; const go = () => { if (!tick) { tick = true; requestAnimationFrame(() => { tick = false; run(); }); } };
   addEventListener('scroll', go, { passive: true }); addEventListener('resize', go); run();
+})();
+
+/* ---------- Finance partners waffle; Help filters ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  // 41 of every 100 SME trade finance applications rejected (figure stated on the page, Asian Development Bank)
+  if (path === '/partners/financial-services') {
+    const bs = document.querySelector('.bigstats'); const stat = bs && [...bs.children].find(c => /41/.test(c.textContent) || (c.querySelector('b') && c.querySelector('b').dataset.n === '41'));
+    if (stat) {
+      const label = stat.querySelector('span').textContent.trim();
+      const box = document.createElement('figure'); box.className = 'dv'; box.style.margin = '32px 0 0'; box.setAttribute('role', 'img'); box.setAttribute('aria-label', '41 / 100: ' + label);
+      box.innerHTML = `<div class="dv-reach"><div class="dv-dots wf">${Array.from({ length: 100 }, (_, i) => `<i class="${i < 41 ? 'f' : 'p'}" style="--k:${i}"></i>`).join('')}</div><ul class="dv-key"><li class="f"><b>41</b><span>${esc(label)}</span></li></ul></div>`;
+      bs.insertAdjacentElement('afterend', box);
+      if (reduce || !('IntersectionObserver' in window)) box.classList.add('in'); else { const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { box.classList.add('in'); o.disconnect(); } }, { threshold: 0.3 }); o.observe(box); }
+    }
+  }
+  // Help: type to filter how-tos and FAQs, using the site search placeholder in the visitor's language
+  const ph = (document.getElementById('srch-q') || {}).placeholder || '';
+  const mk = (anchor, items, hide) => {
+    const f = document.createElement('input'); f.type = 'search'; f.className = 'hfilter'; f.placeholder = ph; f.setAttribute('aria-label', ph); f.autocomplete = 'off';
+    anchor.insertAdjacentElement('beforebegin', f);
+    const norm = t => String(t).toLowerCase();
+    f.addEventListener('input', () => { const q = norm(f.value).trim(); items().forEach(({ el, text }) => { el.hidden = !!q && !norm(text).includes(q); }); hide && hide(); });
+  };
+  const grid = document.querySelector('.ht-grid');
+  if (grid && ph) mk(grid, () => [...grid.querySelectorAll('.ht-c')].flatMap(c => [...c.querySelectorAll('li')].map(li => ({ el: li, text: li.textContent + ' ' + c.querySelector('h3').textContent }))), () => grid.querySelectorAll('.ht-c').forEach(c => { c.hidden = ![...c.querySelectorAll('li')].some(li => !li.hidden); }));
+  const faq = document.querySelector('.faq-wrap .faq');
+  if (faq && ph && path === '/help/faq') mk(faq, () => [...faq.querySelectorAll('details')].map(d => ({ el: d, text: d.textContent })));
 })();
