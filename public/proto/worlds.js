@@ -1359,7 +1359,8 @@ document.querySelectorAll('.bl').forEach(sec => {
   document.querySelectorAll('figure.track').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('.tk-s text')].map(t => ({ n: '', b: txt(t) })), kind: 'ship', pay: txt(el.querySelector('.tk-pay')) }));
   if (/\/markets\/[^/]+\/compliance\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/)/, ''))) document.querySelectorAll('.chapter .feats').forEach(el => { const items = [...el.querySelectorAll('.feat')].map(f => ({ n: '', b: txt(f.querySelector('b')), d: txt(f.querySelector('span')) })); if (items.length >= 3 && items.length <= 8) routes.push({ fig: el, items, kind: 'gate' }); });
   if (/^\/(who-we-serve|capabilities)\/.+/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => { const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
-  if (/^\/(pricing\/(enterprise|government|roi-calculator)|about(\/(investors|food-security|sdg-delivery))?)\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => { const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
+  if (/^\/(pricing\/(enterprise|government|roi-calculator)|why-t57\/club-membership|about(\/(investors|food-security|sdg-delivery))?)\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => { const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
+  if (/^\/why-t57\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter .life').forEach(el => { const items = [...el.querySelectorAll('.life-st')].map(st => ({ n: txt(st.querySelector('.life-n')), b: txt(st.querySelector('h3')), d: [...st.querySelectorAll('li a, li span')].map(txt).filter(Boolean).join('  ·  ') })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
   routes.forEach(r => {
     const items = r.items.filter(x => x.b); const N = items.length; if (N < 3) return;
     const sec = r.fig.closest('section'); if (!sec) return;
@@ -1563,7 +1564,7 @@ document.querySelectorAll('.bl').forEach(sec => {
 (() => {
   const gl = document.querySelector('.glance .gl-rows'); if (!gl) return;
   const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/';
-  if (!/^\/(who-we-serve\/.+|markets|markets\/global-rollout)\/?$/.test(path)) return;
+  if (!/^\/(who-we-serve\/.+|markets|markets\/global-rollout|why-t57\/club-membership)\/?$/.test(path)) return;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   const sr = el => { const c = el.cloneNode(true); c.querySelectorAll('.sr').forEach(x => x.remove()); return c.textContent.trim().replace(/\s+/g, ' '); };
@@ -1578,4 +1579,23 @@ document.querySelectorAll('.bl').forEach(sec => {
   const cmp = el.querySelector('.cmp'), r = el.querySelector('.cmp-r');
   const set = v => { cmp.style.setProperty('--x', v + '%'); cmp.style.setProperty('--v', (v / 100).toFixed(3)); cmp.classList.toggle('is-with', v >= 50); }; r.addEventListener('input', () => set(r.value));
   if (!reduce && 'IntersectionObserver' in window) { const io = new IntersectionObserver(([e]) => { if (!e.isIntersecting) return; io.disconnect(); const t0 = performance.now(); const f = now => { const k = (now - t0) / 2600; if (k >= 1 || cmp.dataset.touched) return; const v = 50 + Math.sin(k * Math.PI * 2) * 34 * (1 - k); r.value = v; set(v.toFixed(1)); requestAnimationFrame(f); }; requestAnimationFrame(f); }, { threshold: 0.5 }); io.observe(cmp); r.addEventListener('pointerdown', () => { cmp.dataset.touched = '1'; }); }
+})();
+
+/* ---------- Blog index: articles by topic ---------- */
+(() => {
+  const bar = document.querySelector('.bl-bar'); if (!bar) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const btns = [...bar.querySelectorAll('button[data-t]')].filter(b => b.dataset.t !== 'all' && b.querySelector('em'));
+  if (btns.length < 3) return;
+  const rows = btns.map(b => ({ b, n: +b.querySelector('em').textContent, label: b.cloneNode(true) })); rows.forEach(r => { r.label.querySelector('em').remove(); r.label = r.label.textContent.trim(); });
+  const total = rows.reduce((a, r) => a + r.n, 0), max = Math.max(...rows.map(r => r.n));
+  const all = bar.querySelector('button[data-a="all"] em');
+  const fig = document.createElement('div'); fig.className = 'tbars'; fig.setAttribute('role', 'group');
+  fig.innerHTML = `<p class="tb-t"><b>${total}</b></p><ul>${rows.sort((a, b) => b.n - a.n).map((r, i) => `<li style="--k:${i};--w:${Math.round(r.n / max * 100)}"><button type="button" data-t="${r.b.dataset.t}"><span class="tb-l">${esc(r.label)}</span><span class="tb-b"><i></i></span><span class="tb-n">${r.n}</span></button></li>`).join('')}</ul>`;
+  bar.insertAdjacentElement('beforebegin', fig);
+  fig.querySelectorAll('button').forEach(x => x.addEventListener('click', () => { const t = btns.find(b => b.dataset.t === x.dataset.t); if (t) { t.click(); bar.scrollIntoView({ block: 'center', behavior: reduce ? 'auto' : 'smooth' }); } }));
+  const sync = () => fig.querySelectorAll('button').forEach(x => { const t = btns.find(b => b.dataset.t === x.dataset.t); x.classList.toggle('on', !!t && t.getAttribute('aria-pressed') === 'true'); });
+  bar.addEventListener('click', () => setTimeout(sync, 0)); sync();
+  if (reduce || !('IntersectionObserver' in window)) fig.classList.add('in'); else { const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { fig.classList.add('in'); o.disconnect(); } }, { threshold: 0.3 }); o.observe(fig); }
 })();

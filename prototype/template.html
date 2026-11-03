@@ -2098,6 +2098,18 @@ ul.need[role], ul.need { grid-template-columns:minmax(0, 1fr); } ul.need li::aft
 .cmp-r::-moz-range-thumb { width:28px; height:28px; border-radius:50%; background:#fff; border:0; }
 .cmp-r:focus-visible { outline:3px solid var(--rosy-copper); outline-offset:4px; border-radius:16px; }
 [dir="rtl"] .cmp-r { direction:rtl; }
+
+/* ===== Why T57, Club membership, Blog index ===== */
+.tbars { margin:36px 0 0; padding:clamp(20px, 3vw, 32px); border-radius:20px; background:var(--night); color:#fff; display:grid; grid-template-columns:auto minmax(0, 1fr); gap:clamp(20px, 4vw, 48px); align-items:center; }
+.tb-t { margin:0; font:800 clamp(64px, 8vw, 104px)/1 var(--font-display); font-variant-numeric:tabular-nums; } .tb-t b { font:inherit; }
+.tbars ul { list-style:none; margin:0; padding:0; display:grid; gap:6px; }
+.tbars button { display:grid; grid-template-columns:minmax(120px, 220px) minmax(0, 1fr) 32px; gap:14px; align-items:center; width:100%; padding:8px 12px; border:0; border-radius:10px; background:transparent; color:inherit; font:500 15px var(--font-text); text-align:start; cursor:pointer; transition:background .25s; }
+.tbars button:hover, .tbars button.on { background:#ffffff14; } .tbars button:focus-visible { outline:2px solid var(--almond-cream); }
+.tb-b { height:10px; border-radius:5px; background:#ffffff1f; overflow:hidden; } .tb-b i { display:block; height:100%; width:calc(var(--w) * 1%); border-radius:5px; background:linear-gradient(90deg, #8f93ff, var(--rosy-copper)); transform-origin:left; transform:scaleX(0); transition:transform 1.1s var(--ease-out); transition-delay:calc(var(--k) * 90ms); } [dir="rtl"] .tb-b i { transform-origin:right; } .tbars.in .tb-b i { transform:none; }
+.tb-n { font:700 16px var(--font-display); font-variant-numeric:tabular-nums; text-align:end; }
+@media (max-width:760px) { .tbars { grid-template-columns:minmax(0, 1fr); } .tbars button { grid-template-columns:minmax(0, 1fr) 32px; } .tb-b { grid-column:1 / -1; grid-row:2; } }
+.bl-c:not([hidden]) { animation:moUp .55s var(--ease-out) both; animation-delay:calc(var(--k, 0) * 25ms); }
+@media (prefers-reduced-motion:reduce) { .bl-c:not([hidden]) { animation:none; } .tb-b i { transform:none !important; transition:none !important; } }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
