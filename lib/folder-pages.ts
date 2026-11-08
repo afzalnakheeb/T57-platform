@@ -154,14 +154,14 @@ function gate(f: Folder, state: '' | 'wrong' | 'locked' | 'off', minutes = 0) {
 ${msg ? `<div class="msg" role="alert">${esc(msg)}</div>` : ''}
 <button type="submit"${off}>Open the folder</button>
 </form>
-<p class="help"><a href="/decks">← All pitch decks</a> · No PIN? Write to <a href="mailto:afzal@t57.ai">afzal@t57.ai</a></p>
+<p class="help">${f.unlisted ? '' : '<a href="/decks">← All pitch decks</a> · '}No PIN? Write to <a href="mailto:afzal@t57.ai">afzal@t57.ai</a></p>
 </main>`);
 }
 
 function folderPage(f: Folder) {
   const link = `${SITE}/decks/${f.id}`;
   const pin = folderPin(f);
-  const msg = `Dear [Name],\n\nPlease find T57's ${f.title} below: ${f.summary}\n\nLink: ${link}\nPIN: ${pin}\n\nOpen the link and enter the PIN to view the deck and the film. Please keep the PIN private.\n\nBest regards,\nAfzal Hussain Mohammed Nakheeb\nFounder and Chairman, T57 · afzal@t57.ai`;
+  const msg = `Dear [Name],\n\nPlease find T57's ${f.title} below: ${f.summary}\n\nLink: ${link}\nPIN: ${pin}\n\nOpen the link and enter the PIN to view ${f.items.some((i) => i.kind === 'film') ? 'the deck and the film' : 'the presentation'}. Please keep the PIN private.\n\nBest regards,\nAfzal Hussain Mohammed Nakheeb\nFounder and Chairman, T57 · afzal@t57.ai`;
   const cards = f.items.map((i) => `<a class="card" href="/decks/${i.id}">
 <span class="tag${i.kind === 'film' ? ' film' : ''}">${i.kind === 'film' ? 'Film' : 'Pitch deck'}</span>
 <h2>${esc(i.title)}</h2>
@@ -170,7 +170,7 @@ function folderPage(f: Folder) {
 <span class="open">${i.kind === 'film' ? 'Watch the film →' : 'Open the deck →'}</span>
 </a>`).join('\n');
   return shell(`T57 · ${f.title}`, `<main class="wrap">
-<div class="top"><img class="logo" src="/img/t57-logo-light.png" alt="T57" width="150" height="37"><a href="/decks">← All pitch decks</a></div>
+<div class="top"><img class="logo" src="/img/t57-logo-light.png" alt="T57" width="150" height="37">${f.unlisted ? '' : '<a href="/decks">← All pitch decks</a>'}</div>
 <p class="eyebrow">${esc(f.eyebrow)}</p>
 <h1>${esc(f.title)}</h1>
 <p>${esc(f.summary)}</p>
