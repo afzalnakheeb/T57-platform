@@ -514,9 +514,10 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
       const hp = logo.querySelector('.p-' + (WORLD_PETAL[name] || 'all')) || logo;
       groundTo();
       hp.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.2)' }, { transform: 'scale(1)' }], { duration: 420, easing: 'ease-in-out' });
-      await anim(main, [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(-10px)' }], { duration: 200, easing: 'ease-in' });
+      const wp = document.getElementById('wipe');
+      await wp.animate([{ clipPath: 'inset(100% 0 0 0)' }, { clipPath: 'inset(0 0 0 0)' }], { duration: 420, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' }).finished;
       location.href = href;
-      addEventListener('pageshow', e => { if (e.persisted) { clearAll([main]); busy = false; } }, { once: true });
+      addEventListener('pageshow', e => { if (e.persisted) { wp.getAnimations().forEach(a => a.cancel()); clearAll([main]); busy = false; } }, { once: true });
       return;
     }
     try { sessionStorage.setItem('t57-go', name); } catch (e) {}
@@ -565,8 +566,10 @@ window.T57_PAGES = {"petal": {"why-t57": "all", "club-membership": "all", "rfq-b
   function liftIn() {
     const main = document.getElementById('main');
     groundTo();
+    const wp = document.getElementById('wipe');
+    wp.animate([{ clipPath: 'inset(0 0 0 0)' }, { clipPath: 'inset(0 0 100% 0)' }], { duration: 560, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'both' }).finished.then(() => wp.getAnimations().forEach(a => a.cancel()));
     document.documentElement.classList.remove('lifting');
-    main.animate([{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'none' }], { duration: 360, easing: 'cubic-bezier(.2,.8,.2,1)' }).finished.then(() => { document.body.style.backgroundColor = ''; });
+    main.animate([{ opacity: 0, transform: 'translateY(22px)' }, { opacity: 1, transform: 'none' }], { duration: 640, delay: 180, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }).finished.then(() => { document.body.style.backgroundColor = ''; });
   }
 
   /* ---------- Logo intro: the five petals assemble into the mark ---------- */
@@ -1038,3 +1041,950 @@ document.querySelectorAll('.bl').forEach(sec => {
   sec.querySelectorAll('.bl-f button').forEach(b => b.addEventListener('click', () => { const k = 'a' in b.dataset ? 'a' : 't'; st[k] = b.dataset[k]; apply(); }));
   document.querySelectorAll('.bl-au').forEach(b => b.addEventListener('click', () => { st.a = b.dataset.a; st.t = 'all'; apply(); sec.querySelector('.bl-bar').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }));
 });
+
+/* ---------- Home: scroll polish, role preview, pillars, conversion helpers (adds no text of its own) ---------- */
+(() => {
+  const home = document.getElementById('home');
+  if (!home) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const $ = (s, r = home) => r.querySelector(s), $$ = (s, r = home) => [...r.querySelectorAll(s)];
+  const hero = $('.home-hero');
+
+  // Reveal on scroll: existing headings, cards and rows rise in, lightly staggered
+  if (!reduce) {
+    document.documentElement.classList.add('rv-on');
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    $$('.chapter .eyebrow, .chapter .h2, .chapter .lede, .vs-wrap, .problem, .steps li, .vid, .aud, .usp, .duo-card, .faq details, .pf, .pl, .cta h2').forEach(el => {
+      const sib = el.parentElement ? [...el.parentElement.children].indexOf(el) : 0;
+      el.style.setProperty('--d', (Math.min(sib, 5) * 0.07).toFixed(2) + 's'); el.classList.add('rv0'); io.observe(el);
+    });
+  }
+
+  // Progress bar, chapter rail (labels come from each section's own heading) and a mobile call to action
+  const bar = document.createElement('div'); bar.className = 'hx-prog'; bar.setAttribute('aria-hidden', 'true'); bar.innerHTML = '<i></i>'; home.prepend(bar);
+  const rail = document.createElement('nav'); rail.className = 'rail';
+  const stops = [hero, ...['vs-home', 'problem-home', 'pillars-home', 'why-home', 'story-home', 'who-home', 'offers-home', 'board', 'cta-home'].map(id => document.getElementById(id))].filter(Boolean);
+  const ol = document.createElement('ol');
+  stops.forEach(s => { const h = $('h1, h2', s), li = document.createElement('li'), a = document.createElement('a'); a.href = '#' + (s.id || 'main');
+    const t = document.createElement('span'); t.textContent = (h ? h.textContent : '').replace(/\s+/g, ' ').trim().slice(0, 42); a.append(t); a.setAttribute('aria-label', t.textContent); li.append(a); ol.append(li);
+    a.addEventListener('click', e => { e.preventDefault(); s.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); }); });
+  rail.append(ol); home.prepend(rail);
+  const dots = $$('a', rail);
+  const cta1 = $('.home-hero .actions a'), cta = document.getElementById('cta-home');
+  let sticky = null;
+  if (cta1) { sticky = document.createElement('div'); sticky.className = 'sticky-cta'; const c = cta1.cloneNode(true); c.className = 'btn btn-world'; c.tabIndex = -1; sticky.setAttribute('aria-hidden', 'true'); sticky.append(c); home.append(sticky); }
+  let tick = false;
+  const onScroll = () => {
+    tick = false;
+    const H = document.documentElement.scrollHeight - innerHeight;
+    bar.style.setProperty('--sp', H > 0 ? Math.min(1, scrollY / H).toFixed(4) : 0);
+    const past = hero.getBoundingClientRect().bottom < innerHeight * 0.35;
+    rail.classList.toggle('show', past);
+    const on = past && cta && cta.getBoundingClientRect().top > innerHeight * 0.8;
+    if (sticky) { sticky.classList.toggle('show', on); document.documentElement.classList.toggle('has-cta', on); }
+    let cur = 0; stops.forEach((s, i) => { if (s.getBoundingClientRect().top < innerHeight * 0.5) cur = i; });
+    dots.forEach((a, i) => a.classList.toggle('on', i === cur));
+  };
+  addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  addEventListener('resize', onScroll); onScroll();
+
+  // Magnetic hero and closing buttons
+  if (fine && !reduce) $$('.home-hero .actions .btn, .cta .actions .btn, .duo-card .btn').forEach(b => {
+    b.classList.add('mag');
+    b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(); b.style.translate = `${((e.clientX - r.left) / r.width - .5) * 10}px ${((e.clientY - r.top) / r.height - .5) * 8}px`; });
+    b.addEventListener('pointerleave', () => { b.style.translate = ''; });
+  });
+
+  // Film: a large play button over the poster (its label is the video's own label)
+  const vid = $('.vid');
+  if (vid) {
+    const v = $('video', vid), pb = document.createElement('button'); pb.type = 'button'; pb.className = 'vid-play'; pb.setAttribute('aria-label', v.getAttribute('aria-label') || '');
+    pb.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>'; $('.vid-f', vid).append(pb);
+    pb.addEventListener('click', () => v.play()); v.addEventListener('play', () => vid.classList.add('playing'));
+  }
+
+  // Five pillars: the active pillar lights its petal in the mark and the rest step back
+  const mono = $('.mono'), pls = $$('.pl');
+  if (mono && pls.length) {
+    const light = p => { mono.classList.add('has'); $$('.pt', mono).forEach(g => g.classList.toggle('on', g.dataset.p === p)); pls.forEach(x => x.classList.toggle('on', x.dataset.p === p)); };
+    light(pls[0].dataset.p);
+    const pio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) light(e.target.dataset.p); }), { rootMargin: '-42% 0px -42% 0px' });
+    pls.forEach(x => pio.observe(x));
+  }
+
+  // Who we serve: hover, focus or tap a role to preview it (wide screens)
+  const groups = $('.groups');
+  if (groups && matchMedia('(min-width: 901px)').matches) {
+    const IMG = { farmers: 'farmer', cooperatives: 'dates', 'food-processors': 'grain', enterprises: 'silos', sellers: 'ship', buyers: 'quay', traders: 'grain', financiers: 'silos', governments: 'port', 'service-providers': 'port', collaborators: 'paddy' };
+    const list = document.createElement('div'); list.className = 'pk-list'; [...groups.children].forEach(g => list.append(g)); groups.append(list); groups.classList.add('picking');
+    const prev = document.createElement('a'); prev.className = 'pk-prev'; prev.innerHTML = '<img alt="" width="760" height="760" decoding="async"><div class="pk-in"><b></b><p></p><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>'; groups.append(prev);
+    const img = $('img', prev), nm = $('b', prev), sm = $('p', prev), auds = $$('.aud', groups);
+    const pick = a => {
+      if (a.classList.contains('on')) return;
+      auds.forEach(x => x.classList.toggle('on', x === a)); prev.classList.add('swap');
+      setTimeout(() => { img.src = `/img/home/${IMG[a.dataset.go] || 'paddy'}.webp`; nm.textContent = $('b', a).textContent; sm.textContent = $('span', a).textContent; prev.href = a.getAttribute('href'); prev.dataset.go = a.dataset.go; prev.classList.remove('swap'); }, reduce ? 0 : 200);
+    };
+    const first = auds.find(a => a.dataset.go === 'farmers') || auds[0]; first.classList.add('on'); img.src = `/img/home/${IMG[first.dataset.go] || 'paddy'}.webp`; nm.textContent = $('b', first).textContent; sm.textContent = $('span', first).textContent; prev.href = first.getAttribute('href'); prev.dataset.go = first.dataset.go;
+    auds.forEach(a => { a.addEventListener('pointerenter', () => fine && pick(a)); a.addEventListener('focus', () => pick(a)); });
+  }
+})();
+
+/* ---------- Feel: inertial scrolling and a quiet cursor (fine pointers only) ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  const root = document.documentElement;
+  let target = scrollY, cur = scrollY, active = false;
+  const max = () => root.scrollHeight - innerHeight;
+  const blocked = el => {
+    if (el.closest('dialog[open], textarea, select, input, video, .menu, .srch, .t57ai, .vs-wrap')) return true;
+    for (let n = el; n && n !== document.body && n !== root; n = n.parentElement) {
+      const o = getComputedStyle(n).overflowY;
+      if ((o === 'auto' || o === 'scroll') && n.scrollHeight > n.clientHeight + 1) return true;
+    }
+    return false;
+  };
+  const loop = () => {
+    cur += (target - cur) * 0.11;
+    if (Math.abs(target - cur) < 0.4) { cur = target; active = false; scrollTo(0, cur); root.classList.remove('sm'); return; }
+    scrollTo(0, cur); requestAnimationFrame(loop);
+  };
+  addEventListener('wheel', e => {
+    if (e.ctrlKey || e.metaKey || Math.abs(e.deltaX) > Math.abs(e.deltaY) || blocked(e.target)) return;
+    e.preventDefault();
+    const d = e.deltaMode === 1 ? e.deltaY * 34 : e.deltaMode === 2 ? e.deltaY * innerHeight : e.deltaY;
+    if (!active) { cur = scrollY; target = scrollY; active = true; root.classList.add('sm'); requestAnimationFrame(loop); }
+    target = Math.min(max(), Math.max(0, target + d * 0.9));
+  }, { passive: false });
+  addEventListener('scroll', () => { if (!active) { cur = target = scrollY; } }, { passive: true });
+
+  const ring = document.createElement('div'); ring.className = 'cur'; ring.setAttribute('aria-hidden', 'true'); document.body.appendChild(ring);
+  let x = -100, y = -100, rx = x, ry = y, seen = false;
+  addEventListener('pointermove', e => { x = e.clientX; y = e.clientY; if (!seen) { seen = true; rx = x; ry = y; ring.classList.add('on'); }
+    ring.classList.toggle('link', !!e.target.closest('a, button, summary, label, [role=tab], input, .vid-play')); }, { passive: true });
+  addEventListener('pointerdown', () => ring.classList.add('down')); addEventListener('pointerup', () => ring.classList.remove('down'));
+  document.addEventListener('pointerleave', () => ring.classList.remove('on')); document.addEventListener('pointerenter', () => seen && ring.classList.add('on'));
+  const tick = () => { rx += (x - rx) * 0.2; ry += (y - ry) * 0.2; ring.style.transform = `translate3d(${rx}px, ${ry}px, 0)`; requestAnimationFrame(tick); };
+  tick();
+})();
+
+/* The story: one pinned stage walks through verify, agree, finance and deliver */
+(() => {
+  const st = document.querySelector('[data-story]'); if (!st) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches, mq = matchMedia('(min-width: 901px)');
+  const sls = [...st.querySelectorAll('.sl')], sps = [...st.querySelectorAll('.sp')], bar = st.querySelector('.story-bar');
+  const run = () => {
+    const pin = mq.matches && !reduce; st.classList.toggle('pin', pin);
+    if (!pin) { sps.forEach(x => x.classList.add('on')); sls.forEach(x => x.classList.add('on')); return; }
+    const r = st.getBoundingClientRect(), p = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight))), i = Math.min(sls.length - 1, Math.floor(p * sls.length));
+    bar.style.setProperty('--sp', p.toFixed(3)); sls.forEach((x, k) => x.classList.toggle('on', k === i)); sps.forEach((x, k) => x.classList.toggle('on', k === i));
+  };
+  addEventListener('scroll', () => requestAnimationFrame(run), { passive: true }); addEventListener('resize', run); run();
+})();
+
+/* Header lifts once the page scrolls */
+(() => { const h = document.querySelector('.hdr'); if (!h) return; const f = () => h.classList.toggle('scrolled', scrollY > 8); addEventListener('scroll', f, { passive: true }); f(); })();
+
+/* ---------- Site-wide motion: reveal on scroll, heading rule, journey rail, "Keep exploring" ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const root = document.documentElement;
+  const SEL = '.chapter .h2, .chapter .lede, .chapter .standfirst, .chapter .feat, .chapter .life-st, .chapter .problem, .chapter .faq, .chapter .pband, .chapter .photo, .chapter .usp, .chapter .aud, .chapter .rcard, .chapter .ch-c, .chapter .glance';
+  const SKIP = '.pillars, .explainer, .ledger, .vid, .mkmap, .cmap, [data-en-only], .jr, .life::before';
+  const targets = [...document.querySelectorAll(SEL)].filter(el => !el.closest(SKIP) && !el.closest('#problem-home .problems') );
+  // the journey rail draws itself as it scrolls in
+  const lives = [...document.querySelectorAll('.life')];
+  if (!reduce && 'IntersectionObserver' in window) {
+    root.classList.add('mo');
+    const seen = new Map();
+    targets.forEach(el => { const p = el.parentElement; const i = seen.get(p) || 0; seen.set(p, i + 1); el.style.setProperty('--i', Math.min(i, 7)); el.classList.add('rv'); });
+    const io = new IntersectionObserver(ents => ents.forEach(en => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('in'); io.unobserve(en.target);
+      setTimeout(() => en.target.classList.remove('rv'), 1400);
+    }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    targets.forEach(el => io.observe(el));
+    const lio = new IntersectionObserver(ents => ents.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); lio.unobserve(en.target); } }), { threshold: 0.25 });
+    lives.forEach(l => lio.observe(l));
+  } else { lives.forEach(l => l.classList.add('in')); }
+
+  // "Keep exploring": three related pages before the closing call to action
+  const cta = document.querySelector('main .cta, .cta');
+  const lang = root.lang || 'en';
+  const T = { en: ['Keep exploring', 'Related pages'], ar: ['واصل الاستكشاف', 'صفحات ذات صلة'], ms: ['Teruskan meneroka', 'Halaman berkaitan'], tr: ['Keşfetmeye devam edin', 'İlgili sayfalar'], hi: ['खोजते रहिए', 'संबंधित पृष्ठ'] }[lang] || ['Keep exploring', 'Related pages'];
+  if (!cta || document.querySelector('.explore')) return;
+  const file = lang === 'ar' ? 'search-ar' : lang === 'ms' ? 'search-ms' : lang === 'tr' ? 'search-tr' : lang === 'hi' ? 'search-hi' : 'search';
+  const here = location.pathname.replace(/\/$/, '') || '/';
+  if (here === '/' || /^\/(ar|ms|tr|hi)$/.test(here)) return;
+  fetch('/proto/' + file + '.json').then(r => r.json()).then(d => {
+    const i = d.findIndex(p => (p[1].replace(/\/$/, '') || '/') === here);
+    if (i < 0) return;
+    const me = d[i], sec = me[3];
+    if (!sec || /^blog-/.test(me[0])) return;
+    const pool = d.filter((p, k) => k !== i && p[3] === sec && !/^blog-/.test(p[0]));
+    if (!pool.length) return;
+    const after = pool.filter(p => d.indexOf(p) > i), pick = [...after, ...pool.filter(p => !after.includes(p))].slice(0, 3);
+    const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+    const s = document.createElement('section');
+    s.className = 'explore gutter'; s.setAttribute('aria-label', T[1]);
+    s.innerHTML = `<div class="wrap"><h2 class="h2">${T[0]}</h2><ul>${pick.map((p, k) => `<li style="--i:${k}"><a href="${p[1]}" data-go="${p[0]}"><small>${esc(sec)}</small><b>${esc(p[2])}</b><span>${esc(p[5] || p[4] || '')}</span><i aria-hidden="true"></i></a></li>`).join('')}</ul></div>`;
+    cta.parentNode.insertBefore(s, cta);
+    if (!reduce && 'IntersectionObserver' in window) { const eio = new IntersectionObserver(([en]) => { if (en.isIntersecting) { s.classList.add('in'); eio.disconnect(); } }, { threshold: 0.2 }); eio.observe(s); } else s.classList.add('in');
+  }).catch(() => {});
+})();
+
+/* hero parallax */
+(() => { if (matchMedia('(prefers-reduced-motion: reduce)').matches) return; const hero = document.querySelector('.hero'), hin = hero && hero.querySelector('.hero-in'); if (!hin) return;
+  let tick = false; const f = () => { tick = false; const r = hero.getBoundingClientRect(); const p = Math.min(1, Math.max(0, -r.top / (r.height * .9))); hin.style.setProperty('--hp', p.toFixed(3)); };
+  addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(f); } }, { passive: true }); f(); })();
+
+/* ---------- Data visuals drawn from each page's own figures ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const lang = document.documentElement.lang || 'en';
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const reveal = (el, th = 0.3) => { if (reduce || !('IntersectionObserver' in window)) { el.classList.add('in'); return; } const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { el.classList.add('in'); o.disconnect(); } }, { threshold: th }); o.observe(el); };
+  const num = s => parseFloat(String(s).replace(/[^0-9.]/g, ''));
+
+  // Pricing plans: trade fee per side falls as the plan grows, read from the comparison table
+  const pt = document.querySelector('table.pt');
+  if (pt && path === '/pricing/plans') {
+    const names = [...pt.querySelectorAll('thead th[scope="col"] > b')].map(b => b.textContent.trim());
+    const fee = pt.querySelector('tr.pt-fee'), price = pt.querySelector('tr.pt-price');
+    if (fee && price && names.length) {
+      const fv = [...fee.querySelectorAll('td')].map(td => td.textContent.trim()), pv = [...price.querySelectorAll('td')].map(td => td.textContent.trim());
+      const nums = fv.map(num), max = Math.max(...nums);
+      const T = { en: ['Higher plan, lower fee', 'Trade fee per side, by plan'], ar: ['خطة أعلى، رسوم أقل', ''], ms: ['Pelan lebih tinggi, yuran lebih rendah', ''], tr: ['Daha yüksek plan, daha düşük ücret', ''], hi: ['ऊँचा प्लान, कम शुल्क', ''] }[lang] || ['Higher plan, lower fee', ''];
+      const sub = fee.querySelector('th').textContent.trim();
+      const box = document.createElement('figure');
+      box.className = 'dv'; box.style.margin = '40px 0 0'; box.setAttribute('role', 'img'); box.setAttribute('aria-label', T[0] + ': ' + names.map((n, i) => n + ' ' + fv[i]).join(', '));
+      box.innerHTML = `<h3>${esc(T[0])}</h3><p>${esc(sub)}</p><div class="dv-bars" style="--n:${names.length}">${nums.map((v, i) => `<div class="dv-bar" style="--h:${Math.round(v / max * 78) + 10};--k:${i}"><b>${esc(fv[i])}</b><i></i></div>`).join('')}</div><div class="dv-lab" style="--n:${names.length}">${names.map((n, i) => `<span><b>${esc(n)}</b>${esc(pv[i])}</span>`).join('')}</div>`;
+      pt.closest('.pt-wrap').insertAdjacentElement('afterend', box); reveal(box);
+    }
+  }
+
+  // Markets: how far T57 reaches (figures stated on the page: 5 founding, 101 planned, 195 open online)
+  const L = { en: ['Founding markets', 'Planned markets', 'Countries open online'], ar: ['أسواق مؤسِّسة', 'أسواق مخطط لها', 'دولة متاحة عبر الإنترنت'], ms: ['Pasaran pengasas', 'Pasaran dirancang', 'Negara dibuka dalam talian'], tr: ['Kurucu pazarlar', 'Planlanan pazarlar', 'Çevrimiçi açık ülke'], hi: ['संस्थापक बाज़ार', 'योजनाबद्ध बाज़ार', 'ऑनलाइन खुले देश'] }[lang] || [];
+  if ((path === '/markets' || path === '/markets/global') && L.length) {
+    const sec = document.querySelector('main .chapter:not(.alt) .wrap, .chapter .wrap');
+    const std = document.querySelector('.chapter .standfirst');
+    if (std) {
+      const dots = Array.from({ length: 195 }, (_, i) => `<i class="${i < 5 ? 'f' : i < 101 ? 'p' : ''}" style="--k:${i}"></i>`).join('');
+      const box = document.createElement('figure'); box.className = 'dv'; box.style.margin = '40px 0 56px'; box.setAttribute('role', 'img'); box.setAttribute('aria-label', `5 ${L[0]}, 101 ${L[1]}, 195 ${L[2]}`);
+      box.innerHTML = `<div class="dv-reach"><div class="dv-dots">${dots}</div><ul class="dv-key"><li class="f"><b data-to="5">5</b><span>${esc(L[0])}</span></li><li class="p"><b data-to="101">101</b><span>${esc(L[1])}</span></li><li><b data-to="195">195</b><span>${esc(L[2])}</span></li></ul></div>`;
+      std.insertAdjacentElement('afterend', box); reveal(box, 0.35);
+      if (!reduce) { box.querySelectorAll('[data-to]').forEach(b => { b.textContent = '0'; }); const o = new IntersectionObserver(([e]) => { if (!e.isIntersecting) return; o.disconnect(); const t0 = performance.now(); const step = now => { const k = Math.min(1, (now - t0) / 1600); box.querySelectorAll('[data-to]').forEach(b => { b.textContent = Math.round(+b.dataset.to * (1 - (1 - k) ** 3)); }); if (k < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); }, { threshold: 0.35 }); o.observe(box); }
+    }
+  }
+
+  // Big stats: count up, with a proportion bar for the percentages
+  document.querySelectorAll('.bigstats').forEach(bs => {
+    const items = [...bs.querySelectorAll('b')];
+    items.forEach(b => {
+      const t = b.textContent.trim(), m = t.match(/^(\d+(?:\.\d+)?)(.*)$/); const frac = { '⅓': 33.3, '⅔': 66.7, '½': 50, '¼': 25 }[t];
+      const pct = frac || (/%$/.test(t) && m ? +m[1] : null);
+      if (pct != null) { const bar = document.createElement('span'); bar.className = 'bs-bar'; bar.setAttribute('aria-hidden', 'true'); bar.innerHTML = `<i style="--w:${pct}"></i>`; b.parentElement.appendChild(bar); }
+      if (m && !reduce) { b.dataset.n = m[1]; b.dataset.s = m[2]; b.dataset.dec = (m[1].split('.')[1] || '').length; b.textContent = '0' + m[2]; }
+    });
+    if (reduce || !('IntersectionObserver' in window)) { bs.classList.add('in'); return; }
+    const o = new IntersectionObserver(([e]) => { if (!e.isIntersecting) return; o.disconnect(); bs.classList.add('in'); const t0 = performance.now(); const step = now => { const k = Math.min(1, (now - t0) / 1500); items.forEach(b => { if (b.dataset.n) b.textContent = (+b.dataset.n * (1 - (1 - k) ** 3)).toFixed(+b.dataset.dec) + b.dataset.s; }); if (k < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); }, { threshold: 0.4 }); o.observe(bs);
+  });
+})();
+
+/* ---------- Scroll-driven scenes: Trust passport, layer stacks (Platform, AI), AI-advises-people-decide pipeline ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const CHECK = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>';
+  const scenes = [];
+  // where a scene goes: before the source's section; if the section holds nothing else, the section is replaced
+  function host(fig) {
+    const sec = fig.closest('section.chapter, section'); if (!sec) return null;
+    const wrap = sec.querySelector('.wrap') || sec;
+    const rest = [...wrap.children].filter(e => !e.matches('.eyebrow, h2, .lede, .standfirst') && e !== fig && !e.contains(fig));
+    const heading = { eyebrow: txt(wrap.querySelector('.eyebrow')), h2: txt(wrap.querySelector('h2')), lede: txt(wrap.querySelector('.lede, .standfirst')) };
+    return { sec, replace: rest.length === 0, heading };
+  }
+  function mount(fig, h, html, cls, n) {
+    const s = document.createElement('section'); s.className = 'scn ' + cls; s.style.setProperty('--n', n); s.setAttribute('aria-label', h.heading.h2 || fig.getAttribute('aria-label') || '');
+    s.innerHTML = html; h.sec.parentNode.insertBefore(s, h.sec);
+    if (h.replace) h.sec.hidden = true; else { fig.hidden = true; const w = h.sec.querySelector('.wrap') || h.sec; w.querySelectorAll(':scope > .eyebrow, :scope > h2, :scope > .lede').forEach(e => { e.hidden = true; }); }
+    scenes.push({ el: s, n }); return s;
+  }
+  const head = h => `<div class="scn-copy">${h.heading.eyebrow ? `<p class="eyebrow">${esc(h.heading.eyebrow)}</p>` : ''}<h2 class="h2">${esc(h.heading.h2)}</h2>${h.heading.lede ? `<p class="lede">${esc(h.heading.lede)}</p>` : ''}`;
+
+  // 1. Trust: a passport that collects its checks as you scroll
+  document.querySelectorAll('figure.tpass').forEach(fig => {
+    const rows = [...fig.querySelectorAll('.tp-card ol li')].map(li => ({ b: txt(li.querySelector('b')), s: txt(li.querySelector('span')) })).filter(r => r.b);
+    if (rows.length < 2) return; const h = host(fig); if (!h) return;
+    const label = txt(fig.querySelector('.tp-head span')) || 'T57', logo = fig.querySelector('.tp-head svg'), stamp = txt(fig.querySelector('.tp-stamp'));
+    if (!h.heading.h2) h.heading.h2 = fig.getAttribute('aria-label') || label;
+    const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-steps">${rows.map((r, i) => `<li data-k="${i}"><b>${esc(r.b)}</b>${r.s ? `<span>${esc(r.s)}</span>` : ''}</li>`).join('')}</ol></div>
+      <div class="scn-card tcard" role="img" aria-label="${esc(label)}"><div class="tc-head">${logo ? logo.outerHTML : ''}<span>${esc(label)}</span><em class="tc-n"><b data-cur>0</b> / ${rows.length}</em></div>
+        <div class="tc-bar" style="--n:${rows.length}">${rows.map((_, i) => `<i data-k="${i}"></i>`).join('')}</div>
+        <ul class="tc-rows">${rows.map((r, i) => `<li data-k="${i}">${CHECK}<b>${esc(r.b)}</b></li>`).join('')}</ul>${stamp ? `<p class="tc-stamp">${esc(stamp)}</p>` : ''}</div></div>`;
+    mount(fig, h, html.replace('<div class="scn-card', '</div><div class="scn-card'), 'scn-trust', rows.length);
+  });
+
+  // 2. Platform and AI: layers that separate and light up one at a time
+  const stacks = [...document.querySelectorAll('figure.pboard'), ...document.querySelectorAll('figure.ailayers, .ailayers')].filter((e, i, a) => a.indexOf(e) === i && !e.parentElement.closest('.ailayers'));
+  stacks.forEach(fig => {
+    const items = [...fig.querySelectorAll('ol > li')].map(li => ({ n: txt(li.querySelector('.pb-n, .ly-n')), b: txt(li.querySelector('b')), d: txt(li.querySelector('span:last-child:not(.pb-n):not(.ly-n)')), ic: li.querySelector('svg') })).filter(x => x.b);
+    if (items.length < 2) return; const h = host(fig); if (!h) return;
+    if (!h.heading.h2) h.heading.h2 = fig.getAttribute('aria-label') || items[0].b;
+    const N = items.length;
+    const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-list">${items.map((x, i) => `<li data-k="${i}"><span class="sl-n">${esc(x.n || String(i + 1).padStart(2, '0'))}</span><b>${esc(x.b)}</b>${x.d ? `<span class="sl-d">${esc(x.d)}</span>` : ''}</li>`).join('')}</ol></div>
+      <div class="scn-plates" aria-hidden="true" style="--n:${N}"><div class="plt-stage">${items.map((x, i) => `<div class="plt" data-k="${i}" style="--k:${i}"><span>${esc(x.n || String(i + 1).padStart(2, '0'))}</span></div>`).join('')}<i class="plt-spine"></i></div></div></div>`;
+    mount(fig, h, html.replace('<div class="scn-plates', '</div><div class="scn-plates'), 'scn-stack', N);
+  });
+
+  // 3. AI pipeline: data in, model, output, and a person decides
+  document.querySelectorAll('figure.aipipe').forEach(fig => {
+    const cols = [...fig.querySelectorAll('.ap-col')].map(c => ({ k: txt(c.querySelector('.ap-k')), li: [...c.querySelectorAll('li')].map(txt), b: txt(c.querySelector('b')), ic: c.querySelector('svg'), human: c.classList.contains('ap-human') }));
+    if (cols.length < 3) return; const h = host(fig); if (!h) return;
+    if (!h.heading.h2) h.heading.h2 = fig.getAttribute('aria-label') || '';
+    const N = cols.length;
+    const html = `<div class="scn-in gutter"><div class="scn-grid scn-grid-top">${head(h)}</div></div>
+      <div class="scn-pipe" style="--n:${N}"><i class="sp-line"></i><i class="sp-dot"></i>${cols.map((c, i) => `<div class="sp-col${c.human ? ' human' : ''}" data-k="${i}"><p class="sp-k">${esc(c.k)}</p><div class="sp-ic">${c.ic ? c.ic.outerHTML : (i === 0 ? '<svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>' : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h4"/></svg>')}</div>${c.li.length ? `<ul>${c.li.map(l => `<li>${esc(l)}</li>`).join('')}</ul>` : ''}${c.b ? `<b>${esc(c.b)}</b>` : ''}</div>`).join('')}</div>`;
+    const s = mount(fig, h, html.replace('<div class="scn-pipe', '</div><div class="scn-pipe').replace('</div></div>\n      </div><div class="scn-pipe', '</div></div></div><div class="scn-pipe'), 'scn-pipeline', N);
+  });
+
+  // 4. Partners and Help: a route with pins that light as you scroll (finance repayment, shipment milestones, getting-started path)
+  const routes = [];
+  document.querySelectorAll('ol.gpath').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('li')].map(li => ({ n: txt(li.querySelector('.gp-n')), b: txt(li.querySelector('b')) })), kind: 'path' }));
+  document.querySelectorAll('ol.slq').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('li')].map(li => ({ n: '', b: txt(li.querySelector('b')), d: txt(li.querySelector('span')) })), kind: 'flow' }));
+  document.querySelectorAll('figure.track').forEach(el => routes.push({ fig: el, items: [...el.querySelectorAll('.tk-s text')].map(t => ({ n: '', b: txt(t) })), kind: 'ship', pay: txt(el.querySelector('.tk-pay')) }));
+  if (/\/markets\/[^/]+\/compliance\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/)/, ''))) document.querySelectorAll('.chapter .feats').forEach(el => { const items = [...el.querySelectorAll('.feat')].map(f => ({ n: '', b: txt(f.querySelector('b')), d: txt(f.querySelector('span')) })); if (items.length >= 3 && items.length <= 8) routes.push({ fig: el, items, kind: 'gate' }); });
+  if (/^\/(who-we-serve|capabilities)\/.+|platform\/domestic-trade\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => { const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
+  if (/^\/(pricing\/(enterprise|government|roi-calculator)|why-t57\/club-membership|partners\/(research|country-partner|apply)|about(\/(investors|food-security|sdg-delivery))?)\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => { const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
+  if (/^\/why-t57\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter .life').forEach(el => { const items = [...el.querySelectorAll('.life-st')].map(st => ({ n: txt(st.querySelector('.life-n')), b: txt(st.querySelector('h3')), d: [...st.querySelectorAll('li a, li span')].map(txt).filter(Boolean).join('  ·  ') })); if (items.length >= 3 && items.length <= 7) routes.push({ fig: el, items, kind: 'gate' }); });
+  routes.forEach(r => {
+    const items = r.items.filter(x => x.b); const N = items.length; if (N < 3) return;
+    const sec = r.fig.closest('section'); if (!sec) return;
+    const wrap = sec.querySelector('.wrap') || sec;
+    const rest = [...wrap.children].filter(e => !e.matches('.eyebrow, h2, .lede, .standfirst, p') && e !== r.fig && !e.contains(r.fig));
+    const hd = { eyebrow: txt(wrap.querySelector('.eyebrow')), h2: txt(wrap.querySelector('h2')), lede: '' };
+    if (!hd.h2) return;
+    const pts = items.map((_, i) => [70 + i * (1060 / (N - 1)), 150 + Math.sin(i * 1.25 + 0.4) * 70]);
+    const d = pts.map((q, i) => i ? `C ${(pts[i - 1][0] + q[0]) / 2} ${pts[i - 1][1]}, ${(pts[i - 1][0] + q[0]) / 2} ${q[1]}, ${q[0]} ${q[1]}` : `M ${q[0]} ${q[1]}`).join(' ');
+    const labels = N <= 6 && r.kind !== 'gate';
+    const html = `<div class="scn-in gutter"><div class="scn-grid scn-grid-top">${head({ heading: hd })}</div></div>
+      <div class="scn-route"><svg viewBox="0 0 1200 300" aria-hidden="true"><path class="sr-base" d="${d}"/><path class="sr-run" d="${d}" pathLength="1"/>${pts.map((q, i) => `<g class="sr-pin" data-k="${i}"><circle cx="${q[0]}" cy="${q[1]}" r="${labels ? 20 : 16}"/>${r.kind === 'path' ? `<text x="${q[0]}" y="${q[1] + 6}" text-anchor="middle">${esc(items[i].n || i + 1)}</text>` : `<path class="sr-ck" d="M${q[0] - 7} ${q[1]} l5 5 l9 -10"/>`}${labels ? `<text class="sr-l" x="${q[0]}" y="${q[1] + (q[1] > 150 ? 52 : -34)}" text-anchor="middle">${esc(items[i].b)}</text>` : ''}</g>`).join('')}<g class="sr-mk"><circle r="11"/></g></svg>
+        <p class="sr-now" aria-hidden="true"><b></b><span></span></p></div>
+      <ol class="scn-steps scn-steps-static">${items.map(x => `<li><b>${esc(x.b)}</b>${x.d ? `<span>${esc(x.d)}</span>` : ''}</li>`).join('')}</ol>`;
+    const s = document.createElement('section'); s.className = 'scn scn-routed'; s.style.setProperty('--n', Math.min(N, 6)); s.setAttribute('aria-label', hd.h2);
+    s.innerHTML = html.replace('</div></div>\n      <div class="scn-route', '</div></div></div><div class="scn-route');
+    sec.parentNode.insertBefore(s, sec);
+    if (rest.length === 0) sec.hidden = true; else { r.fig.hidden = true; wrap.querySelectorAll(':scope > .eyebrow, :scope > h2').forEach(e => { e.hidden = true; }); }
+    const path = s.querySelector('.sr-run'), mk = s.querySelector('.sr-mk'), nowB = s.querySelector('.sr-now b'), nowS = s.querySelector('.sr-now span');
+    scenes.push({ el: s, n: N, upd(p, k) {
+      const len = path.getTotalLength(), t = Math.min(1, Math.max(0, p * N / (N - 1)));
+      const pt = path.getPointAtLength(len * t); mk.setAttribute('transform', `translate(${pt.x} ${pt.y})`);
+      path.style.strokeDashoffset = 1 - t; const i = Math.max(0, Math.min(N - 1, k - 1));
+      nowB.textContent = items[i].b; nowS.textContent = items[i].d || (r.kind === 'ship' && k >= N && r.pay ? r.pay : '');
+    } });
+  });
+
+  // 5. Partnerships: partner types around one trade record
+  document.querySelectorAll('figure.ring').forEach(fig => {
+    const sec = fig.closest('section'); const wrap = sec && sec.querySelector('.wrap'); const auds = document.querySelectorAll('.auds a.aud');
+    if (!sec || !auds.length) return;
+    const items = [...auds].map(a => ({ b: txt(a.querySelector('b')), d: txt(a.querySelector('span')), href: a.getAttribute('href'), go: a.dataset.go }));
+    const N = items.length; const h = host(fig); if (!h) return;
+    const marks = '<use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-finance"></use><use href="#mk-agri"></use>';
+    const nodes = items.map((x, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / N; return [200 + Math.cos(a) * 160, 200 + Math.sin(a) * 160]; });
+    const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-list">${items.map((x, i) => `<li data-k="${i}"><span class="sl-n">${String(i + 1).padStart(2, '0')}</span><b><a href="${x.href}" data-go="${x.go || ''}">${esc(x.b)}</a></b><span class="sl-d">${esc(x.d)}</span></li>`).join('')}</ol></div>
+      <div class="scn-hub" aria-hidden="true"><svg viewBox="0 0 400 400">${nodes.map((q, i) => `<line class="hb-l" data-k="${i}" x1="200" y1="200" x2="${q[0]}" y2="${q[1]}"/>`).join('')}${nodes.map((q, i) => `<g class="hb-n" data-k="${i}"><circle cx="${q[0]}" cy="${q[1]}" r="26"/><text x="${q[0]}" y="${q[1] + 5}" text-anchor="middle">${String(i + 1).padStart(2, '0')}</text></g>`).join('')}<circle class="hb-c" cx="200" cy="200" r="52"/><svg x="168" y="170" width="64" height="62" viewBox="774 418 250 244">${marks}</svg></svg></div></div>`;
+    const s = mount(fig, h, html.replace('<div class="scn-hub', '</div><div class="scn-hub'), 'scn-hubbed', N);
+  });
+
+  // 6. Global rollout: the market map fills as the phases advance
+  document.querySelectorAll('ol.waves').forEach(fig => {
+    const waves = [...fig.querySelectorAll(':scope > .wave')].map(w => ({ n: +(w.querySelector('.wv-n') || {}).dataset?.n || 0, k: txt(w.querySelector('.wv-k')), b: txt(w.querySelector('h3')), d: txt(w.querySelector('.wv-d')), chips: [...w.querySelectorAll('ul li')].map(txt) })).filter(w => w.n);
+    if (waves.length < 3 || !/global-rollout/.test(location.pathname)) return; const h = host(fig); if (!h) return;
+    const total = waves[waves.length - 1].n; const phaseOf = i => waves.findIndex(w => i < w.n);
+    const unit = txt(fig.querySelector('.wv-bar small')) || '';
+    const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-list">${waves.map((w, i) => `<li data-k="${i}"><span class="sl-n">${i + 1}</span><b>${esc(w.b)}</b><span class="sl-d">${esc(w.k)}${w.d ? ' · ' + esc(w.d) : ''}${w.chips.length ? '<br>' + w.chips.map(c => `<em class="chip">${esc(c)}</em>`).join('') : ''}</span></li>`).join('')}</ol></div>
+      <div class="scn-dotmap" aria-hidden="true"><p class="dm-n"><b data-count>${waves[0].n}</b> <span>${esc(unit)}</span></p><div class="dm-grid">${Array.from({ length: total }, (_, i) => `<i data-k="${phaseOf(i)}"></i>`).join('')}</div></div></div>`;
+    const sc = mount(fig, h, html.replace('<div class="scn-dotmap', '</div><div class="scn-dotmap'), 'scn-rollout', waves.length);
+    const cnt = sc.querySelector('[data-count]'); const rec = scenes[scenes.length - 1];
+    rec.upd = (p, k) => { cnt.textContent = waves[Math.max(0, Math.min(waves.length - 1, k - 1))].n; };
+  });
+
+  // 7. About: T, 5 and 7, one at a time
+  document.querySelectorAll('.ns').forEach(fig => {
+    const cols = [...fig.querySelectorAll(':scope > .ns-col')].map(c => ({ big: txt(c.querySelector('.ns-big')), b: txt(c.querySelector('h3')), d: txt(c.querySelector(':scope > p:not(.ns-big)')), chips: [...c.querySelectorAll('.ns-i b, .ns-seven li b')].map(txt) })).filter(c => c.big && c.b);
+    if (cols.length < 3) return; const h = host(fig); if (!h) return;
+    const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-list">${cols.map((c, i) => `<li data-k="${i}"><span class="sl-n">${esc(c.big)}</span><b>${esc(c.b)}</b><span class="sl-d">${esc(c.d)}</span></li>`).join('')}</ol></div>
+      <div class="scn-big" aria-hidden="true">${cols.map((c, i) => `<div class="sb-c" data-k="${i}"><b>${esc(c.big)}</b>${c.chips.length ? `<ul>${c.chips.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</div>`).join('')}</div></div>`;
+    mount(fig, h, html.replace('<div class="scn-big', '</div><div class="scn-big'), 'scn-decode', cols.length);
+  });
+
+  // 8. Impact: five changes, five petals
+  if (/\/about\/impact\/?$/.test(location.pathname)) document.querySelectorAll('ul.impact').forEach(fig => {
+    const items = [...fig.querySelectorAll(':scope > li')].map(li => ({ b: txt(li.querySelector('b')), d: txt(li.querySelector('span')) })).filter(x => x.b);
+    if (items.length !== 5) return; const h = host(fig); if (!h) return;
+    const ids = ['trade', 'finance', 'logistics', 'agri', 'tech'];
+    const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-list">${items.map((x, i) => `<li data-k="${i}"><span class="sl-n">${String(i + 1).padStart(2, '0')}</span><b>${esc(x.b)}</b><span class="sl-d">${esc(x.d)}</span></li>`).join('')}</ol></div>
+      <div class="scn-petals" aria-hidden="true"><svg viewBox="774 418 250 244"><use class="pt-ring" href="#mk-ring"></use>${ids.map((id, i) => `<use class="pt" data-k="${i}" href="#mk-${id}"></use>`).join('')}</svg></div></div>`;
+    mount(fig, h, html.replace('<div class="scn-petals', '</div><div class="scn-petals'), 'scn-pet', 5);
+  });
+
+  // 9. Trust sub-pages: a record passes four gates and is stamped
+  if (/^\/trust\/(verification\/(kyb|kyc|membership-scoring)|document-management|security(\/data-protection)?|trade-assurance\/disputes)\/?$/.test(location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/')) document.querySelectorAll('.chapter ol.steps').forEach(el => {
+    const items = [...el.querySelectorAll(':scope > li')].map(li => ({ n: txt(li.querySelector('.dot')), b: txt(li.querySelector('h3')), d: txt(li.querySelector('p')) })).filter(x => x.b);
+    if (items.length < 3 || items.length > 6) return; const h = host(el); if (!h) return; const N = items.length;
+    const crumbs = [...document.querySelectorAll('.crumbs li, .crumbs a, .crumbs span')].map(txt).filter(Boolean); const subject = (document.querySelector('.hero h1') && '') || crumbs[crumbs.length - 1] || '';
+    const subj = (document.title.split(/\s[|·–—-]\s/)[0] || '').trim() || txt(document.querySelector('.micro b')) || subject;
+    const ICON = ['<path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>', '<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/>', '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>', '<path d="M6 3h9l4 4v14H6z"/><path d="M9 13l2 2 4-4"/>', '<path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/>', '<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>'];
+    const html = `<div class="scn-in gutter"><div class="scn-grid">${head(h)}<ol class="scn-list">${items.map((x, i) => `<li data-k="${i}"><span class="sl-n">${esc(x.n || String(i + 1).padStart(2, '0'))}</span><b>${esc(x.b)}</b><span class="sl-d">${esc(x.d)}</span></li>`).join('')}</ol></div>
+      <div class="scn-gates" aria-hidden="true" style="--n:${N}"><div class="gt-rec"><b>${esc(subj)}</b><i></i><i></i><i></i></div><div class="gt-track"><i class="gt-run"></i>${items.map((x, i) => `<div class="gt" data-k="${i}"><svg viewBox="0 0 24 24">${ICON[i % ICON.length]}</svg><span>${esc(x.b)}</span></div>`).join('')}</div><p class="gt-stamp">${esc(items[N - 1].b)}</p></div></div>`;
+    mount(el, h, html.replace('<div class="scn-gates', '</div><div class="scn-gates'), 'scn-gated', N);
+  });
+
+  // 10. Trade cycle: a crate travels five stages while the services for each appear
+  if (/\/platform\/trade-cycle\/?$/.test(location.pathname)) document.querySelectorAll('.chapter .life').forEach(fig => {
+    const stages = [...fig.querySelectorAll('.life-st')].map(st => ({ n: txt(st.querySelector('.life-n')), b: txt(st.querySelector('h3')), li: [...st.querySelectorAll('li')].map(txt).filter(Boolean) })).filter(x => x.b);
+    if (stages.length < 4) return; const h = host(fig); if (!h) return; const N = stages.length;
+    const pts = stages.map((_, i) => [80 + i * (1040 / (N - 1)), 120 + Math.sin(i * 1.5 + .3) * 38]);
+    const d = pts.map((q, i) => i ? `C ${(pts[i - 1][0] + q[0]) / 2} ${pts[i - 1][1]}, ${(pts[i - 1][0] + q[0]) / 2} ${q[1]}, ${q[0]} ${q[1]}` : `M ${q[0]} ${q[1]}`).join(' ');
+    const html = `<div class="scn-in gutter"><div class="scn-grid scn-grid-top">${head(h)}</div></div>
+      <div class="scn-trip"><svg viewBox="0 0 1200 230" aria-hidden="true"><path class="sr-base" d="${d}"/><path class="sr-run" d="${d}" pathLength="1"/>${pts.map((q, i) => `<g class="sr-pin" data-k="${i}"><circle cx="${q[0]}" cy="${q[1]}" r="20"/><text x="${q[0]}" y="${q[1] + 6}" text-anchor="middle">${esc(stages[i].n || i + 1)}</text><text class="sr-l" x="${q[0]}" y="${q[1] + 50}" text-anchor="middle">${esc(stages[i].b)}</text></g>`).join('')}<g class="trip-crate"><rect x="-17" y="-13" width="34" height="26" rx="4"/><path d="M-17 -3 H17 M0 -13 V13"/></g></svg>
+        <div class="trip-chips" aria-hidden="true">${stages.map((x, i) => `<ul data-k="${i}">${x.li.map((c, j) => `<li style="--j:${j}">${esc(c)}</li>`).join('')}</ul>`).join('')}</div>
+        <div class="trip-rec" aria-hidden="true">${stages.map((x, i) => `<i data-k="${i}"></i>`).join('')}<span>${esc(h.heading.h2 && '')}</span></div></div>
+      <ol class="scn-steps scn-steps-static">${stages.map(x => `<li><b>${esc(x.b)}</b><span>${esc(x.li.join(' · '))}</span></li>`).join('')}</ol>`;
+    const sc = document.createElement('section'); sc.className = 'scn scn-routed scn-tripped'; sc.style.setProperty('--n', N); sc.setAttribute('aria-label', h.heading.h2);
+    sc.innerHTML = html.replace('</div></div>\n      <div class="scn-trip', '</div></div></div><div class="scn-trip'); h.sec.parentNode.insertBefore(sc, h.sec); h.sec.hidden = true;
+    const run = sc.querySelector('.sr-run'), crate = sc.querySelector('.trip-crate');
+    scenes.push({ el: sc, n: N, upd(p, k) { const len = run.getTotalLength(), t = Math.min(1, Math.max(0, p * N / (N - 1))); const pt = run.getPointAtLength(len * t), pt2 = run.getPointAtLength(Math.min(len, len * t + 4)); run.style.strokeDashoffset = 1 - t; crate.setAttribute('transform', `translate(${pt.x} ${pt.y - 24}) rotate(${(Math.atan2(pt2.y - pt.y, pt2.x - pt.x) * 180 / Math.PI).toFixed(1)})`); sc.querySelectorAll('.trip-chips ul').forEach(u => u.classList.toggle('now', +u.dataset.k === k - 1)); } });
+  });
+
+  // drive them from scroll
+  if (!scenes.length) return;
+  const stat = () => reduce || innerWidth < 900;
+  const run = () => scenes.forEach(sc => { const { el, n } = sc;
+    let p = 1;
+    if (!stat()) { const r = el.getBoundingClientRect(); p = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight))); }
+    const k = stat() ? n : Math.min(n, Math.floor(p * (n + 0.35) * (n / (n + 0.35)) + 0.0001) + (p > 0.02 ? 1 : 0));
+    el.style.setProperty('--p', p.toFixed(3)); el.style.setProperty('--on', k);
+    el.querySelectorAll('[data-k]').forEach(x => x.classList.toggle('on', +x.dataset.k < k));
+    el.querySelectorAll('[data-k]').forEach(x => x.classList.toggle('now', +x.dataset.k === k - 1));
+    const cur = el.querySelector('[data-cur]'); if (cur) cur.textContent = k;
+    el.classList.toggle('done', k >= n); if (sc.upd) sc.upd(p, k);
+  });
+  let tick = false; const go = () => { if (!tick) { tick = true; requestAnimationFrame(() => { tick = false; run(); }); } };
+  addEventListener('scroll', go, { passive: true }); addEventListener('resize', go); run();
+})();
+
+/* ---------- Finance partners waffle; Help filters ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  // 41 of every 100 SME trade finance applications rejected (figure stated on the page, Asian Development Bank)
+  if (path === '/partners/financial-services') {
+    const bs = document.querySelector('.bigstats'); const stat = bs && [...bs.children].find(c => /41/.test(c.textContent) || (c.querySelector('b') && c.querySelector('b').dataset.n === '41'));
+    if (stat) {
+      const label = stat.querySelector('span').textContent.trim();
+      const box = document.createElement('figure'); box.className = 'dv'; box.style.margin = '32px 0 0'; box.setAttribute('role', 'img'); box.setAttribute('aria-label', '41 / 100: ' + label);
+      box.innerHTML = `<div class="dv-reach"><div class="dv-dots wf">${Array.from({ length: 100 }, (_, i) => `<i class="${i < 41 ? 'f' : 'p'}" style="--k:${i}"></i>`).join('')}</div><ul class="dv-key"><li class="f"><b>41</b><span>${esc(label)}</span></li></ul></div>`;
+      bs.insertAdjacentElement('afterend', box);
+      if (reduce || !('IntersectionObserver' in window)) box.classList.add('in'); else { const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { box.classList.add('in'); o.disconnect(); } }, { threshold: 0.3 }); o.observe(box); }
+    }
+  }
+  // Help: type to filter how-tos and FAQs, using the site search placeholder in the visitor's language
+  const ph = (document.getElementById('srch-q') || {}).placeholder || '';
+  const mk = (anchor, items, hide) => {
+    const f = document.createElement('input'); f.type = 'search'; f.className = 'hfilter'; f.placeholder = ph; f.setAttribute('aria-label', ph); f.autocomplete = 'off';
+    anchor.insertAdjacentElement('beforebegin', f);
+    const norm = t => String(t).toLowerCase();
+    f.addEventListener('input', () => { const q = norm(f.value).trim(); items().forEach(({ el, text }) => { el.hidden = !!q && !norm(text).includes(q); }); hide && hide(); });
+  };
+  const grid = document.querySelector('.ht-grid');
+  if (grid && ph) mk(grid, () => [...grid.querySelectorAll('.ht-c')].flatMap(c => [...c.querySelectorAll('li')].map(li => ({ el: li, text: li.textContent + ' ' + c.querySelector('h3').textContent }))), () => grid.querySelectorAll('.ht-c').forEach(c => { c.hidden = ![...c.querySelectorAll('li')].some(li => !li.hidden); }));
+  const faq = document.querySelector('.faq-wrap .faq');
+  if (faq && ph && path === '/help/faq') mk(faq, () => [...faq.querySelectorAll('details')].map(d => ({ el: d, text: d.textContent })));
+})();
+
+/* ---------- Readiness checklist on Getting Started pages ---------- */
+(() => {
+  const need = document.querySelector('ul.need'); if (!need || !/\/markets\/[^/]+\/getting-started\/?$/.test(location.pathname)) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const key = 't57need:' + location.pathname; let saved = []; try { saved = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) {}
+  need.classList.add('chk'); const lis = [...need.children], N = lis.length;
+  const box = document.createElement('div'); box.className = 'need-top';
+  box.innerHTML = '<div class="need-bar" aria-hidden="true"><i></i></div><p class="need-n" aria-live="polite"><b>0</b> / ' + N + '</p>';
+  need.insertAdjacentElement('beforebegin', box);
+  const bar = box.querySelector('i'), cnt = box.querySelector('b');
+  const upd = () => { const k = lis.filter(l => l.classList.contains('ok')).length; bar.style.transform = 'scaleX(' + (k / N) + ')'; cnt.textContent = k; box.classList.toggle('all', k === N); try { localStorage.setItem(key, JSON.stringify(lis.map((l, i) => l.classList.contains('ok') ? i : -1).filter(i => i >= 0))); } catch (e) {} };
+  lis.forEach((li, i) => {
+    li.tabIndex = 0; li.setAttribute('role', 'checkbox'); li.setAttribute('aria-checked', 'false');
+    const flip = () => { li.classList.toggle('ok'); li.setAttribute('aria-checked', li.classList.contains('ok')); upd(); };
+    li.addEventListener('click', flip); li.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); flip(); } });
+    if (saved.includes(i)) { li.classList.add('ok'); li.setAttribute('aria-checked', 'true'); }
+  });
+  upd();
+})();
+
+/* ---------- About and Resources: SDG tiles, press timeline, report covers, reading progress, glossary letters ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // SDG tiles flip to show their targets
+  document.querySelectorAll('.sdgs .sdg').forEach(t => { t.tabIndex = 0; const f = () => t.classList.toggle('flip'); t.addEventListener('click', f); t.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); f(); } }); });
+  // press timeline: the spine draws as you read down it
+  document.querySelectorAll('ol.news-tl').forEach(ol => {
+    const lis = [...ol.children]; if (reduce) { lis.forEach(l => l.classList.add('on')); ol.style.setProperty('--sp', 1); return; }
+    const f = () => { const r = ol.getBoundingClientRect(), mid = innerHeight * 0.62; const p = Math.min(1, Math.max(0, (mid - r.top) / r.height)); ol.style.setProperty('--sp', p.toFixed(3)); lis.forEach(l => l.classList.toggle('on', l.getBoundingClientRect().top < mid)); };
+    addEventListener('scroll', () => requestAnimationFrame(f), { passive: true }); addEventListener('resize', f); f();
+  });
+  // report covers tilt toward the pointer
+  if (!reduce && matchMedia('(hover:hover)').matches) document.querySelectorAll('.rcover .cv-art').forEach(c => {
+    c.addEventListener('pointermove', e => { const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; c.style.setProperty('--ry', (x * 14).toFixed(1) + 'deg'); c.style.setProperty('--rx', (-y * 10).toFixed(1) + 'deg'); c.style.setProperty('--sx', (x * 100 + 50).toFixed(0) + '%'); });
+    c.addEventListener('pointerleave', () => { c.style.setProperty('--ry', '0deg'); c.style.setProperty('--rx', '0deg'); });
+  });
+  // blog posts: reading progress
+  const post = document.querySelector('.chapter.post');
+  if (post && !reduce) { const bar = document.createElement('div'); bar.className = 'rd-bar'; bar.setAttribute('aria-hidden', 'true'); document.body.appendChild(bar);
+    const f = () => { const r = post.getBoundingClientRect(); const p = Math.min(1, Math.max(0, (innerHeight * 0.3 - r.top) / (r.height - innerHeight * 0.3 + 1))); bar.style.transform = 'scaleX(' + p + ')'; };
+    addEventListener('scroll', () => requestAnimationFrame(f), { passive: true }); f(); }
+  // glossary: the letter you are reading stays lit
+  const az = document.querySelector('.gl-az'), terms = [...document.querySelectorAll('.gl-i[id]')];
+  if (az && terms.length && 'IntersectionObserver' in window) { const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) az.querySelectorAll('a').forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id)); }), { rootMargin: '-30% 0px -60% 0px' }); terms.forEach(t => io.observe(t)); }
+})();
+
+/* ---------- Orbit explorer (Who we serve, Capabilities) and office clocks (Contact) ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const marks = '<use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-finance"></use><use href="#mk-agri"></use>';
+  function orbit(anchor, nodes, label) {
+    const N = nodes.length, R = 205, C = 280;
+    const pos = nodes.map((_, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / N; return [C + Math.cos(a) * R, C + Math.sin(a) * R]; });
+    const box = document.createElement('div'); box.className = 'orb'; box.setAttribute('role', 'group'); box.setAttribute('aria-label', label);
+    box.innerHTML = `<svg viewBox="0 0 560 560" class="orb-svg"><circle class="orb-ring" cx="${C}" cy="${C}" r="${R}"/>${pos.map((q, i) => `<line class="orb-l" data-i="${i}" x1="${C}" y1="${C}" x2="${q[0]}" y2="${q[1]}"/>`).join('')}<circle class="orb-hub" cx="${C}" cy="${C}" r="62"/><svg x="${C - 40}" y="${C - 39}" width="80" height="78" viewBox="774 418 250 244">${marks}</svg>${pos.map((q, i) => `<a class="orb-n" data-i="${i}" href="${nodes[i].href}" data-go="${nodes[i].go || ''}" style="--c:${nodes[i].c}" aria-label="${esc(nodes[i].title)}"><circle cx="${q[0]}" cy="${q[1]}" r="30"/><text x="${q[0]}" y="${q[1] + 6}" text-anchor="middle">${esc(nodes[i].n)}</text></a>`).join('')}</svg>
+      <div class="orb-panel" aria-live="polite"><p class="orb-k"></p><h3 class="orb-t"></h3><p class="orb-d"></p><ul class="orb-links"></ul></div>`;
+    anchor.insertAdjacentElement('beforebegin', box);
+    const k = box.querySelector('.orb-k'), t = box.querySelector('.orb-t'), d = box.querySelector('.orb-d'), ul = box.querySelector('.orb-links');
+    let cur = -1, timer = null, touched = false;
+    const show = i => { cur = i; const n = nodes[i]; box.style.setProperty('--c', n.c); k.textContent = n.kicker || ''; t.textContent = n.title; d.textContent = n.desc || ''; d.hidden = !n.desc;
+      ul.innerHTML = (n.links || []).map(l => `<li><a href="${l.href}" data-go="${l.go || ''}">${esc(l.t)}</a></li>`).join(''); ul.hidden = !(n.links && n.links.length);
+      box.querySelectorAll('[data-i]').forEach(e => e.classList.toggle('now', +e.dataset.i === i)); };
+    const stop = () => { touched = true; clearInterval(timer); };
+    box.querySelectorAll('.orb-n').forEach(a => { const i = +a.dataset.i; a.addEventListener('pointerenter', () => { stop(); show(i); }); a.addEventListener('focus', () => { stop(); show(i); }); a.addEventListener('click', e => { if (nodes[i].links && nodes[i].links.length > 1) { e.preventDefault(); stop(); show(i); } }); });
+    box.addEventListener('pointerenter', stop);
+    show(0);
+    if (!reduce && 'IntersectionObserver' in window) { const io = new IntersectionObserver(([e]) => { if (e.isIntersecting && !touched) timer = setInterval(() => show((cur + 1) % N), 3600); else clearInterval(timer); }, { threshold: 0.4 }); io.observe(box); }
+    return box;
+  }
+  // Who we serve: eleven roles around one record
+  const groups = document.querySelector('.groups');
+  if (groups && groups.querySelectorAll('a.aud').length >= 5) {
+    const nodes = []; let n = 0;
+    groups.querySelectorAll('.group').forEach(g => { const c = (g.getAttribute('style') || '').match(/--c:([^;]+)/); g.querySelectorAll('a.aud').forEach(a => { n++; nodes.push({ n: String(n).padStart(2, '0'), c: c ? c[1].trim() : 'var(--persian-blue)', kicker: txt(g.querySelector('h3')), title: txt(a.querySelector('b')), desc: txt(a.querySelector('span')), href: a.getAttribute('href'), go: a.dataset.go, links: [{ t: txt(a.querySelector('b')) + ' →', href: a.getAttribute('href'), go: a.dataset.go }] }); }); });
+    orbit(groups, nodes, txt(groups.closest('section').querySelector('h2'))); groups.classList.add('orb-on');
+  }
+  // Capabilities: eight groups around one record
+  const cm = document.querySelector('.life.cmap-nav');
+  if (cm && (document.querySelector('figure.cmap') || /^\/(ar\/|ms\/|tr\/|hi\/)?markets\/?$/.test(location.pathname))) {
+    const sts = [...cm.querySelectorAll('.life-st')]; if (sts.length >= 4) {
+      const nodes = sts.map(st => { const c = (st.getAttribute('style') || '').match(/--c:([^;]+)/); const links = [...st.querySelectorAll('li a')].map(a => ({ t: txt(a), href: a.getAttribute('href'), go: a.dataset.go })); return { n: txt(st.querySelector('.life-n')) || '', c: c ? c[1].trim() : 'var(--persian-blue)', kicker: '', title: txt(st.querySelector('h3')), desc: '', href: links[0] ? links[0].href : '#', go: links[0] && links[0].go, links }; });
+      orbit(cm, nodes, txt(cm.closest('section').querySelector('h2'))); cm.classList.add('orb-on');
+    }
+  }
+  // Contact: the local time at each office
+  const offs = [...document.querySelectorAll('.offices .office')];
+  if (offs.length >= 5) {
+    const zones = ['Asia/Riyadh', 'Asia/Dubai', 'Asia/Kolkata', 'Asia/Kuala_Lumpur', 'Europe/Istanbul'];
+    const lang = document.documentElement.lang || 'en'; const loc = { ar: 'ar-SA-u-nu-latn', hi: 'hi-IN-u-nu-latn' }[lang] || lang;
+    const clocks = zones.map((z, i) => { const t = document.createElement('p'); t.className = 'office-t'; offs[i].appendChild(t); let f; try { f = new Intl.DateTimeFormat(loc, { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: z }); } catch (e) { return null; } return { t, f, z }; }).filter(Boolean);
+    const tick = () => clocks.forEach(({ t, f, z }) => { const h = +new Intl.DateTimeFormat('en-GB', { hour: '2-digit', hour12: false, timeZone: z }).format(new Date()); t.innerHTML = `<i class="${h >= 6 && h < 19 ? 'day' : 'night'}" aria-hidden="true"></i><time>${f.format(new Date())}</time>`; });
+    tick(); setInterval(tick, 20000);
+  }
+  // soft spotlight on cards
+  if (matchMedia('(hover:hover)').matches && !reduce) document.querySelectorAll('.rcard, .ch-c, .aud').forEach(c => c.addEventListener('pointermove', e => { const r = c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px'); }));
+})();
+
+/* ---------- Today / With T57: drag to compare (audience and market pages) ---------- */
+(() => {
+  const gl = document.querySelector('.glance .gl-rows'); if (!gl) return;
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '') || '/';
+  if (!/^\/(who-we-serve\/.+|markets|markets\/global-rollout|why-t57\/club-membership|platform\/domestic-trade)\/?$/.test(path)) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const sr = el => { const c = el.cloneNode(true); c.querySelectorAll('.sr').forEach(x => x.remove()); return c.textContent.trim().replace(/\s+/g, ' '); };
+  const rows = [...gl.children].map(li => ({ ic: li.querySelector('.gl-ic'), k: sr(li.querySelector('.gl-k')), b: sr(li.querySelector('.gl-b')), a: sr(li.querySelector('.gl-a')) })).filter(r => r.b && r.a);
+  if (rows.length < 2) return;
+  const legend = [...document.querySelectorAll('.glance .gl-legend span')].map(x => x.textContent.trim()); const title = (document.querySelector('.glance .gl-h') || {}).textContent || '';
+  const sec = document.querySelector('main .chapter, .chapter'); if (!sec) return;
+  const layer = (cls, key) => `<ul class="cmp-l ${cls}">${rows.map(r => `<li>${r.ic ? r.ic.outerHTML : ''}<span class="cmp-k">${esc(r.k)}</span><b>${esc(r[key])}</b></li>`).join('')}</ul>`;
+  const el = document.createElement('section'); el.className = 'chapter cmp-sec gutter'; el.setAttribute('aria-label', title.trim());
+  el.innerHTML = `<div class="wrap"><h2 class="h2">${esc(title.trim())}</h2><div class="cmp" style="--x:50%;--v:.5"><div class="cmp-tags"><span>${esc(legend[0] || '')}</span><span>${esc(legend[1] || '')}</span></div>${layer('cmp-with', 'a')}<div class="cmp-today">${layer('cmp-was', 'b')}</div><input class="cmp-r" type="range" min="0" max="100" value="50" aria-label="${esc((legend[0] || '') + ' / ' + (legend[1] || ''))}"></div></div>`;
+  sec.insertAdjacentElement('afterend', el);
+  const cmp = el.querySelector('.cmp'), r = el.querySelector('.cmp-r');
+  const set = v => { cmp.style.setProperty('--x', v + '%'); cmp.style.setProperty('--v', (v / 100).toFixed(3)); cmp.classList.toggle('is-with', v >= 50); }; r.addEventListener('input', () => set(r.value));
+  if (!reduce && 'IntersectionObserver' in window) { const io = new IntersectionObserver(([e]) => { if (!e.isIntersecting) return; io.disconnect(); const t0 = performance.now(); const f = now => { const k = (now - t0) / 2600; if (k >= 1 || cmp.dataset.touched) return; const v = 50 + Math.sin(k * Math.PI * 2) * 34 * (1 - k); r.value = v; set(v.toFixed(1)); requestAnimationFrame(f); }; requestAnimationFrame(f); }, { threshold: 0.5 }); io.observe(cmp); r.addEventListener('pointerdown', () => { cmp.dataset.touched = '1'; }); }
+})();
+
+/* ---------- Blog index: articles by topic ---------- */
+(() => {
+  const bar = document.querySelector('.bl-bar'); if (!bar) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const btns = [...bar.querySelectorAll('button[data-t]')].filter(b => b.dataset.t !== 'all' && b.querySelector('em'));
+  if (btns.length < 3) return;
+  const rows = btns.map(b => ({ b, n: +b.querySelector('em').textContent, label: b.cloneNode(true) })); rows.forEach(r => { r.label.querySelector('em').remove(); r.label = r.label.textContent.trim(); });
+  const total = rows.reduce((a, r) => a + r.n, 0), max = Math.max(...rows.map(r => r.n));
+  const all = bar.querySelector('button[data-a="all"] em');
+  const fig = document.createElement('div'); fig.className = 'tbars'; fig.setAttribute('role', 'group');
+  fig.innerHTML = `<p class="tb-t"><b>${total}</b></p><ul>${rows.sort((a, b) => b.n - a.n).map((r, i) => `<li style="--k:${i};--w:${Math.round(r.n / max * 100)}"><button type="button" data-t="${r.b.dataset.t}"><span class="tb-l">${esc(r.label)}</span><span class="tb-b"><i></i></span><span class="tb-n">${r.n}</span></button></li>`).join('')}</ul>`;
+  bar.insertAdjacentElement('beforebegin', fig);
+  fig.querySelectorAll('button').forEach(x => x.addEventListener('click', () => { const t = btns.find(b => b.dataset.t === x.dataset.t); if (t) { t.click(); bar.scrollIntoView({ block: 'center', behavior: reduce ? 'auto' : 'smooth' }); } }));
+  const sync = () => fig.querySelectorAll('button').forEach(x => { const t = btns.find(b => b.dataset.t === x.dataset.t); x.classList.toggle('on', !!t && t.getAttribute('aria-pressed') === 'true'); });
+  bar.addEventListener('click', () => setTimeout(sync, 0)); sync();
+  if (reduce || !('IntersectionObserver' in window)) fig.classList.add('in'); else { const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { fig.classList.add('in'); o.disconnect(); } }, { threshold: 0.3 }); o.observe(fig); }
+})();
+
+/* ---------- Leadership: people filter; Careers: five countries, live ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const ph = (document.getElementById('srch-q') || {}).placeholder || '';
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  if (path === '/about/leadership') {
+    const cards = [...document.querySelectorAll('.pc, .adv, .roster li')]; if (!cards.length) return;
+    const secs = [...document.querySelectorAll('.chapter')].map(sec => ({ sec, n: sec.querySelectorAll('.pc, .adv, .roster li').length, h: txt(sec.querySelector('h2')) })).filter(x => x.n && x.h);
+    const first = document.querySelector('.chapter .standfirst, .chapter .lede'); const anchor = first ? first.closest('.wrap') || first : null;
+    const box = document.createElement('div'); box.className = 'ppl';
+    const advs = [...document.querySelectorAll('.adv')]; const exp = {}; advs.forEach(a => { const e = txt(a.querySelector('em')); if (e) exp[e] = (exp[e] || 0) + 1; });
+    box.innerHTML = `<ul class="ppl-c">${secs.map(x => `<li><b data-n="${x.n}">${x.n}</b><span>${esc(x.h)}</span></li>`).join('')}</ul>${ph ? `<input class="hfilter ppl-f" type="search" placeholder="${esc(ph)}" aria-label="${esc(ph)}" autocomplete="off">` : ''}<div class="ppl-e" role="group">${Object.entries(exp).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<button type="button" aria-pressed="false" data-e="${esc(k)}">${esc(k)}<em>${n}</em></button>`).join('')}</div>`;
+    if (anchor) anchor.insertAdjacentElement('beforeend', box); else document.querySelector('main, body').prepend(box);
+    let q = '', ex = '';
+    const apply = () => cards.forEach(c => { const t = c.textContent.toLowerCase(); const okq = !q || t.includes(q); const okx = !ex || (c.classList.contains('adv') && txt(c.querySelector('em')) === ex); c.hidden = !(okq && okx); });
+    const inp = box.querySelector('.ppl-f'); if (inp) inp.addEventListener('input', () => { q = inp.value.toLowerCase().trim(); apply(); });
+    box.querySelectorAll('.ppl-e button').forEach(b => b.addEventListener('click', () => { const on = b.getAttribute('aria-pressed') !== 'true'; box.querySelectorAll('.ppl-e button').forEach(x => x.setAttribute('aria-pressed', 'false')); b.setAttribute('aria-pressed', on ? 'true' : 'false'); ex = on ? b.dataset.e : ''; apply(); }));
+    if (!reduce && 'IntersectionObserver' in window) { const o = new IntersectionObserver(([e]) => { if (!e.isIntersecting) return; o.disconnect(); const t0 = performance.now(); const f = now => { const k = Math.min(1, (now - t0) / 1200); box.querySelectorAll('[data-n]').forEach(b => { b.textContent = Math.round(+b.dataset.n * (1 - (1 - k) ** 3)); }); if (k < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); }, { threshold: 0.5 }); o.observe(box); }
+  }
+  if (path === '/about/careers') {
+    const f = document.querySelector('.fmts'); if (!f) return;
+    const lang = document.documentElement.lang || 'en'; const loc = { ar: 'ar-SA-u-nu-latn', hi: 'hi-IN-u-nu-latn' }[lang] || lang;
+    const co = [['SA', 'Asia/Riyadh'], ['AE', 'Asia/Dubai'], ['IN', 'Asia/Kolkata'], ['MY', 'Asia/Kuala_Lumpur'], ['TR', 'Europe/Istanbul']];
+    let dn; try { dn = new Intl.DisplayNames([lang], { type: 'region' }); } catch (e) { dn = null; }
+    const ul = document.createElement('ul'); ul.className = 'five-co';
+    ul.innerHTML = co.map(([r, z]) => `<li><b>${esc(dn ? dn.of(r) : r)}</b><span class="fc-t"></span></li>`).join('');
+    f.insertAdjacentElement('afterend', ul);
+    const tick = () => co.forEach(([r, z], i) => { const d = new Date(); const h = +new Intl.DateTimeFormat('en-GB', { hour: '2-digit', hour12: false, timeZone: z }).format(d); ul.children[i].querySelector('.fc-t').innerHTML = `<i class="${h >= 6 && h < 19 ? 'day' : 'night'}" aria-hidden="true"></i><time>${new Intl.DateTimeFormat(loc, { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: z }).format(d)}</time>`; });
+    tick(); setInterval(tick, 20000);
+  }
+})();
+
+/* ---------- Investors numbers, Demo progress, Media tiles and copy ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const lang = document.documentElement.lang || 'en';
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  if (path === '/about/investors') {
+    const els = [...document.querySelectorAll('.facts dd, .feats .feat b')];
+    const targets = [];
+    els.forEach(el => { const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT); let n; while ((n = w.nextNode())) { const m = n.nodeValue.match(/(?<![A-Za-z0-9])(\$?)(\d[\d,]*(?:\.\d+)?)(\+|%)?/); if (m) { const sp = document.createElement('b'); sp.className = 'numhi'; sp.dataset.to = m[2].replace(/,/g, ''); sp.dataset.dec = (m[2].split('.')[1] || '').length; sp.dataset.pre = m[1]; sp.dataset.suf = m[3] || ''; sp.textContent = m[0]; const i = m.index; const after = n.splitText(i); after.nodeValue = after.nodeValue.slice(m[0].length); n.parentNode.insertBefore(sp, after); targets.push(sp); break; } } });
+    if (!reduce && 'IntersectionObserver' in window) { const o = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; o.unobserve(e.target); const t = e.target, to = +t.dataset.to, dec = +t.dataset.dec, t0 = performance.now(); const f = now => { const k = Math.min(1, (now - t0) / 1400); t.textContent = t.dataset.pre + (to * (1 - (1 - k) ** 3)).toFixed(dec) + t.dataset.suf; if (k < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); }), { threshold: 0.6 }); targets.forEach(t => { t.textContent = t.dataset.pre + (0).toFixed(+t.dataset.dec) + t.dataset.suf; o.observe(t); }); }
+  }
+  if (path === '/contact/demo') {
+    const form = document.querySelector('form.mform'), see = [...document.querySelectorAll('.demo-see ul.need li')]; if (!form || !see.length) return;
+    const req = [...form.querySelectorAll('input[required], select[required]')]; const fields = req.length ? req : [...form.querySelectorAll('input:not([type=checkbox]):not([type=hidden])')].slice(0, 3);
+    const submit = form.querySelector('button[type=submit], .btn'); const bar = document.createElement('div'); bar.className = 'demo-meter'; bar.innerHTML = '<span class="dm-bar" aria-hidden="true"><i></i></span><b class="dm-c" aria-live="polite">0 / ' + fields.length + '</b>';
+    (submit ? submit.parentNode : form).insertBefore(bar, submit || null);
+    const fill = bar.querySelector('i'), cnt = bar.querySelector('.dm-c');
+    const upd = () => { const k = fields.filter(f => f.value.trim() && (f.type !== 'email' || f.checkValidity())).length; fill.style.transform = 'scaleX(' + (k / fields.length) + ')'; cnt.textContent = k + ' / ' + fields.length; const lit = Math.ceil(k / fields.length * see.length); see.forEach((li, i) => li.classList.toggle('lit', i < lit)); };
+    form.addEventListener('input', upd); upd();
+  }
+  if (path === '/about/media') {
+    const need = document.querySelector('ul.need'); if (need) need.classList.add('dl-tiles');
+    const facts = document.querySelector('dl.facts');
+    if (facts) { const L = { en: ['Copy fact sheet', 'Copied'], ar: ['نسخ ورقة الحقائق', 'تم النسخ'], ms: ['Salin helaian fakta', 'Disalin'], tr: ['Bilgi notunu kopyala', 'Kopyalandı'], hi: ['तथ्य-पत्र कॉपी करें', 'कॉपी हो गया'] }[lang] || ['Copy fact sheet', 'Copied'];
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'copy-btn'; b.textContent = L[0]; facts.insertAdjacentElement('beforebegin', b);
+      b.addEventListener('click', async () => { const text = [...facts.querySelectorAll(':scope > div')].map(d => d.querySelector('dt').textContent.trim() + ': ' + d.querySelector('dd').textContent.trim()).join('\n'); try { await navigator.clipboard.writeText(text); } catch (e) { const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (e2) {} ta.remove(); } b.textContent = L[1]; b.classList.add('ok'); setTimeout(() => { b.textContent = L[0]; b.classList.remove('ok'); }, 1800); }); }
+  }
+})();
+
+/* ---------- Journey HUD, Food Security supply swap and Hormuz range, SDG ring ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  // Journey: a running tally while you read the timeline
+  const tl = document.querySelector('.jr-tl');
+  if (tl) {
+    const items = [...tl.querySelectorAll('.jr-i')]; const fbtn = [...document.querySelectorAll('.jr-f button[data-f]')].filter(b => b.dataset.f !== 'all');
+    const names = {}; fbtn.forEach(b => { const c = b.cloneNode(true); const em = c.querySelector('em'); if (em) em.remove(); names[b.dataset.f] = c.textContent.trim(); });
+    const keys = fbtn.map(b => b.dataset.f);
+    if (items.length && keys.length) {
+      const hud = document.createElement('div'); hud.className = 'jr-hud'; hud.setAttribute('aria-hidden', 'true');
+      hud.innerHTML = `<b class="jh-y"></b><span class="jh-n"></span><ul>${keys.map(k => `<li data-f="${k}"><b>0</b><span>${esc(names[k])}</span></li>`).join('')}</ul>`; document.body.appendChild(hud);
+      const yEls = [...tl.querySelectorAll('.jr-y')];
+      const f = () => { const r = tl.getBoundingClientRect(); hud.classList.toggle('on', r.top < innerHeight * .5 && r.bottom > innerHeight * .4); if (!hud.classList.contains('on')) return;
+        const mid = innerHeight * .62; const vis = items.filter(i => !i.hidden && i.offsetParent !== null); const seen = vis.filter(i => i.getBoundingClientRect().top < mid);
+        const counts = {}; keys.forEach(k => counts[k] = 0); seen.forEach(i => (i.dataset.k || '').split(/\s+/).forEach(k => { if (k in counts) counts[k]++; }));
+        hud.querySelector('.jh-n').textContent = seen.length + ' / ' + vis.length; hud.querySelectorAll('li').forEach(li => { li.querySelector('b').textContent = counts[li.dataset.f]; });
+        const y = yEls.filter(h => h.getBoundingClientRect().top < mid).pop() || yEls[0]; hud.querySelector('.jh-y').textContent = txt(y); };
+      addEventListener('scroll', () => requestAnimationFrame(f), { passive: true }); addEventListener('resize', f); f();
+    }
+  }
+  // Food security: the at-risk origin hands over to a surplus origin
+  const sb = document.querySelector('.sboard ul');
+  if (sb) {
+    const rows = [...sb.children]; const risky = rows.filter(r => r.classList.contains('sb-at-risk') || r.classList.contains('sb-short')); const sur = rows.filter(r => r.classList.contains('sb-surplus'));
+    if (risky.length && sur.length) {
+      sb.style.position = 'relative'; const NS = 'http://www.w3.org/2000/svg'; const svg = document.createElementNS(NS, 'svg'); svg.setAttribute('class', 'sb-link'); svg.setAttribute('aria-hidden', 'true'); const pth = document.createElementNS(NS, 'path'); pth.setAttribute('pathLength', '1'); svg.appendChild(pth); sb.appendChild(svg);
+      let n = 0, timer = null;
+      const step = () => { const a = risky[n % risky.length]; const prod = txt(a.querySelector('b')); const b = sur.find(r => txt(r.querySelector('b')) === prod) || sur[0];
+        rows.forEach(r => r.classList.remove('sw-a', 'sw-b')); a.classList.add('sw-a');
+        const ay = a.offsetTop + a.offsetHeight / 2, by = b.offsetTop + b.offsetHeight / 2, w = sb.offsetWidth, x = w - 10;
+        svg.setAttribute('viewBox', `0 0 ${w} ${sb.offsetHeight}`); pth.setAttribute('d', `M${x - 40} ${ay} H${x} V${by} H${x - 40}`); pth.style.transition = 'none'; pth.style.strokeDashoffset = 1; void pth.getBoundingClientRect(); pth.style.transition = 'stroke-dashoffset 1.1s .3s cubic-bezier(.2,.8,.2,1)'; pth.style.strokeDashoffset = 0;
+        setTimeout(() => b.classList.add('sw-b'), 1200); n++; };
+      if (!reduce && 'IntersectionObserver' in window) { const io = new IntersectionObserver(([e]) => { clearInterval(timer); if (e.isIntersecting) { step(); timer = setInterval(step, 5200); } }, { threshold: 0.5 }); io.observe(sb); }
+    }
+  }
+  // Hormuz: a range band on a 0-100 scale
+  if (path === '/about/food-security') document.querySelectorAll('.bigstats > div').forEach(d => { const b = d.querySelector('b'); const m = b && (b.dataset.n ? null : null); const t = d.textContent; const r = t.match(/(\d{1,2})\s*[–-]\s*(\d{1,2})\s*%/); if (!r) return; const bar = d.querySelector('.bs-bar'); if (bar) { const lo = +r[1], hi = +r[2]; bar.classList.add('range'); const i = bar.querySelector('i'); i.style.setProperty('--w', hi - lo); i.style.marginInlineStart = lo + '%'; i.style.width = (hi - lo) + '%'; } });
+  // SDG: 17 goals in a ring, the ones T57 contributes to lit
+  const sdgs = [...document.querySelectorAll('.sdgs .sdg')];
+  if (sdgs.length) {
+    const cov = {}; sdgs.forEach(t => { cov[+txt(t.querySelector('.sdg-n'))] = { c: (t.getAttribute('style') || '').match(/--s:([^;]+)/)?.[1] || '#8f93ff', title: txt(t.querySelector('b')), tg: txt(t.querySelector('em')), d: txt(t.querySelector('p')) }; });
+    const C = 180, R = 136, W = 44, N = 17, gap = 1.6; const pol = (a, r) => [C + r * Math.cos((a - 90) * Math.PI / 180), C + r * Math.sin((a - 90) * Math.PI / 180)];
+    const seg = Array.from({ length: N }, (_, i) => { const a0 = i * 360 / N + gap / 2, a1 = (i + 1) * 360 / N - gap / 2; const [x0, y0] = pol(a0, R), [x1, y1] = pol(a1, R); const [lx, ly] = pol((a0 + a1) / 2, R); const g = cov[i + 1]; return `<g class="sr-g${g ? ' cov' : ''}" data-g="${i + 1}" style="--s:${g ? g.c : '#ffffff'};--k:${i}"${g ? ' tabindex="0"' : ''}><path pathLength="1" d="M${x0.toFixed(2)} ${y0.toFixed(2)} A${R} ${R} 0 0 1 ${x1.toFixed(2)} ${y1.toFixed(2)}"/><text x="${lx.toFixed(1)}" y="${(ly + 5).toFixed(1)}" text-anchor="middle">${i + 1}</text></g>`; }).join('');
+    const box = document.createElement('div'); box.className = 'sdg-ring dv'; box.setAttribute('role', 'group');
+    const total = Object.keys(cov).length;
+    box.innerHTML = `<svg viewBox="0 0 360 360" class="sr-svg">${seg}<text class="sr-c" x="180" y="186" text-anchor="middle">${total}</text><text class="sr-c2" x="180" y="214" text-anchor="middle">/ ${N}</text></svg><div class="sr-info" aria-live="polite"><p class="sr-k"></p><h3 class="sr-t"></h3><p class="sr-d"></p></div>`;
+    sdgs[0].closest('.sdgs').insertAdjacentElement('beforebegin', box);
+    const k = box.querySelector('.sr-k'), t = box.querySelector('.sr-t'), d = box.querySelector('.sr-d'); let cur = 0, timer = null, touched = false; const list = Object.keys(cov).map(Number);
+    const show = n => { cur = n; const g = cov[n]; box.style.setProperty('--c', g.c); k.textContent = n + ' · ' + g.tg; t.textContent = g.title; d.textContent = g.d; box.querySelectorAll('.sr-g').forEach(x => x.classList.toggle('now', +x.dataset.g === n)); };
+    box.querySelectorAll('.sr-g.cov').forEach(x => { const n = +x.dataset.g; x.addEventListener('pointerenter', () => { touched = true; clearInterval(timer); show(n); }); x.addEventListener('focus', () => { touched = true; clearInterval(timer); show(n); }); });
+    show(list[0]);
+    const go = () => { box.classList.add('in'); if (!reduce && !touched) timer = setInterval(() => show(list[(list.indexOf(cur) + 1) % list.length]), 3400); };
+    if (reduce || !('IntersectionObserver' in window)) box.classList.add('in'); else { const io = new IntersectionObserver(([e]) => { clearInterval(timer); if (e.isIntersecting) go(); }, { threshold: 0.4 }); io.observe(box); }
+  }
+})();
+
+/* ---------- Resources hubs: video theatre, events year ribbon, newsroom by year ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const lang = document.documentElement.lang || 'en';
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  // Videos: one big player and a playlist
+  if (path === '/resources/videos') {
+    const grid = document.querySelector('.vids'); const figs = grid ? [...grid.querySelectorAll(':scope > figure.vid')] : [];
+    if (figs.length >= 3) {
+      const items = figs.map(f => { const v = f.querySelector('video'); return { poster: v.getAttribute('poster'), src: (v.querySelector('source') || {}).src || v.getAttribute('src'), track: v.querySelector('track'), title: txt(f.querySelector('figcaption b')), d: txt(f.querySelector('figcaption p')), t: txt(f.querySelector('.vid-f > span')), label: v.getAttribute('aria-label') || '' }; });
+      const th = document.createElement('div'); th.className = 'theatre';
+      th.innerHTML = `<div class="th-main"><div class="th-f"><video controls playsinline preload="none"></video></div><div class="th-cap"><b></b><p></p></div></div><ol class="th-list">${items.map((x, i) => `<li><button type="button" data-i="${i}"><img src="${esc(x.poster || '')}" alt="" loading="lazy" width="160" height="90"><span><b>${esc(x.title)}</b><em>${esc(x.t)}</em></span></button></li>`).join('')}</ol>`;
+      grid.insertAdjacentElement('beforebegin', th); grid.hidden = true;
+      const vid = th.querySelector('video'), cb = th.querySelector('.th-cap b'), cp = th.querySelector('.th-cap p'); let cur = -1;
+      const load = (i, play) => { cur = i; const x = items[i]; vid.pause(); vid.setAttribute('poster', x.poster || ''); vid.setAttribute('aria-label', x.label || x.title); vid.innerHTML = `<source src="${esc(x.src)}" type="video/mp4">` + (x.track ? x.track.outerHTML : ''); vid.load(); cb.textContent = x.title; cp.textContent = x.d; th.querySelectorAll('.th-list button').forEach(b => b.classList.toggle('on', +b.dataset.i === i)); if (play) vid.play().catch(() => {}); };
+      th.querySelectorAll('.th-list button').forEach(b => b.addEventListener('click', () => { load(+b.dataset.i, true); th.querySelector('.th-main').scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' }); }));
+      vid.addEventListener('ended', () => { if (cur < items.length - 1) load(cur + 1, true); });
+      load(0, false);
+    }
+  }
+  // Newsroom: announcements per year, click to filter
+  if (path === '/resources/newsroom') {
+    const ol = document.querySelector('ol.news-tl'); const lis = ol ? [...ol.children] : [];
+    if (lis.length >= 4) {
+      const yr = li => (txt(li.querySelector('time')).match(/(20\d\d)/) || [])[1]; const by = {}; lis.forEach(li => { const y = yr(li); if (y) { li.dataset.y = y; by[y] = (by[y] || 0) + 1; } });
+      const years = Object.keys(by).sort((a, b) => b - a); const max = Math.max(...Object.values(by));
+      const bar = document.createElement('div'); bar.className = 'yrs'; bar.setAttribute('role', 'group');
+      const allL = { en: 'All', ar: 'الكل', ms: 'Semua', tr: 'Tümü', hi: 'सभी' }[lang] || 'All';
+      bar.innerHTML = `<button type="button" aria-pressed="true" data-y="all"><b>${lis.length}</b><span>${esc(allL)}</span></button>` + years.map(y => `<button type="button" aria-pressed="false" data-y="${y}"><b>${by[y]}</b><i style="--h:${Math.round(by[y] / max * 100)}"></i><span>${y}</span></button>`).join('');
+      ol.insertAdjacentElement('beforebegin', bar);
+      bar.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { bar.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false')); lis.forEach(li => { li.hidden = b.dataset.y !== 'all' && li.dataset.y !== b.dataset.y; }); }));
+    }
+  }
+  // Events: a year ribbon with today and the one dated event the site already states
+  if (path === '/resources/events') {
+    const ev = document.querySelector('.evs'); if (ev) {
+      const loc = { ar: 'ar-SA-u-nu-latn', hi: 'hi-IN-u-nu-latn' }[lang] || lang; const now = new Date(); const y = now.getFullYear();
+      const f = new Intl.DateTimeFormat(loc, { month: 'short' }); const mo = Array.from({ length: 12 }, (_, m) => f.format(new Date(y, m, 1)));
+      const past = ev.querySelector('.ev-c.past b'); const name = txt(past);
+      const box = document.createElement('div'); box.className = 'yrib'; box.setAttribute('aria-hidden', 'true');
+      box.innerHTML = `<p class="yr-y">${y}</p><ol>${mo.map((m, i) => `<li style="--k:${i}" class="${i < now.getMonth() ? 'past' : ''}${i === now.getMonth() ? ' now' : ''}"><span>${esc(m)}</span></li>`).join('')}</ol>`;
+      ev.insertAdjacentElement('beforebegin', box);
+      if (!reduce && 'IntersectionObserver' in window) { const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { box.classList.add('in'); o.disconnect(); } }, { threshold: 0.5 }); o.observe(box); } else box.classList.add('in');
+    }
+  }
+})();
+
+/* ---------- AI sub-pages: before / with AI reveal; Platform sub-pages: parts wheel ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  // before / with AI
+  document.querySelectorAll('.ba').forEach(ba => {
+    const b = ba.querySelector('.ba-b'), a = ba.querySelector('.ba-a'); if (!b || !a) return;
+    const kb = txt(b.querySelector('.ba-k')), ka = txt(a.querySelector('.ba-k')), pb = txt(b.querySelector('p:not(.ba-k)')), pa = txt(a.querySelector('p:not(.ba-k)'));
+    const box = document.createElement('div'); box.className = 'bax'; box.style.setProperty('--v', 0);
+    box.innerHTML = `<div class="bx-tags"><span>${esc(kb)}</span><span>${esc(ka)}</span></div><div class="bx-st"><p class="bx-b">${esc(pb)}</p><p class="bx-a">${esc(pa)}</p></div><input class="cmp-r bx-r" type="range" min="0" max="100" value="0" aria-label="${esc(kb + ' / ' + ka)}">`;
+    ba.insertAdjacentElement('afterend', box); ba.hidden = true;
+    const r = box.querySelector('input'); const set = v => { box.style.setProperty('--v', (v / 100).toFixed(3)); box.style.setProperty('--x', v + '%'); box.classList.toggle('is-ai', v >= 50); };
+    r.addEventListener('input', () => { box.dataset.t = '1'; set(+r.value); }); set(0);
+    if (!reduce && 'IntersectionObserver' in window) { const io = new IntersectionObserver(([e]) => { if (!e.isIntersecting) return; io.disconnect(); const t0 = performance.now(); const f = now => { if (box.dataset.t) return; const k = Math.min(1, (now - t0) / 2200); const v = 100 * (1 - Math.cos(k * Math.PI)) / 2; r.value = v; set(v); if (k < 1) requestAnimationFrame(f); }; setTimeout(() => requestAnimationFrame(f), 500); }, { threshold: 0.6 }); io.observe(box); } else { r.value = 100; set(100); }
+  });
+  // parts wheel from an accordion
+  document.querySelectorAll('.acc').forEach(acc => {
+    const parts = [...acc.querySelectorAll(':scope > details.acc-i')].map(d => ({ t: txt(d.querySelector('summary')), d: txt(d.querySelector('div')) })).filter(x => x.t);
+    if (parts.length < 4 || parts.length > 12) return;
+    const N = parts.length, C = 180, R = 136, gap = 1.6; const pol = (a, r) => [C + r * Math.cos((a - 90) * Math.PI / 180), C + r * Math.sin((a - 90) * Math.PI / 180)];
+    const seg = parts.map((x, i) => { const a0 = i * 360 / N + gap / 2, a1 = (i + 1) * 360 / N - gap / 2; const [x0, y0] = pol(a0, R), [x1, y1] = pol(a1, R); const [lx, ly] = pol((a0 + a1) / 2, R); return `<g class="sr-g cov" data-g="${i}" tabindex="0" style="--s:${i % 2 ? '#8f93ff' : '#5b5fef'};--k:${i}"><path pathLength="1" d="M${x0.toFixed(2)} ${y0.toFixed(2)} A${R} ${R} 0 0 1 ${x1.toFixed(2)} ${y1.toFixed(2)}"/><text x="${lx.toFixed(1)}" y="${(ly + 5).toFixed(1)}" text-anchor="middle">${i + 1}</text></g>`; }).join('');
+    const box = document.createElement('div'); box.className = 'sdg-ring dv pw'; box.setAttribute('role', 'group'); box.style.setProperty('--c', 'var(--rosy-copper)');
+    box.innerHTML = `<svg viewBox="0 0 360 360" class="sr-svg">${seg}<text class="sr-c" x="180" y="186" text-anchor="middle">${N}</text><text class="sr-c2" x="180" y="214" text-anchor="middle"></text></svg><div class="sr-info" aria-live="polite"><p class="sr-k"></p><h3 class="sr-t"></h3><p class="sr-d"></p></div>`;
+    acc.insertAdjacentElement('beforebegin', box); acc.classList.add('acc-alt');
+    const k = box.querySelector('.sr-k'), t = box.querySelector('.sr-t'), d = box.querySelector('.sr-d'); let cur = 0, timer = null, touched = false;
+    const show = n => { cur = n; const x = parts[n]; k.textContent = String(n + 1).padStart(2, '0') + ' / ' + String(N).padStart(2, '0'); t.textContent = x.t; d.textContent = x.d; box.querySelectorAll('.sr-g').forEach(g => g.classList.toggle('now', +g.dataset.g === n)); };
+    box.querySelectorAll('.sr-g').forEach(g => { const n = +g.dataset.g; const take = () => { touched = true; clearInterval(timer); show(n); }; g.addEventListener('pointerenter', take); g.addEventListener('focus', take); g.addEventListener('click', take); });
+    show(0);
+    const go = () => { box.classList.add('in'); if (!reduce && !touched) timer = setInterval(() => show((cur + 1) % N), 3600); };
+    if (reduce || !('IntersectionObserver' in window)) box.classList.add('in'); else { const io = new IntersectionObserver(([e]) => { clearInterval(timer); if (e.isIntersecting) go(); }, { threshold: 0.4 }); io.observe(box); }
+  });
+})();
+
+/* ---------- Capability feature explorer; blog contents ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  // capability pages: features as an explorer
+  if (/^\/capabilities\/[^/]+\/[^/]+/.test(path) || /^\/markets\/[^/]+\/features$/.test(path)) document.querySelectorAll('.chapter .feats').forEach(fe => {
+    const items = [...fe.querySelectorAll(':scope > .feat')].map(f => ({ b: txt(f.querySelector('b')), d: txt(f.querySelector('span')) })).filter(x => x.b && x.d);
+    if (items.length < 5 || items.length > 14 || fe.querySelector('a.feat')) return;
+    const N = items.length;
+    const box = document.createElement('div'); box.className = 'fxe'; box.setAttribute('role', 'group');
+    box.innerHTML = `<ol class="fx-l">${items.map((x, i) => `<li><button type="button" data-i="${i}"><span>${String(i + 1).padStart(2, '0')}</span><b>${esc(x.b)}</b></button></li>`).join('')}</ol><div class="fx-p" aria-live="polite"><p class="fx-n"></p><h3 class="fx-t"></h3><p class="fx-d"></p><div class="fxe-bar" aria-hidden="true"><i></i></div></div>`;
+    fe.insertAdjacentElement('beforebegin', box); fe.classList.add('fx-alt');
+    const n = box.querySelector('.fx-n'), t = box.querySelector('.fx-t'), d = box.querySelector('.fx-d'), bar = box.querySelector('.fxe-bar i'); let cur = 0, timer = null, touched = false;
+    const show = i => { cur = i; n.textContent = String(i + 1).padStart(2, '0') + ' / ' + String(N).padStart(2, '0'); t.textContent = items[i].b; d.textContent = items[i].d; box.querySelectorAll('.fx-l button').forEach(b => b.classList.toggle('on', +b.dataset.i === i)); bar.style.transition = 'none'; bar.style.transform = 'scaleX(0)'; void bar.offsetWidth; if (!touched && !reduce) { bar.style.transition = 'transform 5s linear'; bar.style.transform = 'scaleX(1)'; } };
+    box.querySelectorAll('.fx-l button').forEach(b => b.addEventListener('click', () => { touched = true; clearInterval(timer); show(+b.dataset.i); bar.style.transition = 'none'; bar.style.transform = 'scaleX(0)'; }));
+    show(0);
+    if (!reduce && 'IntersectionObserver' in window) { const io = new IntersectionObserver(([e]) => { clearInterval(timer); if (e.isIntersecting && !touched) { show(cur); timer = setInterval(() => show((cur + 1) % N), 5000); } }, { threshold: 0.4 }); io.observe(box); }
+  });
+  // blog posts: contents with the section you are reading
+  const body = document.querySelector('.post-body'), side = document.querySelector('.post-side');
+  if (body && side) {
+    const hs = [...body.querySelectorAll('h2')]; if (hs.length >= 3) {
+      hs.forEach((h, i) => { if (!h.id) h.id = 'sec-' + (i + 1); });
+      const L = { en: ['In this article', 'Copy link', 'Copied'], ar: ['في هذا المقال', 'نسخ الرابط', 'تم النسخ'], ms: ['Dalam artikel ini', 'Salin pautan', 'Disalin'], tr: ['Bu yazıda', 'Bağlantıyı kopyala', 'Kopyalandı'], hi: ['इस लेख में', 'लिंक कॉपी करें', 'कॉपी हो गया'] }[document.documentElement.lang || 'en'] || ['In this article', 'Copy link', 'Copied'];
+      const nav = document.createElement('nav'); nav.className = 'post-toc'; nav.setAttribute('aria-label', L[0]);
+      nav.innerHTML = `<p class="eyebrow">${esc(L[0])}</p><ol>${hs.map(h => `<li><a href="#${h.id}">${esc(txt(h))}</a></li>`).join('')}</ol><button type="button" class="copy-btn">${esc(L[1])}</button>`;
+      side.appendChild(nav);
+      const btn = nav.querySelector('button'); btn.addEventListener('click', async () => { try { await navigator.clipboard.writeText(location.href); } catch (e) {} btn.textContent = L[2]; btn.classList.add('ok'); setTimeout(() => { btn.textContent = L[1]; btn.classList.remove('ok'); }, 1800); });
+      if ('IntersectionObserver' in window) { const links = [...nav.querySelectorAll('a')]; const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id)); }), { rootMargin: '-20% 0px -70% 0px' }); hs.forEach(h => io.observe(h)); }
+    }
+  }
+})();
+
+/* ---------- Audience pages: where this role sits among the eleven ---------- */
+(() => {
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  if (!/^\/who-we-serve\/[^/]+$/.test(path)) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const lang = document.documentElement.lang || 'en'; const cta = document.querySelector('.cta'); if (!cta) return;
+  const file = lang === 'ar' ? 'search-ar' : lang === 'ms' ? 'search-ms' : lang === 'tr' ? 'search-tr' : lang === 'hi' ? 'search-hi' : 'search';
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const T = { en: ['One record, eleven roles', 'You are here'], ar: ['سجلّ واحد، إحدى عشرة صفة', 'أنت هنا'], ms: ['Satu rekod, sebelas peranan', 'Anda di sini'], tr: ['Tek kayıt, on bir rol', 'Buradasınız'], hi: ['एक रिकॉर्ड, ग्यारह भूमिकाएँ', 'आप यहाँ हैं'] }[lang] || ['One record, eleven roles', 'You are here'];
+  fetch('/proto/' + file + '.json').then(r => r.json()).then(d => {
+    const base = path; const all = d.filter(p => /^\/who-we-serve\/[^/]+$/.test(p[1].replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '')) && !/\/who-we-serve$/.test(p[1]));
+    const me = all.find(p => p[1].replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') === base); if (!me || all.length < 6) return;
+    const others = all.filter(p => p !== me); const N = others.length, C = 250, R = 190;
+    const pos = others.map((_, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / N; return [C + Math.cos(a) * R, C + Math.sin(a) * R]; });
+    const sec = document.createElement('section'); sec.className = 'chapter aud-ring gutter'; sec.setAttribute('aria-label', T[0]);
+    sec.innerHTML = `<div class="wrap"><h2 class="h2">${esc(T[0])}</h2><div class="ar-wrap"><svg viewBox="0 0 500 500" class="ar-svg">${pos.map((q, i) => `<line class="ar-l" style="--k:${i}" x1="${C}" y1="${C}" x2="${q[0].toFixed(1)}" y2="${q[1].toFixed(1)}"/>`).join('')}<circle class="ar-c" cx="${C}" cy="${C}" r="74"/><foreignObject x="${C - 66}" y="${C - 40}" width="132" height="80"><div xmlns="http://www.w3.org/1999/xhtml" class="ar-me"><small>${esc(T[1])}</small><b>${esc(me[2])}</b></div></foreignObject></svg><ul class="ar-n">${others.map((p, i) => { const q = pos[i]; return `<li style="left:${(q[0] / 5).toFixed(2)}%;top:${(q[1] / 5).toFixed(2)}%;--k:${i}"><a href="${p[1]}" data-go="${p[0]}">${esc(p[2])}</a></li>`; }).join('')}</ul></div></div>`;
+    cta.parentNode.insertBefore(sec, cta);
+    if (reduce || !('IntersectionObserver' in window)) sec.classList.add('in'); else { const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { sec.classList.add('in'); o.disconnect(); } }, { threshold: 0.3 }); o.observe(sec); }
+  }).catch(() => {});
+})();
+
+/* ---------- Partners technology stack; country corridors ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  const marks = '<use href="#mk-ring"></use><use href="#mk-trade"></use><use href="#mk-tech"></use><use href="#mk-logistics"></use><use href="#mk-finance"></use><use href="#mk-agri"></use>';
+  const watch = (el, th = 0.35) => { if (reduce || !('IntersectionObserver' in window)) { el.classList.add('in'); return; } const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { el.classList.add('in'); o.disconnect(); } }, { threshold: th }); o.observe(el); };
+  // technology partners: four kinds of module plug into one record, on a cloud base
+  if (path === '/partners/technology') {
+    const card = document.querySelector('.ms-card'), fe = card && card.nextElementSibling;
+    if (card && fe && fe.classList.contains('feats')) {
+      const mods = [...fe.children].map(f => ({ b: txt(f.querySelector('b')), d: txt(f.querySelector('span')), href: f.getAttribute('href') })).filter(m => m.b);
+      if (mods.length >= 3) {
+        const box = document.createElement('div'); box.className = 'tstack'; box.setAttribute('role', 'group');
+        box.innerHTML = `<div class="ts-mods">${mods.map((m, i) => `<${m.href ? 'a href="' + m.href + '"' : 'div'} class="ts-m" style="--k:${i}"><b>${esc(m.b)}</b><span>${esc(m.d)}</span><i aria-hidden="true"></i></${m.href ? 'a' : 'div'}>`).join('')}</div><div class="ts-rec"><svg viewBox="774 418 250 244" aria-hidden="true">${marks}</svg><b>T57</b></div><div class="ts-base"><small>${esc(txt(card.querySelector('.eyebrow')))}</small><b>${esc(txt(card.querySelector('.ms-name')))}</b><span>${esc(txt(card.querySelector('p:not(.eyebrow):not(.ms-name)')))}</span></div>`;
+        card.insertAdjacentElement('beforebegin', box); card.hidden = true; fe.hidden = true; watch(box);
+      }
+    }
+  }
+  // country overview: the four corridors, with goods moving both ways
+  const corr = document.querySelector('.corr');
+  if (corr && /^\/markets\/[^/]+\/overview$/.test(path)) {
+    const items = [...corr.querySelectorAll('.corr-i')].map(c => ({ b: txt(c.querySelector('b')), d: txt(c.querySelector('span')) })).filter(x => x.b);
+    const me = (document.title.split(/\s[|·–—-]\s/)[0] || '').replace(/overview/i, '').trim();
+    if (items.length >= 3) {
+      const N = items.length, C = 250, R = 170; const pos = items.map((_, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / N + Math.PI / N; return [C + Math.cos(a) * R, C + Math.sin(a) * R]; });
+      const box = document.createElement('div'); box.className = 'crr'; box.setAttribute('role', 'group');
+      box.innerHTML = `<svg viewBox="0 0 500 500" class="crr-svg">${pos.map((q, i) => `<g class="crr-g" data-i="${i}"><path id="cr${i}" class="crr-p" d="M${C} ${C} L${q[0].toFixed(1)} ${q[1].toFixed(1)}"/><path class="crr-p2" d="M${q[0].toFixed(1)} ${q[1].toFixed(1)} L${C} ${C}"/>${reduce ? '' : `<circle r="4" class="crr-d out"><animateMotion dur="${2.6 + i * .3}s" repeatCount="indefinite" path="M${C} ${C} L${q[0].toFixed(1)} ${q[1].toFixed(1)}"/></circle><circle r="4" class="crr-d in"><animateMotion dur="${2.6 + i * .3}s" begin="${(1.3).toFixed(1)}s" repeatCount="indefinite" path="M${q[0].toFixed(1)} ${q[1].toFixed(1)} L${C} ${C}"/></circle>`}<a href="#" class="crr-n"><circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="34"/><text x="${q[0].toFixed(1)}" y="${(q[1] + 4).toFixed(1)}" text-anchor="middle">${esc(items[i].b)}</text></a></g>`).join('')}<circle class="crr-c" cx="${C}" cy="${C}" r="58"/><text class="crr-me" x="${C}" y="${C + 5}" text-anchor="middle">${esc(me)}</text></svg><div class="crr-p3" aria-live="polite"><p class="orb-k"></p><h3 class="orb-t"></h3><p class="orb-d"></p></div>`;
+      corr.insertAdjacentElement('beforebegin', box); corr.hidden = true;
+      const k = box.querySelector('.orb-k'), t = box.querySelector('.orb-t'), d = box.querySelector('.orb-d'); let cur = 0, timer = null, touched = false;
+      const show = i => { cur = i; k.textContent = me + ' ⇄'; t.textContent = items[i].b; d.textContent = items[i].d; box.querySelectorAll('.crr-g').forEach(g => g.classList.toggle('now', +g.dataset.i === i)); };
+      box.querySelectorAll('.crr-n').forEach(a => { const i = +a.closest('.crr-g').dataset.i; a.addEventListener('click', e => e.preventDefault()); a.addEventListener('pointerenter', () => { touched = true; clearInterval(timer); show(i); }); a.addEventListener('focus', () => { touched = true; clearInterval(timer); show(i); }); });
+      show(0);
+      if (!reduce && 'IntersectionObserver' in window) { const io = new IntersectionObserver(([e]) => { clearInterval(timer); if (e.isIntersecting && !touched) timer = setInterval(() => show((cur + 1) % N), 4200); }, { threshold: 0.4 }); io.observe(box); }
+    }
+  }
+})();
+
+/* ---------- Pricing overview: fee calculator; Government: programme builder ---------- */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const txt = el => (el ? el.textContent.trim().replace(/\s+/g, ' ') : '');
+  const lang = document.documentElement.lang || 'en';
+  const path = location.pathname.replace(/^\/(ar|ms|tr|hi)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+  if (path === '/pricing') {
+    const fx = document.querySelector('.fee-ex'), steps = [...document.querySelectorAll('.ladder .ld-step')], fees = [...document.querySelectorAll('.ladder .ld-fee text')];
+    if (fx && steps.length >= 3 && fees.length === steps.length) {
+      const plans = steps.map((st, i) => ({ n: txt(st.querySelector('.ld-n')), m: txt(st.querySelector('.ld-p')), r: parseFloat(txt(fees[i]).replace(',', '.')) })).filter(x => x.n && x.r);
+      const L = { en: ['Try it: what a trade costs', 'Trade value', 'Plan', 'Fee per side', 'Each side pays this. Finance, escrow, insurance and logistics are quoted by licensed partners.'], ar: ['جرّب: كم تكلّف الصفقة', 'قيمة الصفقة', 'الخطة', 'الرسوم لكل طرف', 'يدفع كل طرف هذا المبلغ. التمويل والضمان والتأمين والخدمات اللوجستية تسعّرها الجهات المرخّصة.'], ms: ['Cuba: kos sesuatu dagangan', 'Nilai dagangan', 'Pelan', 'Yuran setiap pihak', 'Setiap pihak membayar ini. Pembiayaan, eskrow, insurans dan logistik ditawarkan oleh rakan berlesen.'], tr: ['Deneyin: bir işlemin maliyeti', 'İşlem tutarı', 'Plan', 'Taraf başına ücret', 'Her taraf bunu öder. Finansman, emanet, sigorta ve lojistik lisanslı ortaklarca fiyatlanır.'], hi: ['आज़माइए: एक सौदे की लागत', 'सौदे का मूल्य', 'प्लान', 'प्रति पक्ष शुल्क', 'हर पक्ष यह चुकाता है। वित्त, एस्क्रो, बीमा और लॉजिस्टिक्स की कीमत लाइसेंस प्राप्त भागीदार तय करते हैं।'] }[lang] || [];
+      const fmt = v => new Intl.NumberFormat({ ar: 'ar-SA-u-nu-latn', hi: 'hi-IN-u-nu-latn' }[lang] || lang, { style: 'currency', currency: 'USD', maximumFractionDigits: v < 100 ? 2 : 0 }).format(v);
+      const box = document.createElement('div'); box.className = 'feec'; let plan = Math.min(1, plans.length - 1), val = 20000;
+      box.innerHTML = `<h3>${esc(L[0])}</h3><div class="fc-row"><label for="fc-v">${esc(L[1])}</label><output class="fc-val"></output></div><input id="fc-v" class="cmp-r fc-r" type="range" min="0" max="100" value="50" step="1"><div class="fc-plans" role="group" aria-label="${esc(L[2])}">${plans.map((x, i) => `<button type="button" data-i="${i}" aria-pressed="${i === plan}"><b>${esc(x.n)}</b><span>${x.r.toFixed(2)}%</span></button>`).join('')}</div><div class="fc-out"><p class="fc-k">${esc(L[3])}</p><p class="fc-n"></p></div><ul class="fc-bars">${plans.map((x, i) => `<li data-i="${i}"><span>${esc(x.n)}</span><i><b></b></i><em></em></li>`).join('')}</ul><p class="fc-note">${esc(L[4])}</p>`;
+      fx.insertAdjacentElement('afterend', box); fx.hidden = true;
+      const r = box.querySelector('input'), vo = box.querySelector('.fc-val'), no = box.querySelector('.fc-n'); let shown = 0, raf = 0;
+      const toVal = pos => Math.round(Math.pow(10, 3 + pos / 100 * 2.7) / 500) * 500 || 1000; // $1,000 .. $500,000
+      const render = () => { const f = val * plans[plan].r / 100; vo.textContent = fmt(val); const t0 = performance.now(), from = shown; cancelAnimationFrame(raf); const step = now => { const k = reduce ? 1 : Math.min(1, (now - t0) / 380); shown = from + (f - from) * (1 - (1 - k) ** 3); no.textContent = fmt(shown); if (k < 1) raf = requestAnimationFrame(step); }; raf = requestAnimationFrame(step);
+        const max = val * plans[0].r / 100; box.querySelectorAll('.fc-bars li').forEach((li, i) => { const x = val * plans[i].r / 100; li.querySelector('b').style.width = (x / max * 100) + '%'; li.querySelector('em').textContent = fmt(x); li.classList.toggle('on', i === plan); }); box.querySelectorAll('.fc-plans button').forEach(b => b.setAttribute('aria-pressed', +b.dataset.i === plan ? 'true' : 'false')); };
+      r.value = Math.round((Math.log10(val) - 3) / 2.7 * 100); r.addEventListener('input', () => { val = toVal(+r.value); render(); });
+      box.querySelectorAll('.fc-plans button').forEach(b => b.addEventListener('click', () => { plan = +b.dataset.i; render(); })); shown = val * plans[plan].r / 100; render();
+    }
+  }
+  if (path === '/pricing/government') {
+    const grid = document.querySelector('.gov-grid'), cards = grid ? [...grid.querySelectorAll('.gov-c')] : [];
+    const progs = cards.map(c => ({ b: txt(c.querySelector('b')), d: txt(c.querySelector('span')), o: txt(c.querySelector('em')) })).filter(x => x.b && x.o);
+    if (progs.length >= 4) {
+      const L = { en: ['Build a national programme', 'Choose what your country needs', 'selected', 'What it means'], ar: ['ابنِ برنامجاً وطنياً', 'اختر ما يحتاجه بلدك', 'مختار', 'ماذا يعني ذلك'], ms: ['Bina program kebangsaan', 'Pilih apa yang negara anda perlukan', 'dipilih', 'Maksudnya'], tr: ['Ulusal program oluşturun', 'Ülkenizin ihtiyacını seçin', 'seçildi', 'Ne anlama gelir'], hi: ['राष्ट्रीय कार्यक्रम बनाइए', 'चुनिए आपके देश को क्या चाहिए', 'चुने गए', 'इसका मतलब'] }[lang] || [];
+      const box = document.createElement('div'); box.className = 'gpb'; const on = new Set([0, 3]);
+      box.innerHTML = `<div class="gp-l"><h3>${esc(L[0])}</h3><p>${esc(L[1])}</p><ul>${progs.map((x, i) => `<li><button type="button" data-i="${i}" aria-pressed="${on.has(i)}"><span class="gp-ck" aria-hidden="true"></span><span><b>${esc(x.b)}</b><small>${esc(x.d)}</small></span></button></li>`).join('')}</ul></div><div class="gp-r" aria-live="polite"><p class="gpb-c"><b></b> / ${progs.length} <span>${esc(L[2])}</span></p><ol></ol></div>`;
+      grid.insertAdjacentElement('beforebegin', box); grid.classList.add('gov-alt');
+      const ol = box.querySelector('ol'), nb = box.querySelector('.gpb-c b');
+      const render = () => { nb.textContent = on.size; ol.innerHTML = progs.map((x, i) => on.has(i) ? `<li><i aria-hidden="true"></i><span><small>${esc(x.b)}</small>${esc(x.o)}</span></li>` : '').join(''); box.querySelectorAll('.gp-l button').forEach(b => b.setAttribute('aria-pressed', on.has(+b.dataset.i) ? 'true' : 'false')); };
+      box.querySelectorAll('.gp-l button').forEach(b => b.addEventListener('click', () => { const i = +b.dataset.i; on.has(i) ? on.delete(i) : on.add(i); render(); })); render();
+    }
+  }
+})();

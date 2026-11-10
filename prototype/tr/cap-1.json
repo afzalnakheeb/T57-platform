@@ -81,7 +81,7 @@
 "Review bids side by side against recent price data, ask clarifying questions and accept the best offer.": "Teklifleri güncel fiyat verileriyle yan yana inceleyin, açıklayıcı sorular sorun ve en iyi teklifi kabul edin.",
 "The contract is generated from the accepted quote, and finance, inspection, logistics and payment are connected to the same trade record.": "Sözleşme kabul edilen tekliften oluşturulur; finansman, gözetim, lojistik ve ödeme aynı ticaret kaydına bağlanır.",
 "Features": "Özellikler",
-"12 features, one trade record": "12 özellik, tek ticaret kaydı",
+"13 features, one trade record": "13 özellik, tek ticaret kaydı",
 "Structured RFQ builder": "Yapılandırılmış teklif talebi oluşturucu",
 "Guided fields for specifications, quantities, packaging, Incoterms and certifications. For buyers, this means suppliers quote exactly what you need.": "Şartname, miktar, ambalaj, Incoterms ve sertifikalar için yönlendirmeli alanlar. Alıcılar için bu, tedarikçilerin tam olarak ihtiyacınız olanı fiyatlaması demektir.",
 "Product templates": "Ürün şablonları",
