@@ -47,7 +47,10 @@ export async function folderGET(req: Request, f: Folder) {
   const pin = new URL(req.url).searchParams.get('pin');
   if (pin !== null) return tryPin(f, pin);
   if (!folderReady(f)) return html(gate(f, 'off'));
-  return html(has(f) ? folderPage(f) : gate(f, ''));
+  if (!has(f)) return html(gate(f, ''));
+  // A direct folder shows its deck at once, on the folder's own address.
+  const deck = f.direct ? f.items.find((i) => i.kind === 'deck') : undefined;
+  return html(deck ? folderDeckHtml(f, deck.id) : folderPage(f));
 }
 
 export async function folderPOST(req: Request, f: Folder) {
@@ -116,7 +119,24 @@ button:hover,.btn:hover{background:#ffc93d;text-decoration:none}
 .back{display:inline-block;margin-top:28px;font-size:15px}
 `;
 
-function shell(title: string, body: string) {
+function shell(title: string, body: string, f?: Folder) {
+  const og = f?.og ? `
+<meta name="description" content="${esc(f.og.text)}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="T57">
+<meta property="og:url" content="${SITE}/decks/${f.id}">
+<meta property="og:title" content="${esc(f.og.title)}">
+<meta property="og:description" content="${esc(f.og.text)}">
+<meta property="og:image" content="${SITE}${f.og.image}">
+<meta property="og:image:secure_url" content="${SITE}${f.og.image}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="T57 logo: ${esc(f.og.title)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(f.og.title)}">
+<meta name="twitter:description" content="${esc(f.og.text)}">
+<meta name="twitter:image" content="${SITE}${f.og.image}">` : '';
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -124,7 +144,7 @@ function shell(title: string, body: string) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0b1340">
-<title>${esc(title)}</title>
+<title>${esc(title)}</title>${og}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="${FONT}">
 <style>${CSS}</style>
@@ -143,25 +163,25 @@ function gate(f: Folder, state: '' | 'wrong' | 'locked' | 'off', minutes = 0) {
     : state === 'locked' ? `Too many attempts. Please try again in ${minutes} minute${minutes === 1 ? '' : 's'}.`
     : state === 'off' ? 'This folder is not open yet. Please contact T57.' : '';
   const off = state === 'off' ? ' disabled' : '';
-  return shell('T57 · Private folder', `<main class="gate">
+  return shell(f.og ? f.og.title : 'T57 · Private folder', `<main class="gate">
 <img class="logo" src="/img/t57-logo-light.png" alt="T57" width="150" height="37">
 <p class="eyebrow">${esc(f.eyebrow)} · Private</p>
 <h1>${esc(f.title)}</h1>
-<p>This folder is shared privately. Enter the PIN you received from T57 to open it.</p>
+<p>${f.direct ? 'This presentation is shared privately. Enter the PIN you received from T57 to open it.' : 'This folder is shared privately. Enter the PIN you received from T57 to open it.'}</p>
 <form method="post" action="/decks/${f.id}">
-<label for="pin"><span class="lock">${LOCK}</span>Folder PIN</label>
+<label for="pin"><span class="lock">${LOCK}</span>${f.direct ? 'PIN' : 'Folder PIN'}</label>
 <input id="pin" name="pin" type="password" inputmode="numeric" autocomplete="one-time-code" required autofocus maxlength="32"${off}>
 ${msg ? `<div class="msg" role="alert">${esc(msg)}</div>` : ''}
-<button type="submit"${off}>Open the folder</button>
+<button type="submit"${off}>${f.direct ? 'Open the presentation' : 'Open the folder'}</button>
 </form>
-<p class="help"><a href="/decks">← All pitch decks</a> · No PIN? Write to <a href="mailto:afzal@t57.ai">afzal@t57.ai</a></p>
-</main>`);
+<p class="help">${f.unlisted ? '' : '<a href="/decks">← All pitch decks</a> · '}No PIN? Write to <a href="mailto:afzal@t57.ai">afzal@t57.ai</a></p>
+</main>`, f);
 }
 
 function folderPage(f: Folder) {
   const link = `${SITE}/decks/${f.id}`;
   const pin = folderPin(f);
-  const msg = `Dear [Name],\n\nPlease find T57's ${f.title} below: ${f.summary}\n\nLink: ${link}\nPIN: ${pin}\n\nOpen the link and enter the PIN to view the deck and the film. Please keep the PIN private.\n\nBest regards,\nAfzal Hussain Mohammed Nakheeb\nFounder and Chairman, T57 · afzal@t57.ai`;
+  const msg = `Dear [Name],\n\nPlease find T57's ${f.title} below: ${f.summary}\n\nLink: ${link}\nPIN: ${pin}\n\nOpen the link and enter the PIN to view ${f.items.some((i) => i.kind === 'film') ? 'the deck and the film' : 'the presentation'}. Please keep the PIN private.\n\nBest regards,\nAfzal Hussain Mohammed Nakheeb\nFounder and Chairman, T57 · afzal@t57.ai`;
   const cards = f.items.map((i) => `<a class="card" href="/decks/${i.id}">
 <span class="tag${i.kind === 'film' ? ' film' : ''}">${i.kind === 'film' ? 'Film' : 'Pitch deck'}</span>
 <h2>${esc(i.title)}</h2>
@@ -170,7 +190,7 @@ function folderPage(f: Folder) {
 <span class="open">${i.kind === 'film' ? 'Watch the film →' : 'Open the deck →'}</span>
 </a>`).join('\n');
   return shell(`T57 · ${f.title}`, `<main class="wrap">
-<div class="top"><img class="logo" src="/img/t57-logo-light.png" alt="T57" width="150" height="37"><a href="/decks">← All pitch decks</a></div>
+<div class="top"><img class="logo" src="/img/t57-logo-light.png" alt="T57" width="150" height="37">${f.unlisted ? '' : '<a href="/decks">← All pitch decks</a>'}</div>
 <p class="eyebrow">${esc(f.eyebrow)}</p>
 <h1>${esc(f.title)}</h1>
 <p>${esc(f.summary)}</p>

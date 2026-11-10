@@ -62,7 +62,7 @@ export default function DecksPage() {
                   <span className="open">{lock}{d.lang === 'ar' ? 'يتطلب رمز الدخول' : 'Access code required'}</span>
                 </a>
               ))}
-              {FOLDERS.map((f) => (
+              {FOLDERS.filter((f) => !f.unlisted).map((f) => (
                 <a key={f.id} className="deck-card" href={`/decks/${f.id}`} lang="en">
                   <span className="lang folder">Folder</span>
                   <h2>{f.title}</h2>

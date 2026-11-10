@@ -15,7 +15,13 @@ import zlib from 'node:zlib';
 export type FolderItem =
   | { kind: 'deck'; id: string; title: string; summary: string; meta: string }
   | { kind: 'film'; id: string; title: string; summary: string; meta: string; src: string };
-export type Folder = { id: string; title: string; summary: string; eyebrow: string; pinEnv: string; keyEnv: string; items: FolderItem[] };
+// An unlisted folder has its own page and link only: it is left off /decks, and its pages do not link back there.
+// A direct folder holds one deck and opens it straight after the PIN, with no folder page in between.
+// og sets the link preview (WhatsApp, email, LinkedIn): an image in public/ and the line under the title.
+export type Folder = {
+  id: string; title: string; summary: string; eyebrow: string; pinEnv: string; keyEnv: string; items: FolderItem[];
+  unlisted?: boolean; direct?: boolean; og?: { image: string; title: string; text: string };
+};
 
 export const FOLDERS: Folder[] = [
   {
@@ -30,6 +36,19 @@ export const FOLDERS: Folder[] = [
       { kind: 'film', id: 'africa-film', title: 'Africa can feed itself', src: '/video/africa/africa-film.enc',
         summary: 'A 97-second film on how T57 can help Africa end hunger and build food security, from pilot to continent to the world.',
         meta: '1:37 · English' },
+    ],
+  },
+  {
+    id: 'invest', eyebrow: 'Folder · Investors',
+    title: 'T57 USD 10M Round',
+    summary: 'The investor presentation for T57’s USD 10M round: the problem, how T57 solves it, the food security goal, traction, financials, returns, the team and the ask.',
+    pinEnv: 'DECK_INVEST_PIN', keyEnv: 'DECK_INVEST_KEY', unlisted: true, direct: true,
+    og: { image: '/img/og-invest.jpg', title: 'T57 · Investor presentation · USD 10M round',
+      text: 'Trade food with trust, from farm to buyer. Private: open with the PIN from T57.' },
+    items: [
+      { kind: 'deck', id: 'invest-10m', title: 'Trade food with trust, from farm to buyer',
+        summary: 'USD 10M to open five markets together and take T57 to profit. Animated, with an optional voice narration: press “Play with narration”.',
+        meta: '18 slides plus appendix · narrated' },
     ],
   },
 ];
